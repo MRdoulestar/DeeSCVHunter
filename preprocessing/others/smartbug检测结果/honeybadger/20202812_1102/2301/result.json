@@ -1,0 +1,29 @@
+{
+  "contract": "2301",
+  "tool": "honeybadger",
+  "start": 1609130136.36664,
+  "end": 1609130280.6252081,
+  "duration": 144.25856804847717,
+  "analysis": [
+    {
+      "errors": [],
+      "file": "/../data/reentrancy/solidity_contract/2301.sol",
+      "name": "BlockHashRNG"
+    },
+    {
+      "errors": [],
+      "file": "/../data/reentrancy/solidity_contract/2301.sol",
+      "name": "BlockHashRNGFallback"
+    },
+    {
+      "errors": [],
+      "file": "/../data/reentrancy/solidity_contract/2301.sol",
+      "name": "Controlled"
+    },
+    {
+      "errors": [],
+      "file": "/../data/reentrancy/solidity_contract/2301.sol",
+      "name": "Kleros"
+    }
+  ]
+}

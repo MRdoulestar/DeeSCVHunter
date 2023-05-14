@@ -1,0 +1,3712 @@
+{
+  "contract": "12182",
+  "tool": "slither",
+  "start": 1609151784.069299,
+  "end": 1609151795.9142148,
+  "duration": 11.844915866851807,
+  "analysis": [
+    {
+      "check": "uninitialized-state",
+      "impact": "High",
+      "confidence": "High",
+      "description": "WalletStorage.owner (/../data/reentrancy/solidity_contract/12182.sol#89) is never initialized. It is used in:\n\t- transferERC20Token (/../data/reentrancy/solidity_contract/12182.sol#163-166)\n\t- transferEther (/../data/reentrancy/solidity_contract/12182.sol#168-171)\n",
+      "elements": [
+        {
+          "type": "variable",
+          "name": "owner",
+          "source_mapping": {
+            "start": 2245,
+            "length": 20,
+            "filename": "/../data/reentrancy/solidity_contract/12182.sol",
+            "lines": [
+              89
+            ]
+          }
+        },
+        {
+          "type": "function",
+          "name": "transferERC20Token",
+          "source_mapping": {
+            "start": 4452,
+            "length": 179,
+            "filename": "/../data/reentrancy/solidity_contract/12182.sol",
+            "lines": [
+              163,
+              164,
+              165,
+              166
+            ]
+          },
+          "contract": {
+            "type": "contract",
+            "name": "Wallet",
+            "source_mapping": {
+              "start": 4413,
+              "length": 422,
+              "filename": "/../data/reentrancy/solidity_contract/12182.sol",
+              "lines": [
+                162,
+                163,
+                164,
+                165,
+                166,
+                167,
+                168,
+                169,
+                170,
+                171,
+                172,
+                173,
+                174
+              ]
+            }
+          }
+        },
+        {
+          "type": "function",
+          "name": "transferEther",
+          "source_mapping": {
+            "start": 4641,
+            "length": 158,
+            "filename": "/../data/reentrancy/solidity_contract/12182.sol",
+            "lines": [
+              168,
+              169,
+              170,
+              171
+            ]
+          },
+          "contract": {
+            "type": "contract",
+            "name": "Wallet",
+            "source_mapping": {
+              "start": 4413,
+              "length": 422,
+              "filename": "/../data/reentrancy/solidity_contract/12182.sol",
+              "lines": [
+                162,
+                163,
+                164,
+                165,
+                166,
+                167,
+                168,
+                169,
+                170,
+                171,
+                172,
+                173,
+                174
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "check": "locked-ether",
+      "impact": "Medium",
+      "confidence": "High",
+      "description": "Contract locking ether found in /../data/reentrancy/solidity_contract/12182.sol:\n\tContract ControllerProxy has payable functions:\n\t - fallback (/../data/reentrancy/solidity_contract/12182.sol#129-133)\n\tBut does not have a function to withdraw the ether\n",
+      "elements": [
+        {
+          "type": "function",
+          "name": "fallback",
+          "source_mapping": {
+            "start": 3316,
+            "length": 131,
+            "filename": "/../data/reentrancy/solidity_contract/12182.sol",
+            "lines": [
+              129,
+              130,
+              131,
+              132,
+              133
+            ]
+          },
+          "contract": {
+            "type": "contract",
+            "name": "ControllerProxy",
+            "source_mapping": {
+              "start": 2793,
+              "length": 656,
+              "filename": "/../data/reentrancy/solidity_contract/12182.sol",
+              "lines": [
+                114,
+                115,
+                116,
+                117,
+                118,
+                119,
+                120,
+                121,
+                122,
+                123,
+                124,
+                125,
+                126,
+                127,
+                128,
+                129,
+                130,
+                131,
+                132,
+                133,
+                134
+              ]
+            }
+          }
+        },
+        {
+          "type": "contract",
+          "name": "ControllerProxy",
+          "source_mapping": {
+            "start": 2793,
+            "length": 656,
+            "filename": "/../data/reentrancy/solidity_contract/12182.sol",
+            "lines": [
+              114,
+              115,
+              116,
+              117,
+              118,
+              119,
+              120,
+              121,
+              122,
+              123,
+              124,
+              125,
+              126,
+              127,
+              128,
+              129,
+              130,
+              131,
+              132,
+              133,
+              134
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "locked-ether",
+      "impact": "Medium",
+      "confidence": "High",
+      "description": "Contract locking ether found in /../data/reentrancy/solidity_contract/12182.sol:\n\tContract WalletProxy has payable functions:\n\t - fallback (/../data/reentrancy/solidity_contract/12182.sol#152-159)\n\tBut does not have a function to withdraw the ether\n",
+      "elements": [
+        {
+          "type": "function",
+          "name": "fallback",
+          "source_mapping": {
+            "start": 4167,
+            "length": 242,
+            "filename": "/../data/reentrancy/solidity_contract/12182.sol",
+            "lines": [
+              152,
+              153,
+              154,
+              155,
+              156,
+              157,
+              158,
+              159
+            ]
+          },
+          "contract": {
+            "type": "contract",
+            "name": "WalletProxy",
+            "source_mapping": {
+              "start": 3992,
+              "length": 419,
+              "filename": "/../data/reentrancy/solidity_contract/12182.sol",
+              "lines": [
+                145,
+                146,
+                147,
+                148,
+                149,
+                150,
+                151,
+                152,
+                153,
+                154,
+                155,
+                156,
+                157,
+                158,
+                159,
+                160
+              ]
+            }
+          }
+        },
+        {
+          "type": "contract",
+          "name": "WalletProxy",
+          "source_mapping": {
+            "start": 3992,
+            "length": 419,
+            "filename": "/../data/reentrancy/solidity_contract/12182.sol",
+            "lines": [
+              145,
+              146,
+              147,
+              148,
+              149,
+              150,
+              151,
+              152,
+              153,
+              154,
+              155,
+              156,
+              157,
+              158,
+              159,
+              160
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "unused-return",
+      "impact": "Medium",
+      "confidence": "Medium",
+      "description": "Controller.withdrawERC20 (/../data/reentrancy/solidity_contract/12182.sol#242-251) does not use the value returned by external calls:\n\t-TokenHandler(forward).handleTokens(token) (/../data/reentrancy/solidity_contract/12182.sol#250)\n",
+      "elements": [
+        {
+          "type": "function",
+          "name": "withdrawERC20",
+          "source_mapping": {
+            "start": 6748,
+            "length": 376,
+            "filename": "/../data/reentrancy/solidity_contract/12182.sol",
+            "lines": [
+              242,
+              243,
+              244,
+              245,
+              246,
+              247,
+              248,
+              249,
+              250,
+              251
+            ]
+          },
+          "contract": {
+            "type": "contract",
+            "name": "Controller",
+            "source_mapping": {
+              "start": 4837,
+              "length": 2897,
+              "filename": "/../data/reentrancy/solidity_contract/12182.sol",
+              "lines": [
+                176,
+                177,
+                178,
+                179,
+                180,
+                181,
+                182,
+                183,
+                184,
+                185,
+                186,
+                187,
+                188,
+                189,
+                190,
+                191,
+                192,
+                193,
+                194,
+                195,
+                196,
+                197,
+                198,
+                199,
+                200,
+                201,
+                202,
+                203,
+                204,
+                205,
+                206,
+                207,
+                208,
+                209,
+                210,
+                211,
+                212,
+                213,
+                214,
+                215,
+                216,
+                217,
+                218,
+                219,
+                220,
+                221,
+                222,
+                223,
+                224,
+                225,
+                226,
+                227,
+                228,
+                229,
+                230,
+                231,
+                232,
+                233,
+                234,
+                235,
+                236,
+                237,
+                238,
+                239,
+                240,
+                241,
+                242,
+                243,
+                244,
+                245,
+                246,
+                247,
+                248,
+                249,
+                250,
+                251,
+                252,
+                253,
+                254,
+                255,
+                256,
+                257,
+                258,
+                259,
+                260,
+                261,
+                262,
+                263,
+                264,
+                265,
+                266,
+                267,
+                268,
+                269,
+                270,
+                271,
+                272,
+                273,
+                274
+              ]
+            }
+          }
+        },
+        {
+          "type": "expression",
+          "expression": "TokenHandler(forward).handleTokens(token)",
+          "source_mapping": {
+            "start": 7076,
+            "length": 41,
+            "filename": "/../data/reentrancy/solidity_contract/12182.sol",
+            "lines": [
+              250
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "unused-return",
+      "impact": "Medium",
+      "confidence": "Medium",
+      "description": "Controller.withdrawERC20Batch (/../data/reentrancy/solidity_contract/12182.sol#254-271) does not use the value returned by external calls:\n\t-TokenHandler(forward).handleTokens(token) (/../data/reentrancy/solidity_contract/12182.sol#268)\n",
+      "elements": [
+        {
+          "type": "function",
+          "name": "withdrawERC20Batch",
+          "source_mapping": {
+            "start": 7136,
+            "length": 562,
+            "filename": "/../data/reentrancy/solidity_contract/12182.sol",
+            "lines": [
+              254,
+              255,
+              256,
+              257,
+              258,
+              259,
+              260,
+              261,
+              262,
+              263,
+              264,
+              265,
+              266,
+              267,
+              268,
+              269,
+              270,
+              271
+            ]
+          },
+          "contract": {
+            "type": "contract",
+            "name": "Controller",
+            "source_mapping": {
+              "start": 4837,
+              "length": 2897,
+              "filename": "/../data/reentrancy/solidity_contract/12182.sol",
+              "lines": [
+                176,
+                177,
+                178,
+                179,
+                180,
+                181,
+                182,
+                183,
+                184,
+                185,
+                186,
+                187,
+                188,
+                189,
+                190,
+                191,
+                192,
+                193,
+                194,
+                195,
+                196,
+                197,
+                198,
+                199,
+                200,
+                201,
+                202,
+                203,
+                204,
+                205,
+                206,
+                207,
+                208,
+                209,
+                210,
+                211,
+                212,
+                213,
+                214,
+                215,
+                216,
+                217,
+                218,
+                219,
+                220,
+                221,
+                222,
+                223,
+                224,
+                225,
+                226,
+                227,
+                228,
+                229,
+                230,
+                231,
+                232,
+                233,
+                234,
+                235,
+                236,
+                237,
+                238,
+                239,
+                240,
+                241,
+                242,
+                243,
+                244,
+                245,
+                246,
+                247,
+                248,
+                249,
+                250,
+                251,
+                252,
+                253,
+                254,
+                255,
+                256,
+                257,
+                258,
+                259,
+                260,
+                261,
+                262,
+                263,
+                264,
+                265,
+                266,
+                267,
+                268,
+                269,
+                270,
+                271,
+                272,
+                273,
+                274
+              ]
+            }
+          }
+        },
+        {
+          "type": "expression",
+          "expression": "TokenHandler(forward).handleTokens(token)",
+          "source_mapping": {
+            "start": 7628,
+            "length": 41,
+            "filename": "/../data/reentrancy/solidity_contract/12182.sol",
+            "lines": [
+              268
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "calls-loop",
+      "impact": "Low",
+      "confidence": "Medium",
+      "description": "Controller.withdrawEthBatch has external calls inside a loop:\n\t- wallet.transferEther(this,balance) (/../data/reentrancy/solidity_contract/12182.sol#231-233)\n",
+      "elements": [
+        {
+          "type": "function",
+          "name": "withdrawEthBatch",
+          "source_mapping": {
+            "start": 6209,
+            "length": 527,
+            "filename": "/../data/reentrancy/solidity_contract/12182.sol",
+            "lines": [
+              221,
+              222,
+              223,
+              224,
+              225,
+              226,
+              227,
+              228,
+              229,
+              230,
+              231,
+              232,
+              233,
+              234,
+              235,
+              236,
+              237,
+              238,
+              239
+            ]
+          },
+          "contract": {
+            "type": "contract",
+            "name": "Controller",
+            "source_mapping": {
+              "start": 4837,
+              "length": 2897,
+              "filename": "/../data/reentrancy/solidity_contract/12182.sol",
+              "lines": [
+                176,
+                177,
+                178,
+                179,
+                180,
+                181,
+                182,
+                183,
+                184,
+                185,
+                186,
+                187,
+                188,
+                189,
+                190,
+                191,
+                192,
+                193,
+                194,
+                195,
+                196,
+                197,
+                198,
+                199,
+                200,
+                201,
+                202,
+                203,
+                204,
+                205,
+                206,
+                207,
+                208,
+                209,
+                210,
+                211,
+                212,
+                213,
+                214,
+                215,
+                216,
+                217,
+                218,
+                219,
+                220,
+                221,
+                222,
+                223,
+                224,
+                225,
+                226,
+                227,
+                228,
+                229,
+                230,
+                231,
+                232,
+                233,
+                234,
+                235,
+                236,
+                237,
+                238,
+                239,
+                240,
+                241,
+                242,
+                243,
+                244,
+                245,
+                246,
+                247,
+                248,
+                249,
+                250,
+                251,
+                252,
+                253,
+                254,
+                255,
+                256,
+                257,
+                258,
+                259,
+                260,
+                261,
+                262,
+                263,
+                264,
+                265,
+                266,
+                267,
+                268,
+                269,
+                270,
+                271,
+                272,
+                273,
+                274
+              ]
+            }
+          }
+        },
+        {
+          "type": "expression",
+          "expression": "wallet.transferEther(this,balance)",
+          "source_mapping": {
+            "start": 6526,
+            "length": 116,
+            "filename": "/../data/reentrancy/solidity_contract/12182.sol",
+            "lines": [
+              231,
+              232,
+              233
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "calls-loop",
+      "impact": "Low",
+      "confidence": "Medium",
+      "description": "Controller.withdrawERC20Batch has external calls inside a loop:\n\t- balance = token.balanceOf(wallet) (/../data/reentrancy/solidity_contract/12182.sol#261)\n",
+      "elements": [
+        {
+          "type": "function",
+          "name": "withdrawERC20Batch",
+          "source_mapping": {
+            "start": 7136,
+            "length": 562,
+            "filename": "/../data/reentrancy/solidity_contract/12182.sol",
+            "lines": [
+              254,
+              255,
+              256,
+              257,
+              258,
+              259,
+              260,
+              261,
+              262,
+              263,
+              264,
+              265,
+              266,
+              267,
+              268,
+              269,
+              270,
+              271
+            ]
+          },
+          "contract": {
+            "type": "contract",
+            "name": "Controller",
+            "source_mapping": {
+              "start": 4837,
+              "length": 2897,
+              "filename": "/../data/reentrancy/solidity_contract/12182.sol",
+              "lines": [
+                176,
+                177,
+                178,
+                179,
+                180,
+                181,
+                182,
+                183,
+                184,
+                185,
+                186,
+                187,
+                188,
+                189,
+                190,
+                191,
+                192,
+                193,
+                194,
+                195,
+                196,
+                197,
+                198,
+                199,
+                200,
+                201,
+                202,
+                203,
+                204,
+                205,
+                206,
+                207,
+                208,
+                209,
+                210,
+                211,
+                212,
+                213,
+                214,
+                215,
+                216,
+                217,
+                218,
+                219,
+                220,
+                221,
+                222,
+                223,
+                224,
+                225,
+                226,
+                227,
+                228,
+                229,
+                230,
+                231,
+                232,
+                233,
+                234,
+                235,
+                236,
+                237,
+                238,
+                239,
+                240,
+                241,
+                242,
+                243,
+                244,
+                245,
+                246,
+                247,
+                248,
+                249,
+                250,
+                251,
+                252,
+                253,
+                254,
+                255,
+                256,
+                257,
+                258,
+                259,
+                260,
+                261,
+                262,
+                263,
+                264,
+                265,
+                266,
+                267,
+                268,
+                269,
+                270,
+                271,
+                272,
+                273,
+                274
+              ]
+            }
+          }
+        },
+        {
+          "type": "expression",
+          "expression": "balance = token.balanceOf(wallet)",
+          "source_mapping": {
+            "start": 7408,
+            "length": 33,
+            "filename": "/../data/reentrancy/solidity_contract/12182.sol",
+            "lines": [
+              261
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "calls-loop",
+      "impact": "Low",
+      "confidence": "Medium",
+      "description": "Controller.withdrawERC20Batch has external calls inside a loop:\n\t- wallet.transferERC20Token(token,forward,balance) (/../data/reentrancy/solidity_contract/12182.sol#263-265)\n",
+      "elements": [
+        {
+          "type": "function",
+          "name": "withdrawERC20Batch",
+          "source_mapping": {
+            "start": 7136,
+            "length": 562,
+            "filename": "/../data/reentrancy/solidity_contract/12182.sol",
+            "lines": [
+              254,
+              255,
+              256,
+              257,
+              258,
+              259,
+              260,
+              261,
+              262,
+              263,
+              264,
+              265,
+              266,
+              267,
+              268,
+              269,
+              270,
+              271
+            ]
+          },
+          "contract": {
+            "type": "contract",
+            "name": "Controller",
+            "source_mapping": {
+              "start": 4837,
+              "length": 2897,
+              "filename": "/../data/reentrancy/solidity_contract/12182.sol",
+              "lines": [
+                176,
+                177,
+                178,
+                179,
+                180,
+                181,
+                182,
+                183,
+                184,
+                185,
+                186,
+                187,
+                188,
+                189,
+                190,
+                191,
+                192,
+                193,
+                194,
+                195,
+                196,
+                197,
+                198,
+                199,
+                200,
+                201,
+                202,
+                203,
+                204,
+                205,
+                206,
+                207,
+                208,
+                209,
+                210,
+                211,
+                212,
+                213,
+                214,
+                215,
+                216,
+                217,
+                218,
+                219,
+                220,
+                221,
+                222,
+                223,
+                224,
+                225,
+                226,
+                227,
+                228,
+                229,
+                230,
+                231,
+                232,
+                233,
+                234,
+                235,
+                236,
+                237,
+                238,
+                239,
+                240,
+                241,
+                242,
+                243,
+                244,
+                245,
+                246,
+                247,
+                248,
+                249,
+                250,
+                251,
+                252,
+                253,
+                254,
+                255,
+                256,
+                257,
+                258,
+                259,
+                260,
+                261,
+                262,
+                263,
+                264,
+                265,
+                266,
+                267,
+                268,
+                269,
+                270,
+                271,
+                272,
+                273,
+                274
+              ]
+            }
+          }
+        },
+        {
+          "type": "expression",
+          "expression": "wallet.transferERC20Token(token,forward,balance)",
+          "source_mapping": {
+            "start": 7468,
+            "length": 140,
+            "filename": "/../data/reentrancy/solidity_contract/12182.sol",
+            "lines": [
+              263,
+              264,
+              265
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "assembly",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "DelegateProxy.delegatedFwd uses assembly (/../data/reentrancy/solidity_contract/12182.sol#94-107)\n\t- /../data/reentrancy/solidity_contract/12182.sol#95-107\n",
+      "elements": [
+        {
+          "type": "function",
+          "name": "delegatedFwd",
+          "source_mapping": {
+            "start": 2301,
+            "length": 390,
+            "filename": "/../data/reentrancy/solidity_contract/12182.sol",
+            "lines": [
+              94,
+              95,
+              96,
+              97,
+              98,
+              99,
+              100,
+              101,
+              102,
+              103,
+              104,
+              105,
+              106,
+              107
+            ]
+          },
+          "contract": {
+            "type": "contract",
+            "name": "DelegateProxy",
+            "source_mapping": {
+              "start": 2270,
+              "length": 423,
+              "filename": "/../data/reentrancy/solidity_contract/12182.sol",
+              "lines": [
+                92,
+                93,
+                94,
+                95,
+                96,
+                97,
+                98,
+                99,
+                100,
+                101,
+                102,
+                103,
+                104,
+                105,
+                106,
+                107,
+                108
+              ]
+            }
+          }
+        },
+        {
+          "type": "expression",
+          "expression": "None",
+          "source_mapping": {
+            "start": 2369,
+            "length": 322,
+            "filename": "/../data/reentrancy/solidity_contract/12182.sol",
+            "lines": [
+              95,
+              96,
+              97,
+              98,
+              99,
+              100,
+              101,
+              102,
+              103,
+              104,
+              105,
+              106,
+              107
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "external-function",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Ownable.setOwner (/../data/reentrancy/solidity_contract/12182.sol#16-20) should be declared external\n",
+      "elements": [
+        {
+          "type": "function",
+          "name": "setOwner",
+          "source_mapping": {
+            "start": 228,
+            "length": 157,
+            "filename": "/../data/reentrancy/solidity_contract/12182.sol",
+            "lines": [
+              16,
+              17,
+              18,
+              19,
+              20
+            ]
+          },
+          "contract": {
+            "type": "contract",
+            "name": "Ownable",
+            "source_mapping": {
+              "start": 26,
+              "length": 362,
+              "filename": "/../data/reentrancy/solidity_contract/12182.sol",
+              "lines": [
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10,
+                11,
+                12,
+                13,
+                14,
+                15,
+                16,
+                17,
+                18,
+                19,
+                20,
+                21
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "check": "external-function",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "TokenHandler.handleTokens (/../data/reentrancy/solidity_contract/12182.sol#24) should be declared external\n",
+      "elements": [
+        {
+          "type": "function",
+          "name": "handleTokens",
+          "source_mapping": {
+            "start": 419,
+            "length": 58,
+            "filename": "/../data/reentrancy/solidity_contract/12182.sol",
+            "lines": [
+              24
+            ]
+          },
+          "contract": {
+            "type": "contract",
+            "name": "TokenHandler",
+            "source_mapping": {
+              "start": 390,
+              "length": 89,
+              "filename": "/../data/reentrancy/solidity_contract/12182.sol",
+              "lines": [
+                23,
+                24,
+                25
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "check": "external-function",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "HasWorkers.allWorkers (/../data/reentrancy/solidity_contract/12182.sol#52-57) should be declared external\n",
+      "elements": [
+        {
+          "type": "function",
+          "name": "allWorkers",
+          "source_mapping": {
+            "start": 1067,
+            "length": 232,
+            "filename": "/../data/reentrancy/solidity_contract/12182.sol",
+            "lines": [
+              52,
+              53,
+              54,
+              55,
+              56,
+              57
+            ]
+          },
+          "contract": {
+            "type": "contract",
+            "name": "HasWorkers",
+            "source_mapping": {
+              "start": 481,
+              "length": 1514,
+              "filename": "/../data/reentrancy/solidity_contract/12182.sol",
+              "lines": [
+                27,
+                28,
+                29,
+                30,
+                31,
+                32,
+                33,
+                34,
+                35,
+                36,
+                37,
+                38,
+                39,
+                40,
+                41,
+                42,
+                43,
+                44,
+                45,
+                46,
+                47,
+                48,
+                49,
+                50,
+                51,
+                52,
+                53,
+                54,
+                55,
+                56,
+                57,
+                58,
+                59,
+                60,
+                61,
+                62,
+                63,
+                64,
+                65,
+                66,
+                67,
+                68,
+                69,
+                70,
+                71,
+                72,
+                73,
+                74,
+                75,
+                76,
+                77,
+                78
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "check": "external-function",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "HasWorkers.addWorker (/../data/reentrancy/solidity_contract/12182.sol#59-65) should be declared external\n",
+      "elements": [
+        {
+          "type": "function",
+          "name": "addWorker",
+          "source_mapping": {
+            "start": 1305,
+            "length": 259,
+            "filename": "/../data/reentrancy/solidity_contract/12182.sol",
+            "lines": [
+              59,
+              60,
+              61,
+              62,
+              63,
+              64,
+              65
+            ]
+          },
+          "contract": {
+            "type": "contract",
+            "name": "HasWorkers",
+            "source_mapping": {
+              "start": 481,
+              "length": 1514,
+              "filename": "/../data/reentrancy/solidity_contract/12182.sol",
+              "lines": [
+                27,
+                28,
+                29,
+                30,
+                31,
+                32,
+                33,
+                34,
+                35,
+                36,
+                37,
+                38,
+                39,
+                40,
+                41,
+                42,
+                43,
+                44,
+                45,
+                46,
+                47,
+                48,
+                49,
+                50,
+                51,
+                52,
+                53,
+                54,
+                55,
+                56,
+                57,
+                58,
+                59,
+                60,
+                61,
+                62,
+                63,
+                64,
+                65,
+                66,
+                67,
+                68,
+                69,
+                70,
+                71,
+                72,
+                73,
+                74,
+                75,
+                76,
+                77,
+                78
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "check": "external-function",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "HasWorkers.removeWorker (/../data/reentrancy/solidity_contract/12182.sol#67-77) should be declared external\n",
+      "elements": [
+        {
+          "type": "function",
+          "name": "removeWorker",
+          "source_mapping": {
+            "start": 1570,
+            "length": 423,
+            "filename": "/../data/reentrancy/solidity_contract/12182.sol",
+            "lines": [
+              67,
+              68,
+              69,
+              70,
+              71,
+              72,
+              73,
+              74,
+              75,
+              76,
+              77
+            ]
+          },
+          "contract": {
+            "type": "contract",
+            "name": "HasWorkers",
+            "source_mapping": {
+              "start": 481,
+              "length": 1514,
+              "filename": "/../data/reentrancy/solidity_contract/12182.sol",
+              "lines": [
+                27,
+                28,
+                29,
+                30,
+                31,
+                32,
+                33,
+                34,
+                35,
+                36,
+                37,
+                38,
+                39,
+                40,
+                41,
+                42,
+                43,
+                44,
+                45,
+                46,
+                47,
+                48,
+                49,
+                50,
+                51,
+                52,
+                53,
+                54,
+                55,
+                56,
+                57,
+                58,
+                59,
+                60,
+                61,
+                62,
+                63,
+                64,
+                65,
+                66,
+                67,
+                68,
+                69,
+                70,
+                71,
+                72,
+                73,
+                74,
+                75,
+                76,
+                77,
+                78
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "check": "external-function",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "ControllerProxy.getDelegate (/../data/reentrancy/solidity_contract/12182.sol#115-117) should be declared external\n",
+      "elements": [
+        {
+          "type": "function",
+          "name": "getDelegate",
+          "source_mapping": {
+            "start": 2899,
+            "length": 105,
+            "filename": "/../data/reentrancy/solidity_contract/12182.sol",
+            "lines": [
+              115,
+              116,
+              117
+            ]
+          },
+          "contract": {
+            "type": "contract",
+            "name": "ControllerProxy",
+            "source_mapping": {
+              "start": 2793,
+              "length": 656,
+              "filename": "/../data/reentrancy/solidity_contract/12182.sol",
+              "lines": [
+                114,
+                115,
+                116,
+                117,
+                118,
+                119,
+                120,
+                121,
+                122,
+                123,
+                124,
+                125,
+                126,
+                127,
+                128,
+                129,
+                130,
+                131,
+                132,
+                133,
+                134
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "check": "external-function",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "DelegateProvider.getDelegate (/../data/reentrancy/solidity_contract/12182.sol#111) should be declared external\n",
+      "elements": [
+        {
+          "type": "function",
+          "name": "getDelegate",
+          "source_mapping": {
+            "start": 2727,
+            "length": 62,
+            "filename": "/../data/reentrancy/solidity_contract/12182.sol",
+            "lines": [
+              111
+            ]
+          },
+          "contract": {
+            "type": "contract",
+            "name": "DelegateProvider",
+            "source_mapping": {
+              "start": 2695,
+              "length": 96,
+              "filename": "/../data/reentrancy/solidity_contract/12182.sol",
+              "lines": [
+                110,
+                111,
+                112
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "check": "external-function",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "ControllerProxy.setWalletsDelegate (/../data/reentrancy/solidity_contract/12182.sol#119-122) should be declared external\n",
+      "elements": [
+        {
+          "type": "function",
+          "name": "setWalletsDelegate",
+          "source_mapping": {
+            "start": 3010,
+            "length": 144,
+            "filename": "/../data/reentrancy/solidity_contract/12182.sol",
+            "lines": [
+              119,
+              120,
+              121,
+              122
+            ]
+          },
+          "contract": {
+            "type": "contract",
+            "name": "ControllerProxy",
+            "source_mapping": {
+              "start": 2793,
+              "length": 656,
+              "filename": "/../data/reentrancy/solidity_contract/12182.sol",
+              "lines": [
+                114,
+                115,
+                116,
+                117,
+                118,
+                119,
+                120,
+                121,
+                122,
+                123,
+                124,
+                125,
+                126,
+                127,
+                128,
+                129,
+                130,
+                131,
+                132,
+                133,
+                134
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "check": "external-function",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "ControllerProxy.setControllerDelegate (/../data/reentrancy/solidity_contract/12182.sol#124-127) should be declared external\n",
+      "elements": [
+        {
+          "type": "function",
+          "name": "setControllerDelegate",
+          "source_mapping": {
+            "start": 3160,
+            "length": 150,
+            "filename": "/../data/reentrancy/solidity_contract/12182.sol",
+            "lines": [
+              124,
+              125,
+              126,
+              127
+            ]
+          },
+          "contract": {
+            "type": "contract",
+            "name": "ControllerProxy",
+            "source_mapping": {
+              "start": 2793,
+              "length": 656,
+              "filename": "/../data/reentrancy/solidity_contract/12182.sol",
+              "lines": [
+                114,
+                115,
+                116,
+                117,
+                118,
+                119,
+                120,
+                121,
+                122,
+                123,
+                124,
+                125,
+                126,
+                127,
+                128,
+                129,
+                130,
+                131,
+                132,
+                133,
+                134
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "check": "external-function",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "ControllerProxy.fallback (/../data/reentrancy/solidity_contract/12182.sol#129-133) should be declared external\n",
+      "elements": [
+        {
+          "type": "function",
+          "name": "fallback",
+          "source_mapping": {
+            "start": 3316,
+            "length": 131,
+            "filename": "/../data/reentrancy/solidity_contract/12182.sol",
+            "lines": [
+              129,
+              130,
+              131,
+              132,
+              133
+            ]
+          },
+          "contract": {
+            "type": "contract",
+            "name": "ControllerProxy",
+            "source_mapping": {
+              "start": 2793,
+              "length": 656,
+              "filename": "/../data/reentrancy/solidity_contract/12182.sol",
+              "lines": [
+                114,
+                115,
+                116,
+                117,
+                118,
+                119,
+                120,
+                121,
+                122,
+                123,
+                124,
+                125,
+                126,
+                127,
+                128,
+                129,
+                130,
+                131,
+                132,
+                133,
+                134
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "check": "external-function",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Token.transfer (/../data/reentrancy/solidity_contract/12182.sol#137) should be declared external\n",
+      "elements": [
+        {
+          "type": "function",
+          "name": "transfer",
+          "source_mapping": {
+            "start": 3472,
+            "length": 67,
+            "filename": "/../data/reentrancy/solidity_contract/12182.sol",
+            "lines": [
+              137
+            ]
+          },
+          "contract": {
+            "type": "contract",
+            "name": "Token",
+            "source_mapping": {
+              "start": 3451,
+              "length": 539,
+              "filename": "/../data/reentrancy/solidity_contract/12182.sol",
+              "lines": [
+                136,
+                137,
+                138,
+                139,
+                140,
+                141,
+                142,
+                143
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "check": "external-function",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Token.transferFrom (/../data/reentrancy/solidity_contract/12182.sol#138) should be declared external\n",
+      "elements": [
+        {
+          "type": "function",
+          "name": "transferFrom",
+          "source_mapping": {
+            "start": 3544,
+            "length": 89,
+            "filename": "/../data/reentrancy/solidity_contract/12182.sol",
+            "lines": [
+              138
+            ]
+          },
+          "contract": {
+            "type": "contract",
+            "name": "Token",
+            "source_mapping": {
+              "start": 3451,
+              "length": 539,
+              "filename": "/../data/reentrancy/solidity_contract/12182.sol",
+              "lines": [
+                136,
+                137,
+                138,
+                139,
+                140,
+                141,
+                142,
+                143
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "check": "external-function",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Token.allowance (/../data/reentrancy/solidity_contract/12182.sol#139) should be declared external\n",
+      "elements": [
+        {
+          "type": "function",
+          "name": "allowance",
+          "source_mapping": {
+            "start": 3638,
+            "length": 90,
+            "filename": "/../data/reentrancy/solidity_contract/12182.sol",
+            "lines": [
+              139
+            ]
+          },
+          "contract": {
+            "type": "contract",
+            "name": "Token",
+            "source_mapping": {
+              "start": 3451,
+              "length": 539,
+              "filename": "/../data/reentrancy/solidity_contract/12182.sol",
+              "lines": [
+                136,
+                137,
+                138,
+                139,
+                140,
+                141,
+                142,
+                143
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "check": "external-function",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Token.approve (/../data/reentrancy/solidity_contract/12182.sol#140) should be declared external\n",
+      "elements": [
+        {
+          "type": "function",
+          "name": "approve",
+          "source_mapping": {
+            "start": 3733,
+            "length": 74,
+            "filename": "/../data/reentrancy/solidity_contract/12182.sol",
+            "lines": [
+              140
+            ]
+          },
+          "contract": {
+            "type": "contract",
+            "name": "Token",
+            "source_mapping": {
+              "start": 3451,
+              "length": 539,
+              "filename": "/../data/reentrancy/solidity_contract/12182.sol",
+              "lines": [
+                136,
+                137,
+                138,
+                139,
+                140,
+                141,
+                142,
+                143
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "check": "external-function",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Token.increaseApproval (/../data/reentrancy/solidity_contract/12182.sol#141) should be declared external\n",
+      "elements": [
+        {
+          "type": "function",
+          "name": "increaseApproval",
+          "source_mapping": {
+            "start": 3812,
+            "length": 93,
+            "filename": "/../data/reentrancy/solidity_contract/12182.sol",
+            "lines": [
+              141
+            ]
+          },
+          "contract": {
+            "type": "contract",
+            "name": "Token",
+            "source_mapping": {
+              "start": 3451,
+              "length": 539,
+              "filename": "/../data/reentrancy/solidity_contract/12182.sol",
+              "lines": [
+                136,
+                137,
+                138,
+                139,
+                140,
+                141,
+                142,
+                143
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "check": "external-function",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Token.balanceOf (/../data/reentrancy/solidity_contract/12182.sol#142) should be declared external\n",
+      "elements": [
+        {
+          "type": "function",
+          "name": "balanceOf",
+          "source_mapping": {
+            "start": 3910,
+            "length": 78,
+            "filename": "/../data/reentrancy/solidity_contract/12182.sol",
+            "lines": [
+              142
+            ]
+          },
+          "contract": {
+            "type": "contract",
+            "name": "Token",
+            "source_mapping": {
+              "start": 3451,
+              "length": 539,
+              "filename": "/../data/reentrancy/solidity_contract/12182.sol",
+              "lines": [
+                136,
+                137,
+                138,
+                139,
+                140,
+                141,
+                142,
+                143
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "check": "external-function",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "WalletProxy.fallback (/../data/reentrancy/solidity_contract/12182.sol#152-159) should be declared external\n",
+      "elements": [
+        {
+          "type": "function",
+          "name": "fallback",
+          "source_mapping": {
+            "start": 4167,
+            "length": 242,
+            "filename": "/../data/reentrancy/solidity_contract/12182.sol",
+            "lines": [
+              152,
+              153,
+              154,
+              155,
+              156,
+              157,
+              158,
+              159
+            ]
+          },
+          "contract": {
+            "type": "contract",
+            "name": "WalletProxy",
+            "source_mapping": {
+              "start": 3992,
+              "length": 419,
+              "filename": "/../data/reentrancy/solidity_contract/12182.sol",
+              "lines": [
+                145,
+                146,
+                147,
+                148,
+                149,
+                150,
+                151,
+                152,
+                153,
+                154,
+                155,
+                156,
+                157,
+                158,
+                159,
+                160
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "check": "external-function",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Wallet.transferERC20Token (/../data/reentrancy/solidity_contract/12182.sol#163-166) should be declared external\n",
+      "elements": [
+        {
+          "type": "function",
+          "name": "transferERC20Token",
+          "source_mapping": {
+            "start": 4452,
+            "length": 179,
+            "filename": "/../data/reentrancy/solidity_contract/12182.sol",
+            "lines": [
+              163,
+              164,
+              165,
+              166
+            ]
+          },
+          "contract": {
+            "type": "contract",
+            "name": "Wallet",
+            "source_mapping": {
+              "start": 4413,
+              "length": 422,
+              "filename": "/../data/reentrancy/solidity_contract/12182.sol",
+              "lines": [
+                162,
+                163,
+                164,
+                165,
+                166,
+                167,
+                168,
+                169,
+                170,
+                171,
+                172,
+                173,
+                174
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "check": "external-function",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Wallet.transferEther (/../data/reentrancy/solidity_contract/12182.sol#168-171) should be declared external\n",
+      "elements": [
+        {
+          "type": "function",
+          "name": "transferEther",
+          "source_mapping": {
+            "start": 4641,
+            "length": 158,
+            "filename": "/../data/reentrancy/solidity_contract/12182.sol",
+            "lines": [
+              168,
+              169,
+              170,
+              171
+            ]
+          },
+          "contract": {
+            "type": "contract",
+            "name": "Wallet",
+            "source_mapping": {
+              "start": 4413,
+              "length": 422,
+              "filename": "/../data/reentrancy/solidity_contract/12182.sol",
+              "lines": [
+                162,
+                163,
+                164,
+                165,
+                166,
+                167,
+                168,
+                169,
+                170,
+                171,
+                172,
+                173,
+                174
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "check": "external-function",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Wallet.fallback (/../data/reentrancy/solidity_contract/12182.sol#173) should be declared external\n",
+      "elements": [
+        {
+          "type": "function",
+          "name": "fallback",
+          "source_mapping": {
+            "start": 4805,
+            "length": 28,
+            "filename": "/../data/reentrancy/solidity_contract/12182.sol",
+            "lines": [
+              173
+            ]
+          },
+          "contract": {
+            "type": "contract",
+            "name": "Wallet",
+            "source_mapping": {
+              "start": 4413,
+              "length": 422,
+              "filename": "/../data/reentrancy/solidity_contract/12182.sol",
+              "lines": [
+                162,
+                163,
+                164,
+                165,
+                166,
+                167,
+                168,
+                169,
+                170,
+                171,
+                172,
+                173,
+                174
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "check": "external-function",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Controller.executeTransaction (/../data/reentrancy/solidity_contract/12182.sol#189-191) should be declared external\n",
+      "elements": [
+        {
+          "type": "function",
+          "name": "executeTransaction",
+          "source_mapping": {
+            "start": 5262,
+            "length": 178,
+            "filename": "/../data/reentrancy/solidity_contract/12182.sol",
+            "lines": [
+              189,
+              190,
+              191
+            ]
+          },
+          "contract": {
+            "type": "contract",
+            "name": "Controller",
+            "source_mapping": {
+              "start": 4837,
+              "length": 2897,
+              "filename": "/../data/reentrancy/solidity_contract/12182.sol",
+              "lines": [
+                176,
+                177,
+                178,
+                179,
+                180,
+                181,
+                182,
+                183,
+                184,
+                185,
+                186,
+                187,
+                188,
+                189,
+                190,
+                191,
+                192,
+                193,
+                194,
+                195,
+                196,
+                197,
+                198,
+                199,
+                200,
+                201,
+                202,
+                203,
+                204,
+                205,
+                206,
+                207,
+                208,
+                209,
+                210,
+                211,
+                212,
+                213,
+                214,
+                215,
+                216,
+                217,
+                218,
+                219,
+                220,
+                221,
+                222,
+                223,
+                224,
+                225,
+                226,
+                227,
+                228,
+                229,
+                230,
+                231,
+                232,
+                233,
+                234,
+                235,
+                236,
+                237,
+                238,
+                239,
+                240,
+                241,
+                242,
+                243,
+                244,
+                245,
+                246,
+                247,
+                248,
+                249,
+                250,
+                251,
+                252,
+                253,
+                254,
+                255,
+                256,
+                257,
+                258,
+                259,
+                260,
+                261,
+                262,
+                263,
+                264,
+                265,
+                266,
+                267,
+                268,
+                269,
+                270,
+                271,
+                272,
+                273,
+                274
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "check": "external-function",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Controller.createWallets (/../data/reentrancy/solidity_contract/12182.sol#201-208) should be declared external\n",
+      "elements": [
+        {
+          "type": "function",
+          "name": "createWallets",
+          "source_mapping": {
+            "start": 5650,
+            "length": 247,
+            "filename": "/../data/reentrancy/solidity_contract/12182.sol",
+            "lines": [
+              201,
+              202,
+              203,
+              204,
+              205,
+              206,
+              207,
+              208
+            ]
+          },
+          "contract": {
+            "type": "contract",
+            "name": "Controller",
+            "source_mapping": {
+              "start": 4837,
+              "length": 2897,
+              "filename": "/../data/reentrancy/solidity_contract/12182.sol",
+              "lines": [
+                176,
+                177,
+                178,
+                179,
+                180,
+                181,
+                182,
+                183,
+                184,
+                185,
+                186,
+                187,
+                188,
+                189,
+                190,
+                191,
+                192,
+                193,
+                194,
+                195,
+                196,
+                197,
+                198,
+                199,
+                200,
+                201,
+                202,
+                203,
+                204,
+                205,
+                206,
+                207,
+                208,
+                209,
+                210,
+                211,
+                212,
+                213,
+                214,
+                215,
+                216,
+                217,
+                218,
+                219,
+                220,
+                221,
+                222,
+                223,
+                224,
+                225,
+                226,
+                227,
+                228,
+                229,
+                230,
+                231,
+                232,
+                233,
+                234,
+                235,
+                236,
+                237,
+                238,
+                239,
+                240,
+                241,
+                242,
+                243,
+                244,
+                245,
+                246,
+                247,
+                248,
+                249,
+                250,
+                251,
+                252,
+                253,
+                254,
+                255,
+                256,
+                257,
+                258,
+                259,
+                260,
+                261,
+                262,
+                263,
+                264,
+                265,
+                266,
+                267,
+                268,
+                269,
+                270,
+                271,
+                272,
+                273,
+                274
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "check": "external-function",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Controller.withdrawEth (/../data/reentrancy/solidity_contract/12182.sol#211-218) should be declared external\n",
+      "elements": [
+        {
+          "type": "function",
+          "name": "withdrawEth",
+          "source_mapping": {
+            "start": 5909,
+            "length": 288,
+            "filename": "/../data/reentrancy/solidity_contract/12182.sol",
+            "lines": [
+              211,
+              212,
+              213,
+              214,
+              215,
+              216,
+              217,
+              218
+            ]
+          },
+          "contract": {
+            "type": "contract",
+            "name": "Controller",
+            "source_mapping": {
+              "start": 4837,
+              "length": 2897,
+              "filename": "/../data/reentrancy/solidity_contract/12182.sol",
+              "lines": [
+                176,
+                177,
+                178,
+                179,
+                180,
+                181,
+                182,
+                183,
+                184,
+                185,
+                186,
+                187,
+                188,
+                189,
+                190,
+                191,
+                192,
+                193,
+                194,
+                195,
+                196,
+                197,
+                198,
+                199,
+                200,
+                201,
+                202,
+                203,
+                204,
+                205,
+                206,
+                207,
+                208,
+                209,
+                210,
+                211,
+                212,
+                213,
+                214,
+                215,
+                216,
+                217,
+                218,
+                219,
+                220,
+                221,
+                222,
+                223,
+                224,
+                225,
+                226,
+                227,
+                228,
+                229,
+                230,
+                231,
+                232,
+                233,
+                234,
+                235,
+                236,
+                237,
+                238,
+                239,
+                240,
+                241,
+                242,
+                243,
+                244,
+                245,
+                246,
+                247,
+                248,
+                249,
+                250,
+                251,
+                252,
+                253,
+                254,
+                255,
+                256,
+                257,
+                258,
+                259,
+                260,
+                261,
+                262,
+                263,
+                264,
+                265,
+                266,
+                267,
+                268,
+                269,
+                270,
+                271,
+                272,
+                273,
+                274
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "check": "external-function",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Controller.withdrawEthBatch (/../data/reentrancy/solidity_contract/12182.sol#221-239) should be declared external\n",
+      "elements": [
+        {
+          "type": "function",
+          "name": "withdrawEthBatch",
+          "source_mapping": {
+            "start": 6209,
+            "length": 527,
+            "filename": "/../data/reentrancy/solidity_contract/12182.sol",
+            "lines": [
+              221,
+              222,
+              223,
+              224,
+              225,
+              226,
+              227,
+              228,
+              229,
+              230,
+              231,
+              232,
+              233,
+              234,
+              235,
+              236,
+              237,
+              238,
+              239
+            ]
+          },
+          "contract": {
+            "type": "contract",
+            "name": "Controller",
+            "source_mapping": {
+              "start": 4837,
+              "length": 2897,
+              "filename": "/../data/reentrancy/solidity_contract/12182.sol",
+              "lines": [
+                176,
+                177,
+                178,
+                179,
+                180,
+                181,
+                182,
+                183,
+                184,
+                185,
+                186,
+                187,
+                188,
+                189,
+                190,
+                191,
+                192,
+                193,
+                194,
+                195,
+                196,
+                197,
+                198,
+                199,
+                200,
+                201,
+                202,
+                203,
+                204,
+                205,
+                206,
+                207,
+                208,
+                209,
+                210,
+                211,
+                212,
+                213,
+                214,
+                215,
+                216,
+                217,
+                218,
+                219,
+                220,
+                221,
+                222,
+                223,
+                224,
+                225,
+                226,
+                227,
+                228,
+                229,
+                230,
+                231,
+                232,
+                233,
+                234,
+                235,
+                236,
+                237,
+                238,
+                239,
+                240,
+                241,
+                242,
+                243,
+                244,
+                245,
+                246,
+                247,
+                248,
+                249,
+                250,
+                251,
+                252,
+                253,
+                254,
+                255,
+                256,
+                257,
+                258,
+                259,
+                260,
+                261,
+                262,
+                263,
+                264,
+                265,
+                266,
+                267,
+                268,
+                269,
+                270,
+                271,
+                272,
+                273,
+                274
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "check": "external-function",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Controller.withdrawERC20 (/../data/reentrancy/solidity_contract/12182.sol#242-251) should be declared external\n",
+      "elements": [
+        {
+          "type": "function",
+          "name": "withdrawERC20",
+          "source_mapping": {
+            "start": 6748,
+            "length": 376,
+            "filename": "/../data/reentrancy/solidity_contract/12182.sol",
+            "lines": [
+              242,
+              243,
+              244,
+              245,
+              246,
+              247,
+              248,
+              249,
+              250,
+              251
+            ]
+          },
+          "contract": {
+            "type": "contract",
+            "name": "Controller",
+            "source_mapping": {
+              "start": 4837,
+              "length": 2897,
+              "filename": "/../data/reentrancy/solidity_contract/12182.sol",
+              "lines": [
+                176,
+                177,
+                178,
+                179,
+                180,
+                181,
+                182,
+                183,
+                184,
+                185,
+                186,
+                187,
+                188,
+                189,
+                190,
+                191,
+                192,
+                193,
+                194,
+                195,
+                196,
+                197,
+                198,
+                199,
+                200,
+                201,
+                202,
+                203,
+                204,
+                205,
+                206,
+                207,
+                208,
+                209,
+                210,
+                211,
+                212,
+                213,
+                214,
+                215,
+                216,
+                217,
+                218,
+                219,
+                220,
+                221,
+                222,
+                223,
+                224,
+                225,
+                226,
+                227,
+                228,
+                229,
+                230,
+                231,
+                232,
+                233,
+                234,
+                235,
+                236,
+                237,
+                238,
+                239,
+                240,
+                241,
+                242,
+                243,
+                244,
+                245,
+                246,
+                247,
+                248,
+                249,
+                250,
+                251,
+                252,
+                253,
+                254,
+                255,
+                256,
+                257,
+                258,
+                259,
+                260,
+                261,
+                262,
+                263,
+                264,
+                265,
+                266,
+                267,
+                268,
+                269,
+                270,
+                271,
+                272,
+                273,
+                274
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "check": "external-function",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Controller.withdrawERC20Batch (/../data/reentrancy/solidity_contract/12182.sol#254-271) should be declared external\n",
+      "elements": [
+        {
+          "type": "function",
+          "name": "withdrawERC20Batch",
+          "source_mapping": {
+            "start": 7136,
+            "length": 562,
+            "filename": "/../data/reentrancy/solidity_contract/12182.sol",
+            "lines": [
+              254,
+              255,
+              256,
+              257,
+              258,
+              259,
+              260,
+              261,
+              262,
+              263,
+              264,
+              265,
+              266,
+              267,
+              268,
+              269,
+              270,
+              271
+            ]
+          },
+          "contract": {
+            "type": "contract",
+            "name": "Controller",
+            "source_mapping": {
+              "start": 4837,
+              "length": 2897,
+              "filename": "/../data/reentrancy/solidity_contract/12182.sol",
+              "lines": [
+                176,
+                177,
+                178,
+                179,
+                180,
+                181,
+                182,
+                183,
+                184,
+                185,
+                186,
+                187,
+                188,
+                189,
+                190,
+                191,
+                192,
+                193,
+                194,
+                195,
+                196,
+                197,
+                198,
+                199,
+                200,
+                201,
+                202,
+                203,
+                204,
+                205,
+                206,
+                207,
+                208,
+                209,
+                210,
+                211,
+                212,
+                213,
+                214,
+                215,
+                216,
+                217,
+                218,
+                219,
+                220,
+                221,
+                222,
+                223,
+                224,
+                225,
+                226,
+                227,
+                228,
+                229,
+                230,
+                231,
+                232,
+                233,
+                234,
+                235,
+                236,
+                237,
+                238,
+                239,
+                240,
+                241,
+                242,
+                243,
+                244,
+                245,
+                246,
+                247,
+                248,
+                249,
+                250,
+                251,
+                252,
+                253,
+                254,
+                255,
+                256,
+                257,
+                258,
+                259,
+                260,
+                261,
+                262,
+                263,
+                264,
+                265,
+                266,
+                267,
+                268,
+                269,
+                270,
+                271,
+                272,
+                273,
+                274
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "check": "external-function",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Controller.fallback (/../data/reentrancy/solidity_contract/12182.sol#273) should be declared external\n",
+      "elements": [
+        {
+          "type": "function",
+          "name": "fallback",
+          "source_mapping": {
+            "start": 7704,
+            "length": 28,
+            "filename": "/../data/reentrancy/solidity_contract/12182.sol",
+            "lines": [
+              273
+            ]
+          },
+          "contract": {
+            "type": "contract",
+            "name": "Controller",
+            "source_mapping": {
+              "start": 4837,
+              "length": 2897,
+              "filename": "/../data/reentrancy/solidity_contract/12182.sol",
+              "lines": [
+                176,
+                177,
+                178,
+                179,
+                180,
+                181,
+                182,
+                183,
+                184,
+                185,
+                186,
+                187,
+                188,
+                189,
+                190,
+                191,
+                192,
+                193,
+                194,
+                195,
+                196,
+                197,
+                198,
+                199,
+                200,
+                201,
+                202,
+                203,
+                204,
+                205,
+                206,
+                207,
+                208,
+                209,
+                210,
+                211,
+                212,
+                213,
+                214,
+                215,
+                216,
+                217,
+                218,
+                219,
+                220,
+                221,
+                222,
+                223,
+                224,
+                225,
+                226,
+                227,
+                228,
+                229,
+                230,
+                231,
+                232,
+                233,
+                234,
+                235,
+                236,
+                237,
+                238,
+                239,
+                240,
+                241,
+                242,
+                243,
+                244,
+                245,
+                246,
+                247,
+                248,
+                249,
+                250,
+                251,
+                252,
+                253,
+                254,
+                255,
+                256,
+                257,
+                258,
+                259,
+                260,
+                261,
+                262,
+                263,
+                264,
+                265,
+                266,
+                267,
+                268,
+                269,
+                270,
+                271,
+                272,
+                273,
+                274
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "check": "solc-version",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Detected issues with version pragma in /../data/reentrancy/solidity_contract/12182.sol:\n\t- pragma solidity^0.4.23 (/../data/reentrancy/solidity_contract/12182.sol#1): it allows old versions\n",
+      "elements": [
+        {
+          "type": "expression",
+          "expression": "^0.4.23",
+          "source_mapping": {
+            "start": 0,
+            "length": 24,
+            "filename": "/../data/reentrancy/solidity_contract/12182.sol",
+            "lines": [
+              1
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "low-level-calls",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Low level call in Wallet.transferEther (/../data/reentrancy/solidity_contract/12182.sol#168-171):\n\t-to.call.value(amount)() /../data/reentrancy/solidity_contract/12182.sol#170\n",
+      "elements": [
+        {
+          "type": "function",
+          "name": "transferEther",
+          "source_mapping": {
+            "start": 4641,
+            "length": 158,
+            "filename": "/../data/reentrancy/solidity_contract/12182.sol",
+            "lines": [
+              168,
+              169,
+              170,
+              171
+            ]
+          },
+          "contract": {
+            "type": "contract",
+            "name": "Wallet",
+            "source_mapping": {
+              "start": 4413,
+              "length": 422,
+              "filename": "/../data/reentrancy/solidity_contract/12182.sol",
+              "lines": [
+                162,
+                163,
+                164,
+                165,
+                166,
+                167,
+                168,
+                169,
+                170,
+                171,
+                172,
+                173,
+                174
+              ]
+            }
+          }
+        },
+        {
+          "type": "expression",
+          "expression": "to.call.value(amount)()",
+          "source_mapping": {
+            "start": 4762,
+            "length": 30,
+            "filename": "/../data/reentrancy/solidity_contract/12182.sol",
+            "lines": [
+              170
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "low-level-calls",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Low level call in Controller.executeTransaction (/../data/reentrancy/solidity_contract/12182.sol#189-191):\n\t-destination.call.value(value)(_bytes) /../data/reentrancy/solidity_contract/12182.sol#190\n",
+      "elements": [
+        {
+          "type": "function",
+          "name": "executeTransaction",
+          "source_mapping": {
+            "start": 5262,
+            "length": 178,
+            "filename": "/../data/reentrancy/solidity_contract/12182.sol",
+            "lines": [
+              189,
+              190,
+              191
+            ]
+          },
+          "contract": {
+            "type": "contract",
+            "name": "Controller",
+            "source_mapping": {
+              "start": 4837,
+              "length": 2897,
+              "filename": "/../data/reentrancy/solidity_contract/12182.sol",
+              "lines": [
+                176,
+                177,
+                178,
+                179,
+                180,
+                181,
+                182,
+                183,
+                184,
+                185,
+                186,
+                187,
+                188,
+                189,
+                190,
+                191,
+                192,
+                193,
+                194,
+                195,
+                196,
+                197,
+                198,
+                199,
+                200,
+                201,
+                202,
+                203,
+                204,
+                205,
+                206,
+                207,
+                208,
+                209,
+                210,
+                211,
+                212,
+                213,
+                214,
+                215,
+                216,
+                217,
+                218,
+                219,
+                220,
+                221,
+                222,
+                223,
+                224,
+                225,
+                226,
+                227,
+                228,
+                229,
+                230,
+                231,
+                232,
+                233,
+                234,
+                235,
+                236,
+                237,
+                238,
+                239,
+                240,
+                241,
+                242,
+                243,
+                244,
+                245,
+                246,
+                247,
+                248,
+                249,
+                250,
+                251,
+                252,
+                253,
+                254,
+                255,
+                256,
+                257,
+                258,
+                259,
+                260,
+                261,
+                262,
+                263,
+                264,
+                265,
+                266,
+                267,
+                268,
+                269,
+                270,
+                271,
+                272,
+                273,
+                274
+              ]
+            }
+          }
+        },
+        {
+          "type": "expression",
+          "expression": "destination.call.value(value)(_bytes)",
+          "source_mapping": {
+            "start": 5389,
+            "length": 44,
+            "filename": "/../data/reentrancy/solidity_contract/12182.sol",
+            "lines": [
+              190
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "low-level-calls",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Low level call in Controller.withdrawEthBatch (/../data/reentrancy/solidity_contract/12182.sol#221-239):\n\t-forward.call.value(address(this).balance)() /../data/reentrancy/solidity_contract/12182.sol#236\n",
+      "elements": [
+        {
+          "type": "function",
+          "name": "withdrawEthBatch",
+          "source_mapping": {
+            "start": 6209,
+            "length": 527,
+            "filename": "/../data/reentrancy/solidity_contract/12182.sol",
+            "lines": [
+              221,
+              222,
+              223,
+              224,
+              225,
+              226,
+              227,
+              228,
+              229,
+              230,
+              231,
+              232,
+              233,
+              234,
+              235,
+              236,
+              237,
+              238,
+              239
+            ]
+          },
+          "contract": {
+            "type": "contract",
+            "name": "Controller",
+            "source_mapping": {
+              "start": 4837,
+              "length": 2897,
+              "filename": "/../data/reentrancy/solidity_contract/12182.sol",
+              "lines": [
+                176,
+                177,
+                178,
+                179,
+                180,
+                181,
+                182,
+                183,
+                184,
+                185,
+                186,
+                187,
+                188,
+                189,
+                190,
+                191,
+                192,
+                193,
+                194,
+                195,
+                196,
+                197,
+                198,
+                199,
+                200,
+                201,
+                202,
+                203,
+                204,
+                205,
+                206,
+                207,
+                208,
+                209,
+                210,
+                211,
+                212,
+                213,
+                214,
+                215,
+                216,
+                217,
+                218,
+                219,
+                220,
+                221,
+                222,
+                223,
+                224,
+                225,
+                226,
+                227,
+                228,
+                229,
+                230,
+                231,
+                232,
+                233,
+                234,
+                235,
+                236,
+                237,
+                238,
+                239,
+                240,
+                241,
+                242,
+                243,
+                244,
+                245,
+                246,
+                247,
+                248,
+                249,
+                250,
+                251,
+                252,
+                253,
+                254,
+                255,
+                256,
+                257,
+                258,
+                259,
+                260,
+                261,
+                262,
+                263,
+                264,
+                265,
+                266,
+                267,
+                268,
+                269,
+                270,
+                271,
+                272,
+                273,
+                274
+              ]
+            }
+          }
+        },
+        {
+          "type": "expression",
+          "expression": "forward.call.value(address(this).balance)()",
+          "source_mapping": {
+            "start": 6664,
+            "length": 43,
+            "filename": "/../data/reentrancy/solidity_contract/12182.sol",
+            "lines": [
+              236
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "naming-convention",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Parameter '_owner' of Ownable.setOwner (/../data/reentrancy/solidity_contract/12182.sol#16) is not in mixedCase\n",
+      "elements": [
+        {
+          "target": "parameter",
+          "convention": "mixedCase",
+          "name": "_owner",
+          "source_mapping": {
+            "start": 246,
+            "length": 14,
+            "filename": "/../data/reentrancy/solidity_contract/12182.sol",
+            "lines": [
+              16
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "naming-convention",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Parameter '_worker' of HasWorkers.isWorker (/../data/reentrancy/solidity_contract/12182.sol#48) is not in mixedCase\n",
+      "elements": [
+        {
+          "target": "parameter",
+          "convention": "mixedCase",
+          "name": "_worker",
+          "source_mapping": {
+            "start": 966,
+            "length": 15,
+            "filename": "/../data/reentrancy/solidity_contract/12182.sol",
+            "lines": [
+              48
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "naming-convention",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Parameter '_worker' of HasWorkers.addWorker (/../data/reentrancy/solidity_contract/12182.sol#59) is not in mixedCase\n",
+      "elements": [
+        {
+          "target": "parameter",
+          "convention": "mixedCase",
+          "name": "_worker",
+          "source_mapping": {
+            "start": 1324,
+            "length": 15,
+            "filename": "/../data/reentrancy/solidity_contract/12182.sol",
+            "lines": [
+              59
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "naming-convention",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Parameter '_worker' of HasWorkers.removeWorker (/../data/reentrancy/solidity_contract/12182.sol#67) is not in mixedCase\n",
+      "elements": [
+        {
+          "target": "parameter",
+          "convention": "mixedCase",
+          "name": "_worker",
+          "source_mapping": {
+            "start": 1592,
+            "length": 15,
+            "filename": "/../data/reentrancy/solidity_contract/12182.sol",
+            "lines": [
+              67
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "naming-convention",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Parameter '_delegate' of ControllerProxy.setWalletsDelegate (/../data/reentrancy/solidity_contract/12182.sol#119) is not in mixedCase\n",
+      "elements": [
+        {
+          "target": "parameter",
+          "convention": "mixedCase",
+          "name": "_delegate",
+          "source_mapping": {
+            "start": 3038,
+            "length": 17,
+            "filename": "/../data/reentrancy/solidity_contract/12182.sol",
+            "lines": [
+              119
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "naming-convention",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Parameter '_delegate' of ControllerProxy.setControllerDelegate (/../data/reentrancy/solidity_contract/12182.sol#124) is not in mixedCase\n",
+      "elements": [
+        {
+          "target": "parameter",
+          "convention": "mixedCase",
+          "name": "_delegate",
+          "source_mapping": {
+            "start": 3191,
+            "length": 17,
+            "filename": "/../data/reentrancy/solidity_contract/12182.sol",
+            "lines": [
+              124
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "naming-convention",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Parameter '_bytes' of Controller.executeTransaction (/../data/reentrancy/solidity_contract/12182.sol#189) is not in mixedCase\n",
+      "elements": [
+        {
+          "target": "parameter",
+          "convention": "mixedCase",
+          "name": "_bytes",
+          "source_mapping": {
+            "start": 5326,
+            "length": 19,
+            "filename": "/../data/reentrancy/solidity_contract/12182.sol",
+            "lines": [
+              189
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "naming-convention",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Parameter '_forward' of Controller.setForward (/../data/reentrancy/solidity_contract/12182.sol#194) is not in mixedCase\n",
+      "elements": [
+        {
+          "target": "parameter",
+          "convention": "mixedCase",
+          "name": "_forward",
+          "source_mapping": {
+            "start": 5472,
+            "length": 16,
+            "filename": "/../data/reentrancy/solidity_contract/12182.sol",
+            "lines": [
+              194
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

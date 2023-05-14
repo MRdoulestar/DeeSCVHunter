@@ -1,0 +1,68 @@
+INFO:Detectors:[92m
+AtripToken.decimals should be constant (/../data/reentrancy/solidity_contract/10715.sol#220)
+AtripToken.name should be constant (/../data/reentrancy/solidity_contract/10715.sol#218)
+AtripToken.symbol should be constant (/../data/reentrancy/solidity_contract/10715.sol#219)
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#state-variables-that-could-be-declared-constant[0m
+INFO:Detectors:[92m
+BasicToken.totalSupply (/../data/reentrancy/solidity_contract/10715.sol#56-58) should be declared external
+ERC20Basic.totalSupply (/../data/reentrancy/solidity_contract/10715.sol#42) should be declared external
+BasicToken.balanceOf (/../data/reentrancy/solidity_contract/10715.sol#72-74) should be declared external
+ERC20Basic.balanceOf (/../data/reentrancy/solidity_contract/10715.sol#43) should be declared external
+StandardToken.allowance (/../data/reentrancy/solidity_contract/10715.sol#119-121) should be declared external
+ERC20.allowance (/../data/reentrancy/solidity_contract/10715.sol#79-80) should be declared external
+ERC827.approveAndCall (/../data/reentrancy/solidity_contract/10715.sol#146) should be declared external
+ERC827Token.approveAndCall (/../data/reentrancy/solidity_contract/10715.sol#156-165) should be declared external
+ERC827Token.transferAndCall (/../data/reentrancy/solidity_contract/10715.sol#168-176) should be declared external
+ERC827.transferAndCall (/../data/reentrancy/solidity_contract/10715.sol#148) should be declared external
+ERC827.transferFromAndCall (/../data/reentrancy/solidity_contract/10715.sol#150) should be declared external
+ERC827Token.transferFromAndCall (/../data/reentrancy/solidity_contract/10715.sol#179-187) should be declared external
+ERC827Token.increaseApprovalAndCall (/../data/reentrancy/solidity_contract/10715.sol#190-199) should be declared external
+ERC827Token.decreaseApprovalAndCall (/../data/reentrancy/solidity_contract/10715.sol#202-211) should be declared external
+AtripToken.fallback (/../data/reentrancy/solidity_contract/10715.sol#231-233) should be declared external
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#public-function-that-could-be-declared-as-external[0m
+INFO:Detectors:[92m
+Low level call in ERC827Token.approveAndCall (/../data/reentrancy/solidity_contract/10715.sol#156-165):
+	-require(bool)(_spender.call.value(msg.value)(_data)) /../data/reentrancy/solidity_contract/10715.sol#162
+Low level call in ERC827Token.transferAndCall (/../data/reentrancy/solidity_contract/10715.sol#168-176):
+	-require(bool)(_to.call.value(msg.value)(_data)) /../data/reentrancy/solidity_contract/10715.sol#174
+Low level call in ERC827Token.transferFromAndCall (/../data/reentrancy/solidity_contract/10715.sol#179-187):
+	-require(bool)(_to.call.value(msg.value)(_data)) /../data/reentrancy/solidity_contract/10715.sol#185
+Low level call in ERC827Token.increaseApprovalAndCall (/../data/reentrancy/solidity_contract/10715.sol#190-199):
+	-require(bool)(_spender.call.value(msg.value)(_data)) /../data/reentrancy/solidity_contract/10715.sol#196
+Low level call in ERC827Token.decreaseApprovalAndCall (/../data/reentrancy/solidity_contract/10715.sol#202-211):
+	-require(bool)(_spender.call.value(msg.value)(_data)) /../data/reentrancy/solidity_contract/10715.sol#208
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#low-level-calls[0m
+INFO:Detectors:[92m
+Parameter '_owner' of BasicToken.balanceOf (/../data/reentrancy/solidity_contract/10715.sol#72) is not in mixedCase
+Parameter '_to' of BasicToken.transfer (/../data/reentrancy/solidity_contract/10715.sol#61) is not in mixedCase
+Parameter '_value' of BasicToken.transfer (/../data/reentrancy/solidity_contract/10715.sol#61) is not in mixedCase
+Parameter '_owner' of StandardToken.allowance (/../data/reentrancy/solidity_contract/10715.sol#119) is not in mixedCase
+Parameter '_spender' of StandardToken.allowance (/../data/reentrancy/solidity_contract/10715.sol#119) is not in mixedCase
+Parameter '_from' of StandardToken.transferFrom (/../data/reentrancy/solidity_contract/10715.sol#99) is not in mixedCase
+Parameter '_to' of StandardToken.transferFrom (/../data/reentrancy/solidity_contract/10715.sol#99) is not in mixedCase
+Parameter '_value' of StandardToken.transferFrom (/../data/reentrancy/solidity_contract/10715.sol#99) is not in mixedCase
+Parameter '_spender' of StandardToken.approve (/../data/reentrancy/solidity_contract/10715.sol#112) is not in mixedCase
+Parameter '_value' of StandardToken.approve (/../data/reentrancy/solidity_contract/10715.sol#112) is not in mixedCase
+Parameter '_spender' of StandardToken.increaseApproval (/../data/reentrancy/solidity_contract/10715.sol#124) is not in mixedCase
+Parameter '_addedValue' of StandardToken.increaseApproval (/../data/reentrancy/solidity_contract/10715.sol#124) is not in mixedCase
+Parameter '_spender' of StandardToken.decreaseApproval (/../data/reentrancy/solidity_contract/10715.sol#132) is not in mixedCase
+Parameter '_subtractedValue' of StandardToken.decreaseApproval (/../data/reentrancy/solidity_contract/10715.sol#132) is not in mixedCase
+Parameter '_spender' of ERC827Token.approveAndCall (/../data/reentrancy/solidity_contract/10715.sol#156) is not in mixedCase
+Parameter '_value' of ERC827Token.approveAndCall (/../data/reentrancy/solidity_contract/10715.sol#156) is not in mixedCase
+Parameter '_data' of ERC827Token.approveAndCall (/../data/reentrancy/solidity_contract/10715.sol#156) is not in mixedCase
+Parameter '_to' of ERC827Token.transferAndCall (/../data/reentrancy/solidity_contract/10715.sol#168) is not in mixedCase
+Parameter '_value' of ERC827Token.transferAndCall (/../data/reentrancy/solidity_contract/10715.sol#168) is not in mixedCase
+Parameter '_data' of ERC827Token.transferAndCall (/../data/reentrancy/solidity_contract/10715.sol#168) is not in mixedCase
+Parameter '_from' of ERC827Token.transferFromAndCall (/../data/reentrancy/solidity_contract/10715.sol#179) is not in mixedCase
+Parameter '_to' of ERC827Token.transferFromAndCall (/../data/reentrancy/solidity_contract/10715.sol#179) is not in mixedCase
+Parameter '_value' of ERC827Token.transferFromAndCall (/../data/reentrancy/solidity_contract/10715.sol#179) is not in mixedCase
+Parameter '_data' of ERC827Token.transferFromAndCall (/../data/reentrancy/solidity_contract/10715.sol#179) is not in mixedCase
+Parameter '_spender' of ERC827Token.increaseApprovalAndCall (/../data/reentrancy/solidity_contract/10715.sol#190) is not in mixedCase
+Parameter '_addedValue' of ERC827Token.increaseApprovalAndCall (/../data/reentrancy/solidity_contract/10715.sol#190) is not in mixedCase
+Parameter '_data' of ERC827Token.increaseApprovalAndCall (/../data/reentrancy/solidity_contract/10715.sol#190) is not in mixedCase
+Parameter '_spender' of ERC827Token.decreaseApprovalAndCall (/../data/reentrancy/solidity_contract/10715.sol#202) is not in mixedCase
+Parameter '_subtractedValue' of ERC827Token.decreaseApprovalAndCall (/../data/reentrancy/solidity_contract/10715.sol#202) is not in mixedCase
+Parameter '_data' of ERC827Token.decreaseApprovalAndCall (/../data/reentrancy/solidity_contract/10715.sol#202) is not in mixedCase
+Parameter '_wallet' of AtripToken. (/../data/reentrancy/solidity_contract/10715.sol#224) is not in mixedCase
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#conformance-to-solidity-naming-conventions[0m
+INFO:Slither:/../data/reentrancy/solidity_contract/10715.sol analyzed (8 contracts), 52 result(s) found

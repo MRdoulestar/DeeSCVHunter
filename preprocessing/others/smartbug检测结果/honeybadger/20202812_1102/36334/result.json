@@ -1,0 +1,14 @@
+{
+  "contract": "36334",
+  "tool": "honeybadger",
+  "start": 1609138041.678435,
+  "end": 1609138052.2143822,
+  "duration": 10.53594708442688,
+  "analysis": [
+    {
+      "errors": [],
+      "file": "/../data/reentrancy/solidity_contract/36334.sol",
+      "name": "RequestSale"
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "contract": "29517",
+  "tool": "honeybadger",
+  "start": 1609159276.471503,
+  "end": 1609159356.9441159,
+  "duration": 80.4726128578186,
+  "analysis": [
+    {
+      "errors": [],
+      "file": "/../data/reentrancy/solidity_contract/29517.sol",
+      "name": "Distribution"
+    }
+  ]
+}

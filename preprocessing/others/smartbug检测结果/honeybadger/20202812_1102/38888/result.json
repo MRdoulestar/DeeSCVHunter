@@ -1,0 +1,24 @@
+{
+  "contract": "38888",
+  "tool": "honeybadger",
+  "start": 1609137177.69571,
+  "end": 1609137184.126139,
+  "duration": 6.430428981781006,
+  "analysis": [
+    {
+      "errors": [],
+      "file": "/../data/reentrancy/solidity_contract/38888.sol",
+      "name": "FunFairSale"
+    },
+    {
+      "errors": [],
+      "file": "/../data/reentrancy/solidity_contract/38888.sol",
+      "name": "Owned"
+    },
+    {
+      "errors": [],
+      "file": "/../data/reentrancy/solidity_contract/38888.sol",
+      "name": "TokenReceivable"
+    }
+  ]
+}

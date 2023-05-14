@@ -1,0 +1,19 @@
+{
+  "contract": "39912",
+  "tool": "honeybadger",
+  "start": 1609174874.5067441,
+  "end": 1609174877.91799,
+  "duration": 3.411245822906494,
+  "analysis": [
+    {
+      "errors": [],
+      "file": "/../data/reentrancy/solidity_contract/39912.sol",
+      "name": "CampaignBeneficiary"
+    },
+    {
+      "errors": [],
+      "file": "/../data/reentrancy/solidity_contract/39912.sol",
+      "name": "owned"
+    }
+  ]
+}

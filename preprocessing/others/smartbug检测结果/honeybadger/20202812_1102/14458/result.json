@@ -1,0 +1,14 @@
+{
+  "contract": "14458",
+  "tool": "honeybadger",
+  "start": 1609175516.791689,
+  "end": 1609175623.898795,
+  "duration": 107.10710597038269,
+  "analysis": [
+    {
+      "errors": [],
+      "file": "/../data/reentrancy/solidity_contract/14458.sol",
+      "name": "BankeraToken"
+    }
+  ]
+}

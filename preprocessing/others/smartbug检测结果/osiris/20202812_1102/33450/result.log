@@ -1,0 +1,22 @@
+INFO:root:Contract /../data/reentrancy/solidity_contract/33450.sol:MultiOwner:
+INFO:symExec:Running, please wait...
+INFO:symExec:	============ Results ===========
+INFO:symExec:	  EVM code coverage: 	 99.1%
+INFO:symExec:	  Arithmetic bugs: 	 True
+INFO:symExec:	  └> Overflow bugs: 	 True
+/../data/reentrancy/solidity_contract/33450.sol:MultiOwner:43:9
+owners.push(owner)
+^
+INFO:symExec:	  └> Underflow bugs: 	 False
+INFO:symExec:	  └> Division bugs: 	 False
+INFO:symExec:	  └> Modulo bugs:   	 False
+INFO:symExec:	  └> Truncation bugs: 	 False
+INFO:symExec:	  └> Signedness bugs: 	 False
+INFO:symExec:	  Callstack bug: 	 False
+INFO:symExec:	  Concurrency bug: 	 False
+INFO:symExec:	  Time dependency bug: 	 False
+INFO:symExec:	  Reentrancy bug: 	 False
+INFO:symExec:	 --- 11.4001331329 seconds ---
+INFO:symExec:	====== Analysis Completed ======
+INFO:root:Contract /../data/reentrancy/solidity_contract/33450.sol:VVToken:
+INFO:symExec:Running, please wait...

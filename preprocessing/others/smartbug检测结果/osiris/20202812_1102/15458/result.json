@@ -1,0 +1,19 @@
+{
+  "contract": "15458",
+  "tool": "osiris",
+  "start": 1609134314.563424,
+  "end": 1609134365.9273028,
+  "duration": 51.36387872695923,
+  "analysis": [
+    {
+      "errors": [],
+      "file": "/../data/reentrancy/solidity_contract/15458.sol",
+      "name": "MineableToken"
+    },
+    {
+      "errors": [],
+      "file": "/../data/reentrancy/solidity_contract/15458.sol",
+      "name": "owned"
+    }
+  ]
+}

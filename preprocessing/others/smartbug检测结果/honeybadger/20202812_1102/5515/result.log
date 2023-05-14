@@ -1,0 +1,32 @@
+INFO:root:Contract /../data/reentrancy/solidity_contract/5515.sol:NamiCrowdSale:
+INFO:symExec:Running, please wait...
+INFO:symExec:	============ Results ===========
+INFO:symExec:	 EVM code coverage: 	 90.3%
+INFO:symExec:	 Money flow:    	 True
+INFO:symExec:	 Balance disorder: 	 False
+INFO:symExec:	 Hidden transfer: 	 False
+INFO:symExec:	 Inheritance disorder: 	 False
+INFO:symExec:	 Uninitialised struct: 	 False
+INFO:symExec:	 Type overflow: 	 False
+INFO:symExec:	 Skip empty string: 	 False
+INFO:symExec:	 Hidden state update: 	 False
+INFO:symExec:	 Straw man contract: 	 False
+INFO:symExec:	 --- 297.834914923 seconds ---
+INFO:symExec:	====== Analysis Completed ======
+INFO:root:Contract /../data/reentrancy/solidity_contract/5515.sol:NamiMarket:
+INFO:symExec:Running, please wait...
+INFO:symExec:	============ Results ===========
+INFO:symExec:	 EVM code coverage: 	 100.0%
+INFO:symExec:	 Money flow:    	 True
+INFO:symExec:	 Balance disorder: 	 False
+INFO:symExec:	 Hidden transfer: 	 False
+INFO:symExec:	 Inheritance disorder: 	 False
+INFO:symExec:	 Uninitialised struct: 	 False
+INFO:symExec:	 Type overflow: 	 False
+INFO:symExec:	 Skip empty string: 	 False
+INFO:symExec:	 Hidden state update: 	 False
+INFO:symExec:	 Straw man contract: 	 False
+INFO:symExec:	 --- 63.5967209339 seconds ---
+INFO:symExec:	====== Analysis Completed ======
+INFO:root:Contract /../data/reentrancy/solidity_contract/5515.sol:NamiMultiSigWallet:
+INFO:symExec:Running, please wait...

@@ -1,0 +1,14 @@
+{
+  "contract": "37474",
+  "tool": "honeybadger",
+  "start": 1609150254.848466,
+  "end": 1609150281.953311,
+  "duration": 27.10484504699707,
+  "analysis": [
+    {
+      "errors": [],
+      "file": "/../data/reentrancy/solidity_contract/37474.sol",
+      "name": "TradersWallet"
+    }
+  ]
+}

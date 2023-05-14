@@ -1,0 +1,1273 @@
+{
+  "contract": "14945",
+  "tool": "slither",
+  "start": 1609205688.014166,
+  "end": 1609205691.733631,
+  "duration": 3.7194647789001465,
+  "analysis": [
+    {
+      "check": "external-function",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "BasicToken.totalSupply (/../data/reentrancy/solidity_contract/14945.sol#47-49) should be declared external\n",
+      "elements": [
+        {
+          "type": "function",
+          "name": "totalSupply",
+          "source_mapping": {
+            "start": 1337,
+            "length": 83,
+            "filename": "/../data/reentrancy/solidity_contract/14945.sol",
+            "lines": [
+              47,
+              48,
+              49
+            ]
+          },
+          "contract": {
+            "type": "contract",
+            "name": "BasicToken",
+            "source_mapping": {
+              "start": 1205,
+              "length": 643,
+              "filename": "/../data/reentrancy/solidity_contract/14945.sol",
+              "lines": [
+                43,
+                44,
+                45,
+                46,
+                47,
+                48,
+                49,
+                50,
+                51,
+                52,
+                53,
+                54,
+                55,
+                56,
+                57,
+                58,
+                59,
+                60,
+                61,
+                62
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "check": "external-function",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "ERC20Basic.totalSupply (/../data/reentrancy/solidity_contract/14945.sol#4) should be declared external\n",
+      "elements": [
+        {
+          "type": "function",
+          "name": "totalSupply",
+          "source_mapping": {
+            "start": 50,
+            "length": 53,
+            "filename": "/../data/reentrancy/solidity_contract/14945.sol",
+            "lines": [
+              4
+            ]
+          },
+          "contract": {
+            "type": "contract",
+            "name": "ERC20Basic",
+            "source_mapping": {
+              "start": 26,
+              "length": 289,
+              "filename": "/../data/reentrancy/solidity_contract/14945.sol",
+              "lines": [
+                3,
+                4,
+                5,
+                6,
+                7,
+                8
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "check": "external-function",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "BasicToken.balanceOf (/../data/reentrancy/solidity_contract/14945.sol#59-61) should be declared external\n",
+      "elements": [
+        {
+          "type": "function",
+          "name": "balanceOf",
+          "source_mapping": {
+            "start": 1747,
+            "length": 99,
+            "filename": "/../data/reentrancy/solidity_contract/14945.sol",
+            "lines": [
+              59,
+              60,
+              61
+            ]
+          },
+          "contract": {
+            "type": "contract",
+            "name": "BasicToken",
+            "source_mapping": {
+              "start": 1205,
+              "length": 643,
+              "filename": "/../data/reentrancy/solidity_contract/14945.sol",
+              "lines": [
+                43,
+                44,
+                45,
+                46,
+                47,
+                48,
+                49,
+                50,
+                51,
+                52,
+                53,
+                54,
+                55,
+                56,
+                57,
+                58,
+                59,
+                60,
+                61,
+                62
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "check": "external-function",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "ERC20Basic.balanceOf (/../data/reentrancy/solidity_contract/14945.sol#5) should be declared external\n",
+      "elements": [
+        {
+          "type": "function",
+          "name": "balanceOf",
+          "source_mapping": {
+            "start": 106,
+            "length": 62,
+            "filename": "/../data/reentrancy/solidity_contract/14945.sol",
+            "lines": [
+              5
+            ]
+          },
+          "contract": {
+            "type": "contract",
+            "name": "ERC20Basic",
+            "source_mapping": {
+              "start": 26,
+              "length": 289,
+              "filename": "/../data/reentrancy/solidity_contract/14945.sol",
+              "lines": [
+                3,
+                4,
+                5,
+                6,
+                7,
+                8
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "check": "external-function",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "BasicToken.transfer (/../data/reentrancy/solidity_contract/14945.sol#50-58) should be declared external\n",
+      "elements": [
+        {
+          "type": "function",
+          "name": "transfer",
+          "source_mapping": {
+            "start": 1423,
+            "length": 321,
+            "filename": "/../data/reentrancy/solidity_contract/14945.sol",
+            "lines": [
+              50,
+              51,
+              52,
+              53,
+              54,
+              55,
+              56,
+              57,
+              58
+            ]
+          },
+          "contract": {
+            "type": "contract",
+            "name": "BasicToken",
+            "source_mapping": {
+              "start": 1205,
+              "length": 643,
+              "filename": "/../data/reentrancy/solidity_contract/14945.sol",
+              "lines": [
+                43,
+                44,
+                45,
+                46,
+                47,
+                48,
+                49,
+                50,
+                51,
+                52,
+                53,
+                54,
+                55,
+                56,
+                57,
+                58,
+                59,
+                60,
+                61,
+                62
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "check": "external-function",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "ERC20Basic.transfer (/../data/reentrancy/solidity_contract/14945.sol#6) should be declared external\n",
+      "elements": [
+        {
+          "type": "function",
+          "name": "transfer",
+          "source_mapping": {
+            "start": 171,
+            "length": 67,
+            "filename": "/../data/reentrancy/solidity_contract/14945.sol",
+            "lines": [
+              6
+            ]
+          },
+          "contract": {
+            "type": "contract",
+            "name": "ERC20Basic",
+            "source_mapping": {
+              "start": 26,
+              "length": 289,
+              "filename": "/../data/reentrancy/solidity_contract/14945.sol",
+              "lines": [
+                3,
+                4,
+                5,
+                6,
+                7,
+                8
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "check": "external-function",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "ERC20.allowance (/../data/reentrancy/solidity_contract/14945.sol#11) should be declared external\n",
+      "elements": [
+        {
+          "type": "function",
+          "name": "allowance",
+          "source_mapping": {
+            "start": 350,
+            "length": 81,
+            "filename": "/../data/reentrancy/solidity_contract/14945.sol",
+            "lines": [
+              11
+            ]
+          },
+          "contract": {
+            "type": "contract",
+            "name": "ERC20",
+            "source_mapping": {
+              "start": 317,
+              "length": 359,
+              "filename": "/../data/reentrancy/solidity_contract/14945.sol",
+              "lines": [
+                10,
+                11,
+                12,
+                13,
+                14,
+                15
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "check": "external-function",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "StandardToken.allowance (/../data/reentrancy/solidity_contract/14945.sol#82-84) should be declared external\n",
+      "elements": [
+        {
+          "type": "function",
+          "name": "allowance",
+          "source_mapping": {
+            "start": 2606,
+            "length": 126,
+            "filename": "/../data/reentrancy/solidity_contract/14945.sol",
+            "lines": [
+              82,
+              83,
+              84
+            ]
+          },
+          "contract": {
+            "type": "contract",
+            "name": "StandardToken",
+            "source_mapping": {
+              "start": 1850,
+              "length": 1555,
+              "filename": "/../data/reentrancy/solidity_contract/14945.sol",
+              "lines": [
+                64,
+                65,
+                66,
+                67,
+                68,
+                69,
+                70,
+                71,
+                72,
+                73,
+                74,
+                75,
+                76,
+                77,
+                78,
+                79,
+                80,
+                81,
+                82,
+                83,
+                84,
+                85,
+                86,
+                87,
+                88,
+                89,
+                90,
+                91,
+                92,
+                93,
+                94,
+                95,
+                96,
+                97,
+                98,
+                99,
+                100
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "check": "external-function",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "ERC20.transferFrom (/../data/reentrancy/solidity_contract/14945.sol#12) should be declared external\n",
+      "elements": [
+        {
+          "type": "function",
+          "name": "transferFrom",
+          "source_mapping": {
+            "start": 434,
+            "length": 85,
+            "filename": "/../data/reentrancy/solidity_contract/14945.sol",
+            "lines": [
+              12
+            ]
+          },
+          "contract": {
+            "type": "contract",
+            "name": "ERC20",
+            "source_mapping": {
+              "start": 317,
+              "length": 359,
+              "filename": "/../data/reentrancy/solidity_contract/14945.sol",
+              "lines": [
+                10,
+                11,
+                12,
+                13,
+                14,
+                15
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "check": "external-function",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "StandardToken.transferFrom (/../data/reentrancy/solidity_contract/14945.sol#66-76) should be declared external\n",
+      "elements": [
+        {
+          "type": "function",
+          "name": "transferFrom",
+          "source_mapping": {
+            "start": 1968,
+            "length": 444,
+            "filename": "/../data/reentrancy/solidity_contract/14945.sol",
+            "lines": [
+              66,
+              67,
+              68,
+              69,
+              70,
+              71,
+              72,
+              73,
+              74,
+              75,
+              76
+            ]
+          },
+          "contract": {
+            "type": "contract",
+            "name": "StandardToken",
+            "source_mapping": {
+              "start": 1850,
+              "length": 1555,
+              "filename": "/../data/reentrancy/solidity_contract/14945.sol",
+              "lines": [
+                64,
+                65,
+                66,
+                67,
+                68,
+                69,
+                70,
+                71,
+                72,
+                73,
+                74,
+                75,
+                76,
+                77,
+                78,
+                79,
+                80,
+                81,
+                82,
+                83,
+                84,
+                85,
+                86,
+                87,
+                88,
+                89,
+                90,
+                91,
+                92,
+                93,
+                94,
+                95,
+                96,
+                97,
+                98,
+                99,
+                100
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "check": "external-function",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "StandardToken.increaseApproval (/../data/reentrancy/solidity_contract/14945.sol#85-89) should be declared external\n",
+      "elements": [
+        {
+          "type": "function",
+          "name": "increaseApproval",
+          "source_mapping": {
+            "start": 2735,
+            "length": 262,
+            "filename": "/../data/reentrancy/solidity_contract/14945.sol",
+            "lines": [
+              85,
+              86,
+              87,
+              88,
+              89
+            ]
+          },
+          "contract": {
+            "type": "contract",
+            "name": "StandardToken",
+            "source_mapping": {
+              "start": 1850,
+              "length": 1555,
+              "filename": "/../data/reentrancy/solidity_contract/14945.sol",
+              "lines": [
+                64,
+                65,
+                66,
+                67,
+                68,
+                69,
+                70,
+                71,
+                72,
+                73,
+                74,
+                75,
+                76,
+                77,
+                78,
+                79,
+                80,
+                81,
+                82,
+                83,
+                84,
+                85,
+                86,
+                87,
+                88,
+                89,
+                90,
+                91,
+                92,
+                93,
+                94,
+                95,
+                96,
+                97,
+                98,
+                99,
+                100
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "check": "external-function",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "StandardToken.decreaseApproval (/../data/reentrancy/solidity_contract/14945.sol#90-99) should be declared external\n",
+      "elements": [
+        {
+          "type": "function",
+          "name": "decreaseApproval",
+          "source_mapping": {
+            "start": 3000,
+            "length": 403,
+            "filename": "/../data/reentrancy/solidity_contract/14945.sol",
+            "lines": [
+              90,
+              91,
+              92,
+              93,
+              94,
+              95,
+              96,
+              97,
+              98,
+              99
+            ]
+          },
+          "contract": {
+            "type": "contract",
+            "name": "StandardToken",
+            "source_mapping": {
+              "start": 1850,
+              "length": 1555,
+              "filename": "/../data/reentrancy/solidity_contract/14945.sol",
+              "lines": [
+                64,
+                65,
+                66,
+                67,
+                68,
+                69,
+                70,
+                71,
+                72,
+                73,
+                74,
+                75,
+                76,
+                77,
+                78,
+                79,
+                80,
+                81,
+                82,
+                83,
+                84,
+                85,
+                86,
+                87,
+                88,
+                89,
+                90,
+                91,
+                92,
+                93,
+                94,
+                95,
+                96,
+                97,
+                98,
+                99,
+                100
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "check": "external-function",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "StudToken.fallback (/../data/reentrancy/solidity_contract/14945.sol#103-105) should be declared external\n",
+      "elements": [
+        {
+          "type": "function",
+          "name": "fallback",
+          "source_mapping": {
+            "start": 3449,
+            "length": 43,
+            "filename": "/../data/reentrancy/solidity_contract/14945.sol",
+            "lines": [
+              103,
+              104,
+              105
+            ]
+          },
+          "contract": {
+            "type": "contract",
+            "name": "StudToken",
+            "source_mapping": {
+              "start": 3407,
+              "length": 686,
+              "filename": "/../data/reentrancy/solidity_contract/14945.sol",
+              "lines": [
+                102,
+                103,
+                104,
+                105,
+                106,
+                107,
+                108,
+                109,
+                110,
+                111,
+                112,
+                113,
+                114,
+                115,
+                116,
+                117,
+                118,
+                119,
+                120
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "check": "external-function",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "StudToken.approveAndCall (/../data/reentrancy/solidity_contract/14945.sol#114-119) should be declared external\n",
+      "elements": [
+        {
+          "type": "function",
+          "name": "approveAndCall",
+          "source_mapping": {
+            "start": 3821,
+            "length": 270,
+            "filename": "/../data/reentrancy/solidity_contract/14945.sol",
+            "lines": [
+              114,
+              115,
+              116,
+              117,
+              118,
+              119
+            ]
+          },
+          "contract": {
+            "type": "contract",
+            "name": "StudToken",
+            "source_mapping": {
+              "start": 3407,
+              "length": 686,
+              "filename": "/../data/reentrancy/solidity_contract/14945.sol",
+              "lines": [
+                102,
+                103,
+                104,
+                105,
+                106,
+                107,
+                108,
+                109,
+                110,
+                111,
+                112,
+                113,
+                114,
+                115,
+                116,
+                117,
+                118,
+                119,
+                120
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "check": "solc-version",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Detected issues with version pragma in /../data/reentrancy/solidity_contract/14945.sol:\n\t- pragma solidity^0.4.21 (/../data/reentrancy/solidity_contract/14945.sol#1): it allows old versions\n",
+      "elements": [
+        {
+          "type": "expression",
+          "expression": "^0.4.21",
+          "source_mapping": {
+            "start": 0,
+            "length": 24,
+            "filename": "/../data/reentrancy/solidity_contract/14945.sol",
+            "lines": [
+              1
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "low-level-calls",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Low level call in StudToken.approveAndCall (/../data/reentrancy/solidity_contract/14945.sol#114-119):\n\t-require(bool)(_spender.call.value(msg.value)(_data)) /../data/reentrancy/solidity_contract/14945.sol#117\n",
+      "elements": [
+        {
+          "type": "function",
+          "name": "approveAndCall",
+          "source_mapping": {
+            "start": 3821,
+            "length": 270,
+            "filename": "/../data/reentrancy/solidity_contract/14945.sol",
+            "lines": [
+              114,
+              115,
+              116,
+              117,
+              118,
+              119
+            ]
+          },
+          "contract": {
+            "type": "contract",
+            "name": "StudToken",
+            "source_mapping": {
+              "start": 3407,
+              "length": 686,
+              "filename": "/../data/reentrancy/solidity_contract/14945.sol",
+              "lines": [
+                102,
+                103,
+                104,
+                105,
+                106,
+                107,
+                108,
+                109,
+                110,
+                111,
+                112,
+                113,
+                114,
+                115,
+                116,
+                117,
+                118,
+                119,
+                120
+              ]
+            }
+          }
+        },
+        {
+          "type": "expression",
+          "expression": "require(bool)(_spender.call.value(msg.value)(_data))",
+          "source_mapping": {
+            "start": 4017,
+            "length": 46,
+            "filename": "/../data/reentrancy/solidity_contract/14945.sol",
+            "lines": [
+              117
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "naming-convention",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Parameter '_owner' of BasicToken.balanceOf (/../data/reentrancy/solidity_contract/14945.sol#59) is not in mixedCase\n",
+      "elements": [
+        {
+          "target": "parameter",
+          "convention": "mixedCase",
+          "name": "_owner",
+          "source_mapping": {
+            "start": 1766,
+            "length": 14,
+            "filename": "/../data/reentrancy/solidity_contract/14945.sol",
+            "lines": [
+              59
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "naming-convention",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Parameter '_to' of BasicToken.transfer (/../data/reentrancy/solidity_contract/14945.sol#50) is not in mixedCase\n",
+      "elements": [
+        {
+          "target": "parameter",
+          "convention": "mixedCase",
+          "name": "_to",
+          "source_mapping": {
+            "start": 1441,
+            "length": 11,
+            "filename": "/../data/reentrancy/solidity_contract/14945.sol",
+            "lines": [
+              50
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "naming-convention",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Parameter '_value' of BasicToken.transfer (/../data/reentrancy/solidity_contract/14945.sol#50) is not in mixedCase\n",
+      "elements": [
+        {
+          "target": "parameter",
+          "convention": "mixedCase",
+          "name": "_value",
+          "source_mapping": {
+            "start": 1454,
+            "length": 14,
+            "filename": "/../data/reentrancy/solidity_contract/14945.sol",
+            "lines": [
+              50
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "naming-convention",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Parameter '_owner' of StandardToken.allowance (/../data/reentrancy/solidity_contract/14945.sol#82) is not in mixedCase\n",
+      "elements": [
+        {
+          "target": "parameter",
+          "convention": "mixedCase",
+          "name": "_owner",
+          "source_mapping": {
+            "start": 2625,
+            "length": 14,
+            "filename": "/../data/reentrancy/solidity_contract/14945.sol",
+            "lines": [
+              82
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "naming-convention",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Parameter '_spender' of StandardToken.allowance (/../data/reentrancy/solidity_contract/14945.sol#82) is not in mixedCase\n",
+      "elements": [
+        {
+          "target": "parameter",
+          "convention": "mixedCase",
+          "name": "_spender",
+          "source_mapping": {
+            "start": 2641,
+            "length": 16,
+            "filename": "/../data/reentrancy/solidity_contract/14945.sol",
+            "lines": [
+              82
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "naming-convention",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Parameter '_from' of StandardToken.transferFrom (/../data/reentrancy/solidity_contract/14945.sol#66) is not in mixedCase\n",
+      "elements": [
+        {
+          "target": "parameter",
+          "convention": "mixedCase",
+          "name": "_from",
+          "source_mapping": {
+            "start": 1990,
+            "length": 13,
+            "filename": "/../data/reentrancy/solidity_contract/14945.sol",
+            "lines": [
+              66
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "naming-convention",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Parameter '_to' of StandardToken.transferFrom (/../data/reentrancy/solidity_contract/14945.sol#66) is not in mixedCase\n",
+      "elements": [
+        {
+          "target": "parameter",
+          "convention": "mixedCase",
+          "name": "_to",
+          "source_mapping": {
+            "start": 2005,
+            "length": 11,
+            "filename": "/../data/reentrancy/solidity_contract/14945.sol",
+            "lines": [
+              66
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "naming-convention",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Parameter '_value' of StandardToken.transferFrom (/../data/reentrancy/solidity_contract/14945.sol#66) is not in mixedCase\n",
+      "elements": [
+        {
+          "target": "parameter",
+          "convention": "mixedCase",
+          "name": "_value",
+          "source_mapping": {
+            "start": 2018,
+            "length": 14,
+            "filename": "/../data/reentrancy/solidity_contract/14945.sol",
+            "lines": [
+              66
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "naming-convention",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Parameter '_spender' of StandardToken.approve (/../data/reentrancy/solidity_contract/14945.sol#77) is not in mixedCase\n",
+      "elements": [
+        {
+          "target": "parameter",
+          "convention": "mixedCase",
+          "name": "_spender",
+          "source_mapping": {
+            "start": 2432,
+            "length": 16,
+            "filename": "/../data/reentrancy/solidity_contract/14945.sol",
+            "lines": [
+              77
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "naming-convention",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Parameter '_value' of StandardToken.approve (/../data/reentrancy/solidity_contract/14945.sol#77) is not in mixedCase\n",
+      "elements": [
+        {
+          "target": "parameter",
+          "convention": "mixedCase",
+          "name": "_value",
+          "source_mapping": {
+            "start": 2450,
+            "length": 14,
+            "filename": "/../data/reentrancy/solidity_contract/14945.sol",
+            "lines": [
+              77
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "naming-convention",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Parameter '_spender' of StandardToken.increaseApproval (/../data/reentrancy/solidity_contract/14945.sol#85) is not in mixedCase\n",
+      "elements": [
+        {
+          "target": "parameter",
+          "convention": "mixedCase",
+          "name": "_spender",
+          "source_mapping": {
+            "start": 2761,
+            "length": 16,
+            "filename": "/../data/reentrancy/solidity_contract/14945.sol",
+            "lines": [
+              85
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "naming-convention",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Parameter '_addedValue' of StandardToken.increaseApproval (/../data/reentrancy/solidity_contract/14945.sol#85) is not in mixedCase\n",
+      "elements": [
+        {
+          "target": "parameter",
+          "convention": "mixedCase",
+          "name": "_addedValue",
+          "source_mapping": {
+            "start": 2779,
+            "length": 16,
+            "filename": "/../data/reentrancy/solidity_contract/14945.sol",
+            "lines": [
+              85
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "naming-convention",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Parameter '_spender' of StandardToken.decreaseApproval (/../data/reentrancy/solidity_contract/14945.sol#90) is not in mixedCase\n",
+      "elements": [
+        {
+          "target": "parameter",
+          "convention": "mixedCase",
+          "name": "_spender",
+          "source_mapping": {
+            "start": 3026,
+            "length": 16,
+            "filename": "/../data/reentrancy/solidity_contract/14945.sol",
+            "lines": [
+              90
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "naming-convention",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Parameter '_subtractedValue' of StandardToken.decreaseApproval (/../data/reentrancy/solidity_contract/14945.sol#90) is not in mixedCase\n",
+      "elements": [
+        {
+          "target": "parameter",
+          "convention": "mixedCase",
+          "name": "_subtractedValue",
+          "source_mapping": {
+            "start": 3044,
+            "length": 21,
+            "filename": "/../data/reentrancy/solidity_contract/14945.sol",
+            "lines": [
+              90
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "naming-convention",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Function 'StudToken.StudToken' (/../data/reentrancy/solidity_contract/14945.sol#110-113) is not in mixedCase\n",
+      "elements": [
+        {
+          "target": "function",
+          "convention": "mixedCase",
+          "name": "StudToken",
+          "source_mapping": {
+            "start": 3673,
+            "length": 143,
+            "filename": "/../data/reentrancy/solidity_contract/14945.sol",
+            "lines": [
+              110,
+              111,
+              112,
+              113
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "naming-convention",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Parameter '_initialAmount' of StudToken.StudToken (/../data/reentrancy/solidity_contract/14945.sol#110) is not in mixedCase\n",
+      "elements": [
+        {
+          "target": "parameter",
+          "convention": "mixedCase",
+          "name": "_initialAmount",
+          "source_mapping": {
+            "start": 3692,
+            "length": 22,
+            "filename": "/../data/reentrancy/solidity_contract/14945.sol",
+            "lines": [
+              110
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "naming-convention",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Parameter '_spender' of StudToken.approveAndCall (/../data/reentrancy/solidity_contract/14945.sol#114) is not in mixedCase\n",
+      "elements": [
+        {
+          "target": "parameter",
+          "convention": "mixedCase",
+          "name": "_spender",
+          "source_mapping": {
+            "start": 3845,
+            "length": 16,
+            "filename": "/../data/reentrancy/solidity_contract/14945.sol",
+            "lines": [
+              114
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "naming-convention",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Parameter '_value' of StudToken.approveAndCall (/../data/reentrancy/solidity_contract/14945.sol#114) is not in mixedCase\n",
+      "elements": [
+        {
+          "target": "parameter",
+          "convention": "mixedCase",
+          "name": "_value",
+          "source_mapping": {
+            "start": 3863,
+            "length": 14,
+            "filename": "/../data/reentrancy/solidity_contract/14945.sol",
+            "lines": [
+              114
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "naming-convention",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Parameter '_data' of StudToken.approveAndCall (/../data/reentrancy/solidity_contract/14945.sol#114) is not in mixedCase\n",
+      "elements": [
+        {
+          "target": "parameter",
+          "convention": "mixedCase",
+          "name": "_data",
+          "source_mapping": {
+            "start": 3879,
+            "length": 11,
+            "filename": "/../data/reentrancy/solidity_contract/14945.sol",
+            "lines": [
+              114
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "naming-convention",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Constant 'StudToken.version' (/../data/reentrancy/solidity_contract/14945.sol#109) is not in UPPER_CASE_WITH_UNDERSCORES\n",
+      "elements": [
+        {
+          "target": "variable_constant",
+          "convention": "UPPER_CASE_WITH_UNDERSCORES",
+          "name": "version",
+          "source_mapping": {
+            "start": 3628,
+            "length": 39,
+            "filename": "/../data/reentrancy/solidity_contract/14945.sol",
+            "lines": [
+              109
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

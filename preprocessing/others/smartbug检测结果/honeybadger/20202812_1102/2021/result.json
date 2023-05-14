@@ -1,0 +1,19 @@
+{
+  "contract": "2021",
+  "tool": "honeybadger",
+  "start": 1609187247.3462431,
+  "end": 1609187252.840394,
+  "duration": 5.494150876998901,
+  "analysis": [
+    {
+      "errors": [],
+      "file": "/../data/reentrancy/solidity_contract/2021.sol",
+      "name": "AmbiEnabled"
+    },
+    {
+      "errors": [],
+      "file": "/../data/reentrancy/solidity_contract/2021.sol",
+      "name": "RegistryICAP"
+    }
+  ]
+}

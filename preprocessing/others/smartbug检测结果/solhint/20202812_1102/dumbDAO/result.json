@@ -1,0 +1,225 @@
+{
+  "contract": "dumbDAO",
+  "tool": "solhint",
+  "start": 1609192065.848393,
+  "end": 1609192067.019655,
+  "duration": 1.1712620258331299,
+  "analysis": [
+    {
+      "file": "/data/reentrancy/solidity_contract/dumbDAO.sol",
+      "line": "3",
+      "column": "3",
+      "message": "Expected indentation of 4 spaces but found 2",
+      "level": "Error",
+      "type": "indent"
+    },
+    {
+      "file": "/data/reentrancy/solidity_contract/dumbDAO.sol",
+      "line": "4",
+      "column": "3",
+      "message": "Expected indentation of 4 spaces but found 2",
+      "level": "Error",
+      "type": "indent"
+    },
+    {
+      "file": "/data/reentrancy/solidity_contract/dumbDAO.sol",
+      "line": "5",
+      "column": "3",
+      "message": "Expected indentation of 4 spaces but found 2",
+      "level": "Error",
+      "type": "indent"
+    },
+    {
+      "file": "/data/reentrancy/solidity_contract/dumbDAO.sol",
+      "line": "6",
+      "column": "3",
+      "message": "Expected indentation of 4 spaces but found 2",
+      "level": "Error",
+      "type": "indent"
+    },
+    {
+      "file": "/data/reentrancy/solidity_contract/dumbDAO.sol",
+      "line": "9",
+      "column": "3",
+      "message": "Expected indentation of 4 spaces but found 2",
+      "level": "Error",
+      "type": "indent"
+    },
+    {
+      "file": "/data/reentrancy/solidity_contract/dumbDAO.sol",
+      "line": "11",
+      "column": "3",
+      "message": "Expected indentation of 4 spaces but found 2",
+      "level": "Error",
+      "type": "indent"
+    },
+    {
+      "file": "/data/reentrancy/solidity_contract/dumbDAO.sol",
+      "line": "12",
+      "column": "5",
+      "message": "Expected indentation of 8 spaces but found 4",
+      "level": "Error",
+      "type": "indent"
+    },
+    {
+      "file": "/data/reentrancy/solidity_contract/dumbDAO.sol",
+      "line": "13",
+      "column": "5",
+      "message": "Expected indentation of 8 spaces but found 4",
+      "level": "Error",
+      "type": "indent"
+    },
+    {
+      "file": "/data/reentrancy/solidity_contract/dumbDAO.sol",
+      "line": "14",
+      "column": "3",
+      "message": "Expected indentation of 4 spaces but found 2",
+      "level": "Error",
+      "type": "indent"
+    },
+    {
+      "file": "/data/reentrancy/solidity_contract/dumbDAO.sol",
+      "line": "16",
+      "column": "3",
+      "message": "Expected indentation of 4 spaces but found 2",
+      "level": "Error",
+      "type": "indent"
+    },
+    {
+      "file": "/data/reentrancy/solidity_contract/dumbDAO.sol",
+      "line": "17",
+      "column": "5",
+      "message": "Expected indentation of 8 spaces but found 4",
+      "level": "Error",
+      "type": "indent"
+    },
+    {
+      "file": "/data/reentrancy/solidity_contract/dumbDAO.sol",
+      "line": "18",
+      "column": "7",
+      "message": "Expected indentation of 12 spaces but found 6",
+      "level": "Error",
+      "type": "indent"
+    },
+    {
+      "file": "/data/reentrancy/solidity_contract/dumbDAO.sol",
+      "line": "19",
+      "column": "5",
+      "message": "Expected indentation of 8 spaces but found 4",
+      "level": "Error",
+      "type": "indent"
+    },
+    {
+      "file": "/data/reentrancy/solidity_contract/dumbDAO.sol",
+      "line": "20",
+      "column": "5",
+      "message": "Expected indentation of 8 spaces but found 4",
+      "level": "Error",
+      "type": "indent"
+    },
+    {
+      "file": "/data/reentrancy/solidity_contract/dumbDAO.sol",
+      "line": "21",
+      "column": "5",
+      "message": "Expected indentation of 8 spaces but found 4",
+      "level": "Error",
+      "type": "indent"
+    },
+    {
+      "file": "/data/reentrancy/solidity_contract/dumbDAO.sol",
+      "line": "22",
+      "column": "3",
+      "message": "Expected indentation of 4 spaces but found 2",
+      "level": "Error",
+      "type": "indent"
+    },
+    {
+      "file": "/data/reentrancy/solidity_contract/dumbDAO.sol",
+      "line": "24",
+      "column": "3",
+      "message": "Expected indentation of 4 spaces but found 2",
+      "level": "Error",
+      "type": "indent"
+    },
+    {
+      "file": "/data/reentrancy/solidity_contract/dumbDAO.sol",
+      "line": "25",
+      "column": "5",
+      "message": "Expected indentation of 8 spaces but found 4",
+      "level": "Error",
+      "type": "indent"
+    },
+    {
+      "file": "/data/reentrancy/solidity_contract/dumbDAO.sol",
+      "line": "26",
+      "column": "9",
+      "message": "Expected indentation of 12 spaces but found 8",
+      "level": "Error",
+      "type": "indent"
+    },
+    {
+      "file": "/data/reentrancy/solidity_contract/dumbDAO.sol",
+      "line": "27",
+      "column": "9",
+      "message": "Expected indentation of 12 spaces but found 8",
+      "level": "Error",
+      "type": "indent"
+    },
+    {
+      "file": "/data/reentrancy/solidity_contract/dumbDAO.sol",
+      "line": "28",
+      "column": "5",
+      "message": "Expected indentation of 8 spaces but found 4",
+      "level": "Error",
+      "type": "indent"
+    },
+    {
+      "file": "/data/reentrancy/solidity_contract/dumbDAO.sol",
+      "line": "29",
+      "column": "5",
+      "message": "Expected indentation of 8 spaces but found 4",
+      "level": "Error",
+      "type": "indent"
+    },
+    {
+      "file": "/data/reentrancy/solidity_contract/dumbDAO.sol",
+      "line": "30",
+      "column": "5",
+      "message": "Expected indentation of 8 spaces but found 4",
+      "level": "Error",
+      "type": "indent"
+    },
+    {
+      "file": "/data/reentrancy/solidity_contract/dumbDAO.sol",
+      "line": "31",
+      "column": "9",
+      "message": "Expected indentation of 12 spaces but found 8",
+      "level": "Error",
+      "type": "indent"
+    },
+    {
+      "file": "/data/reentrancy/solidity_contract/dumbDAO.sol",
+      "line": "32",
+      "column": "9",
+      "message": "Expected indentation of 12 spaces but found 8",
+      "level": "Error",
+      "type": "indent"
+    },
+    {
+      "file": "/data/reentrancy/solidity_contract/dumbDAO.sol",
+      "line": "33",
+      "column": "5",
+      "message": "Expected indentation of 8 spaces but found 4",
+      "level": "Error",
+      "type": "indent"
+    },
+    {
+      "file": "/data/reentrancy/solidity_contract/dumbDAO.sol",
+      "line": "34",
+      "column": "3",
+      "message": "Expected indentation of 4 spaces but found 2",
+      "level": "Error",
+      "type": "indent"
+    }
+  ]
+}

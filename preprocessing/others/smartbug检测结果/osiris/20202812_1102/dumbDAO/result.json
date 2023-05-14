@@ -1,0 +1,20 @@
+{
+  "contract": "dumbDAO",
+  "tool": "osiris",
+  "start": 1609213182.66622,
+  "end": 1609213184.484438,
+  "duration": 1.8182179927825928,
+  "analysis": [
+    {
+      "errors": [
+        {
+          "line": 30,
+          "column": 9,
+          "message": "reentrancy_bug"
+        }
+      ],
+      "file": "/../data/reentrancy/solidity_contract/dumbDAO.sol",
+      "name": "dumbDAO"
+    }
+  ]
+}

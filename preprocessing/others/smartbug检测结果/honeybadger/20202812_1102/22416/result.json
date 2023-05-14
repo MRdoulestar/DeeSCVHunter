@@ -1,0 +1,24 @@
+{
+  "contract": "22416",
+  "tool": "honeybadger",
+  "start": 1609206276.746024,
+  "end": 1609206290.010819,
+  "duration": 13.264795064926147,
+  "analysis": [
+    {
+      "errors": [],
+      "file": "/../data/reentrancy/solidity_contract/22416.sol",
+      "name": "Ownable"
+    },
+    {
+      "errors": [],
+      "file": "/../data/reentrancy/solidity_contract/22416.sol",
+      "name": "Token"
+    },
+    {
+      "errors": [],
+      "file": "/../data/reentrancy/solidity_contract/22416.sol",
+      "name": "TokenBank"
+    }
+  ]
+}

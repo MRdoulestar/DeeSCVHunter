@@ -1,0 +1,66 @@
+{
+  "contract": "39932",
+  "tool": "osiris",
+  "start": 1609144704.479029,
+  "end": 1609144775.855896,
+  "duration": 71.37686705589294,
+  "analysis": [
+    {
+      "errors": [],
+      "file": "/../data/reentrancy/solidity_contract/39932.sol",
+      "name": "Builder"
+    },
+    {
+      "errors": [],
+      "file": "/../data/reentrancy/solidity_contract/39932.sol",
+      "name": "BuilderInvoice"
+    },
+    {
+      "errors": [
+        {
+          "line": 44,
+          "column": 15,
+          "message": "concurrency_bug"
+        },
+        {
+          "line": 44,
+          "column": 15,
+          "message": "reentrancy_bug"
+        }
+      ],
+      "file": "/../data/reentrancy/solidity_contract/39932.sol",
+      "name": "Comission"
+    },
+    {
+      "errors": [],
+      "file": "/../data/reentrancy/solidity_contract/39932.sol",
+      "name": "CreatorInvoice"
+    },
+    {
+      "errors": [
+        {
+          "line": 73,
+          "column": 18,
+          "message": "concurrency_bug"
+        },
+        {
+          "line": 73,
+          "column": 18,
+          "message": "reentrancy_bug"
+        }
+      ],
+      "file": "/../data/reentrancy/solidity_contract/39932.sol",
+      "name": "Invoice"
+    },
+    {
+      "errors": [],
+      "file": "/../data/reentrancy/solidity_contract/39932.sol",
+      "name": "Mortal"
+    },
+    {
+      "errors": [],
+      "file": "/../data/reentrancy/solidity_contract/39932.sol",
+      "name": "Owned"
+    }
+  ]
+}

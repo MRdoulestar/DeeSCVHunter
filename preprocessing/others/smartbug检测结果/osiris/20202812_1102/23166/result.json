@@ -1,0 +1,29 @@
+{
+  "contract": "23166",
+  "tool": "osiris",
+  "start": 1609164683.776608,
+  "end": 1609164737.775701,
+  "duration": 53.9990930557251,
+  "analysis": [
+    {
+      "errors": [],
+      "file": "/../data/reentrancy/solidity_contract/23166.sol",
+      "name": "BasicToken"
+    },
+    {
+      "errors": [],
+      "file": "/../data/reentrancy/solidity_contract/23166.sol",
+      "name": "SafeMath"
+    },
+    {
+      "errors": [],
+      "file": "/../data/reentrancy/solidity_contract/23166.sol",
+      "name": "StandardToken"
+    },
+    {
+      "errors": [],
+      "file": "/../data/reentrancy/solidity_contract/23166.sol",
+      "name": "TorusCoin"
+    }
+  ]
+}

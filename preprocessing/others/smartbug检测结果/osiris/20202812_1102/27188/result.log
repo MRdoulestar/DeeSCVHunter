@@ -1,0 +1,71 @@
+INFO:root:Contract /../data/reentrancy/solidity_contract/27188.sol:DividendDistributor:
+INFO:symExec:Running, please wait...
+INFO:symExec:	============ Results ===========
+INFO:symExec:	  EVM code coverage: 	 91.0%
+INFO:symExec:	  Arithmetic bugs: 	 True
+INFO:symExec:	  └> Overflow bugs: 	 True
+/../data/reentrancy/solidity_contract/27188.sol:DividendDistributor:60:13
+sumInvested += msg.value
+^
+/../data/reentrancy/solidity_contract/27188.sol:DividendDistributor:95:9
+sumDividend += msg.value
+^
+/../data/reentrancy/solidity_contract/27188.sol:DividendDistributor:79:20
+(sumDividend - lastDividend) * investors[msg.sender].investment
+^
+/../data/reentrancy/solidity_contract/27188.sol:DividendDistributor:59:13
+investors[msg.sender].investment += msg.value
+^
+INFO:symExec:	  └> Underflow bugs: 	 True
+/../data/reentrancy/solidity_contract/27188.sol:DividendDistributor:79:21
+sumDividend - lastDividend
+^
+/../data/reentrancy/solidity_contract/27188.sol:DividendDistributor:70:9
+sumInvested -= amount
+^
+/../data/reentrancy/solidity_contract/27188.sol:DividendDistributor:69:9
+investors[msg.sender].investment -= amount
+^
+INFO:symExec:	  └> Division bugs: 	 False
+INFO:symExec:	  └> Modulo bugs:   	 False
+INFO:symExec:	  └> Truncation bugs: 	 False
+INFO:symExec:	  └> Signedness bugs: 	 False
+INFO:symExec:	  Callstack bug: 	 False
+INFO:symExec:	  Concurrency bug: 	 True
+Flow 1:
+/../data/reentrancy/solidity_contract/27188.sol:DividendDistributor:52:13
+target.call.value(amount)()
+^
+Flow 2:
+INFO:symExec:	  Time dependency bug: 	 False
+INFO:symExec:	  Reentrancy bug: 	 True
+/../data/reentrancy/solidity_contract/27188.sol:DividendDistributor:52:13
+target.call.value(amount)()
+^
+INFO:symExec:	 --- 18.1035211086 seconds ---
+INFO:symExec:	====== Analysis Completed ======
+INFO:root:Contract /../data/reentrancy/solidity_contract/27188.sol:Ownable:
+INFO:symExec:Running, please wait...
+INFO:symExec:	============ Results ===========
+INFO:symExec:	  EVM code coverage: 	 99.4%
+INFO:symExec:	  Arithmetic bugs: 	 False
+INFO:symExec:	  └> Overflow bugs: 	 False
+INFO:symExec:	  └> Underflow bugs: 	 False
+INFO:symExec:	  └> Division bugs: 	 False
+INFO:symExec:	  └> Modulo bugs:   	 False
+INFO:symExec:	  └> Truncation bugs: 	 False
+INFO:symExec:	  └> Signedness bugs: 	 False
+INFO:symExec:	  Callstack bug: 	 False
+INFO:symExec:	  Concurrency bug: 	 False
+INFO:symExec:	  Time dependency bug: 	 False
+INFO:symExec:	  Reentrancy bug: 	 False
+INFO:symExec:	 --- 0.286408901215 seconds ---
+INFO:symExec:	====== Analysis Completed ======
+
+  .oooooo.             o8o            o8o          
+ d8P'  `Y8b            `"'            `"'          
+888      888  .oooo.o oooo  oooo d8b oooo   .oooo.o
+888      888 d88(  "8 `888  `888""8P `888  d88(  "8
+888      888 `"Y88b.   888   888      888  `"Y88b. 
+`88b    d88' o.  )88b  888   888      888  o.  )88b
+ `Y8bood8P'  8""888P' o888o d888b    o888o 8""888P'

@@ -1,0 +1,14 @@
+{
+  "contract": "4472",
+  "tool": "honeybadger",
+  "start": 1609150940.15442,
+  "end": 1609150942.910651,
+  "duration": 2.7562310695648193,
+  "analysis": [
+    {
+      "errors": [],
+      "file": "/../data/reentrancy/solidity_contract/4472.sol",
+      "name": "Blocklancer_Payment"
+    }
+  ]
+}

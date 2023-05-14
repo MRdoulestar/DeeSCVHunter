@@ -1,0 +1,24 @@
+{
+  "contract": "31565",
+  "tool": "osiris",
+  "start": 1609147962.711095,
+  "end": 1609147984.980074,
+  "duration": 22.26897883415222,
+  "analysis": [
+    {
+      "errors": [],
+      "file": "/../data/reentrancy/solidity_contract/31565.sol",
+      "name": "SafeMath"
+    },
+    {
+      "errors": [],
+      "file": "/../data/reentrancy/solidity_contract/31565.sol",
+      "name": "Telcoin"
+    },
+    {
+      "errors": [],
+      "file": "/../data/reentrancy/solidity_contract/31565.sol",
+      "name": "TelcoinSale"
+    }
+  ]
+}

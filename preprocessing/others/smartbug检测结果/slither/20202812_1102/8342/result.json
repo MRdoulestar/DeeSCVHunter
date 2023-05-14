@@ -1,0 +1,6319 @@
+{
+  "contract": "8342",
+  "tool": "slither",
+  "start": 1609209441.7107909,
+  "end": 1609209446.248974,
+  "duration": 4.538183212280273,
+  "analysis": [
+    {
+      "check": "timestamp",
+      "impact": "Low",
+      "confidence": "Medium",
+      "description": "CHGameBase._unclaimedChickenOf (/../data/reentrancy/solidity_contract/8342.sol#289-298) uses timestamp for comparisons\n\tDangerous comparisons:\n\t- _timestamp > 0 && _timestamp < block.timestamp (/../data/reentrancy/solidity_contract/8342.sol#291-297)\n",
+      "elements": [
+        {
+          "type": "function",
+          "name": "_unclaimedChickenOf",
+          "source_mapping": {
+            "start": 7663,
+            "length": 354,
+            "filename": "/../data/reentrancy/solidity_contract/8342.sol",
+            "lines": [
+              289,
+              290,
+              291,
+              292,
+              293,
+              294,
+              295,
+              296,
+              297,
+              298
+            ]
+          },
+          "contract": {
+            "type": "contract",
+            "name": "CHGameBase",
+            "source_mapping": {
+              "start": 4445,
+              "length": 3736,
+              "filename": "/../data/reentrancy/solidity_contract/8342.sol",
+              "lines": [
+                172,
+                173,
+                174,
+                175,
+                176,
+                177,
+                178,
+                179,
+                180,
+                181,
+                182,
+                183,
+                184,
+                185,
+                186,
+                187,
+                188,
+                189,
+                190,
+                191,
+                192,
+                193,
+                194,
+                195,
+                196,
+                197,
+                198,
+                199,
+                200,
+                201,
+                202,
+                203,
+                204,
+                205,
+                206,
+                207,
+                208,
+                209,
+                210,
+                211,
+                212,
+                213,
+                214,
+                215,
+                216,
+                217,
+                218,
+                219,
+                220,
+                221,
+                222,
+                223,
+                224,
+                225,
+                226,
+                227,
+                228,
+                229,
+                230,
+                231,
+                232,
+                233,
+                234,
+                235,
+                236,
+                237,
+                238,
+                239,
+                240,
+                241,
+                242,
+                243,
+                244,
+                245,
+                246,
+                247,
+                248,
+                249,
+                250,
+                251,
+                252,
+                253,
+                254,
+                255,
+                256,
+                257,
+                258,
+                259,
+                260,
+                261,
+                262,
+                263,
+                264,
+                265,
+                266,
+                267,
+                268,
+                269,
+                270,
+                271,
+                272,
+                273,
+                274,
+                275,
+                276,
+                277,
+                278,
+                279,
+                280,
+                281,
+                282,
+                283,
+                284,
+                285,
+                286,
+                287,
+                288,
+                289,
+                290,
+                291,
+                292,
+                293,
+                294,
+                295,
+                296,
+                297,
+                298,
+                299,
+                300,
+                301,
+                302,
+                303,
+                304,
+                305,
+                306,
+                307,
+                308,
+                309
+              ]
+            }
+          }
+        },
+        {
+          "type": "expression",
+          "expression": "_timestamp > 0 && _timestamp < block.timestamp",
+          "source_mapping": {
+            "start": 7791,
+            "length": 222,
+            "filename": "/../data/reentrancy/solidity_contract/8342.sol",
+            "lines": [
+              291,
+              292,
+              293,
+              294,
+              295,
+              296,
+              297
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "timestamp",
+      "impact": "Low",
+      "confidence": "Medium",
+      "description": "CHArena.attack (/../data/reentrancy/solidity_contract/8342.sol#587-601) uses timestamp for comparisons\n\tDangerous comparisons:\n\t- require(bool)(attackCooldown[msg.sender] < block.timestamp) (/../data/reentrancy/solidity_contract/8342.sol#588)\n",
+      "elements": [
+        {
+          "type": "function",
+          "name": "attack",
+          "source_mapping": {
+            "start": 15472,
+            "length": 734,
+            "filename": "/../data/reentrancy/solidity_contract/8342.sol",
+            "lines": [
+              587,
+              588,
+              589,
+              590,
+              591,
+              592,
+              593,
+              594,
+              595,
+              596,
+              597,
+              598,
+              599,
+              600,
+              601
+            ]
+          },
+          "contract": {
+            "type": "contract",
+            "name": "CHArena",
+            "source_mapping": {
+              "start": 15239,
+              "length": 970,
+              "filename": "/../data/reentrancy/solidity_contract/8342.sol",
+              "lines": [
+                570,
+                571,
+                572,
+                573,
+                574,
+                575,
+                576,
+                577,
+                578,
+                579,
+                580,
+                581,
+                582,
+                583,
+                584,
+                585,
+                586,
+                587,
+                588,
+                589,
+                590,
+                591,
+                592,
+                593,
+                594,
+                595,
+                596,
+                597,
+                598,
+                599,
+                600,
+                601,
+                602,
+                603
+              ]
+            }
+          }
+        },
+        {
+          "type": "expression",
+          "expression": "require(bool)(attackCooldown[msg.sender] < block.timestamp)",
+          "source_mapping": {
+            "start": 15520,
+            "length": 53,
+            "filename": "/../data/reentrancy/solidity_contract/8342.sol",
+            "lines": [
+              588
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "constable-states",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "CHStock.decimals should be constant (/../data/reentrancy/solidity_contract/8342.sol#72)\n",
+      "elements": [
+        {
+          "type": "variable",
+          "name": "decimals",
+          "source_mapping": {
+            "start": 1451,
+            "length": 26,
+            "filename": "/../data/reentrancy/solidity_contract/8342.sol",
+            "lines": [
+              72
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "external-function",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "CHStock.totalSupply (/../data/reentrancy/solidity_contract/8342.sol#122-124) should be declared external\n",
+      "elements": [
+        {
+          "type": "function",
+          "name": "totalSupply",
+          "source_mapping": {
+            "start": 3067,
+            "length": 82,
+            "filename": "/../data/reentrancy/solidity_contract/8342.sol",
+            "lines": [
+              122,
+              123,
+              124
+            ]
+          },
+          "contract": {
+            "type": "contract",
+            "name": "CHStock",
+            "source_mapping": {
+              "start": 1199,
+              "length": 3241,
+              "filename": "/../data/reentrancy/solidity_contract/8342.sol",
+              "lines": [
+                56,
+                57,
+                58,
+                59,
+                60,
+                61,
+                62,
+                63,
+                64,
+                65,
+                66,
+                67,
+                68,
+                69,
+                70,
+                71,
+                72,
+                73,
+                74,
+                75,
+                76,
+                77,
+                78,
+                79,
+                80,
+                81,
+                82,
+                83,
+                84,
+                85,
+                86,
+                87,
+                88,
+                89,
+                90,
+                91,
+                92,
+                93,
+                94,
+                95,
+                96,
+                97,
+                98,
+                99,
+                100,
+                101,
+                102,
+                103,
+                104,
+                105,
+                106,
+                107,
+                108,
+                109,
+                110,
+                111,
+                112,
+                113,
+                114,
+                115,
+                116,
+                117,
+                118,
+                119,
+                120,
+                121,
+                122,
+                123,
+                124,
+                125,
+                126,
+                127,
+                128,
+                129,
+                130,
+                131,
+                132,
+                133,
+                134,
+                135,
+                136,
+                137,
+                138,
+                139,
+                140,
+                141,
+                142,
+                143,
+                144,
+                145,
+                146,
+                147,
+                148,
+                149,
+                150,
+                151,
+                152,
+                153,
+                154,
+                155,
+                156,
+                157,
+                158,
+                159,
+                160,
+                161,
+                162,
+                163,
+                164,
+                165,
+                166,
+                167,
+                168
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "check": "external-function",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "ERC20Interface.totalSupply (/../data/reentrancy/solidity_contract/8342.sol#45) should be declared external\n",
+      "elements": [
+        {
+          "type": "function",
+          "name": "totalSupply",
+          "source_mapping": {
+            "start": 744,
+            "length": 53,
+            "filename": "/../data/reentrancy/solidity_contract/8342.sol",
+            "lines": [
+              45
+            ]
+          },
+          "contract": {
+            "type": "contract",
+            "name": "ERC20Interface",
+            "source_mapping": {
+              "start": 525,
+              "length": 669,
+              "filename": "/../data/reentrancy/solidity_contract/8342.sol",
+              "lines": [
+                31,
+                32,
+                33,
+                34,
+                35,
+                36,
+                37,
+                38,
+                39,
+                40,
+                41,
+                42,
+                43,
+                44,
+                45,
+                46,
+                47,
+                48,
+                49,
+                50,
+                51,
+                52
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "check": "external-function",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "CHStock.balanceOf (/../data/reentrancy/solidity_contract/8342.sol#126-128) should be declared external\n",
+      "elements": [
+        {
+          "type": "function",
+          "name": "balanceOf",
+          "source_mapping": {
+            "start": 3153,
+            "length": 97,
+            "filename": "/../data/reentrancy/solidity_contract/8342.sol",
+            "lines": [
+              126,
+              127,
+              128
+            ]
+          },
+          "contract": {
+            "type": "contract",
+            "name": "CHStock",
+            "source_mapping": {
+              "start": 1199,
+              "length": 3241,
+              "filename": "/../data/reentrancy/solidity_contract/8342.sol",
+              "lines": [
+                56,
+                57,
+                58,
+                59,
+                60,
+                61,
+                62,
+                63,
+                64,
+                65,
+                66,
+                67,
+                68,
+                69,
+                70,
+                71,
+                72,
+                73,
+                74,
+                75,
+                76,
+                77,
+                78,
+                79,
+                80,
+                81,
+                82,
+                83,
+                84,
+                85,
+                86,
+                87,
+                88,
+                89,
+                90,
+                91,
+                92,
+                93,
+                94,
+                95,
+                96,
+                97,
+                98,
+                99,
+                100,
+                101,
+                102,
+                103,
+                104,
+                105,
+                106,
+                107,
+                108,
+                109,
+                110,
+                111,
+                112,
+                113,
+                114,
+                115,
+                116,
+                117,
+                118,
+                119,
+                120,
+                121,
+                122,
+                123,
+                124,
+                125,
+                126,
+                127,
+                128,
+                129,
+                130,
+                131,
+                132,
+                133,
+                134,
+                135,
+                136,
+                137,
+                138,
+                139,
+                140,
+                141,
+                142,
+                143,
+                144,
+                145,
+                146,
+                147,
+                148,
+                149,
+                150,
+                151,
+                152,
+                153,
+                154,
+                155,
+                156,
+                157,
+                158,
+                159,
+                160,
+                161,
+                162,
+                163,
+                164,
+                165,
+                166,
+                167,
+                168
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "check": "external-function",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "ERC20Interface.balanceOf (/../data/reentrancy/solidity_contract/8342.sol#46) should be declared external\n",
+      "elements": [
+        {
+          "type": "function",
+          "name": "balanceOf",
+          "source_mapping": {
+            "start": 800,
+            "length": 65,
+            "filename": "/../data/reentrancy/solidity_contract/8342.sol",
+            "lines": [
+              46
+            ]
+          },
+          "contract": {
+            "type": "contract",
+            "name": "ERC20Interface",
+            "source_mapping": {
+              "start": 525,
+              "length": 669,
+              "filename": "/../data/reentrancy/solidity_contract/8342.sol",
+              "lines": [
+                31,
+                32,
+                33,
+                34,
+                35,
+                36,
+                37,
+                38,
+                39,
+                40,
+                41,
+                42,
+                43,
+                44,
+                45,
+                46,
+                47,
+                48,
+                49,
+                50,
+                51,
+                52
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "check": "external-function",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "CHStock.transfer (/../data/reentrancy/solidity_contract/8342.sol#97-100) should be declared external\n",
+      "elements": [
+        {
+          "type": "function",
+          "name": "transfer",
+          "source_mapping": {
+            "start": 2282,
+            "length": 131,
+            "filename": "/../data/reentrancy/solidity_contract/8342.sol",
+            "lines": [
+              97,
+              98,
+              99,
+              100
+            ]
+          },
+          "contract": {
+            "type": "contract",
+            "name": "CHStock",
+            "source_mapping": {
+              "start": 1199,
+              "length": 3241,
+              "filename": "/../data/reentrancy/solidity_contract/8342.sol",
+              "lines": [
+                56,
+                57,
+                58,
+                59,
+                60,
+                61,
+                62,
+                63,
+                64,
+                65,
+                66,
+                67,
+                68,
+                69,
+                70,
+                71,
+                72,
+                73,
+                74,
+                75,
+                76,
+                77,
+                78,
+                79,
+                80,
+                81,
+                82,
+                83,
+                84,
+                85,
+                86,
+                87,
+                88,
+                89,
+                90,
+                91,
+                92,
+                93,
+                94,
+                95,
+                96,
+                97,
+                98,
+                99,
+                100,
+                101,
+                102,
+                103,
+                104,
+                105,
+                106,
+                107,
+                108,
+                109,
+                110,
+                111,
+                112,
+                113,
+                114,
+                115,
+                116,
+                117,
+                118,
+                119,
+                120,
+                121,
+                122,
+                123,
+                124,
+                125,
+                126,
+                127,
+                128,
+                129,
+                130,
+                131,
+                132,
+                133,
+                134,
+                135,
+                136,
+                137,
+                138,
+                139,
+                140,
+                141,
+                142,
+                143,
+                144,
+                145,
+                146,
+                147,
+                148,
+                149,
+                150,
+                151,
+                152,
+                153,
+                154,
+                155,
+                156,
+                157,
+                158,
+                159,
+                160,
+                161,
+                162,
+                163,
+                164,
+                165,
+                166,
+                167,
+                168
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "check": "external-function",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "ERC20Interface.transfer (/../data/reentrancy/solidity_contract/8342.sol#47) should be declared external\n",
+      "elements": [
+        {
+          "type": "function",
+          "name": "transfer",
+          "source_mapping": {
+            "start": 868,
+            "length": 69,
+            "filename": "/../data/reentrancy/solidity_contract/8342.sol",
+            "lines": [
+              47
+            ]
+          },
+          "contract": {
+            "type": "contract",
+            "name": "ERC20Interface",
+            "source_mapping": {
+              "start": 525,
+              "length": 669,
+              "filename": "/../data/reentrancy/solidity_contract/8342.sol",
+              "lines": [
+                31,
+                32,
+                33,
+                34,
+                35,
+                36,
+                37,
+                38,
+                39,
+                40,
+                41,
+                42,
+                43,
+                44,
+                45,
+                46,
+                47,
+                48,
+                49,
+                50,
+                51,
+                52
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "check": "external-function",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "CHStock.transferFrom (/../data/reentrancy/solidity_contract/8342.sol#102-110) should be declared external\n",
+      "elements": [
+        {
+          "type": "function",
+          "name": "transferFrom",
+          "source_mapping": {
+            "start": 2417,
+            "length": 248,
+            "filename": "/../data/reentrancy/solidity_contract/8342.sol",
+            "lines": [
+              102,
+              103,
+              104,
+              105,
+              106,
+              107,
+              108,
+              109,
+              110
+            ]
+          },
+          "contract": {
+            "type": "contract",
+            "name": "CHStock",
+            "source_mapping": {
+              "start": 1199,
+              "length": 3241,
+              "filename": "/../data/reentrancy/solidity_contract/8342.sol",
+              "lines": [
+                56,
+                57,
+                58,
+                59,
+                60,
+                61,
+                62,
+                63,
+                64,
+                65,
+                66,
+                67,
+                68,
+                69,
+                70,
+                71,
+                72,
+                73,
+                74,
+                75,
+                76,
+                77,
+                78,
+                79,
+                80,
+                81,
+                82,
+                83,
+                84,
+                85,
+                86,
+                87,
+                88,
+                89,
+                90,
+                91,
+                92,
+                93,
+                94,
+                95,
+                96,
+                97,
+                98,
+                99,
+                100,
+                101,
+                102,
+                103,
+                104,
+                105,
+                106,
+                107,
+                108,
+                109,
+                110,
+                111,
+                112,
+                113,
+                114,
+                115,
+                116,
+                117,
+                118,
+                119,
+                120,
+                121,
+                122,
+                123,
+                124,
+                125,
+                126,
+                127,
+                128,
+                129,
+                130,
+                131,
+                132,
+                133,
+                134,
+                135,
+                136,
+                137,
+                138,
+                139,
+                140,
+                141,
+                142,
+                143,
+                144,
+                145,
+                146,
+                147,
+                148,
+                149,
+                150,
+                151,
+                152,
+                153,
+                154,
+                155,
+                156,
+                157,
+                158,
+                159,
+                160,
+                161,
+                162,
+                163,
+                164,
+                165,
+                166,
+                167,
+                168
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "check": "external-function",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "ERC20Interface.transferFrom (/../data/reentrancy/solidity_contract/8342.sol#48) should be declared external\n",
+      "elements": [
+        {
+          "type": "function",
+          "name": "transferFrom",
+          "source_mapping": {
+            "start": 940,
+            "length": 88,
+            "filename": "/../data/reentrancy/solidity_contract/8342.sol",
+            "lines": [
+              48
+            ]
+          },
+          "contract": {
+            "type": "contract",
+            "name": "ERC20Interface",
+            "source_mapping": {
+              "start": 525,
+              "length": 669,
+              "filename": "/../data/reentrancy/solidity_contract/8342.sol",
+              "lines": [
+                31,
+                32,
+                33,
+                34,
+                35,
+                36,
+                37,
+                38,
+                39,
+                40,
+                41,
+                42,
+                43,
+                44,
+                45,
+                46,
+                47,
+                48,
+                49,
+                50,
+                51,
+                52
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "check": "external-function",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "ERC20Interface.approve (/../data/reentrancy/solidity_contract/8342.sol#49) should be declared external\n",
+      "elements": [
+        {
+          "type": "function",
+          "name": "approve",
+          "source_mapping": {
+            "start": 1031,
+            "length": 73,
+            "filename": "/../data/reentrancy/solidity_contract/8342.sol",
+            "lines": [
+              49
+            ]
+          },
+          "contract": {
+            "type": "contract",
+            "name": "ERC20Interface",
+            "source_mapping": {
+              "start": 525,
+              "length": 669,
+              "filename": "/../data/reentrancy/solidity_contract/8342.sol",
+              "lines": [
+                31,
+                32,
+                33,
+                34,
+                35,
+                36,
+                37,
+                38,
+                39,
+                40,
+                41,
+                42,
+                43,
+                44,
+                45,
+                46,
+                47,
+                48,
+                49,
+                50,
+                51,
+                52
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "check": "external-function",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "CHStock.approve (/../data/reentrancy/solidity_contract/8342.sol#112-116) should be declared external\n",
+      "elements": [
+        {
+          "type": "function",
+          "name": "approve",
+          "source_mapping": {
+            "start": 2669,
+            "length": 188,
+            "filename": "/../data/reentrancy/solidity_contract/8342.sol",
+            "lines": [
+              112,
+              113,
+              114,
+              115,
+              116
+            ]
+          },
+          "contract": {
+            "type": "contract",
+            "name": "CHStock",
+            "source_mapping": {
+              "start": 1199,
+              "length": 3241,
+              "filename": "/../data/reentrancy/solidity_contract/8342.sol",
+              "lines": [
+                56,
+                57,
+                58,
+                59,
+                60,
+                61,
+                62,
+                63,
+                64,
+                65,
+                66,
+                67,
+                68,
+                69,
+                70,
+                71,
+                72,
+                73,
+                74,
+                75,
+                76,
+                77,
+                78,
+                79,
+                80,
+                81,
+                82,
+                83,
+                84,
+                85,
+                86,
+                87,
+                88,
+                89,
+                90,
+                91,
+                92,
+                93,
+                94,
+                95,
+                96,
+                97,
+                98,
+                99,
+                100,
+                101,
+                102,
+                103,
+                104,
+                105,
+                106,
+                107,
+                108,
+                109,
+                110,
+                111,
+                112,
+                113,
+                114,
+                115,
+                116,
+                117,
+                118,
+                119,
+                120,
+                121,
+                122,
+                123,
+                124,
+                125,
+                126,
+                127,
+                128,
+                129,
+                130,
+                131,
+                132,
+                133,
+                134,
+                135,
+                136,
+                137,
+                138,
+                139,
+                140,
+                141,
+                142,
+                143,
+                144,
+                145,
+                146,
+                147,
+                148,
+                149,
+                150,
+                151,
+                152,
+                153,
+                154,
+                155,
+                156,
+                157,
+                158,
+                159,
+                160,
+                161,
+                162,
+                163,
+                164,
+                165,
+                166,
+                167,
+                168
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "check": "external-function",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "CHStock.allowance (/../data/reentrancy/solidity_contract/8342.sol#130-136) should be declared external\n",
+      "elements": [
+        {
+          "type": "function",
+          "name": "allowance",
+          "source_mapping": {
+            "start": 3254,
+            "length": 140,
+            "filename": "/../data/reentrancy/solidity_contract/8342.sol",
+            "lines": [
+              130,
+              131,
+              132,
+              133,
+              134,
+              135,
+              136
+            ]
+          },
+          "contract": {
+            "type": "contract",
+            "name": "CHStock",
+            "source_mapping": {
+              "start": 1199,
+              "length": 3241,
+              "filename": "/../data/reentrancy/solidity_contract/8342.sol",
+              "lines": [
+                56,
+                57,
+                58,
+                59,
+                60,
+                61,
+                62,
+                63,
+                64,
+                65,
+                66,
+                67,
+                68,
+                69,
+                70,
+                71,
+                72,
+                73,
+                74,
+                75,
+                76,
+                77,
+                78,
+                79,
+                80,
+                81,
+                82,
+                83,
+                84,
+                85,
+                86,
+                87,
+                88,
+                89,
+                90,
+                91,
+                92,
+                93,
+                94,
+                95,
+                96,
+                97,
+                98,
+                99,
+                100,
+                101,
+                102,
+                103,
+                104,
+                105,
+                106,
+                107,
+                108,
+                109,
+                110,
+                111,
+                112,
+                113,
+                114,
+                115,
+                116,
+                117,
+                118,
+                119,
+                120,
+                121,
+                122,
+                123,
+                124,
+                125,
+                126,
+                127,
+                128,
+                129,
+                130,
+                131,
+                132,
+                133,
+                134,
+                135,
+                136,
+                137,
+                138,
+                139,
+                140,
+                141,
+                142,
+                143,
+                144,
+                145,
+                146,
+                147,
+                148,
+                149,
+                150,
+                151,
+                152,
+                153,
+                154,
+                155,
+                156,
+                157,
+                158,
+                159,
+                160,
+                161,
+                162,
+                163,
+                164,
+                165,
+                166,
+                167,
+                168
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "check": "external-function",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "ERC20Interface.allowance (/../data/reentrancy/solidity_contract/8342.sol#50) should be declared external\n",
+      "elements": [
+        {
+          "type": "function",
+          "name": "allowance",
+          "source_mapping": {
+            "start": 1107,
+            "length": 84,
+            "filename": "/../data/reentrancy/solidity_contract/8342.sol",
+            "lines": [
+              50
+            ]
+          },
+          "contract": {
+            "type": "contract",
+            "name": "ERC20Interface",
+            "source_mapping": {
+              "start": 525,
+              "length": 669,
+              "filename": "/../data/reentrancy/solidity_contract/8342.sol",
+              "lines": [
+                31,
+                32,
+                33,
+                34,
+                35,
+                36,
+                37,
+                38,
+                39,
+                40,
+                41,
+                42,
+                43,
+                44,
+                45,
+                46,
+                47,
+                48,
+                49,
+                50,
+                51,
+                52
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "check": "external-function",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "CHStock.redeemShares (/../data/reentrancy/solidity_contract/8342.sol#84-95) should be declared external\n",
+      "elements": [
+        {
+          "type": "function",
+          "name": "redeemShares",
+          "source_mapping": {
+            "start": 1873,
+            "length": 405,
+            "filename": "/../data/reentrancy/solidity_contract/8342.sol",
+            "lines": [
+              84,
+              85,
+              86,
+              87,
+              88,
+              89,
+              90,
+              91,
+              92,
+              93,
+              94,
+              95
+            ]
+          },
+          "contract": {
+            "type": "contract",
+            "name": "CHStock",
+            "source_mapping": {
+              "start": 1199,
+              "length": 3241,
+              "filename": "/../data/reentrancy/solidity_contract/8342.sol",
+              "lines": [
+                56,
+                57,
+                58,
+                59,
+                60,
+                61,
+                62,
+                63,
+                64,
+                65,
+                66,
+                67,
+                68,
+                69,
+                70,
+                71,
+                72,
+                73,
+                74,
+                75,
+                76,
+                77,
+                78,
+                79,
+                80,
+                81,
+                82,
+                83,
+                84,
+                85,
+                86,
+                87,
+                88,
+                89,
+                90,
+                91,
+                92,
+                93,
+                94,
+                95,
+                96,
+                97,
+                98,
+                99,
+                100,
+                101,
+                102,
+                103,
+                104,
+                105,
+                106,
+                107,
+                108,
+                109,
+                110,
+                111,
+                112,
+                113,
+                114,
+                115,
+                116,
+                117,
+                118,
+                119,
+                120,
+                121,
+                122,
+                123,
+                124,
+                125,
+                126,
+                127,
+                128,
+                129,
+                130,
+                131,
+                132,
+                133,
+                134,
+                135,
+                136,
+                137,
+                138,
+                139,
+                140,
+                141,
+                142,
+                143,
+                144,
+                145,
+                146,
+                147,
+                148,
+                149,
+                150,
+                151,
+                152,
+                153,
+                154,
+                155,
+                156,
+                157,
+                158,
+                159,
+                160,
+                161,
+                162,
+                163,
+                164,
+                165,
+                166,
+                167,
+                168
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "check": "external-function",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "CHGameBase.transferChickenFrom (/../data/reentrancy/solidity_contract/8342.sol#227-237) should be declared external\n",
+      "elements": [
+        {
+          "type": "function",
+          "name": "transferChickenFrom",
+          "source_mapping": {
+            "start": 5704,
+            "length": 342,
+            "filename": "/../data/reentrancy/solidity_contract/8342.sol",
+            "lines": [
+              227,
+              228,
+              229,
+              230,
+              231,
+              232,
+              233,
+              234,
+              235,
+              236,
+              237
+            ]
+          },
+          "contract": {
+            "type": "contract",
+            "name": "CHGameBase",
+            "source_mapping": {
+              "start": 4445,
+              "length": 3736,
+              "filename": "/../data/reentrancy/solidity_contract/8342.sol",
+              "lines": [
+                172,
+                173,
+                174,
+                175,
+                176,
+                177,
+                178,
+                179,
+                180,
+                181,
+                182,
+                183,
+                184,
+                185,
+                186,
+                187,
+                188,
+                189,
+                190,
+                191,
+                192,
+                193,
+                194,
+                195,
+                196,
+                197,
+                198,
+                199,
+                200,
+                201,
+                202,
+                203,
+                204,
+                205,
+                206,
+                207,
+                208,
+                209,
+                210,
+                211,
+                212,
+                213,
+                214,
+                215,
+                216,
+                217,
+                218,
+                219,
+                220,
+                221,
+                222,
+                223,
+                224,
+                225,
+                226,
+                227,
+                228,
+                229,
+                230,
+                231,
+                232,
+                233,
+                234,
+                235,
+                236,
+                237,
+                238,
+                239,
+                240,
+                241,
+                242,
+                243,
+                244,
+                245,
+                246,
+                247,
+                248,
+                249,
+                250,
+                251,
+                252,
+                253,
+                254,
+                255,
+                256,
+                257,
+                258,
+                259,
+                260,
+                261,
+                262,
+                263,
+                264,
+                265,
+                266,
+                267,
+                268,
+                269,
+                270,
+                271,
+                272,
+                273,
+                274,
+                275,
+                276,
+                277,
+                278,
+                279,
+                280,
+                281,
+                282,
+                283,
+                284,
+                285,
+                286,
+                287,
+                288,
+                289,
+                290,
+                291,
+                292,
+                293,
+                294,
+                295,
+                296,
+                297,
+                298,
+                299,
+                300,
+                301,
+                302,
+                303,
+                304,
+                305,
+                306,
+                307,
+                308,
+                309
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "check": "external-function",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "CHGameBase.chickenOf (/../data/reentrancy/solidity_contract/8342.sol#239-241) should be declared external\n",
+      "elements": [
+        {
+          "type": "function",
+          "name": "chickenOf",
+          "source_mapping": {
+            "start": 6050,
+            "length": 135,
+            "filename": "/../data/reentrancy/solidity_contract/8342.sol",
+            "lines": [
+              239,
+              240,
+              241
+            ]
+          },
+          "contract": {
+            "type": "contract",
+            "name": "CHGameBase",
+            "source_mapping": {
+              "start": 4445,
+              "length": 3736,
+              "filename": "/../data/reentrancy/solidity_contract/8342.sol",
+              "lines": [
+                172,
+                173,
+                174,
+                175,
+                176,
+                177,
+                178,
+                179,
+                180,
+                181,
+                182,
+                183,
+                184,
+                185,
+                186,
+                187,
+                188,
+                189,
+                190,
+                191,
+                192,
+                193,
+                194,
+                195,
+                196,
+                197,
+                198,
+                199,
+                200,
+                201,
+                202,
+                203,
+                204,
+                205,
+                206,
+                207,
+                208,
+                209,
+                210,
+                211,
+                212,
+                213,
+                214,
+                215,
+                216,
+                217,
+                218,
+                219,
+                220,
+                221,
+                222,
+                223,
+                224,
+                225,
+                226,
+                227,
+                228,
+                229,
+                230,
+                231,
+                232,
+                233,
+                234,
+                235,
+                236,
+                237,
+                238,
+                239,
+                240,
+                241,
+                242,
+                243,
+                244,
+                245,
+                246,
+                247,
+                248,
+                249,
+                250,
+                251,
+                252,
+                253,
+                254,
+                255,
+                256,
+                257,
+                258,
+                259,
+                260,
+                261,
+                262,
+                263,
+                264,
+                265,
+                266,
+                267,
+                268,
+                269,
+                270,
+                271,
+                272,
+                273,
+                274,
+                275,
+                276,
+                277,
+                278,
+                279,
+                280,
+                281,
+                282,
+                283,
+                284,
+                285,
+                286,
+                287,
+                288,
+                289,
+                290,
+                291,
+                292,
+                293,
+                294,
+                295,
+                296,
+                297,
+                298,
+                299,
+                300,
+                301,
+                302,
+                303,
+                304,
+                305,
+                306,
+                307,
+                308,
+                309
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "check": "external-function",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "CHHouse.withdrawStoreBalance (/../data/reentrancy/solidity_contract/8342.sol#561-564) should be declared external\n",
+      "elements": [
+        {
+          "type": "function",
+          "name": "withdrawStoreBalance",
+          "source_mapping": {
+            "start": 15077,
+            "length": 154,
+            "filename": "/../data/reentrancy/solidity_contract/8342.sol",
+            "lines": [
+              561,
+              562,
+              563,
+              564
+            ]
+          },
+          "contract": {
+            "type": "contract",
+            "name": "CHHouse",
+            "source_mapping": {
+              "start": 11312,
+              "length": 3922,
+              "filename": "/../data/reentrancy/solidity_contract/8342.sol",
+              "lines": [
+                423,
+                424,
+                425,
+                426,
+                427,
+                428,
+                429,
+                430,
+                431,
+                432,
+                433,
+                434,
+                435,
+                436,
+                437,
+                438,
+                439,
+                440,
+                441,
+                442,
+                443,
+                444,
+                445,
+                446,
+                447,
+                448,
+                449,
+                450,
+                451,
+                452,
+                453,
+                454,
+                455,
+                456,
+                457,
+                458,
+                459,
+                460,
+                461,
+                462,
+                463,
+                464,
+                465,
+                466,
+                467,
+                468,
+                469,
+                470,
+                471,
+                472,
+                473,
+                474,
+                475,
+                476,
+                477,
+                478,
+                479,
+                480,
+                481,
+                482,
+                483,
+                484,
+                485,
+                486,
+                487,
+                488,
+                489,
+                490,
+                491,
+                492,
+                493,
+                494,
+                495,
+                496,
+                497,
+                498,
+                499,
+                500,
+                501,
+                502,
+                503,
+                504,
+                505,
+                506,
+                507,
+                508,
+                509,
+                510,
+                511,
+                512,
+                513,
+                514,
+                515,
+                516,
+                517,
+                518,
+                519,
+                520,
+                521,
+                522,
+                523,
+                524,
+                525,
+                526,
+                527,
+                528,
+                529,
+                530,
+                531,
+                532,
+                533,
+                534,
+                535,
+                536,
+                537,
+                538,
+                539,
+                540,
+                541,
+                542,
+                543,
+                544,
+                545,
+                546,
+                547,
+                548,
+                549,
+                550,
+                551,
+                552,
+                553,
+                554,
+                555,
+                556,
+                557,
+                558,
+                559,
+                560,
+                561,
+                562,
+                563,
+                564,
+                565,
+                566
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "check": "external-function",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "CHAltar.tradeBookOf (/../data/reentrancy/solidity_contract/8342.sol#660-678) should be declared external\n",
+      "elements": [
+        {
+          "type": "function",
+          "name": "tradeBookOf",
+          "source_mapping": {
+            "start": 17639,
+            "length": 543,
+            "filename": "/../data/reentrancy/solidity_contract/8342.sol",
+            "lines": [
+              660,
+              661,
+              662,
+              663,
+              664,
+              665,
+              666,
+              667,
+              668,
+              669,
+              670,
+              671,
+              672,
+              673,
+              674,
+              675,
+              676,
+              677,
+              678
+            ]
+          },
+          "contract": {
+            "type": "contract",
+            "name": "CHAltar",
+            "source_mapping": {
+              "start": 16214,
+              "length": 2932,
+              "filename": "/../data/reentrancy/solidity_contract/8342.sol",
+              "lines": [
+                607,
+                608,
+                609,
+                610,
+                611,
+                612,
+                613,
+                614,
+                615,
+                616,
+                617,
+                618,
+                619,
+                620,
+                621,
+                622,
+                623,
+                624,
+                625,
+                626,
+                627,
+                628,
+                629,
+                630,
+                631,
+                632,
+                633,
+                634,
+                635,
+                636,
+                637,
+                638,
+                639,
+                640,
+                641,
+                642,
+                643,
+                644,
+                645,
+                646,
+                647,
+                648,
+                649,
+                650,
+                651,
+                652,
+                653,
+                654,
+                655,
+                656,
+                657,
+                658,
+                659,
+                660,
+                661,
+                662,
+                663,
+                664,
+                665,
+                666,
+                667,
+                668,
+                669,
+                670,
+                671,
+                672,
+                673,
+                674,
+                675,
+                676,
+                677,
+                678,
+                679,
+                680,
+                681,
+                682,
+                683,
+                684,
+                685,
+                686,
+                687,
+                688,
+                689,
+                690,
+                691,
+                692,
+                693,
+                694,
+                695,
+                696,
+                697,
+                698,
+                699,
+                700,
+                701,
+                702,
+                703,
+                704,
+                705,
+                706,
+                707,
+                708
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "check": "external-function",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "CHCommittee.changePet (/../data/reentrancy/solidity_contract/8342.sol#803-821) should be declared external\n",
+      "elements": [
+        {
+          "type": "function",
+          "name": "changePet",
+          "source_mapping": {
+            "start": 20909,
+            "length": 404,
+            "filename": "/../data/reentrancy/solidity_contract/8342.sol",
+            "lines": [
+              803,
+              804,
+              805,
+              806,
+              807,
+              808,
+              809,
+              810,
+              811,
+              812,
+              813,
+              814,
+              815,
+              816,
+              817,
+              818,
+              819,
+              820,
+              821
+            ]
+          },
+          "contract": {
+            "type": "contract",
+            "name": "CHCommittee",
+            "source_mapping": {
+              "start": 19151,
+              "length": 5323,
+              "filename": "/../data/reentrancy/solidity_contract/8342.sol",
+              "lines": [
+                712,
+                713,
+                714,
+                715,
+                716,
+                717,
+                718,
+                719,
+                720,
+                721,
+                722,
+                723,
+                724,
+                725,
+                726,
+                727,
+                728,
+                729,
+                730,
+                731,
+                732,
+                733,
+                734,
+                735,
+                736,
+                737,
+                738,
+                739,
+                740,
+                741,
+                742,
+                743,
+                744,
+                745,
+                746,
+                747,
+                748,
+                749,
+                750,
+                751,
+                752,
+                753,
+                754,
+                755,
+                756,
+                757,
+                758,
+                759,
+                760,
+                761,
+                762,
+                763,
+                764,
+                765,
+                766,
+                767,
+                768,
+                769,
+                770,
+                771,
+                772,
+                773,
+                774,
+                775,
+                776,
+                777,
+                778,
+                779,
+                780,
+                781,
+                782,
+                783,
+                784,
+                785,
+                786,
+                787,
+                788,
+                789,
+                790,
+                791,
+                792,
+                793,
+                794,
+                795,
+                796,
+                797,
+                798,
+                799,
+                800,
+                801,
+                802,
+                803,
+                804,
+                805,
+                806,
+                807,
+                808,
+                809,
+                810,
+                811,
+                812,
+                813,
+                814,
+                815,
+                816,
+                817,
+                818,
+                819,
+                820,
+                821,
+                822,
+                823,
+                824,
+                825,
+                826,
+                827,
+                828,
+                829,
+                830,
+                831,
+                832,
+                833,
+                834,
+                835,
+                836,
+                837,
+                838,
+                839,
+                840,
+                841,
+                842,
+                843,
+                844,
+                845,
+                846,
+                847,
+                848,
+                849,
+                850,
+                851,
+                852,
+                853,
+                854,
+                855,
+                856,
+                857,
+                858,
+                859,
+                860,
+                861,
+                862,
+                863,
+                864,
+                865,
+                866,
+                867,
+                868,
+                869,
+                870,
+                871,
+                872,
+                873,
+                874,
+                875,
+                876,
+                877,
+                878,
+                879,
+                880,
+                881,
+                882,
+                883,
+                884,
+                885,
+                886,
+                887,
+                888,
+                889,
+                890,
+                891,
+                892,
+                893,
+                894,
+                895,
+                896,
+                897,
+                898,
+                899,
+                900,
+                901,
+                902,
+                903,
+                904,
+                905,
+                906,
+                907,
+                908,
+                909,
+                910,
+                911,
+                912,
+                913,
+                914,
+                915,
+                916,
+                917,
+                918,
+                919,
+                920,
+                921,
+                922,
+                923,
+                924,
+                925,
+                926,
+                927,
+                928,
+                929,
+                930,
+                931,
+                932,
+                933,
+                934,
+                935,
+                936,
+                937,
+                938,
+                939,
+                940,
+                941,
+                942,
+                943,
+                944,
+                945,
+                946,
+                947,
+                948,
+                949,
+                950,
+                951,
+                952,
+                953,
+                954,
+                955,
+                956,
+                957,
+                958,
+                959,
+                960,
+                961,
+                962
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "check": "external-function",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "CHCommittee.setNameAndSymbol (/../data/reentrancy/solidity_contract/8342.sol#925-933) should be declared external\n",
+      "elements": [
+        {
+          "type": "function",
+          "name": "setNameAndSymbol",
+          "source_mapping": {
+            "start": 23707,
+            "length": 176,
+            "filename": "/../data/reentrancy/solidity_contract/8342.sol",
+            "lines": [
+              925,
+              926,
+              927,
+              928,
+              929,
+              930,
+              931,
+              932,
+              933
+            ]
+          },
+          "contract": {
+            "type": "contract",
+            "name": "CHCommittee",
+            "source_mapping": {
+              "start": 19151,
+              "length": 5323,
+              "filename": "/../data/reentrancy/solidity_contract/8342.sol",
+              "lines": [
+                712,
+                713,
+                714,
+                715,
+                716,
+                717,
+                718,
+                719,
+                720,
+                721,
+                722,
+                723,
+                724,
+                725,
+                726,
+                727,
+                728,
+                729,
+                730,
+                731,
+                732,
+                733,
+                734,
+                735,
+                736,
+                737,
+                738,
+                739,
+                740,
+                741,
+                742,
+                743,
+                744,
+                745,
+                746,
+                747,
+                748,
+                749,
+                750,
+                751,
+                752,
+                753,
+                754,
+                755,
+                756,
+                757,
+                758,
+                759,
+                760,
+                761,
+                762,
+                763,
+                764,
+                765,
+                766,
+                767,
+                768,
+                769,
+                770,
+                771,
+                772,
+                773,
+                774,
+                775,
+                776,
+                777,
+                778,
+                779,
+                780,
+                781,
+                782,
+                783,
+                784,
+                785,
+                786,
+                787,
+                788,
+                789,
+                790,
+                791,
+                792,
+                793,
+                794,
+                795,
+                796,
+                797,
+                798,
+                799,
+                800,
+                801,
+                802,
+                803,
+                804,
+                805,
+                806,
+                807,
+                808,
+                809,
+                810,
+                811,
+                812,
+                813,
+                814,
+                815,
+                816,
+                817,
+                818,
+                819,
+                820,
+                821,
+                822,
+                823,
+                824,
+                825,
+                826,
+                827,
+                828,
+                829,
+                830,
+                831,
+                832,
+                833,
+                834,
+                835,
+                836,
+                837,
+                838,
+                839,
+                840,
+                841,
+                842,
+                843,
+                844,
+                845,
+                846,
+                847,
+                848,
+                849,
+                850,
+                851,
+                852,
+                853,
+                854,
+                855,
+                856,
+                857,
+                858,
+                859,
+                860,
+                861,
+                862,
+                863,
+                864,
+                865,
+                866,
+                867,
+                868,
+                869,
+                870,
+                871,
+                872,
+                873,
+                874,
+                875,
+                876,
+                877,
+                878,
+                879,
+                880,
+                881,
+                882,
+                883,
+                884,
+                885,
+                886,
+                887,
+                888,
+                889,
+                890,
+                891,
+                892,
+                893,
+                894,
+                895,
+                896,
+                897,
+                898,
+                899,
+                900,
+                901,
+                902,
+                903,
+                904,
+                905,
+                906,
+                907,
+                908,
+                909,
+                910,
+                911,
+                912,
+                913,
+                914,
+                915,
+                916,
+                917,
+                918,
+                919,
+                920,
+                921,
+                922,
+                923,
+                924,
+                925,
+                926,
+                927,
+                928,
+                929,
+                930,
+                931,
+                932,
+                933,
+                934,
+                935,
+                936,
+                937,
+                938,
+                939,
+                940,
+                941,
+                942,
+                943,
+                944,
+                945,
+                946,
+                947,
+                948,
+                949,
+                950,
+                951,
+                952,
+                953,
+                954,
+                955,
+                956,
+                957,
+                958,
+                959,
+                960,
+                961,
+                962
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "check": "external-function",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "CHCommittee.setDeveloper (/../data/reentrancy/solidity_contract/8342.sol#935-941) should be declared external\n",
+      "elements": [
+        {
+          "type": "function",
+          "name": "setDeveloper",
+          "source_mapping": {
+            "start": 23887,
+            "length": 193,
+            "filename": "/../data/reentrancy/solidity_contract/8342.sol",
+            "lines": [
+              935,
+              936,
+              937,
+              938,
+              939,
+              940,
+              941
+            ]
+          },
+          "contract": {
+            "type": "contract",
+            "name": "CHCommittee",
+            "source_mapping": {
+              "start": 19151,
+              "length": 5323,
+              "filename": "/../data/reentrancy/solidity_contract/8342.sol",
+              "lines": [
+                712,
+                713,
+                714,
+                715,
+                716,
+                717,
+                718,
+                719,
+                720,
+                721,
+                722,
+                723,
+                724,
+                725,
+                726,
+                727,
+                728,
+                729,
+                730,
+                731,
+                732,
+                733,
+                734,
+                735,
+                736,
+                737,
+                738,
+                739,
+                740,
+                741,
+                742,
+                743,
+                744,
+                745,
+                746,
+                747,
+                748,
+                749,
+                750,
+                751,
+                752,
+                753,
+                754,
+                755,
+                756,
+                757,
+                758,
+                759,
+                760,
+                761,
+                762,
+                763,
+                764,
+                765,
+                766,
+                767,
+                768,
+                769,
+                770,
+                771,
+                772,
+                773,
+                774,
+                775,
+                776,
+                777,
+                778,
+                779,
+                780,
+                781,
+                782,
+                783,
+                784,
+                785,
+                786,
+                787,
+                788,
+                789,
+                790,
+                791,
+                792,
+                793,
+                794,
+                795,
+                796,
+                797,
+                798,
+                799,
+                800,
+                801,
+                802,
+                803,
+                804,
+                805,
+                806,
+                807,
+                808,
+                809,
+                810,
+                811,
+                812,
+                813,
+                814,
+                815,
+                816,
+                817,
+                818,
+                819,
+                820,
+                821,
+                822,
+                823,
+                824,
+                825,
+                826,
+                827,
+                828,
+                829,
+                830,
+                831,
+                832,
+                833,
+                834,
+                835,
+                836,
+                837,
+                838,
+                839,
+                840,
+                841,
+                842,
+                843,
+                844,
+                845,
+                846,
+                847,
+                848,
+                849,
+                850,
+                851,
+                852,
+                853,
+                854,
+                855,
+                856,
+                857,
+                858,
+                859,
+                860,
+                861,
+                862,
+                863,
+                864,
+                865,
+                866,
+                867,
+                868,
+                869,
+                870,
+                871,
+                872,
+                873,
+                874,
+                875,
+                876,
+                877,
+                878,
+                879,
+                880,
+                881,
+                882,
+                883,
+                884,
+                885,
+                886,
+                887,
+                888,
+                889,
+                890,
+                891,
+                892,
+                893,
+                894,
+                895,
+                896,
+                897,
+                898,
+                899,
+                900,
+                901,
+                902,
+                903,
+                904,
+                905,
+                906,
+                907,
+                908,
+                909,
+                910,
+                911,
+                912,
+                913,
+                914,
+                915,
+                916,
+                917,
+                918,
+                919,
+                920,
+                921,
+                922,
+                923,
+                924,
+                925,
+                926,
+                927,
+                928,
+                929,
+                930,
+                931,
+                932,
+                933,
+                934,
+                935,
+                936,
+                937,
+                938,
+                939,
+                940,
+                941,
+                942,
+                943,
+                944,
+                945,
+                946,
+                947,
+                948,
+                949,
+                950,
+                951,
+                952,
+                953,
+                954,
+                955,
+                956,
+                957,
+                958,
+                959,
+                960,
+                961,
+                962
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "check": "external-function",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "CHCommittee.setCommittee (/../data/reentrancy/solidity_contract/8342.sol#943-948) should be declared external\n",
+      "elements": [
+        {
+          "type": "function",
+          "name": "setCommittee",
+          "source_mapping": {
+            "start": 24084,
+            "length": 171,
+            "filename": "/../data/reentrancy/solidity_contract/8342.sol",
+            "lines": [
+              943,
+              944,
+              945,
+              946,
+              947,
+              948
+            ]
+          },
+          "contract": {
+            "type": "contract",
+            "name": "CHCommittee",
+            "source_mapping": {
+              "start": 19151,
+              "length": 5323,
+              "filename": "/../data/reentrancy/solidity_contract/8342.sol",
+              "lines": [
+                712,
+                713,
+                714,
+                715,
+                716,
+                717,
+                718,
+                719,
+                720,
+                721,
+                722,
+                723,
+                724,
+                725,
+                726,
+                727,
+                728,
+                729,
+                730,
+                731,
+                732,
+                733,
+                734,
+                735,
+                736,
+                737,
+                738,
+                739,
+                740,
+                741,
+                742,
+                743,
+                744,
+                745,
+                746,
+                747,
+                748,
+                749,
+                750,
+                751,
+                752,
+                753,
+                754,
+                755,
+                756,
+                757,
+                758,
+                759,
+                760,
+                761,
+                762,
+                763,
+                764,
+                765,
+                766,
+                767,
+                768,
+                769,
+                770,
+                771,
+                772,
+                773,
+                774,
+                775,
+                776,
+                777,
+                778,
+                779,
+                780,
+                781,
+                782,
+                783,
+                784,
+                785,
+                786,
+                787,
+                788,
+                789,
+                790,
+                791,
+                792,
+                793,
+                794,
+                795,
+                796,
+                797,
+                798,
+                799,
+                800,
+                801,
+                802,
+                803,
+                804,
+                805,
+                806,
+                807,
+                808,
+                809,
+                810,
+                811,
+                812,
+                813,
+                814,
+                815,
+                816,
+                817,
+                818,
+                819,
+                820,
+                821,
+                822,
+                823,
+                824,
+                825,
+                826,
+                827,
+                828,
+                829,
+                830,
+                831,
+                832,
+                833,
+                834,
+                835,
+                836,
+                837,
+                838,
+                839,
+                840,
+                841,
+                842,
+                843,
+                844,
+                845,
+                846,
+                847,
+                848,
+                849,
+                850,
+                851,
+                852,
+                853,
+                854,
+                855,
+                856,
+                857,
+                858,
+                859,
+                860,
+                861,
+                862,
+                863,
+                864,
+                865,
+                866,
+                867,
+                868,
+                869,
+                870,
+                871,
+                872,
+                873,
+                874,
+                875,
+                876,
+                877,
+                878,
+                879,
+                880,
+                881,
+                882,
+                883,
+                884,
+                885,
+                886,
+                887,
+                888,
+                889,
+                890,
+                891,
+                892,
+                893,
+                894,
+                895,
+                896,
+                897,
+                898,
+                899,
+                900,
+                901,
+                902,
+                903,
+                904,
+                905,
+                906,
+                907,
+                908,
+                909,
+                910,
+                911,
+                912,
+                913,
+                914,
+                915,
+                916,
+                917,
+                918,
+                919,
+                920,
+                921,
+                922,
+                923,
+                924,
+                925,
+                926,
+                927,
+                928,
+                929,
+                930,
+                931,
+                932,
+                933,
+                934,
+                935,
+                936,
+                937,
+                938,
+                939,
+                940,
+                941,
+                942,
+                943,
+                944,
+                945,
+                946,
+                947,
+                948,
+                949,
+                950,
+                951,
+                952,
+                953,
+                954,
+                955,
+                956,
+                957,
+                958,
+                959,
+                960,
+                961,
+                962
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "check": "external-function",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "ChickenHunt.hunterOf (/../data/reentrancy/solidity_contract/8342.sol#1021-1038) should be declared external\n",
+      "elements": [
+        {
+          "type": "function",
+          "name": "hunterOf",
+          "source_mapping": {
+            "start": 25909,
+            "length": 358,
+            "filename": "/../data/reentrancy/solidity_contract/8342.sol",
+            "lines": [
+              1021,
+              1022,
+              1023,
+              1024,
+              1025,
+              1026,
+              1027,
+              1028,
+              1029,
+              1030,
+              1031,
+              1032,
+              1033,
+              1034,
+              1035,
+              1036,
+              1037,
+              1038
+            ]
+          },
+          "contract": {
+            "type": "contract",
+            "name": "ChickenHunt",
+            "source_mapping": {
+              "start": 24479,
+              "length": 2671,
+              "filename": "/../data/reentrancy/solidity_contract/8342.sol",
+              "lines": [
+                966,
+                967,
+                968,
+                969,
+                970,
+                971,
+                972,
+                973,
+                974,
+                975,
+                976,
+                977,
+                978,
+                979,
+                980,
+                981,
+                982,
+                983,
+                984,
+                985,
+                986,
+                987,
+                988,
+                989,
+                990,
+                991,
+                992,
+                993,
+                994,
+                995,
+                996,
+                997,
+                998,
+                999,
+                1000,
+                1001,
+                1002,
+                1003,
+                1004,
+                1005,
+                1006,
+                1007,
+                1008,
+                1009,
+                1010,
+                1011,
+                1012,
+                1013,
+                1014,
+                1015,
+                1016,
+                1017,
+                1018,
+                1019,
+                1020,
+                1021,
+                1022,
+                1023,
+                1024,
+                1025,
+                1026,
+                1027,
+                1028,
+                1029,
+                1030,
+                1031,
+                1032,
+                1033,
+                1034,
+                1035,
+                1036,
+                1037,
+                1038,
+                1039,
+                1040,
+                1041,
+                1042,
+                1043,
+                1044,
+                1045,
+                1046,
+                1047,
+                1048,
+                1049,
+                1050,
+                1051,
+                1052,
+                1053,
+                1054,
+                1055,
+                1056,
+                1057,
+                1058,
+                1059,
+                1060,
+                1061,
+                1062,
+                1063,
+                1064,
+                1065,
+                1066,
+                1067,
+                1068,
+                1069,
+                1070,
+                1071,
+                1072,
+                1073
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "check": "external-function",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "ChickenHunt.detailsOf (/../data/reentrancy/solidity_contract/8342.sol#1040-1071) should be declared external\n",
+      "elements": [
+        {
+          "type": "function",
+          "name": "detailsOf",
+          "source_mapping": {
+            "start": 26271,
+            "length": 876,
+            "filename": "/../data/reentrancy/solidity_contract/8342.sol",
+            "lines": [
+              1040,
+              1041,
+              1042,
+              1043,
+              1044,
+              1045,
+              1046,
+              1047,
+              1048,
+              1049,
+              1050,
+              1051,
+              1052,
+              1053,
+              1054,
+              1055,
+              1056,
+              1057,
+              1058,
+              1059,
+              1060,
+              1061,
+              1062,
+              1063,
+              1064,
+              1065,
+              1066,
+              1067,
+              1068,
+              1069,
+              1070,
+              1071
+            ]
+          },
+          "contract": {
+            "type": "contract",
+            "name": "ChickenHunt",
+            "source_mapping": {
+              "start": 24479,
+              "length": 2671,
+              "filename": "/../data/reentrancy/solidity_contract/8342.sol",
+              "lines": [
+                966,
+                967,
+                968,
+                969,
+                970,
+                971,
+                972,
+                973,
+                974,
+                975,
+                976,
+                977,
+                978,
+                979,
+                980,
+                981,
+                982,
+                983,
+                984,
+                985,
+                986,
+                987,
+                988,
+                989,
+                990,
+                991,
+                992,
+                993,
+                994,
+                995,
+                996,
+                997,
+                998,
+                999,
+                1000,
+                1001,
+                1002,
+                1003,
+                1004,
+                1005,
+                1006,
+                1007,
+                1008,
+                1009,
+                1010,
+                1011,
+                1012,
+                1013,
+                1014,
+                1015,
+                1016,
+                1017,
+                1018,
+                1019,
+                1020,
+                1021,
+                1022,
+                1023,
+                1024,
+                1025,
+                1026,
+                1027,
+                1028,
+                1029,
+                1030,
+                1031,
+                1032,
+                1033,
+                1034,
+                1035,
+                1036,
+                1037,
+                1038,
+                1039,
+                1040,
+                1041,
+                1042,
+                1043,
+                1044,
+                1045,
+                1046,
+                1047,
+                1048,
+                1049,
+                1050,
+                1051,
+                1052,
+                1053,
+                1054,
+                1055,
+                1056,
+                1057,
+                1058,
+                1059,
+                1060,
+                1061,
+                1062,
+                1063,
+                1064,
+                1065,
+                1066,
+                1067,
+                1068,
+                1069,
+                1070,
+                1071,
+                1072,
+                1073
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "check": "low-level-calls",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Low level call in CHCommittee.callFor (/../data/reentrancy/solidity_contract/8342.sol#771-773):\n\t-_to.call.value(_value).gas(_gas)(_code) /../data/reentrancy/solidity_contract/8342.sol#772\n",
+      "elements": [
+        {
+          "type": "function",
+          "name": "callFor",
+          "source_mapping": {
+            "start": 20194,
+            "length": 176,
+            "filename": "/../data/reentrancy/solidity_contract/8342.sol",
+            "lines": [
+              771,
+              772,
+              773
+            ]
+          },
+          "contract": {
+            "type": "contract",
+            "name": "CHCommittee",
+            "source_mapping": {
+              "start": 19151,
+              "length": 5323,
+              "filename": "/../data/reentrancy/solidity_contract/8342.sol",
+              "lines": [
+                712,
+                713,
+                714,
+                715,
+                716,
+                717,
+                718,
+                719,
+                720,
+                721,
+                722,
+                723,
+                724,
+                725,
+                726,
+                727,
+                728,
+                729,
+                730,
+                731,
+                732,
+                733,
+                734,
+                735,
+                736,
+                737,
+                738,
+                739,
+                740,
+                741,
+                742,
+                743,
+                744,
+                745,
+                746,
+                747,
+                748,
+                749,
+                750,
+                751,
+                752,
+                753,
+                754,
+                755,
+                756,
+                757,
+                758,
+                759,
+                760,
+                761,
+                762,
+                763,
+                764,
+                765,
+                766,
+                767,
+                768,
+                769,
+                770,
+                771,
+                772,
+                773,
+                774,
+                775,
+                776,
+                777,
+                778,
+                779,
+                780,
+                781,
+                782,
+                783,
+                784,
+                785,
+                786,
+                787,
+                788,
+                789,
+                790,
+                791,
+                792,
+                793,
+                794,
+                795,
+                796,
+                797,
+                798,
+                799,
+                800,
+                801,
+                802,
+                803,
+                804,
+                805,
+                806,
+                807,
+                808,
+                809,
+                810,
+                811,
+                812,
+                813,
+                814,
+                815,
+                816,
+                817,
+                818,
+                819,
+                820,
+                821,
+                822,
+                823,
+                824,
+                825,
+                826,
+                827,
+                828,
+                829,
+                830,
+                831,
+                832,
+                833,
+                834,
+                835,
+                836,
+                837,
+                838,
+                839,
+                840,
+                841,
+                842,
+                843,
+                844,
+                845,
+                846,
+                847,
+                848,
+                849,
+                850,
+                851,
+                852,
+                853,
+                854,
+                855,
+                856,
+                857,
+                858,
+                859,
+                860,
+                861,
+                862,
+                863,
+                864,
+                865,
+                866,
+                867,
+                868,
+                869,
+                870,
+                871,
+                872,
+                873,
+                874,
+                875,
+                876,
+                877,
+                878,
+                879,
+                880,
+                881,
+                882,
+                883,
+                884,
+                885,
+                886,
+                887,
+                888,
+                889,
+                890,
+                891,
+                892,
+                893,
+                894,
+                895,
+                896,
+                897,
+                898,
+                899,
+                900,
+                901,
+                902,
+                903,
+                904,
+                905,
+                906,
+                907,
+                908,
+                909,
+                910,
+                911,
+                912,
+                913,
+                914,
+                915,
+                916,
+                917,
+                918,
+                919,
+                920,
+                921,
+                922,
+                923,
+                924,
+                925,
+                926,
+                927,
+                928,
+                929,
+                930,
+                931,
+                932,
+                933,
+                934,
+                935,
+                936,
+                937,
+                938,
+                939,
+                940,
+                941,
+                942,
+                943,
+                944,
+                945,
+                946,
+                947,
+                948,
+                949,
+                950,
+                951,
+                952,
+                953,
+                954,
+                955,
+                956,
+                957,
+                958,
+                959,
+                960,
+                961,
+                962
+              ]
+            }
+          }
+        },
+        {
+          "type": "expression",
+          "expression": "_to.call.value(_value).gas(_gas)(_code)",
+          "source_mapping": {
+            "start": 20319,
+            "length": 46,
+            "filename": "/../data/reentrancy/solidity_contract/8342.sol",
+            "lines": [
+              772
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "naming-convention",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Parameter '_owner' of CHStock.balanceOf (/../data/reentrancy/solidity_contract/8342.sol#126) is not in mixedCase\n",
+      "elements": [
+        {
+          "target": "parameter",
+          "convention": "mixedCase",
+          "name": "_owner",
+          "source_mapping": {
+            "start": 3172,
+            "length": 14,
+            "filename": "/../data/reentrancy/solidity_contract/8342.sol",
+            "lines": [
+              126
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "naming-convention",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Parameter '_to' of CHStock.transfer (/../data/reentrancy/solidity_contract/8342.sol#97) is not in mixedCase\n",
+      "elements": [
+        {
+          "target": "parameter",
+          "convention": "mixedCase",
+          "name": "_to",
+          "source_mapping": {
+            "start": 2300,
+            "length": 11,
+            "filename": "/../data/reentrancy/solidity_contract/8342.sol",
+            "lines": [
+              97
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "naming-convention",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Parameter '_value' of CHStock.transfer (/../data/reentrancy/solidity_contract/8342.sol#97) is not in mixedCase\n",
+      "elements": [
+        {
+          "target": "parameter",
+          "convention": "mixedCase",
+          "name": "_value",
+          "source_mapping": {
+            "start": 2313,
+            "length": 14,
+            "filename": "/../data/reentrancy/solidity_contract/8342.sol",
+            "lines": [
+              97
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "naming-convention",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Parameter '_from' of CHStock.transferFrom (/../data/reentrancy/solidity_contract/8342.sol#102) is not in mixedCase\n",
+      "elements": [
+        {
+          "target": "parameter",
+          "convention": "mixedCase",
+          "name": "_from",
+          "source_mapping": {
+            "start": 2439,
+            "length": 13,
+            "filename": "/../data/reentrancy/solidity_contract/8342.sol",
+            "lines": [
+              102
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "naming-convention",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Parameter '_to' of CHStock.transferFrom (/../data/reentrancy/solidity_contract/8342.sol#102) is not in mixedCase\n",
+      "elements": [
+        {
+          "target": "parameter",
+          "convention": "mixedCase",
+          "name": "_to",
+          "source_mapping": {
+            "start": 2454,
+            "length": 11,
+            "filename": "/../data/reentrancy/solidity_contract/8342.sol",
+            "lines": [
+              102
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "naming-convention",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Parameter '_value' of CHStock.transferFrom (/../data/reentrancy/solidity_contract/8342.sol#102) is not in mixedCase\n",
+      "elements": [
+        {
+          "target": "parameter",
+          "convention": "mixedCase",
+          "name": "_value",
+          "source_mapping": {
+            "start": 2467,
+            "length": 14,
+            "filename": "/../data/reentrancy/solidity_contract/8342.sol",
+            "lines": [
+              102
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "naming-convention",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Parameter '_spender' of CHStock.approve (/../data/reentrancy/solidity_contract/8342.sol#112) is not in mixedCase\n",
+      "elements": [
+        {
+          "target": "parameter",
+          "convention": "mixedCase",
+          "name": "_spender",
+          "source_mapping": {
+            "start": 2686,
+            "length": 16,
+            "filename": "/../data/reentrancy/solidity_contract/8342.sol",
+            "lines": [
+              112
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "naming-convention",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Parameter '_value' of CHStock.approve (/../data/reentrancy/solidity_contract/8342.sol#112) is not in mixedCase\n",
+      "elements": [
+        {
+          "target": "parameter",
+          "convention": "mixedCase",
+          "name": "_value",
+          "source_mapping": {
+            "start": 2704,
+            "length": 14,
+            "filename": "/../data/reentrancy/solidity_contract/8342.sol",
+            "lines": [
+              112
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "naming-convention",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Parameter '_owner' of CHStock.allowance (/../data/reentrancy/solidity_contract/8342.sol#130) is not in mixedCase\n",
+      "elements": [
+        {
+          "target": "parameter",
+          "convention": "mixedCase",
+          "name": "_owner",
+          "source_mapping": {
+            "start": 3273,
+            "length": 14,
+            "filename": "/../data/reentrancy/solidity_contract/8342.sol",
+            "lines": [
+              130
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "naming-convention",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Parameter '_spender' of CHStock.allowance (/../data/reentrancy/solidity_contract/8342.sol#130) is not in mixedCase\n",
+      "elements": [
+        {
+          "target": "parameter",
+          "convention": "mixedCase",
+          "name": "_spender",
+          "source_mapping": {
+            "start": 3289,
+            "length": 16,
+            "filename": "/../data/reentrancy/solidity_contract/8342.sol",
+            "lines": [
+              130
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "naming-convention",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Parameter '_shareholder' of CHStock.dividendsOf (/../data/reentrancy/solidity_contract/8342.sol#118) is not in mixedCase\n",
+      "elements": [
+        {
+          "target": "parameter",
+          "convention": "mixedCase",
+          "name": "_shareholder",
+          "source_mapping": {
+            "start": 2882,
+            "length": 20,
+            "filename": "/../data/reentrancy/solidity_contract/8342.sol",
+            "lines": [
+              118
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "naming-convention",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Function 'CHStock._giveShares' (/../data/reentrancy/solidity_contract/8342.sol#140-149) is not in mixedCase\n",
+      "elements": [
+        {
+          "target": "function",
+          "convention": "mixedCase",
+          "name": "_giveShares",
+          "source_mapping": {
+            "start": 3403,
+            "length": 423,
+            "filename": "/../data/reentrancy/solidity_contract/8342.sol",
+            "lines": [
+              140,
+              141,
+              142,
+              143,
+              144,
+              145,
+              146,
+              147,
+              148,
+              149
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "naming-convention",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Parameter '_user' of CHStock._giveShares (/../data/reentrancy/solidity_contract/8342.sol#140) is not in mixedCase\n",
+      "elements": [
+        {
+          "target": "parameter",
+          "convention": "mixedCase",
+          "name": "_user",
+          "source_mapping": {
+            "start": 3424,
+            "length": 13,
+            "filename": "/../data/reentrancy/solidity_contract/8342.sol",
+            "lines": [
+              140
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "naming-convention",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Parameter '_ethereum' of CHStock._giveShares (/../data/reentrancy/solidity_contract/8342.sol#140) is not in mixedCase\n",
+      "elements": [
+        {
+          "target": "parameter",
+          "convention": "mixedCase",
+          "name": "_ethereum",
+          "source_mapping": {
+            "start": 3439,
+            "length": 17,
+            "filename": "/../data/reentrancy/solidity_contract/8342.sol",
+            "lines": [
+              140
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "naming-convention",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Function 'CHStock._transfer' (/../data/reentrancy/solidity_contract/8342.sol#151-166) is not in mixedCase\n",
+      "elements": [
+        {
+          "target": "function",
+          "convention": "mixedCase",
+          "name": "_transfer",
+          "source_mapping": {
+            "start": 3830,
+            "length": 607,
+            "filename": "/../data/reentrancy/solidity_contract/8342.sol",
+            "lines": [
+              151,
+              152,
+              153,
+              154,
+              155,
+              156,
+              157,
+              158,
+              159,
+              160,
+              161,
+              162,
+              163,
+              164,
+              165,
+              166
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "naming-convention",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Parameter '_from' of CHStock._transfer (/../data/reentrancy/solidity_contract/8342.sol#151) is not in mixedCase\n",
+      "elements": [
+        {
+          "target": "parameter",
+          "convention": "mixedCase",
+          "name": "_from",
+          "source_mapping": {
+            "start": 3849,
+            "length": 13,
+            "filename": "/../data/reentrancy/solidity_contract/8342.sol",
+            "lines": [
+              151
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "naming-convention",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Parameter '_to' of CHStock._transfer (/../data/reentrancy/solidity_contract/8342.sol#151) is not in mixedCase\n",
+      "elements": [
+        {
+          "target": "parameter",
+          "convention": "mixedCase",
+          "name": "_to",
+          "source_mapping": {
+            "start": 3864,
+            "length": 11,
+            "filename": "/../data/reentrancy/solidity_contract/8342.sol",
+            "lines": [
+              151
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "naming-convention",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Parameter '_value' of CHStock._transfer (/../data/reentrancy/solidity_contract/8342.sol#151) is not in mixedCase\n",
+      "elements": [
+        {
+          "target": "parameter",
+          "convention": "mixedCase",
+          "name": "_value",
+          "source_mapping": {
+            "start": 3877,
+            "length": 14,
+            "filename": "/../data/reentrancy/solidity_contract/8342.sol",
+            "lines": [
+              151
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "naming-convention",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Parameter '_user' of CHGameBase.saveChickenOf (/../data/reentrancy/solidity_contract/8342.sol#218) is not in mixedCase\n",
+      "elements": [
+        {
+          "target": "parameter",
+          "convention": "mixedCase",
+          "name": "_user",
+          "source_mapping": {
+            "start": 5368,
+            "length": 13,
+            "filename": "/../data/reentrancy/solidity_contract/8342.sol",
+            "lines": [
+              218
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "naming-convention",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Parameter '_from' of CHGameBase.transferChickenFrom (/../data/reentrancy/solidity_contract/8342.sol#227) is not in mixedCase\n",
+      "elements": [
+        {
+          "target": "parameter",
+          "convention": "mixedCase",
+          "name": "_from",
+          "source_mapping": {
+            "start": 5733,
+            "length": 13,
+            "filename": "/../data/reentrancy/solidity_contract/8342.sol",
+            "lines": [
+              227
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "naming-convention",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Parameter '_to' of CHGameBase.transferChickenFrom (/../data/reentrancy/solidity_contract/8342.sol#227) is not in mixedCase\n",
+      "elements": [
+        {
+          "target": "parameter",
+          "convention": "mixedCase",
+          "name": "_to",
+          "source_mapping": {
+            "start": 5748,
+            "length": 11,
+            "filename": "/../data/reentrancy/solidity_contract/8342.sol",
+            "lines": [
+              227
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "naming-convention",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Parameter '_value' of CHGameBase.transferChickenFrom (/../data/reentrancy/solidity_contract/8342.sol#227) is not in mixedCase\n",
+      "elements": [
+        {
+          "target": "parameter",
+          "convention": "mixedCase",
+          "name": "_value",
+          "source_mapping": {
+            "start": 5761,
+            "length": 14,
+            "filename": "/../data/reentrancy/solidity_contract/8342.sol",
+            "lines": [
+              227
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "naming-convention",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Parameter '_user' of CHGameBase.chickenOf (/../data/reentrancy/solidity_contract/8342.sol#239) is not in mixedCase\n",
+      "elements": [
+        {
+          "target": "parameter",
+          "convention": "mixedCase",
+          "name": "_user",
+          "source_mapping": {
+            "start": 6069,
+            "length": 13,
+            "filename": "/../data/reentrancy/solidity_contract/8342.sol",
+            "lines": [
+              239
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "naming-convention",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Function 'CHGameBase._payChicken' (/../data/reentrancy/solidity_contract/8342.sol#245-261) is not in mixedCase\n",
+      "elements": [
+        {
+          "target": "function",
+          "convention": "mixedCase",
+          "name": "_payChicken",
+          "source_mapping": {
+            "start": 6194,
+            "length": 601,
+            "filename": "/../data/reentrancy/solidity_contract/8342.sol",
+            "lines": [
+              245,
+              246,
+              247,
+              248,
+              249,
+              250,
+              251,
+              252,
+              253,
+              254,
+              255,
+              256,
+              257,
+              258,
+              259,
+              260,
+              261
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "naming-convention",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Parameter '_user' of CHGameBase._payChicken (/../data/reentrancy/solidity_contract/8342.sol#245) is not in mixedCase\n",
+      "elements": [
+        {
+          "target": "parameter",
+          "convention": "mixedCase",
+          "name": "_user",
+          "source_mapping": {
+            "start": 6215,
+            "length": 13,
+            "filename": "/../data/reentrancy/solidity_contract/8342.sol",
+            "lines": [
+              245
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "naming-convention",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Parameter '_chicken' of CHGameBase._payChicken (/../data/reentrancy/solidity_contract/8342.sol#245) is not in mixedCase\n",
+      "elements": [
+        {
+          "target": "parameter",
+          "convention": "mixedCase",
+          "name": "_chicken",
+          "source_mapping": {
+            "start": 6230,
+            "length": 16,
+            "filename": "/../data/reentrancy/solidity_contract/8342.sol",
+            "lines": [
+              245
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "naming-convention",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Function 'CHGameBase._payEthereumAndDistribute' (/../data/reentrancy/solidity_contract/8342.sol#263-275) is not in mixedCase\n",
+      "elements": [
+        {
+          "target": "function",
+          "convention": "mixedCase",
+          "name": "_payEthereumAndDistribute",
+          "source_mapping": {
+            "start": 6799,
+            "length": 493,
+            "filename": "/../data/reentrancy/solidity_contract/8342.sol",
+            "lines": [
+              263,
+              264,
+              265,
+              266,
+              267,
+              268,
+              269,
+              270,
+              271,
+              272,
+              273,
+              274,
+              275
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "naming-convention",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Parameter '_cost' of CHGameBase._payEthereumAndDistribute (/../data/reentrancy/solidity_contract/8342.sol#263) is not in mixedCase\n",
+      "elements": [
+        {
+          "target": "parameter",
+          "convention": "mixedCase",
+          "name": "_cost",
+          "source_mapping": {
+            "start": 6834,
+            "length": 13,
+            "filename": "/../data/reentrancy/solidity_contract/8342.sol",
+            "lines": [
+              263
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "naming-convention",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Function 'CHGameBase._payEthereum' (/../data/reentrancy/solidity_contract/8342.sol#277-287) is not in mixedCase\n",
+      "elements": [
+        {
+          "target": "function",
+          "convention": "mixedCase",
+          "name": "_payEthereum",
+          "source_mapping": {
+            "start": 7296,
+            "length": 363,
+            "filename": "/../data/reentrancy/solidity_contract/8342.sol",
+            "lines": [
+              277,
+              278,
+              279,
+              280,
+              281,
+              282,
+              283,
+              284,
+              285,
+              286,
+              287
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "naming-convention",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Parameter '_cost' of CHGameBase._payEthereum (/../data/reentrancy/solidity_contract/8342.sol#277) is not in mixedCase\n",
+      "elements": [
+        {
+          "target": "parameter",
+          "convention": "mixedCase",
+          "name": "_cost",
+          "source_mapping": {
+            "start": 7318,
+            "length": 13,
+            "filename": "/../data/reentrancy/solidity_contract/8342.sol",
+            "lines": [
+              277
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "naming-convention",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Function 'CHGameBase._unclaimedChickenOf' (/../data/reentrancy/solidity_contract/8342.sol#289-298) is not in mixedCase\n",
+      "elements": [
+        {
+          "target": "function",
+          "convention": "mixedCase",
+          "name": "_unclaimedChickenOf",
+          "source_mapping": {
+            "start": 7663,
+            "length": 354,
+            "filename": "/../data/reentrancy/solidity_contract/8342.sol",
+            "lines": [
+              289,
+              290,
+              291,
+              292,
+              293,
+              294,
+              295,
+              296,
+              297,
+              298
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "naming-convention",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Parameter '_user' of CHGameBase._unclaimedChickenOf (/../data/reentrancy/solidity_contract/8342.sol#289) is not in mixedCase\n",
+      "elements": [
+        {
+          "target": "parameter",
+          "convention": "mixedCase",
+          "name": "_user",
+          "source_mapping": {
+            "start": 7692,
+            "length": 13,
+            "filename": "/../data/reentrancy/solidity_contract/8342.sol",
+            "lines": [
+              289
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "naming-convention",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Function 'CHGameBase._houseOf' (/../data/reentrancy/solidity_contract/8342.sol#300-307) is not in mixedCase\n",
+      "elements": [
+        {
+          "target": "function",
+          "convention": "mixedCase",
+          "name": "_houseOf",
+          "source_mapping": {
+            "start": 8021,
+            "length": 157,
+            "filename": "/../data/reentrancy/solidity_contract/8342.sol",
+            "lines": [
+              300,
+              301,
+              302,
+              303,
+              304,
+              305,
+              306,
+              307
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "naming-convention",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Parameter '_user' of CHGameBase._houseOf (/../data/reentrancy/solidity_contract/8342.sol#300) is not in mixedCase\n",
+      "elements": [
+        {
+          "target": "parameter",
+          "convention": "mixedCase",
+          "name": "_user",
+          "source_mapping": {
+            "start": 8039,
+            "length": 13,
+            "filename": "/../data/reentrancy/solidity_contract/8342.sol",
+            "lines": [
+              300
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "naming-convention",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Parameter '_to' of CHHunter.upgradeStrength (/../data/reentrancy/solidity_contract/8342.sol#338) is not in mixedCase\n",
+      "elements": [
+        {
+          "target": "parameter",
+          "convention": "mixedCase",
+          "name": "_to",
+          "source_mapping": {
+            "start": 8490,
+            "length": 11,
+            "filename": "/../data/reentrancy/solidity_contract/8342.sol",
+            "lines": [
+              338
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "naming-convention",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Parameter '_to' of CHHunter.upgradeDexterity (/../data/reentrancy/solidity_contract/8342.sol#352) is not in mixedCase\n",
+      "elements": [
+        {
+          "target": "parameter",
+          "convention": "mixedCase",
+          "name": "_to",
+          "source_mapping": {
+            "start": 9043,
+            "length": 11,
+            "filename": "/../data/reentrancy/solidity_contract/8342.sol",
+            "lines": [
+              352
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "naming-convention",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Parameter '_to' of CHHunter.upgradeConstitution (/../data/reentrancy/solidity_contract/8342.sol#366) is not in mixedCase\n",
+      "elements": [
+        {
+          "target": "parameter",
+          "convention": "mixedCase",
+          "name": "_to",
+          "source_mapping": {
+            "start": 9591,
+            "length": 11,
+            "filename": "/../data/reentrancy/solidity_contract/8342.sol",
+            "lines": [
+              366
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "naming-convention",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Parameter '_to' of CHHunter.upgradeResistance (/../data/reentrancy/solidity_contract/8342.sol#379) is not in mixedCase\n",
+      "elements": [
+        {
+          "target": "parameter",
+          "convention": "mixedCase",
+          "name": "_to",
+          "source_mapping": {
+            "start": 10095,
+            "length": 11,
+            "filename": "/../data/reentrancy/solidity_contract/8342.sol",
+            "lines": [
+              379
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "naming-convention",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Function 'CHHunter._payForUpgrade' (/../data/reentrancy/solidity_contract/8342.sol#394-399) is not in mixedCase\n",
+      "elements": [
+        {
+          "target": "function",
+          "convention": "mixedCase",
+          "name": "_payForUpgrade",
+          "source_mapping": {
+            "start": 10563,
+            "length": 319,
+            "filename": "/../data/reentrancy/solidity_contract/8342.sol",
+            "lines": [
+              394,
+              395,
+              396,
+              397,
+              398,
+              399
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "naming-convention",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Parameter '_from' of CHHunter._payForUpgrade (/../data/reentrancy/solidity_contract/8342.sol#394) is not in mixedCase\n",
+      "elements": [
+        {
+          "target": "parameter",
+          "convention": "mixedCase",
+          "name": "_from",
+          "source_mapping": {
+            "start": 10587,
+            "length": 13,
+            "filename": "/../data/reentrancy/solidity_contract/8342.sol",
+            "lines": [
+              394
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "naming-convention",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Parameter '_to' of CHHunter._payForUpgrade (/../data/reentrancy/solidity_contract/8342.sol#394) is not in mixedCase\n",
+      "elements": [
+        {
+          "target": "parameter",
+          "convention": "mixedCase",
+          "name": "_to",
+          "source_mapping": {
+            "start": 10602,
+            "length": 11,
+            "filename": "/../data/reentrancy/solidity_contract/8342.sol",
+            "lines": [
+              394
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "naming-convention",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Parameter '_type' of CHHunter._payForUpgrade (/../data/reentrancy/solidity_contract/8342.sol#394) is not in mixedCase\n",
+      "elements": [
+        {
+          "target": "parameter",
+          "convention": "mixedCase",
+          "name": "_type",
+          "source_mapping": {
+            "start": 10615,
+            "length": 12,
+            "filename": "/../data/reentrancy/solidity_contract/8342.sol",
+            "lines": [
+              394
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "naming-convention",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Function 'CHHunter._gapOfSquareSum' (/../data/reentrancy/solidity_contract/8342.sol#401-408) is not in mixedCase\n",
+      "elements": [
+        {
+          "target": "function",
+          "convention": "mixedCase",
+          "name": "_gapOfSquareSum",
+          "source_mapping": {
+            "start": 10886,
+            "length": 220,
+            "filename": "/../data/reentrancy/solidity_contract/8342.sol",
+            "lines": [
+              401,
+              402,
+              403,
+              404,
+              405,
+              406,
+              407,
+              408
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "naming-convention",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Parameter '_before' of CHHunter._gapOfSquareSum (/../data/reentrancy/solidity_contract/8342.sol#401) is not in mixedCase\n",
+      "elements": [
+        {
+          "target": "parameter",
+          "convention": "mixedCase",
+          "name": "_before",
+          "source_mapping": {
+            "start": 10911,
+            "length": 15,
+            "filename": "/../data/reentrancy/solidity_contract/8342.sol",
+            "lines": [
+              401
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "naming-convention",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Parameter '_after' of CHHunter._gapOfSquareSum (/../data/reentrancy/solidity_contract/8342.sol#401) is not in mixedCase\n",
+      "elements": [
+        {
+          "target": "parameter",
+          "convention": "mixedCase",
+          "name": "_after",
+          "source_mapping": {
+            "start": 10928,
+            "length": 14,
+            "filename": "/../data/reentrancy/solidity_contract/8342.sol",
+            "lines": [
+              401
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "naming-convention",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Function 'CHHunter._gapOfCubeSum' (/../data/reentrancy/solidity_contract/8342.sol#410-417) is not in mixedCase\n",
+      "elements": [
+        {
+          "target": "function",
+          "convention": "mixedCase",
+          "name": "_gapOfCubeSum",
+          "source_mapping": {
+            "start": 11110,
+            "length": 194,
+            "filename": "/../data/reentrancy/solidity_contract/8342.sol",
+            "lines": [
+              410,
+              411,
+              412,
+              413,
+              414,
+              415,
+              416,
+              417
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "naming-convention",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Parameter '_before' of CHHunter._gapOfCubeSum (/../data/reentrancy/solidity_contract/8342.sol#410) is not in mixedCase\n",
+      "elements": [
+        {
+          "target": "parameter",
+          "convention": "mixedCase",
+          "name": "_before",
+          "source_mapping": {
+            "start": 11133,
+            "length": 15,
+            "filename": "/../data/reentrancy/solidity_contract/8342.sol",
+            "lines": [
+              410
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "naming-convention",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Parameter '_after' of CHHunter._gapOfCubeSum (/../data/reentrancy/solidity_contract/8342.sol#410) is not in mixedCase\n",
+      "elements": [
+        {
+          "target": "parameter",
+          "convention": "mixedCase",
+          "name": "_after",
+          "source_mapping": {
+            "start": 11150,
+            "length": 14,
+            "filename": "/../data/reentrancy/solidity_contract/8342.sol",
+            "lines": [
+              410
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "naming-convention",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Parameter '_amount' of CHHouse.buyDepots (/../data/reentrancy/solidity_contract/8342.sol#484) is not in mixedCase\n",
+      "elements": [
+        {
+          "target": "parameter",
+          "convention": "mixedCase",
+          "name": "_amount",
+          "source_mapping": {
+            "start": 12228,
+            "length": 15,
+            "filename": "/../data/reentrancy/solidity_contract/8342.sol",
+            "lines": [
+              484
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "naming-convention",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Parameter '_id' of CHHouse.buyPets (/../data/reentrancy/solidity_contract/8342.sol#493) is not in mixedCase\n",
+      "elements": [
+        {
+          "target": "parameter",
+          "convention": "mixedCase",
+          "name": "_id",
+          "source_mapping": {
+            "start": 12537,
+            "length": 11,
+            "filename": "/../data/reentrancy/solidity_contract/8342.sol",
+            "lines": [
+              493
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "naming-convention",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Parameter '_amount' of CHHouse.buyPets (/../data/reentrancy/solidity_contract/8342.sol#493) is not in mixedCase\n",
+      "elements": [
+        {
+          "target": "parameter",
+          "convention": "mixedCase",
+          "name": "_amount",
+          "source_mapping": {
+            "start": 12550,
+            "length": 15,
+            "filename": "/../data/reentrancy/solidity_contract/8342.sol",
+            "lines": [
+              493
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "naming-convention",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Parameter '_id' of CHHouse.buyItem (/../data/reentrancy/solidity_contract/8342.sol#516) is not in mixedCase\n",
+      "elements": [
+        {
+          "target": "parameter",
+          "convention": "mixedCase",
+          "name": "_id",
+          "source_mapping": {
+            "start": 13399,
+            "length": 11,
+            "filename": "/../data/reentrancy/solidity_contract/8342.sol",
+            "lines": [
+              516
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "naming-convention",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Parameter '_target' of CHArena.attack (/../data/reentrancy/solidity_contract/8342.sol#587) is not in mixedCase\n",
+      "elements": [
+        {
+          "target": "parameter",
+          "convention": "mixedCase",
+          "name": "_target",
+          "source_mapping": {
+            "start": 15488,
+            "length": 15,
+            "filename": "/../data/reentrancy/solidity_contract/8342.sol",
+            "lines": [
+              587
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "naming-convention",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Parameter '_chicken' of CHAltar.chickenToAltar (/../data/reentrancy/solidity_contract/8342.sol#635) is not in mixedCase\n",
+      "elements": [
+        {
+          "target": "parameter",
+          "convention": "mixedCase",
+          "name": "_chicken",
+          "source_mapping": {
+            "start": 16780,
+            "length": 16,
+            "filename": "/../data/reentrancy/solidity_contract/8342.sol",
+            "lines": [
+              635
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "naming-convention",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Parameter '_user' of CHAltar.tradeBookOf (/../data/reentrancy/solidity_contract/8342.sol#660) is not in mixedCase\n",
+      "elements": [
+        {
+          "target": "parameter",
+          "convention": "mixedCase",
+          "name": "_user",
+          "source_mapping": {
+            "start": 17660,
+            "length": 13,
+            "filename": "/../data/reentrancy/solidity_contract/8342.sol",
+            "lines": [
+              660
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "naming-convention",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Function 'CHAltar._resolveTradeBook' (/../data/reentrancy/solidity_contract/8342.sol#682-691) is not in mixedCase\n",
+      "elements": [
+        {
+          "target": "function",
+          "convention": "mixedCase",
+          "name": "_resolveTradeBook",
+          "source_mapping": {
+            "start": 18191,
+            "length": 489,
+            "filename": "/../data/reentrancy/solidity_contract/8342.sol",
+            "lines": [
+              682,
+              683,
+              684,
+              685,
+              686,
+              687,
+              688,
+              689,
+              690,
+              691
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "naming-convention",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Parameter '_tradeBook' of CHAltar._resolveTradeBook (/../data/reentrancy/solidity_contract/8342.sol#682) is not in mixedCase\n",
+      "elements": [
+        {
+          "target": "parameter",
+          "convention": "mixedCase",
+          "name": "_tradeBook",
+          "source_mapping": {
+            "start": 18218,
+            "length": 28,
+            "filename": "/../data/reentrancy/solidity_contract/8342.sol",
+            "lines": [
+              682
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "naming-convention",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Function 'CHAltar._getCurrentAltarRecordId' (/../data/reentrancy/solidity_contract/8342.sol#693-695) is not in mixedCase\n",
+      "elements": [
+        {
+          "target": "function",
+          "convention": "mixedCase",
+          "name": "_getCurrentAltarRecordId",
+          "source_mapping": {
+            "start": 18684,
+            "length": 121,
+            "filename": "/../data/reentrancy/solidity_contract/8342.sol",
+            "lines": [
+              693,
+              694,
+              695
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "naming-convention",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Function 'CHAltar._getAltarRecord' (/../data/reentrancy/solidity_contract/8342.sol#697-706) is not in mixedCase\n",
+      "elements": [
+        {
+          "target": "function",
+          "convention": "mixedCase",
+          "name": "_getAltarRecord",
+          "source_mapping": {
+            "start": 18809,
+            "length": 334,
+            "filename": "/../data/reentrancy/solidity_contract/8342.sol",
+            "lines": [
+              697,
+              698,
+              699,
+              700,
+              701,
+              702,
+              703,
+              704,
+              705,
+              706
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "naming-convention",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Parameter '_id' of CHAltar._getAltarRecord (/../data/reentrancy/solidity_contract/8342.sol#697) is not in mixedCase\n",
+      "elements": [
+        {
+          "target": "parameter",
+          "convention": "mixedCase",
+          "name": "_id",
+          "source_mapping": {
+            "start": 18834,
+            "length": 11,
+            "filename": "/../data/reentrancy/solidity_contract/8342.sol",
+            "lines": [
+              697
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "naming-convention",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Parameter '_to' of CHCommittee.callFor (/../data/reentrancy/solidity_contract/8342.sol#771) is not in mixedCase\n",
+      "elements": [
+        {
+          "target": "parameter",
+          "convention": "mixedCase",
+          "name": "_to",
+          "source_mapping": {
+            "start": 20211,
+            "length": 11,
+            "filename": "/../data/reentrancy/solidity_contract/8342.sol",
+            "lines": [
+              771
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "naming-convention",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Parameter '_value' of CHCommittee.callFor (/../data/reentrancy/solidity_contract/8342.sol#771) is not in mixedCase\n",
+      "elements": [
+        {
+          "target": "parameter",
+          "convention": "mixedCase",
+          "name": "_value",
+          "source_mapping": {
+            "start": 20224,
+            "length": 14,
+            "filename": "/../data/reentrancy/solidity_contract/8342.sol",
+            "lines": [
+              771
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "naming-convention",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Parameter '_gas' of CHCommittee.callFor (/../data/reentrancy/solidity_contract/8342.sol#771) is not in mixedCase\n",
+      "elements": [
+        {
+          "target": "parameter",
+          "convention": "mixedCase",
+          "name": "_gas",
+          "source_mapping": {
+            "start": 20240,
+            "length": 12,
+            "filename": "/../data/reentrancy/solidity_contract/8342.sol",
+            "lines": [
+              771
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "naming-convention",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Parameter '_code' of CHCommittee.callFor (/../data/reentrancy/solidity_contract/8342.sol#771) is not in mixedCase\n",
+      "elements": [
+        {
+          "target": "parameter",
+          "convention": "mixedCase",
+          "name": "_code",
+          "source_mapping": {
+            "start": 20254,
+            "length": 11,
+            "filename": "/../data/reentrancy/solidity_contract/8342.sol",
+            "lines": [
+              771
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "naming-convention",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Parameter '_huntingPower' of CHCommittee.addPet (/../data/reentrancy/solidity_contract/8342.sol#776) is not in mixedCase\n",
+      "elements": [
+        {
+          "target": "parameter",
+          "convention": "mixedCase",
+          "name": "_huntingPower",
+          "source_mapping": {
+            "start": 20395,
+            "length": 21,
+            "filename": "/../data/reentrancy/solidity_contract/8342.sol",
+            "lines": [
+              776
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "naming-convention",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Parameter '_offensePower' of CHCommittee.addPet (/../data/reentrancy/solidity_contract/8342.sol#777) is not in mixedCase\n",
+      "elements": [
+        {
+          "target": "parameter",
+          "convention": "mixedCase",
+          "name": "_offensePower",
+          "source_mapping": {
+            "start": 20422,
+            "length": 21,
+            "filename": "/../data/reentrancy/solidity_contract/8342.sol",
+            "lines": [
+              777
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "naming-convention",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Parameter '_defense' of CHCommittee.addPet (/../data/reentrancy/solidity_contract/8342.sol#778) is not in mixedCase\n",
+      "elements": [
+        {
+          "target": "parameter",
+          "convention": "mixedCase",
+          "name": "_defense",
+          "source_mapping": {
+            "start": 20449,
+            "length": 16,
+            "filename": "/../data/reentrancy/solidity_contract/8342.sol",
+            "lines": [
+              778
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "naming-convention",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Parameter '_chicken' of CHCommittee.addPet (/../data/reentrancy/solidity_contract/8342.sol#779) is not in mixedCase\n",
+      "elements": [
+        {
+          "target": "parameter",
+          "convention": "mixedCase",
+          "name": "_chicken",
+          "source_mapping": {
+            "start": 20471,
+            "length": 16,
+            "filename": "/../data/reentrancy/solidity_contract/8342.sol",
+            "lines": [
+              779
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "naming-convention",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Parameter '_ethereum' of CHCommittee.addPet (/../data/reentrancy/solidity_contract/8342.sol#780) is not in mixedCase\n",
+      "elements": [
+        {
+          "target": "parameter",
+          "convention": "mixedCase",
+          "name": "_ethereum",
+          "source_mapping": {
+            "start": 20493,
+            "length": 17,
+            "filename": "/../data/reentrancy/solidity_contract/8342.sol",
+            "lines": [
+              780
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "naming-convention",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Parameter '_max' of CHCommittee.addPet (/../data/reentrancy/solidity_contract/8342.sol#781) is not in mixedCase\n",
+      "elements": [
+        {
+          "target": "parameter",
+          "convention": "mixedCase",
+          "name": "_max",
+          "source_mapping": {
+            "start": 20516,
+            "length": 12,
+            "filename": "/../data/reentrancy/solidity_contract/8342.sol",
+            "lines": [
+              781
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "naming-convention",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Parameter '_id' of CHCommittee.changePet (/../data/reentrancy/solidity_contract/8342.sol#804) is not in mixedCase\n",
+      "elements": [
+        {
+          "target": "parameter",
+          "convention": "mixedCase",
+          "name": "_id",
+          "source_mapping": {
+            "start": 20933,
+            "length": 11,
+            "filename": "/../data/reentrancy/solidity_contract/8342.sol",
+            "lines": [
+              804
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "naming-convention",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Parameter '_chicken' of CHCommittee.changePet (/../data/reentrancy/solidity_contract/8342.sol#805) is not in mixedCase\n",
+      "elements": [
+        {
+          "target": "parameter",
+          "convention": "mixedCase",
+          "name": "_chicken",
+          "source_mapping": {
+            "start": 20950,
+            "length": 16,
+            "filename": "/../data/reentrancy/solidity_contract/8342.sol",
+            "lines": [
+              805
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "naming-convention",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Parameter '_ethereum' of CHCommittee.changePet (/../data/reentrancy/solidity_contract/8342.sol#806) is not in mixedCase\n",
+      "elements": [
+        {
+          "target": "parameter",
+          "convention": "mixedCase",
+          "name": "_ethereum",
+          "source_mapping": {
+            "start": 20972,
+            "length": 17,
+            "filename": "/../data/reentrancy/solidity_contract/8342.sol",
+            "lines": [
+              806
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "naming-convention",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Parameter '_max' of CHCommittee.changePet (/../data/reentrancy/solidity_contract/8342.sol#807) is not in mixedCase\n",
+      "elements": [
+        {
+          "target": "parameter",
+          "convention": "mixedCase",
+          "name": "_max",
+          "source_mapping": {
+            "start": 20995,
+            "length": 12,
+            "filename": "/../data/reentrancy/solidity_contract/8342.sol",
+            "lines": [
+              807
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "naming-convention",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Parameter '_huntingMultiplier' of CHCommittee.addItem (/../data/reentrancy/solidity_contract/8342.sol#824) is not in mixedCase\n",
+      "elements": [
+        {
+          "target": "parameter",
+          "convention": "mixedCase",
+          "name": "_huntingMultiplier",
+          "source_mapping": {
+            "start": 21339,
+            "length": 26,
+            "filename": "/../data/reentrancy/solidity_contract/8342.sol",
+            "lines": [
+              824
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "naming-convention",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Parameter '_offenseMultiplier' of CHCommittee.addItem (/../data/reentrancy/solidity_contract/8342.sol#825) is not in mixedCase\n",
+      "elements": [
+        {
+          "target": "parameter",
+          "convention": "mixedCase",
+          "name": "_offenseMultiplier",
+          "source_mapping": {
+            "start": 21371,
+            "length": 26,
+            "filename": "/../data/reentrancy/solidity_contract/8342.sol",
+            "lines": [
+              825
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "naming-convention",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Parameter '_defenseMultiplier' of CHCommittee.addItem (/../data/reentrancy/solidity_contract/8342.sol#826) is not in mixedCase\n",
+      "elements": [
+        {
+          "target": "parameter",
+          "convention": "mixedCase",
+          "name": "_defenseMultiplier",
+          "source_mapping": {
+            "start": 21403,
+            "length": 26,
+            "filename": "/../data/reentrancy/solidity_contract/8342.sol",
+            "lines": [
+              826
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "naming-convention",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Parameter '_price' of CHCommittee.addItem (/../data/reentrancy/solidity_contract/8342.sol#827) is not in mixedCase\n",
+      "elements": [
+        {
+          "target": "parameter",
+          "convention": "mixedCase",
+          "name": "_price",
+          "source_mapping": {
+            "start": 21435,
+            "length": 14,
+            "filename": "/../data/reentrancy/solidity_contract/8342.sol",
+            "lines": [
+              827
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "naming-convention",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Parameter '_price' of CHCommittee.setDepot (/../data/reentrancy/solidity_contract/8342.sol#863) is not in mixedCase\n",
+      "elements": [
+        {
+          "target": "parameter",
+          "convention": "mixedCase",
+          "name": "_price",
+          "source_mapping": {
+            "start": 22305,
+            "length": 14,
+            "filename": "/../data/reentrancy/solidity_contract/8342.sol",
+            "lines": [
+              863
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "naming-convention",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Parameter '_max' of CHCommittee.setDepot (/../data/reentrancy/solidity_contract/8342.sol#863) is not in mixedCase\n",
+      "elements": [
+        {
+          "target": "parameter",
+          "convention": "mixedCase",
+          "name": "_max",
+          "source_mapping": {
+            "start": 22321,
+            "length": 12,
+            "filename": "/../data/reentrancy/solidity_contract/8342.sol",
+            "lines": [
+              863
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "naming-convention",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Parameter '_chickenA' of CHCommittee.setConfiguration (/../data/reentrancy/solidity_contract/8342.sol#873) is not in mixedCase\n",
+      "elements": [
+        {
+          "target": "parameter",
+          "convention": "mixedCase",
+          "name": "_chickenA",
+          "source_mapping": {
+            "start": 22514,
+            "length": 17,
+            "filename": "/../data/reentrancy/solidity_contract/8342.sol",
+            "lines": [
+              873
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "naming-convention",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Parameter '_ethereumA' of CHCommittee.setConfiguration (/../data/reentrancy/solidity_contract/8342.sol#874) is not in mixedCase\n",
+      "elements": [
+        {
+          "target": "parameter",
+          "convention": "mixedCase",
+          "name": "_ethereumA",
+          "source_mapping": {
+            "start": 22537,
+            "length": 18,
+            "filename": "/../data/reentrancy/solidity_contract/8342.sol",
+            "lines": [
+              874
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "naming-convention",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Parameter '_maxA' of CHCommittee.setConfiguration (/../data/reentrancy/solidity_contract/8342.sol#875) is not in mixedCase\n",
+      "elements": [
+        {
+          "target": "parameter",
+          "convention": "mixedCase",
+          "name": "_maxA",
+          "source_mapping": {
+            "start": 22561,
+            "length": 13,
+            "filename": "/../data/reentrancy/solidity_contract/8342.sol",
+            "lines": [
+              875
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "naming-convention",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Parameter '_chickenB' of CHCommittee.setConfiguration (/../data/reentrancy/solidity_contract/8342.sol#876) is not in mixedCase\n",
+      "elements": [
+        {
+          "target": "parameter",
+          "convention": "mixedCase",
+          "name": "_chickenB",
+          "source_mapping": {
+            "start": 22580,
+            "length": 17,
+            "filename": "/../data/reentrancy/solidity_contract/8342.sol",
+            "lines": [
+              876
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "naming-convention",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Parameter '_ethereumB' of CHCommittee.setConfiguration (/../data/reentrancy/solidity_contract/8342.sol#877) is not in mixedCase\n",
+      "elements": [
+        {
+          "target": "parameter",
+          "convention": "mixedCase",
+          "name": "_ethereumB",
+          "source_mapping": {
+            "start": 22603,
+            "length": 18,
+            "filename": "/../data/reentrancy/solidity_contract/8342.sol",
+            "lines": [
+              877
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "naming-convention",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Parameter '_maxB' of CHCommittee.setConfiguration (/../data/reentrancy/solidity_contract/8342.sol#878) is not in mixedCase\n",
+      "elements": [
+        {
+          "target": "parameter",
+          "convention": "mixedCase",
+          "name": "_maxB",
+          "source_mapping": {
+            "start": 22627,
+            "length": 13,
+            "filename": "/../data/reentrancy/solidity_contract/8342.sol",
+            "lines": [
+              878
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "naming-convention",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Parameter '_dividendRate' of CHCommittee.setDistribution (/../data/reentrancy/solidity_contract/8342.sol#898) is not in mixedCase\n",
+      "elements": [
+        {
+          "target": "parameter",
+          "convention": "mixedCase",
+          "name": "_dividendRate",
+          "source_mapping": {
+            "start": 23119,
+            "length": 21,
+            "filename": "/../data/reentrancy/solidity_contract/8342.sol",
+            "lines": [
+              898
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "naming-convention",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Parameter '_altarCut' of CHCommittee.setDistribution (/../data/reentrancy/solidity_contract/8342.sol#899) is not in mixedCase\n",
+      "elements": [
+        {
+          "target": "parameter",
+          "convention": "mixedCase",
+          "name": "_altarCut",
+          "source_mapping": {
+            "start": 23146,
+            "length": 17,
+            "filename": "/../data/reentrancy/solidity_contract/8342.sol",
+            "lines": [
+              899
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "naming-convention",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Parameter '_storeCut' of CHCommittee.setDistribution (/../data/reentrancy/solidity_contract/8342.sol#900) is not in mixedCase\n",
+      "elements": [
+        {
+          "target": "parameter",
+          "convention": "mixedCase",
+          "name": "_storeCut",
+          "source_mapping": {
+            "start": 23169,
+            "length": 17,
+            "filename": "/../data/reentrancy/solidity_contract/8342.sol",
+            "lines": [
+              900
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "naming-convention",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Parameter '_devCut' of CHCommittee.setDistribution (/../data/reentrancy/solidity_contract/8342.sol#901) is not in mixedCase\n",
+      "elements": [
+        {
+          "target": "parameter",
+          "convention": "mixedCase",
+          "name": "_devCut",
+          "source_mapping": {
+            "start": 23192,
+            "length": 15,
+            "filename": "/../data/reentrancy/solidity_contract/8342.sol",
+            "lines": [
+              901
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "naming-convention",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Parameter '_cooldownTime' of CHCommittee.setCooldownTime (/../data/reentrancy/solidity_contract/8342.sol#919) is not in mixedCase\n",
+      "elements": [
+        {
+          "target": "parameter",
+          "convention": "mixedCase",
+          "name": "_cooldownTime",
+          "source_mapping": {
+            "start": 23578,
+            "length": 21,
+            "filename": "/../data/reentrancy/solidity_contract/8342.sol",
+            "lines": [
+              919
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "naming-convention",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Parameter '_name' of CHCommittee.setNameAndSymbol (/../data/reentrancy/solidity_contract/8342.sol#925) is not in mixedCase\n",
+      "elements": [
+        {
+          "target": "parameter",
+          "convention": "mixedCase",
+          "name": "_name",
+          "source_mapping": {
+            "start": 23733,
+            "length": 12,
+            "filename": "/../data/reentrancy/solidity_contract/8342.sol",
+            "lines": [
+              925
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "naming-convention",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Parameter '_symbol' of CHCommittee.setNameAndSymbol (/../data/reentrancy/solidity_contract/8342.sol#925) is not in mixedCase\n",
+      "elements": [
+        {
+          "target": "parameter",
+          "convention": "mixedCase",
+          "name": "_symbol",
+          "source_mapping": {
+            "start": 23747,
+            "length": 14,
+            "filename": "/../data/reentrancy/solidity_contract/8342.sol",
+            "lines": [
+              925
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "naming-convention",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Parameter '_developer' of CHCommittee.setDeveloper (/../data/reentrancy/solidity_contract/8342.sol#935) is not in mixedCase\n",
+      "elements": [
+        {
+          "target": "parameter",
+          "convention": "mixedCase",
+          "name": "_developer",
+          "source_mapping": {
+            "start": 23909,
+            "length": 18,
+            "filename": "/../data/reentrancy/solidity_contract/8342.sol",
+            "lines": [
+              935
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "naming-convention",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Parameter '_committee' of CHCommittee.setCommittee (/../data/reentrancy/solidity_contract/8342.sol#943) is not in mixedCase\n",
+      "elements": [
+        {
+          "target": "parameter",
+          "convention": "mixedCase",
+          "name": "_committee",
+          "source_mapping": {
+            "start": 24106,
+            "length": 18,
+            "filename": "/../data/reentrancy/solidity_contract/8342.sol",
+            "lines": [
+              943
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "naming-convention",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Parameter '_chickenTokenDelegator' of ChickenHunt.init (/../data/reentrancy/solidity_contract/8342.sol#981) is not in mixedCase\n",
+      "elements": [
+        {
+          "target": "parameter",
+          "convention": "mixedCase",
+          "name": "_chickenTokenDelegator",
+          "source_mapping": {
+            "start": 24664,
+            "length": 30,
+            "filename": "/../data/reentrancy/solidity_contract/8342.sol",
+            "lines": [
+              981
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "naming-convention",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Parameter '_user' of ChickenHunt.hunterOf (/../data/reentrancy/solidity_contract/8342.sol#1021) is not in mixedCase\n",
+      "elements": [
+        {
+          "target": "parameter",
+          "convention": "mixedCase",
+          "name": "_user",
+          "source_mapping": {
+            "start": 25927,
+            "length": 13,
+            "filename": "/../data/reentrancy/solidity_contract/8342.sol",
+            "lines": [
+              1021
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "naming-convention",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Parameter '_user' of ChickenHunt.detailsOf (/../data/reentrancy/solidity_contract/8342.sol#1040) is not in mixedCase\n",
+      "elements": [
+        {
+          "target": "parameter",
+          "convention": "mixedCase",
+          "name": "_user",
+          "source_mapping": {
+            "start": 26290,
+            "length": 13,
+            "filename": "/../data/reentrancy/solidity_contract/8342.sol",
+            "lines": [
+              1040
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

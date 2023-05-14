@@ -1,0 +1,40 @@
+{
+  "contract": "19128",
+  "tool": "osiris",
+  "start": 1609126451.591295,
+  "end": 1609126462.5650501,
+  "duration": 10.973755121231079,
+  "analysis": [
+    {
+      "errors": [
+        {
+          "line": 75,
+          "column": 9,
+          "message": "callstack_bug"
+        },
+        {
+          "line": 75,
+          "column": 9,
+          "message": "concurrency_bug"
+        },
+        {
+          "line": 75,
+          "column": 9,
+          "message": "concurrency_bug"
+        },
+        {
+          "line": 75,
+          "column": 9,
+          "message": "reentrancy_bug"
+        }
+      ],
+      "file": "/../data/reentrancy/solidity_contract/19128.sol",
+      "name": "HODLWallet"
+    },
+    {
+      "errors": [],
+      "file": "/../data/reentrancy/solidity_contract/19128.sol",
+      "name": "SafeMath"
+    }
+  ]
+}

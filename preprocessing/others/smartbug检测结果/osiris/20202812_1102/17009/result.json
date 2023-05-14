@@ -1,0 +1,30 @@
+{
+  "contract": "17009",
+  "tool": "osiris",
+  "start": 1609180273.0266418,
+  "end": 1609180281.6795158,
+  "duration": 8.652873992919922,
+  "analysis": [
+    {
+      "errors": [
+        {
+          "line": 94,
+          "column": 9,
+          "message": "callstack_bug"
+        }
+      ],
+      "file": "/../data/reentrancy/solidity_contract/17009.sol",
+      "name": "BitmarkPaymentGateway"
+    },
+    {
+      "errors": [],
+      "file": "/../data/reentrancy/solidity_contract/17009.sol",
+      "name": "Ownable"
+    },
+    {
+      "errors": [],
+      "file": "/../data/reentrancy/solidity_contract/17009.sol",
+      "name": "SafeMath"
+    }
+  ]
+}

@@ -1,0 +1,103 @@
+INFO:Slither:Compilation warnings/errors on /../data/reentrancy/solidity_contract/23803.sol:
+/../data/reentrancy/solidity_contract/23803.sol:43:5: Warning: Defining constructors as functions with the same name as the contract is deprecated. Use "constructor(...) { ... }" instead.
+    function TRUEToken(address _founder) {
+    ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/23803.sol:21:9: Warning: Invoking events without "emit" prefix is deprecated.
+        Approval(msg.sender, _spender, _value);
+        ^------------------------------------^
+/../data/reentrancy/solidity_contract/23803.sol:60:9: Warning: Invoking events without "emit" prefix is deprecated.
+        Transfer(this, _to, _amount);
+        ^--------------------------^
+/../data/reentrancy/solidity_contract/23803.sol:75:13: Warning: Invoking events without "emit" prefix is deprecated.
+            Transfer(msg.sender, _to, _value);
+            ^-------------------------------^
+/../data/reentrancy/solidity_contract/23803.sol:98:13: Warning: Invoking events without "emit" prefix is deprecated.
+            Transfer(_from, _to, _value);
+            ^--------------------------^
+/../data/reentrancy/solidity_contract/23803.sol:111:13: Warning: "suicide" has been deprecated in favour of "selfdestruct"
+            suicide(founder); 
+            ^--------------^
+/../data/reentrancy/solidity_contract/23803.sol:11:5: Warning: No visibility specified. Defaulting to "public". 
+    function totalSupply() constant returns (uint256 supply) {
+    ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/23803.sol:15:5: Warning: No visibility specified. Defaulting to "public". 
+    function balanceOf(address _owner) constant returns (uint256 balance) {
+    ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/23803.sol:19:5: Warning: No visibility specified. Defaulting to "public". 
+    function approve(address _spender, uint256 _value) returns (bool success) {
+    ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/23803.sol:25:5: Warning: No visibility specified. Defaulting to "public". 
+    function allowance(address _owner, address _spender) constant returns (uint256 remaining) {
+    ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/23803.sol:43:5: Warning: No visibility specified. Defaulting to "public". 
+    function TRUEToken(address _founder) {
+    ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/23803.sol:47:5: Warning: No visibility specified. Defaulting to "public". 
+    function setStartTime(uint _startTime) {
+    ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/23803.sol:53:5: Warning: No visibility specified. Defaulting to "public". 
+    function distribute(uint256 _amount, address _to) {
+    ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/23803.sol:66:5: Warning: No visibility specified. Defaulting to "public". 
+    function transfer(address _to, uint256 _value) returns (bool success) {
+    ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/23803.sol:83:5: Warning: No visibility specified. Defaulting to "public". 
+    function changeFounder(address newFounder) {
+    ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/23803.sol:89:5: Warning: No visibility specified. Defaulting to "public". 
+    function transferFrom(address _from, address _to, uint256 _value) returns (bool success) {
+    ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/23803.sol:104:5: Warning: No visibility specified. Defaulting to "public". 
+    function () payable {
+    ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/23803.sol:109:5: Warning: No visibility specified. Defaulting to "public". 
+    function kill() { 
+    ^ (Relevant source part starts here and spans across multiple lines).
+
+INFO:Detectors:[92m
+TRUEToken._totalSupply should be constant (/../data/reentrancy/solidity_contract/23803.sol#9)
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#state-variables-that-could-be-declared-constant[0m
+INFO:Detectors:[92m
+Deprecated standard detected @ /../data/reentrancy/solidity_contract/23803.sol#111:
+	- Usage of "suicide()" should be replaced with "selfdestruct()"
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#deprecated-standards[0m
+INFO:Detectors:[92m
+TRUEToken.totalSupply (/../data/reentrancy/solidity_contract/23803.sol#11-13) should be declared external
+TRUEToken.balanceOf (/../data/reentrancy/solidity_contract/23803.sol#15-17) should be declared external
+TRUEToken.approve (/../data/reentrancy/solidity_contract/23803.sol#19-23) should be declared external
+TRUEToken.allowance (/../data/reentrancy/solidity_contract/23803.sol#25-27) should be declared external
+TRUEToken.setStartTime (/../data/reentrancy/solidity_contract/23803.sol#47-50) should be declared external
+TRUEToken.distribute (/../data/reentrancy/solidity_contract/23803.sol#53-61) should be declared external
+TRUEToken.transfer (/../data/reentrancy/solidity_contract/23803.sol#66-80) should be declared external
+TRUEToken.changeFounder (/../data/reentrancy/solidity_contract/23803.sol#83-86) should be declared external
+TRUEToken.transferFrom (/../data/reentrancy/solidity_contract/23803.sol#89-101) should be declared external
+TRUEToken.fallback (/../data/reentrancy/solidity_contract/23803.sol#104-106) should be declared external
+TRUEToken.kill (/../data/reentrancy/solidity_contract/23803.sol#109-113) should be declared external
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#public-function-that-could-be-declared-as-external[0m
+INFO:Detectors:[92m
+Detected issues with version pragma in /../data/reentrancy/solidity_contract/23803.sol:
+	- pragma solidity^0.4.11 (/../data/reentrancy/solidity_contract/23803.sol#2): it allows old versions
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#incorrect-version-of-solidity[0m
+INFO:Detectors:[92m
+Low level call in TRUEToken.fallback (/../data/reentrancy/solidity_contract/23803.sol#104-106):
+	-! founder.call.value(msg.value)() /../data/reentrancy/solidity_contract/23803.sol#105
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#low-level-calls[0m
+INFO:Detectors:[92m
+Parameter '_owner' of TRUEToken.balanceOf (/../data/reentrancy/solidity_contract/23803.sol#15) is not in mixedCase
+Parameter '_spender' of TRUEToken.approve (/../data/reentrancy/solidity_contract/23803.sol#19) is not in mixedCase
+Parameter '_value' of TRUEToken.approve (/../data/reentrancy/solidity_contract/23803.sol#19) is not in mixedCase
+Parameter '_owner' of TRUEToken.allowance (/../data/reentrancy/solidity_contract/23803.sol#25) is not in mixedCase
+Parameter '_spender' of TRUEToken.allowance (/../data/reentrancy/solidity_contract/23803.sol#25) is not in mixedCase
+Function 'TRUEToken.TRUEToken' (/../data/reentrancy/solidity_contract/23803.sol#43-45) is not in mixedCase
+Parameter '_founder' of TRUEToken.TRUEToken (/../data/reentrancy/solidity_contract/23803.sol#43) is not in mixedCase
+Parameter '_startTime' of TRUEToken.setStartTime (/../data/reentrancy/solidity_contract/23803.sol#47) is not in mixedCase
+Parameter '_amount' of TRUEToken.distribute (/../data/reentrancy/solidity_contract/23803.sol#53) is not in mixedCase
+Parameter '_to' of TRUEToken.distribute (/../data/reentrancy/solidity_contract/23803.sol#53) is not in mixedCase
+Parameter '_to' of TRUEToken.transfer (/../data/reentrancy/solidity_contract/23803.sol#66) is not in mixedCase
+Parameter '_value' of TRUEToken.transfer (/../data/reentrancy/solidity_contract/23803.sol#66) is not in mixedCase
+Parameter '_from' of TRUEToken.transferFrom (/../data/reentrancy/solidity_contract/23803.sol#89) is not in mixedCase
+Parameter '_to' of TRUEToken.transferFrom (/../data/reentrancy/solidity_contract/23803.sol#89) is not in mixedCase
+Parameter '_value' of TRUEToken.transferFrom (/../data/reentrancy/solidity_contract/23803.sol#89) is not in mixedCase
+Variable 'TRUEToken._totalSupply' (/../data/reentrancy/solidity_contract/23803.sol#9) is not in mixedCase
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#conformance-to-solidity-naming-conventions[0m
+INFO:Slither:/../data/reentrancy/solidity_contract/23803.sol analyzed (1 contracts), 31 result(s) found

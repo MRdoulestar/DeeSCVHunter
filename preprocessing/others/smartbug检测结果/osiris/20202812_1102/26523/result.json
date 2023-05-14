@@ -1,0 +1,14 @@
+{
+  "contract": "26523",
+  "tool": "osiris",
+  "start": 1609141424.9535968,
+  "end": 1609141435.1073768,
+  "duration": 10.153779983520508,
+  "analysis": [
+    {
+      "errors": [],
+      "file": "/../data/reentrancy/solidity_contract/26523.sol",
+      "name": "HODLerParadise"
+    }
+  ]
+}

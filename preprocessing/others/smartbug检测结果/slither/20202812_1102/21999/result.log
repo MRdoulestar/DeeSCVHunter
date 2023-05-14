@@ -1,0 +1,44 @@
+INFO:Slither:Compilation warnings/errors on /../data/reentrancy/solidity_contract/21999.sol:
+/../data/reentrancy/solidity_contract/21999.sol:6:5: Warning: Defining constructors as functions with the same name as the contract is deprecated. Use "constructor(...) { ... }" instead.
+    function Owned() public {
+    ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/21999.sol:26:5: Warning: Defining constructors as functions with the same name as the contract is deprecated. Use "constructor(...) { ... }" instead.
+    function WalletWithEmergencyTransfer() public {
+    ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/21999.sol:35:9: Warning: Invoking events without "emit" prefix is deprecated.
+        Deposit(msg.sender, msg.value);
+        ^----------------------------^
+/../data/reentrancy/solidity_contract/21999.sol:39:27: Warning: Using contract member "balance" inherited from the address type is deprecated. Convert the contract to "address" type to access the member, for example use "address(contract).balance" instead.
+        require(amount <= this.balance);
+                          ^----------^
+/../data/reentrancy/solidity_contract/21999.sol:41:9: Warning: Invoking events without "emit" prefix is deprecated.
+        Withdrawal(msg.sender, amount);
+        ^----------------------------^
+/../data/reentrancy/solidity_contract/21999.sol:49:9: Warning: Invoking events without "emit" prefix is deprecated.
+        Call(msg.sender, addr, amount);
+        ^----------------------------^
+
+INFO:Detectors:[91m
+WalletWithEmergencyTransfer.owner (/../data/reentrancy/solidity_contract/21999.sol#22) shadows:
+	- Owned.owner (/../data/reentrancy/solidity_contract/21999.sol#4)
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#state-variable-shadowing[0m
+INFO:Detectors:[92m
+WalletWithEmergencyTransfer.fallback (/../data/reentrancy/solidity_contract/21999.sol#29-31) should be declared external
+WalletWithEmergencyTransfer.withdraw (/../data/reentrancy/solidity_contract/21999.sol#38-42) should be declared external
+WalletWithEmergencyTransfer.call (/../data/reentrancy/solidity_contract/21999.sol#44-50) should be declared external
+WalletWithEmergencyTransfer.setEmergencySecrets (/../data/reentrancy/solidity_contract/21999.sol#52-55) should be declared external
+WalletWithEmergencyTransfer.emergencyTransfer (/../data/reentrancy/solidity_contract/21999.sol#57-61) should be declared external
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#public-function-that-could-be-declared-as-external[0m
+INFO:Detectors:[92m
+Detected issues with version pragma in /../data/reentrancy/solidity_contract/21999.sol:
+	- pragma solidity^0.4.18 (/../data/reentrancy/solidity_contract/21999.sol#1): it allows old versions
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#incorrect-version-of-solidity[0m
+INFO:Detectors:[92m
+Low level call in WalletWithEmergencyTransfer.call (/../data/reentrancy/solidity_contract/21999.sol#44-50):
+	-require(bool)(addr.call.value(amount)(data)) /../data/reentrancy/solidity_contract/21999.sol#48
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#low-level-calls[0m
+INFO:Detectors:[92m
+Function 'Owned.Owned' (/../data/reentrancy/solidity_contract/21999.sol#6-8) is not in mixedCase
+Function 'WalletWithEmergencyTransfer.WalletWithEmergencyTransfer' (/../data/reentrancy/solidity_contract/21999.sol#26-27) is not in mixedCase
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#conformance-to-solidity-naming-conventions[0m
+INFO:Slither:/../data/reentrancy/solidity_contract/21999.sol analyzed (2 contracts), 10 result(s) found

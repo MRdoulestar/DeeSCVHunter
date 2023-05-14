@@ -1,0 +1,30 @@
+{
+  "contract": "27398",
+  "tool": "osiris",
+  "start": 1609137345.388021,
+  "end": 1609137395.449982,
+  "duration": 50.06196093559265,
+  "analysis": [
+    {
+      "errors": [
+        {
+          "line": 19,
+          "column": 9,
+          "message": "concurrency_bug"
+        },
+        {
+          "line": 19,
+          "column": 9,
+          "message": "concurrency_bug"
+        },
+        {
+          "line": 24,
+          "column": 9,
+          "message": "reentrancy_bug"
+        }
+      ],
+      "file": "/../data/reentrancy/solidity_contract/27398.sol",
+      "name": "Pie"
+    }
+  ]
+}

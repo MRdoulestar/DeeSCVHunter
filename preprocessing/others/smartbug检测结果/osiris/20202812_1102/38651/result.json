@@ -1,0 +1,45 @@
+{
+  "contract": "38651",
+  "tool": "osiris",
+  "start": 1609124969.199677,
+  "end": 1609125017.003444,
+  "duration": 47.80376696586609,
+  "analysis": [
+    {
+      "errors": [
+        {
+          "line": 95,
+          "column": 22,
+          "message": "overflow_bugs"
+        },
+        {
+          "line": 155,
+          "column": 10,
+          "message": "concurrency_bug"
+        },
+        {
+          "line": 156,
+          "column": 10,
+          "message": "concurrency_bug"
+        },
+        {
+          "line": 155,
+          "column": 10,
+          "message": "concurrency_bug"
+        },
+        {
+          "line": 111,
+          "column": 10,
+          "message": "reentrancy_bug"
+        }
+      ],
+      "file": "/../data/reentrancy/solidity_contract/38651.sol",
+      "name": "Ethex"
+    },
+    {
+      "errors": [],
+      "file": "/../data/reentrancy/solidity_contract/38651.sol",
+      "name": "SafeMath"
+    }
+  ]
+}

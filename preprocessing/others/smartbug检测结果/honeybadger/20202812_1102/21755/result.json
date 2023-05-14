@@ -1,0 +1,25 @@
+{
+  "contract": "21755",
+  "tool": "honeybadger",
+  "start": 1609180913.536461,
+  "end": 1609181053.7770529,
+  "duration": 140.24059176445007,
+  "analysis": [
+    {
+      "errors": [
+        {
+          "line": 54,
+          "column": 17,
+          "message": "straw_man_contract"
+        }
+      ],
+      "file": "/../data/reentrancy/solidity_contract/21755.sol",
+      "name": "COIN_BOX"
+    },
+    {
+      "errors": [],
+      "file": "/../data/reentrancy/solidity_contract/21755.sol",
+      "name": "Log"
+    }
+  ]
+}

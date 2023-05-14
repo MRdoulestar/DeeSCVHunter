@@ -1,0 +1,8 @@
+{
+  "contract": "Bank_attack",
+  "tool": "solhint",
+  "start": 1609142732.130661,
+  "end": 1609142735.760214,
+  "duration": 3.6295530796051025,
+  "analysis": []
+}

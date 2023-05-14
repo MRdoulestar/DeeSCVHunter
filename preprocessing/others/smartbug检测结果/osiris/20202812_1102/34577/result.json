@@ -1,0 +1,20 @@
+{
+  "contract": "34577",
+  "tool": "osiris",
+  "start": 1609172818.037279,
+  "end": 1609172880.67829,
+  "duration": 62.641010999679565,
+  "analysis": [
+    {
+      "errors": [
+        {
+          "line": 178,
+          "column": 18,
+          "message": "reentrancy_bug"
+        }
+      ],
+      "file": "/../data/reentrancy/solidity_contract/34577.sol",
+      "name": "MultiSigWallet"
+    }
+  ]
+}

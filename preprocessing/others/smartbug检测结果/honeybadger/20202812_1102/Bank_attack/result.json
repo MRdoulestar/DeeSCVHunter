@@ -1,0 +1,14 @@
+{
+  "contract": "Bank_attack",
+  "tool": "honeybadger",
+  "start": 1609142747.974763,
+  "end": 1609142754.7412732,
+  "duration": 6.766510248184204,
+  "analysis": [
+    {
+      "errors": [],
+      "file": "/../data/reentrancy/solidity_contract/Bank_attack.sol",
+      "name": "Attack"
+    }
+  ]
+}

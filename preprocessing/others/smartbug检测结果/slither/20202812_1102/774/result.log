@@ -1,0 +1,240 @@
+INFO:Slither:Compilation warnings/errors on /../data/reentrancy/solidity_contract/774.sol:
+/../data/reentrancy/solidity_contract/774.sol:460:13: Warning: Function declared as view, but this expression (potentially) modifies the state and thus requires non-payable (the default) or payable.
+            plyrRnds_[_pID] = plyrRnds[_pID][_rID];
+            ^-------------^
+
+INFO:Detectors:[91m
+Reentrancy in FomoDD.core (/../data/reentrancy/solidity_contract/774.sol#599-662):
+	External calls:
+	- _eventData_ = distributeExternal(_pID,_eth,_affID,_eventData_) (/../data/reentrancy/solidity_contract/774.sol#655)
+	State variables written after the call(s):
+	- airDropPot_ (/../data/reentrancy/solidity_contract/774.sol#656)
+	- plyrRnds (/../data/reentrancy/solidity_contract/774.sol#656)
+	- round (/../data/reentrancy/solidity_contract/774.sol#656)
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#reentrancy-vulnerabilities[0m
+INFO:Detectors:[93m
+FomoDD.getPlayerVaults (/../data/reentrancy/solidity_contract/774.sol#440-469) is declared view but changes state variables:
+	- FomoDD.plyrRnds_
+NameFilter.nameFilter (/../data/reentrancy/solidity_contract/774.sol#1060-1112) is declared view but contains assembly code
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#constant-functions-changing-the-state[0m
+INFO:Detectors:[93m
+Reentrancy in FomoDD.buyXaddr (/../data/reentrancy/solidity_contract/774.sol#192-215):
+	External calls:
+	- _eventData_ = determinePID(_eventData_) (/../data/reentrancy/solidity_contract/774.sol#194)
+	State variables written after the call(s):
+	- plyr_ (/../data/reentrancy/solidity_contract/774.sol#210)
+Reentrancy in FomoDD.buyXid (/../data/reentrancy/solidity_contract/774.sol#174-190):
+	External calls:
+	- _eventData_ = determinePID(_eventData_) (/../data/reentrancy/solidity_contract/774.sol#176)
+	State variables written after the call(s):
+	- plyr_ (/../data/reentrancy/solidity_contract/774.sol#186)
+Reentrancy in FomoDD.buyXname (/../data/reentrancy/solidity_contract/774.sol#217-236):
+	External calls:
+	- _eventData_ = determinePID(_eventData_) (/../data/reentrancy/solidity_contract/774.sol#219)
+	State variables written after the call(s):
+	- plyr_ (/../data/reentrancy/solidity_contract/774.sol#231)
+Reentrancy in FomoDD.determinePID (/../data/reentrancy/solidity_contract/774.sol#721-747):
+	External calls:
+	- _pID = PlayerBook.getPlayerID(msg.sender) (/../data/reentrancy/solidity_contract/774.sol#726)
+	- _name = PlayerBook.getPlayerName(_pID) (/../data/reentrancy/solidity_contract/774.sol#727)
+	- _laff = PlayerBook.getPlayerLAff(_pID) (/../data/reentrancy/solidity_contract/774.sol#728)
+	State variables written after the call(s):
+	- pIDxAddr_ (/../data/reentrancy/solidity_contract/774.sol#731)
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#reentrancy-vulnerabilities-1[0m
+INFO:Detectors:[93m
+_eventData_ in FomoDD.reLoadXaddr (/../data/reentrancy/solidity_contract/774.sol#258) is a local variable never initialiazed
+_eventData_ in FomoDD.withdraw (/../data/reentrancy/solidity_contract/774.sol#331) is a local variable never initialiazed
+_eventData_ in FomoDD.reLoadXid (/../data/reentrancy/solidity_contract/774.sol#240) is a local variable never initialiazed
+_eventData_ in FomoDD.reLoadXname (/../data/reentrancy/solidity_contract/774.sol#287) is a local variable never initialiazed
+_prize in FomoDD.core (/../data/reentrancy/solidity_contract/774.sol#622) is a local variable never initialiazed
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#uninitialized-local-variables[0m
+INFO:Detectors:[92m
+Reentrancy in FomoDD.buyXaddr (/../data/reentrancy/solidity_contract/774.sol#192-215):
+	External calls:
+	- _eventData_ = determinePID(_eventData_) (/../data/reentrancy/solidity_contract/774.sol#194)
+	- buyCore(_pID,_affID,_eventData_) (/../data/reentrancy/solidity_contract/774.sol#214)
+	External calls sending eth:
+	- buyCore(_pID,_affID,_eventData_) (/../data/reentrancy/solidity_contract/774.sol#214)
+	State variables written after the call(s):
+	- plyrRnds_ (/../data/reentrancy/solidity_contract/774.sol#214)
+	- round_ (/../data/reentrancy/solidity_contract/774.sol#214)
+Reentrancy in FomoDD.buyXid (/../data/reentrancy/solidity_contract/774.sol#174-190):
+	External calls:
+	- _eventData_ = determinePID(_eventData_) (/../data/reentrancy/solidity_contract/774.sol#176)
+	- buyCore(_pID,_affCode,_eventData_) (/../data/reentrancy/solidity_contract/774.sol#189)
+	External calls sending eth:
+	- buyCore(_pID,_affCode,_eventData_) (/../data/reentrancy/solidity_contract/774.sol#189)
+	State variables written after the call(s):
+	- plyrRnds_ (/../data/reentrancy/solidity_contract/774.sol#189)
+	- round_ (/../data/reentrancy/solidity_contract/774.sol#189)
+Reentrancy in FomoDD.buyXname (/../data/reentrancy/solidity_contract/774.sol#217-236):
+	External calls:
+	- _eventData_ = determinePID(_eventData_) (/../data/reentrancy/solidity_contract/774.sol#219)
+	- buyCore(_pID,_affID,_eventData_) (/../data/reentrancy/solidity_contract/774.sol#235)
+	External calls sending eth:
+	- buyCore(_pID,_affID,_eventData_) (/../data/reentrancy/solidity_contract/774.sol#235)
+	State variables written after the call(s):
+	- plyrRnds_ (/../data/reentrancy/solidity_contract/774.sol#235)
+	- round_ (/../data/reentrancy/solidity_contract/774.sol#235)
+Reentrancy in FomoDD.core (/../data/reentrancy/solidity_contract/774.sol#599-662):
+	External calls:
+	- _eventData_ = distributeExternal(_pID,_eth,_affID,_eventData_) (/../data/reentrancy/solidity_contract/774.sol#655)
+	State variables written after the call(s):
+	- plyrRnds_ (/../data/reentrancy/solidity_contract/774.sol#656)
+	- plyrRnds_ (/../data/reentrancy/solidity_contract/774.sol#660)
+	- round_ (/../data/reentrancy/solidity_contract/774.sol#656)
+	- round_ (/../data/reentrancy/solidity_contract/774.sol#661)
+Reentrancy in FomoDD.determinePID (/../data/reentrancy/solidity_contract/774.sol#721-747):
+	External calls:
+	- _pID = PlayerBook.getPlayerID(msg.sender) (/../data/reentrancy/solidity_contract/774.sol#726)
+	- _name = PlayerBook.getPlayerName(_pID) (/../data/reentrancy/solidity_contract/774.sol#727)
+	- _laff = PlayerBook.getPlayerLAff(_pID) (/../data/reentrancy/solidity_contract/774.sol#728)
+	State variables written after the call(s):
+	- pIDxName_ (/../data/reentrancy/solidity_contract/774.sol#735)
+	- plyrNames_ (/../data/reentrancy/solidity_contract/774.sol#737)
+	- plyr_ (/../data/reentrancy/solidity_contract/774.sol#732)
+	- plyr_ (/../data/reentrancy/solidity_contract/774.sol#736)
+	- plyr_ (/../data/reentrancy/solidity_contract/774.sol#741)
+Reentrancy in FomoDD.fallback (/../data/reentrancy/solidity_contract/774.sol#167-171):
+	External calls:
+	- _eventData_ = determinePID(_eventData_) (/../data/reentrancy/solidity_contract/774.sol#168)
+	- buyCore(_pID,plyr_[_pID].laff,_eventData_) (/../data/reentrancy/solidity_contract/774.sol#170)
+	External calls sending eth:
+	- buyCore(_pID,plyr_[_pID].laff,_eventData_) (/../data/reentrancy/solidity_contract/774.sol#170)
+	State variables written after the call(s):
+	- plyrRnds_ (/../data/reentrancy/solidity_contract/774.sol#170)
+	- round_ (/../data/reentrancy/solidity_contract/774.sol#170)
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#reentrancy-vulnerabilities-2[0m
+INFO:Detectors:[92m
+FomoDD.airdrop (/../data/reentrancy/solidity_contract/774.sol#841-856) uses timestamp for comparisons
+	Dangerous comparisons:
+	- (seed - ((seed / 1000) * 1000)) < airDropTracker_ (/../data/reentrancy/solidity_contract/774.sol#852-855)
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#block-timestamp[0m
+INFO:Detectors:[92m
+NameFilter.nameFilter uses assembly (/../data/reentrancy/solidity_contract/774.sol#1060-1112)
+	- /../data/reentrancy/solidity_contract/774.sol#1108-1111
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#assembly-usage[0m
+INFO:Detectors:[92m
+FomoDD.fees_ should be constant (/../data/reentrancy/solidity_contract/774.sol#141)
+FomoDD.potSplit_ should be constant (/../data/reentrancy/solidity_contract/774.sol#142)
+FomoDD.rndExtra_ should be constant (/../data/reentrancy/solidity_contract/774.sol#122)
+FomoDD.rndGap_ should be constant (/../data/reentrancy/solidity_contract/774.sol#121)
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#state-variables-that-could-be-declared-constant[0m
+INFO:Detectors:[92m
+FomoDD.fallback (/../data/reentrancy/solidity_contract/774.sol#167-171) should be declared external
+FomoDD.buyXid (/../data/reentrancy/solidity_contract/774.sol#174-190) should be declared external
+FomoDD.buyXaddr (/../data/reentrancy/solidity_contract/774.sol#192-215) should be declared external
+FomoDD.buyXname (/../data/reentrancy/solidity_contract/774.sol#217-236) should be declared external
+FomoDD.reLoadXid (/../data/reentrancy/solidity_contract/774.sol#238-254) should be declared external
+FomoDD.reLoadXaddr (/../data/reentrancy/solidity_contract/774.sol#256-283) should be declared external
+FomoDD.reLoadXname (/../data/reentrancy/solidity_contract/774.sol#285-313) should be declared external
+FomoDD.withdraw (/../data/reentrancy/solidity_contract/774.sol#316-369) should be declared external
+FomoDD.registerNameXID (/../data/reentrancy/solidity_contract/774.sol#372-382) should be declared external
+FomoDD.registerNameXaddr (/../data/reentrancy/solidity_contract/774.sol#384-394) should be declared external
+FomoDD.registerNameXname (/../data/reentrancy/solidity_contract/774.sol#396-406) should be declared external
+FomoDD.getBuyPrice (/../data/reentrancy/solidity_contract/774.sol#412-422) should be declared external
+FomoDD.getTimeLeft (/../data/reentrancy/solidity_contract/774.sol#425-437) should be declared external
+FomoDD.getPlayerVaults (/../data/reentrancy/solidity_contract/774.sol#440-469) should be declared external
+FomoDD.getCurrentRoundInfo (/../data/reentrancy/solidity_contract/774.sol#477-489) should be declared external
+FomoDD.getPlayerInfoByAddress (/../data/reentrancy/solidity_contract/774.sol#492-509) should be declared external
+FomoDD.calcKeysReceived (/../data/reentrancy/solidity_contract/774.sol#671-681) should be declared external
+FomoDD.iWantXKeys (/../data/reentrancy/solidity_contract/774.sol#684-694) should be declared external
+FomoDD.activate (/../data/reentrancy/solidity_contract/774.sol#962-977) should be declared external
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#public-function-that-could-be-declared-as-external[0m
+INFO:Detectors:[92m
+Low level call in FomoDD.distributeExternal (/../data/reentrancy/solidity_contract/774.sol#859-871):
+	-! address(Bank).call.value(_com)(bytes4(keccak256()(deposit()))) /../data/reentrancy/solidity_contract/774.sol#869
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#low-level-calls[0m
+INFO:Detectors:[92m
+Event 'FDDEvents.onNewName' (/../data/reentrancy/solidity_contract/774.sol#6-17) is not in CapWords
+Event 'FDDEvents.onEndTx' (/../data/reentrancy/solidity_contract/774.sol#20-35) is not in CapWords
+Event 'FDDEvents.onWithdraw' (/../data/reentrancy/solidity_contract/774.sol#38-45) is not in CapWords
+Event 'FDDEvents.onWithdrawAndDistribute' (/../data/reentrancy/solidity_contract/774.sol#48-60) is not in CapWords
+Event 'FDDEvents.onBuyAndDistribute' (/../data/reentrancy/solidity_contract/774.sol#64-76) is not in CapWords
+Event 'FDDEvents.onReLoadAndDistribute' (/../data/reentrancy/solidity_contract/774.sol#80-91) is not in CapWords
+Event 'FDDEvents.onAffiliatePayout' (/../data/reentrancy/solidity_contract/774.sol#94-102) is not in CapWords
+Contract 'modularFomoDD' (/../data/reentrancy/solidity_contract/774.sol#105) is not in CapWords
+Parameter '_affCode' of FomoDD.buyXid (/../data/reentrancy/solidity_contract/774.sol#174) is not in mixedCase
+Parameter '_affCode' of FomoDD.buyXaddr (/../data/reentrancy/solidity_contract/774.sol#192) is not in mixedCase
+Parameter '_affCode' of FomoDD.buyXname (/../data/reentrancy/solidity_contract/774.sol#217) is not in mixedCase
+Parameter '_affCode' of FomoDD.reLoadXid (/../data/reentrancy/solidity_contract/774.sol#238) is not in mixedCase
+Parameter '_eth' of FomoDD.reLoadXid (/../data/reentrancy/solidity_contract/774.sol#238) is not in mixedCase
+Parameter '_affCode' of FomoDD.reLoadXaddr (/../data/reentrancy/solidity_contract/774.sol#256) is not in mixedCase
+Parameter '_eth' of FomoDD.reLoadXaddr (/../data/reentrancy/solidity_contract/774.sol#256) is not in mixedCase
+Parameter '_affCode' of FomoDD.reLoadXname (/../data/reentrancy/solidity_contract/774.sol#285) is not in mixedCase
+Parameter '_eth' of FomoDD.reLoadXname (/../data/reentrancy/solidity_contract/774.sol#285) is not in mixedCase
+Parameter '_nameString' of FomoDD.registerNameXID (/../data/reentrancy/solidity_contract/774.sol#372) is not in mixedCase
+Parameter '_affCode' of FomoDD.registerNameXID (/../data/reentrancy/solidity_contract/774.sol#372) is not in mixedCase
+Parameter '_all' of FomoDD.registerNameXID (/../data/reentrancy/solidity_contract/774.sol#372) is not in mixedCase
+Parameter '_nameString' of FomoDD.registerNameXaddr (/../data/reentrancy/solidity_contract/774.sol#384) is not in mixedCase
+Parameter '_affCode' of FomoDD.registerNameXaddr (/../data/reentrancy/solidity_contract/774.sol#384) is not in mixedCase
+Parameter '_all' of FomoDD.registerNameXaddr (/../data/reentrancy/solidity_contract/774.sol#384) is not in mixedCase
+Parameter '_nameString' of FomoDD.registerNameXname (/../data/reentrancy/solidity_contract/774.sol#396) is not in mixedCase
+Parameter '_affCode' of FomoDD.registerNameXname (/../data/reentrancy/solidity_contract/774.sol#396) is not in mixedCase
+Parameter '_all' of FomoDD.registerNameXname (/../data/reentrancy/solidity_contract/774.sol#396) is not in mixedCase
+Parameter '_pID' of FomoDD.getPlayerVaults (/../data/reentrancy/solidity_contract/774.sol#440) is not in mixedCase
+Parameter '_pID' of FomoDD.getPlayerVaultsHelper (/../data/reentrancy/solidity_contract/774.sol#472) is not in mixedCase
+Parameter '_rID' of FomoDD.getPlayerVaultsHelper (/../data/reentrancy/solidity_contract/774.sol#472) is not in mixedCase
+Parameter '_addr' of FomoDD.getPlayerInfoByAddress (/../data/reentrancy/solidity_contract/774.sol#492) is not in mixedCase
+Parameter '_pID' of FomoDD.buyCore (/../data/reentrancy/solidity_contract/774.sol#512) is not in mixedCase
+Parameter '_affID' of FomoDD.buyCore (/../data/reentrancy/solidity_contract/774.sol#512) is not in mixedCase
+Parameter '_eventData_' of FomoDD.buyCore (/../data/reentrancy/solidity_contract/774.sol#512) is not in mixedCase
+Parameter '_pID' of FomoDD.reLoadCore (/../data/reentrancy/solidity_contract/774.sol#557) is not in mixedCase
+Parameter '_affID' of FomoDD.reLoadCore (/../data/reentrancy/solidity_contract/774.sol#557) is not in mixedCase
+Parameter '_eth' of FomoDD.reLoadCore (/../data/reentrancy/solidity_contract/774.sol#557) is not in mixedCase
+Parameter '_eventData_' of FomoDD.reLoadCore (/../data/reentrancy/solidity_contract/774.sol#557) is not in mixedCase
+Parameter '_rID' of FomoDD.core (/../data/reentrancy/solidity_contract/774.sol#599) is not in mixedCase
+Parameter '_pID' of FomoDD.core (/../data/reentrancy/solidity_contract/774.sol#599) is not in mixedCase
+Parameter '_eth' of FomoDD.core (/../data/reentrancy/solidity_contract/774.sol#599) is not in mixedCase
+Parameter '_affID' of FomoDD.core (/../data/reentrancy/solidity_contract/774.sol#599) is not in mixedCase
+Parameter '_eventData_' of FomoDD.core (/../data/reentrancy/solidity_contract/774.sol#599) is not in mixedCase
+Parameter '_pID' of FomoDD.calcUnMaskedEarnings (/../data/reentrancy/solidity_contract/774.sol#666) is not in mixedCase
+Parameter '_rIDlast' of FomoDD.calcUnMaskedEarnings (/../data/reentrancy/solidity_contract/774.sol#666) is not in mixedCase
+Parameter '_eth' of FomoDD.calcKeysReceived (/../data/reentrancy/solidity_contract/774.sol#671) is not in mixedCase
+Parameter '_keys' of FomoDD.iWantXKeys (/../data/reentrancy/solidity_contract/774.sol#684) is not in mixedCase
+Parameter '_pID' of FomoDD.receivePlayerInfo (/../data/reentrancy/solidity_contract/774.sol#697) is not in mixedCase
+Parameter '_addr' of FomoDD.receivePlayerInfo (/../data/reentrancy/solidity_contract/774.sol#697) is not in mixedCase
+Parameter '_name' of FomoDD.receivePlayerInfo (/../data/reentrancy/solidity_contract/774.sol#697) is not in mixedCase
+Parameter '_laff' of FomoDD.receivePlayerInfo (/../data/reentrancy/solidity_contract/774.sol#697) is not in mixedCase
+Parameter '_pID' of FomoDD.receivePlayerNameList (/../data/reentrancy/solidity_contract/774.sol#714) is not in mixedCase
+Parameter '_name' of FomoDD.receivePlayerNameList (/../data/reentrancy/solidity_contract/774.sol#714) is not in mixedCase
+Parameter '_eventData_' of FomoDD.determinePID (/../data/reentrancy/solidity_contract/774.sol#721) is not in mixedCase
+Parameter '_pID' of FomoDD.managePlayer (/../data/reentrancy/solidity_contract/774.sol#750) is not in mixedCase
+Parameter '_eventData_' of FomoDD.managePlayer (/../data/reentrancy/solidity_contract/774.sol#750) is not in mixedCase
+Parameter '_eventData_' of FomoDD.endRound (/../data/reentrancy/solidity_contract/774.sol#762) is not in mixedCase
+Parameter '_pID' of FomoDD.updateGenVault (/../data/reentrancy/solidity_contract/774.sol#808) is not in mixedCase
+Parameter '_rIDlast' of FomoDD.updateGenVault (/../data/reentrancy/solidity_contract/774.sol#808) is not in mixedCase
+Parameter '_keys' of FomoDD.updateTimer (/../data/reentrancy/solidity_contract/774.sol#820) is not in mixedCase
+Parameter '_rID' of FomoDD.updateTimer (/../data/reentrancy/solidity_contract/774.sol#820) is not in mixedCase
+Parameter '_pID' of FomoDD.distributeExternal (/../data/reentrancy/solidity_contract/774.sol#859) is not in mixedCase
+Parameter '_eth' of FomoDD.distributeExternal (/../data/reentrancy/solidity_contract/774.sol#859) is not in mixedCase
+Parameter '_affID' of FomoDD.distributeExternal (/../data/reentrancy/solidity_contract/774.sol#859) is not in mixedCase
+Parameter '_eventData_' of FomoDD.distributeExternal (/../data/reentrancy/solidity_contract/774.sol#859) is not in mixedCase
+Parameter '_rID' of FomoDD.distributeInternal (/../data/reentrancy/solidity_contract/774.sol#874) is not in mixedCase
+Parameter '_pID' of FomoDD.distributeInternal (/../data/reentrancy/solidity_contract/774.sol#874) is not in mixedCase
+Parameter '_eth' of FomoDD.distributeInternal (/../data/reentrancy/solidity_contract/774.sol#874) is not in mixedCase
+Parameter '_keys' of FomoDD.distributeInternal (/../data/reentrancy/solidity_contract/774.sol#874) is not in mixedCase
+Parameter '_eventData_' of FomoDD.distributeInternal (/../data/reentrancy/solidity_contract/774.sol#874) is not in mixedCase
+Parameter '_rID' of FomoDD.updateMasks (/../data/reentrancy/solidity_contract/774.sol#903) is not in mixedCase
+Parameter '_pID' of FomoDD.updateMasks (/../data/reentrancy/solidity_contract/774.sol#903) is not in mixedCase
+Parameter '_gen' of FomoDD.updateMasks (/../data/reentrancy/solidity_contract/774.sol#903) is not in mixedCase
+Parameter '_keys' of FomoDD.updateMasks (/../data/reentrancy/solidity_contract/774.sol#903) is not in mixedCase
+Parameter '_pID' of FomoDD.withdrawEarnings (/../data/reentrancy/solidity_contract/774.sol#921) is not in mixedCase
+Parameter '_pID' of FomoDD.endTx (/../data/reentrancy/solidity_contract/774.sol#937) is not in mixedCase
+Parameter '_eth' of FomoDD.endTx (/../data/reentrancy/solidity_contract/774.sol#937) is not in mixedCase
+Parameter '_keys' of FomoDD.endTx (/../data/reentrancy/solidity_contract/774.sol#937) is not in mixedCase
+Parameter '_eventData_' of FomoDD.endTx (/../data/reentrancy/solidity_contract/774.sol#937) is not in mixedCase
+Constant 'FomoDD.Bank' (/../data/reentrancy/solidity_contract/774.sol#113) is not in UPPER_CASE_WITH_UNDERSCORES
+Constant 'FomoDD.PlayerBook' (/../data/reentrancy/solidity_contract/774.sol#114) is not in UPPER_CASE_WITH_UNDERSCORES
+Constant 'FomoDD.rndInit_' (/../data/reentrancy/solidity_contract/774.sol#123) is not in UPPER_CASE_WITH_UNDERSCORES
+Constant 'FomoDD.rndInc_' (/../data/reentrancy/solidity_contract/774.sol#124) is not in UPPER_CASE_WITH_UNDERSCORES
+Constant 'FomoDD.rndMax_' (/../data/reentrancy/solidity_contract/774.sol#125) is not in UPPER_CASE_WITH_UNDERSCORES
+Parameter '_curEth' of FDDKeysCalc.keysRec (/../data/reentrancy/solidity_contract/774.sol#1023) is not in mixedCase
+Parameter '_newEth' of FDDKeysCalc.keysRec (/../data/reentrancy/solidity_contract/774.sol#1023) is not in mixedCase
+Parameter '_curKeys' of FDDKeysCalc.ethRec (/../data/reentrancy/solidity_contract/774.sol#1028) is not in mixedCase
+Parameter '_sellKeys' of FDDKeysCalc.ethRec (/../data/reentrancy/solidity_contract/774.sol#1028) is not in mixedCase
+Parameter '_eth' of FDDKeysCalc.keys (/../data/reentrancy/solidity_contract/774.sol#1033) is not in mixedCase
+Parameter '_keys' of FDDKeysCalc.eth (/../data/reentrancy/solidity_contract/774.sol#1038) is not in mixedCase
+Parameter '_input' of NameFilter.nameFilter (/../data/reentrancy/solidity_contract/774.sol#1060) is not in mixedCase
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#conformance-to-solidity-naming-conventions[0m
+INFO:Slither:/../data/reentrancy/solidity_contract/774.sol analyzed (9 contracts), 131 result(s) found

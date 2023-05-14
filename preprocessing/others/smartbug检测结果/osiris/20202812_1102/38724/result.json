@@ -1,0 +1,14 @@
+{
+  "contract": "38724",
+  "tool": "osiris",
+  "start": 1609137970.982374,
+  "end": 1609137978.230914,
+  "duration": 7.248540163040161,
+  "analysis": [
+    {
+      "errors": [],
+      "file": "/../data/reentrancy/solidity_contract/38724.sol",
+      "name": "ERC20nator"
+    }
+  ]
+}

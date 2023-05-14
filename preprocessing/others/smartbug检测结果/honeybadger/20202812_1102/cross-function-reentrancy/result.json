@@ -1,0 +1,14 @@
+{
+  "contract": "cross-function-reentrancy",
+  "tool": "honeybadger",
+  "start": 1609200364.8678951,
+  "end": 1609200369.327177,
+  "duration": 4.459281921386719,
+  "analysis": [
+    {
+      "errors": [],
+      "file": "/../data/reentrancy/solidity_contract/cross-function-reentrancy.sol",
+      "name": "Owner"
+    }
+  ]
+}

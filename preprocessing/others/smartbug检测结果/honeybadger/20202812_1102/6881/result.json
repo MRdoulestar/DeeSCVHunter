@@ -1,0 +1,19 @@
+{
+  "contract": "6881",
+  "tool": "honeybadger",
+  "start": 1609157313.381375,
+  "end": 1609157599.96976,
+  "duration": 286.5883848667145,
+  "analysis": [
+    {
+      "errors": [],
+      "file": "/../data/reentrancy/solidity_contract/6881.sol",
+      "name": "BancorBuyer"
+    },
+    {
+      "errors": [],
+      "file": "/../data/reentrancy/solidity_contract/6881.sol",
+      "name": "SafeMath"
+    }
+  ]
+}

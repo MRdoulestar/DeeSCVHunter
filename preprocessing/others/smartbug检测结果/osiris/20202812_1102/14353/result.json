@@ -1,0 +1,30 @@
+{
+  "contract": "14353",
+  "tool": "osiris",
+  "start": 1609143080.8685849,
+  "end": 1609143084.5112262,
+  "duration": 3.642641305923462,
+  "analysis": [
+    {
+      "errors": [
+        {
+          "line": 31,
+          "column": 7,
+          "message": "concurrency_bug"
+        },
+        {
+          "line": 37,
+          "column": 13,
+          "message": "concurrency_bug"
+        },
+        {
+          "line": 37,
+          "column": 13,
+          "message": "reentrancy_bug"
+        }
+      ],
+      "file": "/../data/reentrancy/solidity_contract/14353.sol",
+      "name": "ICOBuyer"
+    }
+  ]
+}

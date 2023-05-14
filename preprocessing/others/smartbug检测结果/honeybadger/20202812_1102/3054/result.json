@@ -1,0 +1,14 @@
+{
+  "contract": "3054",
+  "tool": "honeybadger",
+  "start": 1609160417.815568,
+  "end": 1609160455.426571,
+  "duration": 37.611002922058105,
+  "analysis": [
+    {
+      "errors": [],
+      "file": "/../data/reentrancy/solidity_contract/3054.sol",
+      "name": "DiceRoll"
+    }
+  ]
+}

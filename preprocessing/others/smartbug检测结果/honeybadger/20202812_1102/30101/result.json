@@ -1,0 +1,19 @@
+{
+  "contract": "30101",
+  "tool": "honeybadger",
+  "start": 1609185569.6942148,
+  "end": 1609185587.377492,
+  "duration": 17.683277130126953,
+  "analysis": [
+    {
+      "errors": [],
+      "file": "/../data/reentrancy/solidity_contract/30101.sol",
+      "name": "SafeMath"
+    },
+    {
+      "errors": [],
+      "file": "/../data/reentrancy/solidity_contract/30101.sol",
+      "name": "TelcoinSaleCapEscrow"
+    }
+  ]
+}

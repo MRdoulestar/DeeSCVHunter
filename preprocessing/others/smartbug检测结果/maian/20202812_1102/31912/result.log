@@ -1,0 +1,1955 @@
+====================================================================================================
+[1m[ ] Compiling Solidity contract from the file /../data/reentrancy/solidity_contract/31912.sol ... [0m/../data/reentrancy/solidity_contract/31912.sol:27:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogErrorMsg(_from, "Change from address is not an owner");
+      ^-------------------------------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:31:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogErrorMsg(_to, "Change to address is an owner");
+      ^-----------------------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:45:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogErrorMsg(_index, "New owner already owner");
+      ^--------------------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:49:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogErrorMsg(_length, "Too many owners");
+      ^-------------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:64:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogErrorMsg(_index, "Owner removing not an owner");
+      ^------------------------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:68:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogErrorMsg(_index, "Must reduce requiredAdmin first");
+      ^----------------------------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:82:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogErrorMsg(_newRequired, "Cant reduce to 0");
+      ^-------------------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:86:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogErrorMsg(_length, "Making requirement too high");
+      ^-------------------------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:119:19: Warning: This function only accepts a single "bytes" argument. Please use "abi.encodePacked(...)" or a similar function to encode the data.
+    bytes32 _id = keccak256("changeOwner",_from,_to);
+                  ^--------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:160:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogOwnerChanged(_from, _to);
+      ^-------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:168:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogTransactionConfirmed(_id, msg.sender, confirmsNeeded);
+      ^------------------------------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:188:19: Warning: This function only accepts a single "bytes" argument. Please use "abi.encodePacked(...)" or a similar function to encode the data.
+    bytes32 _id = keccak256("addOwner",_newOwner);
+                  ^-----------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:232:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogOwnerAdded(_newOwner);
+      ^----------------------^
+/../data/reentrancy/solidity_contract/31912.sol:239:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogTransactionConfirmed(_id, msg.sender, confirmsNeeded);
+      ^------------------------------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:259:19: Warning: This function only accepts a single "bytes" argument. Please use "abi.encodePacked(...)" or a similar function to encode the data.
+    bytes32 _id = keccak256("removeOwner",_ownerRemoving);
+                  ^-------------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:303:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogOwnerRemoved(_ownerRemoving);
+      ^-----------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:310:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogTransactionConfirmed(_id, msg.sender, confirmsNeeded);
+      ^------------------------------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:330:19: Warning: This function only accepts a single "bytes" argument. Please use "abi.encodePacked(...)" or a similar function to encode the data.
+    bytes32 _id = keccak256("changeRequiredAdmin",_requiredAdmin);
+                  ^---------------------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:370:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogRequirementChange(_requiredAdmin);
+      ^----------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:377:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogTransactionConfirmed(_id, msg.sender, confirmsNeeded);
+      ^------------------------------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:397:19: Warning: This function only accepts a single "bytes" argument. Please use "abi.encodePacked(...)" or a similar function to encode the data.
+    bytes32 _id = keccak256("changeRequiredMajor",_requiredMajor);
+                  ^---------------------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:437:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogRequirementChange(_requiredMajor);
+      ^----------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:444:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogTransactionConfirmed(_id, msg.sender, confirmsNeeded);
+      ^------------------------------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:464:19: Warning: This function only accepts a single "bytes" argument. Please use "abi.encodePacked(...)" or a similar function to encode the data.
+    bytes32 _id = keccak256("changeRequiredMinor",_requiredMinor);
+                  ^---------------------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:504:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogRequirementChange(_requiredMinor);
+      ^----------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:511:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogTransactionConfirmed(_id, msg.sender, confirmsNeeded);
+      ^------------------------------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:533:19: Warning: This function only accepts a single "bytes" argument. Please use "abi.encodePacked(...)" or a similar function to encode the data.
+    bytes32 _id = keccak256("changeMajorThreshold", _token, _majorThreshold);
+                  ^--------------------------------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:570:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogThresholdChange(_token, _majorThreshold);
+      ^-----------------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:577:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogTransactionConfirmed(_id, msg.sender, confirmsNeeded);
+      ^------------------------------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:679:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogErrorMsg(_txLen, "Tx not initiated");
+      ^-------------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:680:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogTransactionFailed(_id, msg.sender);
+      ^-----------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:685:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogErrorMsg(_txIndex, "Transaction already complete");
+      ^---------------------------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:686:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogTransactionFailed(_id, msg.sender);
+      ^-----------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:695:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogErrorMsg(index, "Owner already confirmed");
+      ^-------------------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:696:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogTransactionFailed(_id, msg.sender);
+      ^-----------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:797:5: Warning: Invoking events without "emit" prefix is deprecated.
+    LogContractCreated(_newContract, _value);
+    ^--------------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:812:19: Warning: This function only accepts a single "bytes" argument. Please use "abi.encodePacked(...)" or a similar function to encode the data.
+    bytes32 _id = keccak256("serveTx",_to,_value,_txData);
+                  ^-------------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:865:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogTransactionComplete(_id, _to, _value, _data);
+      ^---------------------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:870:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogTransactionConfirmed(_id, msg.sender, confirmsNeeded);
+      ^------------------------------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:889:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogErrorMsg(_txIndex, "Tx not initiated");
+      ^---------------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:890:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogTransactionFailed(_id, msg.sender);
+      ^-----------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:911:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogTransactionConfirmed(_id, msg.sender, confirmsNeeded);
+      ^------------------------------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:930:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogErrorMsg(_txIndex, "Tx not initiated");
+      ^---------------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:931:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogTransactionFailed(_id, msg.sender);
+      ^-----------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:937:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogErrorMsg(_txIndex, "Transaction already complete");
+      ^---------------------------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:938:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogTransactionFailed(_id, msg.sender);
+      ^-----------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:947:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogErrorMsg(index, "Owner has not confirmed tx");
+      ^----------------------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:948:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogTransactionFailed(_id, msg.sender);
+      ^-----------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:960:5: Warning: Invoking events without "emit" prefix is deprecated.
+    LogRevokeNotice(_id, msg.sender, confirmsNeeded);
+    ^----------------------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:1173:3: Warning: Function state mutability can be restricted to pure
+  function times(uint256 a, uint256 b) public view returns (bool err,uint256 res) {
+  ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/31912.sol:1190:3: Warning: Function state mutability can be restricted to pure
+  function dividedBy(uint256 a, uint256 b) public view returns (bool err,uint256 i) {
+  ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/31912.sol:1213:3: Warning: Function state mutability can be restricted to pure
+  function plus(uint256 a, uint256 b) public view returns (bool err, uint256 res) {
+  ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/31912.sol:1230:3: Warning: Function state mutability can be restricted to pure
+  function minus(uint256 a, uint256 b) public view returns (bool err,uint256 res) {
+  ^ (Relevant source part starts here and spans across multiple lines).
+
+[91m[-] Cannot compile the contract [0m
+
+====================================================================================================
+[1m[ ] Compiling Solidity contract from the file /../data/reentrancy/solidity_contract/31912.sol ... [0m/../data/reentrancy/solidity_contract/31912.sol:27:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogErrorMsg(_from, "Change from address is not an owner");
+      ^-------------------------------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:31:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogErrorMsg(_to, "Change to address is an owner");
+      ^-----------------------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:45:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogErrorMsg(_index, "New owner already owner");
+      ^--------------------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:49:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogErrorMsg(_length, "Too many owners");
+      ^-------------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:64:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogErrorMsg(_index, "Owner removing not an owner");
+      ^------------------------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:68:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogErrorMsg(_index, "Must reduce requiredAdmin first");
+      ^----------------------------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:82:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogErrorMsg(_newRequired, "Cant reduce to 0");
+      ^-------------------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:86:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogErrorMsg(_length, "Making requirement too high");
+      ^-------------------------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:119:19: Warning: This function only accepts a single "bytes" argument. Please use "abi.encodePacked(...)" or a similar function to encode the data.
+    bytes32 _id = keccak256("changeOwner",_from,_to);
+                  ^--------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:160:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogOwnerChanged(_from, _to);
+      ^-------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:168:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogTransactionConfirmed(_id, msg.sender, confirmsNeeded);
+      ^------------------------------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:188:19: Warning: This function only accepts a single "bytes" argument. Please use "abi.encodePacked(...)" or a similar function to encode the data.
+    bytes32 _id = keccak256("addOwner",_newOwner);
+                  ^-----------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:232:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogOwnerAdded(_newOwner);
+      ^----------------------^
+/../data/reentrancy/solidity_contract/31912.sol:239:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogTransactionConfirmed(_id, msg.sender, confirmsNeeded);
+      ^------------------------------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:259:19: Warning: This function only accepts a single "bytes" argument. Please use "abi.encodePacked(...)" or a similar function to encode the data.
+    bytes32 _id = keccak256("removeOwner",_ownerRemoving);
+                  ^-------------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:303:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogOwnerRemoved(_ownerRemoving);
+      ^-----------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:310:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogTransactionConfirmed(_id, msg.sender, confirmsNeeded);
+      ^------------------------------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:330:19: Warning: This function only accepts a single "bytes" argument. Please use "abi.encodePacked(...)" or a similar function to encode the data.
+    bytes32 _id = keccak256("changeRequiredAdmin",_requiredAdmin);
+                  ^---------------------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:370:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogRequirementChange(_requiredAdmin);
+      ^----------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:377:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogTransactionConfirmed(_id, msg.sender, confirmsNeeded);
+      ^------------------------------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:397:19: Warning: This function only accepts a single "bytes" argument. Please use "abi.encodePacked(...)" or a similar function to encode the data.
+    bytes32 _id = keccak256("changeRequiredMajor",_requiredMajor);
+                  ^---------------------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:437:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogRequirementChange(_requiredMajor);
+      ^----------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:444:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogTransactionConfirmed(_id, msg.sender, confirmsNeeded);
+      ^------------------------------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:464:19: Warning: This function only accepts a single "bytes" argument. Please use "abi.encodePacked(...)" or a similar function to encode the data.
+    bytes32 _id = keccak256("changeRequiredMinor",_requiredMinor);
+                  ^---------------------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:504:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogRequirementChange(_requiredMinor);
+      ^----------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:511:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogTransactionConfirmed(_id, msg.sender, confirmsNeeded);
+      ^------------------------------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:533:19: Warning: This function only accepts a single "bytes" argument. Please use "abi.encodePacked(...)" or a similar function to encode the data.
+    bytes32 _id = keccak256("changeMajorThreshold", _token, _majorThreshold);
+                  ^--------------------------------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:570:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogThresholdChange(_token, _majorThreshold);
+      ^-----------------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:577:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogTransactionConfirmed(_id, msg.sender, confirmsNeeded);
+      ^------------------------------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:679:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogErrorMsg(_txLen, "Tx not initiated");
+      ^-------------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:680:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogTransactionFailed(_id, msg.sender);
+      ^-----------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:685:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogErrorMsg(_txIndex, "Transaction already complete");
+      ^---------------------------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:686:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogTransactionFailed(_id, msg.sender);
+      ^-----------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:695:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogErrorMsg(index, "Owner already confirmed");
+      ^-------------------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:696:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogTransactionFailed(_id, msg.sender);
+      ^-----------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:797:5: Warning: Invoking events without "emit" prefix is deprecated.
+    LogContractCreated(_newContract, _value);
+    ^--------------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:812:19: Warning: This function only accepts a single "bytes" argument. Please use "abi.encodePacked(...)" or a similar function to encode the data.
+    bytes32 _id = keccak256("serveTx",_to,_value,_txData);
+                  ^-------------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:865:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogTransactionComplete(_id, _to, _value, _data);
+      ^---------------------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:870:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogTransactionConfirmed(_id, msg.sender, confirmsNeeded);
+      ^------------------------------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:889:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogErrorMsg(_txIndex, "Tx not initiated");
+      ^---------------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:890:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogTransactionFailed(_id, msg.sender);
+      ^-----------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:911:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogTransactionConfirmed(_id, msg.sender, confirmsNeeded);
+      ^------------------------------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:930:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogErrorMsg(_txIndex, "Tx not initiated");
+      ^---------------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:931:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogTransactionFailed(_id, msg.sender);
+      ^-----------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:937:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogErrorMsg(_txIndex, "Transaction already complete");
+      ^---------------------------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:938:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogTransactionFailed(_id, msg.sender);
+      ^-----------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:947:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogErrorMsg(index, "Owner has not confirmed tx");
+      ^----------------------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:948:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogTransactionFailed(_id, msg.sender);
+      ^-----------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:960:5: Warning: Invoking events without "emit" prefix is deprecated.
+    LogRevokeNotice(_id, msg.sender, confirmsNeeded);
+    ^----------------------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:1173:3: Warning: Function state mutability can be restricted to pure
+  function times(uint256 a, uint256 b) public view returns (bool err,uint256 res) {
+  ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/31912.sol:1190:3: Warning: Function state mutability can be restricted to pure
+  function dividedBy(uint256 a, uint256 b) public view returns (bool err,uint256 i) {
+  ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/31912.sol:1213:3: Warning: Function state mutability can be restricted to pure
+  function plus(uint256 a, uint256 b) public view returns (bool err, uint256 res) {
+  ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/31912.sol:1230:3: Warning: Function state mutability can be restricted to pure
+  function minus(uint256 a, uint256 b) public view returns (bool err,uint256 res) {
+  ^ (Relevant source part starts here and spans across multiple lines).
+
+[91m[-] Cannot compile the contract [0m
+
+====================================================================================================
+[1m[ ] Compiling Solidity contract from the file /../data/reentrancy/solidity_contract/31912.sol ... [0m/../data/reentrancy/solidity_contract/31912.sol:27:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogErrorMsg(_from, "Change from address is not an owner");
+      ^-------------------------------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:31:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogErrorMsg(_to, "Change to address is an owner");
+      ^-----------------------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:45:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogErrorMsg(_index, "New owner already owner");
+      ^--------------------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:49:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogErrorMsg(_length, "Too many owners");
+      ^-------------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:64:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogErrorMsg(_index, "Owner removing not an owner");
+      ^------------------------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:68:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogErrorMsg(_index, "Must reduce requiredAdmin first");
+      ^----------------------------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:82:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogErrorMsg(_newRequired, "Cant reduce to 0");
+      ^-------------------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:86:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogErrorMsg(_length, "Making requirement too high");
+      ^-------------------------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:119:19: Warning: This function only accepts a single "bytes" argument. Please use "abi.encodePacked(...)" or a similar function to encode the data.
+    bytes32 _id = keccak256("changeOwner",_from,_to);
+                  ^--------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:160:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogOwnerChanged(_from, _to);
+      ^-------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:168:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogTransactionConfirmed(_id, msg.sender, confirmsNeeded);
+      ^------------------------------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:188:19: Warning: This function only accepts a single "bytes" argument. Please use "abi.encodePacked(...)" or a similar function to encode the data.
+    bytes32 _id = keccak256("addOwner",_newOwner);
+                  ^-----------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:232:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogOwnerAdded(_newOwner);
+      ^----------------------^
+/../data/reentrancy/solidity_contract/31912.sol:239:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogTransactionConfirmed(_id, msg.sender, confirmsNeeded);
+      ^------------------------------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:259:19: Warning: This function only accepts a single "bytes" argument. Please use "abi.encodePacked(...)" or a similar function to encode the data.
+    bytes32 _id = keccak256("removeOwner",_ownerRemoving);
+                  ^-------------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:303:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogOwnerRemoved(_ownerRemoving);
+      ^-----------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:310:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogTransactionConfirmed(_id, msg.sender, confirmsNeeded);
+      ^------------------------------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:330:19: Warning: This function only accepts a single "bytes" argument. Please use "abi.encodePacked(...)" or a similar function to encode the data.
+    bytes32 _id = keccak256("changeRequiredAdmin",_requiredAdmin);
+                  ^---------------------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:370:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogRequirementChange(_requiredAdmin);
+      ^----------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:377:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogTransactionConfirmed(_id, msg.sender, confirmsNeeded);
+      ^------------------------------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:397:19: Warning: This function only accepts a single "bytes" argument. Please use "abi.encodePacked(...)" or a similar function to encode the data.
+    bytes32 _id = keccak256("changeRequiredMajor",_requiredMajor);
+                  ^---------------------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:437:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogRequirementChange(_requiredMajor);
+      ^----------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:444:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogTransactionConfirmed(_id, msg.sender, confirmsNeeded);
+      ^------------------------------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:464:19: Warning: This function only accepts a single "bytes" argument. Please use "abi.encodePacked(...)" or a similar function to encode the data.
+    bytes32 _id = keccak256("changeRequiredMinor",_requiredMinor);
+                  ^---------------------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:504:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogRequirementChange(_requiredMinor);
+      ^----------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:511:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogTransactionConfirmed(_id, msg.sender, confirmsNeeded);
+      ^------------------------------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:533:19: Warning: This function only accepts a single "bytes" argument. Please use "abi.encodePacked(...)" or a similar function to encode the data.
+    bytes32 _id = keccak256("changeMajorThreshold", _token, _majorThreshold);
+                  ^--------------------------------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:570:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogThresholdChange(_token, _majorThreshold);
+      ^-----------------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:577:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogTransactionConfirmed(_id, msg.sender, confirmsNeeded);
+      ^------------------------------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:679:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogErrorMsg(_txLen, "Tx not initiated");
+      ^-------------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:680:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogTransactionFailed(_id, msg.sender);
+      ^-----------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:685:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogErrorMsg(_txIndex, "Transaction already complete");
+      ^---------------------------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:686:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogTransactionFailed(_id, msg.sender);
+      ^-----------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:695:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogErrorMsg(index, "Owner already confirmed");
+      ^-------------------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:696:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogTransactionFailed(_id, msg.sender);
+      ^-----------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:797:5: Warning: Invoking events without "emit" prefix is deprecated.
+    LogContractCreated(_newContract, _value);
+    ^--------------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:812:19: Warning: This function only accepts a single "bytes" argument. Please use "abi.encodePacked(...)" or a similar function to encode the data.
+    bytes32 _id = keccak256("serveTx",_to,_value,_txData);
+                  ^-------------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:865:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogTransactionComplete(_id, _to, _value, _data);
+      ^---------------------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:870:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogTransactionConfirmed(_id, msg.sender, confirmsNeeded);
+      ^------------------------------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:889:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogErrorMsg(_txIndex, "Tx not initiated");
+      ^---------------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:890:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogTransactionFailed(_id, msg.sender);
+      ^-----------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:911:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogTransactionConfirmed(_id, msg.sender, confirmsNeeded);
+      ^------------------------------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:930:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogErrorMsg(_txIndex, "Tx not initiated");
+      ^---------------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:931:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogTransactionFailed(_id, msg.sender);
+      ^-----------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:937:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogErrorMsg(_txIndex, "Transaction already complete");
+      ^---------------------------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:938:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogTransactionFailed(_id, msg.sender);
+      ^-----------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:947:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogErrorMsg(index, "Owner has not confirmed tx");
+      ^----------------------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:948:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogTransactionFailed(_id, msg.sender);
+      ^-----------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:960:5: Warning: Invoking events without "emit" prefix is deprecated.
+    LogRevokeNotice(_id, msg.sender, confirmsNeeded);
+    ^----------------------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:1173:3: Warning: Function state mutability can be restricted to pure
+  function times(uint256 a, uint256 b) public view returns (bool err,uint256 res) {
+  ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/31912.sol:1190:3: Warning: Function state mutability can be restricted to pure
+  function dividedBy(uint256 a, uint256 b) public view returns (bool err,uint256 i) {
+  ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/31912.sol:1213:3: Warning: Function state mutability can be restricted to pure
+  function plus(uint256 a, uint256 b) public view returns (bool err, uint256 res) {
+  ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/31912.sol:1230:3: Warning: Function state mutability can be restricted to pure
+  function minus(uint256 a, uint256 b) public view returns (bool err,uint256 res) {
+  ^ (Relevant source part starts here and spans across multiple lines).
+
+[91m[-] Cannot compile the contract [0m
+
+====================================================================================================
+[1m[ ] Compiling Solidity contract from the file /../data/reentrancy/solidity_contract/31912.sol ... [0m/../data/reentrancy/solidity_contract/31912.sol:27:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogErrorMsg(_from, "Change from address is not an owner");
+      ^-------------------------------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:31:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogErrorMsg(_to, "Change to address is an owner");
+      ^-----------------------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:45:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogErrorMsg(_index, "New owner already owner");
+      ^--------------------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:49:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogErrorMsg(_length, "Too many owners");
+      ^-------------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:64:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogErrorMsg(_index, "Owner removing not an owner");
+      ^------------------------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:68:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogErrorMsg(_index, "Must reduce requiredAdmin first");
+      ^----------------------------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:82:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogErrorMsg(_newRequired, "Cant reduce to 0");
+      ^-------------------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:86:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogErrorMsg(_length, "Making requirement too high");
+      ^-------------------------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:119:19: Warning: This function only accepts a single "bytes" argument. Please use "abi.encodePacked(...)" or a similar function to encode the data.
+    bytes32 _id = keccak256("changeOwner",_from,_to);
+                  ^--------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:160:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogOwnerChanged(_from, _to);
+      ^-------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:168:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogTransactionConfirmed(_id, msg.sender, confirmsNeeded);
+      ^------------------------------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:188:19: Warning: This function only accepts a single "bytes" argument. Please use "abi.encodePacked(...)" or a similar function to encode the data.
+    bytes32 _id = keccak256("addOwner",_newOwner);
+                  ^-----------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:232:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogOwnerAdded(_newOwner);
+      ^----------------------^
+/../data/reentrancy/solidity_contract/31912.sol:239:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogTransactionConfirmed(_id, msg.sender, confirmsNeeded);
+      ^------------------------------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:259:19: Warning: This function only accepts a single "bytes" argument. Please use "abi.encodePacked(...)" or a similar function to encode the data.
+    bytes32 _id = keccak256("removeOwner",_ownerRemoving);
+                  ^-------------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:303:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogOwnerRemoved(_ownerRemoving);
+      ^-----------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:310:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogTransactionConfirmed(_id, msg.sender, confirmsNeeded);
+      ^------------------------------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:330:19: Warning: This function only accepts a single "bytes" argument. Please use "abi.encodePacked(...)" or a similar function to encode the data.
+    bytes32 _id = keccak256("changeRequiredAdmin",_requiredAdmin);
+                  ^---------------------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:370:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogRequirementChange(_requiredAdmin);
+      ^----------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:377:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogTransactionConfirmed(_id, msg.sender, confirmsNeeded);
+      ^------------------------------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:397:19: Warning: This function only accepts a single "bytes" argument. Please use "abi.encodePacked(...)" or a similar function to encode the data.
+    bytes32 _id = keccak256("changeRequiredMajor",_requiredMajor);
+                  ^---------------------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:437:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogRequirementChange(_requiredMajor);
+      ^----------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:444:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogTransactionConfirmed(_id, msg.sender, confirmsNeeded);
+      ^------------------------------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:464:19: Warning: This function only accepts a single "bytes" argument. Please use "abi.encodePacked(...)" or a similar function to encode the data.
+    bytes32 _id = keccak256("changeRequiredMinor",_requiredMinor);
+                  ^---------------------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:504:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogRequirementChange(_requiredMinor);
+      ^----------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:511:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogTransactionConfirmed(_id, msg.sender, confirmsNeeded);
+      ^------------------------------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:533:19: Warning: This function only accepts a single "bytes" argument. Please use "abi.encodePacked(...)" or a similar function to encode the data.
+    bytes32 _id = keccak256("changeMajorThreshold", _token, _majorThreshold);
+                  ^--------------------------------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:570:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogThresholdChange(_token, _majorThreshold);
+      ^-----------------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:577:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogTransactionConfirmed(_id, msg.sender, confirmsNeeded);
+      ^------------------------------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:679:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogErrorMsg(_txLen, "Tx not initiated");
+      ^-------------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:680:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogTransactionFailed(_id, msg.sender);
+      ^-----------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:685:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogErrorMsg(_txIndex, "Transaction already complete");
+      ^---------------------------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:686:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogTransactionFailed(_id, msg.sender);
+      ^-----------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:695:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogErrorMsg(index, "Owner already confirmed");
+      ^-------------------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:696:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogTransactionFailed(_id, msg.sender);
+      ^-----------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:797:5: Warning: Invoking events without "emit" prefix is deprecated.
+    LogContractCreated(_newContract, _value);
+    ^--------------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:812:19: Warning: This function only accepts a single "bytes" argument. Please use "abi.encodePacked(...)" or a similar function to encode the data.
+    bytes32 _id = keccak256("serveTx",_to,_value,_txData);
+                  ^-------------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:865:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogTransactionComplete(_id, _to, _value, _data);
+      ^---------------------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:870:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogTransactionConfirmed(_id, msg.sender, confirmsNeeded);
+      ^------------------------------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:889:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogErrorMsg(_txIndex, "Tx not initiated");
+      ^---------------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:890:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogTransactionFailed(_id, msg.sender);
+      ^-----------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:911:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogTransactionConfirmed(_id, msg.sender, confirmsNeeded);
+      ^------------------------------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:930:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogErrorMsg(_txIndex, "Tx not initiated");
+      ^---------------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:931:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogTransactionFailed(_id, msg.sender);
+      ^-----------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:937:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogErrorMsg(_txIndex, "Transaction already complete");
+      ^---------------------------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:938:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogTransactionFailed(_id, msg.sender);
+      ^-----------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:947:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogErrorMsg(index, "Owner has not confirmed tx");
+      ^----------------------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:948:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogTransactionFailed(_id, msg.sender);
+      ^-----------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:960:5: Warning: Invoking events without "emit" prefix is deprecated.
+    LogRevokeNotice(_id, msg.sender, confirmsNeeded);
+    ^----------------------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:1173:3: Warning: Function state mutability can be restricted to pure
+  function times(uint256 a, uint256 b) public view returns (bool err,uint256 res) {
+  ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/31912.sol:1190:3: Warning: Function state mutability can be restricted to pure
+  function dividedBy(uint256 a, uint256 b) public view returns (bool err,uint256 i) {
+  ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/31912.sol:1213:3: Warning: Function state mutability can be restricted to pure
+  function plus(uint256 a, uint256 b) public view returns (bool err, uint256 res) {
+  ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/31912.sol:1230:3: Warning: Function state mutability can be restricted to pure
+  function minus(uint256 a, uint256 b) public view returns (bool err,uint256 res) {
+  ^ (Relevant source part starts here and spans across multiple lines).
+
+[91m[-] Cannot compile the contract [0m
+
+====================================================================================================
+[1m[ ] Compiling Solidity contract from the file /../data/reentrancy/solidity_contract/31912.sol ... [0m/../data/reentrancy/solidity_contract/31912.sol:27:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogErrorMsg(_from, "Change from address is not an owner");
+      ^-------------------------------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:31:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogErrorMsg(_to, "Change to address is an owner");
+      ^-----------------------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:45:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogErrorMsg(_index, "New owner already owner");
+      ^--------------------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:49:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogErrorMsg(_length, "Too many owners");
+      ^-------------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:64:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogErrorMsg(_index, "Owner removing not an owner");
+      ^------------------------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:68:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogErrorMsg(_index, "Must reduce requiredAdmin first");
+      ^----------------------------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:82:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogErrorMsg(_newRequired, "Cant reduce to 0");
+      ^-------------------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:86:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogErrorMsg(_length, "Making requirement too high");
+      ^-------------------------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:119:19: Warning: This function only accepts a single "bytes" argument. Please use "abi.encodePacked(...)" or a similar function to encode the data.
+    bytes32 _id = keccak256("changeOwner",_from,_to);
+                  ^--------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:160:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogOwnerChanged(_from, _to);
+      ^-------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:168:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogTransactionConfirmed(_id, msg.sender, confirmsNeeded);
+      ^------------------------------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:188:19: Warning: This function only accepts a single "bytes" argument. Please use "abi.encodePacked(...)" or a similar function to encode the data.
+    bytes32 _id = keccak256("addOwner",_newOwner);
+                  ^-----------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:232:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogOwnerAdded(_newOwner);
+      ^----------------------^
+/../data/reentrancy/solidity_contract/31912.sol:239:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogTransactionConfirmed(_id, msg.sender, confirmsNeeded);
+      ^------------------------------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:259:19: Warning: This function only accepts a single "bytes" argument. Please use "abi.encodePacked(...)" or a similar function to encode the data.
+    bytes32 _id = keccak256("removeOwner",_ownerRemoving);
+                  ^-------------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:303:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogOwnerRemoved(_ownerRemoving);
+      ^-----------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:310:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogTransactionConfirmed(_id, msg.sender, confirmsNeeded);
+      ^------------------------------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:330:19: Warning: This function only accepts a single "bytes" argument. Please use "abi.encodePacked(...)" or a similar function to encode the data.
+    bytes32 _id = keccak256("changeRequiredAdmin",_requiredAdmin);
+                  ^---------------------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:370:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogRequirementChange(_requiredAdmin);
+      ^----------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:377:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogTransactionConfirmed(_id, msg.sender, confirmsNeeded);
+      ^------------------------------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:397:19: Warning: This function only accepts a single "bytes" argument. Please use "abi.encodePacked(...)" or a similar function to encode the data.
+    bytes32 _id = keccak256("changeRequiredMajor",_requiredMajor);
+                  ^---------------------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:437:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogRequirementChange(_requiredMajor);
+      ^----------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:444:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogTransactionConfirmed(_id, msg.sender, confirmsNeeded);
+      ^------------------------------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:464:19: Warning: This function only accepts a single "bytes" argument. Please use "abi.encodePacked(...)" or a similar function to encode the data.
+    bytes32 _id = keccak256("changeRequiredMinor",_requiredMinor);
+                  ^---------------------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:504:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogRequirementChange(_requiredMinor);
+      ^----------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:511:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogTransactionConfirmed(_id, msg.sender, confirmsNeeded);
+      ^------------------------------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:533:19: Warning: This function only accepts a single "bytes" argument. Please use "abi.encodePacked(...)" or a similar function to encode the data.
+    bytes32 _id = keccak256("changeMajorThreshold", _token, _majorThreshold);
+                  ^--------------------------------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:570:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogThresholdChange(_token, _majorThreshold);
+      ^-----------------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:577:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogTransactionConfirmed(_id, msg.sender, confirmsNeeded);
+      ^------------------------------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:679:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogErrorMsg(_txLen, "Tx not initiated");
+      ^-------------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:680:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogTransactionFailed(_id, msg.sender);
+      ^-----------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:685:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogErrorMsg(_txIndex, "Transaction already complete");
+      ^---------------------------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:686:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogTransactionFailed(_id, msg.sender);
+      ^-----------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:695:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogErrorMsg(index, "Owner already confirmed");
+      ^-------------------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:696:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogTransactionFailed(_id, msg.sender);
+      ^-----------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:797:5: Warning: Invoking events without "emit" prefix is deprecated.
+    LogContractCreated(_newContract, _value);
+    ^--------------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:812:19: Warning: This function only accepts a single "bytes" argument. Please use "abi.encodePacked(...)" or a similar function to encode the data.
+    bytes32 _id = keccak256("serveTx",_to,_value,_txData);
+                  ^-------------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:865:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogTransactionComplete(_id, _to, _value, _data);
+      ^---------------------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:870:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogTransactionConfirmed(_id, msg.sender, confirmsNeeded);
+      ^------------------------------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:889:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogErrorMsg(_txIndex, "Tx not initiated");
+      ^---------------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:890:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogTransactionFailed(_id, msg.sender);
+      ^-----------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:911:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogTransactionConfirmed(_id, msg.sender, confirmsNeeded);
+      ^------------------------------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:930:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogErrorMsg(_txIndex, "Tx not initiated");
+      ^---------------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:931:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogTransactionFailed(_id, msg.sender);
+      ^-----------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:937:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogErrorMsg(_txIndex, "Transaction already complete");
+      ^---------------------------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:938:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogTransactionFailed(_id, msg.sender);
+      ^-----------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:947:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogErrorMsg(index, "Owner has not confirmed tx");
+      ^----------------------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:948:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogTransactionFailed(_id, msg.sender);
+      ^-----------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:960:5: Warning: Invoking events without "emit" prefix is deprecated.
+    LogRevokeNotice(_id, msg.sender, confirmsNeeded);
+    ^----------------------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:1173:3: Warning: Function state mutability can be restricted to pure
+  function times(uint256 a, uint256 b) public view returns (bool err,uint256 res) {
+  ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/31912.sol:1190:3: Warning: Function state mutability can be restricted to pure
+  function dividedBy(uint256 a, uint256 b) public view returns (bool err,uint256 i) {
+  ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/31912.sol:1213:3: Warning: Function state mutability can be restricted to pure
+  function plus(uint256 a, uint256 b) public view returns (bool err, uint256 res) {
+  ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/31912.sol:1230:3: Warning: Function state mutability can be restricted to pure
+  function minus(uint256 a, uint256 b) public view returns (bool err,uint256 res) {
+  ^ (Relevant source part starts here and spans across multiple lines).
+
+[91m[-] Cannot compile the contract [0m
+
+====================================================================================================
+[1m[ ] Compiling Solidity contract from the file /../data/reentrancy/solidity_contract/31912.sol ... [0m/../data/reentrancy/solidity_contract/31912.sol:27:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogErrorMsg(_from, "Change from address is not an owner");
+      ^-------------------------------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:31:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogErrorMsg(_to, "Change to address is an owner");
+      ^-----------------------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:45:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogErrorMsg(_index, "New owner already owner");
+      ^--------------------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:49:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogErrorMsg(_length, "Too many owners");
+      ^-------------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:64:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogErrorMsg(_index, "Owner removing not an owner");
+      ^------------------------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:68:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogErrorMsg(_index, "Must reduce requiredAdmin first");
+      ^----------------------------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:82:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogErrorMsg(_newRequired, "Cant reduce to 0");
+      ^-------------------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:86:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogErrorMsg(_length, "Making requirement too high");
+      ^-------------------------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:119:19: Warning: This function only accepts a single "bytes" argument. Please use "abi.encodePacked(...)" or a similar function to encode the data.
+    bytes32 _id = keccak256("changeOwner",_from,_to);
+                  ^--------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:160:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogOwnerChanged(_from, _to);
+      ^-------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:168:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogTransactionConfirmed(_id, msg.sender, confirmsNeeded);
+      ^------------------------------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:188:19: Warning: This function only accepts a single "bytes" argument. Please use "abi.encodePacked(...)" or a similar function to encode the data.
+    bytes32 _id = keccak256("addOwner",_newOwner);
+                  ^-----------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:232:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogOwnerAdded(_newOwner);
+      ^----------------------^
+/../data/reentrancy/solidity_contract/31912.sol:239:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogTransactionConfirmed(_id, msg.sender, confirmsNeeded);
+      ^------------------------------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:259:19: Warning: This function only accepts a single "bytes" argument. Please use "abi.encodePacked(...)" or a similar function to encode the data.
+    bytes32 _id = keccak256("removeOwner",_ownerRemoving);
+                  ^-------------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:303:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogOwnerRemoved(_ownerRemoving);
+      ^-----------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:310:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogTransactionConfirmed(_id, msg.sender, confirmsNeeded);
+      ^------------------------------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:330:19: Warning: This function only accepts a single "bytes" argument. Please use "abi.encodePacked(...)" or a similar function to encode the data.
+    bytes32 _id = keccak256("changeRequiredAdmin",_requiredAdmin);
+                  ^---------------------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:370:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogRequirementChange(_requiredAdmin);
+      ^----------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:377:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogTransactionConfirmed(_id, msg.sender, confirmsNeeded);
+      ^------------------------------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:397:19: Warning: This function only accepts a single "bytes" argument. Please use "abi.encodePacked(...)" or a similar function to encode the data.
+    bytes32 _id = keccak256("changeRequiredMajor",_requiredMajor);
+                  ^---------------------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:437:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogRequirementChange(_requiredMajor);
+      ^----------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:444:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogTransactionConfirmed(_id, msg.sender, confirmsNeeded);
+      ^------------------------------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:464:19: Warning: This function only accepts a single "bytes" argument. Please use "abi.encodePacked(...)" or a similar function to encode the data.
+    bytes32 _id = keccak256("changeRequiredMinor",_requiredMinor);
+                  ^---------------------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:504:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogRequirementChange(_requiredMinor);
+      ^----------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:511:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogTransactionConfirmed(_id, msg.sender, confirmsNeeded);
+      ^------------------------------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:533:19: Warning: This function only accepts a single "bytes" argument. Please use "abi.encodePacked(...)" or a similar function to encode the data.
+    bytes32 _id = keccak256("changeMajorThreshold", _token, _majorThreshold);
+                  ^--------------------------------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:570:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogThresholdChange(_token, _majorThreshold);
+      ^-----------------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:577:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogTransactionConfirmed(_id, msg.sender, confirmsNeeded);
+      ^------------------------------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:679:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogErrorMsg(_txLen, "Tx not initiated");
+      ^-------------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:680:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogTransactionFailed(_id, msg.sender);
+      ^-----------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:685:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogErrorMsg(_txIndex, "Transaction already complete");
+      ^---------------------------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:686:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogTransactionFailed(_id, msg.sender);
+      ^-----------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:695:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogErrorMsg(index, "Owner already confirmed");
+      ^-------------------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:696:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogTransactionFailed(_id, msg.sender);
+      ^-----------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:797:5: Warning: Invoking events without "emit" prefix is deprecated.
+    LogContractCreated(_newContract, _value);
+    ^--------------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:812:19: Warning: This function only accepts a single "bytes" argument. Please use "abi.encodePacked(...)" or a similar function to encode the data.
+    bytes32 _id = keccak256("serveTx",_to,_value,_txData);
+                  ^-------------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:865:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogTransactionComplete(_id, _to, _value, _data);
+      ^---------------------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:870:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogTransactionConfirmed(_id, msg.sender, confirmsNeeded);
+      ^------------------------------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:889:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogErrorMsg(_txIndex, "Tx not initiated");
+      ^---------------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:890:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogTransactionFailed(_id, msg.sender);
+      ^-----------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:911:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogTransactionConfirmed(_id, msg.sender, confirmsNeeded);
+      ^------------------------------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:930:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogErrorMsg(_txIndex, "Tx not initiated");
+      ^---------------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:931:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogTransactionFailed(_id, msg.sender);
+      ^-----------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:937:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogErrorMsg(_txIndex, "Transaction already complete");
+      ^---------------------------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:938:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogTransactionFailed(_id, msg.sender);
+      ^-----------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:947:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogErrorMsg(index, "Owner has not confirmed tx");
+      ^----------------------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:948:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogTransactionFailed(_id, msg.sender);
+      ^-----------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:960:5: Warning: Invoking events without "emit" prefix is deprecated.
+    LogRevokeNotice(_id, msg.sender, confirmsNeeded);
+    ^----------------------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:1173:3: Warning: Function state mutability can be restricted to pure
+  function times(uint256 a, uint256 b) public view returns (bool err,uint256 res) {
+  ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/31912.sol:1190:3: Warning: Function state mutability can be restricted to pure
+  function dividedBy(uint256 a, uint256 b) public view returns (bool err,uint256 i) {
+  ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/31912.sol:1213:3: Warning: Function state mutability can be restricted to pure
+  function plus(uint256 a, uint256 b) public view returns (bool err, uint256 res) {
+  ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/31912.sol:1230:3: Warning: Function state mutability can be restricted to pure
+  function minus(uint256 a, uint256 b) public view returns (bool err,uint256 res) {
+  ^ (Relevant source part starts here and spans across multiple lines).
+
+[91m[-] Cannot compile the contract [0m
+
+====================================================================================================
+[1m[ ] Compiling Solidity contract from the file /../data/reentrancy/solidity_contract/31912.sol ... [0m/../data/reentrancy/solidity_contract/31912.sol:27:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogErrorMsg(_from, "Change from address is not an owner");
+      ^-------------------------------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:31:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogErrorMsg(_to, "Change to address is an owner");
+      ^-----------------------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:45:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogErrorMsg(_index, "New owner already owner");
+      ^--------------------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:49:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogErrorMsg(_length, "Too many owners");
+      ^-------------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:64:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogErrorMsg(_index, "Owner removing not an owner");
+      ^------------------------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:68:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogErrorMsg(_index, "Must reduce requiredAdmin first");
+      ^----------------------------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:82:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogErrorMsg(_newRequired, "Cant reduce to 0");
+      ^-------------------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:86:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogErrorMsg(_length, "Making requirement too high");
+      ^-------------------------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:119:19: Warning: This function only accepts a single "bytes" argument. Please use "abi.encodePacked(...)" or a similar function to encode the data.
+    bytes32 _id = keccak256("changeOwner",_from,_to);
+                  ^--------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:160:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogOwnerChanged(_from, _to);
+      ^-------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:168:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogTransactionConfirmed(_id, msg.sender, confirmsNeeded);
+      ^------------------------------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:188:19: Warning: This function only accepts a single "bytes" argument. Please use "abi.encodePacked(...)" or a similar function to encode the data.
+    bytes32 _id = keccak256("addOwner",_newOwner);
+                  ^-----------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:232:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogOwnerAdded(_newOwner);
+      ^----------------------^
+/../data/reentrancy/solidity_contract/31912.sol:239:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogTransactionConfirmed(_id, msg.sender, confirmsNeeded);
+      ^------------------------------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:259:19: Warning: This function only accepts a single "bytes" argument. Please use "abi.encodePacked(...)" or a similar function to encode the data.
+    bytes32 _id = keccak256("removeOwner",_ownerRemoving);
+                  ^-------------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:303:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogOwnerRemoved(_ownerRemoving);
+      ^-----------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:310:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogTransactionConfirmed(_id, msg.sender, confirmsNeeded);
+      ^------------------------------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:330:19: Warning: This function only accepts a single "bytes" argument. Please use "abi.encodePacked(...)" or a similar function to encode the data.
+    bytes32 _id = keccak256("changeRequiredAdmin",_requiredAdmin);
+                  ^---------------------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:370:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogRequirementChange(_requiredAdmin);
+      ^----------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:377:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogTransactionConfirmed(_id, msg.sender, confirmsNeeded);
+      ^------------------------------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:397:19: Warning: This function only accepts a single "bytes" argument. Please use "abi.encodePacked(...)" or a similar function to encode the data.
+    bytes32 _id = keccak256("changeRequiredMajor",_requiredMajor);
+                  ^---------------------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:437:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogRequirementChange(_requiredMajor);
+      ^----------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:444:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogTransactionConfirmed(_id, msg.sender, confirmsNeeded);
+      ^------------------------------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:464:19: Warning: This function only accepts a single "bytes" argument. Please use "abi.encodePacked(...)" or a similar function to encode the data.
+    bytes32 _id = keccak256("changeRequiredMinor",_requiredMinor);
+                  ^---------------------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:504:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogRequirementChange(_requiredMinor);
+      ^----------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:511:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogTransactionConfirmed(_id, msg.sender, confirmsNeeded);
+      ^------------------------------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:533:19: Warning: This function only accepts a single "bytes" argument. Please use "abi.encodePacked(...)" or a similar function to encode the data.
+    bytes32 _id = keccak256("changeMajorThreshold", _token, _majorThreshold);
+                  ^--------------------------------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:570:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogThresholdChange(_token, _majorThreshold);
+      ^-----------------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:577:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogTransactionConfirmed(_id, msg.sender, confirmsNeeded);
+      ^------------------------------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:679:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogErrorMsg(_txLen, "Tx not initiated");
+      ^-------------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:680:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogTransactionFailed(_id, msg.sender);
+      ^-----------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:685:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogErrorMsg(_txIndex, "Transaction already complete");
+      ^---------------------------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:686:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogTransactionFailed(_id, msg.sender);
+      ^-----------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:695:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogErrorMsg(index, "Owner already confirmed");
+      ^-------------------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:696:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogTransactionFailed(_id, msg.sender);
+      ^-----------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:797:5: Warning: Invoking events without "emit" prefix is deprecated.
+    LogContractCreated(_newContract, _value);
+    ^--------------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:812:19: Warning: This function only accepts a single "bytes" argument. Please use "abi.encodePacked(...)" or a similar function to encode the data.
+    bytes32 _id = keccak256("serveTx",_to,_value,_txData);
+                  ^-------------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:865:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogTransactionComplete(_id, _to, _value, _data);
+      ^---------------------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:870:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogTransactionConfirmed(_id, msg.sender, confirmsNeeded);
+      ^------------------------------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:889:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogErrorMsg(_txIndex, "Tx not initiated");
+      ^---------------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:890:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogTransactionFailed(_id, msg.sender);
+      ^-----------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:911:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogTransactionConfirmed(_id, msg.sender, confirmsNeeded);
+      ^------------------------------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:930:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogErrorMsg(_txIndex, "Tx not initiated");
+      ^---------------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:931:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogTransactionFailed(_id, msg.sender);
+      ^-----------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:937:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogErrorMsg(_txIndex, "Transaction already complete");
+      ^---------------------------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:938:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogTransactionFailed(_id, msg.sender);
+      ^-----------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:947:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogErrorMsg(index, "Owner has not confirmed tx");
+      ^----------------------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:948:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogTransactionFailed(_id, msg.sender);
+      ^-----------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:960:5: Warning: Invoking events without "emit" prefix is deprecated.
+    LogRevokeNotice(_id, msg.sender, confirmsNeeded);
+    ^----------------------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:1173:3: Warning: Function state mutability can be restricted to pure
+  function times(uint256 a, uint256 b) public view returns (bool err,uint256 res) {
+  ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/31912.sol:1190:3: Warning: Function state mutability can be restricted to pure
+  function dividedBy(uint256 a, uint256 b) public view returns (bool err,uint256 i) {
+  ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/31912.sol:1213:3: Warning: Function state mutability can be restricted to pure
+  function plus(uint256 a, uint256 b) public view returns (bool err, uint256 res) {
+  ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/31912.sol:1230:3: Warning: Function state mutability can be restricted to pure
+  function minus(uint256 a, uint256 b) public view returns (bool err,uint256 res) {
+  ^ (Relevant source part starts here and spans across multiple lines).
+
+[91m[-] Cannot compile the contract [0m
+
+====================================================================================================
+[1m[ ] Compiling Solidity contract from the file /../data/reentrancy/solidity_contract/31912.sol ... [0m/../data/reentrancy/solidity_contract/31912.sol:27:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogErrorMsg(_from, "Change from address is not an owner");
+      ^-------------------------------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:31:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogErrorMsg(_to, "Change to address is an owner");
+      ^-----------------------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:45:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogErrorMsg(_index, "New owner already owner");
+      ^--------------------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:49:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogErrorMsg(_length, "Too many owners");
+      ^-------------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:64:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogErrorMsg(_index, "Owner removing not an owner");
+      ^------------------------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:68:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogErrorMsg(_index, "Must reduce requiredAdmin first");
+      ^----------------------------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:82:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogErrorMsg(_newRequired, "Cant reduce to 0");
+      ^-------------------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:86:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogErrorMsg(_length, "Making requirement too high");
+      ^-------------------------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:119:19: Warning: This function only accepts a single "bytes" argument. Please use "abi.encodePacked(...)" or a similar function to encode the data.
+    bytes32 _id = keccak256("changeOwner",_from,_to);
+                  ^--------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:160:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogOwnerChanged(_from, _to);
+      ^-------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:168:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogTransactionConfirmed(_id, msg.sender, confirmsNeeded);
+      ^------------------------------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:188:19: Warning: This function only accepts a single "bytes" argument. Please use "abi.encodePacked(...)" or a similar function to encode the data.
+    bytes32 _id = keccak256("addOwner",_newOwner);
+                  ^-----------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:232:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogOwnerAdded(_newOwner);
+      ^----------------------^
+/../data/reentrancy/solidity_contract/31912.sol:239:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogTransactionConfirmed(_id, msg.sender, confirmsNeeded);
+      ^------------------------------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:259:19: Warning: This function only accepts a single "bytes" argument. Please use "abi.encodePacked(...)" or a similar function to encode the data.
+    bytes32 _id = keccak256("removeOwner",_ownerRemoving);
+                  ^-------------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:303:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogOwnerRemoved(_ownerRemoving);
+      ^-----------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:310:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogTransactionConfirmed(_id, msg.sender, confirmsNeeded);
+      ^------------------------------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:330:19: Warning: This function only accepts a single "bytes" argument. Please use "abi.encodePacked(...)" or a similar function to encode the data.
+    bytes32 _id = keccak256("changeRequiredAdmin",_requiredAdmin);
+                  ^---------------------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:370:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogRequirementChange(_requiredAdmin);
+      ^----------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:377:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogTransactionConfirmed(_id, msg.sender, confirmsNeeded);
+      ^------------------------------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:397:19: Warning: This function only accepts a single "bytes" argument. Please use "abi.encodePacked(...)" or a similar function to encode the data.
+    bytes32 _id = keccak256("changeRequiredMajor",_requiredMajor);
+                  ^---------------------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:437:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogRequirementChange(_requiredMajor);
+      ^----------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:444:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogTransactionConfirmed(_id, msg.sender, confirmsNeeded);
+      ^------------------------------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:464:19: Warning: This function only accepts a single "bytes" argument. Please use "abi.encodePacked(...)" or a similar function to encode the data.
+    bytes32 _id = keccak256("changeRequiredMinor",_requiredMinor);
+                  ^---------------------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:504:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogRequirementChange(_requiredMinor);
+      ^----------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:511:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogTransactionConfirmed(_id, msg.sender, confirmsNeeded);
+      ^------------------------------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:533:19: Warning: This function only accepts a single "bytes" argument. Please use "abi.encodePacked(...)" or a similar function to encode the data.
+    bytes32 _id = keccak256("changeMajorThreshold", _token, _majorThreshold);
+                  ^--------------------------------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:570:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogThresholdChange(_token, _majorThreshold);
+      ^-----------------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:577:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogTransactionConfirmed(_id, msg.sender, confirmsNeeded);
+      ^------------------------------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:679:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogErrorMsg(_txLen, "Tx not initiated");
+      ^-------------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:680:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogTransactionFailed(_id, msg.sender);
+      ^-----------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:685:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogErrorMsg(_txIndex, "Transaction already complete");
+      ^---------------------------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:686:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogTransactionFailed(_id, msg.sender);
+      ^-----------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:695:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogErrorMsg(index, "Owner already confirmed");
+      ^-------------------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:696:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogTransactionFailed(_id, msg.sender);
+      ^-----------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:797:5: Warning: Invoking events without "emit" prefix is deprecated.
+    LogContractCreated(_newContract, _value);
+    ^--------------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:812:19: Warning: This function only accepts a single "bytes" argument. Please use "abi.encodePacked(...)" or a similar function to encode the data.
+    bytes32 _id = keccak256("serveTx",_to,_value,_txData);
+                  ^-------------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:865:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogTransactionComplete(_id, _to, _value, _data);
+      ^---------------------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:870:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogTransactionConfirmed(_id, msg.sender, confirmsNeeded);
+      ^------------------------------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:889:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogErrorMsg(_txIndex, "Tx not initiated");
+      ^---------------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:890:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogTransactionFailed(_id, msg.sender);
+      ^-----------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:911:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogTransactionConfirmed(_id, msg.sender, confirmsNeeded);
+      ^------------------------------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:930:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogErrorMsg(_txIndex, "Tx not initiated");
+      ^---------------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:931:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogTransactionFailed(_id, msg.sender);
+      ^-----------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:937:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogErrorMsg(_txIndex, "Transaction already complete");
+      ^---------------------------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:938:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogTransactionFailed(_id, msg.sender);
+      ^-----------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:947:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogErrorMsg(index, "Owner has not confirmed tx");
+      ^----------------------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:948:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogTransactionFailed(_id, msg.sender);
+      ^-----------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:960:5: Warning: Invoking events without "emit" prefix is deprecated.
+    LogRevokeNotice(_id, msg.sender, confirmsNeeded);
+    ^----------------------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:1173:3: Warning: Function state mutability can be restricted to pure
+  function times(uint256 a, uint256 b) public view returns (bool err,uint256 res) {
+  ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/31912.sol:1190:3: Warning: Function state mutability can be restricted to pure
+  function dividedBy(uint256 a, uint256 b) public view returns (bool err,uint256 i) {
+  ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/31912.sol:1213:3: Warning: Function state mutability can be restricted to pure
+  function plus(uint256 a, uint256 b) public view returns (bool err, uint256 res) {
+  ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/31912.sol:1230:3: Warning: Function state mutability can be restricted to pure
+  function minus(uint256 a, uint256 b) public view returns (bool err,uint256 res) {
+  ^ (Relevant source part starts here and spans across multiple lines).
+
+[91m[-] Cannot compile the contract [0m
+
+====================================================================================================
+[1m[ ] Compiling Solidity contract from the file /../data/reentrancy/solidity_contract/31912.sol ... [0m/../data/reentrancy/solidity_contract/31912.sol:27:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogErrorMsg(_from, "Change from address is not an owner");
+      ^-------------------------------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:31:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogErrorMsg(_to, "Change to address is an owner");
+      ^-----------------------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:45:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogErrorMsg(_index, "New owner already owner");
+      ^--------------------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:49:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogErrorMsg(_length, "Too many owners");
+      ^-------------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:64:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogErrorMsg(_index, "Owner removing not an owner");
+      ^------------------------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:68:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogErrorMsg(_index, "Must reduce requiredAdmin first");
+      ^----------------------------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:82:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogErrorMsg(_newRequired, "Cant reduce to 0");
+      ^-------------------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:86:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogErrorMsg(_length, "Making requirement too high");
+      ^-------------------------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:119:19: Warning: This function only accepts a single "bytes" argument. Please use "abi.encodePacked(...)" or a similar function to encode the data.
+    bytes32 _id = keccak256("changeOwner",_from,_to);
+                  ^--------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:160:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogOwnerChanged(_from, _to);
+      ^-------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:168:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogTransactionConfirmed(_id, msg.sender, confirmsNeeded);
+      ^------------------------------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:188:19: Warning: This function only accepts a single "bytes" argument. Please use "abi.encodePacked(...)" or a similar function to encode the data.
+    bytes32 _id = keccak256("addOwner",_newOwner);
+                  ^-----------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:232:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogOwnerAdded(_newOwner);
+      ^----------------------^
+/../data/reentrancy/solidity_contract/31912.sol:239:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogTransactionConfirmed(_id, msg.sender, confirmsNeeded);
+      ^------------------------------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:259:19: Warning: This function only accepts a single "bytes" argument. Please use "abi.encodePacked(...)" or a similar function to encode the data.
+    bytes32 _id = keccak256("removeOwner",_ownerRemoving);
+                  ^-------------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:303:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogOwnerRemoved(_ownerRemoving);
+      ^-----------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:310:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogTransactionConfirmed(_id, msg.sender, confirmsNeeded);
+      ^------------------------------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:330:19: Warning: This function only accepts a single "bytes" argument. Please use "abi.encodePacked(...)" or a similar function to encode the data.
+    bytes32 _id = keccak256("changeRequiredAdmin",_requiredAdmin);
+                  ^---------------------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:370:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogRequirementChange(_requiredAdmin);
+      ^----------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:377:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogTransactionConfirmed(_id, msg.sender, confirmsNeeded);
+      ^------------------------------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:397:19: Warning: This function only accepts a single "bytes" argument. Please use "abi.encodePacked(...)" or a similar function to encode the data.
+    bytes32 _id = keccak256("changeRequiredMajor",_requiredMajor);
+                  ^---------------------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:437:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogRequirementChange(_requiredMajor);
+      ^----------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:444:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogTransactionConfirmed(_id, msg.sender, confirmsNeeded);
+      ^------------------------------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:464:19: Warning: This function only accepts a single "bytes" argument. Please use "abi.encodePacked(...)" or a similar function to encode the data.
+    bytes32 _id = keccak256("changeRequiredMinor",_requiredMinor);
+                  ^---------------------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:504:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogRequirementChange(_requiredMinor);
+      ^----------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:511:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogTransactionConfirmed(_id, msg.sender, confirmsNeeded);
+      ^------------------------------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:533:19: Warning: This function only accepts a single "bytes" argument. Please use "abi.encodePacked(...)" or a similar function to encode the data.
+    bytes32 _id = keccak256("changeMajorThreshold", _token, _majorThreshold);
+                  ^--------------------------------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:570:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogThresholdChange(_token, _majorThreshold);
+      ^-----------------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:577:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogTransactionConfirmed(_id, msg.sender, confirmsNeeded);
+      ^------------------------------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:679:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogErrorMsg(_txLen, "Tx not initiated");
+      ^-------------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:680:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogTransactionFailed(_id, msg.sender);
+      ^-----------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:685:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogErrorMsg(_txIndex, "Transaction already complete");
+      ^---------------------------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:686:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogTransactionFailed(_id, msg.sender);
+      ^-----------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:695:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogErrorMsg(index, "Owner already confirmed");
+      ^-------------------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:696:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogTransactionFailed(_id, msg.sender);
+      ^-----------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:797:5: Warning: Invoking events without "emit" prefix is deprecated.
+    LogContractCreated(_newContract, _value);
+    ^--------------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:812:19: Warning: This function only accepts a single "bytes" argument. Please use "abi.encodePacked(...)" or a similar function to encode the data.
+    bytes32 _id = keccak256("serveTx",_to,_value,_txData);
+                  ^-------------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:865:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogTransactionComplete(_id, _to, _value, _data);
+      ^---------------------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:870:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogTransactionConfirmed(_id, msg.sender, confirmsNeeded);
+      ^------------------------------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:889:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogErrorMsg(_txIndex, "Tx not initiated");
+      ^---------------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:890:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogTransactionFailed(_id, msg.sender);
+      ^-----------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:911:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogTransactionConfirmed(_id, msg.sender, confirmsNeeded);
+      ^------------------------------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:930:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogErrorMsg(_txIndex, "Tx not initiated");
+      ^---------------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:931:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogTransactionFailed(_id, msg.sender);
+      ^-----------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:937:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogErrorMsg(_txIndex, "Transaction already complete");
+      ^---------------------------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:938:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogTransactionFailed(_id, msg.sender);
+      ^-----------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:947:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogErrorMsg(index, "Owner has not confirmed tx");
+      ^----------------------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:948:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogTransactionFailed(_id, msg.sender);
+      ^-----------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:960:5: Warning: Invoking events without "emit" prefix is deprecated.
+    LogRevokeNotice(_id, msg.sender, confirmsNeeded);
+    ^----------------------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:1173:3: Warning: Function state mutability can be restricted to pure
+  function times(uint256 a, uint256 b) public view returns (bool err,uint256 res) {
+  ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/31912.sol:1190:3: Warning: Function state mutability can be restricted to pure
+  function dividedBy(uint256 a, uint256 b) public view returns (bool err,uint256 i) {
+  ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/31912.sol:1213:3: Warning: Function state mutability can be restricted to pure
+  function plus(uint256 a, uint256 b) public view returns (bool err, uint256 res) {
+  ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/31912.sol:1230:3: Warning: Function state mutability can be restricted to pure
+  function minus(uint256 a, uint256 b) public view returns (bool err,uint256 res) {
+  ^ (Relevant source part starts here and spans across multiple lines).
+
+[91m[-] Cannot compile the contract [0m
+
+====================================================================================================
+[1m[ ] Compiling Solidity contract from the file /../data/reentrancy/solidity_contract/31912.sol ... [0m/../data/reentrancy/solidity_contract/31912.sol:27:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogErrorMsg(_from, "Change from address is not an owner");
+      ^-------------------------------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:31:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogErrorMsg(_to, "Change to address is an owner");
+      ^-----------------------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:45:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogErrorMsg(_index, "New owner already owner");
+      ^--------------------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:49:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogErrorMsg(_length, "Too many owners");
+      ^-------------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:64:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogErrorMsg(_index, "Owner removing not an owner");
+      ^------------------------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:68:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogErrorMsg(_index, "Must reduce requiredAdmin first");
+      ^----------------------------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:82:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogErrorMsg(_newRequired, "Cant reduce to 0");
+      ^-------------------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:86:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogErrorMsg(_length, "Making requirement too high");
+      ^-------------------------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:119:19: Warning: This function only accepts a single "bytes" argument. Please use "abi.encodePacked(...)" or a similar function to encode the data.
+    bytes32 _id = keccak256("changeOwner",_from,_to);
+                  ^--------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:160:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogOwnerChanged(_from, _to);
+      ^-------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:168:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogTransactionConfirmed(_id, msg.sender, confirmsNeeded);
+      ^------------------------------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:188:19: Warning: This function only accepts a single "bytes" argument. Please use "abi.encodePacked(...)" or a similar function to encode the data.
+    bytes32 _id = keccak256("addOwner",_newOwner);
+                  ^-----------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:232:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogOwnerAdded(_newOwner);
+      ^----------------------^
+/../data/reentrancy/solidity_contract/31912.sol:239:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogTransactionConfirmed(_id, msg.sender, confirmsNeeded);
+      ^------------------------------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:259:19: Warning: This function only accepts a single "bytes" argument. Please use "abi.encodePacked(...)" or a similar function to encode the data.
+    bytes32 _id = keccak256("removeOwner",_ownerRemoving);
+                  ^-------------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:303:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogOwnerRemoved(_ownerRemoving);
+      ^-----------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:310:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogTransactionConfirmed(_id, msg.sender, confirmsNeeded);
+      ^------------------------------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:330:19: Warning: This function only accepts a single "bytes" argument. Please use "abi.encodePacked(...)" or a similar function to encode the data.
+    bytes32 _id = keccak256("changeRequiredAdmin",_requiredAdmin);
+                  ^---------------------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:370:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogRequirementChange(_requiredAdmin);
+      ^----------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:377:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogTransactionConfirmed(_id, msg.sender, confirmsNeeded);
+      ^------------------------------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:397:19: Warning: This function only accepts a single "bytes" argument. Please use "abi.encodePacked(...)" or a similar function to encode the data.
+    bytes32 _id = keccak256("changeRequiredMajor",_requiredMajor);
+                  ^---------------------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:437:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogRequirementChange(_requiredMajor);
+      ^----------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:444:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogTransactionConfirmed(_id, msg.sender, confirmsNeeded);
+      ^------------------------------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:464:19: Warning: This function only accepts a single "bytes" argument. Please use "abi.encodePacked(...)" or a similar function to encode the data.
+    bytes32 _id = keccak256("changeRequiredMinor",_requiredMinor);
+                  ^---------------------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:504:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogRequirementChange(_requiredMinor);
+      ^----------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:511:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogTransactionConfirmed(_id, msg.sender, confirmsNeeded);
+      ^------------------------------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:533:19: Warning: This function only accepts a single "bytes" argument. Please use "abi.encodePacked(...)" or a similar function to encode the data.
+    bytes32 _id = keccak256("changeMajorThreshold", _token, _majorThreshold);
+                  ^--------------------------------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:570:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogThresholdChange(_token, _majorThreshold);
+      ^-----------------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:577:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogTransactionConfirmed(_id, msg.sender, confirmsNeeded);
+      ^------------------------------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:679:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogErrorMsg(_txLen, "Tx not initiated");
+      ^-------------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:680:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogTransactionFailed(_id, msg.sender);
+      ^-----------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:685:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogErrorMsg(_txIndex, "Transaction already complete");
+      ^---------------------------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:686:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogTransactionFailed(_id, msg.sender);
+      ^-----------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:695:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogErrorMsg(index, "Owner already confirmed");
+      ^-------------------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:696:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogTransactionFailed(_id, msg.sender);
+      ^-----------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:797:5: Warning: Invoking events without "emit" prefix is deprecated.
+    LogContractCreated(_newContract, _value);
+    ^--------------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:812:19: Warning: This function only accepts a single "bytes" argument. Please use "abi.encodePacked(...)" or a similar function to encode the data.
+    bytes32 _id = keccak256("serveTx",_to,_value,_txData);
+                  ^-------------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:865:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogTransactionComplete(_id, _to, _value, _data);
+      ^---------------------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:870:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogTransactionConfirmed(_id, msg.sender, confirmsNeeded);
+      ^------------------------------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:889:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogErrorMsg(_txIndex, "Tx not initiated");
+      ^---------------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:890:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogTransactionFailed(_id, msg.sender);
+      ^-----------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:911:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogTransactionConfirmed(_id, msg.sender, confirmsNeeded);
+      ^------------------------------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:930:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogErrorMsg(_txIndex, "Tx not initiated");
+      ^---------------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:931:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogTransactionFailed(_id, msg.sender);
+      ^-----------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:937:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogErrorMsg(_txIndex, "Transaction already complete");
+      ^---------------------------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:938:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogTransactionFailed(_id, msg.sender);
+      ^-----------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:947:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogErrorMsg(index, "Owner has not confirmed tx");
+      ^----------------------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:948:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogTransactionFailed(_id, msg.sender);
+      ^-----------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:960:5: Warning: Invoking events without "emit" prefix is deprecated.
+    LogRevokeNotice(_id, msg.sender, confirmsNeeded);
+    ^----------------------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:1173:3: Warning: Function state mutability can be restricted to pure
+  function times(uint256 a, uint256 b) public view returns (bool err,uint256 res) {
+  ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/31912.sol:1190:3: Warning: Function state mutability can be restricted to pure
+  function dividedBy(uint256 a, uint256 b) public view returns (bool err,uint256 i) {
+  ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/31912.sol:1213:3: Warning: Function state mutability can be restricted to pure
+  function plus(uint256 a, uint256 b) public view returns (bool err, uint256 res) {
+  ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/31912.sol:1230:3: Warning: Function state mutability can be restricted to pure
+  function minus(uint256 a, uint256 b) public view returns (bool err,uint256 res) {
+  ^ (Relevant source part starts here and spans across multiple lines).
+
+[91m[-] Cannot compile the contract [0m
+
+====================================================================================================
+[1m[ ] Compiling Solidity contract from the file /../data/reentrancy/solidity_contract/31912.sol ... [0m/../data/reentrancy/solidity_contract/31912.sol:27:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogErrorMsg(_from, "Change from address is not an owner");
+      ^-------------------------------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:31:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogErrorMsg(_to, "Change to address is an owner");
+      ^-----------------------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:45:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogErrorMsg(_index, "New owner already owner");
+      ^--------------------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:49:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogErrorMsg(_length, "Too many owners");
+      ^-------------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:64:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogErrorMsg(_index, "Owner removing not an owner");
+      ^------------------------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:68:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogErrorMsg(_index, "Must reduce requiredAdmin first");
+      ^----------------------------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:82:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogErrorMsg(_newRequired, "Cant reduce to 0");
+      ^-------------------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:86:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogErrorMsg(_length, "Making requirement too high");
+      ^-------------------------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:119:19: Warning: This function only accepts a single "bytes" argument. Please use "abi.encodePacked(...)" or a similar function to encode the data.
+    bytes32 _id = keccak256("changeOwner",_from,_to);
+                  ^--------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:160:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogOwnerChanged(_from, _to);
+      ^-------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:168:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogTransactionConfirmed(_id, msg.sender, confirmsNeeded);
+      ^------------------------------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:188:19: Warning: This function only accepts a single "bytes" argument. Please use "abi.encodePacked(...)" or a similar function to encode the data.
+    bytes32 _id = keccak256("addOwner",_newOwner);
+                  ^-----------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:232:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogOwnerAdded(_newOwner);
+      ^----------------------^
+/../data/reentrancy/solidity_contract/31912.sol:239:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogTransactionConfirmed(_id, msg.sender, confirmsNeeded);
+      ^------------------------------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:259:19: Warning: This function only accepts a single "bytes" argument. Please use "abi.encodePacked(...)" or a similar function to encode the data.
+    bytes32 _id = keccak256("removeOwner",_ownerRemoving);
+                  ^-------------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:303:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogOwnerRemoved(_ownerRemoving);
+      ^-----------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:310:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogTransactionConfirmed(_id, msg.sender, confirmsNeeded);
+      ^------------------------------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:330:19: Warning: This function only accepts a single "bytes" argument. Please use "abi.encodePacked(...)" or a similar function to encode the data.
+    bytes32 _id = keccak256("changeRequiredAdmin",_requiredAdmin);
+                  ^---------------------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:370:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogRequirementChange(_requiredAdmin);
+      ^----------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:377:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogTransactionConfirmed(_id, msg.sender, confirmsNeeded);
+      ^------------------------------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:397:19: Warning: This function only accepts a single "bytes" argument. Please use "abi.encodePacked(...)" or a similar function to encode the data.
+    bytes32 _id = keccak256("changeRequiredMajor",_requiredMajor);
+                  ^---------------------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:437:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogRequirementChange(_requiredMajor);
+      ^----------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:444:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogTransactionConfirmed(_id, msg.sender, confirmsNeeded);
+      ^------------------------------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:464:19: Warning: This function only accepts a single "bytes" argument. Please use "abi.encodePacked(...)" or a similar function to encode the data.
+    bytes32 _id = keccak256("changeRequiredMinor",_requiredMinor);
+                  ^---------------------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:504:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogRequirementChange(_requiredMinor);
+      ^----------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:511:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogTransactionConfirmed(_id, msg.sender, confirmsNeeded);
+      ^------------------------------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:533:19: Warning: This function only accepts a single "bytes" argument. Please use "abi.encodePacked(...)" or a similar function to encode the data.
+    bytes32 _id = keccak256("changeMajorThreshold", _token, _majorThreshold);
+                  ^--------------------------------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:570:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogThresholdChange(_token, _majorThreshold);
+      ^-----------------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:577:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogTransactionConfirmed(_id, msg.sender, confirmsNeeded);
+      ^------------------------------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:679:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogErrorMsg(_txLen, "Tx not initiated");
+      ^-------------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:680:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogTransactionFailed(_id, msg.sender);
+      ^-----------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:685:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogErrorMsg(_txIndex, "Transaction already complete");
+      ^---------------------------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:686:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogTransactionFailed(_id, msg.sender);
+      ^-----------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:695:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogErrorMsg(index, "Owner already confirmed");
+      ^-------------------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:696:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogTransactionFailed(_id, msg.sender);
+      ^-----------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:797:5: Warning: Invoking events without "emit" prefix is deprecated.
+    LogContractCreated(_newContract, _value);
+    ^--------------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:812:19: Warning: This function only accepts a single "bytes" argument. Please use "abi.encodePacked(...)" or a similar function to encode the data.
+    bytes32 _id = keccak256("serveTx",_to,_value,_txData);
+                  ^-------------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:865:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogTransactionComplete(_id, _to, _value, _data);
+      ^---------------------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:870:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogTransactionConfirmed(_id, msg.sender, confirmsNeeded);
+      ^------------------------------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:889:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogErrorMsg(_txIndex, "Tx not initiated");
+      ^---------------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:890:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogTransactionFailed(_id, msg.sender);
+      ^-----------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:911:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogTransactionConfirmed(_id, msg.sender, confirmsNeeded);
+      ^------------------------------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:930:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogErrorMsg(_txIndex, "Tx not initiated");
+      ^---------------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:931:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogTransactionFailed(_id, msg.sender);
+      ^-----------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:937:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogErrorMsg(_txIndex, "Transaction already complete");
+      ^---------------------------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:938:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogTransactionFailed(_id, msg.sender);
+      ^-----------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:947:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogErrorMsg(index, "Owner has not confirmed tx");
+      ^----------------------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:948:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogTransactionFailed(_id, msg.sender);
+      ^-----------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:960:5: Warning: Invoking events without "emit" prefix is deprecated.
+    LogRevokeNotice(_id, msg.sender, confirmsNeeded);
+    ^----------------------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:1173:3: Warning: Function state mutability can be restricted to pure
+  function times(uint256 a, uint256 b) public view returns (bool err,uint256 res) {
+  ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/31912.sol:1190:3: Warning: Function state mutability can be restricted to pure
+  function dividedBy(uint256 a, uint256 b) public view returns (bool err,uint256 i) {
+  ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/31912.sol:1213:3: Warning: Function state mutability can be restricted to pure
+  function plus(uint256 a, uint256 b) public view returns (bool err, uint256 res) {
+  ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/31912.sol:1230:3: Warning: Function state mutability can be restricted to pure
+  function minus(uint256 a, uint256 b) public view returns (bool err,uint256 res) {
+  ^ (Relevant source part starts here and spans across multiple lines).
+
+[91m[-] Cannot compile the contract [0m
+
+====================================================================================================
+[1m[ ] Compiling Solidity contract from the file /../data/reentrancy/solidity_contract/31912.sol ... [0m/../data/reentrancy/solidity_contract/31912.sol:27:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogErrorMsg(_from, "Change from address is not an owner");
+      ^-------------------------------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:31:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogErrorMsg(_to, "Change to address is an owner");
+      ^-----------------------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:45:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogErrorMsg(_index, "New owner already owner");
+      ^--------------------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:49:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogErrorMsg(_length, "Too many owners");
+      ^-------------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:64:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogErrorMsg(_index, "Owner removing not an owner");
+      ^------------------------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:68:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogErrorMsg(_index, "Must reduce requiredAdmin first");
+      ^----------------------------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:82:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogErrorMsg(_newRequired, "Cant reduce to 0");
+      ^-------------------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:86:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogErrorMsg(_length, "Making requirement too high");
+      ^-------------------------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:119:19: Warning: This function only accepts a single "bytes" argument. Please use "abi.encodePacked(...)" or a similar function to encode the data.
+    bytes32 _id = keccak256("changeOwner",_from,_to);
+                  ^--------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:160:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogOwnerChanged(_from, _to);
+      ^-------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:168:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogTransactionConfirmed(_id, msg.sender, confirmsNeeded);
+      ^------------------------------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:188:19: Warning: This function only accepts a single "bytes" argument. Please use "abi.encodePacked(...)" or a similar function to encode the data.
+    bytes32 _id = keccak256("addOwner",_newOwner);
+                  ^-----------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:232:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogOwnerAdded(_newOwner);
+      ^----------------------^
+/../data/reentrancy/solidity_contract/31912.sol:239:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogTransactionConfirmed(_id, msg.sender, confirmsNeeded);
+      ^------------------------------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:259:19: Warning: This function only accepts a single "bytes" argument. Please use "abi.encodePacked(...)" or a similar function to encode the data.
+    bytes32 _id = keccak256("removeOwner",_ownerRemoving);
+                  ^-------------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:303:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogOwnerRemoved(_ownerRemoving);
+      ^-----------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:310:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogTransactionConfirmed(_id, msg.sender, confirmsNeeded);
+      ^------------------------------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:330:19: Warning: This function only accepts a single "bytes" argument. Please use "abi.encodePacked(...)" or a similar function to encode the data.
+    bytes32 _id = keccak256("changeRequiredAdmin",_requiredAdmin);
+                  ^---------------------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:370:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogRequirementChange(_requiredAdmin);
+      ^----------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:377:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogTransactionConfirmed(_id, msg.sender, confirmsNeeded);
+      ^------------------------------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:397:19: Warning: This function only accepts a single "bytes" argument. Please use "abi.encodePacked(...)" or a similar function to encode the data.
+    bytes32 _id = keccak256("changeRequiredMajor",_requiredMajor);
+                  ^---------------------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:437:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogRequirementChange(_requiredMajor);
+      ^----------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:444:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogTransactionConfirmed(_id, msg.sender, confirmsNeeded);
+      ^------------------------------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:464:19: Warning: This function only accepts a single "bytes" argument. Please use "abi.encodePacked(...)" or a similar function to encode the data.
+    bytes32 _id = keccak256("changeRequiredMinor",_requiredMinor);
+                  ^---------------------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:504:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogRequirementChange(_requiredMinor);
+      ^----------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:511:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogTransactionConfirmed(_id, msg.sender, confirmsNeeded);
+      ^------------------------------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:533:19: Warning: This function only accepts a single "bytes" argument. Please use "abi.encodePacked(...)" or a similar function to encode the data.
+    bytes32 _id = keccak256("changeMajorThreshold", _token, _majorThreshold);
+                  ^--------------------------------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:570:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogThresholdChange(_token, _majorThreshold);
+      ^-----------------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:577:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogTransactionConfirmed(_id, msg.sender, confirmsNeeded);
+      ^------------------------------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:679:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogErrorMsg(_txLen, "Tx not initiated");
+      ^-------------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:680:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogTransactionFailed(_id, msg.sender);
+      ^-----------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:685:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogErrorMsg(_txIndex, "Transaction already complete");
+      ^---------------------------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:686:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogTransactionFailed(_id, msg.sender);
+      ^-----------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:695:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogErrorMsg(index, "Owner already confirmed");
+      ^-------------------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:696:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogTransactionFailed(_id, msg.sender);
+      ^-----------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:797:5: Warning: Invoking events without "emit" prefix is deprecated.
+    LogContractCreated(_newContract, _value);
+    ^--------------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:812:19: Warning: This function only accepts a single "bytes" argument. Please use "abi.encodePacked(...)" or a similar function to encode the data.
+    bytes32 _id = keccak256("serveTx",_to,_value,_txData);
+                  ^-------------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:865:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogTransactionComplete(_id, _to, _value, _data);
+      ^---------------------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:870:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogTransactionConfirmed(_id, msg.sender, confirmsNeeded);
+      ^------------------------------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:889:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogErrorMsg(_txIndex, "Tx not initiated");
+      ^---------------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:890:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogTransactionFailed(_id, msg.sender);
+      ^-----------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:911:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogTransactionConfirmed(_id, msg.sender, confirmsNeeded);
+      ^------------------------------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:930:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogErrorMsg(_txIndex, "Tx not initiated");
+      ^---------------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:931:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogTransactionFailed(_id, msg.sender);
+      ^-----------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:937:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogErrorMsg(_txIndex, "Transaction already complete");
+      ^---------------------------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:938:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogTransactionFailed(_id, msg.sender);
+      ^-----------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:947:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogErrorMsg(index, "Owner has not confirmed tx");
+      ^----------------------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:948:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogTransactionFailed(_id, msg.sender);
+      ^-----------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:960:5: Warning: Invoking events without "emit" prefix is deprecated.
+    LogRevokeNotice(_id, msg.sender, confirmsNeeded);
+    ^----------------------------------------------^
+/../data/reentrancy/solidity_contract/31912.sol:1173:3: Warning: Function state mutability can be restricted to pure
+  function times(uint256 a, uint256 b) public view returns (bool err,uint256 res) {
+  ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/31912.sol:1190:3: Warning: Function state mutability can be restricted to pure
+  function dividedBy(uint256 a, uint256 b) public view returns (bool err,uint256 i) {
+  ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/31912.sol:1213:3: Warning: Function state mutability can be restricted to pure
+  function plus(uint256 a, uint256 b) public view returns (bool err, uint256 res) {
+  ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/31912.sol:1230:3: Warning: Function state mutability can be restricted to pure
+  function minus(uint256 a, uint256 b) public view returns (bool err,uint256 res) {
+  ^ (Relevant source part starts here and spans across multiple lines).
+
+[91m[-] Cannot compile the contract [0m

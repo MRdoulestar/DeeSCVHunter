@@ -1,0 +1,40 @@
+{
+  "contract": "37329",
+  "tool": "osiris",
+  "start": 1609160364.530161,
+  "end": 1609160371.2198012,
+  "duration": 6.689640283584595,
+  "analysis": [
+    {
+      "errors": [
+        {
+          "line": 119,
+          "column": 5,
+          "message": "concurrency_bug"
+        },
+        {
+          "line": 143,
+          "column": 12,
+          "message": "concurrency_bug"
+        },
+        {
+          "line": 143,
+          "column": 12,
+          "message": "reentrancy_bug"
+        }
+      ],
+      "file": "/../data/reentrancy/solidity_contract/37329.sol",
+      "name": "ICOBuyer"
+    },
+    {
+      "errors": [],
+      "file": "/../data/reentrancy/solidity_contract/37329.sol",
+      "name": "Math"
+    },
+    {
+      "errors": [],
+      "file": "/../data/reentrancy/solidity_contract/37329.sol",
+      "name": "Ownable"
+    }
+  ]
+}

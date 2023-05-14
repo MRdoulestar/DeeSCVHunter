@@ -1,0 +1,14 @@
+{
+  "contract": "37891",
+  "tool": "honeybadger",
+  "start": 1609168762.1165571,
+  "end": 1609168763.915513,
+  "duration": 1.7989559173583984,
+  "analysis": [
+    {
+      "errors": [],
+      "file": "/../data/reentrancy/solidity_contract/37891.sol",
+      "name": "Escrow"
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "contract": "21111",
+  "tool": "honeybadger",
+  "start": 1609127064.9444108,
+  "end": 1609127233.86066,
+  "duration": 168.91624927520752,
+  "analysis": [
+    {
+      "errors": [],
+      "file": "/../data/reentrancy/solidity_contract/21111.sol",
+      "name": "ERC20"
+    },
+    {
+      "errors": [],
+      "file": "/../data/reentrancy/solidity_contract/21111.sol",
+      "name": "PresalePool"
+    }
+  ]
+}

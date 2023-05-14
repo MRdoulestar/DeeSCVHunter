@@ -1,0 +1,74 @@
+====================================================================================================
+[1m[ ] Compiling Solidity contract from the file /../data/reentrancy/solidity_contract/40090.sol ... [0m/../data/reentrancy/solidity_contract/40090.sol:56:32: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+
+[91m[-] Cannot compile the contract [0m
+
+====================================================================================================
+[1m[ ] Compiling Solidity contract from the file /../data/reentrancy/solidity_contract/40090.sol ... [0m/../data/reentrancy/solidity_contract/40090.sol:56:32: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function _state() internal constant returns(PendingState storage) {
+
+[91m[-] Cannot compile the contract [0m
+
+====================================================================================================
+[1m[ ] Compiling Solidity contract from the file /../data/reentrancy/solidity_contract/40090.sol ... [0m/../data/reentrancy/solidity_contract/40090.sol:56:32: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function _state() internal constant returns(PendingState storage) {
+                               ^------^
+/../data/reentrancy/solidity_contract/40090.sol:60:74: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function multiAccessHasConfirmed(bytes32 _operation, address _owner) constant returns(bool) {
+                                                                         ^------^
+/../data/reentrancy/solidity_contract/40090.sol:73:37: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function multiAccessGetOwners() constant returns(address[]) {
+                                    ^------^
+/../data/reentrancy/solidity_contract/40090.sol:140:48: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function multiAccessIsOwner(address _addr) constant returns(bool) {
+                                               ^------^
+
+[91m[-] Cannot compile the contract [0m
+
+====================================================================================================
+[1m[ ] Compiling Solidity contract from the file /../data/reentrancy/solidity_contract/40090.sol ... [0m/../data/reentrancy/solidity_contract/40090.sol:56:32: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function _state() internal constant returns(PendingState storage) {
+                               ^------^
+/../data/reentrancy/solidity_contract/40090.sol:60:74: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function multiAccessHasConfirmed(bytes32 _operation, address _owner) constant returns(bool) {
+                                                                         ^------^
+/../data/reentrancy/solidity_contract/40090.sol:73:37: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function multiAccessGetOwners() constant returns(address[]) {
+                                    ^------^
+/../data/reentrancy/solidity_contract/40090.sol:140:48: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function multiAccessIsOwner(address _addr) constant returns(bool) {
+                                               ^------^
+
+[91m[-] Cannot compile the contract [0m
+
+====================================================================================================
+[1m[ ] Compiling Solidity contract from the file /../data/reentrancy/solidity_contract/40090.sol ... [0m/../data/reentrancy/solidity_contract/40090.sol:56:32: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function _state() internal constant returns(PendingState storage) {
+                               ^------^
+/../data/reentrancy/solidity_contract/40090.sol:60:74: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function multiAccessHasConfirmed(bytes32 _operation, address _owner) constant returns(bool) {
+                                                                         ^------^
+/../data/reentrancy/solidity_contract/40090.sol:73:37: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function multiAccessGetOwners() constant returns(address[]) {
+                                    ^------^
+/../data/reentrancy/solidity_contract/40090.sol:140:48: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function multiAccessIsOwner(address _addr) constant returns(bool) {
+                                               ^------^
+
+[91m[-] Cannot compile the contract [0m
+
+====================================================================================================
+[1m[ ] Compiling Solidity contract from the file /../data/reentrancy/solidity_contract/40090.sol ... [0m/../data/reentrancy/solidity_contract/40090.sol:56:32: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function _state() internal constant returns(PendingState storage) {
+                               ^------^
+/../data/reentrancy/solidity_contract/40090.sol:60:74: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function multiAccessHasConfirmed(bytes32 _operation, address _owner) constant returns(bool) {
+                                                                         ^------^
+/../data/reentrancy/solidity_contract/40090.sol:73:37: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function multiAccessGetOwners() constant returns(address[]) {
+                                    ^------^
+/../data/reentrancy/solidity_contract/40090.sol:140:48: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function multiAccessIsOwner(address _addr) constant returns(bool) {
+                                               ^------^
+
+[91m[-] Cannot compile the contract [0m

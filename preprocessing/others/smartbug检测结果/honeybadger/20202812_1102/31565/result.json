@@ -1,0 +1,24 @@
+{
+  "contract": "31565",
+  "tool": "honeybadger",
+  "start": 1609148059.595329,
+  "end": 1609148088.14213,
+  "duration": 28.5468008518219,
+  "analysis": [
+    {
+      "errors": [],
+      "file": "/../data/reentrancy/solidity_contract/31565.sol",
+      "name": "SafeMath"
+    },
+    {
+      "errors": [],
+      "file": "/../data/reentrancy/solidity_contract/31565.sol",
+      "name": "Telcoin"
+    },
+    {
+      "errors": [],
+      "file": "/../data/reentrancy/solidity_contract/31565.sol",
+      "name": "TelcoinSale"
+    }
+  ]
+}

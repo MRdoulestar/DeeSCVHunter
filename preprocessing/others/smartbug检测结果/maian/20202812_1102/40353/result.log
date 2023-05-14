@@ -1,0 +1,59 @@
+====================================================================================================
+[1m[ ] Compiling Solidity contract from the file /../data/reentrancy/solidity_contract/40353.sol ... [0m/../data/reentrancy/solidity_contract/40353.sol:42:29: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+	function getTokenBalance() constant returns (uint256 tokens) {
+	                           ^------^
+/../data/reentrancy/solidity_contract/40353.sol:128:30: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+	function getTokenBalance () constant noEther returns (uint256 tokens) {
+	                            ^------^
+
+[91m[-] Cannot compile the contract [0m
+
+====================================================================================================
+[1m[ ] Compiling Solidity contract from the file /../data/reentrancy/solidity_contract/40353.sol ... [0m/../data/reentrancy/solidity_contract/40353.sol:42:29: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+	function getTokenBalance() constant returns (uint256 tokens) {
+	                           ^------^
+/../data/reentrancy/solidity_contract/40353.sol:128:30: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+	function getTokenBalance () constant noEther returns (uint256 tokens) {
+	                            ^------^
+
+[91m[-] Cannot compile the contract [0m
+
+====================================================================================================
+[1m[ ] Compiling Solidity contract from the file /../data/reentrancy/solidity_contract/40353.sol ... [0m/../data/reentrancy/solidity_contract/40353.sol:42:29: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+	function getTokenBalance() constant returns (uint256 tokens) {
+	                           ^------^
+/../data/reentrancy/solidity_contract/40353.sol:128:30: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+	function getTokenBalance () constant noEther returns (uint256 tokens) {
+	                            ^------^
+
+[91m[-] Cannot compile the contract [0m
+
+====================================================================================================
+[1m[ ] Compiling Solidity contract from the file /../data/reentrancy/solidity_contract/40353.sol ... [0m/../data/reentrancy/solidity_contract/40353.sol:42:29: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+	function getTokenBalance() constant returns (uint256 tokens) {
+	                           ^------^
+/../data/reentrancy/solidity_contract/40353.sol:128:30: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+	function getTokenBalance () constant noEther returns (uint256 tokens) {
+	                            ^------^
+
+[91m[-] Cannot compile the contract [0m
+
+====================================================================================================
+[1m[ ] Compiling Solidity contract from the file /../data/reentrancy/solidity_contract/40353.sol ... [0m/../data/reentrancy/solidity_contract/40353.sol:42:29: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+	function getTokenBalance() constant returns (uint256 tokens) {
+	                           ^------^
+/../data/reentrancy/solidity_contract/40353.sol:128:30: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+	function getTokenBalance () constant noEther returns (uint256 tokens) {
+	                            ^------^
+
+[91m[-] Cannot compile the contract [0m
+
+====================================================================================================
+[1m[ ] Compiling Solidity contract from the file /../data/reentrancy/solidity_contract/40353.sol ... [0m/../data/reentrancy/solidity_contract/40353.sol:42:29: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+	function getTokenBalance() constant returns (uint256 tokens) {
+	                           ^------^
+/../data/reentrancy/solidity_contract/40353.sol:128:30: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+	function getTokenBalance () constant noEther returns (uint256 tokens) {
+	                            ^------^
+
+[91m[-] Cannot compile the contract [0m

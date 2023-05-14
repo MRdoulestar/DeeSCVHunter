@@ -1,0 +1,35 @@
+{
+  "contract": "14945",
+  "tool": "osiris",
+  "start": 1609205629.5594702,
+  "end": 1609205687.9400241,
+  "duration": 58.38055396080017,
+  "analysis": [
+    {
+      "errors": [],
+      "file": "/../data/reentrancy/solidity_contract/14945.sol",
+      "name": "BasicToken"
+    },
+    {
+      "errors": [],
+      "file": "/../data/reentrancy/solidity_contract/14945.sol",
+      "name": "SafeMath"
+    },
+    {
+      "errors": [],
+      "file": "/../data/reentrancy/solidity_contract/14945.sol",
+      "name": "StandardToken"
+    },
+    {
+      "errors": [
+        {
+          "line": 117,
+          "column": 17,
+          "message": "reentrancy_bug"
+        }
+      ],
+      "file": "/../data/reentrancy/solidity_contract/14945.sol",
+      "name": "StudToken"
+    }
+  ]
+}

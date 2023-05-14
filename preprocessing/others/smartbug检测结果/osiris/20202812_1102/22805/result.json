@@ -1,0 +1,35 @@
+{
+  "contract": "22805",
+  "tool": "osiris",
+  "start": 1609147909.054101,
+  "end": 1609147962.804939,
+  "duration": 53.75083804130554,
+  "analysis": [
+    {
+      "errors": [],
+      "file": "/../data/reentrancy/solidity_contract/22805.sol",
+      "name": "Ownable"
+    },
+    {
+      "errors": [
+        {
+          "line": 134,
+          "column": 14,
+          "message": "reentrancy_bug"
+        }
+      ],
+      "file": "/../data/reentrancy/solidity_contract/22805.sol",
+      "name": "PowerCoin"
+    },
+    {
+      "errors": [],
+      "file": "/../data/reentrancy/solidity_contract/22805.sol",
+      "name": "SafeMath"
+    },
+    {
+      "errors": [],
+      "file": "/../data/reentrancy/solidity_contract/22805.sol",
+      "name": "StandardToken"
+    }
+  ]
+}

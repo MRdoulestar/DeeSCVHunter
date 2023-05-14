@@ -1,0 +1,14 @@
+{
+  "contract": "36645",
+  "tool": "honeybadger",
+  "start": 1609126726.632391,
+  "end": 1609126778.190958,
+  "duration": 51.55856704711914,
+  "analysis": [
+    {
+      "errors": [],
+      "file": "/../data/reentrancy/solidity_contract/36645.sol",
+      "name": "EnjinBuyer"
+    }
+  ]
+}

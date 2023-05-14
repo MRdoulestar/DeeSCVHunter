@@ -1,0 +1,16 @@
+/data/reentrancy/solidity_contract/cross-function-reentrancy-fixed.sol:3:1: Expected indentation of 4 spaces but found 0 [Error/indent]
+/data/reentrancy/solidity_contract/cross-function-reentrancy-fixed.sol:4:1: Expected indentation of 4 spaces but found 0 [Error/indent]
+/data/reentrancy/solidity_contract/cross-function-reentrancy-fixed.sol:5:1: Expected indentation of 4 spaces but found 0 [Error/indent]
+/data/reentrancy/solidity_contract/cross-function-reentrancy-fixed.sol:7:1: Expected indentation of 4 spaces but found 0 [Error/indent]
+/data/reentrancy/solidity_contract/cross-function-reentrancy-fixed.sol:8:5: Expected indentation of 8 spaces but found 4 [Error/indent]
+/data/reentrancy/solidity_contract/cross-function-reentrancy-fixed.sol:9:5: Expected indentation of 8 spaces but found 4 [Error/indent]
+/data/reentrancy/solidity_contract/cross-function-reentrancy-fixed.sol:12:1: Expected indentation of 8 spaces but found 0 [Error/indent]
+/data/reentrancy/solidity_contract/cross-function-reentrancy-fixed.sol:13:1: Expected indentation of 4 spaces but found 0 [Error/indent]
+/data/reentrancy/solidity_contract/cross-function-reentrancy-fixed.sol:15:1: Expected indentation of 4 spaces but found 0 [Error/indent]
+/data/reentrancy/solidity_contract/cross-function-reentrancy-fixed.sol:17:5: Expected indentation of 8 spaces but found 4 [Error/indent]
+/data/reentrancy/solidity_contract/cross-function-reentrancy-fixed.sol:18:5: Expected indentation of 8 spaces but found 4 [Error/indent]
+/data/reentrancy/solidity_contract/cross-function-reentrancy-fixed.sol:19:5: Expected indentation of 8 spaces but found 4 [Error/indent]
+/data/reentrancy/solidity_contract/cross-function-reentrancy-fixed.sol:20:5: Expected indentation of 8 spaces but found 4 [Error/indent]
+/data/reentrancy/solidity_contract/cross-function-reentrancy-fixed.sol:21:1: Expected indentation of 4 spaces but found 0 [Error/indent]
+
+14 problems

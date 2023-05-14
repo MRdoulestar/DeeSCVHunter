@@ -1,0 +1,45 @@
+{
+  "contract": "39684",
+  "tool": "osiris",
+  "start": 1609189084.716628,
+  "end": 1609189142.3483908,
+  "duration": 57.631762742996216,
+  "analysis": [
+    {
+      "errors": [
+        {
+          "line": 62,
+          "column": 9,
+          "message": "callstack_bug"
+        },
+        {
+          "line": 137,
+          "column": 42,
+          "message": "concurrency_bug"
+        },
+        {
+          "line": 180,
+          "column": 17,
+          "message": "concurrency_bug"
+        },
+        {
+          "line": 137,
+          "column": 42,
+          "message": "reentrancy_bug"
+        },
+        {
+          "line": 180,
+          "column": 17,
+          "message": "reentrancy_bug"
+        }
+      ],
+      "file": "/../data/reentrancy/solidity_contract/39684.sol",
+      "name": "EtherprisesLLC"
+    },
+    {
+      "errors": [],
+      "file": "/../data/reentrancy/solidity_contract/39684.sol",
+      "name": "SeriesFactory"
+    }
+  ]
+}

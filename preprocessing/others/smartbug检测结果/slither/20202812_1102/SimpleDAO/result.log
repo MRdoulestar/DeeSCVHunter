@@ -1,0 +1,40 @@
+INFO:Slither:Compilation warnings/errors on /../data/reentrancy/solidity_contract/SimpleDAO.sol:
+/../data/reentrancy/solidity_contract/SimpleDAO.sol:1:1: Warning: Source file does not specify required compiler version!Consider adding "pragma solidity ^0.4.25;"
+contract SimpleDAO {
+^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/SimpleDAO.sol:10:7: Warning: Return value of low-level calls not used.
+      msg.sender.call.value(amount)();
+      ^-----------------------------^
+/../data/reentrancy/solidity_contract/SimpleDAO.sol:4:3: Warning: No visibility specified. Defaulting to "public". 
+  function donate(address to) {
+  ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/SimpleDAO.sol:5:19: Warning: "msg.value" used in non-payable function. Do you want to add the "payable" modifier to this function?
+    credit[to] += msg.value;
+                  ^-------^
+/../data/reentrancy/solidity_contract/SimpleDAO.sol:8:3: Warning: No visibility specified. Defaulting to "public". 
+  function withdraw(uint amount) {
+  ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/SimpleDAO.sol:15:3: Warning: No visibility specified. Defaulting to "public". 
+  function queryCredit(address to) returns (uint){
+  ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/SimpleDAO.sol:15:3: Warning: Function state mutability can be restricted to view
+  function queryCredit(address to) returns (uint){
+  ^ (Relevant source part starts here and spans across multiple lines).
+
+INFO:Detectors:[91m
+Reentrancy in SimpleDAO.withdraw (/../data/reentrancy/solidity_contract/SimpleDAO.sol#8-13):
+	External calls:
+	- msg.sender.call.value(amount)() (/../data/reentrancy/solidity_contract/SimpleDAO.sol#10)
+	State variables written after the call(s):
+	- credit (/../data/reentrancy/solidity_contract/SimpleDAO.sol#11)
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#reentrancy-vulnerabilities[0m
+INFO:Detectors:[92m
+SimpleDAO.donate (/../data/reentrancy/solidity_contract/SimpleDAO.sol#4-6) should be declared external
+SimpleDAO.withdraw (/../data/reentrancy/solidity_contract/SimpleDAO.sol#8-13) should be declared external
+SimpleDAO.queryCredit (/../data/reentrancy/solidity_contract/SimpleDAO.sol#15-17) should be declared external
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#public-function-that-could-be-declared-as-external[0m
+INFO:Detectors:[92m
+Low level call in SimpleDAO.withdraw (/../data/reentrancy/solidity_contract/SimpleDAO.sol#8-13):
+	-msg.sender.call.value(amount)() /../data/reentrancy/solidity_contract/SimpleDAO.sol#10
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#low-level-calls[0m
+INFO:Slither:/../data/reentrancy/solidity_contract/SimpleDAO.sol analyzed (1 contracts), 5 result(s) found

@@ -1,0 +1,216 @@
+INFO:Slither:Compilation warnings/errors on /../data/reentrancy/solidity_contract/30460.sol:
+/../data/reentrancy/solidity_contract/30460.sol:23:3: Warning: Defining constructors as functions with the same name as the contract is deprecated. Use "constructor(...) { ... }" instead.
+  function Ownable() public {
+  ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/30460.sol:251:3: Warning: Defining constructors as functions with the same name as the contract is deprecated. Use "constructor(...) { ... }" instead.
+  function BullToken() public {
+  ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/30460.sol:311:3: Warning: Defining constructors as functions with the same name as the contract is deprecated. Use "constructor(...) { ... }" instead.
+  function Curatable() public {
+  ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/30460.sol:338:5: Warning: Defining constructors as functions with the same name as the contract is deprecated. Use "constructor(...) { ... }" instead.
+    function Whitelist() public {
+    ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/30460.sol:425:3: Warning: Defining constructors as functions with the same name as the contract is deprecated. Use "constructor(...) { ... }" instead.
+  function BurnableCrowdsale(uint256 _startTime, uint256 _endTime, uint256 _rate, address _wallet, address _tokenAddress) public {
+  ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/30460.sol:483:3: Warning: Defining constructors as functions with the same name as the contract is deprecated. Use "constructor(...) { ... }" instead.
+  function CappedCrowdsale(uint256 _cap) public {
+  ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/30460.sol:529:3: Warning: Defining constructors as functions with the same name as the contract is deprecated. Use "constructor(...) { ... }" instead.
+  function RefundVault(address _wallet) public {
+  ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/30460.sol:565:3: Warning: Defining constructors as functions with the same name as the contract is deprecated. Use "constructor(...) { ... }" instead.
+  function BullTokenRefundVault(address _wallet) public RefundVault(_wallet) {}
+  ^---------------------------------------------------------------------------^
+/../data/reentrancy/solidity_contract/30460.sol:625:3: Warning: Defining constructors as functions with the same name as the contract is deprecated. Use "constructor(...) { ... }" instead.
+  function RefundableCrowdsale(uint256 _goal) public {
+  ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/30460.sol:670:3: Warning: Defining constructors as functions with the same name as the contract is deprecated. Use "constructor(...) { ... }" instead.
+  function BullTokenCrowdsale(
+  ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/30460.sol:38:5: Warning: Invoking events without "emit" prefix is deprecated.
+    OwnershipTransferred(owner, newOwner);
+    ^-----------------------------------^
+/../data/reentrancy/solidity_contract/30460.sol:73:5: Warning: Invoking events without "emit" prefix is deprecated.
+    Transfer(msg.sender, _to, _value);
+    ^-------------------------------^
+/../data/reentrancy/solidity_contract/30460.sol:115:5: Warning: Invoking events without "emit" prefix is deprecated.
+    Transfer(_from, _to, _value);
+    ^--------------------------^
+/../data/reentrancy/solidity_contract/30460.sol:122:5: Warning: Invoking events without "emit" prefix is deprecated.
+    Approval(msg.sender, _spender, _value);
+    ^------------------------------------^
+/../data/reentrancy/solidity_contract/30460.sol:134:5: Warning: Invoking events without "emit" prefix is deprecated.
+    Approval(msg.sender, _spender, allowed[msg.sender][_spender]);
+    ^-----------------------------------------------------------^
+/../data/reentrancy/solidity_contract/30460.sol:145:5: Warning: Invoking events without "emit" prefix is deprecated.
+    Approval(msg.sender, _spender, allowed[msg.sender][_spender]);
+    ^-----------------------------------------------------------^
+/../data/reentrancy/solidity_contract/30460.sol:167:9: Warning: Invoking events without "emit" prefix is deprecated.
+        Burn(burner, _value);
+        ^------------------^
+/../data/reentrancy/solidity_contract/30460.sol:203:5: Warning: Invoking events without "emit" prefix is deprecated.
+    Pause();
+    ^-----^
+/../data/reentrancy/solidity_contract/30460.sol:209:5: Warning: Invoking events without "emit" prefix is deprecated.
+    Unpause();
+    ^-------^
+/../data/reentrancy/solidity_contract/30460.sol:259:5: Warning: Invoking events without "emit" prefix is deprecated.
+    TransferEnabled();
+    ^---------------^
+/../data/reentrancy/solidity_contract/30460.sol:264:5: Warning: Invoking events without "emit" prefix is deprecated.
+    TransferDisabled();
+    ^----------------^
+/../data/reentrancy/solidity_contract/30460.sol:327:5: Warning: Invoking events without "emit" prefix is deprecated.
+    CurationRightsTransferred(curator, newCurator);
+    ^--------------------------------------------^
+/../data/reentrancy/solidity_contract/30460.sol:543:5: Warning: Invoking events without "emit" prefix is deprecated.
+    Closed();
+    ^------^
+/../data/reentrancy/solidity_contract/30460.sol:544:21: Warning: Using contract member "balance" inherited from the address type is deprecated. Convert the contract to "address" type to access the member, for example use "address(contract).balance" instead.
+    wallet.transfer(this.balance);
+                    ^----------^
+/../data/reentrancy/solidity_contract/30460.sol:550:5: Warning: Invoking events without "emit" prefix is deprecated.
+    RefundsEnabled();
+    ^--------------^
+/../data/reentrancy/solidity_contract/30460.sol:558:5: Warning: Invoking events without "emit" prefix is deprecated.
+    Refunded(investor, depositedValue);
+    ^--------------------------------^
+/../data/reentrancy/solidity_contract/30460.sol:571:5: Warning: Invoking events without "emit" prefix is deprecated.
+    Closed();
+    ^------^
+/../data/reentrancy/solidity_contract/30460.sol:574:23: Warning: Using contract member "balance" inherited from the address type is deprecated. Convert the contract to "address" type to access the member, for example use "address(contract).balance" instead.
+    wallet.call.value(this.balance)();
+                      ^----------^
+/../data/reentrancy/solidity_contract/30460.sol:574:5: Warning: Return value of low-level calls not used.
+    wallet.call.value(this.balance)();
+    ^-------------------------------^
+/../data/reentrancy/solidity_contract/30460.sol:578:13: Warning: Using contract member "balance" inherited from the address type is deprecated. Convert the contract to "address" type to access the member, for example use "address(contract).balance" instead.
+    require(this.balance > 0);
+            ^----------^
+/../data/reentrancy/solidity_contract/30460.sol:579:23: Warning: Using contract member "balance" inherited from the address type is deprecated. Convert the contract to "address" type to access the member, for example use "address(contract).balance" instead.
+    wallet.call.value(this.balance)();
+                      ^----------^
+/../data/reentrancy/solidity_contract/30460.sol:579:5: Warning: Return value of low-level calls not used.
+    wallet.call.value(this.balance)();
+    ^-------------------------------^
+/../data/reentrancy/solidity_contract/30460.sol:603:5: Warning: Invoking events without "emit" prefix is deprecated.
+    Finalized();
+    ^---------^
+/../data/reentrancy/solidity_contract/30460.sol:728:5: Warning: Invoking events without "emit" prefix is deprecated.
+    TokenPurchase(msg.sender, beneficiary, weiAmount, tokens);
+    ^-------------------------------------------------------^
+/../data/reentrancy/solidity_contract/30460.sol:755:26: Warning: Using contract member "balance" inherited from the address type is deprecated. Convert the contract to "address" type to access the member, for example use "address(contract).balance" instead.
+    if (goalReached() && vault.balance > 0) {
+                         ^-----------^
+/../data/reentrancy/solidity_contract/30460.sol:760:7: Warning: Return value of low-level calls not used.
+      wallet.call.value(amount)();
+      ^-------------------------^
+/../data/reentrancy/solidity_contract/30460.sol:452:22: Warning: Unused function parameter. Remove or comment out the variable name to silence this warning.
+  function buyTokens(address beneficiary) public payable {
+                     ^-----------------^
+/../data/reentrancy/solidity_contract/30460.sol:458:3: Warning: Function state mutability can be restricted to pure
+  function forwardFunds() internal {
+  ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/30460.sol:609:3: Warning: Function state mutability can be restricted to pure
+  function finalization() internal {
+  ^ (Relevant source part starts here and spans across multiple lines).
+
+INFO:Detectors:[93m
+BullTokenCrowdsale.buyTokens (/../data/reentrancy/solidity_contract/30460.sol#704-730) does not use the value returned by external calls:
+	-token.transferFrom(owner,beneficiary,tokens) (/../data/reentrancy/solidity_contract/30460.sol#726)
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#unused-return[0m
+INFO:Detectors:[92m
+Reentrancy in BullTokenCrowdsale.buyTokens (/../data/reentrancy/solidity_contract/30460.sol#704-730):
+	External calls:
+	- require(bool)(whitelist.isWhitelisted(beneficiary)) (/../data/reentrancy/solidity_contract/30460.sol#706)
+	External calls sending eth:
+	- beneficiary.transfer(toBeRefunded) (/../data/reentrancy/solidity_contract/30460.sol#715)
+	State variables written after the call(s):
+	- weiRaised (/../data/reentrancy/solidity_contract/30460.sol#724)
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#reentrancy-vulnerabilities-2[0m
+INFO:Detectors:[92m
+BasicToken.balanceOf (/../data/reentrancy/solidity_contract/30460.sol#78-80) should be declared external
+ERC20Basic.balanceOf (/../data/reentrancy/solidity_contract/30460.sol#7) should be declared external
+Ownable.transferOwnership (/../data/reentrancy/solidity_contract/30460.sol#36-40) should be declared external
+StandardToken.allowance (/../data/reentrancy/solidity_contract/30460.sol#127-129) should be declared external
+ERC20.allowance (/../data/reentrancy/solidity_contract/30460.sol#92) should be declared external
+BurnableToken.burn (/../data/reentrancy/solidity_contract/30460.sol#158-168) should be declared external
+Pausable.pause (/../data/reentrancy/solidity_contract/30460.sol#201-204) should be declared external
+Pausable.unpause (/../data/reentrancy/solidity_contract/30460.sol#207-210) should be declared external
+BullToken.enableTransfers (/../data/reentrancy/solidity_contract/30460.sol#257-260) should be declared external
+BullToken.disableTransfers (/../data/reentrancy/solidity_contract/30460.sol#262-265) should be declared external
+Curatable.transferCurationRights (/../data/reentrancy/solidity_contract/30460.sol#325-329) should be declared external
+RefundVault.deposit (/../data/reentrancy/solidity_contract/30460.sol#535-538) should be declared external
+RefundVault.close (/../data/reentrancy/solidity_contract/30460.sol#540-545) should be declared external
+BullTokenRefundVault.close (/../data/reentrancy/solidity_contract/30460.sol#568-575) should be declared external
+RefundVault.enableRefunds (/../data/reentrancy/solidity_contract/30460.sol#547-551) should be declared external
+RefundVault.refund (/../data/reentrancy/solidity_contract/30460.sol#553-559) should be declared external
+BullTokenRefundVault.forwardFunds (/../data/reentrancy/solidity_contract/30460.sol#577-580) should be declared external
+FinalizableCrowdsale.finalize (/../data/reentrancy/solidity_contract/30460.sol#598-606) should be declared external
+RefundableCrowdsale.claimRefund (/../data/reentrancy/solidity_contract/30460.sol#639-644) should be declared external
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#public-function-that-could-be-declared-as-external[0m
+INFO:Detectors:[92m
+Detected issues with version pragma in /../data/reentrancy/solidity_contract/30460.sol:
+	- pragma solidity^0.4.18 (/../data/reentrancy/solidity_contract/30460.sol#1): it allows old versions
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#incorrect-version-of-solidity[0m
+INFO:Detectors:[92m
+Low level call in BullTokenRefundVault.close (/../data/reentrancy/solidity_contract/30460.sol#568-575):
+	-wallet.call.value(this.balance)() /../data/reentrancy/solidity_contract/30460.sol#574
+Low level call in BullTokenRefundVault.forwardFunds (/../data/reentrancy/solidity_contract/30460.sol#577-580):
+	-wallet.call.value(this.balance)() /../data/reentrancy/solidity_contract/30460.sol#579
+Low level call in BullTokenCrowdsale.forwardFundsToWallet (/../data/reentrancy/solidity_contract/30460.sol#754-764):
+	-wallet.call.value(amount)() /../data/reentrancy/solidity_contract/30460.sol#760
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#low-level-calls[0m
+INFO:Detectors:[92m
+Function 'Ownable.Ownable' (/../data/reentrancy/solidity_contract/30460.sol#23-25) is not in mixedCase
+Parameter '_owner' of BasicToken.balanceOf (/../data/reentrancy/solidity_contract/30460.sol#78) is not in mixedCase
+Parameter '_to' of BasicToken.transfer (/../data/reentrancy/solidity_contract/30460.sol#66) is not in mixedCase
+Parameter '_value' of BasicToken.transfer (/../data/reentrancy/solidity_contract/30460.sol#66) is not in mixedCase
+Parameter '_owner' of StandardToken.allowance (/../data/reentrancy/solidity_contract/30460.sol#127) is not in mixedCase
+Parameter '_spender' of StandardToken.allowance (/../data/reentrancy/solidity_contract/30460.sol#127) is not in mixedCase
+Parameter '_from' of StandardToken.transferFrom (/../data/reentrancy/solidity_contract/30460.sol#107) is not in mixedCase
+Parameter '_to' of StandardToken.transferFrom (/../data/reentrancy/solidity_contract/30460.sol#107) is not in mixedCase
+Parameter '_value' of StandardToken.transferFrom (/../data/reentrancy/solidity_contract/30460.sol#107) is not in mixedCase
+Parameter '_spender' of StandardToken.approve (/../data/reentrancy/solidity_contract/30460.sol#120) is not in mixedCase
+Parameter '_value' of StandardToken.approve (/../data/reentrancy/solidity_contract/30460.sol#120) is not in mixedCase
+Parameter '_spender' of StandardToken.increaseApproval (/../data/reentrancy/solidity_contract/30460.sol#132) is not in mixedCase
+Parameter '_addedValue' of StandardToken.increaseApproval (/../data/reentrancy/solidity_contract/30460.sol#132) is not in mixedCase
+Parameter '_spender' of StandardToken.decreaseApproval (/../data/reentrancy/solidity_contract/30460.sol#138) is not in mixedCase
+Parameter '_subtractedValue' of StandardToken.decreaseApproval (/../data/reentrancy/solidity_contract/30460.sol#138) is not in mixedCase
+Parameter '_value' of BurnableToken.burn (/../data/reentrancy/solidity_contract/30460.sol#158) is not in mixedCase
+Parameter '_to' of PausableToken.transfer (/../data/reentrancy/solidity_contract/30460.sol#218) is not in mixedCase
+Parameter '_value' of PausableToken.transfer (/../data/reentrancy/solidity_contract/30460.sol#218) is not in mixedCase
+Parameter '_from' of PausableToken.transferFrom (/../data/reentrancy/solidity_contract/30460.sol#222) is not in mixedCase
+Parameter '_to' of PausableToken.transferFrom (/../data/reentrancy/solidity_contract/30460.sol#222) is not in mixedCase
+Parameter '_value' of PausableToken.transferFrom (/../data/reentrancy/solidity_contract/30460.sol#222) is not in mixedCase
+Parameter '_spender' of PausableToken.approve (/../data/reentrancy/solidity_contract/30460.sol#226) is not in mixedCase
+Parameter '_value' of PausableToken.approve (/../data/reentrancy/solidity_contract/30460.sol#226) is not in mixedCase
+Parameter '_spender' of PausableToken.increaseApproval (/../data/reentrancy/solidity_contract/30460.sol#230) is not in mixedCase
+Parameter '_addedValue' of PausableToken.increaseApproval (/../data/reentrancy/solidity_contract/30460.sol#230) is not in mixedCase
+Parameter '_spender' of PausableToken.decreaseApproval (/../data/reentrancy/solidity_contract/30460.sol#234) is not in mixedCase
+Parameter '_subtractedValue' of PausableToken.decreaseApproval (/../data/reentrancy/solidity_contract/30460.sol#234) is not in mixedCase
+Function 'BullToken.BullToken' (/../data/reentrancy/solidity_contract/30460.sol#251-255) is not in mixedCase
+Function 'Curatable.Curatable' (/../data/reentrancy/solidity_contract/30460.sol#311-314) is not in mixedCase
+Function 'Whitelist.Whitelist' (/../data/reentrancy/solidity_contract/30460.sol#338-339) is not in mixedCase
+Function 'BurnableCrowdsale.BurnableCrowdsale' (/../data/reentrancy/solidity_contract/30460.sol#425-437) is not in mixedCase
+Parameter '_startTime' of BurnableCrowdsale.BurnableCrowdsale (/../data/reentrancy/solidity_contract/30460.sol#425) is not in mixedCase
+Parameter '_endTime' of BurnableCrowdsale.BurnableCrowdsale (/../data/reentrancy/solidity_contract/30460.sol#425) is not in mixedCase
+Parameter '_rate' of BurnableCrowdsale.BurnableCrowdsale (/../data/reentrancy/solidity_contract/30460.sol#425) is not in mixedCase
+Parameter '_wallet' of BurnableCrowdsale.BurnableCrowdsale (/../data/reentrancy/solidity_contract/30460.sol#425) is not in mixedCase
+Parameter '_tokenAddress' of BurnableCrowdsale.BurnableCrowdsale (/../data/reentrancy/solidity_contract/30460.sol#425) is not in mixedCase
+Function 'CappedCrowdsale.CappedCrowdsale' (/../data/reentrancy/solidity_contract/30460.sol#483-486) is not in mixedCase
+Parameter '_cap' of CappedCrowdsale.CappedCrowdsale (/../data/reentrancy/solidity_contract/30460.sol#483) is not in mixedCase
+Function 'RefundVault.RefundVault' (/../data/reentrancy/solidity_contract/30460.sol#529-533) is not in mixedCase
+Parameter '_wallet' of RefundVault.RefundVault (/../data/reentrancy/solidity_contract/30460.sol#529) is not in mixedCase
+Function 'BullTokenRefundVault.BullTokenRefundVault' (/../data/reentrancy/solidity_contract/30460.sol#565) is not in mixedCase
+Function 'RefundableCrowdsale.RefundableCrowdsale' (/../data/reentrancy/solidity_contract/30460.sol#625-629) is not in mixedCase
+Parameter '_goal' of RefundableCrowdsale.RefundableCrowdsale (/../data/reentrancy/solidity_contract/30460.sol#625) is not in mixedCase
+Function 'BullTokenCrowdsale.BullTokenCrowdsale' (/../data/reentrancy/solidity_contract/30460.sol#670-692) is not in mixedCase
+Parameter '_goal' of BullTokenCrowdsale.BullTokenCrowdsale (/../data/reentrancy/solidity_contract/30460.sol#674) is not in mixedCase
+Parameter '_cap' of BullTokenCrowdsale.BullTokenCrowdsale (/../data/reentrancy/solidity_contract/30460.sol#675) is not in mixedCase
+Parameter '_minimumInvestment' of BullTokenCrowdsale.BullTokenCrowdsale (/../data/reentrancy/solidity_contract/30460.sol#676) is not in mixedCase
+Parameter '_whitelistAddress' of BullTokenCrowdsale.BullTokenCrowdsale (/../data/reentrancy/solidity_contract/30460.sol#679) is not in mixedCase
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#conformance-to-solidity-naming-conventions[0m
+INFO:Slither:/../data/reentrancy/solidity_contract/30460.sol analyzed (19 contracts), 73 result(s) found

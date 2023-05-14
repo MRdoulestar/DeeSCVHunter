@@ -1,0 +1,85 @@
+{
+  "contract": "4598",
+  "tool": "osiris",
+  "start": 1609149996.516526,
+  "end": 1609150000.953974,
+  "duration": 4.437448024749756,
+  "analysis": [
+    {
+      "errors": [
+        {
+          "line": 44,
+          "column": 17,
+          "message": "concurrency_bug"
+        },
+        {
+          "line": 35,
+          "column": 17,
+          "message": "concurrency_bug"
+        },
+        {
+          "line": 39,
+          "column": 26,
+          "message": "reentrancy_bug"
+        },
+        {
+          "line": 36,
+          "column": 25,
+          "message": "reentrancy_bug"
+        },
+        {
+          "line": 48,
+          "column": 26,
+          "message": "reentrancy_bug"
+        },
+        {
+          "line": 35,
+          "column": 17,
+          "message": "reentrancy_bug"
+        },
+        {
+          "line": 45,
+          "column": 25,
+          "message": "reentrancy_bug"
+        },
+        {
+          "line": 49,
+          "column": 9,
+          "message": "reentrancy_bug"
+        },
+        {
+          "line": 47,
+          "column": 9,
+          "message": "reentrancy_bug"
+        },
+        {
+          "line": 40,
+          "column": 9,
+          "message": "reentrancy_bug"
+        },
+        {
+          "line": 44,
+          "column": 17,
+          "message": "reentrancy_bug"
+        },
+        {
+          "line": 46,
+          "column": 9,
+          "message": "reentrancy_bug"
+        },
+        {
+          "line": 37,
+          "column": 9,
+          "message": "reentrancy_bug"
+        },
+        {
+          "line": 38,
+          "column": 9,
+          "message": "reentrancy_bug"
+        }
+      ],
+      "file": "/../data/reentrancy/solidity_contract/4598.sol",
+      "name": "mnyminer"
+    }
+  ]
+}

@@ -1,0 +1,71 @@
+{
+  "contract": "33835",
+  "tool": "osiris",
+  "start": 1609165132.4508429,
+  "end": 1609165223.769498,
+  "duration": 91.31865525245667,
+  "analysis": [
+    {
+      "errors": [
+        {
+          "line": 114,
+          "column": 26,
+          "message": "underflow_bugs"
+        },
+        {
+          "line": 177,
+          "column": 13,
+          "message": "truncation_bugs"
+        },
+        {
+          "line": 307,
+          "column": 20,
+          "message": "callstack_bug"
+        }
+      ],
+      "file": "/../data/reentrancy/solidity_contract/33835.sol",
+      "name": "Wallet"
+    },
+    {
+      "errors": [
+        {
+          "line": 133,
+          "column": 33,
+          "message": "overflow_bugs"
+        },
+        {
+          "line": 78,
+          "column": 13,
+          "message": "overflow_bugs"
+        },
+        {
+          "line": 114,
+          "column": 26,
+          "message": "underflow_bugs"
+        },
+        {
+          "line": 79,
+          "column": 13,
+          "message": "underflow_bugs"
+        },
+        {
+          "line": 77,
+          "column": 13,
+          "message": "truncation_bugs"
+        },
+        {
+          "line": 177,
+          "column": 13,
+          "message": "truncation_bugs"
+        },
+        {
+          "line": 149,
+          "column": 18,
+          "message": "truncation_bugs"
+        }
+      ],
+      "file": "/../data/reentrancy/solidity_contract/33835.sol",
+      "name": "multiowned"
+    }
+  ]
+}

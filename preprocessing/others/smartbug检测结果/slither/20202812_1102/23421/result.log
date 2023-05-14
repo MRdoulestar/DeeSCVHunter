@@ -1,0 +1,111 @@
+INFO:Slither:Compilation warnings/errors on /../data/reentrancy/solidity_contract/23421.sol:
+/../data/reentrancy/solidity_contract/23421.sol:50:5: Warning: Defining constructors as functions with the same name as the contract is deprecated. Use "constructor(...) { ... }" instead.
+    function Owned() public {
+    ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/23421.sol:131:5: Warning: Defining constructors as functions with the same name as the contract is deprecated. Use "constructor(...) { ... }" instead.
+    function Escapable(address _escapeHatchCaller, address _escapeHatchDestination) public {
+    ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/23421.sol:198:5: Warning: Defining constructors as functions with the same name as the contract is deprecated. Use "constructor(...) { ... }" instead.
+    function Multiplexor() Escapable(0, 0) public {}
+    ^----------------------------------------------^
+/../data/reentrancy/solidity_contract/23421.sol:69:9: Warning: Invoking events without "emit" prefix is deprecated.
+        OwnershipRequested(msg.sender, newOwnerCandidate);
+        ^-----------------------------------------------^
+/../data/reentrancy/solidity_contract/23421.sol:81:9: Warning: Invoking events without "emit" prefix is deprecated.
+        OwnershipTransferred(oldOwner, owner);
+        ^-----------------------------------^
+/../data/reentrancy/solidity_contract/23421.sol:95:9: Warning: Invoking events without "emit" prefix is deprecated.
+        OwnershipTransferred(oldOwner, owner);
+        ^-----------------------------------^
+/../data/reentrancy/solidity_contract/23421.sol:107:9: Warning: Invoking events without "emit" prefix is deprecated.
+        OwnershipRemoved();     
+        ^----------------^
+/../data/reentrancy/solidity_contract/23421.sol:149:9: Warning: Invoking events without "emit" prefix is deprecated.
+        EscapeHatchBlackistedToken(_token);
+        ^--------------------------------^
+/../data/reentrancy/solidity_contract/23421.sol:170:23: Warning: Using contract member "balance" inherited from the address type is deprecated. Convert the contract to "address" type to access the member, for example use "address(contract).balance" instead.
+            balance = this.balance;
+                      ^----------^
+/../data/reentrancy/solidity_contract/23421.sol:172:13: Warning: Invoking events without "emit" prefix is deprecated.
+            EscapeHatchCalled(_token, balance);
+            ^--------------------------------^
+/../data/reentrancy/solidity_contract/23421.sol:179:9: Warning: Invoking events without "emit" prefix is deprecated.
+        EscapeHatchCalled(_token, balance);
+        ^--------------------------------^
+
+INFO:Detectors:[91m
+Multiplexor._safeTransfer (/../data/reentrancy/solidity_contract/23421.sol#250-253) sends eth to arbitrary user
+	Dangerous calls:
+	- _to.transfer(_amount) (/../data/reentrancy/solidity_contract/23421.sol#252)
+Multiplexor._safeCall (/../data/reentrancy/solidity_contract/23421.sol#255-258) sends eth to arbitrary user
+	Dangerous calls:
+	- require(bool)(_to.call.value(_amount)()) (/../data/reentrancy/solidity_contract/23421.sol#257)
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#functions-that-send-ether-to-arbitrary-destinations[0m
+INFO:Detectors:[92m
+ERC20.totalSupply (/../data/reentrancy/solidity_contract/23421.sol#9) should be declared external
+ERC20.balanceOf (/../data/reentrancy/solidity_contract/23421.sol#12) should be declared external
+ERC20.transfer (/../data/reentrancy/solidity_contract/23421.sol#15) should be declared external
+ERC20.transferFrom (/../data/reentrancy/solidity_contract/23421.sol#18) should be declared external
+ERC20.approve (/../data/reentrancy/solidity_contract/23421.sol#21) should be declared external
+ERC20.allowance (/../data/reentrancy/solidity_contract/23421.sol#24) should be declared external
+Owned.proposeOwnership (/../data/reentrancy/solidity_contract/23421.sol#67-70) should be declared external
+Owned.acceptOwnership (/../data/reentrancy/solidity_contract/23421.sol#74-82) should be declared external
+Owned.changeOwnership (/../data/reentrancy/solidity_contract/23421.sol#88-96) should be declared external
+Owned.removeOwnership (/../data/reentrancy/solidity_contract/23421.sol#103-108) should be declared external
+Escapable.isTokenEscapable (/../data/reentrancy/solidity_contract/23421.sol#156-158) should be declared external
+Escapable.escapeHatch (/../data/reentrancy/solidity_contract/23421.sol#163-180) should be declared external
+Escapable.changeHatchEscapeCaller (/../data/reentrancy/solidity_contract/23421.sol#187-189) should be declared external
+Multiplexor.init (/../data/reentrancy/solidity_contract/23421.sol#200-206) should be declared external
+Multiplexor.multiTransferTightlyPacked (/../data/reentrancy/solidity_contract/23421.sol#208-213) should be declared external
+Multiplexor.multiTransfer (/../data/reentrancy/solidity_contract/23421.sol#215-220) should be declared external
+Multiplexor.multiCallTightlyPacked (/../data/reentrancy/solidity_contract/23421.sol#222-227) should be declared external
+Multiplexor.multiCall (/../data/reentrancy/solidity_contract/23421.sol#229-234) should be declared external
+Multiplexor.multiERC20TransferTightlyPacked (/../data/reentrancy/solidity_contract/23421.sol#236-241) should be declared external
+Multiplexor.multiERC20Transfer (/../data/reentrancy/solidity_contract/23421.sol#243-248) should be declared external
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#public-function-that-could-be-declared-as-external[0m
+INFO:Detectors:[92m
+Detected issues with version pragma in /../data/reentrancy/solidity_contract/23421.sol:
+	- pragma solidity^0.4.20 (/../data/reentrancy/solidity_contract/23421.sol#1): it allows old versions
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#incorrect-version-of-solidity[0m
+INFO:Detectors:[92m
+Low level call in Multiplexor._safeCall (/../data/reentrancy/solidity_contract/23421.sol#255-258):
+	-require(bool)(_to.call.value(_amount)()) /../data/reentrancy/solidity_contract/23421.sol#257
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#low-level-calls[0m
+INFO:Detectors:[92m
+Function 'Owned.Owned' (/../data/reentrancy/solidity_contract/23421.sol#50-52) is not in mixedCase
+Parameter '_newOwnerCandidate' of Owned.proposeOwnership (/../data/reentrancy/solidity_contract/23421.sol#67) is not in mixedCase
+Parameter '_newOwner' of Owned.changeOwnership (/../data/reentrancy/solidity_contract/23421.sol#88) is not in mixedCase
+Parameter '_dac' of Owned.removeOwnership (/../data/reentrancy/solidity_contract/23421.sol#103) is not in mixedCase
+Function 'Escapable.Escapable' (/../data/reentrancy/solidity_contract/23421.sol#131-134) is not in mixedCase
+Parameter '_escapeHatchCaller' of Escapable.Escapable (/../data/reentrancy/solidity_contract/23421.sol#131) is not in mixedCase
+Parameter '_escapeHatchDestination' of Escapable.Escapable (/../data/reentrancy/solidity_contract/23421.sol#131) is not in mixedCase
+Parameter '_token' of Escapable.blacklistEscapeToken (/../data/reentrancy/solidity_contract/23421.sol#147) is not in mixedCase
+Parameter '_token' of Escapable.isTokenEscapable (/../data/reentrancy/solidity_contract/23421.sol#156) is not in mixedCase
+Parameter '_token' of Escapable.escapeHatch (/../data/reentrancy/solidity_contract/23421.sol#163) is not in mixedCase
+Parameter '_newEscapeHatchCaller' of Escapable.changeHatchEscapeCaller (/../data/reentrancy/solidity_contract/23421.sol#187) is not in mixedCase
+Function 'Multiplexor.Multiplexor' (/../data/reentrancy/solidity_contract/23421.sol#198) is not in mixedCase
+Parameter '_escapeHatchCaller' of Multiplexor.init (/../data/reentrancy/solidity_contract/23421.sol#200) is not in mixedCase
+Parameter '_escapeHatchDestination' of Multiplexor.init (/../data/reentrancy/solidity_contract/23421.sol#200) is not in mixedCase
+Parameter '_addressAndAmount' of Multiplexor.multiTransferTightlyPacked (/../data/reentrancy/solidity_contract/23421.sol#208) is not in mixedCase
+Parameter '_address' of Multiplexor.multiTransfer (/../data/reentrancy/solidity_contract/23421.sol#215) is not in mixedCase
+Parameter '_amount' of Multiplexor.multiTransfer (/../data/reentrancy/solidity_contract/23421.sol#215) is not in mixedCase
+Parameter '_addressAndAmount' of Multiplexor.multiCallTightlyPacked (/../data/reentrancy/solidity_contract/23421.sol#222) is not in mixedCase
+Parameter '_address' of Multiplexor.multiCall (/../data/reentrancy/solidity_contract/23421.sol#229) is not in mixedCase
+Parameter '_amount' of Multiplexor.multiCall (/../data/reentrancy/solidity_contract/23421.sol#229) is not in mixedCase
+Parameter '_token' of Multiplexor.multiERC20TransferTightlyPacked (/../data/reentrancy/solidity_contract/23421.sol#236) is not in mixedCase
+Parameter '_addressAndAmount' of Multiplexor.multiERC20TransferTightlyPacked (/../data/reentrancy/solidity_contract/23421.sol#236) is not in mixedCase
+Parameter '_token' of Multiplexor.multiERC20Transfer (/../data/reentrancy/solidity_contract/23421.sol#243) is not in mixedCase
+Parameter '_address' of Multiplexor.multiERC20Transfer (/../data/reentrancy/solidity_contract/23421.sol#243) is not in mixedCase
+Parameter '_amount' of Multiplexor.multiERC20Transfer (/../data/reentrancy/solidity_contract/23421.sol#243) is not in mixedCase
+Function 'Multiplexor._safeTransfer' (/../data/reentrancy/solidity_contract/23421.sol#250-253) is not in mixedCase
+Parameter '_to' of Multiplexor._safeTransfer (/../data/reentrancy/solidity_contract/23421.sol#250) is not in mixedCase
+Parameter '_amount' of Multiplexor._safeTransfer (/../data/reentrancy/solidity_contract/23421.sol#250) is not in mixedCase
+Function 'Multiplexor._safeCall' (/../data/reentrancy/solidity_contract/23421.sol#255-258) is not in mixedCase
+Parameter '_to' of Multiplexor._safeCall (/../data/reentrancy/solidity_contract/23421.sol#255) is not in mixedCase
+Parameter '_amount' of Multiplexor._safeCall (/../data/reentrancy/solidity_contract/23421.sol#255) is not in mixedCase
+Function 'Multiplexor._safeERC20Transfer' (/../data/reentrancy/solidity_contract/23421.sol#260-263) is not in mixedCase
+Parameter '_token' of Multiplexor._safeERC20Transfer (/../data/reentrancy/solidity_contract/23421.sol#260) is not in mixedCase
+Parameter '_to' of Multiplexor._safeERC20Transfer (/../data/reentrancy/solidity_contract/23421.sol#260) is not in mixedCase
+Parameter '_amount' of Multiplexor._safeERC20Transfer (/../data/reentrancy/solidity_contract/23421.sol#260) is not in mixedCase
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#conformance-to-solidity-naming-conventions[0m
+INFO:Slither:/../data/reentrancy/solidity_contract/23421.sol analyzed (4 contracts), 59 result(s) found

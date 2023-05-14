@@ -1,0 +1,14 @@
+{
+  "contract": "dumbDAO",
+  "tool": "honeybadger",
+  "start": 1609192120.285297,
+  "end": 1609192122.0477362,
+  "duration": 1.762439250946045,
+  "analysis": [
+    {
+      "errors": [],
+      "file": "/../data/reentrancy/solidity_contract/dumbDAO.sol",
+      "name": "dumbDAO"
+    }
+  ]
+}

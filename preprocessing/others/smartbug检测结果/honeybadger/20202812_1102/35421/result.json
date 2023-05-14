@@ -1,0 +1,44 @@
+{
+  "contract": "35421",
+  "tool": "honeybadger",
+  "start": 1609198897.8046222,
+  "end": 1609198988.778431,
+  "duration": 90.97380876541138,
+  "analysis": [
+    {
+      "errors": [],
+      "file": "/../data/reentrancy/solidity_contract/35421.sol",
+      "name": "DSBaseActor"
+    },
+    {
+      "errors": [],
+      "file": "/../data/reentrancy/solidity_contract/35421.sol",
+      "name": "DSMath"
+    },
+    {
+      "errors": [],
+      "file": "/../data/reentrancy/solidity_contract/35421.sol",
+      "name": "I_Pricer"
+    },
+    {
+      "errors": [],
+      "file": "/../data/reentrancy/solidity_contract/35421.sol",
+      "name": "I_coin"
+    },
+    {
+      "errors": [],
+      "file": "/../data/reentrancy/solidity_contract/35421.sol",
+      "name": "I_minter"
+    },
+    {
+      "errors": [],
+      "file": "/../data/reentrancy/solidity_contract/35421.sol",
+      "name": "canFreeze"
+    },
+    {
+      "errors": [],
+      "file": "/../data/reentrancy/solidity_contract/35421.sol",
+      "name": "minter"
+    }
+  ]
+}

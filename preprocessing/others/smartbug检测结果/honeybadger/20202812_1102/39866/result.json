@@ -1,0 +1,14 @@
+{
+  "contract": "39866",
+  "tool": "honeybadger",
+  "start": 1609186861.886154,
+  "end": 1609186873.586837,
+  "duration": 11.700683116912842,
+  "analysis": [
+    {
+      "errors": [],
+      "file": "/../data/reentrancy/solidity_contract/39866.sol",
+      "name": "NinjaToken"
+    }
+  ]
+}

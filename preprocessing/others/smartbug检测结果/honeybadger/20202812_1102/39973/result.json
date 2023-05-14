@@ -1,0 +1,29 @@
+{
+  "contract": "39973",
+  "tool": "honeybadger",
+  "start": 1609189653.920893,
+  "end": 1609189819.475401,
+  "duration": 165.55450797080994,
+  "analysis": [
+    {
+      "errors": [],
+      "file": "/../data/reentrancy/solidity_contract/39973.sol",
+      "name": "AssetMin"
+    },
+    {
+      "errors": [],
+      "file": "/../data/reentrancy/solidity_contract/39973.sol",
+      "name": "GMT"
+    },
+    {
+      "errors": [],
+      "file": "/../data/reentrancy/solidity_contract/39973.sol",
+      "name": "Owned"
+    },
+    {
+      "errors": [],
+      "file": "/../data/reentrancy/solidity_contract/39973.sol",
+      "name": "SafeMin"
+    }
+  ]
+}

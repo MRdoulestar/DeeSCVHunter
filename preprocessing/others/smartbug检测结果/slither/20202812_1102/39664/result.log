@@ -1,0 +1,448 @@
+INFO:Slither:Compilation warnings/errors on /../data/reentrancy/solidity_contract/39664.sol:
+/../data/reentrancy/solidity_contract/39664.sol:41:32: Warning: "throw" is deprecated in favour of "revert()", "require()" and "assert()".
+		if (cardIndex >= totalCards) throw;
+		                             ^---^
+/../data/reentrancy/solidity_contract/39664.sol:60:8: Warning: Use of the "var" keyword is deprecated.
+		var (suit, number) = cardDescription(self);
+		     ^--^
+/../data/reentrancy/solidity_contract/39664.sol:60:14: Warning: Use of the "var" keyword is deprecated.
+		var (suit, number) = cardDescription(self);
+		           ^----^
+/../data/reentrancy/solidity_contract/39664.sol:82:25: Warning: "throw" is deprecated in favour of "revert()", "require()" and "assert()".
+		if (blockHash == 0x0) throw;
+		                      ^---^
+/../data/reentrancy/solidity_contract/39664.sol:150:33: Warning: "throw" is deprecated in favour of "revert()", "require()" and "assert()".
+      if (!canDoubleDown(self)) throw;
+                                ^---^
+/../data/reentrancy/solidity_contract/39664.sol:192:24: Warning: "throw" is deprecated in favour of "revert()", "require()" and "assert()".
+      if (!tick(self)) throw;  
+                       ^---^
+/../data/reentrancy/solidity_contract/39664.sol:210:42: Warning: "throw" is deprecated in favour of "revert()", "require()" and "assert()".
+    if (self.state != GameState.Waiting) throw;
+                                         ^---^
+/../data/reentrancy/solidity_contract/39664.sol:211:67: Warning: "throw" is deprecated in favour of "revert()", "require()" and "assert()".
+    if (decision != GameState.Hit && decision != GameState.Stand) throw;
+                                                                  ^---^
+/../data/reentrancy/solidity_contract/39664.sol:246:22: Warning: "throw" is deprecated in favour of "revert()", "require()" and "assert()".
+    if (self.closed) throw;  
+                     ^---^
+/../data/reentrancy/solidity_contract/39664.sol:247:43: Warning: "throw" is deprecated in favour of "revert()", "require()" and "assert()".
+    if (self.state != GameState.Finished) throw;  
+                                          ^---^
+/../data/reentrancy/solidity_contract/39664.sol:252:43: Warning: "throw" is deprecated in favour of "revert()", "require()" and "assert()".
+      if (!self.player.send(self.payout)) throw;
+                                          ^---^
+/../data/reentrancy/solidity_contract/39664.sol:359:31: Warning: "throw" is deprecated in favour of "revert()", "require()" and "assert()".
+    if (!isOwner[msg.sender]) throw;
+                              ^---^
+/../data/reentrancy/solidity_contract/39664.sol:364:26: Warning: "throw" is deprecated in favour of "revert()", "require()" and "assert()".
+    if (msg.sender != x) throw;
+                         ^---^
+/../data/reentrancy/solidity_contract/39664.sol:369:45: Warning: "throw" is deprecated in favour of "revert()", "require()" and "assert()".
+    if (msg.sender != games[gameID].player) throw;
+                                            ^---^
+/../data/reentrancy/solidity_contract/39664.sol:375:55: Warning: "throw" is deprecated in favour of "revert()", "require()" and "assert()".
+    if (blockActions[block.number] > maxBlockActions) throw;
+                                                      ^---^
+/../data/reentrancy/solidity_contract/39664.sol:379:3: Warning: Defining constructors as functions with the same name as the contract is deprecated. Use "constructor(...) { ... }" instead.
+  function Blockjack(address _admin_contract, address _logs_contract) {  
+  ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/39664.sol:393:26: Warning: "throw" is deprecated in favour of "revert()", "require()" and "assert()".
+    if (!allowsNewGames) throw;
+                         ^---^
+/../data/reentrancy/solidity_contract/39664.sol:394:29: Warning: "throw" is deprecated in favour of "revert()", "require()" and "assert()".
+    if (msg.value < minBet) throw;
+                            ^---^
+/../data/reentrancy/solidity_contract/39664.sol:395:29: Warning: "throw" is deprecated in favour of "revert()", "require()" and "assert()".
+    if (msg.value > maxBet) throw;
+                            ^---^
+/../data/reentrancy/solidity_contract/39664.sol:402:26: Warning: "throw" is deprecated in favour of "revert()", "require()" and "assert()".
+	if (!openedGame.tick()) throw;
+	                        ^---^
+/../data/reentrancy/solidity_contract/39664.sol:403:26: Warning: "throw" is deprecated in favour of "revert()", "require()" and "assert()".
+	if (!openedGame.closed) throw;  
+	                        ^---^
+/../data/reentrancy/solidity_contract/39664.sol:418:23: Warning: "throw" is deprecated in favour of "revert()", "require()" and "assert()".
+    if (!game.tick()) throw;
+                      ^---^
+/../data/reentrancy/solidity_contract/39664.sol:426:23: Warning: "throw" is deprecated in favour of "revert()", "require()" and "assert()".
+    if (!game.tick()) throw;
+                      ^---^
+/../data/reentrancy/solidity_contract/39664.sol:434:23: Warning: "throw" is deprecated in favour of "revert()", "require()" and "assert()".
+    if (!game.tick()) throw;
+                      ^---^
+/../data/reentrancy/solidity_contract/39664.sol:441:28: Warning: "throw" is deprecated in favour of "revert()", "require()" and "assert()".
+    if (openedGame.closed) throw;
+                           ^---^
+/../data/reentrancy/solidity_contract/39664.sol:442:29: Warning: "throw" is deprecated in favour of "revert()", "require()" and "assert()".
+    if (!openedGame.tick()) throw;
+                            ^---^
+/../data/reentrancy/solidity_contract/39664.sol:544:83: Warning: "throw" is deprecated in favour of "revert()", "require()" and "assert()".
+    if (initialBankroll > currentBankroll - 5 ether && bankrollLockedUntil > now) throw;
+                                                                                  ^---^
+/../data/reentrancy/solidity_contract/39664.sol:549:57: Warning: "throw" is deprecated in favour of "revert()", "require()" and "assert()".
+      if (!DEV.send(currentBankroll - initialBankroll)) throw;
+                                                        ^---^
+/../data/reentrancy/solidity_contract/39664.sol:560:76: Warning: "throw" is deprecated in favour of "revert()", "require()" and "assert()".
+      if (!ADMIN_CONTRACT.call.value(currentBankroll - initialBankroll)()) throw;
+                                                                           ^---^
+/../data/reentrancy/solidity_contract/39664.sol:567:35: Warning: "throw" is deprecated in favour of "revert()", "require()" and "assert()".
+    if (profitsLockedUntil > now) throw;
+                                  ^---^
+/../data/reentrancy/solidity_contract/39664.sol:568:45: Warning: "throw" is deprecated in favour of "revert()", "require()" and "assert()".
+    if (currentBankroll <= initialBankroll) throw;  
+                                            ^---^
+/../data/reentrancy/solidity_contract/39664.sol:571:47: Warning: "throw" is deprecated in favour of "revert()", "require()" and "assert()".
+    if (!ADMIN_CONTRACT.call.value(profit)()) throw;
+                                              ^---^
+/../data/reentrancy/solidity_contract/39664.sol:1:1: Warning: Source file does not specify required compiler version!Consider adding "pragma solidity ^0.4.25;"
+library ArrayLib {
+^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/39664.sol:281:52: Warning: This declaration shadows an existing declaration.
+  function bestSum(uint8[] possibleSums)  returns (uint8 bestSum) {
+                                                   ^-----------^
+/../data/reentrancy/solidity_contract/39664.sol:281:3: The shadowed declaration is here:
+  function bestSum(uint8[] possibleSums)  returns (uint8 bestSum) {
+  ^ (Relevant source part starts here and spans across multiple lines).
+
+/../data/reentrancy/solidity_contract/39664.sol:400:7: Warning: Variable is declared as a storage pointer. Use an explicit "storage" keyword to silence this warning.
+      GameLib.Game openedGame = games[currentGameId];
+      ^---------------------^
+/../data/reentrancy/solidity_contract/39664.sol:416:5: Warning: Variable is declared as a storage pointer. Use an explicit "storage" keyword to silence this warning.
+    GameLib.Game game = games[gameID];
+    ^---------------^
+/../data/reentrancy/solidity_contract/39664.sol:424:5: Warning: Variable is declared as a storage pointer. Use an explicit "storage" keyword to silence this warning.
+    GameLib.Game game = games[gameID];
+    ^---------------^
+/../data/reentrancy/solidity_contract/39664.sol:432:5: Warning: Variable is declared as a storage pointer. Use an explicit "storage" keyword to silence this warning.
+    GameLib.Game game = games[gameID];
+    ^---------------^
+/../data/reentrancy/solidity_contract/39664.sol:440:5: Warning: Variable is declared as a storage pointer. Use an explicit "storage" keyword to silence this warning.
+    GameLib.Game openedGame = games[gameID];
+    ^---------------------^
+/../data/reentrancy/solidity_contract/39664.sol:447:5: Warning: Variable is declared as a storage pointer. Use an explicit "storage" keyword to silence this warning.
+    GameLib.Game openedGame = games[gameID];
+    ^---------------------^
+/../data/reentrancy/solidity_contract/39664.sol:471:5: Warning: Variable is declared as a storage pointer. Use an explicit "storage" keyword to silence this warning.
+    GameLib.Game game = games[i];
+    ^---------------^
+/../data/reentrancy/solidity_contract/39664.sol:83:23: Warning: This function only accepts a single "bytes" argument. Please use "abi.encodePacked(...)" or a similar function to encode the data.
+		return uint(uint256(keccak256(blockHash, player, gameID, n)) % m);
+		                    ^-------------------------------------^
+/../data/reentrancy/solidity_contract/39664.sol:552:5: Warning: "suicide" has been deprecated in favour of "selfdestruct"
+    suicide(DX);  
+    ^---------^
+/../data/reentrancy/solidity_contract/39664.sol:562:5: Warning: "suicide" has been deprecated in favour of "selfdestruct"
+    suicide(DX);  
+    ^---------^
+/../data/reentrancy/solidity_contract/39664.sol:3:2: Warning: No visibility specified. Defaulting to "public". 
+	function insertInPlace(uint8[] storage self, uint8 n) {
+ ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/39664.sol:33:2: Warning: No visibility specified. Defaulting to "public". 
+	function init(Deck storage self, uint256 gameID)  {
+ ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/39664.sol:39:2: Warning: No visibility specified. Defaulting to "public". 
+	function getCard(Deck storage self, uint256 blockNumber)  returns (uint8)  {
+ ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/39664.sol:53:2: Warning: No visibility specified. Defaulting to "public". 
+	function cardDescription(uint8 self) constant returns (Suit, uint8) {
+ ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/39664.sol:57:2: Warning: No visibility specified. Defaulting to "public". 
+	function cardEmojified(uint8 self) constant returns (uint8, string) {
+ ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/39664.sol:69:2: Warning: No visibility specified. Defaulting to "public". 
+	function cardFacevalue(uint8 self) constant returns (uint8) {
+ ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/39664.sol:73:2: Warning: No visibility specified. Defaulting to "public". 
+	function blackjackValue(uint8 self) constant returns (uint8) {
+ ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/39664.sol:78:2: Warning: No visibility specified. Defaulting to "public". 
+	function getRandomNumber(uint b, address player, uint256 gameID, uint n, uint m) constant returns (uint) {
+ ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/39664.sol:81:23: Warning: "block.blockhash()" has been deprecated in favor of "blockhash()"
+		bytes32 blockHash = block.blockhash(b);
+		                    ^-------------^
+/../data/reentrancy/solidity_contract/39664.sol:92:3: Warning: No visibility specified. Defaulting to "public". 
+  function recordLog(uint256 gameID, address player, uint gameResult, uint256 payout, uint8 playerHand, uint8 houseHand);
+  ^---------------------------------------------------------------------------------------------------------------------^
+/../data/reentrancy/solidity_contract/39664.sol:93:3: Warning: No visibility specified. Defaulting to "public". 
+  function tickRequiredLog(uint256 gameID, address player, uint256 actionBlock);
+  ^----------------------------------------------------------------------------^
+/../data/reentrancy/solidity_contract/39664.sol:124:3: Warning: No visibility specified. Defaulting to "public". 
+  function init(Game storage self, uint256 gameID) {
+  ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/39664.sol:139:3: Warning: No visibility specified. Defaulting to "public". 
+  function tick(Game storage self) returns (bool) {
+  ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/39664.sol:166:3: Warning: No visibility specified. Defaulting to "public". 
+  function needsTick(Game storage self) constant returns (bool) {
+  ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/39664.sol:173:3: Warning: No visibility specified. Defaulting to "public". 
+  function checkGameResult(Game storage self)  {
+  ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/39664.sol:185:3: Warning: No visibility specified. Defaulting to "public". 
+  function checkGameContinues(Game storage self)  {
+  ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/39664.sol:196:3: Warning: No visibility specified. Defaulting to "public". 
+  function forceStand(Game storage self) {
+  ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/39664.sol:202:3: Warning: No visibility specified. Defaulting to "public". 
+  function canDoubleDown(Game storage self) returns (bool) {
+  ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/39664.sol:209:3: Warning: No visibility specified. Defaulting to "public". 
+  function playerDecision(Game storage self, GameState decision)  {
+  ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/39664.sol:237:3: Warning: No visibility specified. Defaulting to "public". 
+  function endGame(Game storage self, GameResult result) {
+  ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/39664.sol:264:3: Warning: No visibility specified. Defaulting to "public". 
+  function countHand(uint8[] memory hand)  returns (uint8) {
+  ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/39664.sol:281:3: Warning: No visibility specified. Defaulting to "public". 
+  function bestSum(uint8[] possibleSums)  returns (uint8 bestSum) {
+  ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/39664.sol:291:3: Warning: No visibility specified. Defaulting to "public". 
+  function appendArray(uint8[] memory array, uint8 n)  returns (uint8[] memory) {
+  ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/39664.sol:300:3: Warning: No visibility specified. Defaulting to "public". 
+  function compareHands(uint8 a, uint8 b)  returns (ComparaisonResult) {
+  ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/39664.sol:379:3: Warning: No visibility specified. Defaulting to "public". 
+  function Blockjack(address _admin_contract, address _logs_contract) {  
+  ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/39664.sol:388:3: Warning: No visibility specified. Defaulting to "public". 
+  function () payable {
+  ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/39664.sol:392:3: Warning: No visibility specified. Defaulting to "public". 
+  function startGame() blockActionProtected payable {
+  ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/39664.sol:415:3: Warning: No visibility specified. Defaulting to "public". 
+  function hit(uint256 gameID) onlyPlayer(gameID) blockActionProtected {
+  ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/39664.sol:423:3: Warning: No visibility specified. Defaulting to "public". 
+  function doubleDown(uint256 gameID) onlyPlayer(gameID) blockActionProtected payable {
+  ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/39664.sol:431:3: Warning: No visibility specified. Defaulting to "public". 
+  function stand(uint256 gameID) onlyPlayer(gameID) blockActionProtected {
+  ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/39664.sol:439:3: Warning: No visibility specified. Defaulting to "public". 
+  function gameTick(uint256 gameID) blockActionProtected {
+  ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/39664.sol:470:3: Warning: No visibility specified. Defaulting to "public". 
+  function gameState(uint i) constant returns (uint8[], uint8[], uint8, uint8, uint256, uint256, uint8, uint8, bool, uint256) {
+  ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/39664.sol:494:3: Warning: No visibility specified. Defaulting to "public". 
+  function changeDev(address newDev) only(DEV) {
+  ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/39664.sol:500:3: Warning: No visibility specified. Defaulting to "public". 
+  function changeDX(address newDX) only(DX) {
+  ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/39664.sol:506:3: Warning: No visibility specified. Defaulting to "public". 
+  function changeAdminContract(address _new_admin_contract) only(ADMIN_CONTRACT) {
+  ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/39664.sol:512:3: Warning: No visibility specified. Defaulting to "public". 
+  function setSettings(uint256 _min, uint256 _max, uint256 _maxBlockActions) only(ADMIN_CONTRACT) {
+  ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/39664.sol:518:3: Warning: No visibility specified. Defaulting to "public". 
+  function registerOwner(address _new_watcher) only(ADMIN_CONTRACT) {
+  ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/39664.sol:522:3: Warning: No visibility specified. Defaulting to "public". 
+  function removeOwner(address _old_watcher) only(ADMIN_CONTRACT) {
+  ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/39664.sol:526:3: Warning: No visibility specified. Defaulting to "public". 
+  function stopBlockjack() onlyOwner {
+  ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/39664.sol:530:3: Warning: No visibility specified. Defaulting to "public". 
+  function startBlockjack() only(ADMIN_CONTRACT) {
+  ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/39664.sol:534:3: Warning: No visibility specified. Defaulting to "public". 
+  function addBankroll() only(DX) payable {
+  ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/39664.sol:539:3: Warning: No visibility specified. Defaulting to "public". 
+  function remainingBankroll() constant returns (uint256) {
+  ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/39664.sol:543:3: Warning: No visibility specified. Defaulting to "public". 
+  function removeBankroll() only(DX) {
+  ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/39664.sol:556:3: Warning: No visibility specified. Defaulting to "public". 
+  function migrateBlockjack() only(ADMIN_CONTRACT) {
+  ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/39664.sol:566:3: Warning: No visibility specified. Defaulting to "public". 
+  function shareProfits() onlyOwner {
+  ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/39664.sol:69:2: Warning: Function state mutability can be restricted to pure
+	function cardFacevalue(uint8 self) constant returns (uint8) {
+ ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/39664.sol:256:3: Warning: Function state mutability can be restricted to pure
+  function payoutForResult(GameResult result, uint256 bet) private returns (uint256) {
+  ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/39664.sol:291:3: Warning: Function state mutability can be restricted to pure
+  function appendArray(uint8[] memory array, uint8 n)  returns (uint8[] memory) {
+  ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/39664.sol:300:3: Warning: Function state mutability can be restricted to pure
+  function compareHands(uint8 a, uint8 b)  returns (ComparaisonResult) {
+  ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/39664.sol:476:6: Warning: Function declared as view, but this expression (potentially) modifies the state and thus requires non-payable (the default) or payable.
+	    GameLib.countHand(game.houseCards),
+	    ^--------------------------------^
+/../data/reentrancy/solidity_contract/39664.sol:477:6: Warning: Function declared as view, but this expression (potentially) modifies the state and thus requires non-payable (the default) or payable.
+	    GameLib.countHand(game.playerCards),
+	    ^---------------------------------^
+
+INFO:Detectors:[91m
+Reentrancy in Blockjack.shareProfits (/../data/reentrancy/solidity_contract/39664.sol#566-577):
+	External calls:
+	- ! ADMIN_CONTRACT.call.value(profit)() (/../data/reentrancy/solidity_contract/39664.sol#571-572)
+	State variables written after the call(s):
+	- currentBankroll (/../data/reentrancy/solidity_contract/39664.sol#572-574)
+	- profitsLockedUntil (/../data/reentrancy/solidity_contract/39664.sol#575-577)
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#reentrancy-vulnerabilities[0m
+INFO:Detectors:[93m
+Reentrancy in Blockjack.startGame (/../data/reentrancy/solidity_contract/39664.sol#392-415):
+	External calls:
+	- recordEndedGame(currentGameId) (/../data/reentrancy/solidity_contract/39664.sol#404-407)
+	State variables written after the call(s):
+	- currentGame (/../data/reentrancy/solidity_contract/39664.sol#411-412)
+	- games (/../data/reentrancy/solidity_contract/39664.sol#409-410)
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#reentrancy-vulnerabilities-1[0m
+INFO:Detectors:[93m
+emojiSuit in DeckLib.cardEmojified (/../data/reentrancy/solidity_contract/39664.sol#58) is a local variable never initialiazed
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#uninitialized-local-variables[0m
+INFO:Detectors:[92m
+GameLib.bestSum.bestSum (local variable @ /../data/reentrancy/solidity_contract/39664.sol#281-282) shadows:
+	- GameLib.bestSum (function @ /../data/reentrancy/solidity_contract/39664.sol#281-291)
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#local-variable-shadowing[0m
+INFO:Detectors:[92m
+Reentrancy in Blockjack.shareProfits (/../data/reentrancy/solidity_contract/39664.sol#566-577):
+	External calls:
+	- ! ADMIN_CONTRACT.call.value(profit)() (/../data/reentrancy/solidity_contract/39664.sol#571-572)
+	State variables written after the call(s):
+	- bankrollLockedUntil (/../data/reentrancy/solidity_contract/39664.sol#574-575)
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#reentrancy-vulnerabilities-2[0m
+INFO:Detectors:[92m
+Blockjack.BANKROLL_LOCK_PERIOD should be constant (/../data/reentrancy/solidity_contract/39664.sol#349-351)
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#state-variables-that-could-be-declared-constant[0m
+INFO:Detectors:[92m
+Deprecated standard detected @ /../data/reentrancy/solidity_contract/39664.sol#41:
+	- Usage of "throw" should be replaced with "revert()"
+Deprecated standard detected @ /../data/reentrancy/solidity_contract/39664.sol#81-82:
+	- Usage of "block.blockhash()" should be replaced with "blockhash()"
+Deprecated standard detected @ /../data/reentrancy/solidity_contract/39664.sol#83:
+	- Usage of "throw" should be replaced with "revert()"
+Deprecated standard detected @ /../data/reentrancy/solidity_contract/39664.sol#151:
+	- Usage of "throw" should be replaced with "revert()"
+Deprecated standard detected @ /../data/reentrancy/solidity_contract/39664.sol#194-196:
+	- Usage of "throw" should be replaced with "revert()"
+Deprecated standard detected @ /../data/reentrancy/solidity_contract/39664.sol#211:
+	- Usage of "throw" should be replaced with "revert()"
+Deprecated standard detected @ /../data/reentrancy/solidity_contract/39664.sol#213:
+	- Usage of "throw" should be replaced with "revert()"
+Deprecated standard detected @ /../data/reentrancy/solidity_contract/39664.sol#247:
+	- Usage of "throw" should be replaced with "revert()"
+Deprecated standard detected @ /../data/reentrancy/solidity_contract/39664.sol#249:
+	- Usage of "throw" should be replaced with "revert()"
+Deprecated standard detected @ /../data/reentrancy/solidity_contract/39664.sol#254-256:
+	- Usage of "throw" should be replaced with "revert()"
+Deprecated standard detected @ /../data/reentrancy/solidity_contract/39664.sol#394:
+	- Usage of "throw" should be replaced with "revert()"
+Deprecated standard detected @ /../data/reentrancy/solidity_contract/39664.sol#395:
+	- Usage of "throw" should be replaced with "revert()"
+Deprecated standard detected @ /../data/reentrancy/solidity_contract/39664.sol#398:
+	- Usage of "throw" should be replaced with "revert()"
+Deprecated standard detected @ /../data/reentrancy/solidity_contract/39664.sol#403:
+	- Usage of "throw" should be replaced with "revert()"
+Deprecated standard detected @ /../data/reentrancy/solidity_contract/39664.sol#404:
+	- Usage of "throw" should be replaced with "revert()"
+Deprecated standard detected @ /../data/reentrancy/solidity_contract/39664.sol#419:
+	- Usage of "throw" should be replaced with "revert()"
+Deprecated standard detected @ /../data/reentrancy/solidity_contract/39664.sol#427:
+	- Usage of "throw" should be replaced with "revert()"
+Deprecated standard detected @ /../data/reentrancy/solidity_contract/39664.sol#435:
+	- Usage of "throw" should be replaced with "revert()"
+Deprecated standard detected @ /../data/reentrancy/solidity_contract/39664.sol#442:
+	- Usage of "throw" should be replaced with "revert()"
+Deprecated standard detected @ /../data/reentrancy/solidity_contract/39664.sol#443:
+	- Usage of "throw" should be replaced with "revert()"
+Deprecated standard detected @ /../data/reentrancy/solidity_contract/39664.sol#546:
+	- Usage of "throw" should be replaced with "revert()"
+Deprecated standard detected @ /../data/reentrancy/solidity_contract/39664.sol#552:
+	- Usage of "throw" should be replaced with "revert()"
+Deprecated standard detected @ /../data/reentrancy/solidity_contract/39664.sol#553:
+	- Usage of "suicide()" should be replaced with "selfdestruct()"
+Deprecated standard detected @ /../data/reentrancy/solidity_contract/39664.sol#562:
+	- Usage of "throw" should be replaced with "revert()"
+Deprecated standard detected @ /../data/reentrancy/solidity_contract/39664.sol#563-566:
+	- Usage of "suicide()" should be replaced with "selfdestruct()"
+Deprecated standard detected @ /../data/reentrancy/solidity_contract/39664.sol#568:
+	- Usage of "throw" should be replaced with "revert()"
+Deprecated standard detected @ /../data/reentrancy/solidity_contract/39664.sol#570:
+	- Usage of "throw" should be replaced with "revert()"
+Deprecated standard detected @ /../data/reentrancy/solidity_contract/39664.sol#572:
+	- Usage of "throw" should be replaced with "revert()"
+Deprecated standard detected @ /../data/reentrancy/solidity_contract/39664.sol#361-363:
+	- Usage of "throw" should be replaced with "revert()"
+Deprecated standard detected @ /../data/reentrancy/solidity_contract/39664.sol#366-368:
+	- Usage of "throw" should be replaced with "revert()"
+Deprecated standard detected @ /../data/reentrancy/solidity_contract/39664.sol#371-373:
+	- Usage of "throw" should be replaced with "revert()"
+Deprecated standard detected @ /../data/reentrancy/solidity_contract/39664.sol#377-379:
+	- Usage of "throw" should be replaced with "revert()"
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#deprecated-standards[0m
+INFO:Detectors:[92m
+ArrayLib.insertInPlace (/../data/reentrancy/solidity_contract/39664.sol#3-16) should be declared external
+DeckLib.init (/../data/reentrancy/solidity_contract/39664.sol#33-37) should be declared external
+DeckLib.getCard (/../data/reentrancy/solidity_contract/39664.sol#39-51) should be declared external
+DeckLib.cardEmojified (/../data/reentrancy/solidity_contract/39664.sol#57-69) should be declared external
+DeckLib.blackjackValue (/../data/reentrancy/solidity_contract/39664.sol#73-78) should be declared external
+AbstractBlockjackLogs.recordLog (/../data/reentrancy/solidity_contract/39664.sol#92-93) should be declared external
+AbstractBlockjackLogs.tickRequiredLog (/../data/reentrancy/solidity_contract/39664.sol#93-96) should be declared external
+GameLib.init (/../data/reentrancy/solidity_contract/39664.sol#124-139) should be declared external
+Blockjack.fallback (/../data/reentrancy/solidity_contract/39664.sol#388-392) should be declared external
+Blockjack.hit (/../data/reentrancy/solidity_contract/39664.sol#415-423) should be declared external
+Blockjack.doubleDown (/../data/reentrancy/solidity_contract/39664.sol#423-431) should be declared external
+Blockjack.stand (/../data/reentrancy/solidity_contract/39664.sol#431-439) should be declared external
+Blockjack.gameTick (/../data/reentrancy/solidity_contract/39664.sol#439-446) should be declared external
+Blockjack.gameState (/../data/reentrancy/solidity_contract/39664.sol#470-488) should be declared external
+Blockjack.changeDev (/../data/reentrancy/solidity_contract/39664.sol#494-500) should be declared external
+Blockjack.changeDX (/../data/reentrancy/solidity_contract/39664.sol#500-506) should be declared external
+Blockjack.changeAdminContract (/../data/reentrancy/solidity_contract/39664.sol#506-512) should be declared external
+Blockjack.setSettings (/../data/reentrancy/solidity_contract/39664.sol#512-518) should be declared external
+Blockjack.registerOwner (/../data/reentrancy/solidity_contract/39664.sol#518-522) should be declared external
+Blockjack.removeOwner (/../data/reentrancy/solidity_contract/39664.sol#522-526) should be declared external
+Blockjack.startBlockjack (/../data/reentrancy/solidity_contract/39664.sol#530-534) should be declared external
+Blockjack.addBankroll (/../data/reentrancy/solidity_contract/39664.sol#534-539) should be declared external
+Blockjack.remainingBankroll (/../data/reentrancy/solidity_contract/39664.sol#539-543) should be declared external
+Blockjack.removeBankroll (/../data/reentrancy/solidity_contract/39664.sol#543-556) should be declared external
+Blockjack.migrateBlockjack (/../data/reentrancy/solidity_contract/39664.sol#556-566) should be declared external
+Blockjack.shareProfits (/../data/reentrancy/solidity_contract/39664.sol#566-577) should be declared external
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#public-function-that-could-be-declared-as-external[0m
+INFO:Detectors:[92m
+Low level call in Blockjack.migrateBlockjack (/../data/reentrancy/solidity_contract/39664.sol#556-566):
+	-! ADMIN_CONTRACT.call.value(currentBankroll - initialBankroll)() /../data/reentrancy/solidity_contract/39664.sol#560-562
+Low level call in Blockjack.shareProfits (/../data/reentrancy/solidity_contract/39664.sol#566-577):
+	-! ADMIN_CONTRACT.call.value(profit)() /../data/reentrancy/solidity_contract/39664.sol#571-572
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#low-level-calls[0m
+INFO:Detectors:[92m
+Constant 'DeckLib.cardsPerSuit' (/../data/reentrancy/solidity_contract/39664.sol#23) is not in UPPER_CASE_WITH_UNDERSCORES
+Constant 'DeckLib.suits' (/../data/reentrancy/solidity_contract/39664.sol#24) is not in UPPER_CASE_WITH_UNDERSCORES
+Constant 'DeckLib.totalCards' (/../data/reentrancy/solidity_contract/39664.sol#25) is not in UPPER_CASE_WITH_UNDERSCORES
+Constant 'GameLib.houseLimit' (/../data/reentrancy/solidity_contract/39664.sol#99-100) is not in UPPER_CASE_WITH_UNDERSCORES
+Constant 'GameLib.target' (/../data/reentrancy/solidity_contract/39664.sol#100-102) is not in UPPER_CASE_WITH_UNDERSCORES
+Function 'Blockjack.Blockjack' (/../data/reentrancy/solidity_contract/39664.sol#379-388) is not in mixedCase
+Parameter '_admin_contract' of Blockjack.Blockjack (/../data/reentrancy/solidity_contract/39664.sol#379) is not in mixedCase
+Parameter '_logs_contract' of Blockjack.Blockjack (/../data/reentrancy/solidity_contract/39664.sol#379-380) is not in mixedCase
+Parameter '_new_admin_contract' of Blockjack.changeAdminContract (/../data/reentrancy/solidity_contract/39664.sol#506) is not in mixedCase
+Parameter '_min' of Blockjack.setSettings (/../data/reentrancy/solidity_contract/39664.sol#512) is not in mixedCase
+Parameter '_max' of Blockjack.setSettings (/../data/reentrancy/solidity_contract/39664.sol#512) is not in mixedCase
+Parameter '_maxBlockActions' of Blockjack.setSettings (/../data/reentrancy/solidity_contract/39664.sol#512) is not in mixedCase
+Parameter '_new_watcher' of Blockjack.registerOwner (/../data/reentrancy/solidity_contract/39664.sol#518) is not in mixedCase
+Parameter '_old_watcher' of Blockjack.removeOwner (/../data/reentrancy/solidity_contract/39664.sol#522) is not in mixedCase
+Variable 'Blockjack.DX' (/../data/reentrancy/solidity_contract/39664.sol#342-343) is not in mixedCase
+Variable 'Blockjack.DEV' (/../data/reentrancy/solidity_contract/39664.sol#343-347) is not in mixedCase
+Variable 'Blockjack.ADMIN_CONTRACT' (/../data/reentrancy/solidity_contract/39664.sol#347-349) is not in mixedCase
+Variable 'Blockjack.BANKROLL_LOCK_PERIOD' (/../data/reentrancy/solidity_contract/39664.sol#349-351) is not in mixedCase
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#conformance-to-solidity-naming-conventions[0m
+INFO:Detectors:[92m
+DeckLib.suits (/../data/reentrancy/solidity_contract/39664.sol#24) is never used in DeckLib
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#unused-state-variables[0m
+INFO:Slither:/../data/reentrancy/solidity_contract/39664.sol analyzed (5 contracts), 85 result(s) found

@@ -1,0 +1,40 @@
+{
+  "contract": "39912",
+  "tool": "osiris",
+  "start": 1609174848.325612,
+  "end": 1609174853.54763,
+  "duration": 5.222018003463745,
+  "analysis": [
+    {
+      "errors": [
+        {
+          "line": 49,
+          "column": 22,
+          "message": "concurrency_bug"
+        },
+        {
+          "line": 37,
+          "column": 22,
+          "message": "concurrency_bug"
+        },
+        {
+          "line": 37,
+          "column": 22,
+          "message": "reentrancy_bug"
+        },
+        {
+          "line": 40,
+          "column": 22,
+          "message": "reentrancy_bug"
+        }
+      ],
+      "file": "/../data/reentrancy/solidity_contract/39912.sol",
+      "name": "CampaignBeneficiary"
+    },
+    {
+      "errors": [],
+      "file": "/../data/reentrancy/solidity_contract/39912.sol",
+      "name": "owned"
+    }
+  ]
+}

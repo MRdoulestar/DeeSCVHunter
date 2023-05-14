@@ -1,0 +1,39 @@
+INFO:Slither:Compilation warnings/errors on /../data/reentrancy/solidity_contract/27486.sol:
+/../data/reentrancy/solidity_contract/27486.sol:12:3510: Warning: Using contract member "balance" inherited from the address type is deprecated. Convert the contract to "address" type to access the member, for example use "address(contract).balance" instead.
+ ... this.balance ... 
+     ^----------^
+/../data/reentrancy/solidity_contract/27486.sol:13:33: Warning: Using contract member "balance" inherited from the address type is deprecated. Convert the contract to "address" type to access the member, for example use "address(contract).balance" instead.
+            msg.sender.transfer(this.balance);
+                                ^----------^
+/../data/reentrancy/solidity_contract/27486.sol:19:24: Warning: Using contract member "balance" inherited from the address type is deprecated. Convert the contract to "address" type to access the member, for example use "address(contract).balance" instead.
+        Owner.transfer(this.balance);
+                       ^----------^
+/../data/reentrancy/solidity_contract/27486.sol:24:9: Warning: Return value of low-level calls not used.
+        adr.call.value(msg.value)(data);
+        ^-----------------------------^
+
+INFO:Detectors:[91m
+Honey.GetFreebie (/../data/reentrancy/solidity_contract/27486.sol#11-15) sends eth to arbitrary user
+	Dangerous calls:
+	- msg.sender.transfer(this.balance) (/../data/reentrancy/solidity_contract/27486.sol#13)
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#functions-that-send-ether-to-arbitrary-destinations[0m
+INFO:Detectors:[92m
+Honey.fallback (/../data/reentrancy/solidity_contract/27486.sol#7-9) should be declared external
+Honey.GetFreebie (/../data/reentrancy/solidity_contract/27486.sol#11-15) should be declared external
+Honey.withdraw (/../data/reentrancy/solidity_contract/27486.sol#17-20) should be declared external
+Honey.Command (/../data/reentrancy/solidity_contract/27486.sol#22-25) should be declared external
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#public-function-that-could-be-declared-as-external[0m
+INFO:Detectors:[92m
+Detected issues with version pragma in /../data/reentrancy/solidity_contract/27486.sol:
+	- pragma solidity^0.4.19 (/../data/reentrancy/solidity_contract/27486.sol#1): it allows old versions
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#incorrect-version-of-solidity[0m
+INFO:Detectors:[92m
+Low level call in Honey.Command (/../data/reentrancy/solidity_contract/27486.sol#22-25):
+	-adr.call.value(msg.value)(data) /../data/reentrancy/solidity_contract/27486.sol#24
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#low-level-calls[0m
+INFO:Detectors:[92m
+Function 'Honey.GetFreebie' (/../data/reentrancy/solidity_contract/27486.sol#11-15) is not in mixedCase
+Function 'Honey.Command' (/../data/reentrancy/solidity_contract/27486.sol#22-25) is not in mixedCase
+Variable 'Honey.Owner' (/../data/reentrancy/solidity_contract/27486.sol#5) is not in mixedCase
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#conformance-to-solidity-naming-conventions[0m
+INFO:Slither:/../data/reentrancy/solidity_contract/27486.sol analyzed (1 contracts), 10 result(s) found

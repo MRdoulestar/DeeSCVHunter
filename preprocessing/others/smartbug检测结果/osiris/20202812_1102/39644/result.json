@@ -1,0 +1,30 @@
+{
+  "contract": "39644",
+  "tool": "osiris",
+  "start": 1609191403.445985,
+  "end": 1609191414.185945,
+  "duration": 10.739959955215454,
+  "analysis": [
+    {
+      "errors": [
+        {
+          "line": 101,
+          "column": 14,
+          "message": "concurrency_bug"
+        },
+        {
+          "line": 101,
+          "column": 14,
+          "message": "concurrency_bug"
+        },
+        {
+          "line": 101,
+          "column": 14,
+          "message": "reentrancy_bug"
+        }
+      ],
+      "file": "/../data/reentrancy/solidity_contract/39644.sol",
+      "name": "AddressOwnershipVerification"
+    }
+  ]
+}

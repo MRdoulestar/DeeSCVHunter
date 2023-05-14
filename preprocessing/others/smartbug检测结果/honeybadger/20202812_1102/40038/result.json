@@ -1,0 +1,19 @@
+{
+  "contract": "40038",
+  "tool": "honeybadger",
+  "start": 1609165612.402451,
+  "end": 1609165639.350482,
+  "duration": 26.948030948638916,
+  "analysis": [
+    {
+      "errors": [],
+      "file": "/../data/reentrancy/solidity_contract/40038.sol",
+      "name": "Lockable"
+    },
+    {
+      "errors": [],
+      "file": "/../data/reentrancy/solidity_contract/40038.sol",
+      "name": "Token"
+    }
+  ]
+}

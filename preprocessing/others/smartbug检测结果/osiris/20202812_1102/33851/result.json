@@ -1,0 +1,35 @@
+{
+  "contract": "33851",
+  "tool": "osiris",
+  "start": 1609142615.3933592,
+  "end": 1609142671.380233,
+  "duration": 55.98687386512756,
+  "analysis": [
+    {
+      "errors": [
+        {
+          "line": 203,
+          "column": 30,
+          "message": "overflow_bugs"
+        },
+        {
+          "line": 151,
+          "column": 9,
+          "message": "overflow_bugs"
+        },
+        {
+          "line": 160,
+          "column": 9,
+          "message": "overflow_bugs"
+        },
+        {
+          "line": 148,
+          "column": 30,
+          "message": "overflow_bugs"
+        }
+      ],
+      "file": "/../data/reentrancy/solidity_contract/33851.sol",
+      "name": "MoacToken"
+    }
+  ]
+}

@@ -1,0 +1,103 @@
+INFO:Slither:Compilation warnings/errors on /../data/reentrancy/solidity_contract/35649.sol:
+/../data/reentrancy/solidity_contract/35649.sol:96:5: Warning: Defining constructors as functions with the same name as the contract is deprecated. Use "constructor(...) { ... }" instead.
+    function MyDice() {
+    ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/35649.sol:115:29: Warning: "sha3" has been deprecated in favour of "keccak256"
+        randomNumber = uint(sha3(randomNumber,seed));
+                            ^---------------------^
+/../data/reentrancy/solidity_contract/35649.sol:115:29: Warning: This function only accepts a single "bytes" argument. Please use "abi.encodePacked(...)" or a similar function to encode the data.
+        randomNumber = uint(sha3(randomNumber,seed));
+                            ^---------------------^
+/../data/reentrancy/solidity_contract/35649.sol:143:13: Warning: Invoking events without "emit" prefix is deprecated.
+            LogResult(pendingBets[i].betID, pendingBets[i].bettorAddress, underNumber, randResult, reward, 1, pendingBets[i].betSize,underNumber);
+            ^-----------------------------------------------------------------------------------------------------------------------------------^
+/../data/reentrancy/solidity_contract/35649.sol:150:17: Warning: Invoking events without "emit" prefix is deprecated.
+                LogResult(pendingBets[i].betID, pendingBets[i].bettorAddress, underNumber, randResult, reward, 2, pendingBets[i].betSize,underNumber);
+                ^-----------------------------------------------------------------------------------------------------------------------------------^
+/../data/reentrancy/solidity_contract/35649.sol:163:13: Warning: Invoking events without "emit" prefix is deprecated.
+ ... LogResult(pendingBets[i].betID, pendingBets[i].bettorAddress, underNumber, randResult, pendingBets[i].betSize, 0, pendingBets[i].betSize,underNumber) ... 
+     ^---------------------------------------------------------------------------------------------------------------------------------------------------^
+/../data/reentrancy/solidity_contract/35649.sol:198:9: Warning: Invoking events without "emit" prefix is deprecated.
+        LogBetStart(totalBets); 
+        ^--------------------^
+/../data/reentrancy/solidity_contract/35649.sol:306:9: Warning: Invoking events without "emit" prefix is deprecated.
+        LogOwnerTransfer(sendTo, amount);
+        ^------------------------------^
+/../data/reentrancy/solidity_contract/35649.sol:335:9: Warning: "suicide" has been deprecated in favour of "selfdestruct"
+        suicide(owner);
+        ^------------^
+/../data/reentrancy/solidity_contract/35649.sol:96:5: Warning: No visibility specified. Defaulting to "public". 
+    function MyDice() {
+    ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/35649.sol:112:65: Warning: "block.blockhash()" has been deprecated in favor of "blockhash()"
+        randomNumber = randomNumber % block.timestamp + uint256(block.blockhash(block.number - 1));
+                                                                ^-------------^
+/../data/reentrancy/solidity_contract/35649.sol:228:5: Warning: No visibility specified. Defaulting to "public". 
+    function ()
+    ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/35649.sol:234:5: Warning: No visibility specified. Defaulting to "public". 
+    function ownerAddBankroll()
+    ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/35649.sol:6:5: Warning: Function state mutability can be restricted to pure
+    function safeToAdd(uint a, uint b) internal returns (bool) {
+    ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/35649.sol:14:5: Warning: Function state mutability can be restricted to pure
+    function safeToSubtract(uint a, uint b) internal returns (bool) {
+    ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/35649.sol:244:5: Warning: Function state mutability can be restricted to view
+    function getcontractBalance() public 
+    ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/35649.sol:259:5: Warning: Function state mutability can be restricted to view
+    function getHouseEdge() public 
+    ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/35649.sol:276:5: Warning: Function state mutability can be restricted to view
+    function getMaxProfitAsPercentOfHouse() public 
+    ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/35649.sol:290:5: Warning: Function state mutability can be restricted to view
+    function getMinBet() public 
+    ^ (Relevant source part starts here and spans across multiple lines).
+
+INFO:Detectors:[92m
+MyDice.maxNumber should be constant (/../data/reentrancy/solidity_contract/35649.sol#72)
+MyDice.underNumber should be constant (/../data/reentrancy/solidity_contract/35649.sol#73)
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#state-variables-that-could-be-declared-constant[0m
+INFO:Detectors:[92m
+Deprecated standard detected @ /../data/reentrancy/solidity_contract/35649.sol#112:
+	- Usage of "block.blockhash()" should be replaced with "blockhash()"
+Deprecated standard detected @ /../data/reentrancy/solidity_contract/35649.sol#115:
+	- Usage of "sha3()" should be replaced with "keccak256()"
+Deprecated standard detected @ /../data/reentrancy/solidity_contract/35649.sol#335:
+	- Usage of "suicide()" should be replaced with "selfdestruct()"
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#deprecated-standards[0m
+INFO:Detectors:[92m
+MyDice.StartRollDice (/../data/reentrancy/solidity_contract/35649.sol#121-180) should be declared external
+MyDice.playerWithdrawPendingTransactions (/../data/reentrancy/solidity_contract/35649.sol#203-215) should be declared external
+MyDice.playerGetPendingTxByAddress (/../data/reentrancy/solidity_contract/35649.sol#218-220) should be declared external
+MyDice.fallback (/../data/reentrancy/solidity_contract/35649.sol#228-232) should be declared external
+MyDice.ownerAddBankroll (/../data/reentrancy/solidity_contract/35649.sol#234-242) should be declared external
+MyDice.getcontractBalance (/../data/reentrancy/solidity_contract/35649.sol#244-249) should be declared external
+MyDice.getHouseEdge (/../data/reentrancy/solidity_contract/35649.sol#259-264) should be declared external
+MyDice.getMaxProfitAsPercentOfHouse (/../data/reentrancy/solidity_contract/35649.sol#276-281) should be declared external
+MyDice.getMinBet (/../data/reentrancy/solidity_contract/35649.sol#290-295) should be declared external
+MyDice.ownerTransferEther (/../data/reentrancy/solidity_contract/35649.sol#298-307) should be declared external
+MyDice.ownerPauseGame (/../data/reentrancy/solidity_contract/35649.sol#310-314) should be declared external
+MyDice.ownerPausePayouts (/../data/reentrancy/solidity_contract/35649.sol#317-321) should be declared external
+MyDice.ownerChangeOwner (/../data/reentrancy/solidity_contract/35649.sol#325-329) should be declared external
+MyDice.ownerkill (/../data/reentrancy/solidity_contract/35649.sol#332-336) should be declared external
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#public-function-that-could-be-declared-as-external[0m
+INFO:Detectors:[92m
+Detected issues with version pragma in /../data/reentrancy/solidity_contract/35649.sol:
+	- pragma solidity^0.4.2 (/../data/reentrancy/solidity_contract/35649.sol#1): it allows old versions
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#incorrect-version-of-solidity[0m
+INFO:Detectors:[92m
+Low level call in MyDice.playerWithdrawPendingTransactions (/../data/reentrancy/solidity_contract/35649.sol#203-215):
+	-msg.sender.call.value(withdrawAmount)() /../data/reentrancy/solidity_contract/35649.sol#207-214
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#low-level-calls[0m
+INFO:Detectors:[92m
+Function 'MyDice.MyDice' (/../data/reentrancy/solidity_contract/35649.sol#96-105) is not in mixedCase
+Function 'MyDice.GetRandomNumber' (/../data/reentrancy/solidity_contract/35649.sol#109-118) is not in mixedCase
+Function 'MyDice.StartRollDice' (/../data/reentrancy/solidity_contract/35649.sol#121-180) is not in mixedCase
+Constant 'MyDice.maxBetDivisor' (/../data/reentrancy/solidity_contract/35649.sol#57) is not in UPPER_CASE_WITH_UNDERSCORES
+Constant 'MyDice.houseEdgeDivisor' (/../data/reentrancy/solidity_contract/35649.sol#58) is not in UPPER_CASE_WITH_UNDERSCORES
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#conformance-to-solidity-naming-conventions[0m
+INFO:Slither:/../data/reentrancy/solidity_contract/35649.sol analyzed (2 contracts), 25 result(s) found

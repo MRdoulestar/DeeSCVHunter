@@ -1,0 +1,19 @@
+{
+  "contract": "35649",
+  "tool": "osiris",
+  "start": 1609148208.607538,
+  "end": 1609148223.793196,
+  "duration": 15.185657978057861,
+  "analysis": [
+    {
+      "errors": [],
+      "file": "/../data/reentrancy/solidity_contract/35649.sol",
+      "name": "DSSafeAddSub"
+    },
+    {
+      "errors": [],
+      "file": "/../data/reentrancy/solidity_contract/35649.sol",
+      "name": "MyDice"
+    }
+  ]
+}

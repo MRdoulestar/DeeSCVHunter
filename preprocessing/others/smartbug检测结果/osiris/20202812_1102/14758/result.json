@@ -1,0 +1,30 @@
+{
+  "contract": "14758",
+  "tool": "osiris",
+  "start": 1609204988.911443,
+  "end": 1609204994.031883,
+  "duration": 5.1204400062561035,
+  "analysis": [
+    {
+      "errors": [],
+      "file": "/../data/reentrancy/solidity_contract/14758.sol",
+      "name": "Owned"
+    },
+    {
+      "errors": [
+        {
+          "line": 24,
+          "column": 5,
+          "message": "concurrency_bug"
+        },
+        {
+          "line": 17,
+          "column": 5,
+          "message": "reentrancy_bug"
+        }
+      ],
+      "file": "/../data/reentrancy/solidity_contract/14758.sol",
+      "name": "Wforcer"
+    }
+  ]
+}

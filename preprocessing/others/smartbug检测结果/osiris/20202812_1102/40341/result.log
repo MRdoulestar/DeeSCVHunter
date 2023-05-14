@@ -1,0 +1,70 @@
+INFO:root:Contract /../data/reentrancy/solidity_contract/40341.sol:CarefulSenderMixin:
+INFO:symExec:Running, please wait...
+INFO:symExec:	============ Results ===========
+INFO:symExec:	  EVM code coverage: 	 100.0%
+INFO:symExec:	  Arithmetic bugs: 	 False
+INFO:symExec:	  └> Overflow bugs: 	 False
+INFO:symExec:	  └> Underflow bugs: 	 False
+INFO:symExec:	  └> Division bugs: 	 False
+INFO:symExec:	  └> Modulo bugs:   	 False
+INFO:symExec:	  └> Truncation bugs: 	 False
+INFO:symExec:	  └> Signedness bugs: 	 False
+INFO:symExec:	  Callstack bug: 	 False
+INFO:symExec:	  Concurrency bug: 	 False
+INFO:symExec:	  Time dependency bug: 	 False
+INFO:symExec:	  Reentrancy bug: 	 False
+INFO:symExec:	 --- 0.0168149471283 seconds ---
+INFO:symExec:	====== Analysis Completed ======
+INFO:root:Contract /../data/reentrancy/solidity_contract/40341.sol:ExposedInternalsForTesting:
+INFO:symExec:Running, please wait...
+INFO:symExec:	============ Results ===========
+INFO:symExec:	  EVM code coverage: 	 84.4%
+INFO:symExec:	  Arithmetic bugs: 	 True
+INFO:symExec:	  └> Overflow bugs: 	 True
+/../data/reentrancy/solidity_contract/40341.sol:ExposedInternalsForTesting:143:17
+1 finney + _valueWei
+^
+INFO:symExec:	  └> Underflow bugs: 	 True
+/../data/reentrancy/solidity_contract/40341.sol:ExposedInternalsForTesting:143:17
+1 finney + _valueWei - 1 wei
+^
+INFO:symExec:	  └> Division bugs: 	 False
+INFO:symExec:	  └> Modulo bugs:   	 False
+INFO:symExec:	  └> Truncation bugs: 	 False
+INFO:symExec:	  └> Signedness bugs: 	 False
+INFO:symExec:	  Callstack bug: 	 False
+INFO:symExec:	  Concurrency bug: 	 False
+INFO:symExec:	  Time dependency bug: 	 False
+INFO:symExec:	  Reentrancy bug: 	 False
+INFO:symExec:	 --- 49.98214221 seconds ---
+INFO:symExec:	====== Analysis Completed ======
+INFO:root:Contract /../data/reentrancy/solidity_contract/40341.sol:FundsHolderMixin:
+INFO:symExec:Running, please wait...
+INFO:symExec:	============ Results ===========
+INFO:symExec:	  EVM code coverage: 	 99.8%
+INFO:symExec:	  Arithmetic bugs: 	 False
+INFO:symExec:	  └> Overflow bugs: 	 False
+INFO:symExec:	  └> Underflow bugs: 	 False
+INFO:symExec:	  └> Division bugs: 	 False
+INFO:symExec:	  └> Modulo bugs:   	 False
+INFO:symExec:	  └> Truncation bugs: 	 False
+INFO:symExec:	  └> Signedness bugs: 	 False
+INFO:symExec:	  Callstack bug: 	 True
+/../data/reentrancy/solidity_contract/40341.sol:FundsHolderMixin:31:16
+_toAddress.call.value(_valueWei).gas(_extraGasIncluded)()
+^
+INFO:symExec:	  Concurrency bug: 	 True
+Flow 1:
+/../data/reentrancy/solidity_contract/40341.sol:FundsHolderMixin:31:16
+_toAddress.call.value(_valueWei).gas(_extraGasIncluded)()
+^
+Flow 2:
+/../data/reentrancy/solidity_contract/40341.sol:FundsHolderMixin:31:16
+_toAddress.call.value(_valueWei).gas(_extraGasIncluded)()
+^
+INFO:symExec:	  Time dependency bug: 	 False
+INFO:symExec:	  Reentrancy bug: 	 False
+INFO:symExec:	 --- 0.677710056305 seconds ---
+INFO:symExec:	====== Analysis Completed ======
+INFO:root:Contract /../data/reentrancy/solidity_contract/40341.sol:Kingdom:
+INFO:symExec:Running, please wait...

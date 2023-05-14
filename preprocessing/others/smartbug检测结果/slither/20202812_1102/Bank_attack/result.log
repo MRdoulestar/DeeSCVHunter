@@ -1,0 +1,67 @@
+INFO:Slither:Compilation warnings/errors on /../data/reentrancy/solidity_contract/Bank_attack.sol:
+/../data/reentrancy/solidity_contract/Bank_attack.sol:5:5: Warning: Defining constructors as functions with the same name as the contract is deprecated. Use "constructor(...) { ... }" instead.
+    function Attack() payable { owner = msg.sender; }
+    ^-----------------------------------------------^
+/../data/reentrancy/solidity_contract/Bank_attack.sol:1:1: Warning: Source file does not specify required compiler version!Consider adding "pragma solidity ^0.4.25;"
+contract Attack {
+^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/Bank_attack.sol:10:13: Warning: Using contract member "balance" inherited from the address type is deprecated. Convert the contract to "address" type to access the member, for example use "address(contract).balance" instead.
+        if (this.balance >= amount) {
+            ^----------^
+/../data/reentrancy/solidity_contract/Bank_attack.sol:11:13: Warning: Return value of low-level calls not used.
+            victim.call.value(amount)(bytes4(keccak256("Deposit()")));
+            ^-------------------------------------------------------^
+/../data/reentrancy/solidity_contract/Bank_attack.sol:16:9: Warning: Return value of low-level calls not used.
+        victim.call(bytes4(keccak256("CashOut(uint256)")), amount);
+        ^--------------------------------------------------------^
+/../data/reentrancy/solidity_contract/Bank_attack.sol:30:9: Warning: Return value of low-level calls not used.
+        victim.call(bytes4(keccak256("CashOut(uint256)")), msg.value);
+        ^-----------------------------------------------------------^
+/../data/reentrancy/solidity_contract/Bank_attack.sol:5:5: Warning: No visibility specified. Defaulting to "public". 
+    function Attack() payable { owner = msg.sender; }
+    ^-----------------------------------------------^
+/../data/reentrancy/solidity_contract/Bank_attack.sol:7:5: Warning: No visibility specified. Defaulting to "public". 
+    function setVictim(address target)  { victim = target; }
+    ^------------------------------------------------------^
+/../data/reentrancy/solidity_contract/Bank_attack.sol:9:5: Warning: No visibility specified. Defaulting to "public". 
+    function step1(uint256 amount)  payable {
+    ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/Bank_attack.sol:15:5: Warning: No visibility specified. Defaulting to "public". 
+    function step2(uint256 amount)  {
+    ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/Bank_attack.sol:20:5: Warning: No visibility specified. Defaulting to "public". 
+    function stopAttack()  {
+    ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/Bank_attack.sol:24:5: Warning: No visibility specified. Defaulting to "public". 
+    function startAttack(uint256 amount)  {
+    ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/Bank_attack.sol:29:5: Warning: No visibility specified. Defaulting to "public". 
+    function () payable {
+    ^ (Relevant source part starts here and spans across multiple lines).
+
+INFO:Detectors:[91m
+Attack.step1 (/../data/reentrancy/solidity_contract/Bank_attack.sol#9-13) sends eth to arbitrary user
+	Dangerous calls:
+	- victim.call.value(amount)(bytes4(keccak256()(Deposit()))) (/../data/reentrancy/solidity_contract/Bank_attack.sol#11)
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#functions-that-send-ether-to-arbitrary-destinations[0m
+INFO:Detectors:[91m
+Attack.stopAttack (/../data/reentrancy/solidity_contract/Bank_attack.sol#20-22) allows anyone to destruct the contract
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#suicidal[0m
+INFO:Detectors:[92m
+Attack.setVictim (/../data/reentrancy/solidity_contract/Bank_attack.sol#7) should be declared external
+Attack.stopAttack (/../data/reentrancy/solidity_contract/Bank_attack.sol#20-22) should be declared external
+Attack.startAttack (/../data/reentrancy/solidity_contract/Bank_attack.sol#24-27) should be declared external
+Attack.fallback (/../data/reentrancy/solidity_contract/Bank_attack.sol#29-31) should be declared external
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#public-function-that-could-be-declared-as-external[0m
+INFO:Detectors:[92m
+Low level call in Attack.step1 (/../data/reentrancy/solidity_contract/Bank_attack.sol#9-13):
+	-victim.call.value(amount)(bytes4(keccak256()(Deposit()))) /../data/reentrancy/solidity_contract/Bank_attack.sol#11
+Low level call in Attack.step2 (/../data/reentrancy/solidity_contract/Bank_attack.sol#15-17):
+	-victim.call(bytes4(keccak256()(CashOut(uint256))),amount) /../data/reentrancy/solidity_contract/Bank_attack.sol#16
+Low level call in Attack.fallback (/../data/reentrancy/solidity_contract/Bank_attack.sol#29-31):
+	-victim.call(bytes4(keccak256()(CashOut(uint256))),msg.value) /../data/reentrancy/solidity_contract/Bank_attack.sol#30
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#low-level-calls[0m
+INFO:Detectors:[92m
+Function 'Attack.Attack' (/../data/reentrancy/solidity_contract/Bank_attack.sol#5) is not in mixedCase
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#conformance-to-solidity-naming-conventions[0m
+INFO:Slither:/../data/reentrancy/solidity_contract/Bank_attack.sol analyzed (1 contracts), 10 result(s) found

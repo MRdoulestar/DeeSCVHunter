@@ -1,0 +1,29 @@
+{
+  "contract": "14945",
+  "tool": "honeybadger",
+  "start": 1609205748.702179,
+  "end": 1609205809.896128,
+  "duration": 61.19394898414612,
+  "analysis": [
+    {
+      "errors": [],
+      "file": "/../data/reentrancy/solidity_contract/14945.sol",
+      "name": "BasicToken"
+    },
+    {
+      "errors": [],
+      "file": "/../data/reentrancy/solidity_contract/14945.sol",
+      "name": "SafeMath"
+    },
+    {
+      "errors": [],
+      "file": "/../data/reentrancy/solidity_contract/14945.sol",
+      "name": "StandardToken"
+    },
+    {
+      "errors": [],
+      "file": "/../data/reentrancy/solidity_contract/14945.sol",
+      "name": "StudToken"
+    }
+  ]
+}

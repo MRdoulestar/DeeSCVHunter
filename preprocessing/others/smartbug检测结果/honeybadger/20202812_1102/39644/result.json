@@ -1,0 +1,14 @@
+{
+  "contract": "39644",
+  "tool": "honeybadger",
+  "start": 1609191470.6573691,
+  "end": 1609191474.999881,
+  "duration": 4.342511892318726,
+  "analysis": [
+    {
+      "errors": [],
+      "file": "/../data/reentrancy/solidity_contract/39644.sol",
+      "name": "AddressOwnershipVerification"
+    }
+  ]
+}

@@ -1,0 +1,56 @@
+{
+  "contract": "22247",
+  "tool": "osiris",
+  "start": 1609156964.929985,
+  "end": 1609157022.933999,
+  "duration": 58.004014015197754,
+  "analysis": [
+    {
+      "errors": [
+        {
+          "line": 67,
+          "column": 9,
+          "message": "overflow_bugs"
+        },
+        {
+          "line": 67,
+          "column": 9,
+          "message": "overflow_bugs"
+        },
+        {
+          "line": 46,
+          "column": 1,
+          "message": "overflow_bugs"
+        }
+      ],
+      "file": "/../data/reentrancy/solidity_contract/22247.sol",
+      "name": "Log"
+    },
+    {
+      "errors": [
+        {
+          "line": 23,
+          "column": 9,
+          "message": "overflow_bugs"
+        },
+        {
+          "line": 31,
+          "column": 17,
+          "message": "underflow_bugs"
+        },
+        {
+          "line": 30,
+          "column": 16,
+          "message": "reentrancy_bug"
+        },
+        {
+          "line": 32,
+          "column": 17,
+          "message": "reentrancy_bug"
+        }
+      ],
+      "file": "/../data/reentrancy/solidity_contract/22247.sol",
+      "name": "PIGGY_BANK"
+    }
+  ]
+}

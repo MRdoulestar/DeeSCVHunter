@@ -1,0 +1,25 @@
+{
+  "contract": "33450",
+  "tool": "osiris",
+  "start": 1609209539.464016,
+  "end": 1609209595.556608,
+  "duration": 56.092592000961304,
+  "analysis": [
+    {
+      "errors": [
+        {
+          "line": 43,
+          "column": 9,
+          "message": "overflow_bugs"
+        }
+      ],
+      "file": "/../data/reentrancy/solidity_contract/33450.sol",
+      "name": "MultiOwner"
+    },
+    {
+      "errors": [],
+      "file": "/../data/reentrancy/solidity_contract/33450.sol",
+      "name": "VVToken"
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "contract": "26523",
+  "tool": "honeybadger",
+  "start": 1609141445.430418,
+  "end": 1609141448.6615171,
+  "duration": 3.2310991287231445,
+  "analysis": [
+    {
+      "errors": [],
+      "file": "/../data/reentrancy/solidity_contract/26523.sol",
+      "name": "HODLerParadise"
+    }
+  ]
+}

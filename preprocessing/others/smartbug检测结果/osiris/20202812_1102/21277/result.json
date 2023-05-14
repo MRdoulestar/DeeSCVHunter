@@ -1,0 +1,92 @@
+{
+  "contract": "21277",
+  "tool": "osiris",
+  "start": 1609139799.4251971,
+  "end": 1609139904.0041,
+  "duration": 104.57890295982361,
+  "analysis": [
+    {
+      "errors": [
+        {
+          "line": 174,
+          "column": 7,
+          "message": "callstack_bug"
+        },
+        {
+          "line": 36,
+          "column": 12,
+          "message": "callstack_bug"
+        }
+      ],
+      "file": "/../data/reentrancy/solidity_contract/21277.sol",
+      "name": "Ethername"
+    },
+    {
+      "errors": [
+        {
+          "line": 212,
+          "column": 33,
+          "message": "overflow_bugs"
+        },
+        {
+          "line": 213,
+          "column": 33,
+          "message": "overflow_bugs"
+        },
+        {
+          "line": 212,
+          "column": 16,
+          "message": "overflow_bugs"
+        },
+        {
+          "line": 213,
+          "column": 16,
+          "message": "overflow_bugs"
+        },
+        {
+          "line": 174,
+          "column": 7,
+          "message": "callstack_bug"
+        },
+        {
+          "line": 36,
+          "column": 12,
+          "message": "callstack_bug"
+        }
+      ],
+      "file": "/../data/reentrancy/solidity_contract/21277.sol",
+      "name": "EthernameRaw"
+    },
+    {
+      "errors": [
+        {
+          "line": 36,
+          "column": 12,
+          "message": "overflow_bugs"
+        },
+        {
+          "line": 36,
+          "column": 12,
+          "message": "underflow_bugs"
+        },
+        {
+          "line": 28,
+          "column": 5,
+          "message": "concurrency_bug"
+        },
+        {
+          "line": 36,
+          "column": 12,
+          "message": "concurrency_bug"
+        },
+        {
+          "line": 36,
+          "column": 12,
+          "message": "reentrancy_bug"
+        }
+      ],
+      "file": "/../data/reentrancy/solidity_contract/21277.sol",
+      "name": "Managed"
+    }
+  ]
+}

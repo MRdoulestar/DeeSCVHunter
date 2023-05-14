@@ -1,0 +1,60 @@
+{
+  "contract": "9920",
+  "tool": "osiris",
+  "start": 1609208934.0662668,
+  "end": 1609208971.4151092,
+  "duration": 37.34884238243103,
+  "analysis": [
+    {
+      "errors": [],
+      "file": "/../data/reentrancy/solidity_contract/9920.sol",
+      "name": "DSAuth"
+    },
+    {
+      "errors": [],
+      "file": "/../data/reentrancy/solidity_contract/9920.sol",
+      "name": "DSAuthEvents"
+    },
+    {
+      "errors": [],
+      "file": "/../data/reentrancy/solidity_contract/9920.sol",
+      "name": "DSExec"
+    },
+    {
+      "errors": [],
+      "file": "/../data/reentrancy/solidity_contract/9920.sol",
+      "name": "DSMath"
+    },
+    {
+      "errors": [],
+      "file": "/../data/reentrancy/solidity_contract/9920.sol",
+      "name": "DSNote"
+    },
+    {
+      "errors": [],
+      "file": "/../data/reentrancy/solidity_contract/9920.sol",
+      "name": "DSStop"
+    },
+    {
+      "errors": [
+        {
+          "line": 139,
+          "column": 21,
+          "message": "underflow_bugs"
+        }
+      ],
+      "file": "/../data/reentrancy/solidity_contract/9920.sol",
+      "name": "DSToken"
+    },
+    {
+      "errors": [],
+      "file": "/../data/reentrancy/solidity_contract/9920.sol",
+      "name": "DSTokenBase"
+    },
+    {
+      "errors": [],
+      "file": "/../data/reentrancy/solidity_contract/9920.sol",
+      "name": "WhiteList"
+    }
+  ]
+}

@@ -1,0 +1,40 @@
+{
+  "contract": "17518",
+  "tool": "osiris",
+  "start": 1609198909.349876,
+  "end": 1609198962.536322,
+  "duration": 53.18644618988037,
+  "analysis": [
+    {
+      "errors": [],
+      "file": "/../data/reentrancy/solidity_contract/17518.sol",
+      "name": "Delegable"
+    },
+    {
+      "errors": [],
+      "file": "/../data/reentrancy/solidity_contract/17518.sol",
+      "name": "Ownable"
+    },
+    {
+      "errors": [
+        {
+          "line": 103,
+          "column": 40,
+          "message": "overflow_bugs"
+        },
+        {
+          "line": 183,
+          "column": 34,
+          "message": "underflow_bugs"
+        },
+        {
+          "line": 170,
+          "column": 16,
+          "message": "callstack_bug"
+        }
+      ],
+      "file": "/../data/reentrancy/solidity_contract/17518.sol",
+      "name": "RipioOracle"
+    }
+  ]
+}

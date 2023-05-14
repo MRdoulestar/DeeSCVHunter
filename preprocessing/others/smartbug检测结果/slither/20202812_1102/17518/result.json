@@ -1,0 +1,2937 @@
+{
+  "contract": "17518",
+  "tool": "slither",
+  "start": 1609198962.573241,
+  "end": 1609198964.614302,
+  "duration": 2.0410609245300293,
+  "analysis": [
+    {
+      "check": "constant-function",
+      "impact": "Medium",
+      "confidence": "Medium",
+      "description": "Oracle.encodeCurrency (/../data/reentrancy/solidity_contract/17518.sol#93-98) is declared view but contains assembly code\n",
+      "elements": [
+        {
+          "type": "info",
+          "contains_assembly": true
+        }
+      ]
+    },
+    {
+      "check": "constant-function",
+      "impact": "Medium",
+      "confidence": "Medium",
+      "description": "Oracle.decodeCurrency (/../data/reentrancy/solidity_contract/17518.sol#101-111) is declared view but contains assembly code\n",
+      "elements": [
+        {
+          "type": "info",
+          "contains_assembly": true
+        }
+      ]
+    },
+    {
+      "check": "constant-function",
+      "impact": "Medium",
+      "confidence": "Medium",
+      "description": "RipioOracle.readBytes32 (/../data/reentrancy/solidity_contract/17518.sol#160-166) is declared view but contains assembly code\n",
+      "elements": [
+        {
+          "type": "info",
+          "contains_assembly": true
+        }
+      ]
+    },
+    {
+      "check": "incorrect-equality",
+      "impact": "Medium",
+      "confidence": "High",
+      "description": "Delegable.isDelegate (/../data/reentrancy/solidity_contract/17518.sol#46-49) uses a dangerous strict equality:\n\t- delegateLog.started != 0 && delegateLog.ended == 0\n",
+      "elements": [
+        {
+          "type": "function",
+          "name": "isDelegate",
+          "source_mapping": {
+            "start": 1062,
+            "length": 201,
+            "filename": "/../data/reentrancy/solidity_contract/17518.sol",
+            "lines": [
+              46,
+              47,
+              48,
+              49
+            ]
+          },
+          "contract": {
+            "type": "contract",
+            "name": "Delegable",
+            "source_mapping": {
+              "start": 390,
+              "length": 1430,
+              "filename": "/../data/reentrancy/solidity_contract/17518.sol",
+              "lines": [
+                24,
+                25,
+                26,
+                27,
+                28,
+                29,
+                30,
+                31,
+                32,
+                33,
+                34,
+                35,
+                36,
+                37,
+                38,
+                39,
+                40,
+                41,
+                42,
+                43,
+                44,
+                45,
+                46,
+                47,
+                48,
+                49,
+                50,
+                51,
+                52,
+                53,
+                54,
+                55,
+                56,
+                57,
+                58,
+                59,
+                60,
+                61,
+                62,
+                63,
+                64,
+                65,
+                66
+              ]
+            }
+          }
+        },
+        {
+          "type": "expression",
+          "expression": "delegateLog.started != 0 && delegateLog.ended == 0",
+          "source_mapping": {
+            "start": 1199,
+            "length": 57,
+            "filename": "/../data/reentrancy/solidity_contract/17518.sol",
+            "lines": [
+              48
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "incorrect-equality",
+      "impact": "Medium",
+      "confidence": "High",
+      "description": "Delegable.isDelegate (/../data/reentrancy/solidity_contract/17518.sol#46-49) uses a dangerous strict equality:\n\t- delegateLog.started != 0 && delegateLog.ended == 0\nDelegable.onlyDelegate (/../data/reentrancy/solidity_contract/17518.sol#33-37) uses a dangerous strict equality:\n\t- require(bool)(delegateLog.started != 0 && delegateLog.ended == 0)\n\t- require(bool)(delegateLog.started != 0 && delegateLog.ended == 0)\n",
+      "elements": [
+        {
+          "type": "function",
+          "name": "onlyDelegate",
+          "source_mapping": {
+            "start": 567,
+            "length": 175,
+            "filename": "/../data/reentrancy/solidity_contract/17518.sol",
+            "lines": [
+              33,
+              34,
+              35,
+              36,
+              37
+            ]
+          },
+          "contract": {
+            "type": "contract",
+            "name": "Delegable",
+            "source_mapping": {
+              "start": 390,
+              "length": 1430,
+              "filename": "/../data/reentrancy/solidity_contract/17518.sol",
+              "lines": [
+                24,
+                25,
+                26,
+                27,
+                28,
+                29,
+                30,
+                31,
+                32,
+                33,
+                34,
+                35,
+                36,
+                37,
+                38,
+                39,
+                40,
+                41,
+                42,
+                43,
+                44,
+                45,
+                46,
+                47,
+                48,
+                49,
+                50,
+                51,
+                52,
+                53,
+                54,
+                55,
+                56,
+                57,
+                58,
+                59,
+                60,
+                61,
+                62,
+                63,
+                64,
+                65,
+                66
+              ]
+            }
+          }
+        },
+        {
+          "type": "expression",
+          "expression": "require(bool)(delegateLog.started != 0 && delegateLog.ended == 0)",
+          "source_mapping": {
+            "start": 665,
+            "length": 59,
+            "filename": "/../data/reentrancy/solidity_contract/17518.sol",
+            "lines": [
+              35
+            ]
+          }
+        },
+        {
+          "type": "expression",
+          "expression": "require(bool)(delegateLog.started != 0 && delegateLog.ended == 0)",
+          "source_mapping": {
+            "start": 665,
+            "length": 59,
+            "filename": "/../data/reentrancy/solidity_contract/17518.sol",
+            "lines": [
+              35
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "incorrect-equality",
+      "impact": "Medium",
+      "confidence": "High",
+      "description": "Delegable.isDelegate (/../data/reentrancy/solidity_contract/17518.sol#46-49) uses a dangerous strict equality:\n\t- delegateLog.started != 0 && delegateLog.ended == 0\nDelegable.onlyDelegate (/../data/reentrancy/solidity_contract/17518.sol#33-37) uses a dangerous strict equality:\n\t- require(bool)(delegateLog.started != 0 && delegateLog.ended == 0)\n\t- require(bool)(delegateLog.started != 0 && delegateLog.ended == 0)\nDelegable.wasDelegate (/../data/reentrancy/solidity_contract/17518.sol#40-43) uses a dangerous strict equality:\n\t- timestamp >= delegateLog.started && delegateLog.started != 0 && (delegateLog.ended == 0 || timestamp < delegateLog.ended)\n",
+      "elements": [
+        {
+          "type": "function",
+          "name": "wasDelegate",
+          "source_mapping": {
+            "start": 758,
+            "length": 292,
+            "filename": "/../data/reentrancy/solidity_contract/17518.sol",
+            "lines": [
+              40,
+              41,
+              42,
+              43
+            ]
+          },
+          "contract": {
+            "type": "contract",
+            "name": "Delegable",
+            "source_mapping": {
+              "start": 390,
+              "length": 1430,
+              "filename": "/../data/reentrancy/solidity_contract/17518.sol",
+              "lines": [
+                24,
+                25,
+                26,
+                27,
+                28,
+                29,
+                30,
+                31,
+                32,
+                33,
+                34,
+                35,
+                36,
+                37,
+                38,
+                39,
+                40,
+                41,
+                42,
+                43,
+                44,
+                45,
+                46,
+                47,
+                48,
+                49,
+                50,
+                51,
+                52,
+                53,
+                54,
+                55,
+                56,
+                57,
+                58,
+                59,
+                60,
+                61,
+                62,
+                63,
+                64,
+                65,
+                66
+              ]
+            }
+          }
+        },
+        {
+          "type": "expression",
+          "expression": "timestamp >= delegateLog.started && delegateLog.started != 0 && (delegateLog.ended == 0 || timestamp < delegateLog.ended)",
+          "source_mapping": {
+            "start": 915,
+            "length": 128,
+            "filename": "/../data/reentrancy/solidity_contract/17518.sol",
+            "lines": [
+              42
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "timestamp",
+      "impact": "Low",
+      "confidence": "Medium",
+      "description": "Delegable.wasDelegate (/../data/reentrancy/solidity_contract/17518.sol#40-43) uses timestamp for comparisons\n\tDangerous comparisons:\n\t- timestamp >= delegateLog.started && delegateLog.started != 0 && (delegateLog.ended == 0 || timestamp < delegateLog.ended) (/../data/reentrancy/solidity_contract/17518.sol#42)\n",
+      "elements": [
+        {
+          "type": "function",
+          "name": "wasDelegate",
+          "source_mapping": {
+            "start": 758,
+            "length": 292,
+            "filename": "/../data/reentrancy/solidity_contract/17518.sol",
+            "lines": [
+              40,
+              41,
+              42,
+              43
+            ]
+          },
+          "contract": {
+            "type": "contract",
+            "name": "Delegable",
+            "source_mapping": {
+              "start": 390,
+              "length": 1430,
+              "filename": "/../data/reentrancy/solidity_contract/17518.sol",
+              "lines": [
+                24,
+                25,
+                26,
+                27,
+                28,
+                29,
+                30,
+                31,
+                32,
+                33,
+                34,
+                35,
+                36,
+                37,
+                38,
+                39,
+                40,
+                41,
+                42,
+                43,
+                44,
+                45,
+                46,
+                47,
+                48,
+                49,
+                50,
+                51,
+                52,
+                53,
+                54,
+                55,
+                56,
+                57,
+                58,
+                59,
+                60,
+                61,
+                62,
+                63,
+                64,
+                65,
+                66
+              ]
+            }
+          }
+        },
+        {
+          "type": "expression",
+          "expression": "timestamp >= delegateLog.started && delegateLog.started != 0 && (delegateLog.ended == 0 || timestamp < delegateLog.ended)",
+          "source_mapping": {
+            "start": 915,
+            "length": 128,
+            "filename": "/../data/reentrancy/solidity_contract/17518.sol",
+            "lines": [
+              42
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "timestamp",
+      "impact": "Low",
+      "confidence": "Medium",
+      "description": "Delegable.isDelegate (/../data/reentrancy/solidity_contract/17518.sol#46-49) uses timestamp for comparisons\n\tDangerous comparisons:\n\t- delegateLog.started != 0 && delegateLog.ended == 0 (/../data/reentrancy/solidity_contract/17518.sol#48)\n",
+      "elements": [
+        {
+          "type": "function",
+          "name": "isDelegate",
+          "source_mapping": {
+            "start": 1062,
+            "length": 201,
+            "filename": "/../data/reentrancy/solidity_contract/17518.sol",
+            "lines": [
+              46,
+              47,
+              48,
+              49
+            ]
+          },
+          "contract": {
+            "type": "contract",
+            "name": "Delegable",
+            "source_mapping": {
+              "start": 390,
+              "length": 1430,
+              "filename": "/../data/reentrancy/solidity_contract/17518.sol",
+              "lines": [
+                24,
+                25,
+                26,
+                27,
+                28,
+                29,
+                30,
+                31,
+                32,
+                33,
+                34,
+                35,
+                36,
+                37,
+                38,
+                39,
+                40,
+                41,
+                42,
+                43,
+                44,
+                45,
+                46,
+                47,
+                48,
+                49,
+                50,
+                51,
+                52,
+                53,
+                54,
+                55,
+                56,
+                57,
+                58,
+                59,
+                60,
+                61,
+                62,
+                63,
+                64,
+                65,
+                66
+              ]
+            }
+          }
+        },
+        {
+          "type": "expression",
+          "expression": "delegateLog.started != 0 && delegateLog.ended == 0",
+          "source_mapping": {
+            "start": 1199,
+            "length": 57,
+            "filename": "/../data/reentrancy/solidity_contract/17518.sol",
+            "lines": [
+              48
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "timestamp",
+      "impact": "Low",
+      "confidence": "Medium",
+      "description": "Delegable.addDelegate (/../data/reentrancy/solidity_contract/17518.sol#52-57) uses timestamp for comparisons\n\tDangerous comparisons:\n\t- require(bool)(delegateLog.started == 0) (/../data/reentrancy/solidity_contract/17518.sol#54)\n",
+      "elements": [
+        {
+          "type": "function",
+          "name": "addDelegate",
+          "source_mapping": {
+            "start": 1275,
+            "length": 252,
+            "filename": "/../data/reentrancy/solidity_contract/17518.sol",
+            "lines": [
+              52,
+              53,
+              54,
+              55,
+              56,
+              57
+            ]
+          },
+          "contract": {
+            "type": "contract",
+            "name": "Delegable",
+            "source_mapping": {
+              "start": 390,
+              "length": 1430,
+              "filename": "/../data/reentrancy/solidity_contract/17518.sol",
+              "lines": [
+                24,
+                25,
+                26,
+                27,
+                28,
+                29,
+                30,
+                31,
+                32,
+                33,
+                34,
+                35,
+                36,
+                37,
+                38,
+                39,
+                40,
+                41,
+                42,
+                43,
+                44,
+                45,
+                46,
+                47,
+                48,
+                49,
+                50,
+                51,
+                52,
+                53,
+                54,
+                55,
+                56,
+                57,
+                58,
+                59,
+                60,
+                61,
+                62,
+                63,
+                64,
+                65,
+                66
+              ]
+            }
+          }
+        },
+        {
+          "type": "expression",
+          "expression": "require(bool)(delegateLog.started == 0)",
+          "source_mapping": {
+            "start": 1419,
+            "length": 33,
+            "filename": "/../data/reentrancy/solidity_contract/17518.sol",
+            "lines": [
+              54
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "timestamp",
+      "impact": "Low",
+      "confidence": "Medium",
+      "description": "Delegable.removeDelegate (/../data/reentrancy/solidity_contract/17518.sol#60-65) uses timestamp for comparisons\n\tDangerous comparisons:\n\t- require(bool)(delegateLog.started != 0 && delegateLog.ended == 0) (/../data/reentrancy/solidity_contract/17518.sol#62)\n",
+      "elements": [
+        {
+          "type": "function",
+          "name": "removeDelegate",
+          "source_mapping": {
+            "start": 1539,
+            "length": 279,
+            "filename": "/../data/reentrancy/solidity_contract/17518.sol",
+            "lines": [
+              60,
+              61,
+              62,
+              63,
+              64,
+              65
+            ]
+          },
+          "contract": {
+            "type": "contract",
+            "name": "Delegable",
+            "source_mapping": {
+              "start": 390,
+              "length": 1430,
+              "filename": "/../data/reentrancy/solidity_contract/17518.sol",
+              "lines": [
+                24,
+                25,
+                26,
+                27,
+                28,
+                29,
+                30,
+                31,
+                32,
+                33,
+                34,
+                35,
+                36,
+                37,
+                38,
+                39,
+                40,
+                41,
+                42,
+                43,
+                44,
+                45,
+                46,
+                47,
+                48,
+                49,
+                50,
+                51,
+                52,
+                53,
+                54,
+                55,
+                56,
+                57,
+                58,
+                59,
+                60,
+                61,
+                62,
+                63,
+                64,
+                65,
+                66
+              ]
+            }
+          }
+        },
+        {
+          "type": "expression",
+          "expression": "require(bool)(delegateLog.started != 0 && delegateLog.ended == 0)",
+          "source_mapping": {
+            "start": 1686,
+            "length": 59,
+            "filename": "/../data/reentrancy/solidity_contract/17518.sol",
+            "lines": [
+              62
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "timestamp",
+      "impact": "Low",
+      "confidence": "Medium",
+      "description": "RipioOracle.getRate (/../data/reentrancy/solidity_contract/17518.sol#175-204) uses timestamp for comparisons\n\tDangerous comparisons:\n\t- require(bool)(timestamp >= expirationTime) (/../data/reentrancy/solidity_contract/17518.sol#188)\n\t- require(bool)(timestamp <= block.timestamp) (/../data/reentrancy/solidity_contract/17518.sol#181)\n\t- cache[currency].timestamp >= timestamp && cache[currency].timestamp >= expirationTime (/../data/reentrancy/solidity_contract/17518.sol#185-203)\n",
+      "elements": [
+        {
+          "type": "function",
+          "name": "getRate",
+          "source_mapping": {
+            "start": 4522,
+            "length": 1277,
+            "filename": "/../data/reentrancy/solidity_contract/17518.sol",
+            "lines": [
+              175,
+              176,
+              177,
+              178,
+              179,
+              180,
+              181,
+              182,
+              183,
+              184,
+              185,
+              186,
+              187,
+              188,
+              189,
+              190,
+              191,
+              192,
+              193,
+              194,
+              195,
+              196,
+              197,
+              198,
+              199,
+              200,
+              201,
+              202,
+              203,
+              204
+            ]
+          },
+          "contract": {
+            "type": "contract",
+            "name": "RipioOracle",
+            "source_mapping": {
+              "start": 3059,
+              "length": 2742,
+              "filename": "/../data/reentrancy/solidity_contract/17518.sol",
+              "lines": [
+                115,
+                116,
+                117,
+                118,
+                119,
+                120,
+                121,
+                122,
+                123,
+                124,
+                125,
+                126,
+                127,
+                128,
+                129,
+                130,
+                131,
+                132,
+                133,
+                134,
+                135,
+                136,
+                137,
+                138,
+                139,
+                140,
+                141,
+                142,
+                143,
+                144,
+                145,
+                146,
+                147,
+                148,
+                149,
+                150,
+                151,
+                152,
+                153,
+                154,
+                155,
+                156,
+                157,
+                158,
+                159,
+                160,
+                161,
+                162,
+                163,
+                164,
+                165,
+                166,
+                167,
+                168,
+                169,
+                170,
+                171,
+                172,
+                173,
+                174,
+                175,
+                176,
+                177,
+                178,
+                179,
+                180,
+                181,
+                182,
+                183,
+                184,
+                185,
+                186,
+                187,
+                188,
+                189,
+                190,
+                191,
+                192,
+                193,
+                194,
+                195,
+                196,
+                197,
+                198,
+                199,
+                200,
+                201,
+                202,
+                203,
+                204,
+                205
+              ]
+            }
+          }
+        },
+        {
+          "type": "expression",
+          "expression": "require(bool)(timestamp <= block.timestamp)",
+          "source_mapping": {
+            "start": 4796,
+            "length": 37,
+            "filename": "/../data/reentrancy/solidity_contract/17518.sol",
+            "lines": [
+              181
+            ]
+          }
+        },
+        {
+          "type": "expression",
+          "expression": "cache[currency].timestamp >= timestamp && cache[currency].timestamp >= expirationTime",
+          "source_mapping": {
+            "start": 4908,
+            "length": 885,
+            "filename": "/../data/reentrancy/solidity_contract/17518.sol",
+            "lines": [
+              185,
+              186,
+              187,
+              188,
+              189,
+              190,
+              191,
+              192,
+              193,
+              194,
+              195,
+              196,
+              197,
+              198,
+              199,
+              200,
+              201,
+              202,
+              203
+            ]
+          }
+        },
+        {
+          "type": "expression",
+          "expression": "require(bool)(timestamp >= expirationTime)",
+          "source_mapping": {
+            "start": 5099,
+            "length": 36,
+            "filename": "/../data/reentrancy/solidity_contract/17518.sol",
+            "lines": [
+              188
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "assembly",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Oracle.encodeCurrency uses assembly (/../data/reentrancy/solidity_contract/17518.sol#93-98)\n\t- /../data/reentrancy/solidity_contract/17518.sol#95-98\n",
+      "elements": [
+        {
+          "type": "function",
+          "name": "encodeCurrency",
+          "source_mapping": {
+            "start": 2447,
+            "length": 198,
+            "filename": "/../data/reentrancy/solidity_contract/17518.sol",
+            "lines": [
+              93,
+              94,
+              95,
+              96,
+              97,
+              98
+            ]
+          },
+          "contract": {
+            "type": "contract",
+            "name": "Oracle",
+            "source_mapping": {
+              "start": 1824,
+              "length": 1232,
+              "filename": "/../data/reentrancy/solidity_contract/17518.sol",
+              "lines": [
+                69,
+                70,
+                71,
+                72,
+                73,
+                74,
+                75,
+                76,
+                77,
+                78,
+                79,
+                80,
+                81,
+                82,
+                83,
+                84,
+                85,
+                86,
+                87,
+                88,
+                89,
+                90,
+                91,
+                92,
+                93,
+                94,
+                95,
+                96,
+                97,
+                98,
+                99,
+                100,
+                101,
+                102,
+                103,
+                104,
+                105,
+                106,
+                107,
+                108,
+                109,
+                110,
+                111,
+                112
+              ]
+            }
+          }
+        },
+        {
+          "type": "expression",
+          "expression": "None",
+          "source_mapping": {
+            "start": 2577,
+            "length": 68,
+            "filename": "/../data/reentrancy/solidity_contract/17518.sol",
+            "lines": [
+              95,
+              96,
+              97,
+              98
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "assembly",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Oracle.decodeCurrency uses assembly (/../data/reentrancy/solidity_contract/17518.sol#101-111)\n\t- /../data/reentrancy/solidity_contract/17518.sol#104-111\n",
+      "elements": [
+        {
+          "type": "function",
+          "name": "decodeCurrency",
+          "source_mapping": {
+            "start": 2661,
+            "length": 393,
+            "filename": "/../data/reentrancy/solidity_contract/17518.sol",
+            "lines": [
+              101,
+              102,
+              103,
+              104,
+              105,
+              106,
+              107,
+              108,
+              109,
+              110,
+              111
+            ]
+          },
+          "contract": {
+            "type": "contract",
+            "name": "Oracle",
+            "source_mapping": {
+              "start": 1824,
+              "length": 1232,
+              "filename": "/../data/reentrancy/solidity_contract/17518.sol",
+              "lines": [
+                69,
+                70,
+                71,
+                72,
+                73,
+                74,
+                75,
+                76,
+                77,
+                78,
+                79,
+                80,
+                81,
+                82,
+                83,
+                84,
+                85,
+                86,
+                87,
+                88,
+                89,
+                90,
+                91,
+                92,
+                93,
+                94,
+                95,
+                96,
+                97,
+                98,
+                99,
+                100,
+                101,
+                102,
+                103,
+                104,
+                105,
+                106,
+                107,
+                108,
+                109,
+                110,
+                111,
+                112
+              ]
+            }
+          }
+        },
+        {
+          "type": "expression",
+          "expression": "None",
+          "source_mapping": {
+            "start": 2835,
+            "length": 219,
+            "filename": "/../data/reentrancy/solidity_contract/17518.sol",
+            "lines": [
+              104,
+              105,
+              106,
+              107,
+              108,
+              109,
+              110,
+              111
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "assembly",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "RipioOracle.readBytes32 uses assembly (/../data/reentrancy/solidity_contract/17518.sol#160-166)\n\t- /../data/reentrancy/solidity_contract/17518.sol#162-165\n",
+      "elements": [
+        {
+          "type": "function",
+          "name": "readBytes32",
+          "source_mapping": {
+            "start": 4113,
+            "length": 238,
+            "filename": "/../data/reentrancy/solidity_contract/17518.sol",
+            "lines": [
+              160,
+              161,
+              162,
+              163,
+              164,
+              165,
+              166
+            ]
+          },
+          "contract": {
+            "type": "contract",
+            "name": "RipioOracle",
+            "source_mapping": {
+              "start": 3059,
+              "length": 2742,
+              "filename": "/../data/reentrancy/solidity_contract/17518.sol",
+              "lines": [
+                115,
+                116,
+                117,
+                118,
+                119,
+                120,
+                121,
+                122,
+                123,
+                124,
+                125,
+                126,
+                127,
+                128,
+                129,
+                130,
+                131,
+                132,
+                133,
+                134,
+                135,
+                136,
+                137,
+                138,
+                139,
+                140,
+                141,
+                142,
+                143,
+                144,
+                145,
+                146,
+                147,
+                148,
+                149,
+                150,
+                151,
+                152,
+                153,
+                154,
+                155,
+                156,
+                157,
+                158,
+                159,
+                160,
+                161,
+                162,
+                163,
+                164,
+                165,
+                166,
+                167,
+                168,
+                169,
+                170,
+                171,
+                172,
+                173,
+                174,
+                175,
+                176,
+                177,
+                178,
+                179,
+                180,
+                181,
+                182,
+                183,
+                184,
+                185,
+                186,
+                187,
+                188,
+                189,
+                190,
+                191,
+                192,
+                193,
+                194,
+                195,
+                196,
+                197,
+                198,
+                199,
+                200,
+                201,
+                202,
+                203,
+                204,
+                205
+              ]
+            }
+          }
+        },
+        {
+          "type": "expression",
+          "expression": "None",
+          "source_mapping": {
+            "start": 4248,
+            "length": 97,
+            "filename": "/../data/reentrancy/solidity_contract/17518.sol",
+            "lines": [
+              162,
+              163,
+              164,
+              165
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "external-function",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Ownable.transferTo (/../data/reentrancy/solidity_contract/17518.sol#16-20) should be declared external\n",
+      "elements": [
+        {
+          "type": "function",
+          "name": "transferTo",
+          "source_mapping": {
+            "start": 233,
+            "length": 150,
+            "filename": "/../data/reentrancy/solidity_contract/17518.sol",
+            "lines": [
+              16,
+              17,
+              18,
+              19,
+              20
+            ]
+          },
+          "contract": {
+            "type": "contract",
+            "name": "Ownable",
+            "source_mapping": {
+              "start": 26,
+              "length": 360,
+              "filename": "/../data/reentrancy/solidity_contract/17518.sol",
+              "lines": [
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10,
+                11,
+                12,
+                13,
+                14,
+                15,
+                16,
+                17,
+                18,
+                19,
+                20,
+                21
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "check": "external-function",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Delegable.wasDelegate (/../data/reentrancy/solidity_contract/17518.sol#40-43) should be declared external\n",
+      "elements": [
+        {
+          "type": "function",
+          "name": "wasDelegate",
+          "source_mapping": {
+            "start": 758,
+            "length": 292,
+            "filename": "/../data/reentrancy/solidity_contract/17518.sol",
+            "lines": [
+              40,
+              41,
+              42,
+              43
+            ]
+          },
+          "contract": {
+            "type": "contract",
+            "name": "Delegable",
+            "source_mapping": {
+              "start": 390,
+              "length": 1430,
+              "filename": "/../data/reentrancy/solidity_contract/17518.sol",
+              "lines": [
+                24,
+                25,
+                26,
+                27,
+                28,
+                29,
+                30,
+                31,
+                32,
+                33,
+                34,
+                35,
+                36,
+                37,
+                38,
+                39,
+                40,
+                41,
+                42,
+                43,
+                44,
+                45,
+                46,
+                47,
+                48,
+                49,
+                50,
+                51,
+                52,
+                53,
+                54,
+                55,
+                56,
+                57,
+                58,
+                59,
+                60,
+                61,
+                62,
+                63,
+                64,
+                65,
+                66
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "check": "external-function",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Delegable.addDelegate (/../data/reentrancy/solidity_contract/17518.sol#52-57) should be declared external\n",
+      "elements": [
+        {
+          "type": "function",
+          "name": "addDelegate",
+          "source_mapping": {
+            "start": 1275,
+            "length": 252,
+            "filename": "/../data/reentrancy/solidity_contract/17518.sol",
+            "lines": [
+              52,
+              53,
+              54,
+              55,
+              56,
+              57
+            ]
+          },
+          "contract": {
+            "type": "contract",
+            "name": "Delegable",
+            "source_mapping": {
+              "start": 390,
+              "length": 1430,
+              "filename": "/../data/reentrancy/solidity_contract/17518.sol",
+              "lines": [
+                24,
+                25,
+                26,
+                27,
+                28,
+                29,
+                30,
+                31,
+                32,
+                33,
+                34,
+                35,
+                36,
+                37,
+                38,
+                39,
+                40,
+                41,
+                42,
+                43,
+                44,
+                45,
+                46,
+                47,
+                48,
+                49,
+                50,
+                51,
+                52,
+                53,
+                54,
+                55,
+                56,
+                57,
+                58,
+                59,
+                60,
+                61,
+                62,
+                63,
+                64,
+                65,
+                66
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "check": "external-function",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Delegable.removeDelegate (/../data/reentrancy/solidity_contract/17518.sol#60-65) should be declared external\n",
+      "elements": [
+        {
+          "type": "function",
+          "name": "removeDelegate",
+          "source_mapping": {
+            "start": 1539,
+            "length": 279,
+            "filename": "/../data/reentrancy/solidity_contract/17518.sol",
+            "lines": [
+              60,
+              61,
+              62,
+              63,
+              64,
+              65
+            ]
+          },
+          "contract": {
+            "type": "contract",
+            "name": "Delegable",
+            "source_mapping": {
+              "start": 390,
+              "length": 1430,
+              "filename": "/../data/reentrancy/solidity_contract/17518.sol",
+              "lines": [
+                24,
+                25,
+                26,
+                27,
+                28,
+                29,
+                30,
+                31,
+                32,
+                33,
+                34,
+                35,
+                36,
+                37,
+                38,
+                39,
+                40,
+                41,
+                42,
+                43,
+                44,
+                45,
+                46,
+                47,
+                48,
+                49,
+                50,
+                51,
+                52,
+                53,
+                54,
+                55,
+                56,
+                57,
+                58,
+                59,
+                60,
+                61,
+                62,
+                63,
+                64,
+                65,
+                66
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "check": "external-function",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Oracle.url (/../data/reentrancy/solidity_contract/17518.sol#78) should be declared external\n",
+      "elements": [
+        {
+          "type": "function",
+          "name": "url",
+          "source_mapping": {
+            "start": 2027,
+            "length": 44,
+            "filename": "/../data/reentrancy/solidity_contract/17518.sol",
+            "lines": [
+              78
+            ]
+          },
+          "contract": {
+            "type": "contract",
+            "name": "Oracle",
+            "source_mapping": {
+              "start": 1824,
+              "length": 1232,
+              "filename": "/../data/reentrancy/solidity_contract/17518.sol",
+              "lines": [
+                69,
+                70,
+                71,
+                72,
+                73,
+                74,
+                75,
+                76,
+                77,
+                78,
+                79,
+                80,
+                81,
+                82,
+                83,
+                84,
+                85,
+                86,
+                87,
+                88,
+                89,
+                90,
+                91,
+                92,
+                93,
+                94,
+                95,
+                96,
+                97,
+                98,
+                99,
+                100,
+                101,
+                102,
+                103,
+                104,
+                105,
+                106,
+                107,
+                108,
+                109,
+                110,
+                111,
+                112
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "check": "external-function",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "RipioOracle.url (/../data/reentrancy/solidity_contract/17518.sol#137-139) should be declared external\n",
+      "elements": [
+        {
+          "type": "function",
+          "name": "url",
+          "source_mapping": {
+            "start": 3619,
+            "length": 75,
+            "filename": "/../data/reentrancy/solidity_contract/17518.sol",
+            "lines": [
+              137,
+              138,
+              139
+            ]
+          },
+          "contract": {
+            "type": "contract",
+            "name": "RipioOracle",
+            "source_mapping": {
+              "start": 3059,
+              "length": 2742,
+              "filename": "/../data/reentrancy/solidity_contract/17518.sol",
+              "lines": [
+                115,
+                116,
+                117,
+                118,
+                119,
+                120,
+                121,
+                122,
+                123,
+                124,
+                125,
+                126,
+                127,
+                128,
+                129,
+                130,
+                131,
+                132,
+                133,
+                134,
+                135,
+                136,
+                137,
+                138,
+                139,
+                140,
+                141,
+                142,
+                143,
+                144,
+                145,
+                146,
+                147,
+                148,
+                149,
+                150,
+                151,
+                152,
+                153,
+                154,
+                155,
+                156,
+                157,
+                158,
+                159,
+                160,
+                161,
+                162,
+                163,
+                164,
+                165,
+                166,
+                167,
+                168,
+                169,
+                170,
+                171,
+                172,
+                173,
+                174,
+                175,
+                176,
+                177,
+                178,
+                179,
+                180,
+                181,
+                182,
+                183,
+                184,
+                185,
+                186,
+                187,
+                188,
+                189,
+                190,
+                191,
+                192,
+                193,
+                194,
+                195,
+                196,
+                197,
+                198,
+                199,
+                200,
+                201,
+                202,
+                203,
+                204,
+                205
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "check": "external-function",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Oracle.getRate (/../data/reentrancy/solidity_contract/17518.sol#81) should be declared external\n",
+      "elements": [
+        {
+          "type": "function",
+          "name": "getRate",
+          "source_mapping": {
+            "start": 2083,
+            "length": 93,
+            "filename": "/../data/reentrancy/solidity_contract/17518.sol",
+            "lines": [
+              81
+            ]
+          },
+          "contract": {
+            "type": "contract",
+            "name": "Oracle",
+            "source_mapping": {
+              "start": 1824,
+              "length": 1232,
+              "filename": "/../data/reentrancy/solidity_contract/17518.sol",
+              "lines": [
+                69,
+                70,
+                71,
+                72,
+                73,
+                74,
+                75,
+                76,
+                77,
+                78,
+                79,
+                80,
+                81,
+                82,
+                83,
+                84,
+                85,
+                86,
+                87,
+                88,
+                89,
+                90,
+                91,
+                92,
+                93,
+                94,
+                95,
+                96,
+                97,
+                98,
+                99,
+                100,
+                101,
+                102,
+                103,
+                104,
+                105,
+                106,
+                107,
+                108,
+                109,
+                110,
+                111,
+                112
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "check": "external-function",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "RipioOracle.getRate (/../data/reentrancy/solidity_contract/17518.sol#175-204) should be declared external\n",
+      "elements": [
+        {
+          "type": "function",
+          "name": "getRate",
+          "source_mapping": {
+            "start": 4522,
+            "length": 1277,
+            "filename": "/../data/reentrancy/solidity_contract/17518.sol",
+            "lines": [
+              175,
+              176,
+              177,
+              178,
+              179,
+              180,
+              181,
+              182,
+              183,
+              184,
+              185,
+              186,
+              187,
+              188,
+              189,
+              190,
+              191,
+              192,
+              193,
+              194,
+              195,
+              196,
+              197,
+              198,
+              199,
+              200,
+              201,
+              202,
+              203,
+              204
+            ]
+          },
+          "contract": {
+            "type": "contract",
+            "name": "RipioOracle",
+            "source_mapping": {
+              "start": 3059,
+              "length": 2742,
+              "filename": "/../data/reentrancy/solidity_contract/17518.sol",
+              "lines": [
+                115,
+                116,
+                117,
+                118,
+                119,
+                120,
+                121,
+                122,
+                123,
+                124,
+                125,
+                126,
+                127,
+                128,
+                129,
+                130,
+                131,
+                132,
+                133,
+                134,
+                135,
+                136,
+                137,
+                138,
+                139,
+                140,
+                141,
+                142,
+                143,
+                144,
+                145,
+                146,
+                147,
+                148,
+                149,
+                150,
+                151,
+                152,
+                153,
+                154,
+                155,
+                156,
+                157,
+                158,
+                159,
+                160,
+                161,
+                162,
+                163,
+                164,
+                165,
+                166,
+                167,
+                168,
+                169,
+                170,
+                171,
+                172,
+                173,
+                174,
+                175,
+                176,
+                177,
+                178,
+                179,
+                180,
+                181,
+                182,
+                183,
+                184,
+                185,
+                186,
+                187,
+                188,
+                189,
+                190,
+                191,
+                192,
+                193,
+                194,
+                195,
+                196,
+                197,
+                198,
+                199,
+                200,
+                201,
+                202,
+                203,
+                204,
+                205
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "check": "external-function",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Oracle.addCurrency (/../data/reentrancy/solidity_contract/17518.sol#84-90) should be declared external\n",
+      "elements": [
+        {
+          "type": "function",
+          "name": "addCurrency",
+          "source_mapping": {
+            "start": 2188,
+            "length": 247,
+            "filename": "/../data/reentrancy/solidity_contract/17518.sol",
+            "lines": [
+              84,
+              85,
+              86,
+              87,
+              88,
+              89,
+              90
+            ]
+          },
+          "contract": {
+            "type": "contract",
+            "name": "Oracle",
+            "source_mapping": {
+              "start": 1824,
+              "length": 1232,
+              "filename": "/../data/reentrancy/solidity_contract/17518.sol",
+              "lines": [
+                69,
+                70,
+                71,
+                72,
+                73,
+                74,
+                75,
+                76,
+                77,
+                78,
+                79,
+                80,
+                81,
+                82,
+                83,
+                84,
+                85,
+                86,
+                87,
+                88,
+                89,
+                90,
+                91,
+                92,
+                93,
+                94,
+                95,
+                96,
+                97,
+                98,
+                99,
+                100,
+                101,
+                102,
+                103,
+                104,
+                105,
+                106,
+                107,
+                108,
+                109,
+                110,
+                111,
+                112
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "check": "external-function",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Oracle.decodeCurrency (/../data/reentrancy/solidity_contract/17518.sol#101-111) should be declared external\n",
+      "elements": [
+        {
+          "type": "function",
+          "name": "decodeCurrency",
+          "source_mapping": {
+            "start": 2661,
+            "length": 393,
+            "filename": "/../data/reentrancy/solidity_contract/17518.sol",
+            "lines": [
+              101,
+              102,
+              103,
+              104,
+              105,
+              106,
+              107,
+              108,
+              109,
+              110,
+              111
+            ]
+          },
+          "contract": {
+            "type": "contract",
+            "name": "Oracle",
+            "source_mapping": {
+              "start": 1824,
+              "length": 1232,
+              "filename": "/../data/reentrancy/solidity_contract/17518.sol",
+              "lines": [
+                69,
+                70,
+                71,
+                72,
+                73,
+                74,
+                75,
+                76,
+                77,
+                78,
+                79,
+                80,
+                81,
+                82,
+                83,
+                84,
+                85,
+                86,
+                87,
+                88,
+                89,
+                90,
+                91,
+                92,
+                93,
+                94,
+                95,
+                96,
+                97,
+                98,
+                99,
+                100,
+                101,
+                102,
+                103,
+                104,
+                105,
+                106,
+                107,
+                108,
+                109,
+                110,
+                111,
+                112
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "check": "external-function",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "RipioOracle.setExpirationTime (/../data/reentrancy/solidity_contract/17518.sol#142-145) should be declared external\n",
+      "elements": [
+        {
+          "type": "function",
+          "name": "setExpirationTime",
+          "source_mapping": {
+            "start": 3706,
+            "length": 128,
+            "filename": "/../data/reentrancy/solidity_contract/17518.sol",
+            "lines": [
+              142,
+              143,
+              144,
+              145
+            ]
+          },
+          "contract": {
+            "type": "contract",
+            "name": "RipioOracle",
+            "source_mapping": {
+              "start": 3059,
+              "length": 2742,
+              "filename": "/../data/reentrancy/solidity_contract/17518.sol",
+              "lines": [
+                115,
+                116,
+                117,
+                118,
+                119,
+                120,
+                121,
+                122,
+                123,
+                124,
+                125,
+                126,
+                127,
+                128,
+                129,
+                130,
+                131,
+                132,
+                133,
+                134,
+                135,
+                136,
+                137,
+                138,
+                139,
+                140,
+                141,
+                142,
+                143,
+                144,
+                145,
+                146,
+                147,
+                148,
+                149,
+                150,
+                151,
+                152,
+                153,
+                154,
+                155,
+                156,
+                157,
+                158,
+                159,
+                160,
+                161,
+                162,
+                163,
+                164,
+                165,
+                166,
+                167,
+                168,
+                169,
+                170,
+                171,
+                172,
+                173,
+                174,
+                175,
+                176,
+                177,
+                178,
+                179,
+                180,
+                181,
+                182,
+                183,
+                184,
+                185,
+                186,
+                187,
+                188,
+                189,
+                190,
+                191,
+                192,
+                193,
+                194,
+                195,
+                196,
+                197,
+                198,
+                199,
+                200,
+                201,
+                202,
+                203,
+                204,
+                205
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "check": "external-function",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "RipioOracle.setUrl (/../data/reentrancy/solidity_contract/17518.sol#148-151) should be declared external\n",
+      "elements": [
+        {
+          "type": "function",
+          "name": "setUrl",
+          "source_mapping": {
+            "start": 3846,
+            "length": 113,
+            "filename": "/../data/reentrancy/solidity_contract/17518.sol",
+            "lines": [
+              148,
+              149,
+              150,
+              151
+            ]
+          },
+          "contract": {
+            "type": "contract",
+            "name": "RipioOracle",
+            "source_mapping": {
+              "start": 3059,
+              "length": 2742,
+              "filename": "/../data/reentrancy/solidity_contract/17518.sol",
+              "lines": [
+                115,
+                116,
+                117,
+                118,
+                119,
+                120,
+                121,
+                122,
+                123,
+                124,
+                125,
+                126,
+                127,
+                128,
+                129,
+                130,
+                131,
+                132,
+                133,
+                134,
+                135,
+                136,
+                137,
+                138,
+                139,
+                140,
+                141,
+                142,
+                143,
+                144,
+                145,
+                146,
+                147,
+                148,
+                149,
+                150,
+                151,
+                152,
+                153,
+                154,
+                155,
+                156,
+                157,
+                158,
+                159,
+                160,
+                161,
+                162,
+                163,
+                164,
+                165,
+                166,
+                167,
+                168,
+                169,
+                170,
+                171,
+                172,
+                173,
+                174,
+                175,
+                176,
+                177,
+                178,
+                179,
+                180,
+                181,
+                182,
+                183,
+                184,
+                185,
+                186,
+                187,
+                188,
+                189,
+                190,
+                191,
+                192,
+                193,
+                194,
+                195,
+                196,
+                197,
+                198,
+                199,
+                200,
+                201,
+                202,
+                203,
+                204,
+                205
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "check": "external-function",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "RipioOracle.setFallback (/../data/reentrancy/solidity_contract/17518.sol#154-157) should be declared external\n",
+      "elements": [
+        {
+          "type": "function",
+          "name": "setFallback",
+          "source_mapping": {
+            "start": 3971,
+            "length": 130,
+            "filename": "/../data/reentrancy/solidity_contract/17518.sol",
+            "lines": [
+              154,
+              155,
+              156,
+              157
+            ]
+          },
+          "contract": {
+            "type": "contract",
+            "name": "RipioOracle",
+            "source_mapping": {
+              "start": 3059,
+              "length": 2742,
+              "filename": "/../data/reentrancy/solidity_contract/17518.sol",
+              "lines": [
+                115,
+                116,
+                117,
+                118,
+                119,
+                120,
+                121,
+                122,
+                123,
+                124,
+                125,
+                126,
+                127,
+                128,
+                129,
+                130,
+                131,
+                132,
+                133,
+                134,
+                135,
+                136,
+                137,
+                138,
+                139,
+                140,
+                141,
+                142,
+                143,
+                144,
+                145,
+                146,
+                147,
+                148,
+                149,
+                150,
+                151,
+                152,
+                153,
+                154,
+                155,
+                156,
+                157,
+                158,
+                159,
+                160,
+                161,
+                162,
+                163,
+                164,
+                165,
+                166,
+                167,
+                168,
+                169,
+                170,
+                171,
+                172,
+                173,
+                174,
+                175,
+                176,
+                177,
+                178,
+                179,
+                180,
+                181,
+                182,
+                183,
+                184,
+                185,
+                186,
+                187,
+                188,
+                189,
+                190,
+                191,
+                192,
+                193,
+                194,
+                195,
+                196,
+                197,
+                198,
+                199,
+                200,
+                201,
+                202,
+                203,
+                204,
+                205
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "check": "external-function",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "RipioOracle.sendTransaction (/../data/reentrancy/solidity_contract/17518.sol#169-171) should be declared external\n",
+      "elements": [
+        {
+          "type": "function",
+          "name": "sendTransaction",
+          "source_mapping": {
+            "start": 4363,
+            "length": 146,
+            "filename": "/../data/reentrancy/solidity_contract/17518.sol",
+            "lines": [
+              169,
+              170,
+              171
+            ]
+          },
+          "contract": {
+            "type": "contract",
+            "name": "RipioOracle",
+            "source_mapping": {
+              "start": 3059,
+              "length": 2742,
+              "filename": "/../data/reentrancy/solidity_contract/17518.sol",
+              "lines": [
+                115,
+                116,
+                117,
+                118,
+                119,
+                120,
+                121,
+                122,
+                123,
+                124,
+                125,
+                126,
+                127,
+                128,
+                129,
+                130,
+                131,
+                132,
+                133,
+                134,
+                135,
+                136,
+                137,
+                138,
+                139,
+                140,
+                141,
+                142,
+                143,
+                144,
+                145,
+                146,
+                147,
+                148,
+                149,
+                150,
+                151,
+                152,
+                153,
+                154,
+                155,
+                156,
+                157,
+                158,
+                159,
+                160,
+                161,
+                162,
+                163,
+                164,
+                165,
+                166,
+                167,
+                168,
+                169,
+                170,
+                171,
+                172,
+                173,
+                174,
+                175,
+                176,
+                177,
+                178,
+                179,
+                180,
+                181,
+                182,
+                183,
+                184,
+                185,
+                186,
+                187,
+                188,
+                189,
+                190,
+                191,
+                192,
+                193,
+                194,
+                195,
+                196,
+                197,
+                198,
+                199,
+                200,
+                201,
+                202,
+                203,
+                204,
+                205
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "check": "solc-version",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Detected issues with version pragma in /../data/reentrancy/solidity_contract/17518.sol:\n\t- pragma solidity^0.4.19 (/../data/reentrancy/solidity_contract/17518.sol#1): it allows old versions\n",
+      "elements": [
+        {
+          "type": "expression",
+          "expression": "^0.4.19",
+          "source_mapping": {
+            "start": 0,
+            "length": 24,
+            "filename": "/../data/reentrancy/solidity_contract/17518.sol",
+            "lines": [
+              1
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "low-level-calls",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Low level call in RipioOracle.sendTransaction (/../data/reentrancy/solidity_contract/17518.sol#169-171):\n\t-to.call.value(value)(data) /../data/reentrancy/solidity_contract/17518.sol#170\n",
+      "elements": [
+        {
+          "type": "function",
+          "name": "sendTransaction",
+          "source_mapping": {
+            "start": 4363,
+            "length": 146,
+            "filename": "/../data/reentrancy/solidity_contract/17518.sol",
+            "lines": [
+              169,
+              170,
+              171
+            ]
+          },
+          "contract": {
+            "type": "contract",
+            "name": "RipioOracle",
+            "source_mapping": {
+              "start": 3059,
+              "length": 2742,
+              "filename": "/../data/reentrancy/solidity_contract/17518.sol",
+              "lines": [
+                115,
+                116,
+                117,
+                118,
+                119,
+                120,
+                121,
+                122,
+                123,
+                124,
+                125,
+                126,
+                127,
+                128,
+                129,
+                130,
+                131,
+                132,
+                133,
+                134,
+                135,
+                136,
+                137,
+                138,
+                139,
+                140,
+                141,
+                142,
+                143,
+                144,
+                145,
+                146,
+                147,
+                148,
+                149,
+                150,
+                151,
+                152,
+                153,
+                154,
+                155,
+                156,
+                157,
+                158,
+                159,
+                160,
+                161,
+                162,
+                163,
+                164,
+                165,
+                166,
+                167,
+                168,
+                169,
+                170,
+                171,
+                172,
+                173,
+                174,
+                175,
+                176,
+                177,
+                178,
+                179,
+                180,
+                181,
+                182,
+                183,
+                184,
+                185,
+                186,
+                187,
+                188,
+                189,
+                190,
+                191,
+                192,
+                193,
+                194,
+                195,
+                196,
+                197,
+                198,
+                199,
+                200,
+                201,
+                202,
+                203,
+                204,
+                205
+              ]
+            }
+          }
+        },
+        {
+          "type": "expression",
+          "expression": "to.call.value(value)(data)",
+          "source_mapping": {
+            "start": 4469,
+            "length": 33,
+            "filename": "/../data/reentrancy/solidity_contract/17518.sol",
+            "lines": [
+              170
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "naming-convention",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Function 'Ownable.Ownable' (/../data/reentrancy/solidity_contract/17518.sol#11-13) is not in mixedCase\n",
+      "elements": [
+        {
+          "target": "function",
+          "convention": "mixedCase",
+          "name": "Ownable",
+          "source_mapping": {
+            "start": 159,
+            "length": 62,
+            "filename": "/../data/reentrancy/solidity_contract/17518.sol",
+            "lines": [
+              11,
+              12,
+              13
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "naming-convention",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Parameter '_to' of Ownable.transferTo (/../data/reentrancy/solidity_contract/17518.sol#16) is not in mixedCase\n",
+      "elements": [
+        {
+          "target": "parameter",
+          "convention": "mixedCase",
+          "name": "_to",
+          "source_mapping": {
+            "start": 253,
+            "length": 11,
+            "filename": "/../data/reentrancy/solidity_contract/17518.sol",
+            "lines": [
+              16
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "naming-convention",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Parameter '_address' of Delegable.wasDelegate (/../data/reentrancy/solidity_contract/17518.sol#40) is not in mixedCase\n",
+      "elements": [
+        {
+          "target": "parameter",
+          "convention": "mixedCase",
+          "name": "_address",
+          "source_mapping": {
+            "start": 779,
+            "length": 16,
+            "filename": "/../data/reentrancy/solidity_contract/17518.sol",
+            "lines": [
+              40
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "naming-convention",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Parameter '_address' of Delegable.isDelegate (/../data/reentrancy/solidity_contract/17518.sol#46) is not in mixedCase\n",
+      "elements": [
+        {
+          "target": "parameter",
+          "convention": "mixedCase",
+          "name": "_address",
+          "source_mapping": {
+            "start": 1082,
+            "length": 16,
+            "filename": "/../data/reentrancy/solidity_contract/17518.sol",
+            "lines": [
+              46
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "naming-convention",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Parameter '_address' of Delegable.addDelegate (/../data/reentrancy/solidity_contract/17518.sol#52) is not in mixedCase\n",
+      "elements": [
+        {
+          "target": "parameter",
+          "convention": "mixedCase",
+          "name": "_address",
+          "source_mapping": {
+            "start": 1296,
+            "length": 16,
+            "filename": "/../data/reentrancy/solidity_contract/17518.sol",
+            "lines": [
+              52
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "naming-convention",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Parameter '_address' of Delegable.removeDelegate (/../data/reentrancy/solidity_contract/17518.sol#60) is not in mixedCase\n",
+      "elements": [
+        {
+          "target": "parameter",
+          "convention": "mixedCase",
+          "name": "_address",
+          "source_mapping": {
+            "start": 1563,
+            "length": 16,
+            "filename": "/../data/reentrancy/solidity_contract/17518.sol",
+            "lines": [
+              60
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "naming-convention",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Parameter '_url' of RipioOracle.setUrl (/../data/reentrancy/solidity_contract/17518.sol#148) is not in mixedCase\n",
+      "elements": [
+        {
+          "target": "parameter",
+          "convention": "mixedCase",
+          "name": "_url",
+          "source_mapping": {
+            "start": 3862,
+            "length": 11,
+            "filename": "/../data/reentrancy/solidity_contract/17518.sol",
+            "lines": [
+              148
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "naming-convention",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Parameter '_fallback' of RipioOracle.setFallback (/../data/reentrancy/solidity_contract/17518.sol#154) is not in mixedCase\n",
+      "elements": [
+        {
+          "target": "parameter",
+          "convention": "mixedCase",
+          "name": "_fallback",
+          "source_mapping": {
+            "start": 3992,
+            "length": 17,
+            "filename": "/../data/reentrancy/solidity_contract/17518.sol",
+            "lines": [
+              154
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

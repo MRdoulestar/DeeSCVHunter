@@ -1,0 +1,14 @@
+{
+  "contract": "14353",
+  "tool": "honeybadger",
+  "start": 1609143102.700991,
+  "end": 1609143109.386917,
+  "duration": 6.685926198959351,
+  "analysis": [
+    {
+      "errors": [],
+      "file": "/../data/reentrancy/solidity_contract/14353.sol",
+      "name": "ICOBuyer"
+    }
+  ]
+}

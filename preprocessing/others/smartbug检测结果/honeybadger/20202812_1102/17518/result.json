@@ -1,0 +1,24 @@
+{
+  "contract": "17518",
+  "tool": "honeybadger",
+  "start": 1609198989.812887,
+  "end": 1609199149.027693,
+  "duration": 159.2148060798645,
+  "analysis": [
+    {
+      "errors": [],
+      "file": "/../data/reentrancy/solidity_contract/17518.sol",
+      "name": "Delegable"
+    },
+    {
+      "errors": [],
+      "file": "/../data/reentrancy/solidity_contract/17518.sol",
+      "name": "Ownable"
+    },
+    {
+      "errors": [],
+      "file": "/../data/reentrancy/solidity_contract/17518.sol",
+      "name": "RipioOracle"
+    }
+  ]
+}

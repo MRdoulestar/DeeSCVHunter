@@ -1,0 +1,555 @@
+INFO:Slither:Compilation warnings/errors on /../data/reentrancy/solidity_contract/39890.sol:
+/../data/reentrancy/solidity_contract/39890.sol:29:10: Warning: Use of the "var" keyword is deprecated.
+         var ptr = self._unsafe_nextPtr;
+         ^-----^
+/../data/reentrancy/solidity_contract/39890.sol:30:10: Warning: Use of the "var" keyword is deprecated.
+         var itemLength = _itemLength(ptr);
+         ^------------^
+/../data/reentrancy/solidity_contract/39890.sol:36:10: Warning: "throw" is deprecated in favour of "revert()", "require()" and "assert()".
+         throw;
+         ^---^
+/../data/reentrancy/solidity_contract/39890.sol:42:10: Warning: "throw" is deprecated in favour of "revert()", "require()" and "assert()".
+         throw;
+         ^---^
+/../data/reentrancy/solidity_contract/39890.sol:47:6: Warning: Use of the "var" keyword is deprecated.
+     var item = self._unsafe_item;
+     ^------^
+/../data/reentrancy/solidity_contract/39890.sol:73:6: Warning: Use of the "var" keyword is deprecated.
+     var item = toRLPItem(self);
+     ^------^
+/../data/reentrancy/solidity_contract/39890.sol:77:14: Warning: "throw" is deprecated in favour of "revert()", "require()" and "assert()".
+             throw;
+             ^---^
+/../data/reentrancy/solidity_contract/39890.sol:79:14: Warning: "throw" is deprecated in favour of "revert()", "require()" and "assert()".
+             throw;
+             ^---^
+/../data/reentrancy/solidity_contract/39890.sol:81:14: Warning: "throw" is deprecated in favour of "revert()", "require()" and "assert()".
+             throw;
+             ^---^
+/../data/reentrancy/solidity_contract/39890.sol:157:10: Warning: "throw" is deprecated in favour of "revert()", "require()" and "assert()".
+         throw;
+         ^---^
+/../data/reentrancy/solidity_contract/39890.sol:167:6: Warning: Use of the "var" keyword is deprecated.
+     var len = self._unsafe_length;
+     ^-----^
+/../data/reentrancy/solidity_contract/39890.sol:180:10: Warning: "throw" is deprecated in favour of "revert()", "require()" and "assert()".
+         throw;
+         ^---^
+/../data/reentrancy/solidity_contract/39890.sol:181:11: Warning: Use of the "var" keyword is deprecated.
+     var (rStartPos, len) = _decode(self);
+          ^-------^
+/../data/reentrancy/solidity_contract/39890.sol:181:22: Warning: Use of the "var" keyword is deprecated.
+     var (rStartPos, len) = _decode(self);
+                     ^-^
+/../data/reentrancy/solidity_contract/39890.sol:192:10: Warning: "throw" is deprecated in favour of "revert()", "require()" and "assert()".
+         throw;
+         ^---^
+/../data/reentrancy/solidity_contract/39890.sol:193:6: Warning: Use of the "var" keyword is deprecated.
+     var numItems = items(self);
+     ^----------^
+/../data/reentrancy/solidity_contract/39890.sol:195:6: Warning: Use of the "var" keyword is deprecated.
+     var it = iterator(self);
+     ^----^
+/../data/reentrancy/solidity_contract/39890.sol:209:10: Warning: "throw" is deprecated in favour of "revert()", "require()" and "assert()".
+         throw;
+         ^---^
+/../data/reentrancy/solidity_contract/39890.sol:210:11: Warning: Use of the "var" keyword is deprecated.
+     var (rStartPos, len) = _decode(self);
+          ^-------^
+/../data/reentrancy/solidity_contract/39890.sol:210:22: Warning: Use of the "var" keyword is deprecated.
+     var (rStartPos, len) = _decode(self);
+                     ^-^
+/../data/reentrancy/solidity_contract/39890.sol:222:10: Warning: "throw" is deprecated in favour of "revert()", "require()" and "assert()".
+         throw;
+         ^---^
+/../data/reentrancy/solidity_contract/39890.sol:223:11: Warning: Use of the "var" keyword is deprecated.
+     var (rStartPos, len) = _decode(self);
+          ^-------^
+/../data/reentrancy/solidity_contract/39890.sol:223:22: Warning: Use of the "var" keyword is deprecated.
+     var (rStartPos, len) = _decode(self);
+                     ^-^
+/../data/reentrancy/solidity_contract/39890.sol:225:10: Warning: "throw" is deprecated in favour of "revert()", "require()" and "assert()".
+         throw;
+         ^---^
+/../data/reentrancy/solidity_contract/39890.sol:237:10: Warning: "throw" is deprecated in favour of "revert()", "require()" and "assert()".
+         throw;
+         ^---^
+/../data/reentrancy/solidity_contract/39890.sol:238:11: Warning: Use of the "var" keyword is deprecated.
+     var (rStartPos, len) = _decode(self);
+          ^-------^
+/../data/reentrancy/solidity_contract/39890.sol:238:22: Warning: Use of the "var" keyword is deprecated.
+     var (rStartPos, len) = _decode(self);
+                     ^-^
+/../data/reentrancy/solidity_contract/39890.sol:240:10: Warning: "throw" is deprecated in favour of "revert()", "require()" and "assert()".
+         throw;
+         ^---^
+/../data/reentrancy/solidity_contract/39890.sol:246:10: Warning: "throw" is deprecated in favour of "revert()", "require()" and "assert()".
+         throw;
+         ^---^
+/../data/reentrancy/solidity_contract/39890.sol:256:10: Warning: "throw" is deprecated in favour of "revert()", "require()" and "assert()".
+         throw;
+         ^---^
+/../data/reentrancy/solidity_contract/39890.sol:257:11: Warning: Use of the "var" keyword is deprecated.
+     var (rStartPos, len) = _decode(self);
+          ^-------^
+/../data/reentrancy/solidity_contract/39890.sol:257:22: Warning: Use of the "var" keyword is deprecated.
+     var (rStartPos, len) = _decode(self);
+                     ^-^
+/../data/reentrancy/solidity_contract/39890.sol:259:10: Warning: "throw" is deprecated in favour of "revert()", "require()" and "assert()".
+         throw;
+         ^---^
+/../data/reentrancy/solidity_contract/39890.sol:289:10: Warning: "throw" is deprecated in favour of "revert()", "require()" and "assert()".
+         throw;
+         ^---^
+/../data/reentrancy/solidity_contract/39890.sol:290:11: Warning: Use of the "var" keyword is deprecated.
+     var (rStartPos, len) = _decode(self);
+          ^-------^
+/../data/reentrancy/solidity_contract/39890.sol:290:22: Warning: Use of the "var" keyword is deprecated.
+     var (rStartPos, len) = _decode(self);
+                     ^-^
+/../data/reentrancy/solidity_contract/39890.sol:292:10: Warning: "throw" is deprecated in favour of "revert()", "require()" and "assert()".
+         throw;
+         ^---^
+/../data/reentrancy/solidity_contract/39890.sol:347:10: Warning: "throw" is deprecated in favour of "revert()", "require()" and "assert()".
+         throw;
+         ^---^
+/../data/reentrancy/solidity_contract/39890.sol:482:60: Warning: "throw" is deprecated in favour of "revert()", "require()" and "assert()".
+    modifier onlyRecipient { if (msg.sender !=  recipient) throw; _; }
+                                                           ^---^
+/../data/reentrancy/solidity_contract/39890.sol:483:61: Warning: "throw" is deprecated in favour of "revert()", "require()" and "assert()".
+    modifier onlyArbitrator { if (msg.sender != arbitrator) throw; _; }
+                                                            ^---^
+/../data/reentrancy/solidity_contract/39890.sol:484:51: Warning: "throw" is deprecated in favour of "revert()", "require()" and "assert()".
+    modifier onlyDonor { if (msg.sender != donor) throw; _; }
+                                                  ^---^
+/../data/reentrancy/solidity_contract/39890.sol:488:58: Warning: "throw" is deprecated in favour of "revert()", "require()" and "assert()".
+    modifier campaignNotCanceled { if (campaignCanceled) throw; _; }
+                                                         ^---^
+/../data/reentrancy/solidity_contract/39890.sol:489:52: Warning: "throw" is deprecated in favour of "revert()", "require()" and "assert()".
+    modifier notChanging { if (changingMilestones) throw; _; }
+                                                   ^---^
+/../data/reentrancy/solidity_contract/39890.sol:507:5: Warning: Defining constructors as functions with the same name as the contract is deprecated. Use "constructor(...) { ... }" instead.
+    function MilestoneTracker (
+    ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/39890.sol:603:34: Warning: "throw" is deprecated in favour of "revert()", "require()" and "assert()".
+        if (!changingMilestones) throw;
+                                 ^---^
+/../data/reentrancy/solidity_contract/39890.sol:604:57: Warning: "throw" is deprecated in favour of "revert()", "require()" and "assert()".
+        if (sha3(proposedMilestones) != _hashProposals) throw;
+                                                        ^---^
+/../data/reentrancy/solidity_contract/39890.sol:615:9: Warning: Use of the "var" keyword is deprecated.
+        var itmProposals = mProposedMilestones.toRLPItem(true);
+        ^--------------^
+/../data/reentrancy/solidity_contract/39890.sol:617:37: Warning: "throw" is deprecated in favour of "revert()", "require()" and "assert()".
+        if (!itmProposals.isList()) throw;
+                                    ^---^
+/../data/reentrancy/solidity_contract/39890.sol:619:9: Warning: Use of the "var" keyword is deprecated.
+        var itrProposals = itmProposals.iterator();
+        ^--------------^
+/../data/reentrancy/solidity_contract/39890.sol:624:13: Warning: Use of the "var" keyword is deprecated.
+            var itmProposal = itrProposals.next();
+            ^-------------^
+/../data/reentrancy/solidity_contract/39890.sol:628:40: Warning: "throw" is deprecated in favour of "revert()", "require()" and "assert()".
+            if (!itmProposal.isList()) throw;
+                                       ^---^
+/../data/reentrancy/solidity_contract/39890.sol:630:13: Warning: Use of the "var" keyword is deprecated.
+            var itrProposal = itmProposal.iterator();
+            ^-------------^
+/../data/reentrancy/solidity_contract/39890.sol:655:48: Warning: "throw" is deprecated in favour of "revert()", "require()" and "assert()".
+        if (_idMilestone >= milestones.length) throw;
+                                               ^---^
+/../data/reentrancy/solidity_contract/39890.sol:657:87: Warning: "throw" is deprecated in favour of "revert()", "require()" and "assert()".
+        if (  (msg.sender != milestone.milestoneLeadLink)&&(msg.sender != recipient)) throw;
+                                                                                      ^---^
+/../data/reentrancy/solidity_contract/39890.sol:658:72: Warning: "throw" is deprecated in favour of "revert()", "require()" and "assert()".
+        if (milestone.status != MilestoneStatus.AcceptedAndInProgress) throw;
+                                                                       ^---^
+/../data/reentrancy/solidity_contract/39890.sol:659:48: Warning: "throw" is deprecated in favour of "revert()", "require()" and "assert()".
+        if (now < milestone.minCompletionDate) throw;
+                                               ^---^
+/../data/reentrancy/solidity_contract/39890.sol:660:48: Warning: "throw" is deprecated in favour of "revert()", "require()" and "assert()".
+        if (now > milestone.maxCompletionDate) throw;
+                                               ^---^
+/../data/reentrancy/solidity_contract/39890.sol:669:48: Warning: "throw" is deprecated in favour of "revert()", "require()" and "assert()".
+        if (_idMilestone >= milestones.length) throw;
+                                               ^---^
+/../data/reentrancy/solidity_contract/39890.sol:671:99: Warning: "throw" is deprecated in favour of "revert()", "require()" and "assert()".
+        if ((msg.sender != milestone.reviewer) ||(milestone.status != MilestoneStatus.Completed)) throw;
+                                                                                                  ^---^
+/../data/reentrancy/solidity_contract/39890.sol:683:48: Warning: "throw" is deprecated in favour of "revert()", "require()" and "assert()".
+        if (_idMilestone >= milestones.length) throw;
+                                               ^---^
+/../data/reentrancy/solidity_contract/39890.sol:686:62: Warning: "throw" is deprecated in favour of "revert()", "require()" and "assert()".
+            (milestone.status != MilestoneStatus.Completed)) throw;
+                                                             ^---^
+/../data/reentrancy/solidity_contract/39890.sol:697:48: Warning: "throw" is deprecated in favour of "revert()", "require()" and "assert()".
+        if (_idMilestone >= milestones.length) throw;
+                                               ^---^
+/../data/reentrancy/solidity_contract/39890.sol:699:86: Warning: "throw" is deprecated in favour of "revert()", "require()" and "assert()".
+        if ((msg.sender != milestone.milestoneLeadLink)&&(msg.sender != recipient))  throw;
+                                                                                     ^---^
+/../data/reentrancy/solidity_contract/39890.sol:700:115: Warning: "throw" is deprecated in favour of "revert()", "require()" and "assert()".
+        if ((milestone.status != MilestoneStatus.Completed) || (now < milestone.doneTime + milestone.reviewTime)) throw;
+                                                                                                                  ^---^
+/../data/reentrancy/solidity_contract/39890.sol:710:48: Warning: "throw" is deprecated in favour of "revert()", "require()" and "assert()".
+        if (_idMilestone >= milestones.length) throw;
+                                               ^---^
+/../data/reentrancy/solidity_contract/39890.sol:714:13: Warning: "throw" is deprecated in favour of "revert()", "require()" and "assert()".
+            throw;
+            ^---^
+/../data/reentrancy/solidity_contract/39890.sol:724:48: Warning: "throw" is deprecated in favour of "revert()", "require()" and "assert()".
+        if (_idMilestone >= milestones.length) throw;
+                                               ^---^
+/../data/reentrancy/solidity_contract/39890.sol:726:125: Warning: "throw" is deprecated in favour of "revert()", "require()" and "assert()".
+        if ((milestone.status != MilestoneStatus.AcceptedAndInProgress) && (milestone.status != MilestoneStatus.Completed)) throw;
+                                                                                                                            ^---^
+/../data/reentrancy/solidity_contract/39890.sol:739:48: Warning: "throw" is deprecated in favour of "revert()", "require()" and "assert()".
+        if (_idMilestone >= milestones.length) throw;
+                                               ^---^
+/../data/reentrancy/solidity_contract/39890.sol:742:71: Warning: "throw" is deprecated in favour of "revert()", "require()" and "assert()".
+        if (milestone.status == MilestoneStatus.AuthorizedForPayment) throw;
+                                                                      ^---^
+/../data/reentrancy/solidity_contract/39890.sol:744:71: Warning: "throw" is deprecated in favour of "revert()", "require()" and "assert()".
+        if(!milestone.paymentSource.call.value(0)(milestone.payData)) throw;
+                                                                      ^---^
+/../data/reentrancy/solidity_contract/39890.sol:626:13: Warning: Variable is declared as a storage pointer. Use an explicit "storage" keyword to silence this warning.
+            Milestone milestone = milestones[milestones.length ++];
+            ^-----------------^
+/../data/reentrancy/solidity_contract/39890.sol:656:9: Warning: Variable is declared as a storage pointer. Use an explicit "storage" keyword to silence this warning.
+        Milestone milestone = milestones[_idMilestone];
+        ^-----------------^
+/../data/reentrancy/solidity_contract/39890.sol:670:9: Warning: Variable is declared as a storage pointer. Use an explicit "storage" keyword to silence this warning.
+        Milestone milestone = milestones[_idMilestone];
+        ^-----------------^
+/../data/reentrancy/solidity_contract/39890.sol:684:9: Warning: Variable is declared as a storage pointer. Use an explicit "storage" keyword to silence this warning.
+        Milestone milestone = milestones[_idMilestone];
+        ^-----------------^
+/../data/reentrancy/solidity_contract/39890.sol:698:9: Warning: Variable is declared as a storage pointer. Use an explicit "storage" keyword to silence this warning.
+        Milestone milestone = milestones[_idMilestone];
+        ^-----------------^
+/../data/reentrancy/solidity_contract/39890.sol:711:9: Warning: Variable is declared as a storage pointer. Use an explicit "storage" keyword to silence this warning.
+        Milestone milestone = milestones[_idMilestone];
+        ^-----------------^
+/../data/reentrancy/solidity_contract/39890.sol:725:9: Warning: Variable is declared as a storage pointer. Use an explicit "storage" keyword to silence this warning.
+        Milestone milestone = milestones[_idMilestone];
+        ^-----------------^
+/../data/reentrancy/solidity_contract/39890.sol:740:9: Warning: Variable is declared as a storage pointer. Use an explicit "storage" keyword to silence this warning.
+        Milestone milestone = milestones[_idMilestone];
+        ^-----------------^
+/../data/reentrancy/solidity_contract/39890.sol:382:14: Warning: The use of labels is deprecated. Please use "if", "switch", "for" or function calls instead.
+             tag_loop:
+             ^------^
+/../data/reentrancy/solidity_contract/39890.sol:382:14: Warning: Jump instructions and labels are low-level EVM features that can lead to incorrect stack access. Because of that they are discouraged. Please consider using "switch", "if" or "for" statements instead.
+             tag_loop:
+             ^------^
+/../data/reentrancy/solidity_contract/39890.sol:383:18: Warning: Jump instructions and labels are low-level EVM features that can lead to incorrect stack access. Because of that they are discouraged. Please consider using "switch", "if" or "for" statements instead.
+                 jumpi(end, eq(i, words))
+                 ^----------------------^
+/../data/reentrancy/solidity_contract/39890.sol:389:18: Warning: Jump instructions and labels are low-level EVM features that can lead to incorrect stack access. Because of that they are discouraged. Please consider using "switch", "if" or "for" statements instead.
+                 jump(tag_loop)
+                 ^------------^
+/../data/reentrancy/solidity_contract/39890.sol:390:14: Warning: The use of labels is deprecated. Please use "if", "switch", "for" or function calls instead.
+             end:
+             ^-^
+/../data/reentrancy/solidity_contract/39890.sol:390:14: Warning: Jump instructions and labels are low-level EVM features that can lead to incorrect stack access. Because of that they are discouraged. Please consider using "switch", "if" or "for" statements instead.
+             end:
+             ^-^
+/../data/reentrancy/solidity_contract/39890.sol:578:9: Warning: Invoking events without "emit" prefix is deprecated.
+        NewMilestoneListProposed();
+        ^------------------------^
+/../data/reentrancy/solidity_contract/39890.sol:591:9: Warning: Invoking events without "emit" prefix is deprecated.
+        NewMilestoneListUnproposed();
+        ^--------------------------^
+/../data/reentrancy/solidity_contract/39890.sol:604:13: Warning: "sha3" has been deprecated in favour of "keccak256"
+        if (sha3(proposedMilestones) != _hashProposals) throw;
+            ^----------------------^
+/../data/reentrancy/solidity_contract/39890.sol:648:9: Warning: Invoking events without "emit" prefix is deprecated.
+        NewMilestoneListAccepted();
+        ^------------------------^
+/../data/reentrancy/solidity_contract/39890.sol:663:9: Warning: Invoking events without "emit" prefix is deprecated.
+        ProposalStatusChanged(_idMilestone, milestone.status);
+        ^---------------------------------------------------^
+/../data/reentrancy/solidity_contract/39890.sol:689:9: Warning: Invoking events without "emit" prefix is deprecated.
+        ProposalStatusChanged(_idMilestone, milestone.status);
+        ^---------------------------------------------------^
+/../data/reentrancy/solidity_contract/39890.sol:717:9: Warning: Invoking events without "emit" prefix is deprecated.
+        ProposalStatusChanged(_idMilestone, milestone.status);
+        ^---------------------------------------------------^
+/../data/reentrancy/solidity_contract/39890.sol:734:9: Warning: Invoking events without "emit" prefix is deprecated.
+        CampaignCanceled();
+        ^----------------^
+/../data/reentrancy/solidity_contract/39890.sol:745:9: Warning: Invoking events without "emit" prefix is deprecated.
+        ProposalStatusChanged(_idMilestone, milestone.status);
+        ^---------------------------------------------------^
+/../data/reentrancy/solidity_contract/39890.sol:507:5: Warning: No visibility specified. Defaulting to "public". 
+    function MilestoneTracker (
+    ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/39890.sol:523:5: Warning: No visibility specified. Defaulting to "public". 
+    function numberOfMilestones() constant returns (uint) {
+    ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/39890.sol:534:5: Warning: No visibility specified. Defaulting to "public". 
+    function changeArbitrator(address _newArbitrator) onlyArbitrator {
+    ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/39890.sol:540:5: Warning: No visibility specified. Defaulting to "public". 
+    function changeDonor(address _newDonor) onlyDonor {
+    ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/39890.sol:546:5: Warning: No visibility specified. Defaulting to "public". 
+    function changeRecipient(address _newRecipient) onlyRecipient {
+    ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/39890.sol:574:5: Warning: No visibility specified. Defaulting to "public". 
+    function proposeMilestones(bytes _newMilestones
+    ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/39890.sol:588:5: Warning: No visibility specified. Defaulting to "public". 
+    function unproposeMilestones() onlyRecipient campaignNotCanceled {
+    ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/39890.sol:598:5: Warning: No visibility specified. Defaulting to "public". 
+    function acceptProposedMilestones(bytes32 _hashProposals
+    ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/39890.sol:654:5: Warning: No visibility specified. Defaulting to "public". 
+    function markMilestoneComplete(uint _idMilestone)campaignNotCanceled notChanging   {
+    ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/39890.sol:668:5: Warning: No visibility specified. Defaulting to "public". 
+    function approveCompletedMilestone(uint _idMilestone) campaignNotCanceled notChanging {
+    ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/39890.sol:680:5: Warning: No visibility specified. Defaulting to "public". 
+    function rejectMilestone(uint _idMilestone)
+    ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/39890.sol:696:5: Warning: No visibility specified. Defaulting to "public". 
+    function requestMilestonePayment(uint _idMilestone) campaignNotCanceled notChanging {
+    ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/39890.sol:707:5: Warning: No visibility specified. Defaulting to "public". 
+    function cancelMilestone(uint _idMilestone)
+    ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/39890.sol:723:5: Warning: No visibility specified. Defaulting to "public". 
+    function arbitrateApproveMilestone(uint _idMilestone) onlyArbitrator campaignNotCanceled notChanging {
+    ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/39890.sol:732:5: Warning: No visibility specified. Defaulting to "public". 
+    function arbitrateCancelCampaign() onlyArbitrator campaignNotCanceled {
+    ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/39890.sol:46:2: Warning: Function state mutability can be restricted to pure
+ function hasNext(Iterator memory self) internal constant returns (bool) {
+ ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/39890.sol:56:2: Warning: Function state mutability can be restricted to pure
+ function toRLPItem(bytes memory self) internal constant returns (RLPItem memory) {
+ ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/39890.sol:89:2: Warning: Function state mutability can be restricted to pure
+ function isNull(RLPItem memory self) internal constant returns (bool ret) {
+ ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/39890.sol:96:2: Warning: Function state mutability can be restricted to pure
+ function isList(RLPItem memory self) internal constant returns (bool ret) {
+ ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/39890.sol:108:2: Warning: Function state mutability can be restricted to pure
+ function isData(RLPItem memory self) internal constant returns (bool ret) {
+ ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/39890.sol:299:2: Warning: Function state mutability can be restricted to pure
+ function _payloadOffset(RLPItem memory self) private constant returns (uint) {
+ ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/39890.sol:317:2: Warning: Function state mutability can be restricted to pure
+ function _itemLength(uint memPtr) private constant returns (uint len) {
+ ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/39890.sol:383:18: Warning: Function declared as view, but this expression (potentially) modifies the state and thus requires non-payable (the default) or payable.
+                 jumpi(end, eq(i, words))
+                 ^----------------------^
+/../data/reentrancy/solidity_contract/39890.sol:389:18: Warning: Function declared as view, but this expression (potentially) modifies the state and thus requires non-payable (the default) or payable.
+                 jump(tag_loop)
+                 ^------------^
+/../data/reentrancy/solidity_contract/39890.sol:397:6: Warning: Function state mutability can be restricted to pure
+     function _validate(RLPItem memory self) private constant returns (bool ret) {
+     ^ (Relevant source part starts here and spans across multiple lines).
+
+INFO:Detectors:[93m
+RLP.toRLPItem (/../data/reentrancy/solidity_contract/39890.sol#56-66) is declared view but contains assembly code
+RLP.isList (/../data/reentrancy/solidity_contract/39890.sol#96-103) is declared view but contains assembly code
+RLP.isData (/../data/reentrancy/solidity_contract/39890.sol#108-115) is declared view but contains assembly code
+RLP.isEmpty (/../data/reentrancy/solidity_contract/39890.sol#120-129) is declared view but contains assembly code
+RLP.items (/../data/reentrancy/solidity_contract/39890.sol#134-150) is declared view but contains assembly code
+RLP.toUint (/../data/reentrancy/solidity_contract/39890.sol#220-229) is declared view but contains assembly code
+RLP.toBool (/../data/reentrancy/solidity_contract/39890.sol#235-248) is declared view but contains assembly code
+RLP.toByte (/../data/reentrancy/solidity_contract/39890.sol#254-265) is declared view but contains assembly code
+RLP.toAddress (/../data/reentrancy/solidity_contract/39890.sol#287-296) is declared view but contains assembly code
+RLP._payloadOffset (/../data/reentrancy/solidity_contract/39890.sol#299-314) is declared view but contains assembly code
+RLP._itemLength (/../data/reentrancy/solidity_contract/39890.sol#317-342) is declared view but contains assembly code
+RLP._decode (/../data/reentrancy/solidity_contract/39890.sol#345-370) is declared view but contains assembly code
+RLP._copyToBytes (/../data/reentrancy/solidity_contract/39890.sol#373-394) is declared view but contains assembly code
+RLP._validate (/../data/reentrancy/solidity_contract/39890.sol#397-409) is declared view but contains assembly code
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#constant-functions-changing-the-state[0m
+INFO:Detectors:[92m
+RLP.toRLPItem uses assembly (/../data/reentrancy/solidity_contract/39890.sol#56-66)
+	- /../data/reentrancy/solidity_contract/39890.sol#62-65
+RLP.isList uses assembly (/../data/reentrancy/solidity_contract/39890.sol#96-103)
+	- /../data/reentrancy/solidity_contract/39890.sol#100-103
+RLP.isData uses assembly (/../data/reentrancy/solidity_contract/39890.sol#108-115)
+	- /../data/reentrancy/solidity_contract/39890.sol#112-115
+RLP.isEmpty uses assembly (/../data/reentrancy/solidity_contract/39890.sol#120-129)
+	- /../data/reentrancy/solidity_contract/39890.sol#125-128
+RLP.items uses assembly (/../data/reentrancy/solidity_contract/39890.sol#134-150)
+	- /../data/reentrancy/solidity_contract/39890.sol#139-142
+RLP.toUint uses assembly (/../data/reentrancy/solidity_contract/39890.sol#220-229)
+	- /../data/reentrancy/solidity_contract/39890.sol#226-229
+RLP.toBool uses assembly (/../data/reentrancy/solidity_contract/39890.sol#235-248)
+	- /../data/reentrancy/solidity_contract/39890.sol#242-245
+RLP.toByte uses assembly (/../data/reentrancy/solidity_contract/39890.sol#254-265)
+	- /../data/reentrancy/solidity_contract/39890.sol#261-264
+RLP.toAddress uses assembly (/../data/reentrancy/solidity_contract/39890.sol#287-296)
+	- /../data/reentrancy/solidity_contract/39890.sol#293-296
+RLP._payloadOffset uses assembly (/../data/reentrancy/solidity_contract/39890.sol#299-314)
+	- /../data/reentrancy/solidity_contract/39890.sol#304-307
+RLP._itemLength uses assembly (/../data/reentrancy/solidity_contract/39890.sol#317-342)
+	- /../data/reentrancy/solidity_contract/39890.sol#319-322
+	- /../data/reentrancy/solidity_contract/39890.sol#327-332
+	- /../data/reentrancy/solidity_contract/39890.sol#336-341
+RLP._decode uses assembly (/../data/reentrancy/solidity_contract/39890.sol#345-370)
+	- /../data/reentrancy/solidity_contract/39890.sol#350-353
+	- /../data/reentrancy/solidity_contract/39890.sol#363-366
+RLP._copyToBytes uses assembly (/../data/reentrancy/solidity_contract/39890.sol#373-394)
+	- /../data/reentrancy/solidity_contract/39890.sol#376-394
+RLP._validate uses assembly (/../data/reentrancy/solidity_contract/39890.sol#397-409)
+	- /../data/reentrancy/solidity_contract/39890.sol#402-406
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#assembly-usage[0m
+INFO:Detectors:[92m
+Deprecated standard detected @ /../data/reentrancy/solidity_contract/39890.sol#36:
+	- Usage of "throw" should be replaced with "revert()"
+Deprecated standard detected @ /../data/reentrancy/solidity_contract/39890.sol#42:
+	- Usage of "throw" should be replaced with "revert()"
+Deprecated standard detected @ /../data/reentrancy/solidity_contract/39890.sol#77:
+	- Usage of "throw" should be replaced with "revert()"
+Deprecated standard detected @ /../data/reentrancy/solidity_contract/39890.sol#79:
+	- Usage of "throw" should be replaced with "revert()"
+Deprecated standard detected @ /../data/reentrancy/solidity_contract/39890.sol#81:
+	- Usage of "throw" should be replaced with "revert()"
+Deprecated standard detected @ /../data/reentrancy/solidity_contract/39890.sol#157:
+	- Usage of "throw" should be replaced with "revert()"
+Deprecated standard detected @ /../data/reentrancy/solidity_contract/39890.sol#180:
+	- Usage of "throw" should be replaced with "revert()"
+Deprecated standard detected @ /../data/reentrancy/solidity_contract/39890.sol#192:
+	- Usage of "throw" should be replaced with "revert()"
+Deprecated standard detected @ /../data/reentrancy/solidity_contract/39890.sol#209:
+	- Usage of "throw" should be replaced with "revert()"
+Deprecated standard detected @ /../data/reentrancy/solidity_contract/39890.sol#222:
+	- Usage of "throw" should be replaced with "revert()"
+Deprecated standard detected @ /../data/reentrancy/solidity_contract/39890.sol#225:
+	- Usage of "throw" should be replaced with "revert()"
+Deprecated standard detected @ /../data/reentrancy/solidity_contract/39890.sol#237:
+	- Usage of "throw" should be replaced with "revert()"
+Deprecated standard detected @ /../data/reentrancy/solidity_contract/39890.sol#240:
+	- Usage of "throw" should be replaced with "revert()"
+Deprecated standard detected @ /../data/reentrancy/solidity_contract/39890.sol#246:
+	- Usage of "throw" should be replaced with "revert()"
+Deprecated standard detected @ /../data/reentrancy/solidity_contract/39890.sol#256:
+	- Usage of "throw" should be replaced with "revert()"
+Deprecated standard detected @ /../data/reentrancy/solidity_contract/39890.sol#259:
+	- Usage of "throw" should be replaced with "revert()"
+Deprecated standard detected @ /../data/reentrancy/solidity_contract/39890.sol#289:
+	- Usage of "throw" should be replaced with "revert()"
+Deprecated standard detected @ /../data/reentrancy/solidity_contract/39890.sol#292:
+	- Usage of "throw" should be replaced with "revert()"
+Deprecated standard detected @ /../data/reentrancy/solidity_contract/39890.sol#347:
+	- Usage of "throw" should be replaced with "revert()"
+Deprecated standard detected @ /../data/reentrancy/solidity_contract/39890.sol#603:
+	- Usage of "throw" should be replaced with "revert()"
+Deprecated standard detected @ /../data/reentrancy/solidity_contract/39890.sol#604:
+	- Usage of "sha3()" should be replaced with "keccak256()"
+Deprecated standard detected @ /../data/reentrancy/solidity_contract/39890.sol#604:
+	- Usage of "throw" should be replaced with "revert()"
+Deprecated standard detected @ /../data/reentrancy/solidity_contract/39890.sol#617:
+	- Usage of "throw" should be replaced with "revert()"
+Deprecated standard detected @ /../data/reentrancy/solidity_contract/39890.sol#628:
+	- Usage of "throw" should be replaced with "revert()"
+Deprecated standard detected @ /../data/reentrancy/solidity_contract/39890.sol#655:
+	- Usage of "throw" should be replaced with "revert()"
+Deprecated standard detected @ /../data/reentrancy/solidity_contract/39890.sol#657:
+	- Usage of "throw" should be replaced with "revert()"
+Deprecated standard detected @ /../data/reentrancy/solidity_contract/39890.sol#658:
+	- Usage of "throw" should be replaced with "revert()"
+Deprecated standard detected @ /../data/reentrancy/solidity_contract/39890.sol#659:
+	- Usage of "throw" should be replaced with "revert()"
+Deprecated standard detected @ /../data/reentrancy/solidity_contract/39890.sol#660:
+	- Usage of "throw" should be replaced with "revert()"
+Deprecated standard detected @ /../data/reentrancy/solidity_contract/39890.sol#669:
+	- Usage of "throw" should be replaced with "revert()"
+Deprecated standard detected @ /../data/reentrancy/solidity_contract/39890.sol#671:
+	- Usage of "throw" should be replaced with "revert()"
+Deprecated standard detected @ /../data/reentrancy/solidity_contract/39890.sol#683:
+	- Usage of "throw" should be replaced with "revert()"
+Deprecated standard detected @ /../data/reentrancy/solidity_contract/39890.sol#686:
+	- Usage of "throw" should be replaced with "revert()"
+Deprecated standard detected @ /../data/reentrancy/solidity_contract/39890.sol#697:
+	- Usage of "throw" should be replaced with "revert()"
+Deprecated standard detected @ /../data/reentrancy/solidity_contract/39890.sol#699:
+	- Usage of "throw" should be replaced with "revert()"
+Deprecated standard detected @ /../data/reentrancy/solidity_contract/39890.sol#700:
+	- Usage of "throw" should be replaced with "revert()"
+Deprecated standard detected @ /../data/reentrancy/solidity_contract/39890.sol#710:
+	- Usage of "throw" should be replaced with "revert()"
+Deprecated standard detected @ /../data/reentrancy/solidity_contract/39890.sol#714:
+	- Usage of "throw" should be replaced with "revert()"
+Deprecated standard detected @ /../data/reentrancy/solidity_contract/39890.sol#724:
+	- Usage of "throw" should be replaced with "revert()"
+Deprecated standard detected @ /../data/reentrancy/solidity_contract/39890.sol#726:
+	- Usage of "throw" should be replaced with "revert()"
+Deprecated standard detected @ /../data/reentrancy/solidity_contract/39890.sol#739:
+	- Usage of "throw" should be replaced with "revert()"
+Deprecated standard detected @ /../data/reentrancy/solidity_contract/39890.sol#742:
+	- Usage of "throw" should be replaced with "revert()"
+Deprecated standard detected @ /../data/reentrancy/solidity_contract/39890.sol#744:
+	- Usage of "throw" should be replaced with "revert()"
+Deprecated standard detected @ /../data/reentrancy/solidity_contract/39890.sol#482:
+	- Usage of "throw" should be replaced with "revert()"
+Deprecated standard detected @ /../data/reentrancy/solidity_contract/39890.sol#483:
+	- Usage of "throw" should be replaced with "revert()"
+Deprecated standard detected @ /../data/reentrancy/solidity_contract/39890.sol#484:
+	- Usage of "throw" should be replaced with "revert()"
+Deprecated standard detected @ /../data/reentrancy/solidity_contract/39890.sol#488:
+	- Usage of "throw" should be replaced with "revert()"
+Deprecated standard detected @ /../data/reentrancy/solidity_contract/39890.sol#489:
+	- Usage of "throw" should be replaced with "revert()"
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#deprecated-standards[0m
+INFO:Detectors:[92m
+MilestoneTracker.numberOfMilestones (/../data/reentrancy/solidity_contract/39890.sol#523-525) should be declared external
+MilestoneTracker.changeArbitrator (/../data/reentrancy/solidity_contract/39890.sol#534-536) should be declared external
+MilestoneTracker.changeDonor (/../data/reentrancy/solidity_contract/39890.sol#540-542) should be declared external
+MilestoneTracker.changeRecipient (/../data/reentrancy/solidity_contract/39890.sol#546-548) should be declared external
+MilestoneTracker.proposeMilestones (/../data/reentrancy/solidity_contract/39890.sol#574-579) should be declared external
+MilestoneTracker.unproposeMilestones (/../data/reentrancy/solidity_contract/39890.sol#588-592) should be declared external
+MilestoneTracker.acceptProposedMilestones (/../data/reentrancy/solidity_contract/39890.sol#598-649) should be declared external
+MilestoneTracker.markMilestoneComplete (/../data/reentrancy/solidity_contract/39890.sol#654-664) should be declared external
+MilestoneTracker.approveCompletedMilestone (/../data/reentrancy/solidity_contract/39890.sol#668-674) should be declared external
+MilestoneTracker.rejectMilestone (/../data/reentrancy/solidity_contract/39890.sol#680-690) should be declared external
+MilestoneTracker.requestMilestonePayment (/../data/reentrancy/solidity_contract/39890.sol#696-703) should be declared external
+MilestoneTracker.cancelMilestone (/../data/reentrancy/solidity_contract/39890.sol#707-718) should be declared external
+MilestoneTracker.arbitrateApproveMilestone (/../data/reentrancy/solidity_contract/39890.sol#723-728) should be declared external
+MilestoneTracker.arbitrateCancelCampaign (/../data/reentrancy/solidity_contract/39890.sol#732-735) should be declared external
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#public-function-that-could-be-declared-as-external[0m
+INFO:Detectors:[92m
+Detected issues with version pragma in /../data/reentrancy/solidity_contract/39890.sol:
+	- pragma solidity^0.4.6 (/../data/reentrancy/solidity_contract/39890.sol#1): it allows old versions
+	- pragma solidity^0.4.6 (/../data/reentrancy/solidity_contract/39890.sol#412): it allows old versions
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#incorrect-version-of-solidity[0m
+INFO:Detectors:[92m
+Low level call in MilestoneTracker.authorizePayment (/../data/reentrancy/solidity_contract/39890.sol#738-746):
+	-! milestone.paymentSource.call.value(0)(milestone.payData) /../data/reentrancy/solidity_contract/39890.sol#744
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#low-level-calls[0m
+INFO:Detectors:[92m
+Function 'RLP._payloadOffset' (/../data/reentrancy/solidity_contract/39890.sol#299-314) is not in mixedCase
+Function 'RLP._itemLength' (/../data/reentrancy/solidity_contract/39890.sol#317-342) is not in mixedCase
+Function 'RLP._decode' (/../data/reentrancy/solidity_contract/39890.sol#345-370) is not in mixedCase
+Function 'RLP._copyToBytes' (/../data/reentrancy/solidity_contract/39890.sol#373-394) is not in mixedCase
+Function 'RLP._validate' (/../data/reentrancy/solidity_contract/39890.sol#397-409) is not in mixedCase
+Function 'MilestoneTracker.MilestoneTracker' (/../data/reentrancy/solidity_contract/39890.sol#507-515) is not in mixedCase
+Parameter '_arbitrator' of MilestoneTracker.MilestoneTracker (/../data/reentrancy/solidity_contract/39890.sol#508) is not in mixedCase
+Parameter '_donor' of MilestoneTracker.MilestoneTracker (/../data/reentrancy/solidity_contract/39890.sol#509) is not in mixedCase
+Parameter '_recipient' of MilestoneTracker.MilestoneTracker (/../data/reentrancy/solidity_contract/39890.sol#510) is not in mixedCase
+Parameter '_newArbitrator' of MilestoneTracker.changeArbitrator (/../data/reentrancy/solidity_contract/39890.sol#534) is not in mixedCase
+Parameter '_newDonor' of MilestoneTracker.changeDonor (/../data/reentrancy/solidity_contract/39890.sol#540) is not in mixedCase
+Parameter '_newRecipient' of MilestoneTracker.changeRecipient (/../data/reentrancy/solidity_contract/39890.sol#546) is not in mixedCase
+Parameter '_newMilestones' of MilestoneTracker.proposeMilestones (/../data/reentrancy/solidity_contract/39890.sol#574) is not in mixedCase
+Parameter '_hashProposals' of MilestoneTracker.acceptProposedMilestones (/../data/reentrancy/solidity_contract/39890.sol#598) is not in mixedCase
+Parameter '_idMilestone' of MilestoneTracker.markMilestoneComplete (/../data/reentrancy/solidity_contract/39890.sol#654) is not in mixedCase
+Parameter '_idMilestone' of MilestoneTracker.approveCompletedMilestone (/../data/reentrancy/solidity_contract/39890.sol#668) is not in mixedCase
+Parameter '_idMilestone' of MilestoneTracker.rejectMilestone (/../data/reentrancy/solidity_contract/39890.sol#680) is not in mixedCase
+Parameter '_idMilestone' of MilestoneTracker.requestMilestonePayment (/../data/reentrancy/solidity_contract/39890.sol#696) is not in mixedCase
+Parameter '_idMilestone' of MilestoneTracker.cancelMilestone (/../data/reentrancy/solidity_contract/39890.sol#707) is not in mixedCase
+Parameter '_idMilestone' of MilestoneTracker.arbitrateApproveMilestone (/../data/reentrancy/solidity_contract/39890.sol#723) is not in mixedCase
+Parameter '_idMilestone' of MilestoneTracker.authorizePayment (/../data/reentrancy/solidity_contract/39890.sol#738) is not in mixedCase
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#conformance-to-solidity-naming-conventions[0m
+INFO:Slither:/../data/reentrancy/solidity_contract/39890.sol analyzed (2 contracts), 113 result(s) found

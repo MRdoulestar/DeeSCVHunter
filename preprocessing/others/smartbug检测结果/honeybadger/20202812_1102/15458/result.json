@@ -1,0 +1,19 @@
+{
+  "contract": "15458",
+  "tool": "honeybadger",
+  "start": 1609134380.099157,
+  "end": 1609134448.63953,
+  "duration": 68.54037284851074,
+  "analysis": [
+    {
+      "errors": [],
+      "file": "/../data/reentrancy/solidity_contract/15458.sol",
+      "name": "MineableToken"
+    },
+    {
+      "errors": [],
+      "file": "/../data/reentrancy/solidity_contract/15458.sol",
+      "name": "owned"
+    }
+  ]
+}

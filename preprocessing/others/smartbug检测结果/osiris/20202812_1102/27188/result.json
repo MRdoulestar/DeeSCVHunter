@@ -1,0 +1,65 @@
+{
+  "contract": "27188",
+  "tool": "osiris",
+  "start": 1609150595.4715772,
+  "end": 1609150618.76239,
+  "duration": 23.290812730789185,
+  "analysis": [
+    {
+      "errors": [
+        {
+          "line": 60,
+          "column": 13,
+          "message": "overflow_bugs"
+        },
+        {
+          "line": 95,
+          "column": 9,
+          "message": "overflow_bugs"
+        },
+        {
+          "line": 79,
+          "column": 20,
+          "message": "overflow_bugs"
+        },
+        {
+          "line": 59,
+          "column": 13,
+          "message": "overflow_bugs"
+        },
+        {
+          "line": 79,
+          "column": 21,
+          "message": "underflow_bugs"
+        },
+        {
+          "line": 70,
+          "column": 9,
+          "message": "underflow_bugs"
+        },
+        {
+          "line": 69,
+          "column": 9,
+          "message": "underflow_bugs"
+        },
+        {
+          "line": 52,
+          "column": 13,
+          "message": "concurrency_bug"
+        },
+        {
+          "line": 52,
+          "column": 13,
+          "message": "reentrancy_bug"
+        }
+      ],
+      "file": "/../data/reentrancy/solidity_contract/27188.sol",
+      "name": "DividendDistributor"
+    },
+    {
+      "errors": [],
+      "file": "/../data/reentrancy/solidity_contract/27188.sol",
+      "name": "Ownable"
+    }
+  ]
+}

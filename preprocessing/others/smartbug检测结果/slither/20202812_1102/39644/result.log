@@ -1,0 +1,129 @@
+INFO:Slither:Compilation warnings/errors on /../data/reentrancy/solidity_contract/39644.sol:
+/../data/reentrancy/solidity_contract/39644.sol:13:5: Warning: Defining constructors as functions with the same name as the contract is deprecated. Use "constructor(...) { ... }" instead.
+    function AddressOwnershipVerification() {}
+    ^----------------------------------------^
+/../data/reentrancy/solidity_contract/39644.sol:20:13: Warning: "throw" is deprecated in favour of "revert()", "require()" and "assert()".
+            throw;
+            ^---^
+/../data/reentrancy/solidity_contract/39644.sol:39:13: Warning: "throw" is deprecated in favour of "revert()", "require()" and "assert()".
+            throw;
+            ^---^
+/../data/reentrancy/solidity_contract/39644.sol:44:13: Warning: "throw" is deprecated in favour of "revert()", "require()" and "assert()".
+            throw;
+            ^---^
+/../data/reentrancy/solidity_contract/39644.sol:49:13: Warning: "throw" is deprecated in favour of "revert()", "require()" and "assert()".
+            throw;
+            ^---^
+/../data/reentrancy/solidity_contract/39644.sol:54:13: Warning: "throw" is deprecated in favour of "revert()", "require()" and "assert()".
+            throw;
+            ^---^
+/../data/reentrancy/solidity_contract/39644.sol:58:13: Warning: "throw" is deprecated in favour of "revert()", "require()" and "assert()".
+            throw;
+            ^---^
+/../data/reentrancy/solidity_contract/39644.sol:75:13: Warning: "throw" is deprecated in favour of "revert()", "require()" and "assert()".
+            throw;
+            ^---^
+/../data/reentrancy/solidity_contract/39644.sol:92:69: Warning: "throw" is deprecated in favour of "revert()", "require()" and "assert()".
+        if (msg.sender != transactor && msg.sender != transactee) { throw; }
+                                                                    ^---^
+/../data/reentrancy/solidity_contract/39644.sol:95:47: Warning: "throw" is deprecated in favour of "revert()", "require()" and "assert()".
+        if(!verify(transactor, transactee)) { throw; }
+                                              ^---^
+/../data/reentrancy/solidity_contract/39644.sol:101:62: Warning: "throw" is deprecated in favour of "revert()", "require()" and "assert()".
+        if (!transactee.call.value(deposit).gas(23000)()) {  throw;  }
+                                                             ^---^
+/../data/reentrancy/solidity_contract/39644.sol:32:9: Warning: Invoking events without "emit" prefix is deprecated.
+        VerificationEvent(transactor, msg.sender, value);
+        ^----------------------------------------------^
+/../data/reentrancy/solidity_contract/39644.sol:63:9: Warning: Invoking events without "emit" prefix is deprecated.
+        RequestEvent(msg.sender, transactee, deposit);
+        ^-------------------------------------------^
+/../data/reentrancy/solidity_contract/39644.sol:80:9: Warning: Invoking events without "emit" prefix is deprecated.
+        RemoveRequestEvent(transactor, transactee);
+        ^----------------------------------------^
+/../data/reentrancy/solidity_contract/39644.sol:103:9: Warning: Invoking events without "emit" prefix is deprecated.
+        RevokeEvent(transactor, transactee, deposit);
+        ^------------------------------------------^
+/../data/reentrancy/solidity_contract/39644.sol:13:5: Warning: No visibility specified. Defaulting to "public". 
+    function AddressOwnershipVerification() {}
+    ^----------------------------------------^
+/../data/reentrancy/solidity_contract/39644.sol:16:5: Warning: No visibility specified. Defaulting to "public". 
+    function () payable {
+    ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/39644.sol:36:5: Warning: No visibility specified. Defaulting to "public". 
+    function request(address transactee, uint32 deposit) {
+    ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/39644.sol:67:5: Warning: No visibility specified. Defaulting to "public". 
+    function getRequest(address transactor, address transactee) returns (uint32 deposit) {
+    ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/39644.sol:72:5: Warning: No visibility specified. Defaulting to "public". 
+    function removeRequest(address transactor, address transactee) returns (uint32) {
+    ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/39644.sol:84:5: Warning: No visibility specified. Defaulting to "public". 
+    function verify(address transactor, address transactee) returns (bool) {
+    ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/39644.sol:90:5: Warning: No visibility specified. Defaulting to "public". 
+    function revoke(address transactor, address transactee) {
+    ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/39644.sol:67:5: Warning: Function state mutability can be restricted to view
+    function getRequest(address transactor, address transactee) returns (uint32 deposit) {
+    ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/39644.sol:84:5: Warning: Function state mutability can be restricted to view
+    function verify(address transactor, address transactee) returns (bool) {
+    ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/39644.sol:121:5: Warning: Function state mutability can be restricted to view
+    function _requestExists(address transactee, uint32 deposit) internal returns(bool) {
+    ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/39644.sol:126:5: Warning: Function state mutability can be restricted to view
+    function _requestExistsReverse(address transactor, address transactee) internal returns(bool) {
+    ^ (Relevant source part starts here and spans across multiple lines).
+
+INFO:Detectors:[92m
+Deprecated standard detected @ /../data/reentrancy/solidity_contract/39644.sol#20:
+	- Usage of "throw" should be replaced with "revert()"
+Deprecated standard detected @ /../data/reentrancy/solidity_contract/39644.sol#39:
+	- Usage of "throw" should be replaced with "revert()"
+Deprecated standard detected @ /../data/reentrancy/solidity_contract/39644.sol#44:
+	- Usage of "throw" should be replaced with "revert()"
+Deprecated standard detected @ /../data/reentrancy/solidity_contract/39644.sol#49:
+	- Usage of "throw" should be replaced with "revert()"
+Deprecated standard detected @ /../data/reentrancy/solidity_contract/39644.sol#54:
+	- Usage of "throw" should be replaced with "revert()"
+Deprecated standard detected @ /../data/reentrancy/solidity_contract/39644.sol#58:
+	- Usage of "throw" should be replaced with "revert()"
+Deprecated standard detected @ /../data/reentrancy/solidity_contract/39644.sol#75:
+	- Usage of "throw" should be replaced with "revert()"
+Deprecated standard detected @ /../data/reentrancy/solidity_contract/39644.sol#92:
+	- Usage of "throw" should be replaced with "revert()"
+Deprecated standard detected @ /../data/reentrancy/solidity_contract/39644.sol#95:
+	- Usage of "throw" should be replaced with "revert()"
+Deprecated standard detected @ /../data/reentrancy/solidity_contract/39644.sol#101:
+	- Usage of "throw" should be replaced with "revert()"
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#deprecated-standards[0m
+INFO:Detectors:[92m
+AddressOwnershipVerification.fallback (/../data/reentrancy/solidity_contract/39644.sol#16-33) should be declared external
+AddressOwnershipVerification.request (/../data/reentrancy/solidity_contract/39644.sol#36-64) should be declared external
+AddressOwnershipVerification.getRequest (/../data/reentrancy/solidity_contract/39644.sol#67-69) should be declared external
+AddressOwnershipVerification.removeRequest (/../data/reentrancy/solidity_contract/39644.sol#72-81) should be declared external
+AddressOwnershipVerification.revoke (/../data/reentrancy/solidity_contract/39644.sol#90-104) should be declared external
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#public-function-that-could-be-declared-as-external[0m
+INFO:Detectors:[92m
+Detected issues with version pragma in /../data/reentrancy/solidity_contract/39644.sol:
+	- pragma solidity^0.4.2 (/../data/reentrancy/solidity_contract/39644.sol#1): it allows old versions
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#incorrect-version-of-solidity[0m
+INFO:Detectors:[92m
+Low level call in AddressOwnershipVerification.revoke (/../data/reentrancy/solidity_contract/39644.sol#90-104):
+	-! transactee.call.value(deposit).gas(23000)() /../data/reentrancy/solidity_contract/39644.sol#101
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#low-level-calls[0m
+INFO:Detectors:[92m
+Function 'AddressOwnershipVerification.AddressOwnershipVerification' (/../data/reentrancy/solidity_contract/39644.sol#13) is not in mixedCase
+Function 'AddressOwnershipVerification._saveRequest' (/../data/reentrancy/solidity_contract/39644.sol#107-110) is not in mixedCase
+Function 'AddressOwnershipVerification._deleteRequest' (/../data/reentrancy/solidity_contract/39644.sol#113-118) is not in mixedCase
+Function 'AddressOwnershipVerification._requestExists' (/../data/reentrancy/solidity_contract/39644.sol#121-123) is not in mixedCase
+Function 'AddressOwnershipVerification._requestExistsReverse' (/../data/reentrancy/solidity_contract/39644.sol#126-128) is not in mixedCase
+Function 'AddressOwnershipVerification._saveVerification' (/../data/reentrancy/solidity_contract/39644.sol#131-133) is not in mixedCase
+Variable 'AddressOwnershipVerification._requests' (/../data/reentrancy/solidity_contract/39644.sol#4) is not in mixedCase
+Variable 'AddressOwnershipVerification._requestsReverse' (/../data/reentrancy/solidity_contract/39644.sol#5) is not in mixedCase
+Variable 'AddressOwnershipVerification._verifications' (/../data/reentrancy/solidity_contract/39644.sol#6) is not in mixedCase
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#conformance-to-solidity-naming-conventions[0m
+INFO:Slither:/../data/reentrancy/solidity_contract/39644.sol analyzed (1 contracts), 26 result(s) found

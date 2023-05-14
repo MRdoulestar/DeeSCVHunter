@@ -1,0 +1,62 @@
+INFO:Slither:Compilation warnings/errors on /../data/reentrancy/solidity_contract/1403.sol:
+/../data/reentrancy/solidity_contract/1403.sol:53:3: Warning: Defining constructors as functions with the same name as the contract is deprecated. Use "constructor(...) { ... }" instead.
+  function RUNEToken() public {
+  ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/1403.sol:119:48: Warning: This function only accepts a single "bytes" argument. Please use "abi.encodePacked(...)" or a similar function to encode the data.
+      require(address(rx).call.value(0)(bytes4(keccak256(custom_fallback)), msg.sender, value, data) );
+                                               ^------------------------^
+/../data/reentrancy/solidity_contract/1403.sol:119:48: Warning: The provided argument of type string memory is not implicitly convertible to expected type bytes memory.
+      require(address(rx).call.value(0)(bytes4(keccak256(custom_fallback)), msg.sender, value, data) );
+                                               ^------------------------^
+
+INFO:Detectors:[93m
+RUNEToken.isContract (/../data/reentrancy/solidity_contract/1403.sol#146-150) is declared view but contains assembly code
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#constant-functions-changing-the-state[0m
+INFO:Detectors:[93m
+Contract locking ether found in /../data/reentrancy/solidity_contract/1403.sol:
+	Contract RUNEToken has payable functions:
+	 - fallback (/../data/reentrancy/solidity_contract/1403.sol#58)
+	But does not have a function to withdraw the ether
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#contracts-that-lock-ether[0m
+INFO:Detectors:[93m
+empty in RUNEToken.transfer (/../data/reentrancy/solidity_contract/1403.sol#98) is a local variable never initialiazed
+empty in RUNEToken.transferFrom (/../data/reentrancy/solidity_contract/1403.sol#108) is a local variable never initialiazed
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#uninitialized-local-variables[0m
+INFO:Detectors:[92m
+RUNEToken.isContract uses assembly (/../data/reentrancy/solidity_contract/1403.sol#146-150)
+	- /../data/reentrancy/solidity_contract/1403.sol#148-149
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#assembly-usage[0m
+INFO:Detectors:[92m
+RUNEToken.decimals should be constant (/../data/reentrancy/solidity_contract/1403.sol#45)
+RUNEToken.name should be constant (/../data/reentrancy/solidity_contract/1403.sol#43)
+RUNEToken.symbol should be constant (/../data/reentrancy/solidity_contract/1403.sol#44)
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#state-variables-that-could-be-declared-constant[0m
+INFO:Detectors:[92m
+RUNEToken.fallback (/../data/reentrancy/solidity_contract/1403.sol#58) should be declared external
+RUNEToken.balanceOf (/../data/reentrancy/solidity_contract/1403.sol#71-73) should be declared external
+RUNEToken.safeApprove (/../data/reentrancy/solidity_contract/1403.sol#83-89) should be declared external
+RUNEToken.allowance (/../data/reentrancy/solidity_contract/1403.sol#92-94) should be declared external
+RUNEToken.transfer (/../data/reentrancy/solidity_contract/1403.sol#97-101) should be declared external
+RUNEToken.transferFrom (/../data/reentrancy/solidity_contract/1403.sol#104-112) should be declared external
+RUNEToken.transfer (/../data/reentrancy/solidity_contract/1403.sol#115-123) should be declared external
+RUNEToken.transfer (/../data/reentrancy/solidity_contract/1403.sol#126-133) should be declared external
+RUNEToken.burn (/../data/reentrancy/solidity_contract/1403.sol#169-176) should be declared external
+RUNEToken.burnFrom (/../data/reentrancy/solidity_contract/1403.sol#179-189) should be declared external
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#public-function-that-could-be-declared-as-external[0m
+INFO:Detectors:[92m
+Detected issues with version pragma in /../data/reentrancy/solidity_contract/1403.sol:
+	- pragma solidity^0.4.21 (/../data/reentrancy/solidity_contract/1403.sol#1): it allows old versions
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#incorrect-version-of-solidity[0m
+INFO:Detectors:[92m
+Low level call in RUNEToken.transfer (/../data/reentrancy/solidity_contract/1403.sol#115-123):
+	-require(bool)(address(rx).call.value(0)(bytes4(keccak256()(custom_fallback)),msg.sender,value,data)) /../data/reentrancy/solidity_contract/1403.sol#119
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#low-level-calls[0m
+INFO:Detectors:[92m
+Function 'RUNEToken.RUNEToken' (/../data/reentrancy/solidity_contract/1403.sol#53-56) is not in mixedCase
+Parameter '_spender' of RUNEToken.safeApprove (/../data/reentrancy/solidity_contract/1403.sol#83) is not in mixedCase
+Parameter '_currentValue' of RUNEToken.safeApprove (/../data/reentrancy/solidity_contract/1403.sol#83) is not in mixedCase
+Parameter '_value' of RUNEToken.safeApprove (/../data/reentrancy/solidity_contract/1403.sol#83) is not in mixedCase
+Parameter 'custom_fallback' of RUNEToken.transfer (/../data/reentrancy/solidity_contract/1403.sol#115) is not in mixedCase
+Function 'RUNEToken._transfer' (/../data/reentrancy/solidity_contract/1403.sol#152-164) is not in mixedCase
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#conformance-to-solidity-naming-conventions[0m
+INFO:Slither:/../data/reentrancy/solidity_contract/1403.sol analyzed (3 contracts), 24 result(s) found

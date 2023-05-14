@@ -1,0 +1,14 @@
+{
+  "contract": "39191",
+  "tool": "honeybadger",
+  "start": 1609200739.8202748,
+  "end": 1609200752.520787,
+  "duration": 12.700512170791626,
+  "analysis": [
+    {
+      "errors": [],
+      "file": "/../data/reentrancy/solidity_contract/39191.sol",
+      "name": "AccountingLib"
+    }
+  ]
+}

@@ -1,0 +1,897 @@
+{
+  "contract": "4598",
+  "tool": "slither",
+  "start": 1609150000.9806452,
+  "end": 1609150003.5693061,
+  "duration": 2.588660955429077,
+  "analysis": [
+    {
+      "check": "unused-return",
+      "impact": "Medium",
+      "confidence": "Medium",
+      "description": "mnyminer.futrMiner (/../data/reentrancy/solidity_contract/4598.sol#34-41) does not use the value returned by external calls:\n\t-ERC20(futr).approve(mny,mined) (/../data/reentrancy/solidity_contract/4598.sol#37)\n\t-ERC20(mny).transfer(msg.sender,amount) (/../data/reentrancy/solidity_contract/4598.sol#40)\n",
+      "elements": [
+        {
+          "type": "function",
+          "name": "futrMiner",
+          "source_mapping": {
+            "start": 958,
+            "length": 340,
+            "filename": "/../data/reentrancy/solidity_contract/4598.sol",
+            "lines": [
+              34,
+              35,
+              36,
+              37,
+              38,
+              39,
+              40,
+              41
+            ]
+          },
+          "contract": {
+            "type": "contract",
+            "name": "mnyminer",
+            "source_mapping": {
+              "start": 740,
+              "length": 906,
+              "filename": "/../data/reentrancy/solidity_contract/4598.sol",
+              "lines": [
+                28,
+                29,
+                30,
+                31,
+                32,
+                33,
+                34,
+                35,
+                36,
+                37,
+                38,
+                39,
+                40,
+                41,
+                42,
+                43,
+                44,
+                45,
+                46,
+                47,
+                48,
+                49,
+                50,
+                51
+              ]
+            }
+          }
+        },
+        {
+          "type": "expression",
+          "expression": "ERC20(futr).approve(mny,mined)",
+          "source_mapping": {
+            "start": 1113,
+            "length": 31,
+            "filename": "/../data/reentrancy/solidity_contract/4598.sol",
+            "lines": [
+              37
+            ]
+          }
+        },
+        {
+          "type": "expression",
+          "expression": "ERC20(mny).transfer(msg.sender,amount)",
+          "source_mapping": {
+            "start": 1252,
+            "length": 39,
+            "filename": "/../data/reentrancy/solidity_contract/4598.sol",
+            "lines": [
+              40
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "unused-return",
+      "impact": "Medium",
+      "confidence": "Medium",
+      "description": "mnyminer.futxMiner (/../data/reentrancy/solidity_contract/4598.sol#43-50) does not use the value returned by external calls:\n\t-ERC20(futx).approve(mny,mined) (/../data/reentrancy/solidity_contract/4598.sol#46)\n\t-ERC20(mny).transfer(msg.sender,amount) (/../data/reentrancy/solidity_contract/4598.sol#49)\n",
+      "elements": [
+        {
+          "type": "function",
+          "name": "futxMiner",
+          "source_mapping": {
+            "start": 1304,
+            "length": 340,
+            "filename": "/../data/reentrancy/solidity_contract/4598.sol",
+            "lines": [
+              43,
+              44,
+              45,
+              46,
+              47,
+              48,
+              49,
+              50
+            ]
+          },
+          "contract": {
+            "type": "contract",
+            "name": "mnyminer",
+            "source_mapping": {
+              "start": 740,
+              "length": 906,
+              "filename": "/../data/reentrancy/solidity_contract/4598.sol",
+              "lines": [
+                28,
+                29,
+                30,
+                31,
+                32,
+                33,
+                34,
+                35,
+                36,
+                37,
+                38,
+                39,
+                40,
+                41,
+                42,
+                43,
+                44,
+                45,
+                46,
+                47,
+                48,
+                49,
+                50,
+                51
+              ]
+            }
+          }
+        },
+        {
+          "type": "expression",
+          "expression": "ERC20(futx).approve(mny,mined)",
+          "source_mapping": {
+            "start": 1459,
+            "length": 31,
+            "filename": "/../data/reentrancy/solidity_contract/4598.sol",
+            "lines": [
+              46
+            ]
+          }
+        },
+        {
+          "type": "expression",
+          "expression": "ERC20(mny).transfer(msg.sender,amount)",
+          "source_mapping": {
+            "start": 1598,
+            "length": 39,
+            "filename": "/../data/reentrancy/solidity_contract/4598.sol",
+            "lines": [
+              49
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "constable-states",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "mnyminer.futr should be constant (/../data/reentrancy/solidity_contract/4598.sol#32)\nmnyminer.futx should be constant (/../data/reentrancy/solidity_contract/4598.sol#31)\nmnyminer.mny should be constant (/../data/reentrancy/solidity_contract/4598.sol#30)\n",
+      "elements": [
+        {
+          "type": "variable",
+          "name": "futr",
+          "source_mapping": {
+            "start": 894,
+            "length": 57,
+            "filename": "/../data/reentrancy/solidity_contract/4598.sol",
+            "lines": [
+              32
+            ]
+          }
+        },
+        {
+          "type": "variable",
+          "name": "futx",
+          "source_mapping": {
+            "start": 831,
+            "length": 57,
+            "filename": "/../data/reentrancy/solidity_contract/4598.sol",
+            "lines": [
+              31
+            ]
+          }
+        },
+        {
+          "type": "variable",
+          "name": "mny",
+          "source_mapping": {
+            "start": 769,
+            "length": 56,
+            "filename": "/../data/reentrancy/solidity_contract/4598.sol",
+            "lines": [
+              30
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "external-function",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "ERC20.totalSupply (/../data/reentrancy/solidity_contract/4598.sol#4) should be declared external\n",
+      "elements": [
+        {
+          "type": "function",
+          "name": "totalSupply",
+          "source_mapping": {
+            "start": 44,
+            "length": 53,
+            "filename": "/../data/reentrancy/solidity_contract/4598.sol",
+            "lines": [
+              4
+            ]
+          },
+          "contract": {
+            "type": "contract",
+            "name": "ERC20",
+            "source_mapping": {
+              "start": 25,
+              "length": 640,
+              "filename": "/../data/reentrancy/solidity_contract/4598.sol",
+              "lines": [
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10,
+                11,
+                12,
+                13,
+                14,
+                15,
+                16,
+                17,
+                18,
+                19,
+                20,
+                21
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "check": "external-function",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "ERC20.balanceOf (/../data/reentrancy/solidity_contract/4598.sol#5) should be declared external\n",
+      "elements": [
+        {
+          "type": "function",
+          "name": "balanceOf",
+          "source_mapping": {
+            "start": 100,
+            "length": 62,
+            "filename": "/../data/reentrancy/solidity_contract/4598.sol",
+            "lines": [
+              5
+            ]
+          },
+          "contract": {
+            "type": "contract",
+            "name": "ERC20",
+            "source_mapping": {
+              "start": 25,
+              "length": 640,
+              "filename": "/../data/reentrancy/solidity_contract/4598.sol",
+              "lines": [
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10,
+                11,
+                12,
+                13,
+                14,
+                15,
+                16,
+                17,
+                18,
+                19,
+                20,
+                21
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "check": "external-function",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "ERC20.transfer (/../data/reentrancy/solidity_contract/4598.sol#6) should be declared external\n",
+      "elements": [
+        {
+          "type": "function",
+          "name": "transfer",
+          "source_mapping": {
+            "start": 165,
+            "length": 67,
+            "filename": "/../data/reentrancy/solidity_contract/4598.sol",
+            "lines": [
+              6
+            ]
+          },
+          "contract": {
+            "type": "contract",
+            "name": "ERC20",
+            "source_mapping": {
+              "start": 25,
+              "length": 640,
+              "filename": "/../data/reentrancy/solidity_contract/4598.sol",
+              "lines": [
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10,
+                11,
+                12,
+                13,
+                14,
+                15,
+                16,
+                17,
+                18,
+                19,
+                20,
+                21
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "check": "external-function",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "ERC20.allowance (/../data/reentrancy/solidity_contract/4598.sol#9-10) should be declared external\n",
+      "elements": [
+        {
+          "type": "function",
+          "name": "allowance",
+          "source_mapping": {
+            "start": 313,
+            "length": 85,
+            "filename": "/../data/reentrancy/solidity_contract/4598.sol",
+            "lines": [
+              9,
+              10
+            ]
+          },
+          "contract": {
+            "type": "contract",
+            "name": "ERC20",
+            "source_mapping": {
+              "start": 25,
+              "length": 640,
+              "filename": "/../data/reentrancy/solidity_contract/4598.sol",
+              "lines": [
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10,
+                11,
+                12,
+                13,
+                14,
+                15,
+                16,
+                17,
+                18,
+                19,
+                20,
+                21
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "check": "external-function",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "ERC20.transferFrom (/../data/reentrancy/solidity_contract/4598.sol#12-13) should be declared external\n",
+      "elements": [
+        {
+          "type": "function",
+          "name": "transferFrom",
+          "source_mapping": {
+            "start": 402,
+            "length": 89,
+            "filename": "/../data/reentrancy/solidity_contract/4598.sol",
+            "lines": [
+              12,
+              13
+            ]
+          },
+          "contract": {
+            "type": "contract",
+            "name": "ERC20",
+            "source_mapping": {
+              "start": 25,
+              "length": 640,
+              "filename": "/../data/reentrancy/solidity_contract/4598.sol",
+              "lines": [
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10,
+                11,
+                12,
+                13,
+                14,
+                15,
+                16,
+                17,
+                18,
+                19,
+                20,
+                21
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "check": "external-function",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "ERC20.approve (/../data/reentrancy/solidity_contract/4598.sol#15) should be declared external\n",
+      "elements": [
+        {
+          "type": "function",
+          "name": "approve",
+          "source_mapping": {
+            "start": 495,
+            "length": 71,
+            "filename": "/../data/reentrancy/solidity_contract/4598.sol",
+            "lines": [
+              15
+            ]
+          },
+          "contract": {
+            "type": "contract",
+            "name": "ERC20",
+            "source_mapping": {
+              "start": 25,
+              "length": 640,
+              "filename": "/../data/reentrancy/solidity_contract/4598.sol",
+              "lines": [
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10,
+                11,
+                12,
+                13,
+                14,
+                15,
+                16,
+                17,
+                18,
+                19,
+                20,
+                21
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "check": "external-function",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "MNY.mine (/../data/reentrancy/solidity_contract/4598.sol#25) should be declared external\n",
+      "elements": [
+        {
+          "type": "function",
+          "name": "mine",
+          "source_mapping": {
+            "start": 687,
+            "length": 49,
+            "filename": "/../data/reentrancy/solidity_contract/4598.sol",
+            "lines": [
+              25
+            ]
+          },
+          "contract": {
+            "type": "contract",
+            "name": "MNY",
+            "source_mapping": {
+              "start": 668,
+              "length": 70,
+              "filename": "/../data/reentrancy/solidity_contract/4598.sol",
+              "lines": [
+                24,
+                25,
+                26
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "check": "external-function",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "mnyminer.futrMiner (/../data/reentrancy/solidity_contract/4598.sol#34-41) should be declared external\n",
+      "elements": [
+        {
+          "type": "function",
+          "name": "futrMiner",
+          "source_mapping": {
+            "start": 958,
+            "length": 340,
+            "filename": "/../data/reentrancy/solidity_contract/4598.sol",
+            "lines": [
+              34,
+              35,
+              36,
+              37,
+              38,
+              39,
+              40,
+              41
+            ]
+          },
+          "contract": {
+            "type": "contract",
+            "name": "mnyminer",
+            "source_mapping": {
+              "start": 740,
+              "length": 906,
+              "filename": "/../data/reentrancy/solidity_contract/4598.sol",
+              "lines": [
+                28,
+                29,
+                30,
+                31,
+                32,
+                33,
+                34,
+                35,
+                36,
+                37,
+                38,
+                39,
+                40,
+                41,
+                42,
+                43,
+                44,
+                45,
+                46,
+                47,
+                48,
+                49,
+                50,
+                51
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "check": "external-function",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "mnyminer.futxMiner (/../data/reentrancy/solidity_contract/4598.sol#43-50) should be declared external\n",
+      "elements": [
+        {
+          "type": "function",
+          "name": "futxMiner",
+          "source_mapping": {
+            "start": 1304,
+            "length": 340,
+            "filename": "/../data/reentrancy/solidity_contract/4598.sol",
+            "lines": [
+              43,
+              44,
+              45,
+              46,
+              47,
+              48,
+              49,
+              50
+            ]
+          },
+          "contract": {
+            "type": "contract",
+            "name": "mnyminer",
+            "source_mapping": {
+              "start": 740,
+              "length": 906,
+              "filename": "/../data/reentrancy/solidity_contract/4598.sol",
+              "lines": [
+                28,
+                29,
+                30,
+                31,
+                32,
+                33,
+                34,
+                35,
+                36,
+                37,
+                38,
+                39,
+                40,
+                41,
+                42,
+                43,
+                44,
+                45,
+                46,
+                47,
+                48,
+                49,
+                50,
+                51
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "check": "solc-version",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Detected issues with version pragma in /../data/reentrancy/solidity_contract/4598.sol:\n\t- pragma solidity^0.4.0 (/../data/reentrancy/solidity_contract/4598.sol#1): it allows old versions\n",
+      "elements": [
+        {
+          "type": "expression",
+          "expression": "^0.4.0",
+          "source_mapping": {
+            "start": 0,
+            "length": 23,
+            "filename": "/../data/reentrancy/solidity_contract/4598.sol",
+            "lines": [
+              1
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "low-level-calls",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Low level call in mnyminer.futrMiner (/../data/reentrancy/solidity_contract/4598.sol#34-41):\n\t-require(bool)(futr.call.value(msg.value)()) /../data/reentrancy/solidity_contract/4598.sol#35\n",
+      "elements": [
+        {
+          "type": "function",
+          "name": "futrMiner",
+          "source_mapping": {
+            "start": 958,
+            "length": 340,
+            "filename": "/../data/reentrancy/solidity_contract/4598.sol",
+            "lines": [
+              34,
+              35,
+              36,
+              37,
+              38,
+              39,
+              40,
+              41
+            ]
+          },
+          "contract": {
+            "type": "contract",
+            "name": "mnyminer",
+            "source_mapping": {
+              "start": 740,
+              "length": 906,
+              "filename": "/../data/reentrancy/solidity_contract/4598.sol",
+              "lines": [
+                28,
+                29,
+                30,
+                31,
+                32,
+                33,
+                34,
+                35,
+                36,
+                37,
+                38,
+                39,
+                40,
+                41,
+                42,
+                43,
+                44,
+                45,
+                46,
+                47,
+                48,
+                49,
+                50,
+                51
+              ]
+            }
+          }
+        },
+        {
+          "type": "expression",
+          "expression": "require(bool)(futr.call.value(msg.value)())",
+          "source_mapping": {
+            "start": 1004,
+            "length": 37,
+            "filename": "/../data/reentrancy/solidity_contract/4598.sol",
+            "lines": [
+              35
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "low-level-calls",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Low level call in mnyminer.futxMiner (/../data/reentrancy/solidity_contract/4598.sol#43-50):\n\t-require(bool)(futx.call.value(msg.value)()) /../data/reentrancy/solidity_contract/4598.sol#44\n",
+      "elements": [
+        {
+          "type": "function",
+          "name": "futxMiner",
+          "source_mapping": {
+            "start": 1304,
+            "length": 340,
+            "filename": "/../data/reentrancy/solidity_contract/4598.sol",
+            "lines": [
+              43,
+              44,
+              45,
+              46,
+              47,
+              48,
+              49,
+              50
+            ]
+          },
+          "contract": {
+            "type": "contract",
+            "name": "mnyminer",
+            "source_mapping": {
+              "start": 740,
+              "length": 906,
+              "filename": "/../data/reentrancy/solidity_contract/4598.sol",
+              "lines": [
+                28,
+                29,
+                30,
+                31,
+                32,
+                33,
+                34,
+                35,
+                36,
+                37,
+                38,
+                39,
+                40,
+                41,
+                42,
+                43,
+                44,
+                45,
+                46,
+                47,
+                48,
+                49,
+                50,
+                51
+              ]
+            }
+          }
+        },
+        {
+          "type": "expression",
+          "expression": "require(bool)(futx.call.value(msg.value)())",
+          "source_mapping": {
+            "start": 1350,
+            "length": 37,
+            "filename": "/../data/reentrancy/solidity_contract/4598.sol",
+            "lines": [
+              44
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "naming-convention",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Contract 'mnyminer' (/../data/reentrancy/solidity_contract/4598.sol#28-51) is not in CapWords\n",
+      "elements": [
+        {
+          "target": "contract",
+          "convention": "CapWords",
+          "name": "mnyminer",
+          "source_mapping": {
+            "start": 740,
+            "length": 906,
+            "filename": "/../data/reentrancy/solidity_contract/4598.sol",
+            "lines": [
+              28,
+              29,
+              30,
+              31,
+              32,
+              33,
+              34,
+              35,
+              36,
+              37,
+              38,
+              39,
+              40,
+              41,
+              42,
+              43,
+              44,
+              45,
+              46,
+              47,
+              48,
+              49,
+              50,
+              51
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

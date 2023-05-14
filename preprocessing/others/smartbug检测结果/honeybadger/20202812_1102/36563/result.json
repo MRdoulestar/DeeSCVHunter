@@ -1,0 +1,29 @@
+{
+  "contract": "36563",
+  "tool": "honeybadger",
+  "start": 1609189257.5640829,
+  "end": 1609189325.0324538,
+  "duration": 67.46837091445923,
+  "analysis": [
+    {
+      "errors": [],
+      "file": "/../data/reentrancy/solidity_contract/36563.sol",
+      "name": "FishFactory"
+    },
+    {
+      "errors": [],
+      "file": "/../data/reentrancy/solidity_contract/36563.sol",
+      "name": "FishProxy"
+    },
+    {
+      "errors": [],
+      "file": "/../data/reentrancy/solidity_contract/36563.sol",
+      "name": "Ownable"
+    },
+    {
+      "errors": [],
+      "file": "/../data/reentrancy/solidity_contract/36563.sol",
+      "name": "SharkProxy"
+    }
+  ]
+}

@@ -1,0 +1,31 @@
+INFO:Slither:Compilation warnings/errors on /../data/reentrancy/solidity_contract/3270.sol:
+/../data/reentrancy/solidity_contract/3270.sol:23:5: Warning: Defining constructors as functions with the same name as the contract is deprecated. Use "constructor(...) { ... }" instead.
+    function Owned() public {
+    ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/3270.sol:4:7: Warning: Functions in interfaces should be declared external.
+      function getBuyPrice()
+      ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/3270.sol:9:3: Warning: Functions in interfaces should be declared external.
+  function getTimeLeft()
+  ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/3270.sol:52:5: Warning: Return value of low-level calls not used.
+    address(fomo3d).call.value(fomo3d.getBuyPrice() *2 )();
+    ^----------------------------------------------------^
+
+INFO:Detectors:[92m
+FoMo3DlongInterface.getBuyPrice (/../data/reentrancy/solidity_contract/3270.sol#4-8) should be declared external
+FoMo3DlongInterface.getTimeLeft (/../data/reentrancy/solidity_contract/3270.sol#9-13) should be declared external
+Owned.transferOwnership (/../data/reentrancy/solidity_contract/3270.sol#32-34) should be declared external
+Owned.acceptOwnership (/../data/reentrancy/solidity_contract/3270.sol#36-41) should be declared external
+PwnFoMo3D.gotake (/../data/reentrancy/solidity_contract/3270.sol#50-54) should be declared external
+PwnFoMo3D.withdrawOwner (/../data/reentrancy/solidity_contract/3270.sol#56-58) should be declared external
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#public-function-that-could-be-declared-as-external[0m
+INFO:Detectors:[92m
+Low level call in PwnFoMo3D.gotake (/../data/reentrancy/solidity_contract/3270.sol#50-54):
+	-address(fomo3d).call.value(fomo3d.getBuyPrice() * 2)() /../data/reentrancy/solidity_contract/3270.sol#52
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#low-level-calls[0m
+INFO:Detectors:[92m
+Function 'Owned.Owned' (/../data/reentrancy/solidity_contract/3270.sol#23-25) is not in mixedCase
+Parameter '_newOwner' of Owned.transferOwnership (/../data/reentrancy/solidity_contract/3270.sol#32) is not in mixedCase
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#conformance-to-solidity-naming-conventions[0m
+INFO:Slither:/../data/reentrancy/solidity_contract/3270.sol analyzed (3 contracts), 9 result(s) found

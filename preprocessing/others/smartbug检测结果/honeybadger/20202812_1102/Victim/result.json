@@ -1,0 +1,14 @@
+{
+  "contract": "Victim",
+  "tool": "honeybadger",
+  "start": 1609130054.7257888,
+  "end": 1609130059.469655,
+  "duration": 4.743866205215454,
+  "analysis": [
+    {
+      "errors": [],
+      "file": "/../data/reentrancy/solidity_contract/Victim.sol",
+      "name": "Victim"
+    }
+  ]
+}

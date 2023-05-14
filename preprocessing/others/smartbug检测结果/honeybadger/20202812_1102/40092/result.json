@@ -1,0 +1,19 @@
+{
+  "contract": "40092",
+  "tool": "honeybadger",
+  "start": 1609217045.802894,
+  "end": 1609217051.47949,
+  "duration": 5.67659592628479,
+  "analysis": [
+    {
+      "errors": [],
+      "file": "/../data/reentrancy/solidity_contract/40092.sol",
+      "name": "CertificationCentre"
+    },
+    {
+      "errors": [],
+      "file": "/../data/reentrancy/solidity_contract/40092.sol",
+      "name": "Owned"
+    }
+  ]
+}

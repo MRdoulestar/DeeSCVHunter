@@ -1,0 +1,14 @@
+{
+  "contract": "40340",
+  "tool": "honeybadger",
+  "start": 1609174991.2529888,
+  "end": 1609175075.650141,
+  "duration": 84.39715218544006,
+  "analysis": [
+    {
+      "errors": [],
+      "file": "/../data/reentrancy/solidity_contract/40340.sol",
+      "name": "Etheropt"
+    }
+  ]
+}

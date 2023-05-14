@@ -1,0 +1,59 @@
+INFO:Slither:Compilation warnings/errors on /../data/reentrancy/solidity_contract/40118.sol:
+/../data/reentrancy/solidity_contract/40118.sol:26:41: Warning: "throw" is deprecated in favour of "revert()", "require()" and "assert()".
+	modifier noEther() {if (msg.value > 0) throw; _;}
+	                                       ^---^
+/../data/reentrancy/solidity_contract/40118.sol:28:49: Warning: "throw" is deprecated in favour of "revert()", "require()" and "assert()".
+	modifier onlyOwner() {if (owner != msg.sender) throw; _;}
+	                                               ^---^
+/../data/reentrancy/solidity_contract/40118.sol:30:67: Warning: "throw" is deprecated in favour of "revert()", "require()" and "assert()".
+	modifier onlyChallengeOwner() {if (challengeOwner != msg.sender) throw; _;}
+	                                                                 ^---^
+/../data/reentrancy/solidity_contract/40118.sol:34:3: Warning: Defining constructors as functions with the same name as the contract is deprecated. Use "constructor(...) { ... }" instead.
+  function DaoAccount (address _owner, address _challengeOwner) {
+  ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/40118.sol:48:4: Warning: "throw" is deprecated in favour of "revert()", "require()" and "assert()".
+			throw;
+			^---^
+/../data/reentrancy/solidity_contract/40118.sol:59:34: Warning: "throw" is deprecated in favour of "revert()", "require()" and "assert()".
+        if (msg.sender != owner) throw;
+                                 ^---^
+/../data/reentrancy/solidity_contract/40118.sol:61:18: Warning: "throw" is deprecated in favour of "revert()", "require()" and "assert()".
+		if (!result) { throw;}
+		               ^---^
+/../data/reentrancy/solidity_contract/40118.sol:67:26: Warning: "throw" is deprecated in favour of "revert()", "require()" and "assert()".
+		if (tokenBalance == 0) throw;
+		                       ^---^
+/../data/reentrancy/solidity_contract/40118.sol:98:41: Warning: "throw" is deprecated in favour of "revert()", "require()" and "assert()".
+	modifier noEther() {if (msg.value > 0) throw; _;}
+	                                       ^---^
+/../data/reentrancy/solidity_contract/40118.sol:100:49: Warning: "throw" is deprecated in favour of "revert()", "require()" and "assert()".
+	modifier onlyOwner() {if (owner != msg.sender) throw; _;}
+	                                               ^---^
+/../data/reentrancy/solidity_contract/40118.sol:104:2: Warning: Defining constructors as functions with the same name as the contract is deprecated. Use "constructor(...) { ... }" instead.
+	function DaoChallenge () {
+ ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/40118.sol:122:53: Warning: "throw" is deprecated in favour of "revert()", "require()" and "assert()".
+		if(daoAccounts[accountOwner] != DaoAccount(0x00)) throw;
+		                                                  ^---^
+/../data/reentrancy/solidity_contract/40118.sol:1:1: Warning: Source file does not specify required compiler version!Consider adding "pragma solidity ^0.4.25;"
+contract DaoAccount
+^ (Relevant source part starts here and spans across multiple lines).
+[91m/../data/reentrancy/solidity_contract/40118.sol:43:32: Error: Fallback function cannot return values.[0m
+	function () onlyOwner returns (uint256 newBalance){
+	                              ^------------------^
+/../data/reentrancy/solidity_contract/40118.sol:74:3: Warning: "suicide" has been deprecated in favour of "selfdestruct"
+		suicide(challengeOwner);
+		^---------------------^
+/../data/reentrancy/solidity_contract/40118.sol:135:19: Warning: Using contract member "balance" inherited from the address type is deprecated. Convert the contract to "address" type to access the member, for example use "address(contract).balance" instead.
+		notifyTerminate(this.balance);
+		                ^----------^
+/../data/reentrancy/solidity_contract/40118.sol:135:3: Warning: Invoking events without "emit" prefix is deprecated.
+		notifyTerminate(this.balance);
+		^---------------------------^
+/../data/reentrancy/solidity_contract/40118.sol:136:3: Warning: "suicide" has been deprecated in favour of "selfdestruct"
+		suicide(owner);
+		^------------^
+
+INFO:SlitherSolcParsing:No contract were found in /../data/reentrancy/solidity_contract/40118.sol, check the correct compilation
+WARNING:Slither:[91mNo contract was analyzed[0m
+INFO:Slither:/../data/reentrancy/solidity_contract/40118.sol analyzed (0 contracts), 0 result(s) found

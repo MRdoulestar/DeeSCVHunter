@@ -1,0 +1,1628 @@
+====================================================================================================
+[1m[ ] Compiling Solidity contract from the file /../data/reentrancy/solidity_contract/35661.sol ... [0m/../data/reentrancy/solidity_contract/35661.sol:34:47: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function max64(uint64 a, uint64 b) internal constant returns (uint64) {
+                                              ^------^
+/../data/reentrancy/solidity_contract/35661.sol:38:47: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function min64(uint64 a, uint64 b) internal constant returns (uint64) {
+                                              ^------^
+/../data/reentrancy/solidity_contract/35661.sol:42:50: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function max256(uint256 a, uint256 b) internal constant returns (uint256) {
+                                                 ^------^
+/../data/reentrancy/solidity_contract/35661.sol:46:50: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function min256(uint256 a, uint256 b) internal constant returns (uint256) {
+                                                 ^------^
+/../data/reentrancy/solidity_contract/35661.sol:154:39: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function isPricingStrategy() public constant returns (bool) {
+                                      ^------^
+/../data/reentrancy/solidity_contract/35661.sol:159:45: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function isSane(address crowdsale) public constant returns (bool) {
+                                            ^------^
+/../data/reentrancy/solidity_contract/35661.sol:164:56: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function isPresalePurchase(address purchaser) public constant returns (bool) {
+                                                       ^------^
+/../data/reentrancy/solidity_contract/35661.sol:169:113: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function calculatePrice(uint value, uint weiRaised, uint tokensSold, address msgSender, uint decimals) public constant returns (uint tokenAmount);
+                                                                                                                ^------^
+/../data/reentrancy/solidity_contract/35661.sol:178:37: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function isFinalizeAgent() public constant returns(bool) {
+                                    ^------^
+/../data/reentrancy/solidity_contract/35661.sol:183:28: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function isSane() public constant returns (bool);
+                           ^------^
+/../data/reentrancy/solidity_contract/35661.sol:200:42: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function balanceOf(address who) public constant returns (uint256);
+                                         ^------^
+/../data/reentrancy/solidity_contract/35661.sol:209:61: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function allowance(address owner, address spender) public constant returns (uint256);
+                                                            ^------^
+/../data/reentrancy/solidity_contract/35661.sol:560:42: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function isMinimumGoalReached() public constant returns (bool reached) {
+                                         ^------^
+/../data/reentrancy/solidity_contract/35661.sol:565:37: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function isFinalizerSane() public constant returns (bool sane) {
+                                    ^------^
+/../data/reentrancy/solidity_contract/35661.sol:570:35: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function isPricingSane() public constant returns (bool sane) {
+                                  ^------^
+/../data/reentrancy/solidity_contract/35661.sol:575:30: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function getState() public constant returns (State) {
+                             ^------^
+/../data/reentrancy/solidity_contract/35661.sol:593:33: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+
+[91m[-] Cannot compile the contract [0m
+
+====================================================================================================
+[1m[ ] Compiling Solidity contract from the file /../data/reentrancy/solidity_contract/35661.sol ... [0m/../data/reentrancy/solidity_contract/35661.sol:34:47: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function max64(uint64 a, uint64 b) internal constant returns (uint64) {
+                                              ^------^
+/../data/reentrancy/solidity_contract/35661.sol:38:47: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function min64(uint64 a, uint64 b) internal constant returns (uint64) {
+                                              ^------^
+/../data/reentrancy/solidity_contract/35661.sol:42:50: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function max256(uint256 a, uint256 b) internal constant returns (uint256) {
+                                                 ^------^
+/../data/reentrancy/solidity_contract/35661.sol:46:50: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function min256(uint256 a, uint256 b) internal constant returns (uint256) {
+                                                 ^------^
+/../data/reentrancy/solidity_contract/35661.sol:154:39: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function isPricingStrategy() public constant returns (bool) {
+                                      ^------^
+/../data/reentrancy/solidity_contract/35661.sol:159:45: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function isSane(address crowdsale) public constant returns (bool) {
+                                            ^------^
+/../data/reentrancy/solidity_contract/35661.sol:164:56: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function isPresalePurchase(address purchaser) public constant returns (bool) {
+                                                       ^------^
+/../data/reentrancy/solidity_contract/35661.sol:169:113: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function calculatePrice(uint value, uint weiRaised, uint tokensSold, address msgSender, uint decimals) public constant returns (uint tokenAmount);
+                                                                                                                ^------^
+/../data/reentrancy/solidity_contract/35661.sol:178:37: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function isFinalizeAgent() public constant returns(bool) {
+                                    ^------^
+/../data/reentrancy/solidity_contract/35661.sol:183:28: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function isSane() public constant returns (bool);
+                           ^------^
+/../data/reentrancy/solidity_contract/35661.sol:200:42: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function balanceOf(address who) public constant returns (uint256);
+                                         ^------^
+/../data/reentrancy/solidity_contract/35661.sol:209:61: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function allowance(address owner, address spender) public constant returns (uint256);
+                                                            ^------^
+/../data/reentrancy/solidity_contract/35661.sol:560:42: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function isMinimumGoalReached() public constant returns (bool reached) {
+                                         ^------^
+/../data/reentrancy/solidity_contract/35661.sol:565:37: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function isFinalizerSane() public constant returns (bool sane) {
+
+[91m[-] Cannot compile the contract [0m
+
+====================================================================================================
+[1m[ ] Compiling Solidity contract from the file /../data/reentrancy/solidity_contract/35661.sol ... [0m/../data/reentrancy/solidity_contract/35661.sol:34:47: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function max64(uint64 a, uint64 b) internal constant returns (uint64) {
+                                              ^------^
+/../data/reentrancy/solidity_contract/35661.sol:38:47: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function min64(uint64 a, uint64 b) internal constant returns (uint64) {
+                                              ^------^
+/../data/reentrancy/solidity_contract/35661.sol:42:50: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function max256(uint256 a, uint256 b) internal constant returns (uint256) {
+                                                 ^------^
+/../data/reentrancy/solidity_contract/35661.sol:46:50: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function min256(uint256 a, uint256 b) internal constant returns (uint256) {
+                                                 ^------^
+/../data/reentrancy/solidity_contract/35661.sol:154:39: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function isPricingStrategy() public constant returns (bool) {
+                                      ^------^
+/../data/reentrancy/solidity_contract/35661.sol:159:45: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function isSane(address crowdsale) public constant returns (bool) {
+                                            ^------^
+/../data/reentrancy/solidity_contract/35661.sol:164:56: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function isPresalePurchase(address purchaser) public constant returns (bool) {
+                                                       ^------^
+/../data/reentrancy/solidity_contract/35661.sol:169:113: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function calculatePrice(uint value, uint weiRaised, uint tokensSold, address msgSender, uint decimals) public constant returns (uint tokenAmount);
+                                                                                                                ^------^
+
+[91m[-] Cannot compile the contract [0m
+
+====================================================================================================
+[1m[ ] Compiling Solidity contract from the file /../data/reentrancy/solidity_contract/35661.sol ... [0m/../data/reentrancy/solidity_contract/35661.sol:34:47: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function max64(uint64 a, uint64 b) internal constant returns (uint64) {
+                                              ^------^
+/../data/reentrancy/solidity_contract/35661.sol:38:47: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function min64(uint64 a, uint64 b) internal constant returns (uint64) {
+                                              ^------^
+/../data/reentrancy/solidity_contract/35661.sol:42:50: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function max256(uint256 a, uint256 b) internal constant returns (uint256) {
+                                                 ^------^
+/../data/reentrancy/solidity_contract/35661.sol:46:50: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function min256(uint256 a, uint256 b) internal constant returns (uint256) {
+                                                 ^------^
+/../data/reentrancy/solidity_contract/35661.sol:154:39: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function isPricingStrategy() public constant returns (bool) {
+                                      ^------^
+/../data/reentrancy/solidity_contract/35661.sol:159:45: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function isSane(address crowdsale) public constant returns (bool) {
+                                            ^------^
+/../data/reentrancy/solidity_contract/35661.sol:164:56: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function isPresalePurchase(address purchaser) public constant returns (bool) {
+                                                       ^------^
+/../data/reentrancy/solidity_contract/35661.sol:169:113: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function calculatePrice(uint value, uint weiRaised, uint tokensSold, address msgSender, uint decimals) public constant returns (uint tokenAmount);
+                                                                                                                ^------^
+/../data/reentrancy/solidity_contract/35661.sol:178:37: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function isFinalizeAgent() public constant returns(bool) {
+                                    ^------^
+/../data/reentrancy/solidity_contract/35661.sol:183:28: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function isSane() public constant returns (bool);
+                           ^------^
+/../data/reentrancy/solidity_contract/35661.sol:200:42: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function balanceOf(address who) public constant returns (uint256);
+                                         ^------^
+/../data/reentrancy/solidity_contract/35661.sol:209:61: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function allowance(address owner, address spender) public constant returns (uint256);
+                                                            ^------^
+/../data/reentrancy/solidity_contract/35661.sol:560:42: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function isMinimumGoalReached() public constant returns (bool reached) {
+                                         ^------^
+/../data/reentrancy/solidity_contract/35661.sol:565:37: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function isFinalizerSane() public constant returns (bool sane) {
+                                    ^------^
+/../data/reentrancy/solidity_contract/35661.sol:570:35: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function isPricingSane() public constant returns (bool sane) {
+                                  ^------^
+/../data/reentrancy/solidity_contract/35661.sol:575:30: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function getState() public constant returns (State) {
+                             ^------^
+/../data/reentrancy/solidity_contract/35661.sol:593:33: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function isCrowdsale() public constant returns (bool) {
+                                ^------^
+/../data/reentrancy/solidity_contract/35661.sol:613:103: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function isBreakingCap(uint weiAmount, uint tokenAmount, uint weiRaisedTotal, uint tokensSoldTotal) constant returns (bool limitBroken);
+                                                                                                      ^------^
+/../data/reentrancy/solidity_contract/35661.sol:616:37: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function isCrowdsaleFull() public constant returns (bool);
+                                    ^------^
+/../data/reentrancy/solidity_contract/35661.sol:643:29: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function isToken() public constant returns (bool weAre) {
+                            ^------^
+/../data/reentrancy/solidity_contract/35661.sol:664:38: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function balanceOf(address _owner) constant returns (uint balance) {
+                                     ^------^
+/../data/reentrancy/solidity_contract/35661.sol:681:56: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function allowance(address _owner, address _spender) constant returns (uint remaining) {
+                                                       ^------^
+/../data/reentrancy/solidity_contract/35661.sol:774:30: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function getToken() public constant returns(FractionalERC20) {
+                             ^------^
+/../data/reentrancy/solidity_contract/35661.sol:852:52: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function getClaimAmount(address investor) public constant returns (uint) {
+                                                   ^------^
+/../data/reentrancy/solidity_contract/35661.sol:862:50: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function getClaimLeft(address investor) public constant returns (uint) {
+                                                 ^------^
+/../data/reentrancy/solidity_contract/35661.sol:946:31: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function isPresale() public constant returns (bool) {
+                              ^------^
+
+[91m[-] Cannot compile the contract [0m
+
+====================================================================================================
+[1m[ ] Compiling Solidity contract from the file /../data/reentrancy/solidity_contract/35661.sol ... [0m/../data/reentrancy/solidity_contract/35661.sol:34:47: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function max64(uint64 a, uint64 b) internal constant returns (uint64) {
+                                              ^------^
+/../data/reentrancy/solidity_contract/35661.sol:38:47: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function min64(uint64 a, uint64 b) internal constant returns (uint64) {
+                                              ^------^
+/../data/reentrancy/solidity_contract/35661.sol:42:50: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function max256(uint256 a, uint256 b) internal constant returns (uint256) {
+                                                 ^------^
+/../data/reentrancy/solidity_contract/35661.sol:46:50: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function min256(uint256 a, uint256 b) internal constant returns (uint256) {
+                                                 ^------^
+/../data/reentrancy/solidity_contract/35661.sol:154:39: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function isPricingStrategy() public constant returns (bool) {
+                                      ^------^
+/../data/reentrancy/solidity_contract/35661.sol:159:45: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function isSane(address crowdsale) public constant returns (bool) {
+                                            ^------^
+/../data/reentrancy/solidity_contract/35661.sol:164:56: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function isPresalePurchase(address purchaser) public constant returns (bool) {
+                                                       ^------^
+/../data/reentrancy/solidity_contract/35661.sol:169:113: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function calculatePrice(uint value, uint weiRaised, uint tokensSold, address msgSender, uint decimals) public constant returns (uint tokenAmount);
+                                                                                                                ^------^
+/../data/reentrancy/solidity_contract/35661.sol:178:37: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function isFinalizeAgent() public constant returns(bool) {
+                                    ^------^
+/../data/reentrancy/solidity_contract/35661.sol:183:28: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+
+[91m[-] Cannot compile the contract [0m
+
+====================================================================================================
+[1m[ ] Compiling Solidity contract from the file /../data/reentrancy/solidity_contract/35661.sol ... [0m/../data/reentrancy/solidity_contract/35661.sol:34:47: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function max64(uint64 a, uint64 b) internal constant returns (uint64) {
+                                              ^------^
+/../data/reentrancy/solidity_contract/35661.sol:38:47: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function min64(uint64 a, uint64 b) internal constant returns (uint64) {
+                                              ^------^
+/../data/reentrancy/solidity_contract/35661.sol:42:50: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function max256(uint256 a, uint256 b) internal constant returns (uint256) {
+                                                 ^------^
+/../data/reentrancy/solidity_contract/35661.sol:46:50: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function min256(uint256 a, uint256 b) internal constant returns (uint256) {
+                                                 ^------^
+/../data/reentrancy/solidity_contract/35661.sol:154:39: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function isPricingStrategy() public constant returns (bool) {
+                                      ^------^
+/../data/reentrancy/solidity_contract/35661.sol:159:45: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function isSane(address crowdsale) public constant returns (bool) {
+                                            ^------^
+/../data/reentrancy/solidity_contract/35661.sol:164:56: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function isPresalePurchase(address purchaser) public constant returns (bool) {
+                                                       ^------^
+/../data/reentrancy/solidity_contract/35661.sol:169:113: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function calculatePrice(uint value, uint weiRaised, uint tokensSold, address msgSender, uint decimals) public constant returns (uint tokenAmount);
+                                                                                                                ^------^
+/../data/reentrancy/solidity_contract/35661.sol:178:37: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function isFinalizeAgent() public constant returns(bool) {
+                                    ^------^
+/../data/reentrancy/solidity_contract/35661.sol:183:28: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function isSane() public constant returns (bool);
+                           ^------^
+/../data/reentrancy/solidity_contract/35661.sol:200:42: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function balanceOf(address who) public constant returns (uint256);
+                                         ^------^
+/../data/reentrancy/solidity_contract/35661.sol:209:61: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function allowance(address owner, address spender) public constant returns (uint256);
+                                                            ^------^
+/../data/reentrancy/solidity_contract/35661.sol:560:42: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function isMinimumGoalReached() public constant returns (bool reached) {
+                                         ^------^
+/../data/reentrancy/solidity_contract/35661.sol:565:37: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+
+[91m[-] Cannot compile the contract [0m
+
+====================================================================================================
+[1m[ ] Compiling Solidity contract from the file /../data/reentrancy/solidity_contract/35661.sol ... [0m/../data/reentrancy/solidity_contract/35661.sol:34:47: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function max64(uint64 a, uint64 b) internal constant returns (uint64) {
+                                              ^------^
+/../data/reentrancy/solidity_contract/35661.sol:38:47: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function min64(uint64 a, uint64 b) internal constant returns (uint64) {
+                                              ^------^
+/../data/reentrancy/solidity_contract/35661.sol:42:50: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function max256(uint256 a, uint256 b) internal constant returns (uint256) {
+                                                 ^------^
+/../data/reentrancy/solidity_contract/35661.sol:46:50: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function min256(uint256 a, uint256 b) internal constant returns (uint256) {
+                                                 ^------^
+/../data/reentrancy/solidity_contract/35661.sol:154:39: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function isPricingStrategy() public constant returns (bool) {
+                                      ^------^
+/../data/reentrancy/solidity_contract/35661.sol:159:45: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function isSane(address crowdsale) public constant returns (bool) {
+                                            ^------^
+/../data/reentrancy/solidity_contract/35661.sol:164:56: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function isPresalePurchase(address purchaser) public constant returns (bool) {
+                                                       ^------^
+/../data/reentrancy/solidity_contract/35661.sol:169:113: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function calculatePrice(uint value, uint weiRaised, uint tokensSold, address msgSender, uint decimals) public constant returns (uint tokenAmount);
+                                                                                                                ^------^
+/../data/reentrancy/solidity_contract/35661.sol:178:37: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function isFinalizeAgent() public constant returns(bool) {
+                                    ^------^
+/../data/reentrancy/solidity_contract/35661.sol:183:28: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function isSane() public constant returns (bool);
+                           ^------^
+/../data/reentrancy/solidity_contract/35661.sol:200:42: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function balanceOf(address who) public constant returns (uint256);
+
+[91m[-] Cannot compile the contract [0m
+
+====================================================================================================
+[1m[ ] Compiling Solidity contract from the file /../data/reentrancy/solidity_contract/35661.sol ... [0m/../data/reentrancy/solidity_contract/35661.sol:34:47: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function max64(uint64 a, uint64 b) internal constant returns (uint64) {
+                                              ^------^
+/../data/reentrancy/solidity_contract/35661.sol:38:47: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function min64(uint64 a, uint64 b) internal constant returns (uint64) {
+                                              ^------^
+/../data/reentrancy/solidity_contract/35661.sol:42:50: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function max256(uint256 a, uint256 b) internal constant returns (uint256) {
+                                                 ^------^
+/../data/reentrancy/solidity_contract/35661.sol:46:50: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function min256(uint256 a, uint256 b) internal constant returns (uint256) {
+                                                 ^------^
+/../data/reentrancy/solidity_contract/35661.sol:154:39: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function isPricingStrategy() public constant returns (bool) {
+                                      ^------^
+/../data/reentrancy/solidity_contract/35661.sol:159:45: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function isSane(address crowdsale) public constant returns (bool) {
+                                            ^------^
+/../data/reentrancy/solidity_contract/35661.sol:164:56: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function isPresalePurchase(address purchaser) public constant returns (bool) {
+                                                       ^------^
+/../data/reentrancy/solidity_contract/35661.sol:169:113: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function calculatePrice(uint value, uint weiRaised, uint tokensSold, address msgSender, uint decimals) public constant returns (uint tokenAmount);
+                                                                                                                ^------^
+/../data/reentrancy/solidity_contract/35661.sol:178:37: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function isFinalizeAgent() public constant returns(bool) {
+                                    ^------^
+/../data/reentrancy/solidity_contract/35661.sol:183:28: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function isSane() public constant returns (bool);
+                           ^------^
+/../data/reentrancy/solidity_contract/35661.sol:200:42: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function balanceOf(address who) public constant returns (uint256);
+                                         ^------^
+/../data/reentrancy/solidity_contract/35661.sol:209:61: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function allowance(address owner, address spender) public constant returns (uint256);
+                                                            ^------^
+/../data/reentrancy/solidity_contract/35661.sol:560:42: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function isMinimumGoalReached() public constant returns (bool reached) {
+                                         ^------^
+/../data/reentrancy/solidity_contract/35661.sol:565:37: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function isFinalizerSane() public constant returns (bool sane) {
+                                    ^------^
+/../data/reentrancy/solidity_contract/35661.sol:570:35: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function isPricingSane() public constant returns (bool sane) {
+                                  ^------^
+/../data/reentrancy/solidity_contract/35661.sol:575:30: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function getState() public constant returns (State) {
+                             ^------^
+/../data/reentrancy/solidity_contract/35661.sol:593:33: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function isCrowdsale() public constant returns (bool) {
+                                ^------^
+/../data/reentrancy/solidity_contract/35661.sol:613:103: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function isBreakingCap(uint weiAmount, uint tokenAmount, uint weiRaisedTotal, uint tokensSoldTotal) constant returns (bool limitBroken);
+                                                                                                      ^------^
+/../data/reentrancy/solidity_contract/35661.sol:616:37: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function isCrowdsaleFull() public constant returns (bool);
+                                    ^------^
+/../data/reentrancy/solidity_contract/35661.sol:643:29: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function isToken() public constant returns (bool weAre) {
+                            ^------^
+/../data/reentrancy/solidity_contract/35661.sol:664:38: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function balanceOf(address _owner) constant returns (uint balance) {
+                                     ^------^
+/../data/reentrancy/solidity_contract/35661.sol:681:56: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function allowance(address _owner, address _spender) constant returns (uint remaining) {
+                                                       ^------^
+/../data/reentrancy/solidity_contract/35661.sol:774:30: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function getToken() public constant returns(FractionalERC20) {
+                             ^------^
+/../data/reentrancy/solidity_contract/35661.sol:852:52: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function getClaimAmount(address investor) public constant returns (uint) {
+                                                   ^------^
+/../data/reentrancy/solidity_contract/35661.sol:862:50: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function getClaimLeft(address investor) public constant returns (uint) {
+                                                 ^------^
+/../data/reentrancy/solidity_contract/35661.sol:946:31: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function isPresale() public constant returns (bool) {
+                              ^------^
+
+[91m[-] Cannot compile the contract [0m
+
+====================================================================================================
+[1m[ ] Compiling Solidity contract from the file /../data/reentrancy/solidity_contract/35661.sol ... [0m/../data/reentrancy/solidity_contract/35661.sol:34:47: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function max64(uint64 a, uint64 b) internal constant returns (uint64) {
+                                              ^------^
+/../data/reentrancy/solidity_contract/35661.sol:38:47: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function min64(uint64 a, uint64 b) internal constant returns (uint64) {
+                                              ^------^
+/../data/reentrancy/solidity_contract/35661.sol:42:50: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function max256(uint256 a, uint256 b) internal constant returns (uint256) {
+                                                 ^------^
+/../data/reentrancy/solidity_contract/35661.sol:46:50: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function min256(uint256 a, uint256 b) internal constant returns (uint256) {
+                                                 ^------^
+/../data/reentrancy/solidity_contract/35661.sol:154:39: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function isPricingStrategy() public constant returns (bool) {
+                                      ^------^
+/../data/reentrancy/solidity_contract/35661.sol:159:45: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function isSane(address crowdsale) public constant returns (bool) {
+                                            ^------^
+/../data/reentrancy/solidity_contract/35661.sol:164:56: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function isPresalePurchase(address purchaser) public constant returns (bool) {
+                                                       ^------^
+/../data/reentrancy/solidity_contract/35661.sol:169:113: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function calculatePrice(uint value, uint weiRaised, uint tokensSold, address msgSender, uint decimals) public constant returns (uint tokenAmount);
+                                                                                                                ^------^
+/../data/reentrancy/solidity_contract/35661.sol:178:37: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function isFinalizeAgent() public constant returns(bool) {
+                                    ^------^
+/../data/reentrancy/solidity_contract/35661.sol:183:28: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function isSane() public constant returns (bool);
+                           ^------^
+/../data/reentrancy/solidity_contract/35661.sol:200:42: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function balanceOf(address who) public constant returns (uint256);
+                                         ^------^
+/../data/reentrancy/solidity_contract/35661.sol:209:61: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function allowance(address owner, address spender) public constant returns (uint256);
+                                                            ^------^
+/../data/reentrancy/solidity_contract/35661.sol:560:42: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function isMinimumGoalReached() public constant returns (bool reached) {
+
+[91m[-] Cannot compile the contract [0m
+
+====================================================================================================
+[1m[ ] Compiling Solidity contract from the file /../data/reentrancy/solidity_contract/35661.sol ... [0m/../data/reentrancy/solidity_contract/35661.sol:34:47: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function max64(uint64 a, uint64 b) internal constant returns (uint64) {
+                                              ^------^
+/../data/reentrancy/solidity_contract/35661.sol:38:47: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function min64(uint64 a, uint64 b) internal constant returns (uint64) {
+                                              ^------^
+/../data/reentrancy/solidity_contract/35661.sol:42:50: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function max256(uint256 a, uint256 b) internal constant returns (uint256) {
+                                                 ^------^
+/../data/reentrancy/solidity_contract/35661.sol:46:50: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function min256(uint256 a, uint256 b) internal constant returns (uint256) {
+                                                 ^------^
+/../data/reentrancy/solidity_contract/35661.sol:154:39: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function isPricingStrategy() public constant returns (bool) {
+
+[91m[-] Cannot compile the contract [0m
+
+====================================================================================================
+[1m[ ] Compiling Solidity contract from the file /../data/reentrancy/solidity_contract/35661.sol ... [0m/../data/reentrancy/solidity_contract/35661.sol:34:47: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function max64(uint64 a, uint64 b) internal constant returns (uint64) {
+                                              ^------^
+/../data/reentrancy/solidity_contract/35661.sol:38:47: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function min64(uint64 a, uint64 b) internal constant returns (uint64) {
+                                              ^------^
+/../data/reentrancy/solidity_contract/35661.sol:42:50: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function max256(uint256 a, uint256 b) internal constant returns (uint256) {
+                                                 ^------^
+/../data/reentrancy/solidity_contract/35661.sol:46:50: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function min256(uint256 a, uint256 b) internal constant returns (uint256) {
+                                                 ^------^
+/../data/reentrancy/solidity_contract/35661.sol:154:39: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function isPricingStrategy() public constant returns (bool) {
+                                      ^------^
+/../data/reentrancy/solidity_contract/35661.sol:159:45: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function isSane(address crowdsale) public constant returns (bool) {
+                                            ^------^
+/../data/reentrancy/solidity_contract/35661.sol:164:56: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function isPresalePurchase(address purchaser) public constant returns (bool) {
+                                                       ^------^
+/../data/reentrancy/solidity_contract/35661.sol:169:113: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function calculatePrice(uint value, uint weiRaised, uint tokensSold, address msgSender, uint decimals) public constant returns (uint tokenAmount);
+                                                                                                                ^------^
+/../data/reentrancy/solidity_contract/35661.sol:178:37: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function isFinalizeAgent() public constant returns(bool) {
+                                    ^------^
+/../data/reentrancy/solidity_contract/35661.sol:183:28: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function isSane() public constant returns (bool);
+                           ^------^
+/../data/reentrancy/solidity_contract/35661.sol:200:42: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function balanceOf(address who) public constant returns (uint256);
+                                         ^------^
+/../data/reentrancy/solidity_contract/35661.sol:209:61: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function allowance(address owner, address spender) public constant returns (uint256);
+                                                            ^------^
+/../data/reentrancy/solidity_contract/35661.sol:560:42: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function isMinimumGoalReached() public constant returns (bool reached) {
+                                         ^------^
+/../data/reentrancy/solidity_contract/35661.sol:565:37: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function isFinalizerSane() public constant returns (bool sane) {
+                                    ^------^
+/../data/reentrancy/solidity_contract/35661.sol:570:35: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function isPricingSane() public constant returns (bool sane) {
+                                  ^------^
+/../data/reentrancy/solidity_contract/35661.sol:575:30: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function getState() public constant returns (State) {
+                             ^------^
+/../data/reentrancy/solidity_contract/35661.sol:593:33: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function isCrowdsale() public constant returns (bool) {
+                                ^------^
+/../data/reentrancy/solidity_contract/35661.sol:613:103: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function isBreakingCap(uint weiAmount, uint tokenAmount, uint weiRaisedTotal, uint tokensSoldTotal) constant returns (bool limitBroken);
+                                                                                                      ^------^
+/../data/reentrancy/solidity_contract/35661.sol:616:37: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function isCrowdsaleFull() public constant returns (bool);
+
+[91m[-] Cannot compile the contract [0m
+
+====================================================================================================
+[1m[ ] Compiling Solidity contract from the file /../data/reentrancy/solidity_contract/35661.sol ... [0m/../data/reentrancy/solidity_contract/35661.sol:34:47: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function max64(uint64 a, uint64 b) internal constant returns (uint64) {
+                                              ^------^
+/../data/reentrancy/solidity_contract/35661.sol:38:47: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function min64(uint64 a, uint64 b) internal constant returns (uint64) {
+                                              ^------^
+/../data/reentrancy/solidity_contract/35661.sol:42:50: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function max256(uint256 a, uint256 b) internal constant returns (uint256) {
+                                                 ^------^
+/../data/reentrancy/solidity_contract/35661.sol:46:50: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function min256(uint256 a, uint256 b) internal constant returns (uint256) {
+                                                 ^------^
+/../data/reentrancy/solidity_contract/35661.sol:154:39: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function isPricingStrategy() public constant returns (bool) {
+                                      ^------^
+/../data/reentrancy/solidity_contract/35661.sol:159:45: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function isSane(address crowdsale) public constant returns (bool) {
+                                            ^------^
+/../data/reentrancy/solidity_contract/35661.sol:164:56: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function isPresalePurchase(address purchaser) public constant returns (bool) {
+                                                       ^------^
+/../data/reentrancy/solidity_contract/35661.sol:169:113: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function calculatePrice(uint value, uint weiRaised, uint tokensSold, address msgSender, uint decimals) public constant returns (uint tokenAmount);
+                                                                                                                ^------^
+/../data/reentrancy/solidity_contract/35661.sol:178:37: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function isFinalizeAgent() public constant returns(bool) {
+                                    ^------^
+/../data/reentrancy/solidity_contract/35661.sol:183:28: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function isSane() public constant returns (bool);
+                           ^------^
+/../data/reentrancy/solidity_contract/35661.sol:200:42: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function balanceOf(address who) public constant returns (uint256);
+                                         ^------^
+/../data/reentrancy/solidity_contract/35661.sol:209:61: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function allowance(address owner, address spender) public constant returns (uint256);
+                                                            ^------^
+/../data/reentrancy/solidity_contract/35661.sol:560:42: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function isMinimumGoalReached() public constant returns (bool reached) {
+                                         ^------^
+/../data/reentrancy/solidity_contract/35661.sol:565:37: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function isFinalizerSane() public constant returns (bool sane) {
+                                    ^------^
+/../data/reentrancy/solidity_contract/35661.sol:570:35: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function isPricingSane() public constant returns (bool sane) {
+                                  ^------^
+/../data/reentrancy/solidity_contract/35661.sol:575:30: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function getState() public constant returns (State) {
+                             ^------^
+/../data/reentrancy/solidity_contract/35661.sol:593:33: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+
+[91m[-] Cannot compile the contract [0m
+
+====================================================================================================
+[1m[ ] Compiling Solidity contract from the file /../data/reentrancy/solidity_contract/35661.sol ... [0m/../data/reentrancy/solidity_contract/35661.sol:34:47: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function max64(uint64 a, uint64 b) internal constant returns (uint64) {
+                                              ^------^
+/../data/reentrancy/solidity_contract/35661.sol:38:47: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function min64(uint64 a, uint64 b) internal constant returns (uint64) {
+                                              ^------^
+/../data/reentrancy/solidity_contract/35661.sol:42:50: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function max256(uint256 a, uint256 b) internal constant returns (uint256) {
+                                                 ^------^
+/../data/reentrancy/solidity_contract/35661.sol:46:50: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function min256(uint256 a, uint256 b) internal constant returns (uint256) {
+                                                 ^------^
+/../data/reentrancy/solidity_contract/35661.sol:154:39: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function isPricingStrategy() public constant returns (bool) {
+                                      ^------^
+/../data/reentrancy/solidity_contract/35661.sol:159:45: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function isSane(address crowdsale) public constant returns (bool) {
+                                            ^------^
+/../data/reentrancy/solidity_contract/35661.sol:164:56: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function isPresalePurchase(address purchaser) public constant returns (bool) {
+                                                       ^------^
+/../data/reentrancy/solidity_contract/35661.sol:169:113: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function calculatePrice(uint value, uint weiRaised, uint tokensSold, address msgSender, uint decimals) public constant returns (uint tokenAmount);
+                                                                                                                ^------^
+/../data/reentrancy/solidity_contract/35661.sol:178:37: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function isFinalizeAgent() public constant returns(bool) {
+                                    ^------^
+/../data/reentrancy/solidity_contract/35661.sol:183:28: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function isSane() public constant returns (bool);
+                           ^------^
+/../data/reentrancy/solidity_contract/35661.sol:200:42: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function balanceOf(address who) public constant returns (uint256);
+                                         ^------^
+/../data/reentrancy/solidity_contract/35661.sol:209:61: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function allowance(address owner, address spender) public constant returns (uint256);
+                                                            ^------^
+/../data/reentrancy/solidity_contract/35661.sol:560:42: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function isMinimumGoalReached() public constant returns (bool reached) {
+                                         ^------^
+/../data/reentrancy/solidity_contract/35661.sol:565:37: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function isFinalizerSane() public constant returns (bool sane) {
+                                    ^------^
+/../data/reentrancy/solidity_contract/35661.sol:570:35: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function isPricingSane() public constant returns (bool sane) {
+                                  ^------^
+/../data/reentrancy/solidity_contract/35661.sol:575:30: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function getState() public constant returns (State) {
+                             ^------^
+/../data/reentrancy/solidity_contract/35661.sol:593:33: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function isCrowdsale() public constant returns (bool) {
+                                ^------^
+/../data/reentrancy/solidity_contract/35661.sol:613:103: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function isBreakingCap(uint weiAmount, uint tokenAmount, uint weiRaisedTotal, uint tokensSoldTotal) constant returns (bool limitBroken);
+                                                                                                      ^------^
+/../data/reentrancy/solidity_contract/35661.sol:616:37: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function isCrowdsaleFull() public constant returns (bool);
+                                    ^------^
+/../data/reentrancy/solidity_contract/35661.sol:643:29: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function isToken() public constant returns (bool weAre) {
+                            ^------^
+/../data/reentrancy/solidity_contract/35661.sol:664:38: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function balanceOf(address _owner) constant returns (uint balance) {
+                                     ^------^
+/../data/reentrancy/solidity_contract/35661.sol:681:56: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function allowance(address _owner, address _spender) constant returns (uint remaining) {
+                                                       ^------^
+/../data/reentrancy/solidity_contract/35661.sol:774:30: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function getToken() public constant returns(FractionalERC20) {
+                             ^------^
+/../data/reentrancy/solidity_contract/35661.sol:852:52: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function getClaimAmount(address investor) public constant returns (uint) {
+                                                   ^------^
+/../data/reentrancy/solidity_contract/35661.sol:862:50: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function getClaimLeft(address investor) public constant returns (uint) {
+                                                 ^------^
+/../data/reentrancy/solidity_contract/35661.sol:946:31: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function isPresale() public constant returns (bool) {
+                              ^------^
+
+[91m[-] Cannot compile the contract [0m
+
+====================================================================================================
+[1m[ ] Compiling Solidity contract from the file /../data/reentrancy/solidity_contract/35661.sol ... [0m/../data/reentrancy/solidity_contract/35661.sol:34:47: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function max64(uint64 a, uint64 b) internal constant returns (uint64) {
+                                              ^------^
+/../data/reentrancy/solidity_contract/35661.sol:38:47: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function min64(uint64 a, uint64 b) internal constant returns (uint64) {
+                                              ^------^
+/../data/reentrancy/solidity_contract/35661.sol:42:50: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function max256(uint256 a, uint256 b) internal constant returns (uint256) {
+                                                 ^------^
+/../data/reentrancy/solidity_contract/35661.sol:46:50: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function min256(uint256 a, uint256 b) internal constant returns (uint256) {
+                                                 ^------^
+/../data/reentrancy/solidity_contract/35661.sol:154:39: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function isPricingStrategy() public constant returns (bool) {
+                                      ^------^
+/../data/reentrancy/solidity_contract/35661.sol:159:45: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function isSane(address crowdsale) public constant returns (bool) {
+                                            ^------^
+/../data/reentrancy/solidity_contract/35661.sol:164:56: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function isPresalePurchase(address purchaser) public constant returns (bool) {
+                                                       ^------^
+/../data/reentrancy/solidity_contract/35661.sol:169:113: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function calculatePrice(uint value, uint weiRaised, uint tokensSold, address msgSender, uint decimals) public constant returns (uint tokenAmount);
+                                                                                                                ^------^
+/../data/reentrancy/solidity_contract/35661.sol:178:37: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function isFinalizeAgent() public constant returns(bool) {
+                                    ^------^
+/../data/reentrancy/solidity_contract/35661.sol:183:28: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function isSane() public constant returns (bool);
+                           ^------^
+/../data/reentrancy/solidity_contract/35661.sol:200:42: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function balanceOf(address who) public constant returns (uint256);
+                                         ^------^
+/../data/reentrancy/solidity_contract/35661.sol:209:61: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function allowance(address owner, address spender) public constant returns (uint256);
+                                                            ^------^
+/../data/reentrancy/solidity_contract/35661.sol:560:42: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function isMinimumGoalReached() public constant returns (bool reached) {
+                                         ^------^
+/../data/reentrancy/solidity_contract/35661.sol:565:37: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function isFinalizerSane() public constant returns (bool sane) {
+                                    ^------^
+/../data/reentrancy/solidity_contract/35661.sol:570:35: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function isPricingSane() public constant returns (bool sane) {
+                                  ^------^
+/../data/reentrancy/solidity_contract/35661.sol:575:30: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function getState() public constant returns (State) {
+                             ^------^
+/../data/reentrancy/solidity_contract/35661.sol:593:33: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function isCrowdsale() public constant returns (bool) {
+                                ^------^
+/../data/reentrancy/solidity_contract/35661.sol:613:103: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function isBreakingCap(uint weiAmount, uint tokenAmount, uint weiRaisedTotal, uint tokensSoldTotal) constant returns (bool limitBroken);
+                                                                                                      ^------^
+/../data/reentrancy/solidity_contract/35661.sol:616:37: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function isCrowdsaleFull() public constant returns (bool);
+                                    ^------^
+/../data/reentrancy/solidity_contract/35661.sol:643:29: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function isToken() public constant returns (bool weAre) {
+                            ^------^
+/../data/reentrancy/solidity_contract/35661.sol:664:38: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function balanceOf(address _owner) constant returns (uint balance) {
+                                     ^------^
+/../data/reentrancy/solidity_contract/35661.sol:681:56: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function allowance(address _owner, address _spender) constant returns (uint remaining) {
+                                                       ^------^
+/../data/reentrancy/solidity_contract/35661.sol:774:30: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function getToken() public constant returns(FractionalERC20) {
+                             ^------^
+/../data/reentrancy/solidity_contract/35661.sol:852:52: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function getClaimAmount(address investor) public constant returns (uint) {
+                                                   ^------^
+/../data/reentrancy/solidity_contract/35661.sol:862:50: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function getClaimLeft(address investor) public constant returns (uint) {
+                                                 ^------^
+/../data/reentrancy/solidity_contract/35661.sol:946:31: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function isPresale() public constant returns (bool) {
+                              ^------^
+
+[91m[-] Cannot compile the contract [0m
+
+====================================================================================================
+[1m[ ] Compiling Solidity contract from the file /../data/reentrancy/solidity_contract/35661.sol ... [0m/../data/reentrancy/solidity_contract/35661.sol:34:47: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function max64(uint64 a, uint64 b) internal constant returns (uint64) {
+                                              ^------^
+/../data/reentrancy/solidity_contract/35661.sol:38:47: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function min64(uint64 a, uint64 b) internal constant returns (uint64) {
+                                              ^------^
+/../data/reentrancy/solidity_contract/35661.sol:42:50: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function max256(uint256 a, uint256 b) internal constant returns (uint256) {
+                                                 ^------^
+/../data/reentrancy/solidity_contract/35661.sol:46:50: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function min256(uint256 a, uint256 b) internal constant returns (uint256) {
+                                                 ^------^
+/../data/reentrancy/solidity_contract/35661.sol:154:39: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function isPricingStrategy() public constant returns (bool) {
+                                      ^------^
+/../data/reentrancy/solidity_contract/35661.sol:159:45: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function isSane(address crowdsale) public constant returns (bool) {
+                                            ^------^
+/../data/reentrancy/solidity_contract/35661.sol:164:56: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function isPresalePurchase(address purchaser) public constant returns (bool) {
+                                                       ^------^
+/../data/reentrancy/solidity_contract/35661.sol:169:113: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function calculatePrice(uint value, uint weiRaised, uint tokensSold, address msgSender, uint decimals) public constant returns (uint tokenAmount);
+                                                                                                                ^------^
+/../data/reentrancy/solidity_contract/35661.sol:178:37: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function isFinalizeAgent() public constant returns(bool) {
+                                    ^------^
+/../data/reentrancy/solidity_contract/35661.sol:183:28: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function isSane() public constant returns (bool);
+                           ^------^
+/../data/reentrancy/solidity_contract/35661.sol:200:42: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function balanceOf(address who) public constant returns (uint256);
+                                         ^------^
+/../data/reentrancy/solidity_contract/35661.sol:209:61: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function allowance(address owner, address spender) public constant returns (uint256);
+                                                            ^------^
+/../data/reentrancy/solidity_contract/35661.sol:560:42: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function isMinimumGoalReached() public constant returns (bool reached) {
+                                         ^------^
+/../data/reentrancy/solidity_contract/35661.sol:565:37: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+
+[91m[-] Cannot compile the contract [0m
+
+====================================================================================================
+[1m[ ] Compiling Solidity contract from the file /../data/reentrancy/solidity_contract/35661.sol ... [0m/../data/reentrancy/solidity_contract/35661.sol:34:47: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function max64(uint64 a, uint64 b) internal constant returns (uint64) {
+                                              ^------^
+/../data/reentrancy/solidity_contract/35661.sol:38:47: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function min64(uint64 a, uint64 b) internal constant returns (uint64) {
+                                              ^------^
+/../data/reentrancy/solidity_contract/35661.sol:42:50: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function max256(uint256 a, uint256 b) internal constant returns (uint256) {
+                                                 ^------^
+/../data/reentrancy/solidity_contract/35661.sol:46:50: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function min256(uint256 a, uint256 b) internal constant returns (uint256) {
+                                                 ^------^
+/../data/reentrancy/solidity_contract/35661.sol:154:39: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function isPricingStrategy() public constant returns (bool) {
+                                      ^------^
+/../data/reentrancy/solidity_contract/35661.sol:159:45: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function isSane(address crowdsale) public constant returns (bool) {
+                                            ^------^
+/../data/reentrancy/solidity_contract/35661.sol:164:56: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function isPresalePurchase(address purchaser) public constant returns (bool) {
+                                                       ^------^
+/../data/reentrancy/solidity_contract/35661.sol:169:113: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function calculatePrice(uint value, uint weiRaised, uint tokensSold, address msgSender, uint decimals) public constant returns (uint tokenAmount);
+                                                                                                                ^------^
+/../data/reentrancy/solidity_contract/35661.sol:178:37: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function isFinalizeAgent() public constant returns(bool) {
+                                    ^------^
+/../data/reentrancy/solidity_contract/35661.sol:183:28: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function isSane() public constant returns (bool);
+                           ^------^
+/../data/reentrancy/solidity_contract/35661.sol:200:42: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+
+[91m[-] Cannot compile the contract [0m
+
+====================================================================================================
+[1m[ ] Compiling Solidity contract from the file /../data/reentrancy/solidity_contract/35661.sol ... [0m/../data/reentrancy/solidity_contract/35661.sol:34:47: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function max64(uint64 a, uint64 b) internal constant returns (uint64) {
+                                              ^------^
+/../data/reentrancy/solidity_contract/35661.sol:38:47: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function min64(uint64 a, uint64 b) internal constant returns (uint64) {
+                                              ^------^
+/../data/reentrancy/solidity_contract/35661.sol:42:50: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function max256(uint256 a, uint256 b) internal constant returns (uint256) {
+                                                 ^------^
+/../data/reentrancy/solidity_contract/35661.sol:46:50: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function min256(uint256 a, uint256 b) internal constant returns (uint256) {
+                                                 ^------^
+/../data/reentrancy/solidity_contract/35661.sol:154:39: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function isPricingStrategy() public constant returns (bool) {
+                                      ^------^
+/../data/reentrancy/solidity_contract/35661.sol:159:45: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function isSane(address crowdsale) public constant returns (bool) {
+                                            ^------^
+/../data/reentrancy/solidity_contract/35661.sol:164:56: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function isPresalePurchase(address purchaser) public constant returns (bool) {
+                                                       ^------^
+/../data/reentrancy/solidity_contract/35661.sol:169:113: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function calculatePrice(uint value, uint weiRaised, uint tokensSold, address msgSender, uint decimals) public constant returns (uint tokenAmount);
+                                                                                                                ^------^
+/../data/reentrancy/solidity_contract/35661.sol:178:37: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function isFinalizeAgent() public constant returns(bool) {
+                                    ^------^
+/../data/reentrancy/solidity_contract/35661.sol:183:28: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function isSane() public constant returns (bool);
+                           ^------^
+/../data/reentrancy/solidity_contract/35661.sol:200:42: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function balanceOf(address who) public constant returns (uint256);
+                                         ^------^
+/../data/reentrancy/solidity_contract/35661.sol:209:61: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function allowance(address owner, address spender) public constant returns (uint256);
+                                                            ^------^
+/../data/reentrancy/solidity_contract/35661.sol:560:42: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function isMinimumGoalReached() public constant returns (bool reached) {
+                                         ^------^
+/../data/reentrancy/solidity_contract/35661.sol:565:37: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function isFinalizerSane() public constant returns (bool sane) {
+                                    ^------^
+/../data/reentrancy/solidity_contract/35661.sol:570:35: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function isPricingSane() public constant returns (bool sane) {
+                                  ^------^
+/../data/reentrancy/solidity_contract/35661.sol:575:30: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function getState() public constant returns (State) {
+                             ^------^
+/../data/reentrancy/solidity_contract/35661.sol:593:33: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function isCrowdsale() public constant returns (bool) {
+                                ^------^
+/../data/reentrancy/solidity_contract/35661.sol:613:103: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function isBreakingCap(uint weiAmount, uint tokenAmount, uint weiRaisedTotal, uint tokensSoldTotal) constant returns (bool limitBroken);
+                                                                                                      ^------^
+/../data/reentrancy/solidity_contract/35661.sol:616:37: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function isCrowdsaleFull() public constant returns (bool);
+                                    ^------^
+/../data/reentrancy/solidity_contract/35661.sol:643:29: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function isToken() public constant returns (bool weAre) {
+                            ^------^
+/../data/reentrancy/solidity_contract/35661.sol:664:38: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function balanceOf(address _owner) constant returns (uint balance) {
+                                     ^------^
+/../data/reentrancy/solidity_contract/35661.sol:681:56: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function allowance(address _owner, address _spender) constant returns (uint remaining) {
+                                                       ^------^
+/../data/reentrancy/solidity_contract/35661.sol:774:30: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function getToken() public constant returns(FractionalERC20) {
+                             ^------^
+/../data/reentrancy/solidity_contract/35661.sol:852:52: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function getClaimAmount(address investor) public constant returns (uint) {
+                                                   ^------^
+/../data/reentrancy/solidity_contract/35661.sol:862:50: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function getClaimLeft(address investor) public constant returns (uint) {
+                                                 ^------^
+/../data/reentrancy/solidity_contract/35661.sol:946:31: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function isPresale() public constant returns (bool) {
+                              ^------^
+
+[91m[-] Cannot compile the contract [0m
+
+====================================================================================================
+[1m[ ] Compiling Solidity contract from the file /../data/reentrancy/solidity_contract/35661.sol ... [0m/../data/reentrancy/solidity_contract/35661.sol:34:47: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function max64(uint64 a, uint64 b) internal constant returns (uint64) {
+                                              ^------^
+/../data/reentrancy/solidity_contract/35661.sol:38:47: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function min64(uint64 a, uint64 b) internal constant returns (uint64) {
+                                              ^------^
+/../data/reentrancy/solidity_contract/35661.sol:42:50: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function max256(uint256 a, uint256 b) internal constant returns (uint256) {
+                                                 ^------^
+/../data/reentrancy/solidity_contract/35661.sol:46:50: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function min256(uint256 a, uint256 b) internal constant returns (uint256) {
+                                                 ^------^
+/../data/reentrancy/solidity_contract/35661.sol:154:39: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+
+[91m[-] Cannot compile the contract [0m
+
+====================================================================================================
+[1m[ ] Compiling Solidity contract from the file /../data/reentrancy/solidity_contract/35661.sol ... [0m/../data/reentrancy/solidity_contract/35661.sol:34:47: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function max64(uint64 a, uint64 b) internal constant returns (uint64) {
+                                              ^------^
+/../data/reentrancy/solidity_contract/35661.sol:38:47: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function min64(uint64 a, uint64 b) internal constant returns (uint64) {
+                                              ^------^
+/../data/reentrancy/solidity_contract/35661.sol:42:50: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function max256(uint256 a, uint256 b) internal constant returns (uint256) {
+                                                 ^------^
+/../data/reentrancy/solidity_contract/35661.sol:46:50: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function min256(uint256 a, uint256 b) internal constant returns (uint256) {
+                                                 ^------^
+/../data/reentrancy/solidity_contract/35661.sol:154:39: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function isPricingStrategy() public constant returns (bool) {
+                                      ^------^
+/../data/reentrancy/solidity_contract/35661.sol:159:45: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function isSane(address crowdsale) public constant returns (bool) {
+                                            ^------^
+/../data/reentrancy/solidity_contract/35661.sol:164:56: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function isPresalePurchase(address purchaser) public constant returns (bool) {
+                                                       ^------^
+/../data/reentrancy/solidity_contract/35661.sol:169:113: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function calculatePrice(uint value, uint weiRaised, uint tokensSold, address msgSender, uint decimals) public constant returns (uint tokenAmount);
+                                                                                                                ^------^
+/../data/reentrancy/solidity_contract/35661.sol:178:37: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function isFinalizeAgent() public constant returns(bool) {
+                                    ^------^
+/../data/reentrancy/solidity_contract/35661.sol:183:28: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function isSane() public constant returns (bool);
+                           ^------^
+/../data/reentrancy/solidity_contract/35661.sol:200:42: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function balanceOf(address who) public constant returns (uint256);
+                                         ^------^
+/../data/reentrancy/solidity_contract/35661.sol:209:61: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function allowance(address owner, address spender) public constant returns (uint256);
+                                                            ^------^
+/../data/reentrancy/solidity_contract/35661.sol:560:42: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function isMinimumGoalReached() public constant returns (bool reached) {
+                                         ^------^
+/../data/reentrancy/solidity_contract/35661.sol:565:37: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function isFinalizerSane() public constant returns (bool sane) {
+                                    ^------^
+/../data/reentrancy/solidity_contract/35661.sol:570:35: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function isPricingSane() public constant returns (bool sane) {
+                                  ^------^
+/../data/reentrancy/solidity_contract/35661.sol:575:30: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function getState() public constant returns (State) {
+                             ^------^
+/../data/reentrancy/solidity_contract/35661.sol:593:33: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function isCrowdsale() public constant returns (bool) {
+                                ^------^
+/../data/reentrancy/solidity_contract/35661.sol:613:103: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function isBreakingCap(uint weiAmount, uint tokenAmount, uint weiRaisedTotal, uint tokensSoldTotal) constant returns (bool limitBroken);
+                                                                                                      ^------^
+/../data/reentrancy/solidity_contract/35661.sol:616:37: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function isCrowdsaleFull() public constant returns (bool);
+                                    ^------^
+/../data/reentrancy/solidity_contract/35661.sol:643:29: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function isToken() public constant returns (bool weAre) {
+                            ^------^
+/../data/reentrancy/solidity_contract/35661.sol:664:38: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function balanceOf(address _owner) constant returns (uint balance) {
+                                     ^------^
+/../data/reentrancy/solidity_contract/35661.sol:681:56: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function allowance(address _owner, address _spender) constant returns (uint remaining) {
+                                                       ^------^
+/../data/reentrancy/solidity_contract/35661.sol:774:30: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function getToken() public constant returns(FractionalERC20) {
+                             ^------^
+/../data/reentrancy/solidity_contract/35661.sol:852:52: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function getClaimAmount(address investor) public constant returns (uint) {
+
+[91m[-] Cannot compile the contract [0m
+
+====================================================================================================
+[1m[ ] Compiling Solidity contract from the file /../data/reentrancy/solidity_contract/35661.sol ... [0m/../data/reentrancy/solidity_contract/35661.sol:34:47: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function max64(uint64 a, uint64 b) internal constant returns (uint64) {
+                                              ^------^
+/../data/reentrancy/solidity_contract/35661.sol:38:47: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function min64(uint64 a, uint64 b) internal constant returns (uint64) {
+                                              ^------^
+/../data/reentrancy/solidity_contract/35661.sol:42:50: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function max256(uint256 a, uint256 b) internal constant returns (uint256) {
+                                                 ^------^
+/../data/reentrancy/solidity_contract/35661.sol:46:50: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function min256(uint256 a, uint256 b) internal constant returns (uint256) {
+                                                 ^------^
+/../data/reentrancy/solidity_contract/35661.sol:154:39: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function isPricingStrategy() public constant returns (bool) {
+                                      ^------^
+/../data/reentrancy/solidity_contract/35661.sol:159:45: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function isSane(address crowdsale) public constant returns (bool) {
+                                            ^------^
+/../data/reentrancy/solidity_contract/35661.sol:164:56: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function isPresalePurchase(address purchaser) public constant returns (bool) {
+                                                       ^------^
+/../data/reentrancy/solidity_contract/35661.sol:169:113: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function calculatePrice(uint value, uint weiRaised, uint tokensSold, address msgSender, uint decimals) public constant returns (uint tokenAmount);
+                                                                                                                ^------^
+/../data/reentrancy/solidity_contract/35661.sol:178:37: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function isFinalizeAgent() public constant returns(bool) {
+                                    ^------^
+/../data/reentrancy/solidity_contract/35661.sol:183:28: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+
+[91m[-] Cannot compile the contract [0m
+
+====================================================================================================
+[1m[ ] Compiling Solidity contract from the file /../data/reentrancy/solidity_contract/35661.sol ... [0m/../data/reentrancy/solidity_contract/35661.sol:34:47: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function max64(uint64 a, uint64 b) internal constant returns (uint64) {
+                                              ^------^
+/../data/reentrancy/solidity_contract/35661.sol:38:47: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function min64(uint64 a, uint64 b) internal constant returns (uint64) {
+                                              ^------^
+/../data/reentrancy/solidity_contract/35661.sol:42:50: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function max256(uint256 a, uint256 b) internal constant returns (uint256) {
+                                                 ^------^
+/../data/reentrancy/solidity_contract/35661.sol:46:50: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function min256(uint256 a, uint256 b) internal constant returns (uint256) {
+                                                 ^------^
+/../data/reentrancy/solidity_contract/35661.sol:154:39: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function isPricingStrategy() public constant returns (bool) {
+                                      ^------^
+/../data/reentrancy/solidity_contract/35661.sol:159:45: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function isSane(address crowdsale) public constant returns (bool) {
+                                            ^------^
+/../data/reentrancy/solidity_contract/35661.sol:164:56: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function isPresalePurchase(address purchaser) public constant returns (bool) {
+                                                       ^------^
+/../data/reentrancy/solidity_contract/35661.sol:169:113: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function calculatePrice(uint value, uint weiRaised, uint tokensSold, address msgSender, uint decimals) public constant returns (uint tokenAmount);
+                                                                                                                ^------^
+/../data/reentrancy/solidity_contract/35661.sol:178:37: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function isFinalizeAgent() public constant returns(bool) {
+                                    ^------^
+/../data/reentrancy/solidity_contract/35661.sol:183:28: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function isSane() public constant returns (bool);
+                           ^------^
+/../data/reentrancy/solidity_contract/35661.sol:200:42: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function balanceOf(address who) public constant returns (uint256);
+                                         ^------^
+
+[91m[-] Cannot compile the contract [0m
+
+====================================================================================================
+[1m[ ] Compiling Solidity contract from the file /../data/reentrancy/solidity_contract/35661.sol ... [0m/../data/reentrancy/solidity_contract/35661.sol:34:47: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function max64(uint64 a, uint64 b) internal constant returns (uint64) {
+                                              ^------^
+/../data/reentrancy/solidity_contract/35661.sol:38:47: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function min64(uint64 a, uint64 b) internal constant returns (uint64) {
+                                              ^------^
+/../data/reentrancy/solidity_contract/35661.sol:42:50: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function max256(uint256 a, uint256 b) internal constant returns (uint256) {
+                                                 ^------^
+/../data/reentrancy/solidity_contract/35661.sol:46:50: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function min256(uint256 a, uint256 b) internal constant returns (uint256) {
+                                                 ^------^
+/../data/reentrancy/solidity_contract/35661.sol:154:39: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function isPricingStrategy() public constant returns (bool) {
+                                      ^------^
+/../data/reentrancy/solidity_contract/35661.sol:159:45: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function isSane(address crowdsale) public constant returns (bool) {
+
+[91m[-] Cannot compile the contract [0m
+
+====================================================================================================
+[1m[ ] Compiling Solidity contract from the file /../data/reentrancy/solidity_contract/35661.sol ... [0m/../data/reentrancy/solidity_contract/35661.sol:34:47: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function max64(uint64 a, uint64 b) internal constant returns (uint64) {
+                                              ^------^
+/../data/reentrancy/solidity_contract/35661.sol:38:47: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function min64(uint64 a, uint64 b) internal constant returns (uint64) {
+                                              ^------^
+/../data/reentrancy/solidity_contract/35661.sol:42:50: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function max256(uint256 a, uint256 b) internal constant returns (uint256) {
+                                                 ^------^
+/../data/reentrancy/solidity_contract/35661.sol:46:50: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function min256(uint256 a, uint256 b) internal constant returns (uint256) {
+                                                 ^------^
+/../data/reentrancy/solidity_contract/35661.sol:154:39: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function isPricingStrategy() public constant returns (bool) {
+                                      ^------^
+/../data/reentrancy/solidity_contract/35661.sol:159:45: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function isSane(address crowdsale) public constant returns (bool) {
+                                            ^------^
+/../data/reentrancy/solidity_contract/35661.sol:164:56: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function isPresalePurchase(address purchaser) public constant returns (bool) {
+                                                       ^------^
+/../data/reentrancy/solidity_contract/35661.sol:169:113: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function calculatePrice(uint value, uint weiRaised, uint tokensSold, address msgSender, uint decimals) public constant returns (uint tokenAmount);
+                                                                                                                ^------^
+/../data/reentrancy/solidity_contract/35661.sol:178:37: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+
+[91m[-] Cannot compile the contract [0m
+
+====================================================================================================
+[1m[ ] Compiling Solidity contract from the file /../data/reentrancy/solidity_contract/35661.sol ... [0m/../data/reentrancy/solidity_contract/35661.sol:34:47: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function max64(uint64 a, uint64 b) internal constant returns (uint64) {
+                                              ^------^
+/../data/reentrancy/solidity_contract/35661.sol:38:47: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function min64(uint64 a, uint64 b) internal constant returns (uint64) {
+                                              ^------^
+/../data/reentrancy/solidity_contract/35661.sol:42:50: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function max256(uint256 a, uint256 b) internal constant returns (uint256) {
+                                                 ^------^
+/../data/reentrancy/solidity_contract/35661.sol:46:50: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function min256(uint256 a, uint256 b) internal constant returns (uint256) {
+                                                 ^------^
+/../data/reentrancy/solidity_contract/35661.sol:154:39: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function isPricingStrategy() public constant returns (bool) {
+                                      ^------^
+/../data/reentrancy/solidity_contract/35661.sol:159:45: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function isSane(address crowdsale) public constant returns (bool) {
+                                            ^------^
+/../data/reentrancy/solidity_contract/35661.sol:164:56: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function isPresalePurchase(address purchaser) public constant returns (bool) {
+                                                       ^------^
+/../data/reentrancy/solidity_contract/35661.sol:169:113: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function calculatePrice(uint value, uint weiRaised, uint tokensSold, address msgSender, uint decimals) public constant returns (uint tokenAmount);
+                                                                                                                ^------^
+/../data/reentrancy/solidity_contract/35661.sol:178:37: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function isFinalizeAgent() public constant returns(bool) {
+                                    ^------^
+/../data/reentrancy/solidity_contract/35661.sol:183:28: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function isSane() public constant returns (bool);
+                           ^------^
+/../data/reentrancy/solidity_contract/35661.sol:200:42: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function balanceOf(address who) public constant returns (uint256);
+                                         ^------^
+/../data/reentrancy/solidity_contract/35661.sol:209:61: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function allowance(address owner, address spender) public constant returns (uint256);
+                                                            ^------^
+/../data/reentrancy/solidity_contract/35661.sol:560:42: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function isMinimumGoalReached() public constant returns (bool reached) {
+                                         ^------^
+/../data/reentrancy/solidity_contract/35661.sol:565:37: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function isFinalizerSane() public constant returns (bool sane) {
+                                    ^------^
+/../data/reentrancy/solidity_contract/35661.sol:570:35: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function isPricingSane() public constant returns (bool sane) {
+                                  ^------^
+/../data/reentrancy/solidity_contract/35661.sol:575:30: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function getState() public constant returns (State) {
+                             ^------^
+/../data/reentrancy/solidity_contract/35661.sol:593:33: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function isCrowdsale() public constant returns (bool) {
+                                ^------^
+/../data/reentrancy/solidity_contract/35661.sol:613:103: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function isBreakingCap(uint weiAmount, uint tokenAmount, uint weiRaisedTotal, uint tokensSoldTotal) constant returns (bool limitBroken);
+                                                                                                      ^------^
+/../data/reentrancy/solidity_contract/35661.sol:616:37: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function isCrowdsaleFull() public constant returns (bool);
+                                    ^------^
+/../data/reentrancy/solidity_contract/35661.sol:643:29: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function isToken() public constant returns (bool weAre) {
+                            ^------^
+/../data/reentrancy/solidity_contract/35661.sol:664:38: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function balanceOf(address _owner) constant returns (uint balance) {
+                                     ^------^
+/../data/reentrancy/solidity_contract/35661.sol:681:56: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function allowance(address _owner, address _spender) constant returns (uint remaining) {
+                                                       ^------^
+/../data/reentrancy/solidity_contract/35661.sol:774:30: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function getToken() public constant returns(FractionalERC20) {
+                             ^------^
+/../data/reentrancy/solidity_contract/35661.sol:852:52: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function getClaimAmount(address investor) public constant returns (uint) {
+                                                   ^------^
+/../data/reentrancy/solidity_contract/35661.sol:862:50: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function getClaimLeft(address investor) public constant returns (uint) {
+                                                 ^------^
+/../data/reentrancy/solidity_contract/35661.sol:946:31: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function isPresale() public constant returns (bool) {
+                              ^------^
+
+[91m[-] Cannot compile the contract [0m
+
+====================================================================================================
+[1m[ ] Compiling Solidity contract from the file /../data/reentrancy/solidity_contract/35661.sol ... [0m/../data/reentrancy/solidity_contract/35661.sol:34:47: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+
+[91m[-] Cannot compile the contract [0m
+
+====================================================================================================
+[1m[ ] Compiling Solidity contract from the file /../data/reentrancy/solidity_contract/35661.sol ... [0m/../data/reentrancy/solidity_contract/35661.sol:34:47: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+
+[91m[-] Cannot compile the contract [0m
+
+====================================================================================================
+[1m[ ] Compiling Solidity contract from the file /../data/reentrancy/solidity_contract/35661.sol ... [0m/../data/reentrancy/solidity_contract/35661.sol:34:47: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function max64(uint64 a, uint64 b) internal constant returns (uint64) {
+                                              ^------^
+/../data/reentrancy/solidity_contract/35661.sol:38:47: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function min64(uint64 a, uint64 b) internal constant returns (uint64) {
+                                              ^------^
+/../data/reentrancy/solidity_contract/35661.sol:42:50: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function max256(uint256 a, uint256 b) internal constant returns (uint256) {
+                                                 ^------^
+/../data/reentrancy/solidity_contract/35661.sol:46:50: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function min256(uint256 a, uint256 b) internal constant returns (uint256) {
+                                                 ^------^
+/../data/reentrancy/solidity_contract/35661.sol:154:39: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function isPricingStrategy() public constant returns (bool) {
+                                      ^------^
+/../data/reentrancy/solidity_contract/35661.sol:159:45: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function isSane(address crowdsale) public constant returns (bool) {
+                                            ^------^
+/../data/reentrancy/solidity_contract/35661.sol:164:56: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function isPresalePurchase(address purchaser) public constant returns (bool) {
+                                                       ^------^
+/../data/reentrancy/solidity_contract/35661.sol:169:113: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function calculatePrice(uint value, uint weiRaised, uint tokensSold, address msgSender, uint decimals) public constant returns (uint tokenAmount);
+                                                                                                                ^------^
+/../data/reentrancy/solidity_contract/35661.sol:178:37: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function isFinalizeAgent() public constant returns(bool) {
+                                    ^------^
+/../data/reentrancy/solidity_contract/35661.sol:183:28: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function isSane() public constant returns (bool);
+                           ^------^
+/../data/reentrancy/solidity_contract/35661.sol:200:42: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function balanceOf(address who) public constant returns (uint256);
+                                         ^------^
+/../data/reentrancy/solidity_contract/35661.sol:209:61: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function allowance(address owner, address spender) public constant returns (uint256);
+                                                            ^------^
+/../data/reentrancy/solidity_contract/35661.sol:560:42: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function isMinimumGoalReached() public constant returns (bool reached) {
+                                         ^------^
+/../data/reentrancy/solidity_contract/35661.sol:565:37: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function isFinalizerSane() public constant returns (bool sane) {
+                                    ^------^
+/../data/reentrancy/solidity_contract/35661.sol:570:35: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function isPricingSane() public constant returns (bool sane) {
+                                  ^------^
+/../data/reentrancy/solidity_contract/35661.sol:575:30: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function getState() public constant returns (State) {
+                             ^------^
+/../data/reentrancy/solidity_contract/35661.sol:593:33: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function isCrowdsale() public constant returns (bool) {
+                                ^------^
+/../data/reentrancy/solidity_contract/35661.sol:613:103: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function isBreakingCap(uint weiAmount, uint tokenAmount, uint weiRaisedTotal, uint tokensSoldTotal) constant returns (bool limitBroken);
+                                                                                                      ^------^
+/../data/reentrancy/solidity_contract/35661.sol:616:37: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function isCrowdsaleFull() public constant returns (bool);
+                                    ^------^
+/../data/reentrancy/solidity_contract/35661.sol:643:29: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function isToken() public constant returns (bool weAre) {
+                            ^------^
+/../data/reentrancy/solidity_contract/35661.sol:664:38: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function balanceOf(address _owner) constant returns (uint balance) {
+                                     ^------^
+/../data/reentrancy/solidity_contract/35661.sol:681:56: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function allowance(address _owner, address _spender) constant returns (uint remaining) {
+                                                       ^------^
+/../data/reentrancy/solidity_contract/35661.sol:774:30: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function getToken() public constant returns(FractionalERC20) {
+                             ^------^
+/../data/reentrancy/solidity_contract/35661.sol:852:52: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function getClaimAmount(address investor) public constant returns (uint) {
+                                                   ^------^
+/../data/reentrancy/solidity_contract/35661.sol:862:50: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function getClaimLeft(address investor) public constant returns (uint) {
+                                                 ^------^
+/../data/reentrancy/solidity_contract/35661.sol:946:31: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function isPresale() public constant returns (bool) {
+                              ^------^
+
+[91m[-] Cannot compile the contract [0m
+
+====================================================================================================
+[1m[ ] Compiling Solidity contract from the file /../data/reentrancy/solidity_contract/35661.sol ... [0m/../data/reentrancy/solidity_contract/35661.sol:34:47: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function max64(uint64 a, uint64 b) internal constant returns (uint64) {
+                                              ^------^
+/../data/reentrancy/solidity_contract/35661.sol:38:47: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function min64(uint64 a, uint64 b) internal constant returns (uint64) {
+                                              ^------^
+/../data/reentrancy/solidity_contract/35661.sol:42:50: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function max256(uint256 a, uint256 b) internal constant returns (uint256) {
+                                                 ^------^
+/../data/reentrancy/solidity_contract/35661.sol:46:50: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function min256(uint256 a, uint256 b) internal constant returns (uint256) {
+                                                 ^------^
+/../data/reentrancy/solidity_contract/35661.sol:154:39: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function isPricingStrategy() public constant returns (bool) {
+                                      ^------^
+/../data/reentrancy/solidity_contract/35661.sol:159:45: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function isSane(address crowdsale) public constant returns (bool) {
+                                            ^------^
+/../data/reentrancy/solidity_contract/35661.sol:164:56: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function isPresalePurchase(address purchaser) public constant returns (bool) {
+                                                       ^------^
+/../data/reentrancy/solidity_contract/35661.sol:169:113: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function calculatePrice(uint value, uint weiRaised, uint tokensSold, address msgSender, uint decimals) public constant returns (uint tokenAmount);
+                                                                                                                ^------^
+/../data/reentrancy/solidity_contract/35661.sol:178:37: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function isFinalizeAgent() public constant returns(bool) {
+                                    ^------^
+/../data/reentrancy/solidity_contract/35661.sol:183:28: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function isSane() public constant returns (bool);
+                           ^------^
+/../data/reentrancy/solidity_contract/35661.sol:200:42: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function balanceOf(address who) public constant returns (uint256);
+                                         ^------^
+/../data/reentrancy/solidity_contract/35661.sol:209:61: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function allowance(address owner, address spender) public constant returns (uint256);
+                                                            ^------^
+/../data/reentrancy/solidity_contract/35661.sol:560:42: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function isMinimumGoalReached() public constant returns (bool reached) {
+                                         ^------^
+/../data/reentrancy/solidity_contract/35661.sol:565:37: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+
+[91m[-] Cannot compile the contract [0m
+
+====================================================================================================
+[1m[ ] Compiling Solidity contract from the file /../data/reentrancy/solidity_contract/35661.sol ... [0m/../data/reentrancy/solidity_contract/35661.sol:34:47: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+
+[91m[-] Cannot compile the contract [0m
+
+====================================================================================================
+[1m[ ] Compiling Solidity contract from the file /../data/reentrancy/solidity_contract/35661.sol ... [0m/../data/reentrancy/solidity_contract/35661.sol:34:47: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function max64(uint64 a, uint64 b) internal constant returns (uint64) {
+                                              ^------^
+/../data/reentrancy/solidity_contract/35661.sol:38:47: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function min64(uint64 a, uint64 b) internal constant returns (uint64) {
+                                              ^------^
+/../data/reentrancy/solidity_contract/35661.sol:42:50: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function max256(uint256 a, uint256 b) internal constant returns (uint256) {
+
+[91m[-] Cannot compile the contract [0m
+
+====================================================================================================
+[1m[ ] Compiling Solidity contract from the file /../data/reentrancy/solidity_contract/35661.sol ... [0m/../data/reentrancy/solidity_contract/35661.sol:34:47: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function max64(uint64 a, uint64 b) internal constant returns (uint64) {
+                                              ^------^
+/../data/reentrancy/solidity_contract/35661.sol:38:47: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function min64(uint64 a, uint64 b) internal constant returns (uint64) {
+                                              ^------^
+/../data/reentrancy/solidity_contract/35661.sol:42:50: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function max256(uint256 a, uint256 b) internal constant returns (uint256) {
+                                                 ^------^
+/../data/reentrancy/solidity_contract/35661.sol:46:50: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function min256(uint256 a, uint256 b) internal constant returns (uint256) {
+                                                 ^------^
+/../data/reentrancy/solidity_contract/35661.sol:154:39: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function isPricingStrategy() public constant returns (bool) {
+                                      ^------^
+/../data/reentrancy/solidity_contract/35661.sol:159:45: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function isSane(address crowdsale) public constant returns (bool) {
+                                            ^------^
+/../data/reentrancy/solidity_contract/35661.sol:164:56: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function isPresalePurchase(address purchaser) public constant returns (bool) {
+                                                       ^------^
+/../data/reentrancy/solidity_contract/35661.sol:169:113: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function calculatePrice(uint value, uint weiRaised, uint tokensSold, address msgSender, uint decimals) public constant returns (uint tokenAmount);
+                                                                                                                ^------^
+/../data/reentrancy/solidity_contract/35661.sol:178:37: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function isFinalizeAgent() public constant returns(bool) {
+                                    ^------^
+/../data/reentrancy/solidity_contract/35661.sol:183:28: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function isSane() public constant returns (bool);
+                           ^------^
+/../data/reentrancy/solidity_contract/35661.sol:200:42: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function balanceOf(address who) public constant returns (uint256);
+                                         ^------^
+/../data/reentrancy/solidity_contract/35661.sol:209:61: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function allowance(address owner, address spender) public constant returns (uint256);
+                                                            ^------^
+/../data/reentrancy/solidity_contract/35661.sol:560:42: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function isMinimumGoalReached() public constant returns (bool reached) {
+                                         ^------^
+/../data/reentrancy/solidity_contract/35661.sol:565:37: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function isFinalizerSane() public constant returns (bool sane) {
+                                    ^------^
+
+[91m[-] Cannot compile the contract [0m
+
+====================================================================================================
+[1m[ ] Compiling Solidity contract from the file /../data/reentrancy/solidity_contract/35661.sol ... [0m/../data/reentrancy/solidity_contract/35661.sol:34:47: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function max64(uint64 a, uint64 b) internal constant returns (uint64) {
+                                              ^------^
+/../data/reentrancy/solidity_contract/35661.sol:38:47: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function min64(uint64 a, uint64 b) internal constant returns (uint64) {
+                                              ^------^
+/../data/reentrancy/solidity_contract/35661.sol:42:50: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function max256(uint256 a, uint256 b) internal constant returns (uint256) {
+                                                 ^------^
+/../data/reentrancy/solidity_contract/35661.sol:46:50: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function min256(uint256 a, uint256 b) internal constant returns (uint256) {
+                                                 ^------^
+/../data/reentrancy/solidity_contract/35661.sol:154:39: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function isPricingStrategy() public constant returns (bool) {
+                                      ^------^
+/../data/reentrancy/solidity_contract/35661.sol:159:45: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function isSane(address crowdsale) public constant returns (bool) {
+                                            ^------^
+/../data/reentrancy/solidity_contract/35661.sol:164:56: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function isPresalePurchase(address purchaser) public constant returns (bool) {
+                                                       ^------^
+/../data/reentrancy/solidity_contract/35661.sol:169:113: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function calculatePrice(uint value, uint weiRaised, uint tokensSold, address msgSender, uint decimals) public constant returns (uint tokenAmount);
+                                                                                                                ^------^
+/../data/reentrancy/solidity_contract/35661.sol:178:37: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function isFinalizeAgent() public constant returns(bool) {
+                                    ^------^
+/../data/reentrancy/solidity_contract/35661.sol:183:28: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function isSane() public constant returns (bool);
+                           ^------^
+/../data/reentrancy/solidity_contract/35661.sol:200:42: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function balanceOf(address who) public constant returns (uint256);
+                                         ^------^
+/../data/reentrancy/solidity_contract/35661.sol:209:61: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function allowance(address owner, address spender) public constant returns (uint256);
+                                                            ^------^
+/../data/reentrancy/solidity_contract/35661.sol:560:42: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function isMinimumGoalReached() public constant returns (bool reached) {
+                                         ^------^
+/../data/reentrancy/solidity_contract/35661.sol:565:37: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+
+[91m[-] Cannot compile the contract [0m
+
+====================================================================================================
+[1m[ ] Compiling Solidity contract from the file /../data/reentrancy/solidity_contract/35661.sol ... [0m/../data/reentrancy/solidity_contract/35661.sol:34:47: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function max64(uint64 a, uint64 b) internal constant returns (uint64) {
+                                              ^------^
+/../data/reentrancy/solidity_contract/35661.sol:38:47: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function min64(uint64 a, uint64 b) internal constant returns (uint64) {
+                                              ^------^
+/../data/reentrancy/solidity_contract/35661.sol:42:50: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function max256(uint256 a, uint256 b) internal constant returns (uint256) {
+                                                 ^------^
+/../data/reentrancy/solidity_contract/35661.sol:46:50: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function min256(uint256 a, uint256 b) internal constant returns (uint256) {
+                                                 ^------^
+/../data/reentrancy/solidity_contract/35661.sol:154:39: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function isPricingStrategy() public constant returns (bool) {
+                                      ^------^
+/../data/reentrancy/solidity_contract/35661.sol:159:45: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function isSane(address crowdsale) public constant returns (bool) {
+                                            ^------^
+/../data/reentrancy/solidity_contract/35661.sol:164:56: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function isPresalePurchase(address purchaser) public constant returns (bool) {
+
+[91m[-] Cannot compile the contract [0m
+
+====================================================================================================
+[1m[ ] Compiling Solidity contract from the file /../data/reentrancy/solidity_contract/35661.sol ... [0m/../data/reentrancy/solidity_contract/35661.sol:34:47: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+
+[91m[-] Cannot compile the contract [0m
+
+====================================================================================================
+[1m[ ] Compiling Solidity contract from the file /../data/reentrancy/solidity_contract/35661.sol ... [0m/../data/reentrancy/solidity_contract/35661.sol:34:47: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function max64(uint64 a, uint64 b) internal constant returns (uint64) {
+                                              ^------^
+/../data/reentrancy/solidity_contract/35661.sol:38:47: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function min64(uint64 a, uint64 b) internal constant returns (uint64) {
+                                              ^------^
+/../data/reentrancy/solidity_contract/35661.sol:42:50: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function max256(uint256 a, uint256 b) internal constant returns (uint256) {
+                                                 ^------^
+/../data/reentrancy/solidity_contract/35661.sol:46:50: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function min256(uint256 a, uint256 b) internal constant returns (uint256) {
+                                                 ^------^
+/../data/reentrancy/solidity_contract/35661.sol:154:39: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function isPricingStrategy() public constant returns (bool) {
+                                      ^------^
+/../data/reentrancy/solidity_contract/35661.sol:159:45: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function isSane(address crowdsale) public constant returns (bool) {
+                                            ^------^
+/../data/reentrancy/solidity_contract/35661.sol:164:56: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function isPresalePurchase(address purchaser) public constant returns (bool) {
+                                                       ^------^
+/../data/reentrancy/solidity_contract/35661.sol:169:113: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function calculatePrice(uint value, uint weiRaised, uint tokensSold, address msgSender, uint decimals) public constant returns (uint tokenAmount);
+                                                                                                                ^------^
+/../data/reentrancy/solidity_contract/35661.sol:178:37: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function isFinalizeAgent() public constant returns(bool) {
+                                    ^------^
+/../data/reentrancy/solidity_contract/35661.sol:183:28: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function isSane() public constant returns (bool);
+                           ^------^
+/../data/reentrancy/solidity_contract/35661.sol:200:42: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function balanceOf(address who) public constant returns (uint256);
+                                         ^------^
+/../data/reentrancy/solidity_contract/35661.sol:209:61: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function allowance(address owner, address spender) public constant returns (uint256);
+                                                            ^------^
+/../data/reentrancy/solidity_contract/35661.sol:560:42: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function isMinimumGoalReached() public constant returns (bool reached) {
+                                         ^------^
+/../data/reentrancy/solidity_contract/35661.sol:565:37: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function isFinalizerSane() public constant returns (bool sane) {
+                                    ^------^
+/../data/reentrancy/solidity_contract/35661.sol:570:35: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function isPricingSane() public constant returns (bool sane) {
+                                  ^------^
+/../data/reentrancy/solidity_contract/35661.sol:575:30: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function getState() public constant returns (State) {
+                             ^------^
+/../data/reentrancy/solidity_contract/35661.sol:593:33: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function isCrowdsale() public constant returns (bool) {
+                                ^------^
+/../data/reentrancy/solidity_contract/35661.sol:613:103: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function isBreakingCap(uint weiAmount, uint tokenAmount, uint weiRaisedTotal, uint tokensSoldTotal) constant returns (bool limitBroken);
+                                                                                                      ^------^
+/../data/reentrancy/solidity_contract/35661.sol:616:37: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function isCrowdsaleFull() public constant returns (bool);
+                                    ^------^
+/../data/reentrancy/solidity_contract/35661.sol:643:29: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function isToken() public constant returns (bool weAre) {
+                            ^------^
+/../data/reentrancy/solidity_contract/35661.sol:664:38: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function balanceOf(address _owner) constant returns (uint balance) {
+                                     ^------^
+/../data/reentrancy/solidity_contract/35661.sol:681:56: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function allowance(address _owner, address _spender) constant returns (uint remaining) {
+                                                       ^------^
+/../data/reentrancy/solidity_contract/35661.sol:774:30: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function getToken() public constant returns(FractionalERC20) {
+                             ^------^
+/../data/reentrancy/solidity_contract/35661.sol:852:52: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function getClaimAmount(address investor) public constant returns (uint) {
+                                                   ^------^
+/../data/reentrancy/solidity_contract/35661.sol:862:50: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function getClaimLeft(address investor) public constant returns (uint) {
+                                                 ^------^
+/../data/reentrancy/solidity_contract/35661.sol:946:31: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function isPresale() public constant returns (bool) {
+                              ^------^
+
+[91m[-] Cannot compile the contract [0m
+
+====================================================================================================
+[1m[ ] Compiling Solidity contract from the file /../data/reentrancy/solidity_contract/35661.sol ... [0m/../data/reentrancy/solidity_contract/35661.sol:34:47: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function max64(uint64 a, uint64 b) internal constant returns (uint64) {
+                                              ^------^
+/../data/reentrancy/solidity_contract/35661.sol:38:47: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function min64(uint64 a, uint64 b) internal constant returns (uint64) {
+                                              ^------^
+/../data/reentrancy/solidity_contract/35661.sol:42:50: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function max256(uint256 a, uint256 b) internal constant returns (uint256) {
+                                                 ^------^
+/../data/reentrancy/solidity_contract/35661.sol:46:50: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function min256(uint256 a, uint256 b) internal constant returns (uint256) {
+                                                 ^------^
+/../data/reentrancy/solidity_contract/35661.sol:154:39: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function isPricingStrategy() public constant returns (bool) {
+                                      ^------^
+/../data/reentrancy/solidity_contract/35661.sol:159:45: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function isSane(address crowdsale) public constant returns (bool) {
+                                            ^------^
+/../data/reentrancy/solidity_contract/35661.sol:164:56: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function isPresalePurchase(address purchaser) public constant returns (bool) {
+                                                       ^------^
+/../data/reentrancy/solidity_contract/35661.sol:169:113: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function calculatePrice(uint value, uint weiRaised, uint tokensSold, address msgSender, uint decimals) public constant returns (uint tokenAmount);
+                                                                                                                ^------^
+/../data/reentrancy/solidity_contract/35661.sol:178:37: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function isFinalizeAgent() public constant returns(bool) {
+                                    ^------^
+/../data/reentrancy/solidity_contract/35661.sol:183:28: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function isSane() public constant returns (bool);
+                           ^------^
+/../data/reentrancy/solidity_contract/35661.sol:200:42: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function balanceOf(address who) public constant returns (uint256);
+                                         ^------^
+/../data/reentrancy/solidity_contract/35661.sol:209:61: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function allowance(address owner, address spender) public constant returns (uint256);
+                                                            ^------^
+/../data/reentrancy/solidity_contract/35661.sol:560:42: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function isMinimumGoalReached() public constant returns (bool reached) {
+                                         ^------^
+/../data/reentrancy/solidity_contract/35661.sol:565:37: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function isFinalizerSane() public constant returns (bool sane) {
+                                    ^------^
+/../data/reentrancy/solidity_contract/35661.sol:570:35: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function isPricingSane() public constant returns (bool sane) {
+                                  ^------^
+/../data/reentrancy/solidity_contract/35661.sol:575:30: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function getState() public constant returns (State) {
+                             ^------^
+/../data/reentrancy/solidity_contract/35661.sol:593:33: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function isCrowdsale() public constant returns (bool) {
+                                ^------^
+/../data/reentrancy/solidity_contract/35661.sol:613:103: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function isBreakingCap(uint weiAmount, uint tokenAmount, uint weiRaisedTotal, uint tokensSoldTotal) constant returns (bool limitBroken);
+                                                                                                      ^------^
+/../data/reentrancy/solidity_contract/35661.sol:616:37: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function isCrowdsaleFull() public constant returns (bool);
+                                    ^------^
+/../data/reentrancy/solidity_contract/35661.sol:643:29: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function isToken() public constant returns (bool weAre) {
+                            ^------^
+/../data/reentrancy/solidity_contract/35661.sol:664:38: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function balanceOf(address _owner) constant returns (uint balance) {
+                                     ^------^
+/../data/reentrancy/solidity_contract/35661.sol:681:56: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function allowance(address _owner, address _spender) constant returns (uint remaining) {
+                                                       ^------^
+/../data/reentrancy/solidity_contract/35661.sol:774:30: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function getToken() public constant returns(FractionalERC20) {
+                             ^------^
+/../data/reentrancy/solidity_contract/35661.sol:852:52: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function getClaimAmount(address investor) public constant returns (uint) {
+                                                   ^------^
+/../data/reentrancy/solidity_contract/35661.sol:862:50: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function getClaimLeft(address investor) public constant returns (uint) {
+                                                 ^------^
+/../data/reentrancy/solidity_contract/35661.sol:946:31: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function isPresale() public constant returns (bool) {
+                              ^------^
+
+[91m[-] Cannot compile the contract [0m

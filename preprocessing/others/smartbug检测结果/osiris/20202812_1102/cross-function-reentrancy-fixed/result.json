@@ -1,0 +1,35 @@
+{
+  "contract": "cross-function-reentrancy-fixed",
+  "tool": "osiris",
+  "start": 1609172721.613915,
+  "end": 1609172725.9002151,
+  "duration": 4.286300182342529,
+  "analysis": [
+    {
+      "errors": [
+        {
+          "line": 19,
+          "column": 5,
+          "message": "overflow_bugs"
+        },
+        {
+          "line": 12,
+          "column": 5,
+          "message": "concurrency_bug"
+        },
+        {
+          "line": 12,
+          "column": 5,
+          "message": "concurrency_bug"
+        },
+        {
+          "line": 12,
+          "column": 5,
+          "message": "reentrancy_bug"
+        }
+      ],
+      "file": "/../data/reentrancy/solidity_contract/cross-function-reentrancy-fixed.sol",
+      "name": "Owner"
+    }
+  ]
+}

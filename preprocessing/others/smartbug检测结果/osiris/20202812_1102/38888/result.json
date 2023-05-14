@@ -1,0 +1,35 @@
+{
+  "contract": "38888",
+  "tool": "osiris",
+  "start": 1609137164.4053729,
+  "end": 1609137167.826178,
+  "duration": 3.4208052158355713,
+  "analysis": [
+    {
+      "errors": [
+        {
+          "line": 70,
+          "column": 13,
+          "message": "overflow_bugs"
+        },
+        {
+          "line": 76,
+          "column": 14,
+          "message": "reentrancy_bug"
+        }
+      ],
+      "file": "/../data/reentrancy/solidity_contract/38888.sol",
+      "name": "FunFairSale"
+    },
+    {
+      "errors": [],
+      "file": "/../data/reentrancy/solidity_contract/38888.sol",
+      "name": "Owned"
+    },
+    {
+      "errors": [],
+      "file": "/../data/reentrancy/solidity_contract/38888.sol",
+      "name": "TokenReceivable"
+    }
+  ]
+}

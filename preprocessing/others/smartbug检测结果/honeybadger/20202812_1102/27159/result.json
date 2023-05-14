@@ -1,0 +1,14 @@
+{
+  "contract": "27159",
+  "tool": "honeybadger",
+  "start": 1609139972.962256,
+  "end": 1609140053.717696,
+  "duration": 80.75543999671936,
+  "analysis": [
+    {
+      "errors": [],
+      "file": "/../data/reentrancy/solidity_contract/27159.sol",
+      "name": "ERC223Token"
+    }
+  ]
+}

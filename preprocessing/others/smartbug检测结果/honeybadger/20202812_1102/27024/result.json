@@ -1,0 +1,25 @@
+{
+  "contract": "27024",
+  "tool": "honeybadger",
+  "start": 1609200618.360388,
+  "end": 1609200624.407085,
+  "duration": 6.046696901321411,
+  "analysis": [
+    {
+      "errors": [
+        {
+          "line": 70,
+          "column": 9,
+          "message": "uninitialised_struct"
+        },
+        {
+          "line": 67,
+          "column": 9,
+          "message": "uninitialised_struct"
+        }
+      ],
+      "file": "/../data/reentrancy/solidity_contract/27024.sol",
+      "name": "AddressLottery"
+    }
+  ]
+}

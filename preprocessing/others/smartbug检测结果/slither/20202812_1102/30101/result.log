@@ -1,0 +1,57 @@
+INFO:Slither:Compilation warnings/errors on /../data/reentrancy/solidity_contract/30101.sol:
+/../data/reentrancy/solidity_contract/30101.sol:66:5: Warning: Defining constructors as functions with the same name as the contract is deprecated. Use "constructor(...) { ... }" instead.
+    function TelcoinSaleCapEscrow(address _wallet) public payable {
+    ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/30101.sol:89:9: Warning: Invoking events without "emit" prefix is deprecated.
+        Approved(_participant, _weiAmount);
+        ^--------------------------------^
+/../data/reentrancy/solidity_contract/30101.sol:105:9: Warning: Invoking events without "emit" prefix is deprecated.
+        WalletChanged(wallet, _wallet);
+        ^----------------------------^
+/../data/reentrancy/solidity_contract/30101.sol:114:9: Warning: Invoking events without "emit" prefix is deprecated.
+        Closed();
+        ^------^
+/../data/reentrancy/solidity_contract/30101.sol:126:9: Warning: Invoking events without "emit" prefix is deprecated.
+        ValuePlaced(
+        ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/30101.sol:138:9: Warning: Invoking events without "emit" prefix is deprecated.
+        Rejected(_participant);
+        ^--------------------^
+/../data/reentrancy/solidity_contract/30101.sol:150:9: Warning: Invoking events without "emit" prefix is deprecated.
+        OwnershipTransferred(owner, _to);
+        ^------------------------------^
+
+INFO:Detectors:[93m
+TelcoinSaleCapEscrow (/../data/reentrancy/solidity_contract/30101.sol#32-153) has incorrect ERC20 function interface(s):
+	-approve (/../data/reentrancy/solidity_contract/30101.sol#83-91)
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#incorrect-erc20-interface[0m
+INFO:Detectors:[92m
+TelcoinSaleCapEscrow.fallback (/../data/reentrancy/solidity_contract/30101.sol#76-78) should be declared external
+TelcoinSaleCapEscrow.approveMany (/../data/reentrancy/solidity_contract/30101.sol#93-99) should be declared external
+TelcoinSaleCapEscrow.changeWallet (/../data/reentrancy/solidity_contract/30101.sol#101-108) should be declared external
+TelcoinSaleCapEscrow.close (/../data/reentrancy/solidity_contract/30101.sol#110-115) should be declared external
+TelcoinSaleCapEscrow.rejectMany (/../data/reentrancy/solidity_contract/30101.sol#142-146) should be declared external
+TelcoinSaleCapEscrow.transferOwnership (/../data/reentrancy/solidity_contract/30101.sol#148-152) should be declared external
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#public-function-that-could-be-declared-as-external[0m
+INFO:Detectors:[92m
+Detected issues with version pragma in /../data/reentrancy/solidity_contract/30101.sol:
+	- pragma solidity^0.4.18 (/../data/reentrancy/solidity_contract/30101.sol#1): it allows old versions
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#incorrect-version-of-solidity[0m
+INFO:Detectors:[92m
+Low level call in TelcoinSaleCapEscrow.reject (/../data/reentrancy/solidity_contract/30101.sol#133-140):
+	-require(bool)(_participant.call.value(weiAmount)()) /../data/reentrancy/solidity_contract/30101.sol#139
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#low-level-calls[0m
+INFO:Detectors:[92m
+Function 'TelcoinSaleCapEscrow.TelcoinSaleCapEscrow' (/../data/reentrancy/solidity_contract/30101.sol#66-74) is not in mixedCase
+Parameter '_wallet' of TelcoinSaleCapEscrow.TelcoinSaleCapEscrow (/../data/reentrancy/solidity_contract/30101.sol#66) is not in mixedCase
+Parameter '_participant' of TelcoinSaleCapEscrow.approve (/../data/reentrancy/solidity_contract/30101.sol#83) is not in mixedCase
+Parameter '_weiAmount' of TelcoinSaleCapEscrow.approve (/../data/reentrancy/solidity_contract/30101.sol#83) is not in mixedCase
+Parameter '_participants' of TelcoinSaleCapEscrow.approveMany (/../data/reentrancy/solidity_contract/30101.sol#93) is not in mixedCase
+Parameter '_weiAmounts' of TelcoinSaleCapEscrow.approveMany (/../data/reentrancy/solidity_contract/30101.sol#93) is not in mixedCase
+Parameter '_wallet' of TelcoinSaleCapEscrow.changeWallet (/../data/reentrancy/solidity_contract/30101.sol#101) is not in mixedCase
+Parameter '_beneficiary' of TelcoinSaleCapEscrow.placeValue (/../data/reentrancy/solidity_contract/30101.sol#117) is not in mixedCase
+Parameter '_participant' of TelcoinSaleCapEscrow.reject (/../data/reentrancy/solidity_contract/30101.sol#133) is not in mixedCase
+Parameter '_participants' of TelcoinSaleCapEscrow.rejectMany (/../data/reentrancy/solidity_contract/30101.sol#142) is not in mixedCase
+Parameter '_to' of TelcoinSaleCapEscrow.transferOwnership (/../data/reentrancy/solidity_contract/30101.sol#148) is not in mixedCase
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#conformance-to-solidity-naming-conventions[0m
+INFO:Slither:/../data/reentrancy/solidity_contract/30101.sol analyzed (2 contracts), 20 result(s) found

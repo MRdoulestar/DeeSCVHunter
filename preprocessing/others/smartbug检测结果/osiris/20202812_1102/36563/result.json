@@ -1,0 +1,41 @@
+{
+  "contract": "36563",
+  "tool": "osiris",
+  "start": 1609189120.00417,
+  "end": 1609189229.1094642,
+  "duration": 109.1052942276001,
+  "analysis": [
+    {
+      "errors": [],
+      "file": "/../data/reentrancy/solidity_contract/36563.sol",
+      "name": "FishFactory"
+    },
+    {
+      "errors": [
+        {
+          "line": 45,
+          "column": 12,
+          "message": "reentrancy_bug"
+        }
+      ],
+      "file": "/../data/reentrancy/solidity_contract/36563.sol",
+      "name": "FishProxy"
+    },
+    {
+      "errors": [],
+      "file": "/../data/reentrancy/solidity_contract/36563.sol",
+      "name": "Ownable"
+    },
+    {
+      "errors": [
+        {
+          "line": 45,
+          "column": 12,
+          "message": "reentrancy_bug"
+        }
+      ],
+      "file": "/../data/reentrancy/solidity_contract/36563.sol",
+      "name": "SharkProxy"
+    }
+  ]
+}

@@ -1,0 +1,90 @@
+INFO:Slither:Compilation warnings/errors on /../data/reentrancy/solidity_contract/12454.sol:
+/../data/reentrancy/solidity_contract/12454.sol:119:3: Warning: Defining constructors as functions with the same name as the contract is deprecated. Use "constructor(...) { ... }" instead.
+  function RBACWithAdmin()
+  ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/12454.sol:466:55: Warning: Unused function parameter. Remove or comment out the variable name to silence this warning.
+    function tokenFallback (address from, uint value, bytes data) public {
+                                                      ^--------^
+
+INFO:Detectors:[91m
+Reentrancy in FacultyPool._withdraw (/../data/reentrancy/solidity_contract/12454.sol#388-421):
+	External calls:
+	- require(bool)(ta.token.transfer(_beneficiary,tokenAmount)) (/../data/reentrancy/solidity_contract/12454.sol#416)
+	External calls sending eth:
+	- _beneficiary.transfer(ethAmount) (/../data/reentrancy/solidity_contract/12454.sol#405)
+	State variables written after the call(s):
+	- tokenAllocationMap (/../data/reentrancy/solidity_contract/12454.sol#417)
+Reentrancy in FacultyPool.submitPool (/../data/reentrancy/solidity_contract/12454.sol#343-361):
+	External calls:
+	- require(bool,string)(receiverAddress.call.value(weiAmount).gas(gasleft()().sub(5000))(),Error submitting pool to receivingAddress) (/../data/reentrancy/solidity_contract/12454.sol#353)
+	State variables written after the call(s):
+	- contractStage (/../data/reentrancy/solidity_contract/12454.sol#359)
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#reentrancy-vulnerabilities[0m
+INFO:Detectors:[91m
+RBAC.roles (/../data/reentrancy/solidity_contract/12454.sol#45) is never initialized. It is used in:
+	- checkRole (/../data/reentrancy/solidity_contract/12454.sol#51-56)
+	- hasRole (/../data/reentrancy/solidity_contract/12454.sol#59-65)
+	- addRole (/../data/reentrancy/solidity_contract/12454.sol#68-73)
+	- removeRole (/../data/reentrancy/solidity_contract/12454.sol#76-81)
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#uninitialized-state-variables[0m
+INFO:Detectors:[93m
+Reentrancy in FacultyPool.enableTokenWithdrawals (/../data/reentrancy/solidity_contract/12454.sol#431-453):
+	External calls:
+	- amount = ta.token.balanceOf(this).sub(ta.balanceRemaining) (/../data/reentrancy/solidity_contract/12454.sol#442)
+	- require(bool)(ta.token.transfer(owner,feeAmount)) (/../data/reentrancy/solidity_contract/12454.sol#447)
+	- amount = ta.token.balanceOf(this).sub(ta.balanceRemaining) (/../data/reentrancy/solidity_contract/12454.sol#450)
+	- ta.balanceRemaining = ta.token.balanceOf(this) (/../data/reentrancy/solidity_contract/12454.sol#451)
+	State variables written after the call(s):
+	- tokenAllocationMap (/../data/reentrancy/solidity_contract/12454.sol#451)
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#reentrancy-vulnerabilities-1[0m
+INFO:Detectors:[92m
+Reentrancy in FacultyPool.submitPool (/../data/reentrancy/solidity_contract/12454.sol#343-361):
+	External calls:
+	- require(bool,string)(receiverAddress.call.value(weiAmount).gas(gasleft()().sub(5000))(),Error submitting pool to receivingAddress) (/../data/reentrancy/solidity_contract/12454.sol#353)
+	State variables written after the call(s):
+	- ethRefundAmount (/../data/reentrancy/solidity_contract/12454.sol#357)
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#reentrancy-vulnerabilities-2[0m
+INFO:Detectors:[92m
+RBACWithAdmin.adminAddRole (/../data/reentrancy/solidity_contract/12454.sol#126-131) should be declared external
+RBACWithAdmin.adminRemoveRole (/../data/reentrancy/solidity_contract/12454.sol#134-139) should be declared external
+ERC20.balanceOf (/../data/reentrancy/solidity_contract/12454.sol#178) should be declared external
+ERC20.transfer (/../data/reentrancy/solidity_contract/12454.sol#179) should be declared external
+FacultyPool.fallback (/../data/reentrancy/solidity_contract/12454.sol#289-296) should be declared external
+FacultyPool.getCurrentBeneficiaryCap (/../data/reentrancy/solidity_contract/12454.sol#328-330) should be declared external
+FacultyPool.getPoolDetails (/../data/reentrancy/solidity_contract/12454.sol#332-335) should be declared external
+FacultyPool.closePool (/../data/reentrancy/solidity_contract/12454.sol#338-341) should be declared external
+FacultyPool.submitPool (/../data/reentrancy/solidity_contract/12454.sol#343-361) should be declared external
+FacultyPool.viewBeneficiaryDetails (/../data/reentrancy/solidity_contract/12454.sol#363-366) should be declared external
+FacultyPool.withdraw (/../data/reentrancy/solidity_contract/12454.sol#368-379) should be declared external
+FacultyPool.withdrawFor (/../data/reentrancy/solidity_contract/12454.sol#382-386) should be declared external
+FacultyPool.setReceiver (/../data/reentrancy/solidity_contract/12454.sol#423-427) should be declared external
+FacultyPool.enableTokenWithdrawals (/../data/reentrancy/solidity_contract/12454.sol#431-453) should be declared external
+FacultyPool.checkAvailableTokens (/../data/reentrancy/solidity_contract/12454.sol#456-463) should be declared external
+FacultyPool.tokenFallback (/../data/reentrancy/solidity_contract/12454.sol#466-468) should be declared external
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#public-function-that-could-be-declared-as-external[0m
+INFO:Detectors:[92m
+Low level call in FacultyPool.submitPool (/../data/reentrancy/solidity_contract/12454.sol#343-361):
+	-require(bool,string)(receiverAddress.call.value(weiAmount).gas(gasleft()().sub(5000))(),Error submitting pool to receivingAddress) /../data/reentrancy/solidity_contract/12454.sol#353
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#low-level-calls[0m
+INFO:Detectors:[92m
+Function 'RBACWithAdmin.RBACWithAdmin' (/../data/reentrancy/solidity_contract/12454.sol#119-123) is not in mixedCase
+Parameter '_admins' of FacultyPool. (/../data/reentrancy/solidity_contract/12454.sol#272) is not in mixedCase
+Parameter '_poolCap' of FacultyPool. (/../data/reentrancy/solidity_contract/12454.sol#272) is not in mixedCase
+Parameter '_beneficiaryCap' of FacultyPool. (/../data/reentrancy/solidity_contract/12454.sol#272) is not in mixedCase
+Parameter '_receiverAddr' of FacultyPool. (/../data/reentrancy/solidity_contract/12454.sol#272) is not in mixedCase
+Parameter '_feePct' of FacultyPool. (/../data/reentrancy/solidity_contract/12454.sol#272) is not in mixedCase
+Function 'FacultyPool._receiveDeposit' (/../data/reentrancy/solidity_contract/12454.sol#299-318) is not in mixedCase
+Function 'FacultyPool._receiveRefund' (/../data/reentrancy/solidity_contract/12454.sol#321-326) is not in mixedCase
+Parameter '_tokenAddress' of FacultyPool.withdraw (/../data/reentrancy/solidity_contract/12454.sol#368) is not in mixedCase
+Parameter '_beneficiary' of FacultyPool.withdrawFor (/../data/reentrancy/solidity_contract/12454.sol#382) is not in mixedCase
+Function 'FacultyPool._withdraw' (/../data/reentrancy/solidity_contract/12454.sol#388-421) is not in mixedCase
+Parameter '_beneficiary' of FacultyPool._withdraw (/../data/reentrancy/solidity_contract/12454.sol#388) is not in mixedCase
+Parameter '_tokenAddr' of FacultyPool._withdraw (/../data/reentrancy/solidity_contract/12454.sol#388) is not in mixedCase
+Parameter '_tokenAddr' of FacultyPool.enableTokenWithdrawals (/../data/reentrancy/solidity_contract/12454.sol#431) is not in mixedCase
+Parameter '_useAsDefault' of FacultyPool.enableTokenWithdrawals (/../data/reentrancy/solidity_contract/12454.sol#431) is not in mixedCase
+Function 'FacultyPool._toPct' (/../data/reentrancy/solidity_contract/12454.sol#471-473) is not in mixedCase
+Function 'FacultyPool._applyPct' (/../data/reentrancy/solidity_contract/12454.sol#476-478) is not in mixedCase
+Constant 'FacultyPool.gasLimit' (/../data/reentrancy/solidity_contract/12454.sol#194) is not in UPPER_CASE_WITH_UNDERSCORES
+Constant 'FacultyPool.minContribution' (/../data/reentrancy/solidity_contract/12454.sol#196) is not in UPPER_CASE_WITH_UNDERSCORES
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#conformance-to-solidity-naming-conventions[0m
+INFO:Slither:/../data/reentrancy/solidity_contract/12454.sol analyzed (6 contracts), 41 result(s) found

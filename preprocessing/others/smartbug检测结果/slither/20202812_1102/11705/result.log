@@ -1,0 +1,83 @@
+INFO:Detectors:[92m
+ERC20Vault.getLockedValue has external calls inside a loop:
+	- i < investmentRecordList.getInvestmentRecordListLength() (/../data/reentrancy/solidity_contract/11705.sol#345-355)
+ERC20Vault.getLockedValue has external calls inside a loop:
+	- investmentRecord = investmentRecordList.getInvestmentRecord(i) (/../data/reentrancy/solidity_contract/11705.sol#346)
+ERC20Vault.getLockedValue has external calls inside a loop:
+	- investmentRecord.getToken() == token (/../data/reentrancy/solidity_contract/11705.sol#347-354)
+ERC20Vault.getLockedValue has external calls inside a loop:
+	- investmentRecord.expiredLockPeriod() (/../data/reentrancy/solidity_contract/11705.sol#348-353)
+ERC20Vault.getLockedValue has external calls inside a loop:
+	- investmentRecordList.popRecord(investmentRecord) (/../data/reentrancy/solidity_contract/11705.sol#349)
+ERC20Vault.getLockedValue has external calls inside a loop:
+	- valueToAdd = investmentRecord.getValue() (/../data/reentrancy/solidity_contract/11705.sol#351)
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation/_edit#calls-inside-a-loop[0m
+INFO:Detectors:[92m
+Reentrancy in Erc20Wallet.depositToken (/../data/reentrancy/solidity_contract/11705.sol#117-121):
+	External calls:
+	- require(bool)(ERC20(token).transferFrom(msg.sender,this,amount)) (/../data/reentrancy/solidity_contract/11705.sol#119)
+	State variables written after the call(s):
+	- tokens (/../data/reentrancy/solidity_contract/11705.sol#120)
+	- totalDeposited (/../data/reentrancy/solidity_contract/11705.sol#120)
+Reentrancy in SplitErc20Payment.depositToken (/../data/reentrancy/solidity_contract/11705.sol#162-165):
+	External calls:
+	- super.depositToken(token,amount) (/../data/reentrancy/solidity_contract/11705.sol#163)
+	State variables written after the call(s):
+	- payees (/../data/reentrancy/solidity_contract/11705.sol#164)
+	- shares (/../data/reentrancy/solidity_contract/11705.sol#164)
+	- totalShares (/../data/reentrancy/solidity_contract/11705.sol#164)
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#reentrancy-vulnerabilities-2[0m
+INFO:Detectors:[92m
+ERC20Basic.totalSupply (/../data/reentrancy/solidity_contract/11705.sol#45) should be declared external
+ERC20Basic.balanceOf (/../data/reentrancy/solidity_contract/11705.sol#46) should be declared external
+ERC20Basic.transfer (/../data/reentrancy/solidity_contract/11705.sol#47) should be declared external
+ERC20.allowance (/../data/reentrancy/solidity_contract/11705.sol#54-55) should be declared external
+ERC20.transferFrom (/../data/reentrancy/solidity_contract/11705.sol#57-58) should be declared external
+ERC20.approve (/../data/reentrancy/solidity_contract/11705.sol#60) should be declared external
+Erc20Wallet.fallback (/../data/reentrancy/solidity_contract/11705.sol#76-78) should be declared external
+Erc20Wallet.withdraw (/../data/reentrancy/solidity_contract/11705.sol#112-114) should be declared external
+SplitErc20Payment.withdraw (/../data/reentrancy/solidity_contract/11705.sol#146-148) should be declared external
+Erc20Wallet.balanceOf (/../data/reentrancy/solidity_contract/11705.sol#126-128) should be declared external
+ERC20Vault.claim (/../data/reentrancy/solidity_contract/11705.sol#358-364) should be declared external
+SplitErc20Payment.claim (/../data/reentrancy/solidity_contract/11705.sol#184-186) should be declared external
+Ownable.renounceOwnership (/../data/reentrancy/solidity_contract/11705.sol#242-245) should be declared external
+Ownable.transferOwnership (/../data/reentrancy/solidity_contract/11705.sol#248-250) should be declared external
+InvestmentRecordList.getInvestmentRecord (/../data/reentrancy/solidity_contract/11705.sol#266-268) should be declared external
+InvestmentRecordList.getInvestmentRecordListLength (/../data/reentrancy/solidity_contract/11705.sol#269-271) should be declared external
+InvestmentRecordList.pushRecord (/../data/reentrancy/solidity_contract/11705.sol#273-275) should be declared external
+InvestmentRecordList.popRecord (/../data/reentrancy/solidity_contract/11705.sol#277-289) should be declared external
+InvestmentRecord.expiredLockPeriod (/../data/reentrancy/solidity_contract/11705.sol#317-319) should be declared external
+InvestmentRecord.getValue (/../data/reentrancy/solidity_contract/11705.sol#321-323) should be declared external
+InvestmentRecord.getToken (/../data/reentrancy/solidity_contract/11705.sol#325-327) should be declared external
+ERC20Vault.depositTokenToVault (/../data/reentrancy/solidity_contract/11705.sol#374-380) should be declared external
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#public-function-that-could-be-declared-as-external[0m
+INFO:Detectors:[92m
+Detected issues with version pragma in /../data/reentrancy/solidity_contract/11705.sol:
+	- pragma solidity^0.4.23 (/../data/reentrancy/solidity_contract/11705.sol#1): it allows old versions
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#incorrect-version-of-solidity[0m
+INFO:Detectors:[92m
+Low level call in Erc20Wallet.commonWithdraw (/../data/reentrancy/solidity_contract/11705.sol#94-107):
+	-require(bool)(msg.sender.call.value(value)()) /../data/reentrancy/solidity_contract/11705.sol#98-101
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#low-level-calls[0m
+INFO:Detectors:[92m
+Parameter '' of SplitErc20Payment.withdraw (/../data/reentrancy/solidity_contract/11705.sol#146) is not in mixedCase
+Parameter '' of SplitErc20Payment.withdrawToken (/../data/reentrancy/solidity_contract/11705.sol#143) is not in mixedCase
+Parameter '_scope_0' of SplitErc20Payment.withdrawToken (/../data/reentrancy/solidity_contract/11705.sol#143) is not in mixedCase
+Parameter '_payee' of SplitErc20Payment.addPayee (/../data/reentrancy/solidity_contract/11705.sol#198) is not in mixedCase
+Parameter '_shares' of SplitErc20Payment.addPayee (/../data/reentrancy/solidity_contract/11705.sol#198) is not in mixedCase
+Parameter '_payee' of SplitErc20Payment.addToPayeeBalance (/../data/reentrancy/solidity_contract/11705.sol#208) is not in mixedCase
+Parameter '_shares' of SplitErc20Payment.addToPayeeBalance (/../data/reentrancy/solidity_contract/11705.sol#208) is not in mixedCase
+Parameter '_newOwner' of Ownable.transferOwnership (/../data/reentrancy/solidity_contract/11705.sol#248) is not in mixedCase
+Function 'Ownable._transferOwnership' (/../data/reentrancy/solidity_contract/11705.sol#253-257) is not in mixedCase
+Parameter '_newOwner' of Ownable._transferOwnership (/../data/reentrancy/solidity_contract/11705.sol#253) is not in mixedCase
+Parameter '_investmentRecord' of InvestmentRecordList.pushRecord (/../data/reentrancy/solidity_contract/11705.sol#273) is not in mixedCase
+Parameter '_investmentRecord' of InvestmentRecordList.popRecord (/../data/reentrancy/solidity_contract/11705.sol#277) is not in mixedCase
+Parameter '_investmentRecord' of InvestmentRecordList.getIndex (/../data/reentrancy/solidity_contract/11705.sol#291) is not in mixedCase
+Parameter '_token' of InvestmentRecord. (/../data/reentrancy/solidity_contract/11705.sol#310) is not in mixedCase
+Parameter '_timeStamp' of InvestmentRecord. (/../data/reentrancy/solidity_contract/11705.sol#310) is not in mixedCase
+Parameter '_lockPeriod' of InvestmentRecord. (/../data/reentrancy/solidity_contract/11705.sol#310) is not in mixedCase
+Parameter '_value' of InvestmentRecord. (/../data/reentrancy/solidity_contract/11705.sol#310) is not in mixedCase
+Parameter '' of ERC20Vault.withdrawToken (/../data/reentrancy/solidity_contract/11705.sol#335) is not in mixedCase
+Parameter '_scope_0' of ERC20Vault.withdrawToken (/../data/reentrancy/solidity_contract/11705.sol#335) is not in mixedCase
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#conformance-to-solidity-naming-conventions[0m
+INFO:Slither:/../data/reentrancy/solidity_contract/11705.sol analyzed (9 contracts), 51 result(s) found

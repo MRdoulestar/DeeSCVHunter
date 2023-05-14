@@ -1,0 +1,125 @@
+INFO:Slither:Compilation warnings/errors on /../data/reentrancy/solidity_contract/36563.sol:
+/../data/reentrancy/solidity_contract/36563.sol:10:3: Warning: Defining constructors as functions with the same name as the contract is deprecated. Use "constructor(...) { ... }" instead.
+  function Ownable() {
+  ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/36563.sol:35:3: Warning: Defining constructors as functions with the same name as the contract is deprecated. Use "constructor(...) { ... }" instead.
+  function SharkProxy() {
+  ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/36563.sol:68:3: Warning: Defining constructors as functions with the same name as the contract is deprecated. Use "constructor(...) { ... }" instead.
+  function FishProxy(address _owner, address _lockAddr) {
+  ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/36563.sol:47:7: Warning: Invoking events without "emit" prefix is deprecated.
+      Withdrawal(_destination, _value, _data);
+      ^-------------------------------------^
+/../data/reentrancy/solidity_contract/36563.sol:53:5: Warning: Invoking events without "emit" prefix is deprecated.
+    Deposit(msg.sender, msg.value);
+    ^----------------------------^
+/../data/reentrancy/solidity_contract/36563.sol:92:22: Warning: "sha3" has been deprecated in favour of "keccak256"
+    assert(ecrecover(sha3(uint8(0), target, newOwner), v, _r, _s) == lockAddr);
+                     ^------------------------------^
+/../data/reentrancy/solidity_contract/36563.sol:92:22: Warning: This function only accepts a single "bytes" argument. Please use "abi.encodePacked(...)" or a similar function to encode the data.
+    assert(ecrecover(sha3(uint8(0), target, newOwner), v, _r, _s) == lockAddr);
+                     ^------------------------------^
+/../data/reentrancy/solidity_contract/36563.sol:103:38: Warning: Using contract member "balance" inherited from the address type is deprecated. Convert the contract to "address" type to access the member, for example use "address(contract).balance" instead.
+    assert(lockAddr == address(0) || this.balance <= 1e17);
+                                     ^----------^
+/../data/reentrancy/solidity_contract/36563.sol:104:5: Warning: Invoking events without "emit" prefix is deprecated.
+    Deposit(msg.sender, msg.value);
+    ^----------------------------^
+/../data/reentrancy/solidity_contract/36563.sol:116:5: Warning: Invoking events without "emit" prefix is deprecated.
+    AccountCreated(proxy);
+    ^-------------------^
+/../data/reentrancy/solidity_contract/36563.sol:10:3: Warning: No visibility specified. Defaulting to "public". 
+  function Ownable() {
+  ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/36563.sol:23:3: Warning: No visibility specified. Defaulting to "public". 
+  function transferOwnership(address newOwner) onlyOwner {
+  ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/36563.sol:35:3: Warning: No visibility specified. Defaulting to "public". 
+  function SharkProxy() {
+  ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/36563.sol:39:3: Warning: No visibility specified. Defaulting to "public". 
+  function getOwner() constant returns (address) {
+  ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/36563.sol:43:3: Warning: No visibility specified. Defaulting to "public". 
+  function forward(address _destination, uint256 _value, bytes _data) onlyOwner {
+  ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/36563.sol:52:3: Warning: No visibility specified. Defaulting to "public". 
+  function() payable {
+  ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/36563.sol:57:3: Warning: No visibility specified. Defaulting to "public". 
+  function tokenFallback(address _from, uint _value, bytes _data) {
+  ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/36563.sol:57:26: Warning: Unused function parameter. Remove or comment out the variable name to silence this warning.
+  function tokenFallback(address _from, uint _value, bytes _data) {
+                         ^-----------^
+/../data/reentrancy/solidity_contract/36563.sol:57:41: Warning: Unused function parameter. Remove or comment out the variable name to silence this warning.
+  function tokenFallback(address _from, uint _value, bytes _data) {
+                                        ^---------^
+/../data/reentrancy/solidity_contract/36563.sol:57:54: Warning: Unused function parameter. Remove or comment out the variable name to silence this warning.
+  function tokenFallback(address _from, uint _value, bytes _data) {
+                                                     ^---------^
+/../data/reentrancy/solidity_contract/36563.sol:68:3: Warning: No visibility specified. Defaulting to "public". 
+  function FishProxy(address _owner, address _lockAddr) {
+  ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/36563.sol:73:3: Warning: No visibility specified. Defaulting to "public". 
+  function isLocked() constant returns (bool) {
+  ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/36563.sol:77:3: Warning: No visibility specified. Defaulting to "public". 
+  function unlock(bytes32 _r, bytes32 _s, bytes32 _pl) {
+  ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/36563.sol:77:43: Warning: Unused function parameter. Remove or comment out the variable name to silence this warning.
+  function unlock(bytes32 _r, bytes32 _s, bytes32 _pl) {
+                                          ^---------^
+/../data/reentrancy/solidity_contract/36563.sol:99:3: Warning: No visibility specified. Defaulting to "public". 
+  function() payable {
+  ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/36563.sol:114:3: Warning: No visibility specified. Defaulting to "public". 
+  function create(address _owner, address _lockAddr) {
+  ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/36563.sol:57:3: Warning: Function state mutability can be restricted to pure
+  function tokenFallback(address _from, uint _value, bytes _data) {
+  ^ (Relevant source part starts here and spans across multiple lines).
+
+INFO:Detectors:[92m
+FishProxy.unlock uses assembly (/../data/reentrancy/solidity_contract/36563.sol#77-96)
+	- /../data/reentrancy/solidity_contract/36563.sol#83-89
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#assembly-usage[0m
+INFO:Detectors:[92m
+Deprecated standard detected @ /../data/reentrancy/solidity_contract/36563.sol#92:
+	- Usage of "sha3()" should be replaced with "keccak256()"
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#deprecated-standards[0m
+INFO:Detectors:[92m
+Ownable.transferOwnership (/../data/reentrancy/solidity_contract/36563.sol#23-26) should be declared external
+SharkProxy.getOwner (/../data/reentrancy/solidity_contract/36563.sol#39-41) should be declared external
+SharkProxy.forward (/../data/reentrancy/solidity_contract/36563.sol#43-49) should be declared external
+SharkProxy.fallback (/../data/reentrancy/solidity_contract/36563.sol#52-54) should be declared external
+FishProxy.fallback (/../data/reentrancy/solidity_contract/36563.sol#99-105) should be declared external
+SharkProxy.tokenFallback (/../data/reentrancy/solidity_contract/36563.sol#57-58) should be declared external
+FishProxy.isLocked (/../data/reentrancy/solidity_contract/36563.sol#73-75) should be declared external
+FishProxy.unlock (/../data/reentrancy/solidity_contract/36563.sol#77-96) should be declared external
+FishFactory.create (/../data/reentrancy/solidity_contract/36563.sol#114-117) should be declared external
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#public-function-that-could-be-declared-as-external[0m
+INFO:Detectors:[92m
+Detected issues with version pragma in /../data/reentrancy/solidity_contract/36563.sol:
+	- pragma solidity^0.4.11 (/../data/reentrancy/solidity_contract/36563.sol#1): it allows old versions
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#incorrect-version-of-solidity[0m
+INFO:Detectors:[92m
+Low level call in SharkProxy.forward (/../data/reentrancy/solidity_contract/36563.sol#43-49):
+	-assert(bool)(_destination.call.value(_value)(_data)) /../data/reentrancy/solidity_contract/36563.sol#45
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#low-level-calls[0m
+INFO:Detectors:[92m
+Function 'Ownable.Ownable' (/../data/reentrancy/solidity_contract/36563.sol#10-12) is not in mixedCase
+Function 'SharkProxy.SharkProxy' (/../data/reentrancy/solidity_contract/36563.sol#35-37) is not in mixedCase
+Parameter '_destination' of SharkProxy.forward (/../data/reentrancy/solidity_contract/36563.sol#43) is not in mixedCase
+Parameter '_value' of SharkProxy.forward (/../data/reentrancy/solidity_contract/36563.sol#43) is not in mixedCase
+Parameter '_data' of SharkProxy.forward (/../data/reentrancy/solidity_contract/36563.sol#43) is not in mixedCase
+Function 'FishProxy.FishProxy' (/../data/reentrancy/solidity_contract/36563.sol#68-71) is not in mixedCase
+Parameter '_owner' of FishProxy.FishProxy (/../data/reentrancy/solidity_contract/36563.sol#68) is not in mixedCase
+Parameter '_lockAddr' of FishProxy.FishProxy (/../data/reentrancy/solidity_contract/36563.sol#68) is not in mixedCase
+Parameter '_r' of FishProxy.unlock (/../data/reentrancy/solidity_contract/36563.sol#77) is not in mixedCase
+Parameter '_s' of FishProxy.unlock (/../data/reentrancy/solidity_contract/36563.sol#77) is not in mixedCase
+Parameter '_owner' of FishFactory.create (/../data/reentrancy/solidity_contract/36563.sol#114) is not in mixedCase
+Parameter '_lockAddr' of FishFactory.create (/../data/reentrancy/solidity_contract/36563.sol#114) is not in mixedCase
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#conformance-to-solidity-naming-conventions[0m
+INFO:Slither:/../data/reentrancy/solidity_contract/36563.sol analyzed (4 contracts), 25 result(s) found

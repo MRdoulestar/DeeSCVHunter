@@ -1,0 +1,20 @@
+{
+  "contract": "9221",
+  "tool": "honeybadger",
+  "start": 1609163617.846451,
+  "end": 1609163623.4470131,
+  "duration": 5.60056209564209,
+  "analysis": [
+    {
+      "errors": [
+        {
+          "line": 17,
+          "column": 4,
+          "message": "hidden_state_update"
+        }
+      ],
+      "file": "/../data/reentrancy/solidity_contract/9221.sol",
+      "name": "EtherBet"
+    }
+  ]
+}

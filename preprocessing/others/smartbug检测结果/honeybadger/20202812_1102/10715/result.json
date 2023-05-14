@@ -1,0 +1,34 @@
+{
+  "contract": "10715",
+  "tool": "honeybadger",
+  "start": 1609194918.609482,
+  "end": 1609195475.75053,
+  "duration": 557.1410479545593,
+  "analysis": [
+    {
+      "errors": [],
+      "file": "/../data/reentrancy/solidity_contract/10715.sol",
+      "name": "AtripToken"
+    },
+    {
+      "errors": [],
+      "file": "/../data/reentrancy/solidity_contract/10715.sol",
+      "name": "BasicToken"
+    },
+    {
+      "errors": [],
+      "file": "/../data/reentrancy/solidity_contract/10715.sol",
+      "name": "ERC827Token"
+    },
+    {
+      "errors": [],
+      "file": "/../data/reentrancy/solidity_contract/10715.sol",
+      "name": "SafeMath"
+    },
+    {
+      "errors": [],
+      "file": "/../data/reentrancy/solidity_contract/10715.sol",
+      "name": "StandardToken"
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "contract": "18170",
+  "tool": "osiris",
+  "start": 1609213148.791745,
+  "end": 1609213177.105015,
+  "duration": 28.313270092010498,
+  "analysis": [
+    {
+      "errors": [],
+      "file": "/../data/reentrancy/solidity_contract/18170.sol",
+      "name": "A2ACrowdsale"
+    }
+  ]
+}

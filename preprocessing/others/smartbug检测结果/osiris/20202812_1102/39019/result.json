@@ -1,0 +1,41 @@
+{
+  "contract": "39019",
+  "tool": "osiris",
+  "start": 1609194841.509436,
+  "end": 1609194915.091501,
+  "duration": 73.58206510543823,
+  "analysis": [
+    {
+      "errors": [
+        {
+          "line": 45,
+          "column": 5,
+          "message": "overflow_bugs"
+        },
+        {
+          "line": 43,
+          "column": 5,
+          "message": "overflow_bugs"
+        },
+        {
+          "line": 57,
+          "column": 5,
+          "message": "underflow_bugs"
+        }
+      ],
+      "file": "/../data/reentrancy/solidity_contract/39019.sol",
+      "name": "TokenPool"
+    },
+    {
+      "errors": [
+        {
+          "line": 101,
+          "column": 5,
+          "message": "overflow_bugs"
+        }
+      ],
+      "file": "/../data/reentrancy/solidity_contract/39019.sol",
+      "name": "TokenPoolList"
+    }
+  ]
+}

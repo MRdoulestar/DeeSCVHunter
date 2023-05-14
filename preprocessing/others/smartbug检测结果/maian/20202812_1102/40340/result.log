@@ -1,0 +1,83 @@
+====================================================================================================
+[1m[ ] Compiling Solidity contract from the file /../data/reentrancy/solidity_contract/40340.sol ... [0m/../data/reentrancy/solidity_contract/40340.sol:62:39: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function getAccountID(address user) constant returns(uint) {
+                                      ^------^
+/../data/reentrancy/solidity_contract/40340.sol:66:39: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function getAccount(uint accountID) constant returns(address) {
+                                      ^------^
+/../data/reentrancy/solidity_contract/40340.sol:92:55: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function getFunds(address user, bool onlyAvailable) constant returns(int) {
+                                                      ^------^
+/../data/reentrancy/solidity_contract/40340.sol:104:47: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function getFundsAndAvailable(address user) constant returns(int, int) {
+                                              ^------^
+/../data/reentrancy/solidity_contract/40340.sol:136:30: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function getMarketMakers() constant returns(string, string, string, string, string, string) {
+                             ^------^
+/../data/reentrancy/solidity_contract/40340.sol:144:34: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function getMarketMakerFunds() constant returns(int, int, int, int, int, int) {
+                                 ^------^
+/../data/reentrancy/solidity_contract/40340.sol:152:29: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function getOptionChain() constant returns (uint, string, uint, uint, bytes32, address) {
+                            ^------^
+/../data/reentrancy/solidity_contract/40340.sol:156:36: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function getMarket(address user) constant returns(uint[], int[], int[], int[]) {
+                                   ^------^
+/../data/reentrancy/solidity_contract/40340.sol:207:67: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function getMoneyness(int strike, uint settlement, uint margin) constant returns(int) {
+                                                                  ^------^
+
+[91m[-] Cannot compile the contract [0m
+
+====================================================================================================
+[1m[ ] Compiling Solidity contract from the file /../data/reentrancy/solidity_contract/40340.sol ... [0m/../data/reentrancy/solidity_contract/40340.sol:62:39: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function getAccountID(address user) constant returns(uint) {
+                                      ^------^
+/../data/reentrancy/solidity_contract/40340.sol:66:39: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function getAccount(uint accountID) constant returns(address) {
+                                      ^------^
+/../data/reentrancy/solidity_contract/40340.sol:92:55: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function getFunds(address user, bool onlyAvailable) constant returns(int) {
+                                                      ^------^
+/../data/reentrancy/solidity_contract/40340.sol:104:47: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function getFundsAndAvailable(address user) constant returns(int, int) {
+                                              ^------^
+/../data/reentrancy/solidity_contract/40340.sol:136:30: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function getMarketMakers() constant returns(string, string, string, string, string, string) {
+                             ^------^
+/../data/reentrancy/solidity_contract/40340.sol:144:34: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function getMarketMakerFunds() constant returns(int, int, int, int, int, int) {
+                                 ^------^
+/../data/reentrancy/solidity_contract/40340.sol:152:29: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function getOptionChain() constant returns (uint, string, uint, uint, bytes32, address) {
+                            ^------^
+/../data/reentrancy/solidity_contract/40340.sol:156:36: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function getMarket(address user) constant returns(uint[], int[], int[], int[]) {
+                                   ^------^
+/../data/reentrancy/solidity_contract/40340.sol:207:67: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+
+[91m[-] Cannot compile the contract [0m
+
+====================================================================================================
+[1m[ ] Compiling Solidity contract from the file /../data/reentrancy/solidity_contract/40340.sol ... [0m/../data/reentrancy/solidity_contract/40340.sol:62:39: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function getAccountID(address user) constant returns(uint) {
+                                      ^------^
+/../data/reentrancy/solidity_contract/40340.sol:66:39: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function getAccount(uint accountID) constant returns(address) {
+                                      ^------^
+/../data/reentrancy/solidity_contract/40340.sol:92:55: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function getFunds(address user, bool onlyAvailable) constant returns(int) {
+                                                      ^------^
+/../data/reentrancy/solidity_contract/40340.sol:104:47: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function getFundsAndAvailable(address user) constant returns(int, int) {
+                                              ^------^
+/../data/reentrancy/solidity_contract/40340.sol:136:30: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function getMarketMakers() constant returns(string, string, string, string, string, string) {
+                             ^------^
+/../data/reentrancy/solidity_contract/40340.sol:144:34: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function getMarketMakerFunds() constant returns(int, int, int, int, int, int) {
+                                 ^------^
+/../data/reentrancy/solidity_contract/40340.sol:152:29: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function getOptionChain() constant returns (uint, string, uint, uint, bytes32, address) {
+
+[91m[-] Cannot compile the contract [0m

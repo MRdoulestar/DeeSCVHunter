@@ -1,0 +1,14 @@
+{
+  "contract": "24007",
+  "tool": "honeybadger",
+  "start": 1609197615.137702,
+  "end": 1609197617.5250251,
+  "duration": 2.3873231410980225,
+  "analysis": [
+    {
+      "errors": [],
+      "file": "/../data/reentrancy/solidity_contract/24007.sol",
+      "name": "GetSomeEther"
+    }
+  ]
+}

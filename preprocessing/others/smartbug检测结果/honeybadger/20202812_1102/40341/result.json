@@ -1,0 +1,19 @@
+{
+  "contract": "40341",
+  "tool": "honeybadger",
+  "start": 1609169194.6554098,
+  "end": 1609169281.6158311,
+  "duration": 86.96042132377625,
+  "analysis": [
+    {
+      "errors": [],
+      "file": "/../data/reentrancy/solidity_contract/40341.sol",
+      "name": "CarefulSenderMixin"
+    },
+    {
+      "errors": [],
+      "file": "/../data/reentrancy/solidity_contract/40341.sol",
+      "name": "ExposedInternalsForTesting"
+    }
+  ]
+}

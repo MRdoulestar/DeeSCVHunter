@@ -1,0 +1,19 @@
+{
+  "contract": "3270",
+  "tool": "honeybadger",
+  "start": 1609180357.993011,
+  "end": 1609180365.721144,
+  "duration": 7.728132963180542,
+  "analysis": [
+    {
+      "errors": [],
+      "file": "/../data/reentrancy/solidity_contract/3270.sol",
+      "name": "Owned"
+    },
+    {
+      "errors": [],
+      "file": "/../data/reentrancy/solidity_contract/3270.sol",
+      "name": "PwnFoMo3D"
+    }
+  ]
+}

@@ -1,0 +1,28 @@
+INFO:Detectors:[91m
+MiddleSaleService.buyFST0 (/../data/reentrancy/solidity_contract/1710.sol#45-56) sends eth to arbitrary user
+	Dangerous calls:
+	- require(bool)(receiver.send(tmpEthBalance)) (/../data/reentrancy/solidity_contract/1710.sol#54)
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#functions-that-send-ether-to-arbitrary-destinations[0m
+INFO:Detectors:[92m
+ERC20.balanceOf (/../data/reentrancy/solidity_contract/1710.sol#4) should be declared external
+ERC20.allowance (/../data/reentrancy/solidity_contract/1710.sol#5) should be declared external
+ERC20.transfer (/../data/reentrancy/solidity_contract/1710.sol#6) should be declared external
+ERC20.transferFrom (/../data/reentrancy/solidity_contract/1710.sol#7) should be declared external
+ERC20.approve (/../data/reentrancy/solidity_contract/1710.sol#8) should be declared external
+MiddleSaleService.buyFST (/../data/reentrancy/solidity_contract/1710.sol#58-60) should be declared external
+MiddleSaleService.buyFST (/../data/reentrancy/solidity_contract/1710.sol#62-64) should be declared external
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#public-function-that-could-be-declared-as-external[0m
+INFO:Detectors:[92m
+Low level call in MiddleSaleService.buyFST0 (/../data/reentrancy/solidity_contract/1710.sol#45-56):
+	-require(bool)(salesPipe.call.value(msg.value)()) /../data/reentrancy/solidity_contract/1710.sol#46
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#low-level-calls[0m
+INFO:Detectors:[92m
+Parameter '_frontWindow' of MiddleSaleService. (/../data/reentrancy/solidity_contract/1710.sol#18) is not in mixedCase
+Parameter '_salesPipe' of MiddleSaleService. (/../data/reentrancy/solidity_contract/1710.sol#18) is not in mixedCase
+Parameter '_erc' of MiddleSaleService. (/../data/reentrancy/solidity_contract/1710.sol#18) is not in mixedCase
+Parameter '_frontWindow' of MiddleSaleService.setFrontWindow (/../data/reentrancy/solidity_contract/1710.sol#25) is not in mixedCase
+Parameter '_salesPipe' of MiddleSaleService.setSalesPipe (/../data/reentrancy/solidity_contract/1710.sol#30) is not in mixedCase
+Parameter '_erc' of MiddleSaleService.setERC (/../data/reentrancy/solidity_contract/1710.sol#35) is not in mixedCase
+Parameter '_owner' of MiddleSaleService.setOwner (/../data/reentrancy/solidity_contract/1710.sol#40) is not in mixedCase
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#conformance-to-solidity-naming-conventions[0m
+INFO:Slither:/../data/reentrancy/solidity_contract/1710.sol analyzed (2 contracts), 16 result(s) found

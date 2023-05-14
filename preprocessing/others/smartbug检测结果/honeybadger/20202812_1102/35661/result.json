@@ -1,0 +1,24 @@
+{
+  "contract": "35661",
+  "tool": "honeybadger",
+  "start": 1609148962.133645,
+  "end": 1609148972.7999969,
+  "duration": 10.666351795196533,
+  "analysis": [
+    {
+      "errors": [],
+      "file": "/../data/reentrancy/solidity_contract/35661.sol",
+      "name": "Haltable"
+    },
+    {
+      "errors": [],
+      "file": "/../data/reentrancy/solidity_contract/35661.sol",
+      "name": "Ownable"
+    },
+    {
+      "errors": [],
+      "file": "/../data/reentrancy/solidity_contract/35661.sol",
+      "name": "PreICOProxyBuyer"
+    }
+  ]
+}

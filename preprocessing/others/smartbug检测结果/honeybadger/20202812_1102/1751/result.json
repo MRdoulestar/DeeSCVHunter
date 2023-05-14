@@ -1,0 +1,19 @@
+{
+  "contract": "1751",
+  "tool": "honeybadger",
+  "start": 1609130245.444422,
+  "end": 1609130274.7662451,
+  "duration": 29.321823120117188,
+  "analysis": [
+    {
+      "errors": [],
+      "file": "/../data/reentrancy/solidity_contract/1751.sol",
+      "name": "Proxy"
+    },
+    {
+      "errors": [],
+      "file": "/../data/reentrancy/solidity_contract/1751.sol",
+      "name": "VaultProxy"
+    }
+  ]
+}

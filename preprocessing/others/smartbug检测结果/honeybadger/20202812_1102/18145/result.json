@@ -1,0 +1,14 @@
+{
+  "contract": "18145",
+  "tool": "honeybadger",
+  "start": 1609137185.322137,
+  "end": 1609137190.897664,
+  "duration": 5.57552695274353,
+  "analysis": [
+    {
+      "errors": [],
+      "file": "/../data/reentrancy/solidity_contract/18145.sol",
+      "name": "CrowdsaleProxy"
+    }
+  ]
+}

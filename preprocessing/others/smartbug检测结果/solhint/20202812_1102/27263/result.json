@@ -1,0 +1,41 @@
+{
+  "contract": "27263",
+  "tool": "solhint",
+  "start": 1609164019.109388,
+  "end": 1609164020.250518,
+  "duration": 1.141129970550537,
+  "analysis": [
+    {
+      "file": "/data/reentrancy/solidity_contract/27263.sol",
+      "line": "13",
+      "column": "8",
+      "message": "Expected indentation of 8 spaces but found 7",
+      "level": "Error",
+      "type": "indent"
+    },
+    {
+      "file": "/data/reentrancy/solidity_contract/27263.sol",
+      "line": "14",
+      "column": "8",
+      "message": "Expected indentation of 8 spaces but found 7",
+      "level": "Error",
+      "type": "indent"
+    },
+    {
+      "file": "/data/reentrancy/solidity_contract/27263.sol",
+      "line": "15",
+      "column": "11",
+      "message": "Expected indentation of 12 spaces but found 10",
+      "level": "Error",
+      "type": "indent"
+    },
+    {
+      "file": "/data/reentrancy/solidity_contract/27263.sol",
+      "line": "16",
+      "column": "8",
+      "message": "Expected indentation of 8 spaces but found 7",
+      "level": "Error",
+      "type": "indent"
+    }
+  ]
+}

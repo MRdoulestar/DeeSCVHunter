@@ -1,0 +1,19 @@
+{
+  "contract": "33450",
+  "tool": "honeybadger",
+  "start": 1609209699.796952,
+  "end": 1609209809.3068259,
+  "duration": 109.50987386703491,
+  "analysis": [
+    {
+      "errors": [],
+      "file": "/../data/reentrancy/solidity_contract/33450.sol",
+      "name": "MultiOwner"
+    },
+    {
+      "errors": [],
+      "file": "/../data/reentrancy/solidity_contract/33450.sol",
+      "name": "VVToken"
+    }
+  ]
+}

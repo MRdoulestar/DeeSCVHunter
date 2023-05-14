@@ -1,0 +1,19 @@
+{
+  "contract": "1403",
+  "tool": "honeybadger",
+  "start": 1609212742.754346,
+  "end": 1609212827.588257,
+  "duration": 84.83391118049622,
+  "analysis": [
+    {
+      "errors": [],
+      "file": "/../data/reentrancy/solidity_contract/1403.sol",
+      "name": "RUNEToken"
+    },
+    {
+      "errors": [],
+      "file": "/../data/reentrancy/solidity_contract/1403.sol",
+      "name": "SafeMath"
+    }
+  ]
+}

@@ -1,0 +1,40 @@
+{
+  "contract": "22074",
+  "tool": "osiris",
+  "start": 1609188360.130937,
+  "end": 1609188367.097444,
+  "duration": 6.9665069580078125,
+  "analysis": [
+    {
+      "errors": [
+        {
+          "line": 12,
+          "column": 9,
+          "message": "overflow_bugs"
+        },
+        {
+          "line": 18,
+          "column": 13,
+          "message": "underflow_bugs"
+        },
+        {
+          "line": 17,
+          "column": 13,
+          "message": "callstack_bug"
+        },
+        {
+          "line": 17,
+          "column": 13,
+          "message": "concurrency_bug"
+        },
+        {
+          "line": 17,
+          "column": 13,
+          "message": "reentrancy_bug"
+        }
+      ],
+      "file": "/../data/reentrancy/solidity_contract/22074.sol",
+      "name": "SIMPLE_PIGGY_BANK"
+    }
+  ]
+}

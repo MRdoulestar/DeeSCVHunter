@@ -1,0 +1,17 @@
+/data/reentrancy/solidity_contract/13952.sol:260:14: Expected indentation of 12 spaces but found 13 [Error/indent]
+/data/reentrancy/solidity_contract/13952.sol:505:14: Expected indentation of 17 spaces but found 13 [Error/indent]
+/data/reentrancy/solidity_contract/13952.sol:842:2: Line length must be no more than 120 but current length is 137. [Error/max-line-length]
+/data/reentrancy/solidity_contract/13952.sol:989:9: Expected indentation of 4 spaces but found 8 [Error/indent]
+/data/reentrancy/solidity_contract/13952.sol:992:13: Expected indentation of 8 spaces but found 12 [Error/indent]
+/data/reentrancy/solidity_contract/13952.sol:993:13: Expected indentation of 8 spaces but found 12 [Error/indent]
+/data/reentrancy/solidity_contract/13952.sol:994:9: Expected indentation of 4 spaces but found 8 [Error/indent]
+/data/reentrancy/solidity_contract/13952.sol:1030:9: Expected indentation of 4 spaces but found 8 [Error/indent]
+/data/reentrancy/solidity_contract/13952.sol:1033:13: Expected indentation of 8 spaces but found 12 [Error/indent]
+/data/reentrancy/solidity_contract/13952.sol:1034:9: Expected indentation of 4 spaces but found 8 [Error/indent]
+/data/reentrancy/solidity_contract/13952.sol:1064:9: Expected indentation of 4 spaces but found 8 [Error/indent]
+/data/reentrancy/solidity_contract/13952.sol:1068:13: Expected indentation of 8 spaces but found 12 [Error/indent]
+/data/reentrancy/solidity_contract/13952.sol:1069:13: Expected indentation of 8 spaces but found 12 [Error/indent]
+/data/reentrancy/solidity_contract/13952.sol:1070:9: Expected indentation of 4 spaces but found 8 [Error/indent]
+/data/reentrancy/solidity_contract/13952.sol:1086:18: Indentation is incorrect [Error/indent]
+
+15 problems

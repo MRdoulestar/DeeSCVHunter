@@ -1,0 +1,30 @@
+{
+  "contract": "SimpleDAO",
+  "tool": "osiris",
+  "start": 1609202867.032606,
+  "end": 1609202868.478446,
+  "duration": 1.4458401203155518,
+  "analysis": [
+    {
+      "errors": [
+        {
+          "line": 11,
+          "column": 7,
+          "message": "underflow_bugs"
+        },
+        {
+          "line": 10,
+          "column": 7,
+          "message": "callstack_bug"
+        },
+        {
+          "line": 10,
+          "column": 7,
+          "message": "reentrancy_bug"
+        }
+      ],
+      "file": "/../data/reentrancy/solidity_contract/SimpleDAO.sol",
+      "name": "SimpleDAO"
+    }
+  ]
+}

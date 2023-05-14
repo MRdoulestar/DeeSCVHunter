@@ -1,0 +1,19 @@
+{
+  "contract": "19128",
+  "tool": "honeybadger",
+  "start": 1609126478.366282,
+  "end": 1609126489.572254,
+  "duration": 11.205971956253052,
+  "analysis": [
+    {
+      "errors": [],
+      "file": "/../data/reentrancy/solidity_contract/19128.sol",
+      "name": "HODLWallet"
+    },
+    {
+      "errors": [],
+      "file": "/../data/reentrancy/solidity_contract/19128.sol",
+      "name": "SafeMath"
+    }
+  ]
+}

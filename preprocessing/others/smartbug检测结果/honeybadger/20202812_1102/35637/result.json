@@ -1,0 +1,19 @@
+{
+  "contract": "35637",
+  "tool": "honeybadger",
+  "start": 1609192536.065449,
+  "end": 1609192561.1436238,
+  "duration": 25.078174829483032,
+  "analysis": [
+    {
+      "errors": [],
+      "file": "/../data/reentrancy/solidity_contract/35637.sol",
+      "name": "ContractReceiver"
+    },
+    {
+      "errors": [],
+      "file": "/../data/reentrancy/solidity_contract/35637.sol",
+      "name": "ERC223Token"
+    }
+  ]
+}

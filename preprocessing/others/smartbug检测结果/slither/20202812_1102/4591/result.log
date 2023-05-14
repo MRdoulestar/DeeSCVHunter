@@ -1,0 +1,81 @@
+INFO:Slither:Compilation warnings/errors on /../data/reentrancy/solidity_contract/4591.sol:
+/../data/reentrancy/solidity_contract/4591.sol:173:3: Warning: Defining constructors as functions with the same name as the contract is deprecated. Use "constructor(...) { ... }" instead.
+  function IChain(address ifSuccessfulSendTo,
+  ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/4591.sol:69:5: Warning: Invoking events without "emit" prefix is deprecated.
+    Transfer(msg.sender, _to, _value);
+    ^-------------------------------^
+/../data/reentrancy/solidity_contract/4591.sol:103:5: Warning: Invoking events without "emit" prefix is deprecated.
+    Transfer(_from, _to, _value);
+    ^--------------------------^
+/../data/reentrancy/solidity_contract/4591.sol:110:5: Warning: Invoking events without "emit" prefix is deprecated.
+    Approval(msg.sender, _spender, _value);
+    ^------------------------------------^
+/../data/reentrancy/solidity_contract/4591.sol:122:5: Warning: Invoking events without "emit" prefix is deprecated.
+    Approval(msg.sender, _spender, allowed[msg.sender][_spender]);
+    ^-----------------------------------------------------------^
+/../data/reentrancy/solidity_contract/4591.sol:134:5: Warning: Invoking events without "emit" prefix is deprecated.
+    Approval(msg.sender, _spender, allowed[msg.sender][_spender]);
+    ^-----------------------------------------------------------^
+/../data/reentrancy/solidity_contract/4591.sol:227:3: Warning: No visibility specified. Defaulting to "public". 
+  function getTokens() canDistr payable {
+  ^ (Relevant source part starts here and spans across multiple lines).
+
+INFO:Detectors:[92m
+IChain.INITIAL_SUPPLY should be constant (/../data/reentrancy/solidity_contract/4591.sol#145)
+IChain.decimals should be constant (/../data/reentrancy/solidity_contract/4591.sol#144)
+IChain.name should be constant (/../data/reentrancy/solidity_contract/4591.sol#142)
+IChain.symbol should be constant (/../data/reentrancy/solidity_contract/4591.sol#143)
+IChain.totalDistributed should be constant (/../data/reentrancy/solidity_contract/4591.sol#159)
+IChain.totalRemaining should be constant (/../data/reentrancy/solidity_contract/4591.sol#161)
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#state-variables-that-could-be-declared-constant[0m
+INFO:Detectors:[92m
+BasicToken.totalSupply (/../data/reentrancy/solidity_contract/4591.sol#57-59) should be declared external
+ERC20Basic.totalSupply (/../data/reentrancy/solidity_contract/4591.sol#6) should be declared external
+ERC20Basic.balanceOf (/../data/reentrancy/solidity_contract/4591.sol#7) should be declared external
+BasicToken.balanceOf (/../data/reentrancy/solidity_contract/4591.sol#74-76) should be declared external
+ERC20Basic.transfer (/../data/reentrancy/solidity_contract/4591.sol#8) should be declared external
+BasicToken.transfer (/../data/reentrancy/solidity_contract/4591.sol#62-71) should be declared external
+ERC20.allowance (/../data/reentrancy/solidity_contract/4591.sol#81) should be declared external
+StandardToken.allowance (/../data/reentrancy/solidity_contract/4591.sol#115-117) should be declared external
+StandardToken.transferFrom (/../data/reentrancy/solidity_contract/4591.sol#95-105) should be declared external
+ERC20.transferFrom (/../data/reentrancy/solidity_contract/4591.sol#82) should be declared external
+ERC20.approve (/../data/reentrancy/solidity_contract/4591.sol#83) should be declared external
+StandardToken.approve (/../data/reentrancy/solidity_contract/4591.sol#108-112) should be declared external
+StandardToken.increaseApproval (/../data/reentrancy/solidity_contract/4591.sol#120-124) should be declared external
+StandardToken.decreaseApproval (/../data/reentrancy/solidity_contract/4591.sol#127-136) should be declared external
+IChain.finishDistribution (/../data/reentrancy/solidity_contract/4591.sol#206-213) should be declared external
+IChain.StartDistribution (/../data/reentrancy/solidity_contract/4591.sol#215-224) should be declared external
+IChain.withdraw (/../data/reentrancy/solidity_contract/4591.sol#238-241) should be declared external
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#public-function-that-could-be-declared-as-external[0m
+INFO:Detectors:[92m
+Detected issues with version pragma in /../data/reentrancy/solidity_contract/4591.sol:
+	- pragma solidity^0.4.18 (/../data/reentrancy/solidity_contract/4591.sol#1): it allows old versions
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#incorrect-version-of-solidity[0m
+INFO:Detectors:[92m
+Low level call in IChain.finishDistribution (/../data/reentrancy/solidity_contract/4591.sol#206-213):
+	-require(bool)(msg.sender.call.value(amountRaised)()) /../data/reentrancy/solidity_contract/4591.sol#211
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#low-level-calls[0m
+INFO:Detectors:[92m
+Parameter '_owner' of BasicToken.balanceOf (/../data/reentrancy/solidity_contract/4591.sol#74) is not in mixedCase
+Parameter '_to' of BasicToken.transfer (/../data/reentrancy/solidity_contract/4591.sol#62) is not in mixedCase
+Parameter '_value' of BasicToken.transfer (/../data/reentrancy/solidity_contract/4591.sol#62) is not in mixedCase
+Parameter '_owner' of StandardToken.allowance (/../data/reentrancy/solidity_contract/4591.sol#115) is not in mixedCase
+Parameter '_spender' of StandardToken.allowance (/../data/reentrancy/solidity_contract/4591.sol#115) is not in mixedCase
+Parameter '_from' of StandardToken.transferFrom (/../data/reentrancy/solidity_contract/4591.sol#95) is not in mixedCase
+Parameter '_to' of StandardToken.transferFrom (/../data/reentrancy/solidity_contract/4591.sol#95) is not in mixedCase
+Parameter '_value' of StandardToken.transferFrom (/../data/reentrancy/solidity_contract/4591.sol#95) is not in mixedCase
+Parameter '_spender' of StandardToken.approve (/../data/reentrancy/solidity_contract/4591.sol#108) is not in mixedCase
+Parameter '_value' of StandardToken.approve (/../data/reentrancy/solidity_contract/4591.sol#108) is not in mixedCase
+Parameter '_spender' of StandardToken.increaseApproval (/../data/reentrancy/solidity_contract/4591.sol#120) is not in mixedCase
+Parameter '_addedValue' of StandardToken.increaseApproval (/../data/reentrancy/solidity_contract/4591.sol#120) is not in mixedCase
+Parameter '_spender' of StandardToken.decreaseApproval (/../data/reentrancy/solidity_contract/4591.sol#127) is not in mixedCase
+Parameter '_subtractedValue' of StandardToken.decreaseApproval (/../data/reentrancy/solidity_contract/4591.sol#127) is not in mixedCase
+Function 'IChain.IChain' (/../data/reentrancy/solidity_contract/4591.sol#173-184) is not in mixedCase
+Parameter '_price' of IChain.IChain (/../data/reentrancy/solidity_contract/4591.sol#175) is not in mixedCase
+Function 'IChain.StartDistribution' (/../data/reentrancy/solidity_contract/4591.sol#215-224) is not in mixedCase
+Parameter '_to' of IChain.distr (/../data/reentrancy/solidity_contract/4591.sol#243) is not in mixedCase
+Parameter '_amount' of IChain.distr (/../data/reentrancy/solidity_contract/4591.sol#243) is not in mixedCase
+Variable 'IChain.INITIAL_SUPPLY' (/../data/reentrancy/solidity_contract/4591.sol#145) is not in mixedCase
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#conformance-to-solidity-naming-conventions[0m
+INFO:Slither:/../data/reentrancy/solidity_contract/4591.sol analyzed (6 contracts), 40 result(s) found

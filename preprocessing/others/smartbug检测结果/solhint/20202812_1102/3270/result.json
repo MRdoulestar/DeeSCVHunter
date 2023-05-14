@@ -1,0 +1,105 @@
+{
+  "contract": "3270",
+  "tool": "solhint",
+  "start": 1609180345.556371,
+  "end": 1609180348.682797,
+  "duration": 3.1264259815216064,
+  "analysis": [
+    {
+      "file": "/data/reentrancy/solidity_contract/3270.sol",
+      "line": "4",
+      "column": "7",
+      "message": "Expected indentation of 4 spaces but found 6",
+      "level": "Error",
+      "type": "indent"
+    },
+    {
+      "file": "/data/reentrancy/solidity_contract/3270.sol",
+      "line": "9",
+      "column": "3",
+      "message": "Expected indentation of 4 spaces but found 2",
+      "level": "Error",
+      "type": "indent"
+    },
+    {
+      "file": "/data/reentrancy/solidity_contract/3270.sol",
+      "line": "14",
+      "column": "3",
+      "message": "Expected indentation of 4 spaces but found 2",
+      "level": "Error",
+      "type": "indent"
+    },
+    {
+      "file": "/data/reentrancy/solidity_contract/3270.sol",
+      "line": "46",
+      "column": "3",
+      "message": "Expected indentation of 4 spaces but found 2",
+      "level": "Error",
+      "type": "indent"
+    },
+    {
+      "file": "/data/reentrancy/solidity_contract/3270.sol",
+      "line": "47",
+      "column": "6",
+      "message": "Expected indentation of 8 spaces but found 5",
+      "level": "Error",
+      "type": "indent"
+    },
+    {
+      "file": "/data/reentrancy/solidity_contract/3270.sol",
+      "line": "48",
+      "column": "3",
+      "message": "Expected indentation of 4 spaces but found 2",
+      "level": "Error",
+      "type": "indent"
+    },
+    {
+      "file": "/data/reentrancy/solidity_contract/3270.sol",
+      "line": "50",
+      "column": "3",
+      "message": "Expected indentation of 4 spaces but found 2",
+      "level": "Error",
+      "type": "indent"
+    },
+    {
+      "file": "/data/reentrancy/solidity_contract/3270.sol",
+      "line": "51",
+      "column": "5",
+      "message": "Expected indentation of 8 spaces but found 4",
+      "level": "Error",
+      "type": "indent"
+    },
+    {
+      "file": "/data/reentrancy/solidity_contract/3270.sol",
+      "line": "52",
+      "column": "5",
+      "message": "Expected indentation of 8 spaces but found 4",
+      "level": "Error",
+      "type": "indent"
+    },
+    {
+      "file": "/data/reentrancy/solidity_contract/3270.sol",
+      "line": "53",
+      "column": "5",
+      "message": "Expected indentation of 8 spaces but found 4",
+      "level": "Error",
+      "type": "indent"
+    },
+    {
+      "file": "/data/reentrancy/solidity_contract/3270.sol",
+      "line": "54",
+      "column": "3",
+      "message": "Expected indentation of 4 spaces but found 2",
+      "level": "Error",
+      "type": "indent"
+    },
+    {
+      "file": "/data/reentrancy/solidity_contract/3270.sol",
+      "line": "56",
+      "column": "3",
+      "message": "Expected indentation of 4 spaces but found 2",
+      "level": "Error",
+      "type": "indent"
+    }
+  ]
+}

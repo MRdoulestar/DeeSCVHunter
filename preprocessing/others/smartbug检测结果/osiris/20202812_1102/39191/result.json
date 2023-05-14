@@ -1,0 +1,30 @@
+{
+  "contract": "39191",
+  "tool": "osiris",
+  "start": 1609200690.678915,
+  "end": 1609200697.1541069,
+  "duration": 6.475191831588745,
+  "analysis": [
+    {
+      "errors": [
+        {
+          "line": 104,
+          "column": 30,
+          "message": "concurrency_bug"
+        },
+        {
+          "line": 104,
+          "column": 30,
+          "message": "concurrency_bug"
+        },
+        {
+          "line": 100,
+          "column": 35,
+          "message": "concurrency_bug"
+        }
+      ],
+      "file": "/../data/reentrancy/solidity_contract/39191.sol",
+      "name": "AccountingLib"
+    }
+  ]
+}

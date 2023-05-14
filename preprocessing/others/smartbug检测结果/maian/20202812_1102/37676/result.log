@@ -1,0 +1,22 @@
+line 6:17 mismatched input '0.4' expecting VersionLiteral
+
+====================================================================================================
+[1m[ ] Compiling Solidity contract from the file /../data/reentrancy/solidity_contract/37676.sol ... [0m/../data/reentrancy/solidity_contract/37676.sol:6:1: Error: Source file requires different compiler version (current compiler is 0.5.10+commit.5a6ea5b1.Linux.g++ - note that nightly builds are considered to be strictly less than the released version
+pragma solidity ^0.4;
+^-------------------^
+
+[91m[-] Cannot compile the contract [0m
+
+====================================================================================================
+[1m[ ] Compiling Solidity contract from the file /../data/reentrancy/solidity_contract/37676.sol ... [0m/../data/reentrancy/solidity_contract/37676.sol:6:1: Error: Source file requires different compiler version (current compiler is 0.5.10+commit.5a6ea5b1.Linux.g++ - note that nightly builds are considered to be strictly less than the released version
+pragma solidity ^0.4;
+^-------------------^
+
+[91m[-] Cannot compile the contract [0m
+
+====================================================================================================
+[1m[ ] Compiling Solidity contract from the file /../data/reentrancy/solidity_contract/37676.sol ... [0m/../data/reentrancy/solidity_contract/37676.sol:6:1: Error: Source file requires different compiler version (current compiler is 0.5.10+commit.5a6ea5b1.Linux.g++ - note that nightly builds are considered to be strictly less than the released version
+pragma solidity ^0.4;
+^-------------------^
+
+[91m[-] Cannot compile the contract [0m

@@ -1,0 +1,19 @@
+{
+  "contract": "29601",
+  "tool": "honeybadger",
+  "start": 1609140020.398259,
+  "end": 1609140169.29405,
+  "duration": 148.89579105377197,
+  "analysis": [
+    {
+      "errors": [],
+      "file": "/../data/reentrancy/solidity_contract/29601.sol",
+      "name": "CLC"
+    },
+    {
+      "errors": [],
+      "file": "/../data/reentrancy/solidity_contract/29601.sol",
+      "name": "Clout"
+    }
+  ]
+}

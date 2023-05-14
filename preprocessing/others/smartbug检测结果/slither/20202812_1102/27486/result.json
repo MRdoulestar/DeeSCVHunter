@@ -1,0 +1,472 @@
+{
+  "contract": "27486",
+  "tool": "slither",
+  "start": 1609191562.008786,
+  "end": 1609191563.0964422,
+  "duration": 1.0876562595367432,
+  "analysis": [
+    {
+      "check": "arbitrary-send",
+      "impact": "High",
+      "confidence": "Medium",
+      "description": "Honey.GetFreebie (/../data/reentrancy/solidity_contract/27486.sol#11-15) sends eth to arbitrary user\n\tDangerous calls:\n\t- msg.sender.transfer(this.balance) (/../data/reentrancy/solidity_contract/27486.sol#13)\n",
+      "elements": [
+        {
+          "type": "function",
+          "name": "GetFreebie",
+          "source_mapping": {
+            "start": 144,
+            "length": 5642,
+            "filename": "/../data/reentrancy/solidity_contract/27486.sol",
+            "lines": [
+              11,
+              12,
+              13,
+              14,
+              15
+            ]
+          },
+          "contract": {
+            "type": "contract",
+            "name": "Honey",
+            "source_mapping": {
+              "start": 26,
+              "length": 9159,
+              "filename": "/../data/reentrancy/solidity_contract/27486.sol",
+              "lines": [
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10,
+                11,
+                12,
+                13,
+                14,
+                15,
+                16,
+                17,
+                18,
+                19,
+                20,
+                21,
+                22,
+                23,
+                24,
+                25,
+                26
+              ]
+            }
+          }
+        },
+        {
+          "type": "expression",
+          "expression": "msg.sender.transfer(this.balance)",
+          "source_mapping": {
+            "start": 5624,
+            "length": 33,
+            "filename": "/../data/reentrancy/solidity_contract/27486.sol",
+            "lines": [
+              13
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "external-function",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Honey.fallback (/../data/reentrancy/solidity_contract/27486.sol#7-9) should be declared external\n",
+      "elements": [
+        {
+          "type": "function",
+          "name": "fallback",
+          "source_mapping": {
+            "start": 90,
+            "length": 45,
+            "filename": "/../data/reentrancy/solidity_contract/27486.sol",
+            "lines": [
+              7,
+              8,
+              9
+            ]
+          },
+          "contract": {
+            "type": "contract",
+            "name": "Honey",
+            "source_mapping": {
+              "start": 26,
+              "length": 9159,
+              "filename": "/../data/reentrancy/solidity_contract/27486.sol",
+              "lines": [
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10,
+                11,
+                12,
+                13,
+                14,
+                15,
+                16,
+                17,
+                18,
+                19,
+                20,
+                21,
+                22,
+                23,
+                24,
+                25,
+                26
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "check": "external-function",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Honey.GetFreebie (/../data/reentrancy/solidity_contract/27486.sol#11-15) should be declared external\n",
+      "elements": [
+        {
+          "type": "function",
+          "name": "GetFreebie",
+          "source_mapping": {
+            "start": 144,
+            "length": 5642,
+            "filename": "/../data/reentrancy/solidity_contract/27486.sol",
+            "lines": [
+              11,
+              12,
+              13,
+              14,
+              15
+            ]
+          },
+          "contract": {
+            "type": "contract",
+            "name": "Honey",
+            "source_mapping": {
+              "start": 26,
+              "length": 9159,
+              "filename": "/../data/reentrancy/solidity_contract/27486.sol",
+              "lines": [
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10,
+                11,
+                12,
+                13,
+                14,
+                15,
+                16,
+                17,
+                18,
+                19,
+                20,
+                21,
+                22,
+                23,
+                24,
+                25,
+                26
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "check": "external-function",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Honey.withdraw (/../data/reentrancy/solidity_contract/27486.sol#17-20) should be declared external\n",
+      "elements": [
+        {
+          "type": "function",
+          "name": "withdraw",
+          "source_mapping": {
+            "start": 5796,
+            "length": 3232,
+            "filename": "/../data/reentrancy/solidity_contract/27486.sol",
+            "lines": [
+              17,
+              18,
+              19,
+              20
+            ]
+          },
+          "contract": {
+            "type": "contract",
+            "name": "Honey",
+            "source_mapping": {
+              "start": 26,
+              "length": 9159,
+              "filename": "/../data/reentrancy/solidity_contract/27486.sol",
+              "lines": [
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10,
+                11,
+                12,
+                13,
+                14,
+                15,
+                16,
+                17,
+                18,
+                19,
+                20,
+                21,
+                22,
+                23,
+                24,
+                25,
+                26
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "check": "external-function",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Honey.Command (/../data/reentrancy/solidity_contract/27486.sol#22-25) should be declared external\n",
+      "elements": [
+        {
+          "type": "function",
+          "name": "Command",
+          "source_mapping": {
+            "start": 9038,
+            "length": 145,
+            "filename": "/../data/reentrancy/solidity_contract/27486.sol",
+            "lines": [
+              22,
+              23,
+              24,
+              25
+            ]
+          },
+          "contract": {
+            "type": "contract",
+            "name": "Honey",
+            "source_mapping": {
+              "start": 26,
+              "length": 9159,
+              "filename": "/../data/reentrancy/solidity_contract/27486.sol",
+              "lines": [
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10,
+                11,
+                12,
+                13,
+                14,
+                15,
+                16,
+                17,
+                18,
+                19,
+                20,
+                21,
+                22,
+                23,
+                24,
+                25,
+                26
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "check": "solc-version",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Detected issues with version pragma in /../data/reentrancy/solidity_contract/27486.sol:\n\t- pragma solidity^0.4.19 (/../data/reentrancy/solidity_contract/27486.sol#1): it allows old versions\n",
+      "elements": [
+        {
+          "type": "expression",
+          "expression": "^0.4.19",
+          "source_mapping": {
+            "start": 0,
+            "length": 24,
+            "filename": "/../data/reentrancy/solidity_contract/27486.sol",
+            "lines": [
+              1
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "low-level-calls",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Low level call in Honey.Command (/../data/reentrancy/solidity_contract/27486.sol#22-25):\n\t-adr.call.value(msg.value)(data) /../data/reentrancy/solidity_contract/27486.sol#24\n",
+      "elements": [
+        {
+          "type": "function",
+          "name": "Command",
+          "source_mapping": {
+            "start": 9038,
+            "length": 145,
+            "filename": "/../data/reentrancy/solidity_contract/27486.sol",
+            "lines": [
+              22,
+              23,
+              24,
+              25
+            ]
+          },
+          "contract": {
+            "type": "contract",
+            "name": "Honey",
+            "source_mapping": {
+              "start": 26,
+              "length": 9159,
+              "filename": "/../data/reentrancy/solidity_contract/27486.sol",
+              "lines": [
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10,
+                11,
+                12,
+                13,
+                14,
+                15,
+                16,
+                17,
+                18,
+                19,
+                20,
+                21,
+                22,
+                23,
+                24,
+                25,
+                26
+              ]
+            }
+          }
+        },
+        {
+          "type": "expression",
+          "expression": "adr.call.value(msg.value)(data)",
+          "source_mapping": {
+            "start": 9145,
+            "length": 31,
+            "filename": "/../data/reentrancy/solidity_contract/27486.sol",
+            "lines": [
+              24
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "naming-convention",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Function 'Honey.GetFreebie' (/../data/reentrancy/solidity_contract/27486.sol#11-15) is not in mixedCase\n",
+      "elements": [
+        {
+          "target": "function",
+          "convention": "mixedCase",
+          "name": "GetFreebie",
+          "source_mapping": {
+            "start": 144,
+            "length": 5642,
+            "filename": "/../data/reentrancy/solidity_contract/27486.sol",
+            "lines": [
+              11,
+              12,
+              13,
+              14,
+              15
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "naming-convention",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Function 'Honey.Command' (/../data/reentrancy/solidity_contract/27486.sol#22-25) is not in mixedCase\n",
+      "elements": [
+        {
+          "target": "function",
+          "convention": "mixedCase",
+          "name": "Command",
+          "source_mapping": {
+            "start": 9038,
+            "length": 145,
+            "filename": "/../data/reentrancy/solidity_contract/27486.sol",
+            "lines": [
+              22,
+              23,
+              24,
+              25
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "naming-convention",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Variable 'Honey.Owner' (/../data/reentrancy/solidity_contract/27486.sol#5) is not in mixedCase\n",
+      "elements": [
+        {
+          "target": "variable",
+          "convention": "mixedCase",
+          "name": "Owner",
+          "source_mapping": {
+            "start": 47,
+            "length": 33,
+            "filename": "/../data/reentrancy/solidity_contract/27486.sol",
+            "lines": [
+              5
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

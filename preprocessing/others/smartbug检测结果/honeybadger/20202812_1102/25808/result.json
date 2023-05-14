@@ -1,0 +1,14 @@
+{
+  "contract": "25808",
+  "tool": "honeybadger",
+  "start": 1609127396.897703,
+  "end": 1609127399.600518,
+  "duration": 2.702815055847168,
+  "analysis": [
+    {
+      "errors": [],
+      "file": "/../data/reentrancy/solidity_contract/25808.sol",
+      "name": "EtherGet"
+    }
+  ]
+}

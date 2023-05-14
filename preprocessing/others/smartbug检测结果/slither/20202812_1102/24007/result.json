@@ -1,0 +1,709 @@
+{
+  "contract": "24007",
+  "tool": "slither",
+  "start": 1609197607.338828,
+  "end": 1609197608.4180229,
+  "duration": 1.0791947841644287,
+  "analysis": [
+    {
+      "check": "reentrancy-eth",
+      "impact": "High",
+      "confidence": "Medium",
+      "description": "Reentrancy in GetSomeEther.GetEther (/../data/reentrancy/solidity_contract/24007.sol#18-23):\n\tExternal calls:\n\t- msg.sender.call.value(300000000000000000)() (/../data/reentrancy/solidity_contract/24007.sol#20)\n\tState variables written after the call(s):\n\t- ExtractDepositTime (/../data/reentrancy/solidity_contract/24007.sol#21)\n",
+      "elements": [
+        {
+          "type": "function",
+          "name": "GetEther",
+          "source_mapping": {
+            "start": 483,
+            "length": 234,
+            "filename": "/../data/reentrancy/solidity_contract/24007.sol",
+            "lines": [
+              18,
+              19,
+              20,
+              21,
+              22,
+              23
+            ]
+          },
+          "contract": {
+            "type": "contract",
+            "name": "GetSomeEther",
+            "source_mapping": {
+              "start": 26,
+              "length": 1055,
+              "filename": "/../data/reentrancy/solidity_contract/24007.sol",
+              "lines": [
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10,
+                11,
+                12,
+                13,
+                14,
+                15,
+                16,
+                17,
+                18,
+                19,
+                20,
+                21,
+                22,
+                23,
+                24,
+                25,
+                26,
+                27,
+                28,
+                29,
+                30,
+                31,
+                32,
+                33,
+                34,
+                35,
+                36,
+                37,
+                38
+              ]
+            }
+          }
+        },
+        {
+          "type": "external_calls",
+          "expression": "msg.sender.call.value(300000000000000000)()",
+          "source_mapping": {
+            "start": 618,
+            "length": 34,
+            "filename": "/../data/reentrancy/solidity_contract/24007.sol",
+            "lines": [
+              20
+            ]
+          }
+        },
+        {
+          "type": "variables_written",
+          "name": "ExtractDepositTime",
+          "expression": "ExtractDepositTime[msg.sender] = 0",
+          "source_mapping": {
+            "start": 666,
+            "length": 34,
+            "filename": "/../data/reentrancy/solidity_contract/24007.sol",
+            "lines": [
+              21
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "external-function",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "GetSomeEther.Deposit (/../data/reentrancy/solidity_contract/24007.sol#10-16) should be declared external\n",
+      "elements": [
+        {
+          "type": "function",
+          "name": "Deposit",
+          "source_mapping": {
+            "start": 221,
+            "length": 252,
+            "filename": "/../data/reentrancy/solidity_contract/24007.sol",
+            "lines": [
+              10,
+              11,
+              12,
+              13,
+              14,
+              15,
+              16
+            ]
+          },
+          "contract": {
+            "type": "contract",
+            "name": "GetSomeEther",
+            "source_mapping": {
+              "start": 26,
+              "length": 1055,
+              "filename": "/../data/reentrancy/solidity_contract/24007.sol",
+              "lines": [
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10,
+                11,
+                12,
+                13,
+                14,
+                15,
+                16,
+                17,
+                18,
+                19,
+                20,
+                21,
+                22,
+                23,
+                24,
+                25,
+                26,
+                27,
+                28,
+                29,
+                30,
+                31,
+                32,
+                33,
+                34,
+                35,
+                36,
+                37,
+                38
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "check": "external-function",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "GetSomeEther.GetEther (/../data/reentrancy/solidity_contract/24007.sol#18-23) should be declared external\n",
+      "elements": [
+        {
+          "type": "function",
+          "name": "GetEther",
+          "source_mapping": {
+            "start": 483,
+            "length": 234,
+            "filename": "/../data/reentrancy/solidity_contract/24007.sol",
+            "lines": [
+              18,
+              19,
+              20,
+              21,
+              22,
+              23
+            ]
+          },
+          "contract": {
+            "type": "contract",
+            "name": "GetSomeEther",
+            "source_mapping": {
+              "start": 26,
+              "length": 1055,
+              "filename": "/../data/reentrancy/solidity_contract/24007.sol",
+              "lines": [
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10,
+                11,
+                12,
+                13,
+                14,
+                15,
+                16,
+                17,
+                18,
+                19,
+                20,
+                21,
+                22,
+                23,
+                24,
+                25,
+                26,
+                27,
+                28,
+                29,
+                30,
+                31,
+                32,
+                33,
+                34,
+                35,
+                36,
+                37,
+                38
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "check": "external-function",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "GetSomeEther.PutEther (/../data/reentrancy/solidity_contract/24007.sol#25-28) should be declared external\n",
+      "elements": [
+        {
+          "type": "function",
+          "name": "PutEther",
+          "source_mapping": {
+            "start": 727,
+            "length": 134,
+            "filename": "/../data/reentrancy/solidity_contract/24007.sol",
+            "lines": [
+              25,
+              26,
+              27,
+              28
+            ]
+          },
+          "contract": {
+            "type": "contract",
+            "name": "GetSomeEther",
+            "source_mapping": {
+              "start": 26,
+              "length": 1055,
+              "filename": "/../data/reentrancy/solidity_contract/24007.sol",
+              "lines": [
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10,
+                11,
+                12,
+                13,
+                14,
+                15,
+                16,
+                17,
+                18,
+                19,
+                20,
+                21,
+                22,
+                23,
+                24,
+                25,
+                26,
+                27,
+                28,
+                29,
+                30,
+                31,
+                32,
+                33,
+                34,
+                35,
+                36,
+                37,
+                38
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "check": "external-function",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "GetSomeEther.Kill (/../data/reentrancy/solidity_contract/24007.sol#30-35) should be declared external\n",
+      "elements": [
+        {
+          "type": "function",
+          "name": "Kill",
+          "source_mapping": {
+            "start": 871,
+            "length": 171,
+            "filename": "/../data/reentrancy/solidity_contract/24007.sol",
+            "lines": [
+              30,
+              31,
+              32,
+              33,
+              34,
+              35
+            ]
+          },
+          "contract": {
+            "type": "contract",
+            "name": "GetSomeEther",
+            "source_mapping": {
+              "start": 26,
+              "length": 1055,
+              "filename": "/../data/reentrancy/solidity_contract/24007.sol",
+              "lines": [
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10,
+                11,
+                12,
+                13,
+                14,
+                15,
+                16,
+                17,
+                18,
+                19,
+                20,
+                21,
+                22,
+                23,
+                24,
+                25,
+                26,
+                27,
+                28,
+                29,
+                30,
+                31,
+                32,
+                33,
+                34,
+                35,
+                36,
+                37,
+                38
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "check": "external-function",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "GetSomeEther.fallback (/../data/reentrancy/solidity_contract/24007.sol#37) should be declared external\n",
+      "elements": [
+        {
+          "type": "function",
+          "name": "fallback",
+          "source_mapping": {
+            "start": 1052,
+            "length": 27,
+            "filename": "/../data/reentrancy/solidity_contract/24007.sol",
+            "lines": [
+              37
+            ]
+          },
+          "contract": {
+            "type": "contract",
+            "name": "GetSomeEther",
+            "source_mapping": {
+              "start": 26,
+              "length": 1055,
+              "filename": "/../data/reentrancy/solidity_contract/24007.sol",
+              "lines": [
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10,
+                11,
+                12,
+                13,
+                14,
+                15,
+                16,
+                17,
+                18,
+                19,
+                20,
+                21,
+                22,
+                23,
+                24,
+                25,
+                26,
+                27,
+                28,
+                29,
+                30,
+                31,
+                32,
+                33,
+                34,
+                35,
+                36,
+                37,
+                38
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "check": "solc-version",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Detected issues with version pragma in /../data/reentrancy/solidity_contract/24007.sol:\n\t- pragma solidity^0.4.19 (/../data/reentrancy/solidity_contract/24007.sol#1): it allows old versions\n",
+      "elements": [
+        {
+          "type": "expression",
+          "expression": "^0.4.19",
+          "source_mapping": {
+            "start": 0,
+            "length": 24,
+            "filename": "/../data/reentrancy/solidity_contract/24007.sol",
+            "lines": [
+              1
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "low-level-calls",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Low level call in GetSomeEther.GetEther (/../data/reentrancy/solidity_contract/24007.sol#18-23):\n\t-msg.sender.call.value(300000000000000000)() /../data/reentrancy/solidity_contract/24007.sol#20\n",
+      "elements": [
+        {
+          "type": "function",
+          "name": "GetEther",
+          "source_mapping": {
+            "start": 483,
+            "length": 234,
+            "filename": "/../data/reentrancy/solidity_contract/24007.sol",
+            "lines": [
+              18,
+              19,
+              20,
+              21,
+              22,
+              23
+            ]
+          },
+          "contract": {
+            "type": "contract",
+            "name": "GetSomeEther",
+            "source_mapping": {
+              "start": 26,
+              "length": 1055,
+              "filename": "/../data/reentrancy/solidity_contract/24007.sol",
+              "lines": [
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10,
+                11,
+                12,
+                13,
+                14,
+                15,
+                16,
+                17,
+                18,
+                19,
+                20,
+                21,
+                22,
+                23,
+                24,
+                25,
+                26,
+                27,
+                28,
+                29,
+                30,
+                31,
+                32,
+                33,
+                34,
+                35,
+                36,
+                37,
+                38
+              ]
+            }
+          }
+        },
+        {
+          "type": "expression",
+          "expression": "msg.sender.call.value(300000000000000000)()",
+          "source_mapping": {
+            "start": 618,
+            "length": 34,
+            "filename": "/../data/reentrancy/solidity_contract/24007.sol",
+            "lines": [
+              20
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "naming-convention",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Function 'GetSomeEther.Deposit' (/../data/reentrancy/solidity_contract/24007.sol#10-16) is not in mixedCase\n",
+      "elements": [
+        {
+          "target": "function",
+          "convention": "mixedCase",
+          "name": "Deposit",
+          "source_mapping": {
+            "start": 221,
+            "length": 252,
+            "filename": "/../data/reentrancy/solidity_contract/24007.sol",
+            "lines": [
+              10,
+              11,
+              12,
+              13,
+              14,
+              15,
+              16
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "naming-convention",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Function 'GetSomeEther.GetEther' (/../data/reentrancy/solidity_contract/24007.sol#18-23) is not in mixedCase\n",
+      "elements": [
+        {
+          "target": "function",
+          "convention": "mixedCase",
+          "name": "GetEther",
+          "source_mapping": {
+            "start": 483,
+            "length": 234,
+            "filename": "/../data/reentrancy/solidity_contract/24007.sol",
+            "lines": [
+              18,
+              19,
+              20,
+              21,
+              22,
+              23
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "naming-convention",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Function 'GetSomeEther.PutEther' (/../data/reentrancy/solidity_contract/24007.sol#25-28) is not in mixedCase\n",
+      "elements": [
+        {
+          "target": "function",
+          "convention": "mixedCase",
+          "name": "PutEther",
+          "source_mapping": {
+            "start": 727,
+            "length": 134,
+            "filename": "/../data/reentrancy/solidity_contract/24007.sol",
+            "lines": [
+              25,
+              26,
+              27,
+              28
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "naming-convention",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Function 'GetSomeEther.Kill' (/../data/reentrancy/solidity_contract/24007.sol#30-35) is not in mixedCase\n",
+      "elements": [
+        {
+          "target": "function",
+          "convention": "mixedCase",
+          "name": "Kill",
+          "source_mapping": {
+            "start": 871,
+            "length": 171,
+            "filename": "/../data/reentrancy/solidity_contract/24007.sol",
+            "lines": [
+              30,
+              31,
+              32,
+              33,
+              34,
+              35
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "naming-convention",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Variable 'GetSomeEther.LastExtractTime' (/../data/reentrancy/solidity_contract/24007.sol#6) is not in mixedCase\n",
+      "elements": [
+        {
+          "target": "variable",
+          "convention": "mixedCase",
+          "name": "LastExtractTime",
+          "source_mapping": {
+            "start": 92,
+            "length": 30,
+            "filename": "/../data/reentrancy/solidity_contract/24007.sol",
+            "lines": [
+              6
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "naming-convention",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Variable 'GetSomeEther.ExtractDepositTime' (/../data/reentrancy/solidity_contract/24007.sol#7) is not in mixedCase\n",
+      "elements": [
+        {
+          "target": "variable",
+          "convention": "mixedCase",
+          "name": "ExtractDepositTime",
+          "source_mapping": {
+            "start": 128,
+            "length": 52,
+            "filename": "/../data/reentrancy/solidity_contract/24007.sol",
+            "lines": [
+              7
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

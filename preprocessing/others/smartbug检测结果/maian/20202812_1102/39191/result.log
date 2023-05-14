@@ -1,0 +1,76 @@
+====================================================================================================
+[1m[ ] Compiling Solidity contract from the file /../data/reentrancy/solidity_contract/39191.sol ... [0m/../data/reentrancy/solidity_contract/39191.sol:18:25: Error: "throw" is deprecated in favour of "revert()", "require()" and "assert()".
+                        throw;
+                        ^---^
+/../data/reentrancy/solidity_contract/39191.sol:69:25: Error: "throw" is deprecated in favour of "revert()", "require()" and "assert()".
+                        throw;
+                        ^---^
+/../data/reentrancy/solidity_contract/39191.sol:83:77: Error: "throw" is deprecated in favour of "revert()", "require()" and "assert()".
+                                if (!accountAddress.call.value(value)()) {  throw; }
+                                                                            ^---^
+/../data/reentrancy/solidity_contract/39191.sol:5:1: Warning: Source file does not specify required compiler version! Consider adding "pragma solidity ^0.5.10;"
+library AccountingLib {
+^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/39191.sol:29:13: Error: Event invocations have to be prefixed by "emit".
+            _Deposit(_from, accountAddress, value);
+            ^------------------------------------^
+/../data/reentrancy/solidity_contract/39191.sol:48:13: Error: Event invocations have to be prefixed by "emit".
+            _Withdrawal(accountAddress, value);
+            ^--------------------------------^
+/../data/reentrancy/solidity_contract/39191.sol:58:13: Error: Event invocations have to be prefixed by "emit".
+
+[91m[-] Cannot compile the contract [0m
+
+====================================================================================================
+[1m[ ] Compiling Solidity contract from the file /../data/reentrancy/solidity_contract/39191.sol ... [0m/../data/reentrancy/solidity_contract/39191.sol:18:25: Error: "throw" is deprecated in favour of "revert()", "require()" and "assert()".
+                        throw;
+                        ^---^
+/../data/reentrancy/solidity_contract/39191.sol:69:25: Error: "throw" is deprecated in favour of "revert()", "require()" and "assert()".
+                        throw;
+                        ^---^
+/../data/reentrancy/solidity_contract/39191.sol:83:77: Error: "throw" is deprecated in favour of "revert()", "require()" and "assert()".
+                                if (!accountAddress.call.value(value)()) {  throw; }
+                                                                            ^---^
+/../data/reentrancy/solidity_contract/39191.sol:5:1: Warning: Source file does not specify required compiler version! Consider adding "pragma solidity ^0.5.10;"
+library AccountingLib {
+^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/39191.sol:29:13: Error: Event invocations have to be prefixed by "emit".
+            _Deposit(_from, accountAddress, value);
+            ^------------------------------------^
+/../data/reentrancy/solidity_contract/39191.sol:48:13: Error: Event invocations have to be prefixed by "emit".
+            _Withdrawal(accountAddress, value);
+            ^--------------------------------^
+/../data/reentrancy/solidity_contract/39191.sol:58:13: Error: Event invocations have to be prefixed by "emit".
+            _InsufficientFunds(accountAddress, value, balance);
+            ^------------------------------------------------^
+/../data/reentrancy/solidity_contract/39191.sol:82:30: Error: "send" and "transfer" are only available for objects of type "address payable", not "address".
+
+[91m[-] Cannot compile the contract [0m
+
+====================================================================================================
+[1m[ ] Compiling Solidity contract from the file /../data/reentrancy/solidity_contract/39191.sol ... [0m/../data/reentrancy/solidity_contract/39191.sol:18:25: Error: "throw" is deprecated in favour of "revert()", "require()" and "assert()".
+                        throw;
+                        ^---^
+/../data/reentrancy/solidity_contract/39191.sol:69:25: Error: "throw" is deprecated in favour of "revert()", "require()" and "assert()".
+                        throw;
+                        ^---^
+/../data/reentrancy/solidity_contract/39191.sol:83:77: Error: "throw" is deprecated in favour of "revert()", "require()" and "assert()".
+                                if (!accountAddress.call.value(value)()) {  throw; }
+                                                                            ^---^
+/../data/reentrancy/solidity_contract/39191.sol:5:1: Warning: Source file does not specify required compiler version! Consider adding "pragma solidity ^0.5.10;"
+library AccountingLib {
+^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/39191.sol:29:13: Error: Event invocations have to be prefixed by "emit".
+            _Deposit(_from, accountAddress, value);
+            ^------------------------------------^
+/../data/reentrancy/solidity_contract/39191.sol:48:13: Error: Event invocations have to be prefixed by "emit".
+            _Withdrawal(accountAddress, value);
+            ^--------------------------------^
+/../data/reentrancy/solidity_contract/39191.sol:58:13: Error: Event invocations have to be prefixed by "emit".
+            _InsufficientFunds(accountAddress, value, balance);
+            ^------------------------------------------------^
+/../data/reentrancy/solidity_contract/39191.sol:82:30: Error: "send" and "transfer" are only available for objects of type "address payable", not "address".
+                        if (!accountAddress.send(value)) {
+                             ^-----------------^
+
+[91m[-] Cannot compile the contract [0m

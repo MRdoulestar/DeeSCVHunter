@@ -1,0 +1,292 @@
+{
+  "contract": "Victim",
+  "tool": "slither",
+  "start": 1609130031.077266,
+  "end": 1609130032.6680992,
+  "duration": 1.5908331871032715,
+  "analysis": [
+    {
+      "check": "reentrancy-eth",
+      "impact": "High",
+      "confidence": "Medium",
+      "description": "Reentrancy in Victim.withdraw (/../data/reentrancy/solidity_contract/Victim.sol#6-13):\n\tExternal calls:\n\t- msg.sender.call.value(_amount)() (/../data/reentrancy/solidity_contract/Victim.sol#8-10)\n\tState variables written after the call(s):\n\t- balances (/../data/reentrancy/solidity_contract/Victim.sol#11)\n",
+      "elements": [
+        {
+          "type": "function",
+          "name": "withdraw",
+          "source_mapping": {
+            "start": 96,
+            "length": 211,
+            "filename": "/../data/reentrancy/solidity_contract/Victim.sol",
+            "lines": [
+              6,
+              7,
+              8,
+              9,
+              10,
+              11,
+              12,
+              13
+            ]
+          },
+          "contract": {
+            "type": "contract",
+            "name": "Victim",
+            "source_mapping": {
+              "start": 24,
+              "length": 317,
+              "filename": "/../data/reentrancy/solidity_contract/Victim.sol",
+              "lines": [
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10,
+                11,
+                12,
+                13,
+                14,
+                15
+              ]
+            }
+          }
+        },
+        {
+          "type": "external_calls",
+          "expression": "msg.sender.call.value(_amount)()",
+          "source_mapping": {
+            "start": 187,
+            "length": 69,
+            "filename": "/../data/reentrancy/solidity_contract/Victim.sol",
+            "lines": [
+              8,
+              9,
+              10
+            ]
+          }
+        },
+        {
+          "type": "variables_written",
+          "name": "balances",
+          "expression": "balances[msg.sender] -= _amount",
+          "source_mapping": {
+            "start": 265,
+            "length": 31,
+            "filename": "/../data/reentrancy/solidity_contract/Victim.sol",
+            "lines": [
+              11
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "external-function",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Victim.withdraw (/../data/reentrancy/solidity_contract/Victim.sol#6-13) should be declared external\n",
+      "elements": [
+        {
+          "type": "function",
+          "name": "withdraw",
+          "source_mapping": {
+            "start": 96,
+            "length": 211,
+            "filename": "/../data/reentrancy/solidity_contract/Victim.sol",
+            "lines": [
+              6,
+              7,
+              8,
+              9,
+              10,
+              11,
+              12,
+              13
+            ]
+          },
+          "contract": {
+            "type": "contract",
+            "name": "Victim",
+            "source_mapping": {
+              "start": 24,
+              "length": 317,
+              "filename": "/../data/reentrancy/solidity_contract/Victim.sol",
+              "lines": [
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10,
+                11,
+                12,
+                13,
+                14,
+                15
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "check": "external-function",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Victim.deposit (/../data/reentrancy/solidity_contract/Victim.sol#14) should be declared external\n",
+      "elements": [
+        {
+          "type": "function",
+          "name": "deposit",
+          "source_mapping": {
+            "start": 310,
+            "length": 29,
+            "filename": "/../data/reentrancy/solidity_contract/Victim.sol",
+            "lines": [
+              14
+            ]
+          },
+          "contract": {
+            "type": "contract",
+            "name": "Victim",
+            "source_mapping": {
+              "start": 24,
+              "length": 317,
+              "filename": "/../data/reentrancy/solidity_contract/Victim.sol",
+              "lines": [
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10,
+                11,
+                12,
+                13,
+                14,
+                15
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "check": "solc-version",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Detected issues with version pragma in /../data/reentrancy/solidity_contract/Victim.sol:\n\t- pragma solidity^0.4.8 (/../data/reentrancy/solidity_contract/Victim.sol#1): it allows old versions\n",
+      "elements": [
+        {
+          "type": "expression",
+          "expression": "^0.4.8",
+          "source_mapping": {
+            "start": 0,
+            "length": 23,
+            "filename": "/../data/reentrancy/solidity_contract/Victim.sol",
+            "lines": [
+              1
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "low-level-calls",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Low level call in Victim.withdraw (/../data/reentrancy/solidity_contract/Victim.sol#6-13):\n\t-msg.sender.call.value(_amount)() /../data/reentrancy/solidity_contract/Victim.sol#8-10\n",
+      "elements": [
+        {
+          "type": "function",
+          "name": "withdraw",
+          "source_mapping": {
+            "start": 96,
+            "length": 211,
+            "filename": "/../data/reentrancy/solidity_contract/Victim.sol",
+            "lines": [
+              6,
+              7,
+              8,
+              9,
+              10,
+              11,
+              12,
+              13
+            ]
+          },
+          "contract": {
+            "type": "contract",
+            "name": "Victim",
+            "source_mapping": {
+              "start": 24,
+              "length": 317,
+              "filename": "/../data/reentrancy/solidity_contract/Victim.sol",
+              "lines": [
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10,
+                11,
+                12,
+                13,
+                14,
+                15
+              ]
+            }
+          }
+        },
+        {
+          "type": "expression",
+          "expression": "msg.sender.call.value(_amount)()",
+          "source_mapping": {
+            "start": 187,
+            "length": 69,
+            "filename": "/../data/reentrancy/solidity_contract/Victim.sol",
+            "lines": [
+              8,
+              9,
+              10
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "naming-convention",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Parameter '_amount' of Victim.withdraw (/../data/reentrancy/solidity_contract/Victim.sol#6) is not in mixedCase\n",
+      "elements": [
+        {
+          "target": "parameter",
+          "convention": "mixedCase",
+          "name": "_amount",
+          "source_mapping": {
+            "start": 114,
+            "length": 12,
+            "filename": "/../data/reentrancy/solidity_contract/Victim.sol",
+            "lines": [
+              6
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

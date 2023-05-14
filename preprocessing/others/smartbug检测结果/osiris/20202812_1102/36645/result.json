@@ -1,0 +1,14 @@
+{
+  "contract": "36645",
+  "tool": "osiris",
+  "start": 1609126688.116074,
+  "end": 1609126708.7409348,
+  "duration": 20.624860763549805,
+  "analysis": [
+    {
+      "errors": [],
+      "file": "/../data/reentrancy/solidity_contract/36645.sol",
+      "name": "EnjinBuyer"
+    }
+  ]
+}

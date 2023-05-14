@@ -1,0 +1,30 @@
+{
+  "contract": "27486",
+  "tool": "osiris",
+  "start": 1609191510.05444,
+  "end": 1609191561.987073,
+  "duration": 51.93263292312622,
+  "analysis": [
+    {
+      "errors": [
+        {
+          "line": 19,
+          "column": 9,
+          "message": "concurrency_bug"
+        },
+        {
+          "line": 19,
+          "column": 9,
+          "message": "concurrency_bug"
+        },
+        {
+          "line": 24,
+          "column": 9,
+          "message": "reentrancy_bug"
+        }
+      ],
+      "file": "/../data/reentrancy/solidity_contract/27486.sol",
+      "name": "Honey"
+    }
+  ]
+}

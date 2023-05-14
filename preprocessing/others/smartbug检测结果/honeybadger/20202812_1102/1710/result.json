@@ -1,0 +1,14 @@
+{
+  "contract": "1710",
+  "tool": "honeybadger",
+  "start": 1609175975.820804,
+  "end": 1609175983.0422778,
+  "duration": 7.221473693847656,
+  "analysis": [
+    {
+      "errors": [],
+      "file": "/../data/reentrancy/solidity_contract/1710.sol",
+      "name": "MiddleSaleService"
+    }
+  ]
+}

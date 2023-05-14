@@ -1,0 +1,56 @@
+{
+  "contract": "33501",
+  "tool": "osiris",
+  "start": 1609124866.259356,
+  "end": 1609124970.761068,
+  "duration": 104.50171208381653,
+  "analysis": [
+    {
+      "errors": [
+        {
+          "line": 113,
+          "column": 9,
+          "message": "overflow_bugs"
+        },
+        {
+          "line": 98,
+          "column": 20,
+          "message": "overflow_bugs"
+        },
+        {
+          "line": 405,
+          "column": 16,
+          "message": "callstack_bug"
+        },
+        {
+          "line": 291,
+          "column": 17,
+          "message": "concurrency_bug"
+        },
+        {
+          "line": 291,
+          "column": 17,
+          "message": "concurrency_bug"
+        }
+      ],
+      "file": "/../data/reentrancy/solidity_contract/33501.sol",
+      "name": "Gifto"
+    },
+    {
+      "errors": [
+        {
+          "line": 405,
+          "column": 16,
+          "message": "callstack_bug"
+        },
+        {
+          "line": 597,
+          "column": 18,
+          "message": "reentrancy_bug"
+        }
+      ],
+      "file": "/../data/reentrancy/solidity_contract/33501.sol",
+      "name": "MultiSigWallet"
+    }
+  ]
+}

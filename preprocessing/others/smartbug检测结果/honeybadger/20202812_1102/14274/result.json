@@ -1,0 +1,14 @@
+{
+  "contract": "14274",
+  "tool": "honeybadger",
+  "start": 1609171175.47354,
+  "end": 1609171193.653565,
+  "duration": 18.18002486228943,
+  "analysis": [
+    {
+      "errors": [],
+      "file": "/../data/reentrancy/solidity_contract/14274.sol",
+      "name": "InstantTrade"
+    }
+  ]
+}

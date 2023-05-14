@@ -1,0 +1,30 @@
+{
+  "contract": "27024",
+  "tool": "osiris",
+  "start": 1609200580.775627,
+  "end": 1609200586.185271,
+  "duration": 5.40964412689209,
+  "analysis": [
+    {
+      "errors": [
+        {
+          "line": 48,
+          "column": 18,
+          "message": "overflow_bugs"
+        },
+        {
+          "line": 42,
+          "column": 21,
+          "message": "concurrency_bug"
+        },
+        {
+          "line": 42,
+          "column": 21,
+          "message": "reentrancy_bug"
+        }
+      ],
+      "file": "/../data/reentrancy/solidity_contract/27024.sol",
+      "name": "AddressLottery"
+    }
+  ]
+}

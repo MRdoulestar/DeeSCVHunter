@@ -1,0 +1,207 @@
+INFO:Slither:Compilation warnings/errors on /../data/reentrancy/solidity_contract/39932.sol:
+/../data/reentrancy/solidity_contract/39932.sol:8:5: Warning: Defining constructors as functions with the same name as the contract is deprecated. Use "constructor(...) { ... }" instead.
+    function Owned() { owner = msg.sender; }
+    ^--------------------------------------^
+/../data/reentrancy/solidity_contract/39932.sol:15:51: Warning: "throw" is deprecated in favour of "revert()", "require()" and "assert()".
+    modifier onlyOwner { if (msg.sender != owner) throw; _; }
+                                                  ^---^
+/../data/reentrancy/solidity_contract/39932.sol:33:5: Warning: Defining constructors as functions with the same name as the contract is deprecated. Use "constructor(...) { ... }" instead.
+    function Comission(address _ledger, bytes32 _taxman, uint _taxPerc) {
+    ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/39932.sol:41:30: Warning: "throw" is deprecated in favour of "revert()", "require()" and "assert()".
+        if (msg.value < 100) throw;
+                             ^---^
+/../data/reentrancy/solidity_contract/39932.sol:42:9: Warning: Use of the "var" keyword is deprecated.
+        var tax = msg.value * taxPerc / 100; 
+        ^-----^
+/../data/reentrancy/solidity_contract/39932.sol:43:9: Warning: Use of the "var" keyword is deprecated.
+        var refill = bytes4(sha3("refill(bytes32)")); 
+        ^--------^
+/../data/reentrancy/solidity_contract/39932.sol:44:115: Warning: "throw" is deprecated in favour of "revert()", "require()" and "assert()".
+        if ( !ledger.call.value(tax)(refill, taxman)|| !ledger.call.value(msg.value - tax)(refill, _destination)) throw;
+                                                                                                                  ^---^
+/../data/reentrancy/solidity_contract/39932.sol:60:5: Warning: Defining constructors as functions with the same name as the contract is deprecated. Use "constructor(...) { ... }" instead.
+    function Invoice(address _comission,
+    ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/39932.sol:73:63: Warning: "throw" is deprecated in favour of "revert()", "require()" and "assert()".
+            if (!comission.process.value(value)(beneficiary)) throw;
+                                                              ^---^
+/../data/reentrancy/solidity_contract/39932.sol:81:32: Warning: "throw" is deprecated in favour of "revert()", "require()" and "assert()".
+           || closeBlock != 0) throw;
+                               ^---^
+/../data/reentrancy/solidity_contract/39932.sol:116:9: Warning: Use of the "var" keyword is deprecated.
+        var sender_contracts = getContractsOf[msg.sender];
+        ^------------------^
+/../data/reentrancy/solidity_contract/39932.sol:153:46: Warning: "throw" is deprecated in favour of "revert()", "require()" and "assert()".
+            if (msg.value < buildingCostWei) throw;
+                                             ^---^
+/../data/reentrancy/solidity_contract/39932.sol:155:53: Warning: "throw" is deprecated in favour of "revert()", "require()" and "assert()".
+            if (!beneficiary.send(buildingCostWei)) throw;
+                                                    ^---^
+/../data/reentrancy/solidity_contract/39932.sol:158:68: Warning: "throw" is deprecated in favour of "revert()", "require()" and "assert()".
+                if (!msg.sender.send(msg.value - buildingCostWei)) throw;
+                                                                   ^---^
+/../data/reentrancy/solidity_contract/39932.sol:163:50: Warning: "throw" is deprecated in favour of "revert()", "require()" and "assert()".
+                if (!msg.sender.send(msg.value)) throw;
+                                                 ^---^
+/../data/reentrancy/solidity_contract/39932.sol:170:9: Warning: Use of the "var" keyword is deprecated.
+        var inst = CreatorInvoice.create(_comission, _description, _beneficiary, _value);
+        ^------^
+/../data/reentrancy/solidity_contract/39932.sol:101:5: Warning: This declaration shadows a builtin symbol.
+    function abi() constant returns (string)
+    ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/39932.sol:23:7: Warning: "suicide" has been deprecated in favour of "selfdestruct"
+    { suicide(owner); }
+      ^------------^
+/../data/reentrancy/solidity_contract/39932.sol:43:29: Warning: "sha3" has been deprecated in favour of "keccak256"
+        var refill = bytes4(sha3("refill(bytes32)")); 
+                            ^---------------------^
+/../data/reentrancy/solidity_contract/39932.sol:86:9: Warning: Invoking events without "emit" prefix is deprecated.
+        PaymentReceived();
+        ^---------------^
+/../data/reentrancy/solidity_contract/39932.sol:172:9: Warning: Invoking events without "emit" prefix is deprecated.
+        Builded(_client, inst);
+        ^--------------------^
+/../data/reentrancy/solidity_contract/39932.sol:8:5: Warning: No visibility specified. Defaulting to "public". 
+    function Owned() { owner = msg.sender; }
+    ^--------------------------------------^
+/../data/reentrancy/solidity_contract/39932.sol:11:5: Warning: No visibility specified. Defaulting to "public". 
+    function delegate(address _owner) onlyOwner
+    ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/39932.sol:22:5: Warning: No visibility specified. Defaulting to "public". 
+    function kill() onlyOwner
+    ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/39932.sol:33:5: Warning: No visibility specified. Defaulting to "public". 
+    function Comission(address _ledger, bytes32 _taxman, uint _taxPerc) {
+    ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/39932.sol:40:5: Warning: No visibility specified. Defaulting to "public". 
+    function process(bytes32 _destination) payable returns (bool) {
+    ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/39932.sol:60:5: Warning: No visibility specified. Defaulting to "public". 
+    function Invoice(address _comission,
+    ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/39932.sol:71:5: Warning: No visibility specified. Defaulting to "public". 
+    function withdraw() onlyOwner {
+    ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/39932.sol:78:5: Warning: No visibility specified. Defaulting to "public". 
+    function () payable {
+    ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/39932.sol:95:5: Warning: No visibility specified. Defaulting to "public". 
+    function create(address _comission, string _description, bytes32 _beneficiary, uint256 _value) returns (Invoice)
+    ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/39932.sol:98:5: Warning: No visibility specified. Defaulting to "public". 
+    function version() constant returns (string)
+    ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/39932.sol:101:5: Warning: No visibility specified. Defaulting to "public". 
+    function abi() constant returns (string)
+    ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/39932.sol:115:5: Warning: No visibility specified. Defaulting to "public". 
+    function getLastContract() constant returns (address) {
+    ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/39932.sol:124:5: Warning: No visibility specified. Defaulting to "public". 
+    function setBeneficiary(address _beneficiary) onlyOwner
+    ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/39932.sol:131:5: Warning: No visibility specified. Defaulting to "public". 
+    function setCost(uint _buildingCostWei) onlyOwner
+    ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/39932.sol:138:5: Warning: No visibility specified. Defaulting to "public". 
+    function setSecurityCheck(string _uri) onlyOwner
+    ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/39932.sol:148:5: Warning: No visibility specified. Defaulting to "public". 
+    function create(address _comission, string _description,
+    ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/39932.sol:98:5: Warning: Function state mutability can be restricted to pure
+    function version() constant returns (string)
+    ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/39932.sol:101:5: Warning: Function state mutability can be restricted to pure
+    function abi() constant returns (string)
+    ^ (Relevant source part starts here and spans across multiple lines).
+
+INFO:Detectors:[92m
+CreatorInvoice.abi (function @ /../data/reentrancy/solidity_contract/39932.sol#101-102) shadows built-in symbol "abi"
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#builtin-symbol-shadowing[0m
+INFO:Detectors:[92m
+Reentrancy in BuilderInvoice.create (/../data/reentrancy/solidity_contract/39932.sol#148-175):
+	External calls:
+	- inst.delegate(_client) (/../data/reentrancy/solidity_contract/39932.sol#171)
+	External calls sending eth:
+	- ! beneficiary.send(buildingCostWei) (/../data/reentrancy/solidity_contract/39932.sol#155)
+	- ! msg.sender.send(msg.value - buildingCostWei) (/../data/reentrancy/solidity_contract/39932.sol#158)
+	- ! msg.sender.send(msg.value) (/../data/reentrancy/solidity_contract/39932.sol#163)
+	State variables written after the call(s):
+	- getContractsOf (/../data/reentrancy/solidity_contract/39932.sol#173)
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#reentrancy-vulnerabilities-2[0m
+INFO:Detectors:[92m
+Deprecated standard detected @ /../data/reentrancy/solidity_contract/39932.sol#15:
+	- Usage of "throw" should be replaced with "revert()"
+Deprecated standard detected @ /../data/reentrancy/solidity_contract/39932.sol#23:
+	- Usage of "suicide()" should be replaced with "selfdestruct()"
+Deprecated standard detected @ /../data/reentrancy/solidity_contract/39932.sol#41:
+	- Usage of "throw" should be replaced with "revert()"
+Deprecated standard detected @ /../data/reentrancy/solidity_contract/39932.sol#43:
+	- Usage of "sha3()" should be replaced with "keccak256()"
+Deprecated standard detected @ /../data/reentrancy/solidity_contract/39932.sol#44:
+	- Usage of "throw" should be replaced with "revert()"
+Deprecated standard detected @ /../data/reentrancy/solidity_contract/39932.sol#73:
+	- Usage of "throw" should be replaced with "revert()"
+Deprecated standard detected @ /../data/reentrancy/solidity_contract/39932.sol#81:
+	- Usage of "throw" should be replaced with "revert()"
+Deprecated standard detected @ /../data/reentrancy/solidity_contract/39932.sol#153:
+	- Usage of "throw" should be replaced with "revert()"
+Deprecated standard detected @ /../data/reentrancy/solidity_contract/39932.sol#155:
+	- Usage of "throw" should be replaced with "revert()"
+Deprecated standard detected @ /../data/reentrancy/solidity_contract/39932.sol#158:
+	- Usage of "throw" should be replaced with "revert()"
+Deprecated standard detected @ /../data/reentrancy/solidity_contract/39932.sol#163:
+	- Usage of "throw" should be replaced with "revert()"
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#deprecated-standards[0m
+INFO:Detectors:[92m
+Owned.delegate (/../data/reentrancy/solidity_contract/39932.sol#11-12) should be declared external
+Mortal.kill (/../data/reentrancy/solidity_contract/39932.sol#22-23) should be declared external
+Comission.process (/../data/reentrancy/solidity_contract/39932.sol#40-46) should be declared external
+Invoice.withdraw (/../data/reentrancy/solidity_contract/39932.sol#71-75) should be declared external
+Invoice.fallback (/../data/reentrancy/solidity_contract/39932.sol#78-87) should be declared external
+CreatorInvoice.create (/../data/reentrancy/solidity_contract/39932.sol#95-96) should be declared external
+CreatorInvoice.version (/../data/reentrancy/solidity_contract/39932.sol#98-99) should be declared external
+CreatorInvoice.abi (/../data/reentrancy/solidity_contract/39932.sol#101-102) should be declared external
+Builder.getLastContract (/../data/reentrancy/solidity_contract/39932.sol#115-118) should be declared external
+Builder.setBeneficiary (/../data/reentrancy/solidity_contract/39932.sol#124-125) should be declared external
+Builder.setCost (/../data/reentrancy/solidity_contract/39932.sol#131-132) should be declared external
+Builder.setSecurityCheck (/../data/reentrancy/solidity_contract/39932.sol#138-139) should be declared external
+BuilderInvoice.create (/../data/reentrancy/solidity_contract/39932.sol#148-175) should be declared external
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#public-function-that-could-be-declared-as-external[0m
+INFO:Detectors:[92m
+Detected issues with version pragma in /../data/reentrancy/solidity_contract/39932.sol:
+	- pragma solidity^0.4.4 (/../data/reentrancy/solidity_contract/39932.sol#1): it allows old versions
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#incorrect-version-of-solidity[0m
+INFO:Detectors:[92m
+Low level call in Comission.process (/../data/reentrancy/solidity_contract/39932.sol#40-46):
+	-! ledger.call.value(tax)(refill,taxman) || ! ledger.call.value(msg.value - tax)(refill,_destination) /../data/reentrancy/solidity_contract/39932.sol#44
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#low-level-calls[0m
+INFO:Detectors:[92m
+Function 'Owned.Owned' (/../data/reentrancy/solidity_contract/39932.sol#8) is not in mixedCase
+Parameter '_owner' of Owned.delegate (/../data/reentrancy/solidity_contract/39932.sol#11) is not in mixedCase
+Function 'Comission.Comission' (/../data/reentrancy/solidity_contract/39932.sol#33-37) is not in mixedCase
+Parameter '_ledger' of Comission.Comission (/../data/reentrancy/solidity_contract/39932.sol#33) is not in mixedCase
+Parameter '_taxman' of Comission.Comission (/../data/reentrancy/solidity_contract/39932.sol#33) is not in mixedCase
+Parameter '_taxPerc' of Comission.Comission (/../data/reentrancy/solidity_contract/39932.sol#33) is not in mixedCase
+Parameter '_destination' of Comission.process (/../data/reentrancy/solidity_contract/39932.sol#40) is not in mixedCase
+Function 'Invoice.Invoice' (/../data/reentrancy/solidity_contract/39932.sol#60-68) is not in mixedCase
+Parameter '_comission' of Invoice.Invoice (/../data/reentrancy/solidity_contract/39932.sol#60) is not in mixedCase
+Parameter '_description' of Invoice.Invoice (/../data/reentrancy/solidity_contract/39932.sol#61) is not in mixedCase
+Parameter '_beneficiary' of Invoice.Invoice (/../data/reentrancy/solidity_contract/39932.sol#62) is not in mixedCase
+Parameter '_value' of Invoice.Invoice (/../data/reentrancy/solidity_contract/39932.sol#63) is not in mixedCase
+Parameter '_comission' of CreatorInvoice.create (/../data/reentrancy/solidity_contract/39932.sol#95) is not in mixedCase
+Parameter '_description' of CreatorInvoice.create (/../data/reentrancy/solidity_contract/39932.sol#95) is not in mixedCase
+Parameter '_beneficiary' of CreatorInvoice.create (/../data/reentrancy/solidity_contract/39932.sol#95) is not in mixedCase
+Parameter '_value' of CreatorInvoice.create (/../data/reentrancy/solidity_contract/39932.sol#95) is not in mixedCase
+Parameter '_beneficiary' of Builder.setBeneficiary (/../data/reentrancy/solidity_contract/39932.sol#124) is not in mixedCase
+Parameter '_buildingCostWei' of Builder.setCost (/../data/reentrancy/solidity_contract/39932.sol#131) is not in mixedCase
+Parameter '_uri' of Builder.setSecurityCheck (/../data/reentrancy/solidity_contract/39932.sol#138) is not in mixedCase
+Parameter '_comission' of BuilderInvoice.create (/../data/reentrancy/solidity_contract/39932.sol#148) is not in mixedCase
+Parameter '_description' of BuilderInvoice.create (/../data/reentrancy/solidity_contract/39932.sol#148) is not in mixedCase
+Parameter '_beneficiary' of BuilderInvoice.create (/../data/reentrancy/solidity_contract/39932.sol#149) is not in mixedCase
+Parameter '_value' of BuilderInvoice.create (/../data/reentrancy/solidity_contract/39932.sol#149) is not in mixedCase
+Parameter '_client' of BuilderInvoice.create (/../data/reentrancy/solidity_contract/39932.sol#150) is not in mixedCase
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#conformance-to-solidity-naming-conventions[0m
+INFO:Slither:/../data/reentrancy/solidity_contract/39932.sol analyzed (7 contracts), 52 result(s) found

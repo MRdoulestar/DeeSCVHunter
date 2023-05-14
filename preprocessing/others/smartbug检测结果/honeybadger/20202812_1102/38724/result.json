@@ -1,0 +1,14 @@
+{
+  "contract": "38724",
+  "tool": "honeybadger",
+  "start": 1609138024.168927,
+  "end": 1609138028.1423979,
+  "duration": 3.97347092628479,
+  "analysis": [
+    {
+      "errors": [],
+      "file": "/../data/reentrancy/solidity_contract/38724.sol",
+      "name": "ERC20nator"
+    }
+  ]
+}

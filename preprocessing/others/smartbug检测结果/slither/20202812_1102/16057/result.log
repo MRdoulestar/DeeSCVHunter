@@ -1,0 +1,75 @@
+INFO:Slither:Compilation warnings/errors on /../data/reentrancy/solidity_contract/16057.sol:
+/../data/reentrancy/solidity_contract/16057.sol:81:5: Warning: This declaration shadows an existing declaration.
+    uint256 secret = uint256(hash);
+    ^------------^
+/../data/reentrancy/solidity_contract/16057.sol:20:1: The shadowed declaration is here:
+uint256 public secret;
+^-------------------^
+
+/../data/reentrancy/solidity_contract/16057.sol:80:20: Warning: This function only accepts a single "bytes" argument. Please use "abi.encodePacked(...)" or a similar function to encode the data.
+    bytes32 hash = keccak256(blockhash(block.number-1));
+                   ^----------------------------------^
+/../data/reentrancy/solidity_contract/16057.sol:80:20: Warning: The provided argument of type bytes32 is not implicitly convertible to expected type bytes memory.
+    bytes32 hash = keccak256(blockhash(block.number-1));
+                   ^----------------------------------^
+/../data/reentrancy/solidity_contract/16057.sol:93:2: Warning: Return value of low-level calls not used.
+	firstTarget.call.value(msg.value)();
+	^---------------------------------^
+/../data/reentrancy/solidity_contract/16057.sol:98:2: Warning: Return value of low-level calls not used.
+	secondTarget.call.value(msg.value)();
+	^----------------------------------^
+/../data/reentrancy/solidity_contract/16057.sol:124:2: Warning: Return value of low-level calls not used.
+	owner.call.value(1 wei)();
+	^-----------------------^
+
+INFO:Detectors:[93m
+DrainMe.unlockSecret (/../data/reentrancy/solidity_contract/16057.sol#79-89) uses a dangerous strict equality:
+	- secret % 5 == 0
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#dangerous-strict-equalities[0m
+INFO:Detectors:[92m
+DrainMe.unlockSecret.secret (local variable @ /../data/reentrancy/solidity_contract/16057.sol#81) shadows:
+	- DrainMe.secret (state variable @ /../data/reentrancy/solidity_contract/16057.sol#20)
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#local-variable-shadowing[0m
+INFO:Detectors:[92m
+DrainMe.firstTarget should be constant (/../data/reentrancy/solidity_contract/16057.sol#14)
+DrainMe.secondTarget should be constant (/../data/reentrancy/solidity_contract/16057.sol#15)
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#state-variables-that-could-be-declared-constant[0m
+INFO:Detectors:[92m
+DrainMe.DranMe (/../data/reentrancy/solidity_contract/16057.sol#26-28) should be declared external
+DrainMe.getLength (/../data/reentrancy/solidity_contract/16057.sol#49-51) should be declared external
+DrainMe.setSecret (/../data/reentrancy/solidity_contract/16057.sol#53-55) should be declared external
+DrainMe.getPlayerCount (/../data/reentrancy/solidity_contract/16057.sol#57-59) should be declared external
+DrainMe.getPrize (/../data/reentrancy/solidity_contract/16057.sol#61-63) should be declared external
+DrainMe.becomePlayer (/../data/reentrancy/solidity_contract/16057.sol#65-69) should be declared external
+DrainMe.manipulateSecret (/../data/reentrancy/solidity_contract/16057.sol#71-77) should be declared external
+DrainMe.callFirstTarget (/../data/reentrancy/solidity_contract/16057.sol#91-94) should be declared external
+DrainMe.callSecondTarget (/../data/reentrancy/solidity_contract/16057.sol#96-99) should be declared external
+DrainMe.setSeed (/../data/reentrancy/solidity_contract/16057.sol#101-103) should be declared external
+DrainMe.addSeed (/../data/reentrancy/solidity_contract/16057.sol#105-107) should be declared external
+DrainMe.guessSeed (/../data/reentrancy/solidity_contract/16057.sol#109-114) should be declared external
+DrainMe.checkSecret (/../data/reentrancy/solidity_contract/16057.sol#116-121) should be declared external
+DrainMe.winPrize (/../data/reentrancy/solidity_contract/16057.sol#123-125) should be declared external
+DrainMe.claimPrize (/../data/reentrancy/solidity_contract/16057.sol#127-129) should be declared external
+DrainMe.fallback (/../data/reentrancy/solidity_contract/16057.sol#133-134) should be declared external
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#public-function-that-could-be-declared-as-external[0m
+INFO:Detectors:[92m
+Detected issues with version pragma in /../data/reentrancy/solidity_contract/16057.sol:
+	- pragma solidity^0.4.23 (/../data/reentrancy/solidity_contract/16057.sol#6): it allows old versions
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#incorrect-version-of-solidity[0m
+INFO:Detectors:[92m
+Low level call in DrainMe.callFirstTarget (/../data/reentrancy/solidity_contract/16057.sol#91-94):
+	-firstTarget.call.value(msg.value)() /../data/reentrancy/solidity_contract/16057.sol#93
+Low level call in DrainMe.callSecondTarget (/../data/reentrancy/solidity_contract/16057.sol#96-99):
+	-secondTarget.call.value(msg.value)() /../data/reentrancy/solidity_contract/16057.sol#98
+Low level call in DrainMe.winPrize (/../data/reentrancy/solidity_contract/16057.sol#123-125):
+	-owner.call.value(1)() /../data/reentrancy/solidity_contract/16057.sol#124
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#low-level-calls[0m
+INFO:Detectors:[92m
+Function 'DrainMe.DranMe' (/../data/reentrancy/solidity_contract/16057.sol#26-28) is not in mixedCase
+Parameter '_secret' of DrainMe.setSecret (/../data/reentrancy/solidity_contract/16057.sol#53) is not in mixedCase
+Parameter '_index' of DrainMe.setSeed (/../data/reentrancy/solidity_contract/16057.sol#101) is not in mixedCase
+Parameter '_value' of DrainMe.setSeed (/../data/reentrancy/solidity_contract/16057.sol#101) is not in mixedCase
+Parameter '_add' of DrainMe.addSeed (/../data/reentrancy/solidity_contract/16057.sol#105) is not in mixedCase
+Parameter '_seed' of DrainMe.guessSeed (/../data/reentrancy/solidity_contract/16057.sol#109) is not in mixedCase
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#conformance-to-solidity-naming-conventions[0m
+INFO:Slither:/../data/reentrancy/solidity_contract/16057.sol analyzed (1 contracts), 29 result(s) found

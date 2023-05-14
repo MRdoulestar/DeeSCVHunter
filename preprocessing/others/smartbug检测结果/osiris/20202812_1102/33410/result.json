@@ -1,0 +1,35 @@
+{
+  "contract": "33410",
+  "tool": "osiris",
+  "start": 1609152976.824339,
+  "end": 1609153040.353898,
+  "duration": 63.52955913543701,
+  "analysis": [
+    {
+      "errors": [],
+      "file": "/../data/reentrancy/solidity_contract/33410.sol",
+      "name": "BCDCToken"
+    },
+    {
+      "errors": [],
+      "file": "/../data/reentrancy/solidity_contract/33410.sol",
+      "name": "BCDCVault"
+    },
+    {
+      "errors": [
+        {
+          "line": 87,
+          "column": 5,
+          "message": "truncation_bugs"
+        }
+      ],
+      "file": "/../data/reentrancy/solidity_contract/33410.sol",
+      "name": "MultiSigWallet"
+    },
+    {
+      "errors": [],
+      "file": "/../data/reentrancy/solidity_contract/33410.sol",
+      "name": "SafeMath"
+    }
+  ]
+}

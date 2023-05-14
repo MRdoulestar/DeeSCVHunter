@@ -1,0 +1,3422 @@
+{
+  "contract": "39866",
+  "tool": "slither",
+  "start": 1609186843.510855,
+  "end": 1609186844.619613,
+  "duration": 1.1087579727172852,
+  "analysis": [
+    {
+      "check": "reentrancy-eth",
+      "impact": "High",
+      "confidence": "Medium",
+      "description": "Reentrancy in NinjaToken.buy (/../data/reentrancy/solidity_contract/39866.sol#123-129):\n\tExternal calls:\n\t- ! fundingAccount.call.value(msg.value)() (/../data/reentrancy/solidity_contract/39866.sol#125)\n\tState variables written after the call(s):\n\t- balances (/../data/reentrancy/solidity_contract/39866.sol#126)\n",
+      "elements": [
+        {
+          "type": "function",
+          "name": "buy",
+          "source_mapping": {
+            "start": 3966,
+            "length": 326,
+            "filename": "/../data/reentrancy/solidity_contract/39866.sol",
+            "lines": [
+              123,
+              124,
+              125,
+              126,
+              127,
+              128,
+              129
+            ]
+          },
+          "contract": {
+            "type": "contract",
+            "name": "NinjaToken",
+            "source_mapping": {
+              "start": 2036,
+              "length": 2623,
+              "filename": "/../data/reentrancy/solidity_contract/39866.sol",
+              "lines": [
+                66,
+                67,
+                68,
+                69,
+                70,
+                71,
+                72,
+                73,
+                74,
+                75,
+                76,
+                77,
+                78,
+                79,
+                80,
+                81,
+                82,
+                83,
+                84,
+                85,
+                86,
+                87,
+                88,
+                89,
+                90,
+                91,
+                92,
+                93,
+                94,
+                95,
+                96,
+                97,
+                98,
+                99,
+                100,
+                101,
+                102,
+                103,
+                104,
+                105,
+                106,
+                107,
+                108,
+                109,
+                110,
+                111,
+                112,
+                113,
+                114,
+                115,
+                116,
+                117,
+                118,
+                119,
+                120,
+                121,
+                122,
+                123,
+                124,
+                125,
+                126,
+                127,
+                128,
+                129,
+                130,
+                131,
+                132,
+                133,
+                134,
+                135,
+                136,
+                137,
+                138,
+                139,
+                140,
+                141
+              ]
+            }
+          }
+        },
+        {
+          "type": "external_calls",
+          "expression": "! fundingAccount.call.value(msg.value)()",
+          "source_mapping": {
+            "start": 4118,
+            "length": 49,
+            "filename": "/../data/reentrancy/solidity_contract/39866.sol",
+            "lines": [
+              125
+            ]
+          }
+        },
+        {
+          "type": "variables_written",
+          "name": "balances",
+          "expression": "balances[msg.sender] += msg.value * price",
+          "source_mapping": {
+            "start": 4177,
+            "length": 37,
+            "filename": "/../data/reentrancy/solidity_contract/39866.sol",
+            "lines": [
+              126
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "reentrancy-eth",
+      "impact": "High",
+      "confidence": "Medium",
+      "description": "Reentrancy in NinjaToken.funding (/../data/reentrancy/solidity_contract/39866.sol#109-115):\n\tExternal calls:\n\t- ! fundingAccount.call.value(msg.value)() (/../data/reentrancy/solidity_contract/39866.sol#112)\n\tState variables written after the call(s):\n\t- balances (/../data/reentrancy/solidity_contract/39866.sol#113)\n",
+      "elements": [
+        {
+          "type": "function",
+          "name": "funding",
+          "source_mapping": {
+            "start": 3371,
+            "length": 422,
+            "filename": "/../data/reentrancy/solidity_contract/39866.sol",
+            "lines": [
+              109,
+              110,
+              111,
+              112,
+              113,
+              114,
+              115
+            ]
+          },
+          "contract": {
+            "type": "contract",
+            "name": "NinjaToken",
+            "source_mapping": {
+              "start": 2036,
+              "length": 2623,
+              "filename": "/../data/reentrancy/solidity_contract/39866.sol",
+              "lines": [
+                66,
+                67,
+                68,
+                69,
+                70,
+                71,
+                72,
+                73,
+                74,
+                75,
+                76,
+                77,
+                78,
+                79,
+                80,
+                81,
+                82,
+                83,
+                84,
+                85,
+                86,
+                87,
+                88,
+                89,
+                90,
+                91,
+                92,
+                93,
+                94,
+                95,
+                96,
+                97,
+                98,
+                99,
+                100,
+                101,
+                102,
+                103,
+                104,
+                105,
+                106,
+                107,
+                108,
+                109,
+                110,
+                111,
+                112,
+                113,
+                114,
+                115,
+                116,
+                117,
+                118,
+                119,
+                120,
+                121,
+                122,
+                123,
+                124,
+                125,
+                126,
+                127,
+                128,
+                129,
+                130,
+                131,
+                132,
+                133,
+                134,
+                135,
+                136,
+                137,
+                138,
+                139,
+                140,
+                141
+              ]
+            }
+          }
+        },
+        {
+          "type": "external_calls",
+          "expression": "! fundingAccount.call.value(msg.value)()",
+          "source_mapping": {
+            "start": 3637,
+            "length": 49,
+            "filename": "/../data/reentrancy/solidity_contract/39866.sol",
+            "lines": [
+              112
+            ]
+          }
+        },
+        {
+          "type": "variables_written",
+          "name": "balances",
+          "expression": "balances[msg.sender] += msg.value * fundingExchangeRate",
+          "source_mapping": {
+            "start": 3696,
+            "length": 51,
+            "filename": "/../data/reentrancy/solidity_contract/39866.sol",
+            "lines": [
+              113
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "constant-function",
+      "impact": "Medium",
+      "confidence": "Medium",
+      "description": "StandardToken.transfer (/../data/reentrancy/solidity_contract/39866.sol#28-37) is declared view but changes state variables:\n\t- StandardToken.balances\n",
+      "elements": [
+        {
+          "type": "function",
+          "name": "transfer",
+          "source_mapping": {
+            "start": 873,
+            "length": 322,
+            "filename": "/../data/reentrancy/solidity_contract/39866.sol",
+            "lines": [
+              28,
+              29,
+              30,
+              31,
+              32,
+              33,
+              34,
+              35,
+              36,
+              37
+            ]
+          },
+          "contract": {
+            "type": "contract",
+            "name": "StandardToken",
+            "source_mapping": {
+              "start": 712,
+              "length": 1322,
+              "filename": "/../data/reentrancy/solidity_contract/39866.sol",
+              "lines": [
+                22,
+                23,
+                24,
+                25,
+                26,
+                27,
+                28,
+                29,
+                30,
+                31,
+                32,
+                33,
+                34,
+                35,
+                36,
+                37,
+                38,
+                39,
+                40,
+                41,
+                42,
+                43,
+                44,
+                45,
+                46,
+                47,
+                48,
+                49,
+                50,
+                51,
+                52,
+                53,
+                54,
+                55,
+                56,
+                57,
+                58,
+                59,
+                60,
+                61,
+                62,
+                63,
+                64
+              ]
+            }
+          }
+        },
+        {
+          "type": "variable",
+          "name": "balances",
+          "source_mapping": {
+            "start": 777,
+            "length": 35,
+            "filename": "/../data/reentrancy/solidity_contract/39866.sol",
+            "lines": [
+              24
+            ]
+          }
+        },
+        {
+          "type": "info",
+          "contains_assembly": false
+        }
+      ]
+    },
+    {
+      "check": "constant-function",
+      "impact": "Medium",
+      "confidence": "Medium",
+      "description": "StandardToken.transferFrom (/../data/reentrancy/solidity_contract/39866.sol#39-49) is declared view but changes state variables:\n\t- StandardToken.allowed\n\t- StandardToken.balances\n",
+      "elements": [
+        {
+          "type": "function",
+          "name": "transferFrom",
+          "source_mapping": {
+            "start": 1199,
+            "length": 401,
+            "filename": "/../data/reentrancy/solidity_contract/39866.sol",
+            "lines": [
+              39,
+              40,
+              41,
+              42,
+              43,
+              44,
+              45,
+              46,
+              47,
+              48,
+              49
+            ]
+          },
+          "contract": {
+            "type": "contract",
+            "name": "StandardToken",
+            "source_mapping": {
+              "start": 712,
+              "length": 1322,
+              "filename": "/../data/reentrancy/solidity_contract/39866.sol",
+              "lines": [
+                22,
+                23,
+                24,
+                25,
+                26,
+                27,
+                28,
+                29,
+                30,
+                31,
+                32,
+                33,
+                34,
+                35,
+                36,
+                37,
+                38,
+                39,
+                40,
+                41,
+                42,
+                43,
+                44,
+                45,
+                46,
+                47,
+                48,
+                49,
+                50,
+                51,
+                52,
+                53,
+                54,
+                55,
+                56,
+                57,
+                58,
+                59,
+                60,
+                61,
+                62,
+                63,
+                64
+              ]
+            }
+          }
+        },
+        {
+          "type": "variable",
+          "name": "allowed",
+          "source_mapping": {
+            "start": 816,
+            "length": 51,
+            "filename": "/../data/reentrancy/solidity_contract/39866.sol",
+            "lines": [
+              25
+            ]
+          }
+        },
+        {
+          "type": "variable",
+          "name": "balances",
+          "source_mapping": {
+            "start": 777,
+            "length": 35,
+            "filename": "/../data/reentrancy/solidity_contract/39866.sol",
+            "lines": [
+              24
+            ]
+          }
+        },
+        {
+          "type": "info",
+          "contains_assembly": false
+        }
+      ]
+    },
+    {
+      "check": "constant-function",
+      "impact": "Medium",
+      "confidence": "Medium",
+      "description": "StandardToken.approve (/../data/reentrancy/solidity_contract/39866.sol#51-55) is declared view but changes state variables:\n\t- StandardToken.allowed\n",
+      "elements": [
+        {
+          "type": "function",
+          "name": "approve",
+          "source_mapping": {
+            "start": 1604,
+            "length": 187,
+            "filename": "/../data/reentrancy/solidity_contract/39866.sol",
+            "lines": [
+              51,
+              52,
+              53,
+              54,
+              55
+            ]
+          },
+          "contract": {
+            "type": "contract",
+            "name": "StandardToken",
+            "source_mapping": {
+              "start": 712,
+              "length": 1322,
+              "filename": "/../data/reentrancy/solidity_contract/39866.sol",
+              "lines": [
+                22,
+                23,
+                24,
+                25,
+                26,
+                27,
+                28,
+                29,
+                30,
+                31,
+                32,
+                33,
+                34,
+                35,
+                36,
+                37,
+                38,
+                39,
+                40,
+                41,
+                42,
+                43,
+                44,
+                45,
+                46,
+                47,
+                48,
+                49,
+                50,
+                51,
+                52,
+                53,
+                54,
+                55,
+                56,
+                57,
+                58,
+                59,
+                60,
+                61,
+                62,
+                63,
+                64
+              ]
+            }
+          }
+        },
+        {
+          "type": "variable",
+          "name": "allowed",
+          "source_mapping": {
+            "start": 816,
+            "length": 51,
+            "filename": "/../data/reentrancy/solidity_contract/39866.sol",
+            "lines": [
+              25
+            ]
+          }
+        },
+        {
+          "type": "info",
+          "contains_assembly": false
+        }
+      ]
+    },
+    {
+      "check": "constant-function",
+      "impact": "Medium",
+      "confidence": "Medium",
+      "description": "NinjaToken.transfer (/../data/reentrancy/solidity_contract/39866.sol#131-134) is declared view but changes state variables:\n\t- StandardToken.balances\n",
+      "elements": [
+        {
+          "type": "function",
+          "name": "transfer",
+          "source_mapping": {
+            "start": 4302,
+            "length": 159,
+            "filename": "/../data/reentrancy/solidity_contract/39866.sol",
+            "lines": [
+              131,
+              132,
+              133,
+              134
+            ]
+          },
+          "contract": {
+            "type": "contract",
+            "name": "NinjaToken",
+            "source_mapping": {
+              "start": 2036,
+              "length": 2623,
+              "filename": "/../data/reentrancy/solidity_contract/39866.sol",
+              "lines": [
+                66,
+                67,
+                68,
+                69,
+                70,
+                71,
+                72,
+                73,
+                74,
+                75,
+                76,
+                77,
+                78,
+                79,
+                80,
+                81,
+                82,
+                83,
+                84,
+                85,
+                86,
+                87,
+                88,
+                89,
+                90,
+                91,
+                92,
+                93,
+                94,
+                95,
+                96,
+                97,
+                98,
+                99,
+                100,
+                101,
+                102,
+                103,
+                104,
+                105,
+                106,
+                107,
+                108,
+                109,
+                110,
+                111,
+                112,
+                113,
+                114,
+                115,
+                116,
+                117,
+                118,
+                119,
+                120,
+                121,
+                122,
+                123,
+                124,
+                125,
+                126,
+                127,
+                128,
+                129,
+                130,
+                131,
+                132,
+                133,
+                134,
+                135,
+                136,
+                137,
+                138,
+                139,
+                140,
+                141
+              ]
+            }
+          }
+        },
+        {
+          "type": "variable",
+          "name": "balances",
+          "source_mapping": {
+            "start": 777,
+            "length": 35,
+            "filename": "/../data/reentrancy/solidity_contract/39866.sol",
+            "lines": [
+              24
+            ]
+          }
+        },
+        {
+          "type": "info",
+          "contains_assembly": false
+        }
+      ]
+    },
+    {
+      "check": "constant-function",
+      "impact": "Medium",
+      "confidence": "Medium",
+      "description": "NinjaToken.transferFrom (/../data/reentrancy/solidity_contract/39866.sol#136-139) is declared view but changes state variables:\n\t- StandardToken.allowed\n\t- StandardToken.balances\n",
+      "elements": [
+        {
+          "type": "function",
+          "name": "transferFrom",
+          "source_mapping": {
+            "start": 4467,
+            "length": 189,
+            "filename": "/../data/reentrancy/solidity_contract/39866.sol",
+            "lines": [
+              136,
+              137,
+              138,
+              139
+            ]
+          },
+          "contract": {
+            "type": "contract",
+            "name": "NinjaToken",
+            "source_mapping": {
+              "start": 2036,
+              "length": 2623,
+              "filename": "/../data/reentrancy/solidity_contract/39866.sol",
+              "lines": [
+                66,
+                67,
+                68,
+                69,
+                70,
+                71,
+                72,
+                73,
+                74,
+                75,
+                76,
+                77,
+                78,
+                79,
+                80,
+                81,
+                82,
+                83,
+                84,
+                85,
+                86,
+                87,
+                88,
+                89,
+                90,
+                91,
+                92,
+                93,
+                94,
+                95,
+                96,
+                97,
+                98,
+                99,
+                100,
+                101,
+                102,
+                103,
+                104,
+                105,
+                106,
+                107,
+                108,
+                109,
+                110,
+                111,
+                112,
+                113,
+                114,
+                115,
+                116,
+                117,
+                118,
+                119,
+                120,
+                121,
+                122,
+                123,
+                124,
+                125,
+                126,
+                127,
+                128,
+                129,
+                130,
+                131,
+                132,
+                133,
+                134,
+                135,
+                136,
+                137,
+                138,
+                139,
+                140,
+                141
+              ]
+            }
+          }
+        },
+        {
+          "type": "variable",
+          "name": "allowed",
+          "source_mapping": {
+            "start": 816,
+            "length": 51,
+            "filename": "/../data/reentrancy/solidity_contract/39866.sol",
+            "lines": [
+              25
+            ]
+          }
+        },
+        {
+          "type": "variable",
+          "name": "balances",
+          "source_mapping": {
+            "start": 777,
+            "length": 35,
+            "filename": "/../data/reentrancy/solidity_contract/39866.sol",
+            "lines": [
+              24
+            ]
+          }
+        },
+        {
+          "type": "info",
+          "contains_assembly": false
+        }
+      ]
+    },
+    {
+      "check": "shadowing-local",
+      "impact": "Low",
+      "confidence": "High",
+      "description": "Token.totalSupply.totalSupply (local variable @ /../data/reentrancy/solidity_contract/39866.sol#8) shadows:\n\t- Token.totalSupply (function @ /../data/reentrancy/solidity_contract/39866.sol#8)\n",
+      "elements": [
+        {
+          "type": "variable",
+          "name": "totalSupply",
+          "source_mapping": {
+            "start": 246,
+            "length": 19,
+            "filename": "/../data/reentrancy/solidity_contract/39866.sol",
+            "lines": [
+              8
+            ]
+          }
+        },
+        {
+          "type": "function",
+          "name": "totalSupply",
+          "source_mapping": {
+            "start": 206,
+            "length": 62,
+            "filename": "/../data/reentrancy/solidity_contract/39866.sol",
+            "lines": [
+              8
+            ]
+          },
+          "contract": {
+            "type": "contract",
+            "name": "Token",
+            "source_mapping": {
+              "start": 24,
+              "length": 686,
+              "filename": "/../data/reentrancy/solidity_contract/39866.sol",
+              "lines": [
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10,
+                11,
+                12,
+                13,
+                14,
+                15,
+                16,
+                17,
+                18,
+                19,
+                20
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "check": "shadowing-local",
+      "impact": "Low",
+      "confidence": "High",
+      "description": "StandardToken.allowance.allowance (local variable @ /../data/reentrancy/solidity_contract/39866.sol#61) shadows:\n\t- StandardToken.allowance (function @ /../data/reentrancy/solidity_contract/39866.sol#61-63)\n\t- Token.allowance (function @ /../data/reentrancy/solidity_contract/39866.sol#18)\n",
+      "elements": [
+        {
+          "type": "variable",
+          "name": "allowance",
+          "source_mapping": {
+            "start": 1971,
+            "length": 17,
+            "filename": "/../data/reentrancy/solidity_contract/39866.sol",
+            "lines": [
+              61
+            ]
+          }
+        },
+        {
+          "type": "function",
+          "name": "allowance",
+          "source_mapping": {
+            "start": 1902,
+            "length": 130,
+            "filename": "/../data/reentrancy/solidity_contract/39866.sol",
+            "lines": [
+              61,
+              62,
+              63
+            ]
+          },
+          "contract": {
+            "type": "contract",
+            "name": "StandardToken",
+            "source_mapping": {
+              "start": 712,
+              "length": 1322,
+              "filename": "/../data/reentrancy/solidity_contract/39866.sol",
+              "lines": [
+                22,
+                23,
+                24,
+                25,
+                26,
+                27,
+                28,
+                29,
+                30,
+                31,
+                32,
+                33,
+                34,
+                35,
+                36,
+                37,
+                38,
+                39,
+                40,
+                41,
+                42,
+                43,
+                44,
+                45,
+                46,
+                47,
+                48,
+                49,
+                50,
+                51,
+                52,
+                53,
+                54,
+                55,
+                56,
+                57,
+                58,
+                59,
+                60,
+                61,
+                62,
+                63,
+                64
+              ]
+            }
+          }
+        },
+        {
+          "type": "function",
+          "name": "allowance",
+          "source_mapping": {
+            "start": 620,
+            "length": 87,
+            "filename": "/../data/reentrancy/solidity_contract/39866.sol",
+            "lines": [
+              18
+            ]
+          },
+          "contract": {
+            "type": "contract",
+            "name": "Token",
+            "source_mapping": {
+              "start": 24,
+              "length": 686,
+              "filename": "/../data/reentrancy/solidity_contract/39866.sol",
+              "lines": [
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10,
+                11,
+                12,
+                13,
+                14,
+                15,
+                16,
+                17,
+                18,
+                19,
+                20
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "check": "reentrancy-benign",
+      "impact": "Low",
+      "confidence": "Medium",
+      "description": "Reentrancy in NinjaToken.buy (/../data/reentrancy/solidity_contract/39866.sol#123-129):\n\tExternal calls:\n\t- ! fundingAccount.call.value(msg.value)() (/../data/reentrancy/solidity_contract/39866.sol#125)\n\tState variables written after the call(s):\n\t- commit (/../data/reentrancy/solidity_contract/39866.sol#127)\n",
+      "elements": [
+        {
+          "type": "function",
+          "name": "buy",
+          "source_mapping": {
+            "start": 3966,
+            "length": 326,
+            "filename": "/../data/reentrancy/solidity_contract/39866.sol",
+            "lines": [
+              123,
+              124,
+              125,
+              126,
+              127,
+              128,
+              129
+            ]
+          },
+          "contract": {
+            "type": "contract",
+            "name": "NinjaToken",
+            "source_mapping": {
+              "start": 2036,
+              "length": 2623,
+              "filename": "/../data/reentrancy/solidity_contract/39866.sol",
+              "lines": [
+                66,
+                67,
+                68,
+                69,
+                70,
+                71,
+                72,
+                73,
+                74,
+                75,
+                76,
+                77,
+                78,
+                79,
+                80,
+                81,
+                82,
+                83,
+                84,
+                85,
+                86,
+                87,
+                88,
+                89,
+                90,
+                91,
+                92,
+                93,
+                94,
+                95,
+                96,
+                97,
+                98,
+                99,
+                100,
+                101,
+                102,
+                103,
+                104,
+                105,
+                106,
+                107,
+                108,
+                109,
+                110,
+                111,
+                112,
+                113,
+                114,
+                115,
+                116,
+                117,
+                118,
+                119,
+                120,
+                121,
+                122,
+                123,
+                124,
+                125,
+                126,
+                127,
+                128,
+                129,
+                130,
+                131,
+                132,
+                133,
+                134,
+                135,
+                136,
+                137,
+                138,
+                139,
+                140,
+                141
+              ]
+            }
+          }
+        },
+        {
+          "type": "external_calls",
+          "expression": "! fundingAccount.call.value(msg.value)()",
+          "source_mapping": {
+            "start": 4118,
+            "length": 49,
+            "filename": "/../data/reentrancy/solidity_contract/39866.sol",
+            "lines": [
+              125
+            ]
+          }
+        },
+        {
+          "type": "variables_written",
+          "name": "commit",
+          "expression": "commit[msg.sender] = _commit",
+          "source_mapping": {
+            "start": 4224,
+            "length": 26,
+            "filename": "/../data/reentrancy/solidity_contract/39866.sol",
+            "lines": [
+              127
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "constable-states",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "NinjaToken.decimals should be constant (/../data/reentrancy/solidity_contract/39866.sol#69)\nNinjaToken.name should be constant (/../data/reentrancy/solidity_contract/39866.sol#67)\nNinjaToken.version should be constant (/../data/reentrancy/solidity_contract/39866.sol#68)\nStandardToken.totalSupply should be constant (/../data/reentrancy/solidity_contract/39866.sol#23)\n",
+      "elements": [
+        {
+          "type": "variable",
+          "name": "decimals",
+          "source_mapping": {
+            "start": 2151,
+            "length": 25,
+            "filename": "/../data/reentrancy/solidity_contract/39866.sol",
+            "lines": [
+              69
+            ]
+          }
+        },
+        {
+          "type": "variable",
+          "name": "name",
+          "source_mapping": {
+            "start": 2078,
+            "length": 32,
+            "filename": "/../data/reentrancy/solidity_contract/39866.sol",
+            "lines": [
+              67
+            ]
+          }
+        },
+        {
+          "type": "variable",
+          "name": "totalSupply",
+          "source_mapping": {
+            "start": 747,
+            "length": 26,
+            "filename": "/../data/reentrancy/solidity_contract/39866.sol",
+            "lines": [
+              23
+            ]
+          }
+        },
+        {
+          "type": "variable",
+          "name": "version",
+          "source_mapping": {
+            "start": 2116,
+            "length": 29,
+            "filename": "/../data/reentrancy/solidity_contract/39866.sol",
+            "lines": [
+              68
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "deprecated-standards",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Deprecated standard detected @ /../data/reentrancy/solidity_contract/39866.sol#132:\n\t- Usage of \"throw\" should be replaced with \"revert()\"\n",
+      "elements": [
+        {
+          "type": "expression",
+          "expression": "None",
+          "source_mapping": {
+            "start": 4405,
+            "length": 5,
+            "filename": "/../data/reentrancy/solidity_contract/39866.sol",
+            "lines": [
+              132
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "deprecated-standards",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Deprecated standard detected @ /../data/reentrancy/solidity_contract/39866.sol#137:\n\t- Usage of \"throw\" should be replaced with \"revert()\"\n",
+      "elements": [
+        {
+          "type": "expression",
+          "expression": "None",
+          "source_mapping": {
+            "start": 4589,
+            "length": 5,
+            "filename": "/../data/reentrancy/solidity_contract/39866.sol",
+            "lines": [
+              137
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "deprecated-standards",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Deprecated standard detected @ /../data/reentrancy/solidity_contract/39866.sol#91:\n\t- Usage of \"throw\" should be replaced with \"revert()\"\n",
+      "elements": [
+        {
+          "type": "expression",
+          "expression": "None",
+          "source_mapping": {
+            "start": 2834,
+            "length": 5,
+            "filename": "/../data/reentrancy/solidity_contract/39866.sol",
+            "lines": [
+              91
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "deprecated-standards",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Deprecated standard detected @ /../data/reentrancy/solidity_contract/39866.sol#97:\n\t- Usage of \"throw\" should be replaced with \"revert()\"\n",
+      "elements": [
+        {
+          "type": "expression",
+          "expression": "None",
+          "source_mapping": {
+            "start": 3012,
+            "length": 5,
+            "filename": "/../data/reentrancy/solidity_contract/39866.sol",
+            "lines": [
+              97
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "deprecated-standards",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Deprecated standard detected @ /../data/reentrancy/solidity_contract/39866.sol#103:\n\t- Usage of \"throw\" should be replaced with \"revert()\"\n",
+      "elements": [
+        {
+          "type": "expression",
+          "expression": "None",
+          "source_mapping": {
+            "start": 3229,
+            "length": 5,
+            "filename": "/../data/reentrancy/solidity_contract/39866.sol",
+            "lines": [
+              103
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "deprecated-standards",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Deprecated standard detected @ /../data/reentrancy/solidity_contract/39866.sol#110:\n\t- Usage of \"throw\" should be replaced with \"revert()\"\n",
+      "elements": [
+        {
+          "type": "expression",
+          "expression": "None",
+          "source_mapping": {
+            "start": 3488,
+            "length": 5,
+            "filename": "/../data/reentrancy/solidity_contract/39866.sol",
+            "lines": [
+              110
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "deprecated-standards",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Deprecated standard detected @ /../data/reentrancy/solidity_contract/39866.sol#111:\n\t- Usage of \"throw\" should be replaced with \"revert()\"\n",
+      "elements": [
+        {
+          "type": "expression",
+          "expression": "None",
+          "source_mapping": {
+            "start": 3622,
+            "length": 5,
+            "filename": "/../data/reentrancy/solidity_contract/39866.sol",
+            "lines": [
+              111
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "deprecated-standards",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Deprecated standard detected @ /../data/reentrancy/solidity_contract/39866.sol#112:\n\t- Usage of \"throw\" should be replaced with \"revert()\"\n",
+      "elements": [
+        {
+          "type": "expression",
+          "expression": "None",
+          "source_mapping": {
+            "start": 3681,
+            "length": 5,
+            "filename": "/../data/reentrancy/solidity_contract/39866.sol",
+            "lines": [
+              112
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "deprecated-standards",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Deprecated standard detected @ /../data/reentrancy/solidity_contract/39866.sol#118:\n\t- Usage of \"throw\" should be replaced with \"revert()\"\n",
+      "elements": [
+        {
+          "type": "expression",
+          "expression": "None",
+          "source_mapping": {
+            "start": 3886,
+            "length": 5,
+            "filename": "/../data/reentrancy/solidity_contract/39866.sol",
+            "lines": [
+              118
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "deprecated-standards",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Deprecated standard detected @ /../data/reentrancy/solidity_contract/39866.sol#124:\n\t- Usage of \"throw\" should be replaced with \"revert()\"\n",
+      "elements": [
+        {
+          "type": "expression",
+          "expression": "None",
+          "source_mapping": {
+            "start": 4103,
+            "length": 5,
+            "filename": "/../data/reentrancy/solidity_contract/39866.sol",
+            "lines": [
+              124
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "deprecated-standards",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Deprecated standard detected @ /../data/reentrancy/solidity_contract/39866.sol#125:\n\t- Usage of \"throw\" should be replaced with \"revert()\"\n",
+      "elements": [
+        {
+          "type": "expression",
+          "expression": "None",
+          "source_mapping": {
+            "start": 4162,
+            "length": 5,
+            "filename": "/../data/reentrancy/solidity_contract/39866.sol",
+            "lines": [
+              125
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "external-function",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Token.totalSupply (/../data/reentrancy/solidity_contract/39866.sol#8) should be declared external\n",
+      "elements": [
+        {
+          "type": "function",
+          "name": "totalSupply",
+          "source_mapping": {
+            "start": 206,
+            "length": 62,
+            "filename": "/../data/reentrancy/solidity_contract/39866.sol",
+            "lines": [
+              8
+            ]
+          },
+          "contract": {
+            "type": "contract",
+            "name": "Token",
+            "source_mapping": {
+              "start": 24,
+              "length": 686,
+              "filename": "/../data/reentrancy/solidity_contract/39866.sol",
+              "lines": [
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10,
+                11,
+                12,
+                13,
+                14,
+                15,
+                16,
+                17,
+                18,
+                19,
+                20
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "check": "external-function",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Token.balanceOf (/../data/reentrancy/solidity_contract/39866.sol#10) should be declared external\n",
+      "elements": [
+        {
+          "type": "function",
+          "name": "balanceOf",
+          "source_mapping": {
+            "start": 272,
+            "length": 71,
+            "filename": "/../data/reentrancy/solidity_contract/39866.sol",
+            "lines": [
+              10
+            ]
+          },
+          "contract": {
+            "type": "contract",
+            "name": "Token",
+            "source_mapping": {
+              "start": 24,
+              "length": 686,
+              "filename": "/../data/reentrancy/solidity_contract/39866.sol",
+              "lines": [
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10,
+                11,
+                12,
+                13,
+                14,
+                15,
+                16,
+                17,
+                18,
+                19,
+                20
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "check": "external-function",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "StandardToken.balanceOf (/../data/reentrancy/solidity_contract/39866.sol#57-59) should be declared external\n",
+      "elements": [
+        {
+          "type": "function",
+          "name": "balanceOf",
+          "source_mapping": {
+            "start": 1795,
+            "length": 103,
+            "filename": "/../data/reentrancy/solidity_contract/39866.sol",
+            "lines": [
+              57,
+              58,
+              59
+            ]
+          },
+          "contract": {
+            "type": "contract",
+            "name": "StandardToken",
+            "source_mapping": {
+              "start": 712,
+              "length": 1322,
+              "filename": "/../data/reentrancy/solidity_contract/39866.sol",
+              "lines": [
+                22,
+                23,
+                24,
+                25,
+                26,
+                27,
+                28,
+                29,
+                30,
+                31,
+                32,
+                33,
+                34,
+                35,
+                36,
+                37,
+                38,
+                39,
+                40,
+                41,
+                42,
+                43,
+                44,
+                45,
+                46,
+                47,
+                48,
+                49,
+                50,
+                51,
+                52,
+                53,
+                54,
+                55,
+                56,
+                57,
+                58,
+                59,
+                60,
+                61,
+                62,
+                63,
+                64
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "check": "external-function",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "StandardToken.approve (/../data/reentrancy/solidity_contract/39866.sol#51-55) should be declared external\n",
+      "elements": [
+        {
+          "type": "function",
+          "name": "approve",
+          "source_mapping": {
+            "start": 1604,
+            "length": 187,
+            "filename": "/../data/reentrancy/solidity_contract/39866.sol",
+            "lines": [
+              51,
+              52,
+              53,
+              54,
+              55
+            ]
+          },
+          "contract": {
+            "type": "contract",
+            "name": "StandardToken",
+            "source_mapping": {
+              "start": 712,
+              "length": 1322,
+              "filename": "/../data/reentrancy/solidity_contract/39866.sol",
+              "lines": [
+                22,
+                23,
+                24,
+                25,
+                26,
+                27,
+                28,
+                29,
+                30,
+                31,
+                32,
+                33,
+                34,
+                35,
+                36,
+                37,
+                38,
+                39,
+                40,
+                41,
+                42,
+                43,
+                44,
+                45,
+                46,
+                47,
+                48,
+                49,
+                50,
+                51,
+                52,
+                53,
+                54,
+                55,
+                56,
+                57,
+                58,
+                59,
+                60,
+                61,
+                62,
+                63,
+                64
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "check": "external-function",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Token.approve (/../data/reentrancy/solidity_contract/39866.sol#16) should be declared external\n",
+      "elements": [
+        {
+          "type": "function",
+          "name": "approve",
+          "source_mapping": {
+            "start": 533,
+            "length": 83,
+            "filename": "/../data/reentrancy/solidity_contract/39866.sol",
+            "lines": [
+              16
+            ]
+          },
+          "contract": {
+            "type": "contract",
+            "name": "Token",
+            "source_mapping": {
+              "start": 24,
+              "length": 686,
+              "filename": "/../data/reentrancy/solidity_contract/39866.sol",
+              "lines": [
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10,
+                11,
+                12,
+                13,
+                14,
+                15,
+                16,
+                17,
+                18,
+                19,
+                20
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "check": "external-function",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Token.allowance (/../data/reentrancy/solidity_contract/39866.sol#18) should be declared external\n",
+      "elements": [
+        {
+          "type": "function",
+          "name": "allowance",
+          "source_mapping": {
+            "start": 620,
+            "length": 87,
+            "filename": "/../data/reentrancy/solidity_contract/39866.sol",
+            "lines": [
+              18
+            ]
+          },
+          "contract": {
+            "type": "contract",
+            "name": "Token",
+            "source_mapping": {
+              "start": 24,
+              "length": 686,
+              "filename": "/../data/reentrancy/solidity_contract/39866.sol",
+              "lines": [
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10,
+                11,
+                12,
+                13,
+                14,
+                15,
+                16,
+                17,
+                18,
+                19,
+                20
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "check": "external-function",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "StandardToken.allowance (/../data/reentrancy/solidity_contract/39866.sol#61-63) should be declared external\n",
+      "elements": [
+        {
+          "type": "function",
+          "name": "allowance",
+          "source_mapping": {
+            "start": 1902,
+            "length": 130,
+            "filename": "/../data/reentrancy/solidity_contract/39866.sol",
+            "lines": [
+              61,
+              62,
+              63
+            ]
+          },
+          "contract": {
+            "type": "contract",
+            "name": "StandardToken",
+            "source_mapping": {
+              "start": 712,
+              "length": 1322,
+              "filename": "/../data/reentrancy/solidity_contract/39866.sol",
+              "lines": [
+                22,
+                23,
+                24,
+                25,
+                26,
+                27,
+                28,
+                29,
+                30,
+                31,
+                32,
+                33,
+                34,
+                35,
+                36,
+                37,
+                38,
+                39,
+                40,
+                41,
+                42,
+                43,
+                44,
+                45,
+                46,
+                47,
+                48,
+                49,
+                50,
+                51,
+                52,
+                53,
+                54,
+                55,
+                56,
+                57,
+                58,
+                59,
+                60,
+                61,
+                62,
+                63,
+                64
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "check": "external-function",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "NinjaToken.changeFunder (/../data/reentrancy/solidity_contract/39866.sol#90-94) should be declared external\n",
+      "elements": [
+        {
+          "type": "function",
+          "name": "changeFunder",
+          "source_mapping": {
+            "start": 2748,
+            "length": 154,
+            "filename": "/../data/reentrancy/solidity_contract/39866.sol",
+            "lines": [
+              90,
+              91,
+              92,
+              93,
+              94
+            ]
+          },
+          "contract": {
+            "type": "contract",
+            "name": "NinjaToken",
+            "source_mapping": {
+              "start": 2036,
+              "length": 2623,
+              "filename": "/../data/reentrancy/solidity_contract/39866.sol",
+              "lines": [
+                66,
+                67,
+                68,
+                69,
+                70,
+                71,
+                72,
+                73,
+                74,
+                75,
+                76,
+                77,
+                78,
+                79,
+                80,
+                81,
+                82,
+                83,
+                84,
+                85,
+                86,
+                87,
+                88,
+                89,
+                90,
+                91,
+                92,
+                93,
+                94,
+                95,
+                96,
+                97,
+                98,
+                99,
+                100,
+                101,
+                102,
+                103,
+                104,
+                105,
+                106,
+                107,
+                108,
+                109,
+                110,
+                111,
+                112,
+                113,
+                114,
+                115,
+                116,
+                117,
+                118,
+                119,
+                120,
+                121,
+                122,
+                123,
+                124,
+                125,
+                126,
+                127,
+                128,
+                129,
+                130,
+                131,
+                132,
+                133,
+                134,
+                135,
+                136,
+                137,
+                138,
+                139,
+                140,
+                141
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "check": "external-function",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "NinjaToken.setFundingLock (/../data/reentrancy/solidity_contract/39866.sol#96-100) should be declared external\n",
+      "elements": [
+        {
+          "type": "function",
+          "name": "setFundingLock",
+          "source_mapping": {
+            "start": 2912,
+            "length": 186,
+            "filename": "/../data/reentrancy/solidity_contract/39866.sol",
+            "lines": [
+              96,
+              97,
+              98,
+              99,
+              100
+            ]
+          },
+          "contract": {
+            "type": "contract",
+            "name": "NinjaToken",
+            "source_mapping": {
+              "start": 2036,
+              "length": 2623,
+              "filename": "/../data/reentrancy/solidity_contract/39866.sol",
+              "lines": [
+                66,
+                67,
+                68,
+                69,
+                70,
+                71,
+                72,
+                73,
+                74,
+                75,
+                76,
+                77,
+                78,
+                79,
+                80,
+                81,
+                82,
+                83,
+                84,
+                85,
+                86,
+                87,
+                88,
+                89,
+                90,
+                91,
+                92,
+                93,
+                94,
+                95,
+                96,
+                97,
+                98,
+                99,
+                100,
+                101,
+                102,
+                103,
+                104,
+                105,
+                106,
+                107,
+                108,
+                109,
+                110,
+                111,
+                112,
+                113,
+                114,
+                115,
+                116,
+                117,
+                118,
+                119,
+                120,
+                121,
+                122,
+                123,
+                124,
+                125,
+                126,
+                127,
+                128,
+                129,
+                130,
+                131,
+                132,
+                133,
+                134,
+                135,
+                136,
+                137,
+                138,
+                139,
+                140,
+                141
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "check": "external-function",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "NinjaToken.setFundingEnv (/../data/reentrancy/solidity_contract/39866.sol#102-107) should be declared external\n",
+      "elements": [
+        {
+          "type": "function",
+          "name": "setFundingEnv",
+          "source_mapping": {
+            "start": 3108,
+            "length": 253,
+            "filename": "/../data/reentrancy/solidity_contract/39866.sol",
+            "lines": [
+              102,
+              103,
+              104,
+              105,
+              106,
+              107
+            ]
+          },
+          "contract": {
+            "type": "contract",
+            "name": "NinjaToken",
+            "source_mapping": {
+              "start": 2036,
+              "length": 2623,
+              "filename": "/../data/reentrancy/solidity_contract/39866.sol",
+              "lines": [
+                66,
+                67,
+                68,
+                69,
+                70,
+                71,
+                72,
+                73,
+                74,
+                75,
+                76,
+                77,
+                78,
+                79,
+                80,
+                81,
+                82,
+                83,
+                84,
+                85,
+                86,
+                87,
+                88,
+                89,
+                90,
+                91,
+                92,
+                93,
+                94,
+                95,
+                96,
+                97,
+                98,
+                99,
+                100,
+                101,
+                102,
+                103,
+                104,
+                105,
+                106,
+                107,
+                108,
+                109,
+                110,
+                111,
+                112,
+                113,
+                114,
+                115,
+                116,
+                117,
+                118,
+                119,
+                120,
+                121,
+                122,
+                123,
+                124,
+                125,
+                126,
+                127,
+                128,
+                129,
+                130,
+                131,
+                132,
+                133,
+                134,
+                135,
+                136,
+                137,
+                138,
+                139,
+                140,
+                141
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "check": "external-function",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "NinjaToken.funding (/../data/reentrancy/solidity_contract/39866.sol#109-115) should be declared external\n",
+      "elements": [
+        {
+          "type": "function",
+          "name": "funding",
+          "source_mapping": {
+            "start": 3371,
+            "length": 422,
+            "filename": "/../data/reentrancy/solidity_contract/39866.sol",
+            "lines": [
+              109,
+              110,
+              111,
+              112,
+              113,
+              114,
+              115
+            ]
+          },
+          "contract": {
+            "type": "contract",
+            "name": "NinjaToken",
+            "source_mapping": {
+              "start": 2036,
+              "length": 2623,
+              "filename": "/../data/reentrancy/solidity_contract/39866.sol",
+              "lines": [
+                66,
+                67,
+                68,
+                69,
+                70,
+                71,
+                72,
+                73,
+                74,
+                75,
+                76,
+                77,
+                78,
+                79,
+                80,
+                81,
+                82,
+                83,
+                84,
+                85,
+                86,
+                87,
+                88,
+                89,
+                90,
+                91,
+                92,
+                93,
+                94,
+                95,
+                96,
+                97,
+                98,
+                99,
+                100,
+                101,
+                102,
+                103,
+                104,
+                105,
+                106,
+                107,
+                108,
+                109,
+                110,
+                111,
+                112,
+                113,
+                114,
+                115,
+                116,
+                117,
+                118,
+                119,
+                120,
+                121,
+                122,
+                123,
+                124,
+                125,
+                126,
+                127,
+                128,
+                129,
+                130,
+                131,
+                132,
+                133,
+                134,
+                135,
+                136,
+                137,
+                138,
+                139,
+                140,
+                141
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "check": "external-function",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "NinjaToken.setPrice (/../data/reentrancy/solidity_contract/39866.sol#117-121) should be declared external\n",
+      "elements": [
+        {
+          "type": "function",
+          "name": "setPrice",
+          "source_mapping": {
+            "start": 3803,
+            "length": 153,
+            "filename": "/../data/reentrancy/solidity_contract/39866.sol",
+            "lines": [
+              117,
+              118,
+              119,
+              120,
+              121
+            ]
+          },
+          "contract": {
+            "type": "contract",
+            "name": "NinjaToken",
+            "source_mapping": {
+              "start": 2036,
+              "length": 2623,
+              "filename": "/../data/reentrancy/solidity_contract/39866.sol",
+              "lines": [
+                66,
+                67,
+                68,
+                69,
+                70,
+                71,
+                72,
+                73,
+                74,
+                75,
+                76,
+                77,
+                78,
+                79,
+                80,
+                81,
+                82,
+                83,
+                84,
+                85,
+                86,
+                87,
+                88,
+                89,
+                90,
+                91,
+                92,
+                93,
+                94,
+                95,
+                96,
+                97,
+                98,
+                99,
+                100,
+                101,
+                102,
+                103,
+                104,
+                105,
+                106,
+                107,
+                108,
+                109,
+                110,
+                111,
+                112,
+                113,
+                114,
+                115,
+                116,
+                117,
+                118,
+                119,
+                120,
+                121,
+                122,
+                123,
+                124,
+                125,
+                126,
+                127,
+                128,
+                129,
+                130,
+                131,
+                132,
+                133,
+                134,
+                135,
+                136,
+                137,
+                138,
+                139,
+                140,
+                141
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "check": "external-function",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "NinjaToken.buy (/../data/reentrancy/solidity_contract/39866.sol#123-129) should be declared external\n",
+      "elements": [
+        {
+          "type": "function",
+          "name": "buy",
+          "source_mapping": {
+            "start": 3966,
+            "length": 326,
+            "filename": "/../data/reentrancy/solidity_contract/39866.sol",
+            "lines": [
+              123,
+              124,
+              125,
+              126,
+              127,
+              128,
+              129
+            ]
+          },
+          "contract": {
+            "type": "contract",
+            "name": "NinjaToken",
+            "source_mapping": {
+              "start": 2036,
+              "length": 2623,
+              "filename": "/../data/reentrancy/solidity_contract/39866.sol",
+              "lines": [
+                66,
+                67,
+                68,
+                69,
+                70,
+                71,
+                72,
+                73,
+                74,
+                75,
+                76,
+                77,
+                78,
+                79,
+                80,
+                81,
+                82,
+                83,
+                84,
+                85,
+                86,
+                87,
+                88,
+                89,
+                90,
+                91,
+                92,
+                93,
+                94,
+                95,
+                96,
+                97,
+                98,
+                99,
+                100,
+                101,
+                102,
+                103,
+                104,
+                105,
+                106,
+                107,
+                108,
+                109,
+                110,
+                111,
+                112,
+                113,
+                114,
+                115,
+                116,
+                117,
+                118,
+                119,
+                120,
+                121,
+                122,
+                123,
+                124,
+                125,
+                126,
+                127,
+                128,
+                129,
+                130,
+                131,
+                132,
+                133,
+                134,
+                135,
+                136,
+                137,
+                138,
+                139,
+                140,
+                141
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "check": "solc-version",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Detected issues with version pragma in /../data/reentrancy/solidity_contract/39866.sol:\n\t- pragma solidity^0.4.2 (/../data/reentrancy/solidity_contract/39866.sol#1): it allows old versions\n",
+      "elements": [
+        {
+          "type": "expression",
+          "expression": "^0.4.2",
+          "source_mapping": {
+            "start": 0,
+            "length": 23,
+            "filename": "/../data/reentrancy/solidity_contract/39866.sol",
+            "lines": [
+              1
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "low-level-calls",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Low level call in NinjaToken.funding (/../data/reentrancy/solidity_contract/39866.sol#109-115):\n\t-! fundingAccount.call.value(msg.value)() /../data/reentrancy/solidity_contract/39866.sol#112\n",
+      "elements": [
+        {
+          "type": "function",
+          "name": "funding",
+          "source_mapping": {
+            "start": 3371,
+            "length": 422,
+            "filename": "/../data/reentrancy/solidity_contract/39866.sol",
+            "lines": [
+              109,
+              110,
+              111,
+              112,
+              113,
+              114,
+              115
+            ]
+          },
+          "contract": {
+            "type": "contract",
+            "name": "NinjaToken",
+            "source_mapping": {
+              "start": 2036,
+              "length": 2623,
+              "filename": "/../data/reentrancy/solidity_contract/39866.sol",
+              "lines": [
+                66,
+                67,
+                68,
+                69,
+                70,
+                71,
+                72,
+                73,
+                74,
+                75,
+                76,
+                77,
+                78,
+                79,
+                80,
+                81,
+                82,
+                83,
+                84,
+                85,
+                86,
+                87,
+                88,
+                89,
+                90,
+                91,
+                92,
+                93,
+                94,
+                95,
+                96,
+                97,
+                98,
+                99,
+                100,
+                101,
+                102,
+                103,
+                104,
+                105,
+                106,
+                107,
+                108,
+                109,
+                110,
+                111,
+                112,
+                113,
+                114,
+                115,
+                116,
+                117,
+                118,
+                119,
+                120,
+                121,
+                122,
+                123,
+                124,
+                125,
+                126,
+                127,
+                128,
+                129,
+                130,
+                131,
+                132,
+                133,
+                134,
+                135,
+                136,
+                137,
+                138,
+                139,
+                140,
+                141
+              ]
+            }
+          }
+        },
+        {
+          "type": "expression",
+          "expression": "! fundingAccount.call.value(msg.value)()",
+          "source_mapping": {
+            "start": 3637,
+            "length": 49,
+            "filename": "/../data/reentrancy/solidity_contract/39866.sol",
+            "lines": [
+              112
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "low-level-calls",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Low level call in NinjaToken.buy (/../data/reentrancy/solidity_contract/39866.sol#123-129):\n\t-! fundingAccount.call.value(msg.value)() /../data/reentrancy/solidity_contract/39866.sol#125\n",
+      "elements": [
+        {
+          "type": "function",
+          "name": "buy",
+          "source_mapping": {
+            "start": 3966,
+            "length": 326,
+            "filename": "/../data/reentrancy/solidity_contract/39866.sol",
+            "lines": [
+              123,
+              124,
+              125,
+              126,
+              127,
+              128,
+              129
+            ]
+          },
+          "contract": {
+            "type": "contract",
+            "name": "NinjaToken",
+            "source_mapping": {
+              "start": 2036,
+              "length": 2623,
+              "filename": "/../data/reentrancy/solidity_contract/39866.sol",
+              "lines": [
+                66,
+                67,
+                68,
+                69,
+                70,
+                71,
+                72,
+                73,
+                74,
+                75,
+                76,
+                77,
+                78,
+                79,
+                80,
+                81,
+                82,
+                83,
+                84,
+                85,
+                86,
+                87,
+                88,
+                89,
+                90,
+                91,
+                92,
+                93,
+                94,
+                95,
+                96,
+                97,
+                98,
+                99,
+                100,
+                101,
+                102,
+                103,
+                104,
+                105,
+                106,
+                107,
+                108,
+                109,
+                110,
+                111,
+                112,
+                113,
+                114,
+                115,
+                116,
+                117,
+                118,
+                119,
+                120,
+                121,
+                122,
+                123,
+                124,
+                125,
+                126,
+                127,
+                128,
+                129,
+                130,
+                131,
+                132,
+                133,
+                134,
+                135,
+                136,
+                137,
+                138,
+                139,
+                140,
+                141
+              ]
+            }
+          }
+        },
+        {
+          "type": "expression",
+          "expression": "! fundingAccount.call.value(msg.value)()",
+          "source_mapping": {
+            "start": 4118,
+            "length": 49,
+            "filename": "/../data/reentrancy/solidity_contract/39866.sol",
+            "lines": [
+              125
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "naming-convention",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Parameter '_owner' of StandardToken.balanceOf (/../data/reentrancy/solidity_contract/39866.sol#57) is not in mixedCase\n",
+      "elements": [
+        {
+          "target": "parameter",
+          "convention": "mixedCase",
+          "name": "_owner",
+          "source_mapping": {
+            "start": 1814,
+            "length": 14,
+            "filename": "/../data/reentrancy/solidity_contract/39866.sol",
+            "lines": [
+              57
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "naming-convention",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Parameter '_to' of StandardToken.transfer (/../data/reentrancy/solidity_contract/39866.sol#28) is not in mixedCase\n",
+      "elements": [
+        {
+          "target": "parameter",
+          "convention": "mixedCase",
+          "name": "_to",
+          "source_mapping": {
+            "start": 891,
+            "length": 11,
+            "filename": "/../data/reentrancy/solidity_contract/39866.sol",
+            "lines": [
+              28
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "naming-convention",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Parameter '_value' of StandardToken.transfer (/../data/reentrancy/solidity_contract/39866.sol#28) is not in mixedCase\n",
+      "elements": [
+        {
+          "target": "parameter",
+          "convention": "mixedCase",
+          "name": "_value",
+          "source_mapping": {
+            "start": 904,
+            "length": 14,
+            "filename": "/../data/reentrancy/solidity_contract/39866.sol",
+            "lines": [
+              28
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "naming-convention",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Parameter '_from' of StandardToken.transferFrom (/../data/reentrancy/solidity_contract/39866.sol#39) is not in mixedCase\n",
+      "elements": [
+        {
+          "target": "parameter",
+          "convention": "mixedCase",
+          "name": "_from",
+          "source_mapping": {
+            "start": 1221,
+            "length": 13,
+            "filename": "/../data/reentrancy/solidity_contract/39866.sol",
+            "lines": [
+              39
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "naming-convention",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Parameter '_to' of StandardToken.transferFrom (/../data/reentrancy/solidity_contract/39866.sol#39) is not in mixedCase\n",
+      "elements": [
+        {
+          "target": "parameter",
+          "convention": "mixedCase",
+          "name": "_to",
+          "source_mapping": {
+            "start": 1236,
+            "length": 11,
+            "filename": "/../data/reentrancy/solidity_contract/39866.sol",
+            "lines": [
+              39
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "naming-convention",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Parameter '_value' of StandardToken.transferFrom (/../data/reentrancy/solidity_contract/39866.sol#39) is not in mixedCase\n",
+      "elements": [
+        {
+          "target": "parameter",
+          "convention": "mixedCase",
+          "name": "_value",
+          "source_mapping": {
+            "start": 1249,
+            "length": 14,
+            "filename": "/../data/reentrancy/solidity_contract/39866.sol",
+            "lines": [
+              39
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "naming-convention",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Parameter '_spender' of StandardToken.approve (/../data/reentrancy/solidity_contract/39866.sol#51) is not in mixedCase\n",
+      "elements": [
+        {
+          "target": "parameter",
+          "convention": "mixedCase",
+          "name": "_spender",
+          "source_mapping": {
+            "start": 1621,
+            "length": 16,
+            "filename": "/../data/reentrancy/solidity_contract/39866.sol",
+            "lines": [
+              51
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "naming-convention",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Parameter '_value' of StandardToken.approve (/../data/reentrancy/solidity_contract/39866.sol#51) is not in mixedCase\n",
+      "elements": [
+        {
+          "target": "parameter",
+          "convention": "mixedCase",
+          "name": "_value",
+          "source_mapping": {
+            "start": 1639,
+            "length": 14,
+            "filename": "/../data/reentrancy/solidity_contract/39866.sol",
+            "lines": [
+              51
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "naming-convention",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Parameter '_onwer' of StandardToken.allowance (/../data/reentrancy/solidity_contract/39866.sol#61) is not in mixedCase\n",
+      "elements": [
+        {
+          "target": "parameter",
+          "convention": "mixedCase",
+          "name": "_onwer",
+          "source_mapping": {
+            "start": 1921,
+            "length": 14,
+            "filename": "/../data/reentrancy/solidity_contract/39866.sol",
+            "lines": [
+              61
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "naming-convention",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Parameter '_spender' of StandardToken.allowance (/../data/reentrancy/solidity_contract/39866.sol#61) is not in mixedCase\n",
+      "elements": [
+        {
+          "target": "parameter",
+          "convention": "mixedCase",
+          "name": "_spender",
+          "source_mapping": {
+            "start": 1936,
+            "length": 16,
+            "filename": "/../data/reentrancy/solidity_contract/39866.sol",
+            "lines": [
+              61
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "naming-convention",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Parameter '_to' of NinjaToken.transfer (/../data/reentrancy/solidity_contract/39866.sol#131) is not in mixedCase\n",
+      "elements": [
+        {
+          "target": "parameter",
+          "convention": "mixedCase",
+          "name": "_to",
+          "source_mapping": {
+            "start": 4320,
+            "length": 11,
+            "filename": "/../data/reentrancy/solidity_contract/39866.sol",
+            "lines": [
+              131
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "naming-convention",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Parameter '_value' of NinjaToken.transfer (/../data/reentrancy/solidity_contract/39866.sol#131) is not in mixedCase\n",
+      "elements": [
+        {
+          "target": "parameter",
+          "convention": "mixedCase",
+          "name": "_value",
+          "source_mapping": {
+            "start": 4333,
+            "length": 14,
+            "filename": "/../data/reentrancy/solidity_contract/39866.sol",
+            "lines": [
+              131
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "naming-convention",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Parameter '_from' of NinjaToken.transferFrom (/../data/reentrancy/solidity_contract/39866.sol#136) is not in mixedCase\n",
+      "elements": [
+        {
+          "target": "parameter",
+          "convention": "mixedCase",
+          "name": "_from",
+          "source_mapping": {
+            "start": 4489,
+            "length": 13,
+            "filename": "/../data/reentrancy/solidity_contract/39866.sol",
+            "lines": [
+              136
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "naming-convention",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Parameter '_to' of NinjaToken.transferFrom (/../data/reentrancy/solidity_contract/39866.sol#136) is not in mixedCase\n",
+      "elements": [
+        {
+          "target": "parameter",
+          "convention": "mixedCase",
+          "name": "_to",
+          "source_mapping": {
+            "start": 4504,
+            "length": 11,
+            "filename": "/../data/reentrancy/solidity_contract/39866.sol",
+            "lines": [
+              136
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "naming-convention",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Parameter '_value' of NinjaToken.transferFrom (/../data/reentrancy/solidity_contract/39866.sol#136) is not in mixedCase\n",
+      "elements": [
+        {
+          "target": "parameter",
+          "convention": "mixedCase",
+          "name": "_value",
+          "source_mapping": {
+            "start": 4517,
+            "length": 14,
+            "filename": "/../data/reentrancy/solidity_contract/39866.sol",
+            "lines": [
+              136
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "naming-convention",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Function 'NinjaToken.NinjaToken' (/../data/reentrancy/solidity_contract/39866.sol#85-88) is not in mixedCase\n",
+      "elements": [
+        {
+          "target": "function",
+          "convention": "mixedCase",
+          "name": "NinjaToken",
+          "source_mapping": {
+            "start": 2631,
+            "length": 107,
+            "filename": "/../data/reentrancy/solidity_contract/39866.sol",
+            "lines": [
+              85,
+              86,
+              87,
+              88
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "naming-convention",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Parameter '_founder' of NinjaToken.NinjaToken (/../data/reentrancy/solidity_contract/39866.sol#85) is not in mixedCase\n",
+      "elements": [
+        {
+          "target": "parameter",
+          "convention": "mixedCase",
+          "name": "_founder",
+          "source_mapping": {
+            "start": 2651,
+            "length": 16,
+            "filename": "/../data/reentrancy/solidity_contract/39866.sol",
+            "lines": [
+              85
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "naming-convention",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Parameter '_admin' of NinjaToken.NinjaToken (/../data/reentrancy/solidity_contract/39866.sol#85) is not in mixedCase\n",
+      "elements": [
+        {
+          "target": "parameter",
+          "convention": "mixedCase",
+          "name": "_admin",
+          "source_mapping": {
+            "start": 2668,
+            "length": 14,
+            "filename": "/../data/reentrancy/solidity_contract/39866.sol",
+            "lines": [
+              85
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "naming-convention",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Parameter '_founder' of NinjaToken.changeFunder (/../data/reentrancy/solidity_contract/39866.sol#90) is not in mixedCase\n",
+      "elements": [
+        {
+          "target": "parameter",
+          "convention": "mixedCase",
+          "name": "_founder",
+          "source_mapping": {
+            "start": 2770,
+            "length": 16,
+            "filename": "/../data/reentrancy/solidity_contract/39866.sol",
+            "lines": [
+              90
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "naming-convention",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Parameter '_admin' of NinjaToken.changeFunder (/../data/reentrancy/solidity_contract/39866.sol#90) is not in mixedCase\n",
+      "elements": [
+        {
+          "target": "parameter",
+          "convention": "mixedCase",
+          "name": "_admin",
+          "source_mapping": {
+            "start": 2787,
+            "length": 14,
+            "filename": "/../data/reentrancy/solidity_contract/39866.sol",
+            "lines": [
+              90
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "naming-convention",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Parameter '_fundinglock' of NinjaToken.setFundingLock (/../data/reentrancy/solidity_contract/39866.sol#96) is not in mixedCase\n",
+      "elements": [
+        {
+          "target": "parameter",
+          "convention": "mixedCase",
+          "name": "_fundinglock",
+          "source_mapping": {
+            "start": 2936,
+            "length": 17,
+            "filename": "/../data/reentrancy/solidity_contract/39866.sol",
+            "lines": [
+              96
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "naming-convention",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Parameter '_fundingAccount' of NinjaToken.setFundingLock (/../data/reentrancy/solidity_contract/39866.sol#96) is not in mixedCase\n",
+      "elements": [
+        {
+          "target": "parameter",
+          "convention": "mixedCase",
+          "name": "_fundingAccount",
+          "source_mapping": {
+            "start": 2954,
+            "length": 23,
+            "filename": "/../data/reentrancy/solidity_contract/39866.sol",
+            "lines": [
+              96
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "naming-convention",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Parameter '_startBlock' of NinjaToken.setFundingEnv (/../data/reentrancy/solidity_contract/39866.sol#102) is not in mixedCase\n",
+      "elements": [
+        {
+          "target": "parameter",
+          "convention": "mixedCase",
+          "name": "_startBlock",
+          "source_mapping": {
+            "start": 3131,
+            "length": 16,
+            "filename": "/../data/reentrancy/solidity_contract/39866.sol",
+            "lines": [
+              102
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "naming-convention",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Parameter '_blockDuration' of NinjaToken.setFundingEnv (/../data/reentrancy/solidity_contract/39866.sol#102) is not in mixedCase\n",
+      "elements": [
+        {
+          "target": "parameter",
+          "convention": "mixedCase",
+          "name": "_blockDuration",
+          "source_mapping": {
+            "start": 3149,
+            "length": 19,
+            "filename": "/../data/reentrancy/solidity_contract/39866.sol",
+            "lines": [
+              102
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "naming-convention",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Parameter '_fundingExchangeRate' of NinjaToken.setFundingEnv (/../data/reentrancy/solidity_contract/39866.sol#102) is not in mixedCase\n",
+      "elements": [
+        {
+          "target": "parameter",
+          "convention": "mixedCase",
+          "name": "_fundingExchangeRate",
+          "source_mapping": {
+            "start": 3169,
+            "length": 25,
+            "filename": "/../data/reentrancy/solidity_contract/39866.sol",
+            "lines": [
+              102
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "naming-convention",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Parameter '_price' of NinjaToken.setPrice (/../data/reentrancy/solidity_contract/39866.sol#117) is not in mixedCase\n",
+      "elements": [
+        {
+          "target": "parameter",
+          "convention": "mixedCase",
+          "name": "_price",
+          "source_mapping": {
+            "start": 3821,
+            "length": 11,
+            "filename": "/../data/reentrancy/solidity_contract/39866.sol",
+            "lines": [
+              117
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "naming-convention",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Parameter '_transferLock' of NinjaToken.setPrice (/../data/reentrancy/solidity_contract/39866.sol#117) is not in mixedCase\n",
+      "elements": [
+        {
+          "target": "parameter",
+          "convention": "mixedCase",
+          "name": "_transferLock",
+          "source_mapping": {
+            "start": 3833,
+            "length": 18,
+            "filename": "/../data/reentrancy/solidity_contract/39866.sol",
+            "lines": [
+              117
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "naming-convention",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Parameter '_commit' of NinjaToken.buy (/../data/reentrancy/solidity_contract/39866.sol#123) is not in mixedCase\n",
+      "elements": [
+        {
+          "target": "parameter",
+          "convention": "mixedCase",
+          "name": "_commit",
+          "source_mapping": {
+            "start": 3979,
+            "length": 14,
+            "filename": "/../data/reentrancy/solidity_contract/39866.sol",
+            "lines": [
+              123
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,51 @@
+INFO:Slither:Compilation warnings/errors on /../data/reentrancy/solidity_contract/10107.sol:
+/../data/reentrancy/solidity_contract/10107.sol:139:44: Warning: This function only accepts a single "bytes" argument. Please use "abi.encodePacked(...)" or a similar function to encode the data.
+            assert(to.call.value(0)(bytes4(keccak256(customFallback)), msg.sender, value, data));
+                                           ^-----------------------^
+/../data/reentrancy/solidity_contract/10107.sol:139:44: Warning: The provided argument of type string memory is not implicitly convertible to expected type bytes memory.
+            assert(to.call.value(0)(bytes4(keccak256(customFallback)), msg.sender, value, data));
+                                           ^-----------------------^
+
+INFO:Detectors:[93m
+MyToken.isContract (/../data/reentrancy/solidity_contract/10107.sol#145-151) is declared view but contains assembly code
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#constant-functions-changing-the-state[0m
+INFO:Detectors:[93m
+empty in MyToken.transfer (/../data/reentrancy/solidity_contract/10107.sol#122) is a local variable never initialiazed
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#uninitialized-local-variables[0m
+INFO:Detectors:[92m
+MyToken.isContract uses assembly (/../data/reentrancy/solidity_contract/10107.sol#145-151)
+	- /../data/reentrancy/solidity_contract/10107.sol#147-150
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#assembly-usage[0m
+INFO:Detectors:[92m
+MyToken.name (/../data/reentrancy/solidity_contract/10107.sol#87-89) should be declared external
+ERC223.name (/../data/reentrancy/solidity_contract/10107.sol#6) should be declared external
+ERC223.symbol (/../data/reentrancy/solidity_contract/10107.sol#7) should be declared external
+MyToken.symbol (/../data/reentrancy/solidity_contract/10107.sol#91-93) should be declared external
+MyToken.decimals (/../data/reentrancy/solidity_contract/10107.sol#95-97) should be declared external
+ERC223.decimals (/../data/reentrancy/solidity_contract/10107.sol#8) should be declared external
+ERC223.totalSupply (/../data/reentrancy/solidity_contract/10107.sol#9) should be declared external
+MyToken.totalSupply (/../data/reentrancy/solidity_contract/10107.sol#99-101) should be declared external
+MyToken.transfer (/../data/reentrancy/solidity_contract/10107.sol#120-132) should be declared external
+ERC223.transfer (/../data/reentrancy/solidity_contract/10107.sol#11) should be declared external
+ERC223.transfer (/../data/reentrancy/solidity_contract/10107.sol#13) should be declared external
+MyToken.transfer (/../data/reentrancy/solidity_contract/10107.sol#108-118) should be declared external
+MyToken.transfer (/../data/reentrancy/solidity_contract/10107.sol#134-143) should be declared external
+ERC223.transfer (/../data/reentrancy/solidity_contract/10107.sol#15) should be declared external
+ERC223ReceivingContract.tokenFallback (/../data/reentrancy/solidity_contract/10107.sol#22) should be declared external
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#public-function-that-could-be-declared-as-external[0m
+INFO:Detectors:[92m
+Detected issues with version pragma in /../data/reentrancy/solidity_contract/10107.sol:
+	- pragma solidity^0.4.0 (/../data/reentrancy/solidity_contract/10107.sol#1): it allows old versions
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#incorrect-version-of-solidity[0m
+INFO:Detectors:[92m
+Low level call in MyToken.transfer (/../data/reentrancy/solidity_contract/10107.sol#134-143):
+	-assert(bool)(to.call.value(0)(bytes4(keccak256()(customFallback)),msg.sender,value,data)) /../data/reentrancy/solidity_contract/10107.sol#139
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#low-level-calls[0m
+INFO:Detectors:[92m
+Parameter 'custom_fallback' of ERC223.transfer (/../data/reentrancy/solidity_contract/10107.sol#15) is not in mixedCase
+Parameter '_name' of MyToken. (/../data/reentrancy/solidity_contract/10107.sol#79) is not in mixedCase
+Parameter '_symbol' of MyToken. (/../data/reentrancy/solidity_contract/10107.sol#79) is not in mixedCase
+Parameter '_decimals' of MyToken. (/../data/reentrancy/solidity_contract/10107.sol#79) is not in mixedCase
+Parameter '_totalSupply' of MyToken. (/../data/reentrancy/solidity_contract/10107.sol#79) is not in mixedCase
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#conformance-to-solidity-naming-conventions[0m
+INFO:Slither:/../data/reentrancy/solidity_contract/10107.sol analyzed (4 contracts), 25 result(s) found

@@ -1,0 +1,20 @@
+{
+  "contract": "4472",
+  "tool": "osiris",
+  "start": 1609150894.8855119,
+  "end": 1609150898.879763,
+  "duration": 3.994251012802124,
+  "analysis": [
+    {
+      "errors": [
+        {
+          "line": 5,
+          "column": 9,
+          "message": "reentrancy_bug"
+        }
+      ],
+      "file": "/../data/reentrancy/solidity_contract/4472.sol",
+      "name": "Blocklancer_Payment"
+    }
+  ]
+}

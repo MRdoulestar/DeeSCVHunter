@@ -1,0 +1,203 @@
+INFO:Slither:Compilation warnings/errors on /../data/reentrancy/solidity_contract/37836.sol:
+/../data/reentrancy/solidity_contract/37836.sol:35:5: Warning: Defining constructors as functions with the same name as the contract is deprecated. Use "constructor(...) { ... }" instead.
+    function Owned() {
+    ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/37836.sol:150:5: Warning: Defining constructors as functions with the same name as the contract is deprecated. Use "constructor(...) { ... }" instead.
+    function HUNT(uint256 _start, uint256 _end, uint256 _capTokens, uint _curs, address _addrcnt) {
+    ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/37836.sol:61:43: Warning: This declaration shadows an existing declaration.
+	function totalSupply() constant returns (uint totalSupply);
+	                                         ^--------------^
+/../data/reentrancy/solidity_contract/37836.sol:61:2: The shadowed declaration is here:
+	function totalSupply() constant returns (uint totalSupply);
+	^---------------------------------------------------------^
+
+/../data/reentrancy/solidity_contract/37836.sol:50:13: Warning: Invoking events without "emit" prefix is deprecated.
+            OwnershipTransferred(owner, newOwner);
+            ^-----------------------------------^
+/../data/reentrancy/solidity_contract/37836.sol:101:9: Warning: Invoking events without "emit" prefix is deprecated.
+        Transfer(msg.sender, _to, _value);
+        ^-------------------------------^
+/../data/reentrancy/solidity_contract/37836.sol:114:9: Warning: Invoking events without "emit" prefix is deprecated.
+        Transfer(_from, _to, _value);
+        ^--------------------------^
+/../data/reentrancy/solidity_contract/37836.sol:122:9: Warning: Invoking events without "emit" prefix is deprecated.
+        Approval(msg.sender, _spender, _value);
+        ^------------------------------------^
+/../data/reentrancy/solidity_contract/37836.sol:256:9: Warning: Invoking events without "emit" prefix is deprecated.
+        BoughtTokens(participant, msg.value, totalEthers, tokens, _buyPrice);
+        ^------------------------------------------------------------------^
+/../data/reentrancy/solidity_contract/37836.sol:257:9: Warning: Invoking events without "emit" prefix is deprecated.
+        Transfer(0x0, participant, tokens);
+        ^--------------------------------^
+/../data/reentrancy/solidity_contract/37836.sol:258:3: Warning: Invoking events without "emit" prefix is deprecated.
+		Transfer(0x0, owner, ownerTokens);
+		^-------------------------------^
+/../data/reentrancy/solidity_contract/37836.sol:286:9: Warning: Invoking events without "emit" prefix is deprecated.
+        Transfer(0x0, owner, _amount);
+        ^---------------------------^
+/../data/reentrancy/solidity_contract/37836.sol:294:3: Warning: Invoking events without "emit" prefix is deprecated.
+		Transfer(owner, 0x0 , _amount);
+		^----------------------------^
+/../data/reentrancy/solidity_contract/37836.sol:304:30: Warning: Using contract member "balance" inherited from the address type is deprecated. Convert the contract to "address" type to access the member, for example use "address(contract).balance" instead.
+		require(addrcnt.call.value(this.balance)(0));
+		                           ^----------^
+/../data/reentrancy/solidity_contract/37836.sol:305:19: Warning: Using contract member "balance" inherited from the address type is deprecated. Convert the contract to "address" type to access the member, for example use "address(contract).balance" instead.
+		Collect(addrcnt,this.balance);
+		                ^----------^
+/../data/reentrancy/solidity_contract/37836.sol:305:3: Warning: Invoking events without "emit" prefix is deprecated.
+		Collect(addrcnt,this.balance);
+		^---------------------------^
+/../data/reentrancy/solidity_contract/37836.sol:35:5: Warning: No visibility specified. Defaulting to "public". 
+    function Owned() {
+    ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/37836.sol:44:5: Warning: No visibility specified. Defaulting to "public". 
+    function transferOwnership(address _newOwner) onlyOwner {
+    ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/37836.sol:48:5: Warning: No visibility specified. Defaulting to "public". 
+    function acceptOwnership() {
+    ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/37836.sol:61:2: Warning: No visibility specified. Defaulting to "public". 
+	function totalSupply() constant returns (uint totalSupply);
+	^---------------------------------------------------------^
+/../data/reentrancy/solidity_contract/37836.sol:62:2: Warning: No visibility specified. Defaulting to "public". 
+	function balanceOf(address who) constant returns (uint);
+	^------------------------------------------------------^
+/../data/reentrancy/solidity_contract/37836.sol:63:2: Warning: No visibility specified. Defaulting to "public". 
+	function allowance(address owner, address spender) constant returns (uint);
+	^-------------------------------------------------------------------------^
+/../data/reentrancy/solidity_contract/37836.sol:65:2: Warning: No visibility specified. Defaulting to "public". 
+	function transfer(address to, uint value) returns (bool ok);
+	^----------------------------------------------------------^
+/../data/reentrancy/solidity_contract/37836.sol:66:2: Warning: No visibility specified. Defaulting to "public". 
+	function transferFrom(address from, address to, uint value) returns (bool ok);
+	^----------------------------------------------------------------------------^
+/../data/reentrancy/solidity_contract/37836.sol:67:2: Warning: No visibility specified. Defaulting to "public". 
+	function approve(address spender, uint value) returns (bool ok);
+	^--------------------------------------------------------------^
+/../data/reentrancy/solidity_contract/37836.sol:85:5: Warning: No visibility specified. Defaulting to "public". 
+    function totalSupply() constant returns (uint256) {
+    ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/37836.sol:88:5: Warning: No visibility specified. Defaulting to "public". 
+    function balanceOf(address _who) constant returns (uint256) {
+    ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/37836.sol:91:5: Warning: No visibility specified. Defaulting to "public". 
+    function allowance(address _owner, address _spender) constant returns (uint256) {
+    ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/37836.sol:95:5: Warning: No visibility specified. Defaulting to "public". 
+    function transfer(address _to, uint _value) onlyPayloadSize(2) returns (bool success) {
+    ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/37836.sol:106:5: Warning: No visibility specified. Defaulting to "public". 
+    function transferFrom(address _from, address _to, uint _value) onlyPayloadSize(3) returns (bool success) {
+    ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/37836.sol:119:5: Warning: No visibility specified. Defaulting to "public". 
+    function approve(address _spender, uint256 _value) onlyPayloadSize(2) returns (bool success) {
+    ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/37836.sol:150:5: Warning: No visibility specified. Defaulting to "public". 
+    function HUNT(uint256 _start, uint256 _end, uint256 _capTokens, uint _curs, address _addrcnt) {
+    ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/37836.sol:170:5: Warning: No visibility specified. Defaulting to "public". 
+    function buyPrice() constant returns (uint256) {
+    ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/37836.sol:174:2: Warning: No visibility specified. Defaulting to "public". 
+	function buyPriceAt(uint256 at) constant returns (uint256) {
+ ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/37836.sol:193:5: Warning: No visibility specified. Defaulting to "public". 
+    function () payable {
+    ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/37836.sol:198:5: Warning: No visibility specified. Defaulting to "public". 
+    function buyTokens(address participant) payable {
+    ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/37836.sol:264:5: Warning: No visibility specified. Defaulting to "public". 
+    function transfer(address _to, uint _amount) returns (bool success) {
+    ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/37836.sol:274:5: Warning: No visibility specified. Defaulting to "public". 
+    function transferFrom(address _from, address _to, uint _amount) returns (bool success) {
+    ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/37836.sol:281:5: Warning: No visibility specified. Defaulting to "public". 
+    function mint(uint256 _amount) onlyOwner {
+    ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/37836.sol:289:5: Warning: No visibility specified. Defaulting to "public". 
+    function burn(uint256 _amount) onlyOwner {
+    ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/37836.sol:297:2: Warning: No visibility specified. Defaulting to "public". 
+	function setCurs(uint8 _curs) onlyOwner {
+ ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/37836.sol:303:5: Warning: No visibility specified. Defaulting to "public". 
+    function collect() onlyOwner {
+    ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/37836.sol:10:5: Warning: Function state mutability can be restricted to pure
+    function sub(uint256 x, uint256 y) constant internal returns (uint256 z) {
+    ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/37836.sol:14:5: Warning: Function state mutability can be restricted to pure
+    function add(uint256 x, uint256 y) constant internal returns (uint256 z) {
+    ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/37836.sol:18:2: Warning: Function state mutability can be restricted to pure
+	function div(uint256 x, uint256 y) constant internal returns (uint256 z) {
+ ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/37836.sol:22:2: Warning: Function state mutability can be restricted to pure
+	function min(uint256 x, uint256 y) constant internal returns (uint256 z) {
+ ^ (Relevant source part starts here and spans across multiple lines).
+
+INFO:Detectors:[92m
+ERC20.totalSupply.totalSupply (local variable @ /../data/reentrancy/solidity_contract/37836.sol#61) shadows:
+	- ERC20.totalSupply (function @ /../data/reentrancy/solidity_contract/37836.sol#61)
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#local-variable-shadowing[0m
+INFO:Detectors:[92m
+Owned.transferOwnership (/../data/reentrancy/solidity_contract/37836.sol#44-46) should be declared external
+Owned.acceptOwnership (/../data/reentrancy/solidity_contract/37836.sol#48-53) should be declared external
+StandardToken.totalSupply (/../data/reentrancy/solidity_contract/37836.sol#85-87) should be declared external
+ERC20.totalSupply (/../data/reentrancy/solidity_contract/37836.sol#61) should be declared external
+StandardToken.balanceOf (/../data/reentrancy/solidity_contract/37836.sol#88-90) should be declared external
+ERC20.balanceOf (/../data/reentrancy/solidity_contract/37836.sol#62) should be declared external
+StandardToken.allowance (/../data/reentrancy/solidity_contract/37836.sol#91-93) should be declared external
+ERC20.allowance (/../data/reentrancy/solidity_contract/37836.sol#63) should be declared external
+ERC20.approve (/../data/reentrancy/solidity_contract/37836.sol#67) should be declared external
+StandardToken.approve (/../data/reentrancy/solidity_contract/37836.sol#119-125) should be declared external
+HUNT.fallback (/../data/reentrancy/solidity_contract/37836.sol#193-195) should be declared external
+HUNT.mint (/../data/reentrancy/solidity_contract/37836.sol#281-287) should be declared external
+HUNT.burn (/../data/reentrancy/solidity_contract/37836.sol#289-295) should be declared external
+HUNT.setCurs (/../data/reentrancy/solidity_contract/37836.sol#297-300) should be declared external
+HUNT.collect (/../data/reentrancy/solidity_contract/37836.sol#303-306) should be declared external
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#public-function-that-could-be-declared-as-external[0m
+INFO:Detectors:[92m
+Detected issues with version pragma in /../data/reentrancy/solidity_contract/37836.sol:
+	- pragma solidity^0.4.11 (/../data/reentrancy/solidity_contract/37836.sol#1): it allows old versions
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#incorrect-version-of-solidity[0m
+INFO:Detectors:[92m
+Low level call in HUNT.collect (/../data/reentrancy/solidity_contract/37836.sol#303-306):
+	-require(bool)(addrcnt.call.value(this.balance)(0)) /../data/reentrancy/solidity_contract/37836.sol#304
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#low-level-calls[0m
+INFO:Detectors:[92m
+Function 'Owned.Owned' (/../data/reentrancy/solidity_contract/37836.sol#35-37) is not in mixedCase
+Parameter '_newOwner' of Owned.transferOwnership (/../data/reentrancy/solidity_contract/37836.sol#44) is not in mixedCase
+Parameter '_who' of StandardToken.balanceOf (/../data/reentrancy/solidity_contract/37836.sol#88) is not in mixedCase
+Parameter '_owner' of StandardToken.allowance (/../data/reentrancy/solidity_contract/37836.sol#91) is not in mixedCase
+Parameter '_spender' of StandardToken.allowance (/../data/reentrancy/solidity_contract/37836.sol#91) is not in mixedCase
+Parameter '_to' of StandardToken.transfer (/../data/reentrancy/solidity_contract/37836.sol#95) is not in mixedCase
+Parameter '_value' of StandardToken.transfer (/../data/reentrancy/solidity_contract/37836.sol#95) is not in mixedCase
+Parameter '_from' of StandardToken.transferFrom (/../data/reentrancy/solidity_contract/37836.sol#106) is not in mixedCase
+Parameter '_to' of StandardToken.transferFrom (/../data/reentrancy/solidity_contract/37836.sol#106) is not in mixedCase
+Parameter '_value' of StandardToken.transferFrom (/../data/reentrancy/solidity_contract/37836.sol#106) is not in mixedCase
+Parameter '_spender' of StandardToken.approve (/../data/reentrancy/solidity_contract/37836.sol#119) is not in mixedCase
+Parameter '_value' of StandardToken.approve (/../data/reentrancy/solidity_contract/37836.sol#119) is not in mixedCase
+Variable 'StandardToken._totalSupply' (/../data/reentrancy/solidity_contract/37836.sol#76) is not in mixedCase
+Variable 'StandardToken._balances' (/../data/reentrancy/solidity_contract/37836.sol#77) is not in mixedCase
+Variable 'StandardToken._approvals' (/../data/reentrancy/solidity_contract/37836.sol#78) is not in mixedCase
+Parameter '_to' of HUNT.transfer (/../data/reentrancy/solidity_contract/37836.sol#264) is not in mixedCase
+Parameter '_amount' of HUNT.transfer (/../data/reentrancy/solidity_contract/37836.sol#264) is not in mixedCase
+Parameter '_from' of HUNT.transferFrom (/../data/reentrancy/solidity_contract/37836.sol#274) is not in mixedCase
+Parameter '_to' of HUNT.transferFrom (/../data/reentrancy/solidity_contract/37836.sol#274) is not in mixedCase
+Parameter '_amount' of HUNT.transferFrom (/../data/reentrancy/solidity_contract/37836.sol#274) is not in mixedCase
+Function 'HUNT.HUNT' (/../data/reentrancy/solidity_contract/37836.sol#150-156) is not in mixedCase
+Parameter '_start' of HUNT.HUNT (/../data/reentrancy/solidity_contract/37836.sol#150) is not in mixedCase
+Parameter '_end' of HUNT.HUNT (/../data/reentrancy/solidity_contract/37836.sol#150) is not in mixedCase
+Parameter '_capTokens' of HUNT.HUNT (/../data/reentrancy/solidity_contract/37836.sol#150) is not in mixedCase
+Parameter '_curs' of HUNT.HUNT (/../data/reentrancy/solidity_contract/37836.sol#150) is not in mixedCase
+Parameter '_addrcnt' of HUNT.HUNT (/../data/reentrancy/solidity_contract/37836.sol#150) is not in mixedCase
+Parameter '_amount' of HUNT.mint (/../data/reentrancy/solidity_contract/37836.sol#281) is not in mixedCase
+Parameter '_amount' of HUNT.burn (/../data/reentrancy/solidity_contract/37836.sol#289) is not in mixedCase
+Parameter '_curs' of HUNT.setCurs (/../data/reentrancy/solidity_contract/37836.sol#297) is not in mixedCase
+Variable 'HUNT._userBonus' (/../data/reentrancy/solidity_contract/37836.sol#145) is not in mixedCase
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#conformance-to-solidity-naming-conventions[0m
+INFO:Slither:/../data/reentrancy/solidity_contract/37836.sol analyzed (5 contracts), 48 result(s) found

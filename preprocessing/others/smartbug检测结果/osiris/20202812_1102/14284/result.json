@@ -1,0 +1,50 @@
+{
+  "contract": "14284",
+  "tool": "osiris",
+  "start": 1609161653.4962711,
+  "end": 1609161705.3010051,
+  "duration": 51.804733991622925,
+  "analysis": [
+    {
+      "errors": [
+        {
+          "line": 695,
+          "column": 30,
+          "message": "overflow_bugs"
+        },
+        {
+          "line": 691,
+          "column": 29,
+          "message": "overflow_bugs"
+        },
+        {
+          "line": 691,
+          "column": 29,
+          "message": "overflow_bugs"
+        },
+        {
+          "line": 697,
+          "column": 30,
+          "message": "overflow_bugs"
+        },
+        {
+          "line": 73,
+          "column": 18,
+          "message": "overflow_bugs"
+        },
+        {
+          "line": 67,
+          "column": 34,
+          "message": "underflow_bugs"
+        }
+      ],
+      "file": "/../data/reentrancy/solidity_contract/14284.sol",
+      "name": "Halo3D"
+    },
+    {
+      "errors": [],
+      "file": "/../data/reentrancy/solidity_contract/14284.sol",
+      "name": "SafeMath"
+    }
+  ]
+}

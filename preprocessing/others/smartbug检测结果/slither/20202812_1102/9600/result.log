@@ -1,0 +1,47 @@
+INFO:Detectors:[91m
+Reentrancy in safeSend.doSafeSendWData (/../data/reentrancy/solidity_contract/9600.sol#12-17):
+	External calls:
+	- require(bool,string)(toAddr.call.value(amount)(data),ss-failed) (/../data/reentrancy/solidity_contract/9600.sol#15)
+	State variables written after the call(s):
+	- txMutex3847834 (/../data/reentrancy/solidity_contract/9600.sol#16)
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#reentrancy-vulnerabilities[0m
+INFO:Detectors:[92m
+permissioned.hasPermissions (/../data/reentrancy/solidity_contract/9600.sol#214-216) should be declared external
+SVPayments.fallback (/../data/reentrancy/solidity_contract/9600.sol#415-417) should be declared external
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#public-function-that-could-be-declared-as-external[0m
+INFO:Detectors:[92m
+Low level call in safeSend.doSafeSendWData (/../data/reentrancy/solidity_contract/9600.sol#12-17):
+	-require(bool,string)(toAddr.call.value(amount)(data),ss-failed) /../data/reentrancy/solidity_contract/9600.sol#15
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#low-level-calls[0m
+INFO:Detectors:[92m
+Contract 'safeSend' (/../data/reentrancy/solidity_contract/9600.sol#3-18) is not in CapWords
+Contract 'payoutAllC' (/../data/reentrancy/solidity_contract/9600.sol#20-45) is not in CapWords
+Function 'payoutAllC._getPayTo' (/../data/reentrancy/solidity_contract/9600.sol#31-33) is not in mixedCase
+Function 'payoutAllC._setPayTo' (/../data/reentrancy/solidity_contract/9600.sol#35-37) is not in mixedCase
+Contract 'payoutAllCSettable' (/../data/reentrancy/solidity_contract/9600.sol#47-55) is not in CapWords
+Parameter '' of payoutAllCSettable.setPayTo (/../data/reentrancy/solidity_contract/9600.sol#51) is not in mixedCase
+Contract 'owned' (/../data/reentrancy/solidity_contract/9600.sol#57-80) is not in CapWords
+Modifier 'owned.only_owner' (/../data/reentrancy/solidity_contract/9600.sol#62-65) is not in mixedCase
+Modifier 'owned.owner_or' (/../data/reentrancy/solidity_contract/9600.sol#67-70) is not in mixedCase
+Contract 'controlledIface' (/../data/reentrancy/solidity_contract/9600.sol#92-94) is not in CapWords
+Contract 'hasAdmins' (/../data/reentrancy/solidity_contract/9600.sol#96-165) is not in CapWords
+Parameter '_givePerms' of hasAdmins.setAdmin (/../data/reentrancy/solidity_contract/9600.sol#136) is not in mixedCase
+Function 'hasAdmins._setAdmin' (/../data/reentrancy/solidity_contract/9600.sol#141-149) is not in mixedCase
+Parameter '_givePerms' of hasAdmins._setAdmin (/../data/reentrancy/solidity_contract/9600.sol#141) is not in mixedCase
+Modifier 'hasAdmins.only_admin' (/../data/reentrancy/solidity_contract/9600.sol#107-111) is not in mixedCase
+Contract 'permissioned' (/../data/reentrancy/solidity_contract/9600.sol#167-223) is not in CapWords
+Parameter '_editPerms' of permissioned.setPermissions (/../data/reentrancy/solidity_contract/9600.sol#193) is not in mixedCase
+Modifier 'permissioned.only_editors' (/../data/reentrancy/solidity_contract/9600.sol#178-181) is not in mixedCase
+Modifier 'permissioned.no_lockdown' (/../data/reentrancy/solidity_contract/9600.sol#183-186) is not in mixedCase
+Contract 'upgradePtr' (/../data/reentrancy/solidity_contract/9600.sol#225-240) is not in CapWords
+Modifier 'upgradePtr.not_upgraded' (/../data/reentrancy/solidity_contract/9600.sol#228-231) is not in mixedCase
+Contract 'ixPaymentEvents' (/../data/reentrancy/solidity_contract/9600.sol#279-296) is not in CapWords
+Contract 'hasVersion' (/../data/reentrancy/solidity_contract/9600.sol#298-300) is not in CapWords
+Parameter '' of IxPaymentsIface.setPayTo (/../data/reentrancy/solidity_contract/9600.sol#329) is not in mixedCase
+Parameter '' of IxPaymentsIface.setMinorEditsAddr (/../data/reentrancy/solidity_contract/9600.sol#330) is not in mixedCase
+Parameter '' of IxPaymentsIface.setWeiPerCent (/../data/reentrancy/solidity_contract/9600.sol#334) is not in mixedCase
+Parameter '_emergencyAdmin' of SVPayments. (/../data/reentrancy/solidity_contract/9600.sol#404) is not in mixedCase
+Function 'SVPayments._modAccountBalance' (/../data/reentrancy/solidity_contract/9600.sol#419-427) is not in mixedCase
+Function 'SVPayments._premiumPricePer30Days' (/../data/reentrancy/solidity_contract/9600.sol#614-616) is not in mixedCase
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#conformance-to-solidity-naming-conventions[0m
+INFO:Slither:/../data/reentrancy/solidity_contract/9600.sol analyzed (15 contracts), 33 result(s) found

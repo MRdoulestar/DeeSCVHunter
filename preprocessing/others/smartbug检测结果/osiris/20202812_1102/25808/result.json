@@ -1,0 +1,14 @@
+{
+  "contract": "25808",
+  "tool": "osiris",
+  "start": 1609127383.799181,
+  "end": 1609127385.310099,
+  "duration": 1.5109179019927979,
+  "analysis": [
+    {
+      "errors": [],
+      "file": "/../data/reentrancy/solidity_contract/25808.sol",
+      "name": "EtherGet"
+    }
+  ]
+}

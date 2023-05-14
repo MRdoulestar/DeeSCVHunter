@@ -1,0 +1,20 @@
+INFO:Slither:Compilation warnings/errors on /../data/reentrancy/solidity_contract/4472.sol:
+/../data/reentrancy/solidity_contract/4472.sol:5:9: Warning: Return value of low-level calls not used.
+        address(0x0581cee36a85Ed9e76109A9EfE3193de1628Ac2A).call.value(msg.value)();
+        ^-------------------------------------------------------------------------^
+
+INFO:Detectors:[92m
+Blocklancer_Payment.fallback (/../data/reentrancy/solidity_contract/4472.sol#4-6) should be declared external
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#public-function-that-could-be-declared-as-external[0m
+INFO:Detectors:[92m
+Detected issues with version pragma in /../data/reentrancy/solidity_contract/4472.sol:
+	- pragma solidity^0.4.0 (/../data/reentrancy/solidity_contract/4472.sol#1): it allows old versions
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#incorrect-version-of-solidity[0m
+INFO:Detectors:[92m
+Low level call in Blocklancer_Payment.fallback (/../data/reentrancy/solidity_contract/4472.sol#4-6):
+	-address(0x0581cee36a85Ed9e76109A9EfE3193de1628Ac2A).call.value(msg.value)() /../data/reentrancy/solidity_contract/4472.sol#5
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#low-level-calls[0m
+INFO:Detectors:[92m
+Contract 'Blocklancer_Payment' (/../data/reentrancy/solidity_contract/4472.sol#3-7) is not in CapWords
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#conformance-to-solidity-naming-conventions[0m
+INFO:Slither:/../data/reentrancy/solidity_contract/4472.sol analyzed (1 contracts), 4 result(s) found

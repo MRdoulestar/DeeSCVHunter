@@ -1,0 +1,24 @@
+{
+  "contract": "30178",
+  "tool": "osiris",
+  "start": 1609132989.2927942,
+  "end": 1609133011.1451678,
+  "duration": 21.852373600006104,
+  "analysis": [
+    {
+      "errors": [],
+      "file": "/../data/reentrancy/solidity_contract/30178.sol",
+      "name": "NeuroSale"
+    },
+    {
+      "errors": [],
+      "file": "/../data/reentrancy/solidity_contract/30178.sol",
+      "name": "Owned"
+    },
+    {
+      "errors": [],
+      "file": "/../data/reentrancy/solidity_contract/30178.sol",
+      "name": "SafeMath"
+    }
+  ]
+}

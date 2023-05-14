@@ -1,0 +1,70 @@
+INFO:Slither:Compilation warnings/errors on /../data/reentrancy/solidity_contract/1044.sol:
+/../data/reentrancy/solidity_contract/1044.sol:129:9: Warning: Return value of low-level calls not used.
+        whale.call.value(amount)(bytes4(keccak256("donate()")));
+        ^-----------------------------------------------------^
+/../data/reentrancy/solidity_contract/1044.sol:136:9: Warning: Return value of low-level calls not used.
+        whale.call.value(amount)(bytes4(keccak256("donate()")));
+        ^-----------------------------------------------------^
+
+INFO:Detectors:[91m
+PoCGame.payout (/../data/reentrancy/solidity_contract/1044.sol#121-125) sends eth to arbitrary user
+	Dangerous calls:
+	- winner.transfer(ethToTransfer) (/../data/reentrancy/solidity_contract/1044.sol#123)
+PoCGame.loseWager (/../data/reentrancy/solidity_contract/1044.sol#135-139) sends eth to arbitrary user
+	Dangerous calls:
+	- whale.call.value(amount)(bytes4(keccak256()(donate()))) (/../data/reentrancy/solidity_contract/1044.sol#136)
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#functions-that-send-ether-to-arbitrary-destinations[0m
+INFO:Detectors:[93m
+PoCGame.play (/../data/reentrancy/solidity_contract/1044.sol#96-113) uses a dangerous strict equality:
+	- winningNumber == difficulty / 2
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#dangerous-strict-equalities[0m
+INFO:Detectors:[92m
+Reentrancy in PoCGame.donateToWhale (/../data/reentrancy/solidity_contract/1044.sol#128-132):
+	External calls:
+	- whale.call.value(amount)(bytes4(keccak256()(donate()))) (/../data/reentrancy/solidity_contract/1044.sol#129)
+	State variables written after the call(s):
+	- totalDonated (/../data/reentrancy/solidity_contract/1044.sol#130)
+Reentrancy in PoCGame.loseWager (/../data/reentrancy/solidity_contract/1044.sol#135-139):
+	External calls:
+	- whale.call.value(amount)(bytes4(keccak256()(donate()))) (/../data/reentrancy/solidity_contract/1044.sol#136)
+	State variables written after the call(s):
+	- totalDonated (/../data/reentrancy/solidity_contract/1044.sol#137)
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#reentrancy-vulnerabilities-2[0m
+INFO:Detectors:[92m
+PoCGame.randomSeed should be constant (/../data/reentrancy/solidity_contract/1044.sol#46)
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#state-variables-that-could-be-declared-constant[0m
+INFO:Detectors:[92m
+PoCGame.OpenToThePublic (/../data/reentrancy/solidity_contract/1044.sol#65-67) should be declared external
+PoCGame.AdjustBetAmounts (/../data/reentrancy/solidity_contract/1044.sol#70-74) should be declared external
+PoCGame.AdjustDifficulty (/../data/reentrancy/solidity_contract/1044.sol#77-81) should be declared external
+PoCGame.fallback (/../data/reentrancy/solidity_contract/1044.sol#84) should be declared external
+PoCGame.wager (/../data/reentrancy/solidity_contract/1044.sol#87-93) should be declared external
+PoCGame.play (/../data/reentrancy/solidity_contract/1044.sol#96-113) should be declared external
+PoCGame.donate (/../data/reentrancy/solidity_contract/1044.sol#116-118) should be declared external
+PoCGame.ethBalance (/../data/reentrancy/solidity_contract/1044.sol#143-145) should be declared external
+PoCGame.currentDifficulty (/../data/reentrancy/solidity_contract/1044.sol#149-151) should be declared external
+PoCGame.currentBetLimit (/../data/reentrancy/solidity_contract/1044.sol#155-157) should be declared external
+PoCGame.hasPlayerWagered (/../data/reentrancy/solidity_contract/1044.sol#159-169) should be declared external
+PoCGame.winnersPot (/../data/reentrancy/solidity_contract/1044.sol#172-174) should be declared external
+PoCGame.transferAnyERC20Token (/../data/reentrancy/solidity_contract/1044.sol#177-179) should be declared external
+ERC20Interface.transfer (/../data/reentrancy/solidity_contract/1044.sol#185) should be declared external
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#public-function-that-could-be-declared-as-external[0m
+INFO:Detectors:[92m
+Detected issues with version pragma in /../data/reentrancy/solidity_contract/1044.sol:
+	- pragma solidity^0.4.21 (/../data/reentrancy/solidity_contract/1044.sol#1): it allows old versions
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#incorrect-version-of-solidity[0m
+INFO:Detectors:[92m
+Low level call in PoCGame.donateToWhale (/../data/reentrancy/solidity_contract/1044.sol#128-132):
+	-whale.call.value(amount)(bytes4(keccak256()(donate()))) /../data/reentrancy/solidity_contract/1044.sol#129
+Low level call in PoCGame.loseWager (/../data/reentrancy/solidity_contract/1044.sol#135-139):
+	-whale.call.value(amount)(bytes4(keccak256()(donate()))) /../data/reentrancy/solidity_contract/1044.sol#136
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#low-level-calls[0m
+INFO:Detectors:[92m
+Function 'PoCGame.OpenToThePublic' (/../data/reentrancy/solidity_contract/1044.sol#65-67) is not in mixedCase
+Function 'PoCGame.AdjustBetAmounts' (/../data/reentrancy/solidity_contract/1044.sol#70-74) is not in mixedCase
+Function 'PoCGame.AdjustDifficulty' (/../data/reentrancy/solidity_contract/1044.sol#77-81) is not in mixedCase
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#conformance-to-solidity-naming-conventions[0m
+INFO:Detectors:[92m
+PoCGame.randomSeed (/../data/reentrancy/solidity_contract/1044.sol#46) is never used in PoCGame
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#unused-state-variables[0m
+INFO:Slither:/../data/reentrancy/solidity_contract/1044.sol analyzed (2 contracts), 27 result(s) found

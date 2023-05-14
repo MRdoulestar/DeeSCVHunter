@@ -1,0 +1,130 @@
+INFO:Slither:Compilation warnings/errors on /../data/reentrancy/solidity_contract/40366.sol:
+/../data/reentrancy/solidity_contract/40366.sol:18:3: Warning: Defining constructors as functions with the same name as the contract is deprecated. Use "constructor(...) { ... }" instead.
+  function TriWallet () {
+  ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/40366.sol:39:43: Warning: "throw" is deprecated in favour of "revert()", "require()" and "assert()".
+      if (!ethWallet.send (this.balance)) throw;
+                                          ^---^
+/../data/reentrancy/solidity_contract/40366.sol:42:43: Warning: "throw" is deprecated in favour of "revert()", "require()" and "assert()".
+      if (!etcWallet.send (this.balance)) throw;
+                                          ^---^
+/../data/reentrancy/solidity_contract/40366.sol:60:3: Warning: Defining constructors as functions with the same name as the contract is deprecated. Use "constructor(...) { ... }" instead.
+  function BranchWallet (address _owner, bool _isRightBranch) {
+  ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/40366.sol:67:25: Warning: "throw" is deprecated in favour of "revert()", "require()" and "assert()".
+    if (!isRightBranch) throw;
+                        ^---^
+/../data/reentrancy/solidity_contract/40366.sol:76:25: Warning: "throw" is deprecated in favour of "revert()", "require()" and "assert()".
+    if (!isRightBranch) throw;
+                        ^---^
+/../data/reentrancy/solidity_contract/40366.sol:77:30: Warning: "throw" is deprecated in favour of "revert()", "require()" and "assert()".
+    if (msg.sender != owner) throw;
+                             ^---^
+/../data/reentrancy/solidity_contract/40366.sol:78:29: Warning: "throw" is deprecated in favour of "revert()", "require()" and "assert()".
+    if (!_to.send (_value)) throw;
+                            ^---^
+/../data/reentrancy/solidity_contract/40366.sol:83:25: Warning: "throw" is deprecated in favour of "revert()", "require()" and "assert()".
+    if (!isRightBranch) throw;
+                        ^---^
+/../data/reentrancy/solidity_contract/40366.sol:84:30: Warning: "throw" is deprecated in favour of "revert()", "require()" and "assert()".
+    if (msg.sender != owner) throw;
+                             ^---^
+/../data/reentrancy/solidity_contract/40366.sol:85:42: Warning: "throw" is deprecated in favour of "revert()", "require()" and "assert()".
+    if (!_to.call.value (_value)(_data)) throw;
+                                         ^---^
+/../data/reentrancy/solidity_contract/40366.sol:1:1: Warning: Source file does not specify required compiler version!Consider adding "pragma solidity ^0.4.25;"
+contract TriWallet {
+^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/40366.sol:20:32: Warning: This looks like an address but has an invalid checksum. If this is not used as an address, please prepend '00'. Correct checksummed address: '0x23141Df767233776f7cBbEc497800DdedaA4C684'. For more information please see https://solidity.readthedocs.io/en/develop/types.html#address-literals
+    thisIsFork = BranchSender (0x23141df767233776f7cbbec497800ddedaa4c684).isRightBranch ();
+                               ^----------------------------------------^
+/../data/reentrancy/solidity_contract/40366.sol:29:5: Warning: Invoking events without "emit" prefix is deprecated.
+    ETCWalletCreated (etcWallet);
+    ^--------------------------^
+/../data/reentrancy/solidity_contract/40366.sol:32:5: Warning: Invoking events without "emit" prefix is deprecated.
+    ETHWalletCreated (ethWallet);
+    ^--------------------------^
+/../data/reentrancy/solidity_contract/40366.sol:39:28: Warning: Using contract member "balance" inherited from the address type is deprecated. Convert the contract to "address" type to access the member, for example use "address(contract).balance" instead.
+      if (!ethWallet.send (this.balance)) throw;
+                           ^----------^
+/../data/reentrancy/solidity_contract/40366.sol:42:28: Warning: Using contract member "balance" inherited from the address type is deprecated. Convert the contract to "address" type to access the member, for example use "address(contract).balance" instead.
+      if (!etcWallet.send (this.balance)) throw;
+                           ^----------^
+/../data/reentrancy/solidity_contract/40366.sol:18:3: Warning: No visibility specified. Defaulting to "public". 
+  function TriWallet () {
+  ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/40366.sol:36:3: Warning: No visibility specified. Defaulting to "public". 
+  function distribute () {
+  ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/40366.sol:60:3: Warning: No visibility specified. Defaulting to "public". 
+  function BranchWallet (address _owner, bool _isRightBranch) {
+  ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/40366.sol:66:3: Warning: No visibility specified. Defaulting to "public". 
+  function () {
+  ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/40366.sol:75:3: Warning: No visibility specified. Defaulting to "public". 
+  function send (address _to, uint _value) {
+  ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/40366.sol:82:3: Warning: No visibility specified. Defaulting to "public". 
+  function execute(address _to, uint _value, bytes _data) {
+  ^ (Relevant source part starts here and spans across multiple lines).
+
+INFO:Detectors:[91m
+TriWallet.distribute (/../data/reentrancy/solidity_contract/40366.sol#36-44) sends eth to arbitrary user
+	Dangerous calls:
+	- ! ethWallet.send(this.balance) (/../data/reentrancy/solidity_contract/40366.sol#39)
+	- ! etcWallet.send(this.balance) (/../data/reentrancy/solidity_contract/40366.sol#42)
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#functions-that-send-ether-to-arbitrary-destinations[0m
+INFO:Detectors:[92m
+Reentrancy in TriWallet.TriWallet (/../data/reentrancy/solidity_contract/40366.sol#18-33):
+	External calls:
+	- thisIsFork = BranchSender(0x23141df767233776f7cbbec497800ddedaa4c684).isRightBranch() (/../data/reentrancy/solidity_contract/40366.sol#20)
+	State variables written after the call(s):
+	- etcWallet (/../data/reentrancy/solidity_contract/40366.sol#23)
+	- ethWallet (/../data/reentrancy/solidity_contract/40366.sol#26)
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#reentrancy-vulnerabilities-2[0m
+INFO:Detectors:[92m
+BranchSender.isRightBranch should be constant (/../data/reentrancy/solidity_contract/40366.sol#94)
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#state-variables-that-could-be-declared-constant[0m
+INFO:Detectors:[92m
+Deprecated standard detected @ /../data/reentrancy/solidity_contract/40366.sol#39:
+	- Usage of "throw" should be replaced with "revert()"
+Deprecated standard detected @ /../data/reentrancy/solidity_contract/40366.sol#42:
+	- Usage of "throw" should be replaced with "revert()"
+Deprecated standard detected @ /../data/reentrancy/solidity_contract/40366.sol#67:
+	- Usage of "throw" should be replaced with "revert()"
+Deprecated standard detected @ /../data/reentrancy/solidity_contract/40366.sol#76:
+	- Usage of "throw" should be replaced with "revert()"
+Deprecated standard detected @ /../data/reentrancy/solidity_contract/40366.sol#77:
+	- Usage of "throw" should be replaced with "revert()"
+Deprecated standard detected @ /../data/reentrancy/solidity_contract/40366.sol#78:
+	- Usage of "throw" should be replaced with "revert()"
+Deprecated standard detected @ /../data/reentrancy/solidity_contract/40366.sol#83:
+	- Usage of "throw" should be replaced with "revert()"
+Deprecated standard detected @ /../data/reentrancy/solidity_contract/40366.sol#84:
+	- Usage of "throw" should be replaced with "revert()"
+Deprecated standard detected @ /../data/reentrancy/solidity_contract/40366.sol#85:
+	- Usage of "throw" should be replaced with "revert()"
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#deprecated-standards[0m
+INFO:Detectors:[92m
+TriWallet.distribute (/../data/reentrancy/solidity_contract/40366.sol#36-44) should be declared external
+BranchWallet.fallback (/../data/reentrancy/solidity_contract/40366.sol#66-68) should be declared external
+BranchWallet.send (/../data/reentrancy/solidity_contract/40366.sol#75-79) should be declared external
+BranchWallet.execute (/../data/reentrancy/solidity_contract/40366.sol#82-86) should be declared external
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#public-function-that-could-be-declared-as-external[0m
+INFO:Detectors:[92m
+Low level call in BranchWallet.execute (/../data/reentrancy/solidity_contract/40366.sol#82-86):
+	-! _to.call.value(_value)(_data) /../data/reentrancy/solidity_contract/40366.sol#85
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#low-level-calls[0m
+INFO:Detectors:[92m
+Function 'TriWallet.TriWallet' (/../data/reentrancy/solidity_contract/40366.sol#18-33) is not in mixedCase
+Function 'BranchWallet.BranchWallet' (/../data/reentrancy/solidity_contract/40366.sol#60-63) is not in mixedCase
+Parameter '_owner' of BranchWallet.BranchWallet (/../data/reentrancy/solidity_contract/40366.sol#60) is not in mixedCase
+Parameter '_isRightBranch' of BranchWallet.BranchWallet (/../data/reentrancy/solidity_contract/40366.sol#60) is not in mixedCase
+Parameter '_to' of BranchWallet.send (/../data/reentrancy/solidity_contract/40366.sol#75) is not in mixedCase
+Parameter '_value' of BranchWallet.send (/../data/reentrancy/solidity_contract/40366.sol#75) is not in mixedCase
+Parameter '_to' of BranchWallet.execute (/../data/reentrancy/solidity_contract/40366.sol#82) is not in mixedCase
+Parameter '_value' of BranchWallet.execute (/../data/reentrancy/solidity_contract/40366.sol#82) is not in mixedCase
+Parameter '_data' of BranchWallet.execute (/../data/reentrancy/solidity_contract/40366.sol#82) is not in mixedCase
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#conformance-to-solidity-naming-conventions[0m
+INFO:Slither:/../data/reentrancy/solidity_contract/40366.sol analyzed (3 contracts), 26 result(s) found

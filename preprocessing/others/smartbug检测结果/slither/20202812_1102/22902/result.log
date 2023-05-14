@@ -1,0 +1,594 @@
+INFO:Slither:Compilation warnings/errors on /../data/reentrancy/solidity_contract/22902.sol:
+/../data/reentrancy/solidity_contract/22902.sol:190:3: Warning: Defining constructors as functions with the same name as the contract is deprecated. Use "constructor(...) { ... }" instead.
+  function Ownable() public {
+  ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/22902.sol:329:3: Warning: Defining constructors as functions with the same name as the contract is deprecated. Use "constructor(...) { ... }" instead.
+  function Registry(address pManager) public {
+  ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/22902.sol:574:3: Warning: Defining constructors as functions with the same name as the contract is deprecated. Use "constructor(...) { ... }" instead.
+  function ETHPriceProvider(string _url) payable public {
+  ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/22902.sol:637:3: Warning: Defining constructors as functions with the same name as the contract is deprecated. Use "constructor(...) { ... }" instead.
+  function ConvertQuote(uint _currentPrice) ETHPriceProvider("BIa/Nnj1+ipZBrrLIgpTsI6ukQTlTJMd1c0iC7zvxx+nZzq9ODgBSmCLo3Zc0sYZwD8mlruAi5DblQvt2cGsfVeCyqaxu+1lWD325kgN6o0LxrOUW9OQWn2COB3TzcRL51Q+ZLBsT955S1OJbOqsfQ4gg/l2awe2EFVuO3WTprvwKhAa8tjl2iPYU/AJ83TVP9Kpz+ugTJumlz2Y6SPBGMNcvBoRq3MlnrR2h/XdqPbh3S2bxjbSTLwyZzu2DAgVtybPO1oJETY=") payable public {
+  ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/22902.sol:722:3: Warning: Defining constructors as functions with the same name as the contract is deprecated. Use "constructor(...) { ... }" instead.
+  function UnityToken() public {
+  ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/22902.sol:847:5: Warning: Defining constructors as functions with the same name as the contract is deprecated. Use "constructor(...) { ... }" instead.
+    function Hold(address _multisig, uint cap, address pm, address registryAddress, address observerAddr) public {
+    ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/22902.sol:1032:3: Warning: Defining constructors as functions with the same name as the contract is deprecated. Use "constructor(...) { ... }" instead.
+  function Crowdsale(
+  ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/22902.sol:203:5: Warning: Invoking events without "emit" prefix is deprecated.
+    OwnershipTransferred(owner, newOwner);
+    ^-----------------------------------^
+/../data/reentrancy/solidity_contract/22902.sol:269:7: Warning: Invoking events without "emit" prefix is deprecated.
+      StatusChanged(newStatus);
+      ^----------------------^
+/../data/reentrancy/solidity_contract/22902.sol:368:5: Warning: Invoking events without "emit" prefix is deprecated.
+    ContributionAdded(_contributor, con ... ributorList[_contributor].quoteUSD);
+    ^-------------------------------------------------------------------------^
+/../data/reentrancy/solidity_contract/22902.sol:378:6: Warning: Invoking events without "emit" prefix is deprecated.
+     ContributionEdited(_contributor, co ... ributorList[_contributor].quoteUSD);
+     ^-------------------------------------------------------------------------^
+/../data/reentrancy/solidity_contract/22902.sol:389:5: Warning: Invoking events without "emit" prefix is deprecated.
+    ContributionAdded(_contributor, con ... ributorList[_contributor].quoteUSD);
+    ^-------------------------------------------------------------------------^
+/../data/reentrancy/solidity_contract/22902.sol:483:5: Warning: Invoking events without "emit" prefix is deprecated.
+    LogOraclizeAddrResolverI(__oar);
+    ^-----------------------------^
+/../data/reentrancy/solidity_contract/22902.sol:489:23: Warning: Using contract member "balance" inherited from the address type is deprecated. Convert the contract to "address" type to access the member, for example use "address(contract).balance" instead.
+    receiver.transfer(this.balance);
+                      ^----------^
+/../data/reentrancy/solidity_contract/22902.sol:516:5: Warning: Invoking events without "emit" prefix is deprecated.
+    Pause();
+    ^-----^
+/../data/reentrancy/solidity_contract/22902.sol:522:5: Warning: Invoking events without "emit" prefix is deprecated.
+    Unpause();
+    ^-------^
+/../data/reentrancy/solidity_contract/22902.sol:588:5: Warning: Invoking events without "emit" prefix is deprecated.
+    LogStartUpdate(startingPrice, updateInterval, block.timestamp);
+    ^------------------------------------------------------------^
+/../data/reentrancy/solidity_contract/22902.sol:615:5: Warning: Invoking events without "emit" prefix is deprecated.
+    LogPriceUpdated(result,newPrice,block.timestamp);
+    ^----------------------------------------------^
+/../data/reentrancy/solidity_contract/22902.sol:619:36: Warning: Using contract member "balance" inherited from the address type is deprecated. Convert the contract to "address" type to access the member, for example use "address(contract).balance" instead.
+    if (oraclize_getPrice("URL") > this.balance) {
+                                   ^----------^
+/../data/reentrancy/solidity_contract/22902.sol:622:55: Warning: Using contract member "balance" inherited from the address type is deprecated. Convert the contract to "address" type to access the member, for example use "address(contract).balance" instead.
+      LogOraclizeQuery("Oraclize query was NOT sent", this.balance,block.timestamp);
+                                                      ^----------^
+/../data/reentrancy/solidity_contract/22902.sol:622:7: Warning: Invoking events without "emit" prefix is deprecated.
+      LogOraclizeQuery("Oraclize query was NOT sent", this.balance,block.timestamp);
+      ^---------------------------------------------------------------------------^
+/../data/reentrancy/solidity_contract/22902.sol:740:39: Warning: This function only accepts a single "bytes" argument. Please use "abi.encodePacked(...)" or a similar function to encode the data.
+      assert(_to.call.value(0)(bytes4(keccak256(_custom_fallback)), msg.sender, _value, _data));
+                                      ^-------------------------^
+/../data/reentrancy/solidity_contract/22902.sol:740:39: Warning: The provided argument of type string memory is not implicitly convertible to expected type bytes memory.
+      assert(_to.call.value(0)(bytes4(keccak256(_custom_fallback)), msg.sender, _value, _data));
+                                      ^-------------------------^
+/../data/reentrancy/solidity_contract/22902.sol:741:7: Warning: Invoking events without "emit" prefix is deprecated.
+      TransferContract(msg.sender, _to, _value, _data);
+      ^----------------------------------------------^
+/../data/reentrancy/solidity_contract/22902.sol:786:5: Warning: Invoking events without "emit" prefix is deprecated.
+    Transfer(msg.sender, _to, _value, _data);
+    ^--------------------------------------^
+/../data/reentrancy/solidity_contract/22902.sol:799:5: Warning: Invoking events without "emit" prefix is deprecated.
+    TransferContract(msg.sender, _to, _value, _data);
+    ^----------------------------------------------^
+/../data/reentrancy/solidity_contract/22902.sol:870:9: Warning: Invoking events without "emit" prefix is deprecated.
+        InitialBalanceChanged(inBal);
+        ^--------------------------^
+/../data/reentrancy/solidity_contract/22902.sol:876:17: Warning: Using contract member "balance" inherited from the address type is deprecated. Convert the contract to "address" type to access the member, for example use "address(contract).balance" instead.
+        require(this.balance >= balReleased);
+                ^----------^
+/../data/reentrancy/solidity_contract/22902.sol:879:9: Warning: Invoking events without "emit" prefix is deprecated.
+        EthReleased(balReleased);
+        ^----------------------^
+/../data/reentrancy/solidity_contract/22902.sol:883:17: Warning: Using contract member "balance" inherited from the address type is deprecated. Convert the contract to "address" type to access the member, for example use "address(contract).balance" instead.
+        require(this.balance >= n);
+                ^----------^
+/../data/reentrancy/solidity_contract/22902.sol:887:9: Warning: Invoking events without "emit" prefix is deprecated.
+        EthReleased(n);
+        ^------------^
+/../data/reentrancy/solidity_contract/22902.sol:891:16: Warning: Using contract member "balance" inherited from the address type is deprecated. Convert the contract to "address" type to access the member, for example use "address(contract).balance" instead.
+        return this.balance;
+               ^----------^
+/../data/reentrancy/solidity_contract/22902.sol:898:9: Warning: Invoking events without "emit" prefix is deprecated.
+        StageChanged(newStage);
+        ^--------------------^
+/../data/reentrancy/solidity_contract/22902.sol:906:9: Warning: Invoking events without "emit" prefix is deprecated.
+        StageChanged(newStage);
+        ^--------------------^
+/../data/reentrancy/solidity_contract/22902.sol:917:9: Warning: Invoking events without "emit" prefix is deprecated.
+        EthReturnedToOwner(owner, balance);
+        ^--------------------------------^
+/../data/reentrancy/solidity_contract/22902.sol:934:17: Warning: Invoking events without "emit" prefix is deprecated.
+                EthRefunded(currentParticipantAddress, EthAmount);
+                ^-----------------------------------------------^
+/../data/reentrancy/solidity_contract/22902.sol:1079:5: Warning: Invoking events without "emit" prefix is deprecated.
+    ChangeTokenUSDRate(oldTokenUSDRate, _tokenUSDRate);
+    ^------------------------------------------------^
+/../data/reentrancy/solidity_contract/22902.sol:1115:5: Warning: Invoking events without "emit" prefix is deprecated.
+    ManualChangeStartDate(oldStartDate, date);
+    ^---------------------------------------^
+/../data/reentrancy/solidity_contract/22902.sol:1121:5: Warning: Invoking events without "emit" prefix is deprecated.
+    ManualChangeEndDate(oldEndDate, date);
+    ^-----------------------------------^
+/../data/reentrancy/solidity_contract/22902.sol:1126:5: Warning: Invoking events without "emit" prefix is deprecated.
+    SoftCapChanged();
+    ^--------------^
+/../data/reentrancy/solidity_contract/22902.sol:1131:5: Warning: Invoking events without "emit" prefix is deprecated.
+    HardCapChanged();
+    ^--------------^
+/../data/reentrancy/solidity_contract/22902.sol:1137:5: Warning: Invoking events without "emit" prefix is deprecated.
+    ChangeMinAmount(oldMinAmount, minimalContribution);
+    ^------------------------------------------------^
+/../data/reentrancy/solidity_contract/22902.sol:1144:5: Warning: Invoking events without "emit" prefix is deprecated.
+    ChangeHardCapToken(oldHardCapToken, hardCapToken);
+    ^-----------------------------------------------^
+/../data/reentrancy/solidity_contract/22902.sol:1168:7: Warning: Invoking events without "emit" prefix is deprecated.
+      HardCapReached(block.number);
+      ^--------------------------^
+/../data/reentrancy/solidity_contract/22902.sol:1169:7: Warning: Invoking events without "emit" prefix is deprecated.
+      CrowdsaleEnded(block.number);
+      ^--------------------------^
+/../data/reentrancy/solidity_contract/22902.sol:1177:9: Warning: Invoking events without "emit" prefix is deprecated.
+        CrowdsaleEnded(block.number);
+        ^--------------------------^
+/../data/reentrancy/solidity_contract/22902.sol:1182:9: Warning: Invoking events without "emit" prefix is deprecated.
+        CrowdsaleEnded(block.number);
+        ^--------------------------^
+/../data/reentrancy/solidity_contract/22902.sol:1208:7: Warning: Invoking events without "emit" prefix is deprecated.
+      SoftCapReached(block.number);
+      ^--------------------------^
+/../data/reentrancy/solidity_contract/22902.sol:1223:9: Warning: Invoking events without "emit" prefix is deprecated.
+        ContributionAdded(_contributor, contributionAmountETH, contributionAmountUsd, tokens, ethUsdPrice);
+        ^------------------------------------------------------------------------------------------------^
+/../data/reentrancy/solidity_contract/22902.sol:1302:11: Warning: Invoking events without "emit" prefix is deprecated.
+          TokensTransfered(currentParticipantAddress, numberOfUNT);
+          ^------------------------------------------------------^
+/../data/reentrancy/solidity_contract/22902.sol:1322:7: Warning: Invoking events without "emit" prefix is deprecated.
+      TokensTransfered(msg.sender, numberOfUNT);
+      ^---------------------------------------^
+/../data/reentrancy/solidity_contract/22902.sol:1334:9: Warning: Invoking events without "emit" prefix is deprecated.
+        TokensTransfered(msg.sender,  balance);
+        ^------------------------------------^
+/../data/reentrancy/solidity_contract/22902.sol:1347:7: Warning: Invoking events without "emit" prefix is deprecated.
+[91m      ErrorSendingETH(msg.sender, ethContributed);[0m
+      ^-----------------------------------------^
+/../data/reentrancy/solidity_contract/22902.sol:1350:7: Warning: Invoking events without "emit" prefix is deprecated.
+      Refunded(msg.sender, ethContributed);
+      ^----------------------------------^
+/../data/reentrancy/solidity_contract/22902.sol:1357:16: Warning: Using contract member "balance" inherited from the address type is deprecated. Convert the contract to "address" type to access the member, for example use "address(contract).balance" instead.
+    uint bal = this.balance;
+               ^----------^
+/../data/reentrancy/solidity_contract/22902.sol:1358:5: Warning: Using contract member "transfer" inherited from the address type is deprecated. Convert the contract to "address" type to access the member, for example use "address(contract).transfer" instead.
+    hold.transfer(bal);
+    ^-----------^
+/../data/reentrancy/solidity_contract/22902.sol:1360:5: Warning: Invoking events without "emit" prefix is deprecated.
+    WithdrawedEthToHold(bal);
+    ^----------------------^
+/../data/reentrancy/solidity_contract/22902.sol:1374:5: Warning: Invoking events without "emit" prefix is deprecated.
+    CrowdsaleStarted(block.number);
+    ^----------------------------^
+/../data/reentrancy/solidity_contract/22902.sol:1419:5: Warning: Invoking events without "emit" prefix is deprecated.
+    ContributionAddedManual(_contributor, ethRaised, usdRaised, totalTokens, _quote);
+    ^------------------------------------------------------------------------------^
+/../data/reentrancy/solidity_contract/22902.sol:1432:5: Warning: Invoking events without "emit" prefix is deprecated.
+    ContributionAdded(_contributor, ethRaised, usdRaised, totalTokens, _quote);
+    ^------------------------------------------------------------------------^
+/../data/reentrancy/solidity_contract/22902.sol:1441:5: Warning: Invoking events without "emit" prefix is deprecated.
+    ContributionRemoved(_contributor, ethRaised, usdRaised, totalTokens);
+    ^------------------------------------------------------------------^
+
+INFO:Detectors:[91m
+Reentrancy in Hold.refund (/../data/reentrancy/solidity_contract/22902.sol#920-940):
+	External calls:
+	- currentParticipantAddress = registry.getContributorByIndex(nextContributorToTransferEth) (/../data/reentrancy/solidity_contract/22902.sol#925)
+	- EthAmount = registry.getContributionETH(currentParticipantAddress) (/../data/reentrancy/solidity_contract/22902.sol#930)
+	External calls sending eth:
+	- currentParticipantAddress.transfer(EthAmount) (/../data/reentrancy/solidity_contract/22902.sol#933)
+	State variables written after the call(s):
+	- hasWithdrawedEth (/../data/reentrancy/solidity_contract/22902.sol#935)
+	- nextContributorToTransferEth (/../data/reentrancy/solidity_contract/22902.sol#937)
+Reentrancy in Crowdsale.refund (/../data/reentrancy/solidity_contract/22902.sol#1340-1352):
+	External calls:
+	- require(bool)(registry.getContributionETH(msg.sender) > 0) (/../data/reentrancy/solidity_contract/22902.sol#1342)
+	- ethContributed = registry.getContributionETH(msg.sender) (/../data/reentrancy/solidity_contract/22902.sol#1345)
+	External calls sending eth:
+	- ! msg.sender.send(ethContributed) (/../data/reentrancy/solidity_contract/22902.sol#1346-1351)
+	State variables written after the call(s):
+	- hasRefunded (/../data/reentrancy/solidity_contract/22902.sol#1349)
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#reentrancy-vulnerabilities[0m
+INFO:Detectors:[91m
+BuildingStatus.observer (/../data/reentrancy/solidity_contract/22902.sol#211) is never initialized. It is used in:
+BuildingStatus.crowdsale (/../data/reentrancy/solidity_contract/22902.sol#214) is never initialized. It is used in:
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#uninitialized-state-variables[0m
+INFO:Detectors:[93m
+usingOraclize.getCodeSize (/../data/reentrancy/solidity_contract/22902.sol#140-144) is declared view but contains assembly code
+UnityToken.isContract (/../data/reentrancy/solidity_contract/22902.sol#773-779) is declared view but contains assembly code
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#constant-functions-changing-the-state[0m
+INFO:Detectors:[93m
+Reentrancy in ETHPriceProvider.__callback (/../data/reentrancy/solidity_contract/22902.sol#600-616):
+	External calls:
+	- require(bool)(msg.sender == oraclize_cbAddress() && validIds[myid]) (/../data/reentrancy/solidity_contract/22902.sol#601)
+	State variables written after the call(s):
+	- validIds (/../data/reentrancy/solidity_contract/22902.sol#602)
+Reentrancy in Crowdsale.batchReturnUNT (/../data/reentrancy/solidity_contract/22902.sol#1285-1311):
+	External calls:
+	- currentParticipantAddress = registry.getContributorByIndex(nextContributorToTransferTokens) (/../data/reentrancy/solidity_contract/22902.sol#1293)
+	- ! hasWithdrawedTokens[currentParticipantAddress] && registry.isActiveContributor(currentParticipantAddress) (/../data/reentrancy/solidity_contract/22902.sol#1297-1306)
+	- numberOfUNT = registry.getContributionTokens(currentParticipantAddress) (/../data/reentrancy/solidity_contract/22902.sol#1299)
+	- token.transfer(currentParticipantAddress,numberOfUNT) (/../data/reentrancy/solidity_contract/22902.sol#1301-1305)
+	State variables written after the call(s):
+	- hasWithdrawedTokens (/../data/reentrancy/solidity_contract/22902.sol#1304)
+	- nextContributorToTransferTokens (/../data/reentrancy/solidity_contract/22902.sol#1308)
+Reentrancy in Crowdsale.editContribution (/../data/reentrancy/solidity_contract/22902.sol#1423-1434):
+	External calls:
+	- ethRaised -= registry.getContributionETH(_contributor) (/../data/reentrancy/solidity_contract/22902.sol#1424)
+	- usdRaised -= registry.getContributionUSD(_contributor) (/../data/reentrancy/solidity_contract/22902.sol#1425)
+	- totalTokens -= registry.getContributionTokens(_contributor) (/../data/reentrancy/solidity_contract/22902.sol#1426)
+	- registry.editContribution(_contributor,_amount,_amusd,_tokens,_quote) (/../data/reentrancy/solidity_contract/22902.sol#1428)
+	State variables written after the call(s):
+	- ethRaised (/../data/reentrancy/solidity_contract/22902.sol#1429)
+	- totalTokens (/../data/reentrancy/solidity_contract/22902.sol#1431)
+	- usdRaised (/../data/reentrancy/solidity_contract/22902.sol#1430)
+Reentrancy in Crowdsale.getTokens (/../data/reentrancy/solidity_contract/22902.sol#1313-1327):
+	External calls:
+	- require(bool)(! hasWithdrawedTokens[msg.sender] && registry.isActiveContributor(msg.sender)) (/../data/reentrancy/solidity_contract/22902.sol#1316)
+	- require(bool)(getTokenBalance() >= registry.getContributionTokens(msg.sender)) (/../data/reentrancy/solidity_contract/22902.sol#1317)
+	- numberOfUNT = registry.getContributionTokens(msg.sender) (/../data/reentrancy/solidity_contract/22902.sol#1319)
+	- token.transfer(msg.sender,numberOfUNT) (/../data/reentrancy/solidity_contract/22902.sol#1321-1325)
+	State variables written after the call(s):
+	- hasWithdrawedTokens (/../data/reentrancy/solidity_contract/22902.sol#1324)
+Reentrancy in usingOraclize.oraclizeAPI (/../data/reentrancy/solidity_contract/22902.sol#53-61):
+	External calls:
+	- address(oraclize) != OAR.getAddress() (/../data/reentrancy/solidity_contract/22902.sol#57-58)
+	- oraclize = OraclizeI(OAR.getAddress()) (/../data/reentrancy/solidity_contract/22902.sol#58)
+	State variables written after the call(s):
+	- oraclize (/../data/reentrancy/solidity_contract/22902.sol#58)
+Reentrancy in Crowdsale.processTransaction (/../data/reentrancy/solidity_contract/22902.sol#1190-1230):
+	External calls:
+	- registry.addContribution(_contributor,contributionAmountETH,contributionAmountUsd,tokens,ethUsdPrice) (/../data/reentrancy/solidity_contract/22902.sol#1219)
+	State variables written after the call(s):
+	- totalTokens (/../data/reentrancy/solidity_contract/22902.sol#1221)
+	- usdRaised (/../data/reentrancy/solidity_contract/22902.sol#1222)
+Reentrancy in Crowdsale.startCrowdsale (/../data/reentrancy/solidity_contract/22902.sol#1368-1375):
+	External calls:
+	- statusI.setStatus(BuildingStatus.statusEnum.crowdsale) (/../data/reentrancy/solidity_contract/22902.sol#1372)
+	State variables written after the call(s):
+	- state (/../data/reentrancy/solidity_contract/22902.sol#1373)
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#reentrancy-vulnerabilities-1[0m
+INFO:Detectors:[93m
+empty in UnityToken.transfer (/../data/reentrancy/solidity_contract/22902.sol#764) is a local variable never initialiazed
+tkn in ERC223ReceivingContract.tokenFallback (/../data/reentrancy/solidity_contract/22902.sol#661) is a local variable never initialiazed
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#uninitialized-local-variables[0m
+INFO:Detectors:[92m
+Hold.refund has external calls inside a loop:
+	- currentParticipantAddress = registry.getContributorByIndex(nextContributorToTransferEth) (/../data/reentrancy/solidity_contract/22902.sol#925)
+Hold.refund has external calls inside a loop:
+	- EthAmount = registry.getContributionETH(currentParticipantAddress) (/../data/reentrancy/solidity_contract/22902.sol#930)
+Hold.refund has external calls inside a loop:
+	- currentParticipantAddress.transfer(EthAmount) (/../data/reentrancy/solidity_contract/22902.sol#933)
+Crowdsale.batchReturnUNT has external calls inside a loop:
+	- currentParticipantAddress = registry.getContributorByIndex(nextContributorToTransferTokens) (/../data/reentrancy/solidity_contract/22902.sol#1293)
+Crowdsale.batchReturnUNT has external calls inside a loop:
+	- ! hasWithdrawedTokens[currentParticipantAddress] && registry.isActiveContributor(currentParticipantAddress) (/../data/reentrancy/solidity_contract/22902.sol#1297-1306)
+Crowdsale.batchReturnUNT has external calls inside a loop:
+	- numberOfUNT = registry.getContributionTokens(currentParticipantAddress) (/../data/reentrancy/solidity_contract/22902.sol#1299)
+Crowdsale.batchReturnUNT has external calls inside a loop:
+	- token.transfer(currentParticipantAddress,numberOfUNT) (/../data/reentrancy/solidity_contract/22902.sol#1301-1305)
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation/_edit#calls-inside-a-loop[0m
+INFO:Detectors:[92m
+Reentrancy in ETHPriceProvider.__callback (/../data/reentrancy/solidity_contract/22902.sol#600-616):
+	External calls:
+	- require(bool)(msg.sender == oraclize_cbAddress() && validIds[myid]) (/../data/reentrancy/solidity_contract/22902.sol#601)
+	- update(updateInterval) (/../data/reentrancy/solidity_contract/22902.sol#607)
+	External calls sending eth:
+	- update(updateInterval) (/../data/reentrancy/solidity_contract/22902.sol#607)
+	State variables written after the call(s):
+	- currentPrice (/../data/reentrancy/solidity_contract/22902.sol#612)
+	- oraclize_network_name (/../data/reentrancy/solidity_contract/22902.sol#607)
+Reentrancy in Crowdsale.addContributor (/../data/reentrancy/solidity_contract/22902.sol#1414-1421):
+	External calls:
+	- registry.addContributor(_contributor,_amount,_amusd,_tokens,_quote) (/../data/reentrancy/solidity_contract/22902.sol#1415)
+	State variables written after the call(s):
+	- ethRaised (/../data/reentrancy/solidity_contract/22902.sol#1416)
+	- totalTokens (/../data/reentrancy/solidity_contract/22902.sol#1418)
+	- usdRaised (/../data/reentrancy/solidity_contract/22902.sol#1417)
+Reentrancy in Crowdsale.batchReturnUNT (/../data/reentrancy/solidity_contract/22902.sol#1285-1311):
+	External calls:
+	- currentParticipantAddress = registry.getContributorByIndex(nextContributorToTransferTokens) (/../data/reentrancy/solidity_contract/22902.sol#1293)
+	- ! hasWithdrawedTokens[currentParticipantAddress] && registry.isActiveContributor(currentParticipantAddress) (/../data/reentrancy/solidity_contract/22902.sol#1297-1306)
+	- numberOfUNT = registry.getContributionTokens(currentParticipantAddress) (/../data/reentrancy/solidity_contract/22902.sol#1299)
+	- token.transfer(currentParticipantAddress,numberOfUNT) (/../data/reentrancy/solidity_contract/22902.sol#1301-1305)
+	State variables written after the call(s):
+	- withdrawedTokens (/../data/reentrancy/solidity_contract/22902.sol#1303)
+Reentrancy in Crowdsale.getTokens (/../data/reentrancy/solidity_contract/22902.sol#1313-1327):
+	External calls:
+	- require(bool)(! hasWithdrawedTokens[msg.sender] && registry.isActiveContributor(msg.sender)) (/../data/reentrancy/solidity_contract/22902.sol#1316)
+	- require(bool)(getTokenBalance() >= registry.getContributionTokens(msg.sender)) (/../data/reentrancy/solidity_contract/22902.sol#1317)
+	- numberOfUNT = registry.getContributionTokens(msg.sender) (/../data/reentrancy/solidity_contract/22902.sol#1319)
+	- token.transfer(msg.sender,numberOfUNT) (/../data/reentrancy/solidity_contract/22902.sol#1321-1325)
+	State variables written after the call(s):
+	- withdrawedTokens (/../data/reentrancy/solidity_contract/22902.sol#1323)
+Reentrancy in Crowdsale.processTransaction (/../data/reentrancy/solidity_contract/22902.sol#1190-1230):
+	External calls:
+	- registry.addContribution(_contributor,contributionAmountETH,contributionAmountUsd,tokens,ethUsdPrice) (/../data/reentrancy/solidity_contract/22902.sol#1219)
+	State variables written after the call(s):
+	- ethRaised (/../data/reentrancy/solidity_contract/22902.sol#1220)
+Reentrancy in ETHPriceProvider.update (/../data/reentrancy/solidity_contract/22902.sol#618-627):
+	External calls:
+	- oraclize_getPrice(URL) > this.balance (/../data/reentrancy/solidity_contract/22902.sol#619-626)
+	State variables written after the call(s):
+	- state (/../data/reentrancy/solidity_contract/22902.sol#621)
+Reentrancy in ETHPriceProvider.update (/../data/reentrancy/solidity_contract/22902.sol#618-627):
+	External calls:
+	- queryId = oraclize_query(delay,URL,url,gasLimit) (/../data/reentrancy/solidity_contract/22902.sol#624)
+	State variables written after the call(s):
+	- validIds (/../data/reentrancy/solidity_contract/22902.sol#625)
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#reentrancy-vulnerabilities-2[0m
+INFO:Detectors:[92m
+usingOraclize.getCodeSize uses assembly (/../data/reentrancy/solidity_contract/22902.sol#140-144)
+	- /../data/reentrancy/solidity_contract/22902.sol#141-144
+UnityToken.isContract uses assembly (/../data/reentrancy/solidity_contract/22902.sol#773-779)
+	- /../data/reentrancy/solidity_contract/22902.sol#775-778
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#assembly-usage[0m
+INFO:Detectors:[92m
+BuildingStatus.crowdsale should be constant (/../data/reentrancy/solidity_contract/22902.sol#214)
+BuildingStatus.observer should be constant (/../data/reentrancy/solidity_contract/22902.sol#211)
+Crowdsale.minimumTokensToStart should be constant (/../data/reentrancy/solidity_contract/22902.sol#994)
+Crowdsale.nextContributorToClaim should be constant (/../data/reentrancy/solidity_contract/22902.sol#997)
+Hold.stages should be constant (/../data/reentrancy/solidity_contract/22902.sol#816)
+OraclizeI.cbAddress should be constant (/../data/reentrancy/solidity_contract/22902.sol#18)
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#state-variables-that-could-be-declared-constant[0m
+INFO:Detectors:[92m
+OraclizeI.query2 (/../data/reentrancy/solidity_contract/22902.sol#21) should be declared external
+OraclizeI.queryN (/../data/reentrancy/solidity_contract/22902.sol#23) should be declared external
+OraclizeI.getPrice (/../data/reentrancy/solidity_contract/22902.sol#25) should be declared external
+OraclizeI.getPrice (/../data/reentrancy/solidity_contract/22902.sol#26) should be declared external
+OraclizeAddrResolverI.getAddress (/../data/reentrancy/solidity_contract/22902.sol#32) should be declared external
+Ownable.transferOwnership (/../data/reentrancy/solidity_contract/22902.sol#201-205) should be declared external
+BuildingStatus.setStatus (/../data/reentrancy/solidity_contract/22902.sol#267-270) should be declared external
+BuildingStatus.changeStage (/../data/reentrancy/solidity_contract/22902.sol#272-278) should be declared external
+PermissionManager.addAddress (/../data/reentrancy/solidity_contract/22902.sol#286-288) should be declared external
+PermissionManager.removeAddress (/../data/reentrancy/solidity_contract/22902.sol#290-292) should be declared external
+PermissionManager.isPermitted (/../data/reentrancy/solidity_contract/22902.sol#294-299) should be declared external
+Registry.setPermissionManager (/../data/reentrancy/solidity_contract/22902.sol#334-337) should be declared external
+Registry.isActiveContributor (/../data/reentrancy/solidity_contract/22902.sol#339-341) should be declared external
+Registry.removeContribution (/../data/reentrancy/solidity_contract/22902.sol#343-345) should be declared external
+Registry.setCompleted (/../data/reentrancy/solidity_contract/22902.sol#347-349) should be declared external
+Registry.addContribution (/../data/reentrancy/solidity_contract/22902.sol#351-369) should be declared external
+Registry.editContribution (/../data/reentrancy/solidity_contract/22902.sol#371-379) should be declared external
+Registry.addContributor (/../data/reentrancy/solidity_contract/22902.sol#381-391) should be declared external
+Registry.getContributionETH (/../data/reentrancy/solidity_contract/22902.sol#393-395) should be declared external
+Registry.getContributionUSD (/../data/reentrancy/solidity_contract/22902.sol#397-399) should be declared external
+Registry.getContributionRNTB (/../data/reentrancy/solidity_contract/22902.sol#401-403) should be declared external
+Registry.getContributionTokens (/../data/reentrancy/solidity_contract/22902.sol#405-407) should be declared external
+Registry.addRNTBContribution (/../data/reentrancy/solidity_contract/22902.sol#409-418) should be declared external
+Registry.getContributorByIndex (/../data/reentrancy/solidity_contract/22902.sol#420-422) should be declared external
+Registry.getContributorAmount (/../data/reentrancy/solidity_contract/22902.sol#424-426) should be declared external
+OraclizeC.setOraclizeAddrResolverI (/../data/reentrancy/solidity_contract/22902.sol#480-484) should be declared external
+Pausable.pause (/../data/reentrancy/solidity_contract/22902.sol#514-517) should be declared external
+Pausable.unpause (/../data/reentrancy/solidity_contract/22902.sol#520-523) should be declared external
+ETHPriceProvider.startUpdate (/../data/reentrancy/solidity_contract/22902.sol#582-589) should be declared external
+ETHPriceProvider.getQuote (/../data/reentrancy/solidity_contract/22902.sol#629-631) should be declared external
+ERC223ReceivingContract.tokenFallback (/../data/reentrancy/solidity_contract/22902.sol#660-671) should be declared external
+UnityToken.allowedAddressesOf (/../data/reentrancy/solidity_contract/22902.sol#808-810) should be declared external
+ERC223Interface.allowedAddressesOf (/../data/reentrancy/solidity_contract/22902.sol#678) should be declared external
+ERC223Interface.getTotalSupply (/../data/reentrancy/solidity_contract/22902.sol#679) should be declared external
+UnityToken.getTotalSupply (/../data/reentrancy/solidity_contract/22902.sol#728-730) should be declared external
+ERC223Interface.transfer (/../data/reentrancy/solidity_contract/22902.sol#681) should be declared external
+UnityToken.transfer (/../data/reentrancy/solidity_contract/22902.sol#761-770) should be declared external
+UnityToken.transfer (/../data/reentrancy/solidity_contract/22902.sol#750-757) should be declared external
+ERC223Interface.transfer (/../data/reentrancy/solidity_contract/22902.sol#682) should be declared external
+UnityToken.transfer (/../data/reentrancy/solidity_contract/22902.sol#733-746) should be declared external
+ERC223Interface.transfer (/../data/reentrancy/solidity_contract/22902.sol#683) should be declared external
+UnityToken.addAllowed (/../data/reentrancy/solidity_contract/22902.sol#710-712) should be declared external
+UnityToken.removeAllowed (/../data/reentrancy/solidity_contract/22902.sol#714-716) should be declared external
+Hold.setPermissionManager (/../data/reentrancy/solidity_contract/22902.sol#858-861) should be declared external
+Hold.setObserver (/../data/reentrancy/solidity_contract/22902.sol#863-866) should be declared external
+Hold.setInitialBalance (/../data/reentrancy/solidity_contract/22902.sol#868-871) should be declared external
+Hold.releaseETH (/../data/reentrancy/solidity_contract/22902.sol#882-888) should be declared external
+Hold.changeStageAndReleaseETH (/../data/reentrancy/solidity_contract/22902.sol#894-900) should be declared external
+Hold.changeStage (/../data/reentrancy/solidity_contract/22902.sol#902-907) should be declared external
+Hold.returnETHByOwner (/../data/reentrancy/solidity_contract/22902.sol#913-918) should be declared external
+Hold.refund (/../data/reentrancy/solidity_contract/22902.sol#920-940) should be declared external
+Hold.fallback (/../data/reentrancy/solidity_contract/22902.sol#942-944) should be declared external
+Hold.getWithdrawed (/../data/reentrancy/solidity_contract/22902.sol#946-948) should be declared external
+Crowdsale.setPermissionManager (/../data/reentrancy/solidity_contract/22902.sol#1064-1067) should be declared external
+Crowdsale.setRegistry (/../data/reentrancy/solidity_contract/22902.sol#1070-1073) should be declared external
+Crowdsale.setTokenUSDRate (/../data/reentrancy/solidity_contract/22902.sol#1075-1080) should be declared external
+Crowdsale.getTokenUSDRate (/../data/reentrancy/solidity_contract/22902.sol#1082-1084) should be declared external
+Crowdsale.setHold (/../data/reentrancy/solidity_contract/22902.sol#1097-1100) should be declared external
+Crowdsale.setToken (/../data/reentrancy/solidity_contract/22902.sol#1102-1105) should be declared external
+Crowdsale.setStatusI (/../data/reentrancy/solidity_contract/22902.sol#1107-1110) should be declared external
+Crowdsale.setStartDate (/../data/reentrancy/solidity_contract/22902.sol#1112-1116) should be declared external
+Crowdsale.setEndDate (/../data/reentrancy/solidity_contract/22902.sol#1118-1122) should be declared external
+Crowdsale.setSoftCap (/../data/reentrancy/solidity_contract/22902.sol#1124-1127) should be declared external
+Crowdsale.setHardCap (/../data/reentrancy/solidity_contract/22902.sol#1129-1132) should be declared external
+Crowdsale.setMinimalContribution (/../data/reentrancy/solidity_contract/22902.sol#1134-1138) should be declared external
+Crowdsale.setHardCapToken (/../data/reentrancy/solidity_contract/22902.sol#1140-1145) should be declared external
+Crowdsale.fallback (/../data/reentrancy/solidity_contract/22902.sol#1148-1160) should be declared external
+Crowdsale.getTokensIssued (/../data/reentrancy/solidity_contract/22902.sol#1241-1243) should be declared external
+Crowdsale.getTotalUSDInTokens (/../data/reentrancy/solidity_contract/22902.sol#1245-1247) should be declared external
+Crowdsale.getUSDRaised (/../data/reentrancy/solidity_contract/22902.sol#1249-1251) should be declared external
+Crowdsale.calculateMaxTokensIssued (/../data/reentrancy/solidity_contract/22902.sol#1257-1259) should be declared external
+Crowdsale.calculateMaxEthIssued (/../data/reentrancy/solidity_contract/22902.sol#1261-1263) should be declared external
+Crowdsale.getEthRaised (/../data/reentrancy/solidity_contract/22902.sol#1265-1267) should be declared external
+Crowdsale.getContributorTokens (/../data/reentrancy/solidity_contract/22902.sol#1273-1275) should be declared external
+Crowdsale.getContributorETH (/../data/reentrancy/solidity_contract/22902.sol#1277-1279) should be declared external
+Crowdsale.getContributorUSD (/../data/reentrancy/solidity_contract/22902.sol#1281-1283) should be declared external
+Crowdsale.batchReturnUNT (/../data/reentrancy/solidity_contract/22902.sol#1285-1311) should be declared external
+Crowdsale.getTokens (/../data/reentrancy/solidity_contract/22902.sol#1313-1327) should be declared external
+Crowdsale.getOverTokens (/../data/reentrancy/solidity_contract/22902.sol#1329-1337) should be declared external
+Crowdsale.refund (/../data/reentrancy/solidity_contract/22902.sol#1340-1352) should be declared external
+Crowdsale.withdrawEth (/../data/reentrancy/solidity_contract/22902.sol#1355-1361) should be declared external
+Crowdsale.newCrowdsale (/../data/reentrancy/solidity_contract/22902.sol#1363-1365) should be declared external
+Crowdsale.startCrowdsale (/../data/reentrancy/solidity_contract/22902.sol#1368-1375) should be declared external
+Crowdsale.hasEnded (/../data/reentrancy/solidity_contract/22902.sol#1378-1380) should be declared external
+Crowdsale.getSoftCap (/../data/reentrancy/solidity_contract/22902.sol#1386-1388) should be declared external
+Crowdsale.getHardCap (/../data/reentrancy/solidity_contract/22902.sol#1390-1392) should be declared external
+Crowdsale.getStartDate (/../data/reentrancy/solidity_contract/22902.sol#1394-1396) should be declared external
+Crowdsale.getEndDate (/../data/reentrancy/solidity_contract/22902.sol#1398-1400) should be declared external
+Crowdsale.getContributorAmount (/../data/reentrancy/solidity_contract/22902.sol#1402-1404) should be declared external
+Crowdsale.getWithdrawed (/../data/reentrancy/solidity_contract/22902.sol#1406-1408) should be declared external
+Crowdsale.getRefunded (/../data/reentrancy/solidity_contract/22902.sol#1410-1412) should be declared external
+Crowdsale.addContributor (/../data/reentrancy/solidity_contract/22902.sol#1414-1421) should be declared external
+Crowdsale.editContribution (/../data/reentrancy/solidity_contract/22902.sol#1423-1434) should be declared external
+Crowdsale.removeContributor (/../data/reentrancy/solidity_contract/22902.sol#1436-1442) should be declared external
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#public-function-that-could-be-declared-as-external[0m
+INFO:Detectors:[92m
+Detected issues with version pragma in /../data/reentrancy/solidity_contract/22902.sol:
+	- pragma solidity^0.4.18 (/../data/reentrancy/solidity_contract/22902.sol#1): it allows old versions
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#incorrect-version-of-solidity[0m
+INFO:Detectors:[92m
+Low level call in UnityToken.transfer (/../data/reentrancy/solidity_contract/22902.sol#733-746):
+	-assert(bool)(_to.call.value(0)(bytes4(keccak256()(_custom_fallback)),msg.sender,_value,_data)) /../data/reentrancy/solidity_contract/22902.sol#740
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#low-level-calls[0m
+INFO:Detectors:[92m
+Function 'OraclizeI.query_withGasLimit' (/../data/reentrancy/solidity_contract/22902.sol#20) is not in mixedCase
+Function 'OraclizeI.query2_withGasLimit' (/../data/reentrancy/solidity_contract/22902.sol#22) is not in mixedCase
+Function 'OraclizeI.queryN_withGasLimit' (/../data/reentrancy/solidity_contract/22902.sol#24) is not in mixedCase
+Function 'OraclizeI.randomDS_getSessionPubKeyHash' (/../data/reentrancy/solidity_contract/22902.sol#29) is not in mixedCase
+Contract 'usingOraclize' (/../data/reentrancy/solidity_contract/22902.sol#34-179) is not in CapWords
+Function 'usingOraclize.oraclize_setNetwork' (/../data/reentrancy/solidity_contract/22902.sol#67-70) is not in mixedCase
+Function 'usingOraclize.oraclize_setNetwork' (/../data/reentrancy/solidity_contract/22902.sol#71-105) is not in mixedCase
+Function 'usingOraclize.__callback' (/../data/reentrancy/solidity_contract/22902.sol#107-109) is not in mixedCase
+Function 'usingOraclize.oraclize_getPrice' (/../data/reentrancy/solidity_contract/22902.sol#111-113) is not in mixedCase
+Function 'usingOraclize.oraclize_getPrice' (/../data/reentrancy/solidity_contract/22902.sol#115-117) is not in mixedCase
+Function 'usingOraclize.oraclize_query' (/../data/reentrancy/solidity_contract/22902.sol#119-123) is not in mixedCase
+Function 'usingOraclize.oraclize_query' (/../data/reentrancy/solidity_contract/22902.sol#124-128) is not in mixedCase
+Function 'usingOraclize.oraclize_cbAddress' (/../data/reentrancy/solidity_contract/22902.sol#130-132) is not in mixedCase
+Function 'usingOraclize.oraclize_setProof' (/../data/reentrancy/solidity_contract/22902.sol#133-135) is not in mixedCase
+Function 'usingOraclize.oraclize_setCustomGasPrice' (/../data/reentrancy/solidity_contract/22902.sol#136-138) is not in mixedCase
+Parameter '_a' of usingOraclize.parseInt (/../data/reentrancy/solidity_contract/22902.sol#147) is not in mixedCase
+Parameter '_a' of usingOraclize.parseInt (/../data/reentrancy/solidity_contract/22902.sol#152) is not in mixedCase
+Parameter '_b' of usingOraclize.parseInt (/../data/reentrancy/solidity_contract/22902.sol#152) is not in mixedCase
+Function 'usingOraclize.oraclize_setNetworkName' (/../data/reentrancy/solidity_contract/22902.sol#171-173) is not in mixedCase
+Parameter '_network_name' of usingOraclize.oraclize_setNetworkName (/../data/reentrancy/solidity_contract/22902.sol#171) is not in mixedCase
+Function 'usingOraclize.oraclize_getNetworkName' (/../data/reentrancy/solidity_contract/22902.sol#175-177) is not in mixedCase
+Constant 'usingOraclize.day' (/../data/reentrancy/solidity_contract/22902.sol#35) is not in UPPER_CASE_WITH_UNDERSCORES
+Constant 'usingOraclize.week' (/../data/reentrancy/solidity_contract/22902.sol#36) is not in UPPER_CASE_WITH_UNDERSCORES
+Constant 'usingOraclize.month' (/../data/reentrancy/solidity_contract/22902.sol#37) is not in UPPER_CASE_WITH_UNDERSCORES
+Constant 'usingOraclize.proofType_NONE' (/../data/reentrancy/solidity_contract/22902.sol#38) is not in UPPER_CASE_WITH_UNDERSCORES
+Constant 'usingOraclize.proofType_TLSNotary' (/../data/reentrancy/solidity_contract/22902.sol#39) is not in UPPER_CASE_WITH_UNDERSCORES
+Constant 'usingOraclize.proofType_Android' (/../data/reentrancy/solidity_contract/22902.sol#40) is not in UPPER_CASE_WITH_UNDERSCORES
+Constant 'usingOraclize.proofType_Ledger' (/../data/reentrancy/solidity_contract/22902.sol#41) is not in UPPER_CASE_WITH_UNDERSCORES
+Constant 'usingOraclize.proofType_Native' (/../data/reentrancy/solidity_contract/22902.sol#42) is not in UPPER_CASE_WITH_UNDERSCORES
+Constant 'usingOraclize.proofStorage_IPFS' (/../data/reentrancy/solidity_contract/22902.sol#43) is not in UPPER_CASE_WITH_UNDERSCORES
+Constant 'usingOraclize.networkID_auto' (/../data/reentrancy/solidity_contract/22902.sol#44) is not in UPPER_CASE_WITH_UNDERSCORES
+Constant 'usingOraclize.networkID_mainnet' (/../data/reentrancy/solidity_contract/22902.sol#45) is not in UPPER_CASE_WITH_UNDERSCORES
+Constant 'usingOraclize.networkID_testnet' (/../data/reentrancy/solidity_contract/22902.sol#46) is not in UPPER_CASE_WITH_UNDERSCORES
+Constant 'usingOraclize.networkID_morden' (/../data/reentrancy/solidity_contract/22902.sol#47) is not in UPPER_CASE_WITH_UNDERSCORES
+Constant 'usingOraclize.networkID_consensys' (/../data/reentrancy/solidity_contract/22902.sol#48) is not in UPPER_CASE_WITH_UNDERSCORES
+Variable 'usingOraclize.OAR' (/../data/reentrancy/solidity_contract/22902.sol#50) is not in mixedCase
+Variable 'usingOraclize.oraclize_network_name' (/../data/reentrancy/solidity_contract/22902.sol#170) is not in mixedCase
+Function 'Ownable.Ownable' (/../data/reentrancy/solidity_contract/22902.sol#190-192) is not in mixedCase
+Enum 'BuildingStatus.statusEnum' (/../data/reentrancy/solidity_contract/22902.sol#216-246) is not in CapWords
+Function 'Registry.Registry' (/../data/reentrancy/solidity_contract/22902.sol#329-332) is not in mixedCase
+Parameter '_permadr' of Registry.setPermissionManager (/../data/reentrancy/solidity_contract/22902.sol#334) is not in mixedCase
+Parameter '_contributor' of Registry.addContribution (/../data/reentrancy/solidity_contract/22902.sol#351) is not in mixedCase
+Parameter '_amount' of Registry.addContribution (/../data/reentrancy/solidity_contract/22902.sol#351) is not in mixedCase
+Parameter '_amusd' of Registry.addContribution (/../data/reentrancy/solidity_contract/22902.sol#351) is not in mixedCase
+Parameter '_tokens' of Registry.addContribution (/../data/reentrancy/solidity_contract/22902.sol#351) is not in mixedCase
+Parameter '_quote' of Registry.addContribution (/../data/reentrancy/solidity_contract/22902.sol#351) is not in mixedCase
+Parameter '_contributor' of Registry.editContribution (/../data/reentrancy/solidity_contract/22902.sol#371) is not in mixedCase
+Parameter '_amount' of Registry.editContribution (/../data/reentrancy/solidity_contract/22902.sol#371) is not in mixedCase
+Parameter '_amusd' of Registry.editContribution (/../data/reentrancy/solidity_contract/22902.sol#371) is not in mixedCase
+Parameter '_tokens' of Registry.editContribution (/../data/reentrancy/solidity_contract/22902.sol#371) is not in mixedCase
+Parameter '_quote' of Registry.editContribution (/../data/reentrancy/solidity_contract/22902.sol#371) is not in mixedCase
+Parameter '_contributor' of Registry.addContributor (/../data/reentrancy/solidity_contract/22902.sol#381) is not in mixedCase
+Parameter '_amount' of Registry.addContributor (/../data/reentrancy/solidity_contract/22902.sol#381) is not in mixedCase
+Parameter '_amusd' of Registry.addContributor (/../data/reentrancy/solidity_contract/22902.sol#381) is not in mixedCase
+Parameter '_tokens' of Registry.addContributor (/../data/reentrancy/solidity_contract/22902.sol#381) is not in mixedCase
+Parameter '_quote' of Registry.addContributor (/../data/reentrancy/solidity_contract/22902.sol#381) is not in mixedCase
+Parameter '_contributor' of Registry.getContributionETH (/../data/reentrancy/solidity_contract/22902.sol#393) is not in mixedCase
+Parameter '_contributor' of Registry.getContributionUSD (/../data/reentrancy/solidity_contract/22902.sol#397) is not in mixedCase
+Parameter '_contributor' of Registry.getContributionRNTB (/../data/reentrancy/solidity_contract/22902.sol#401) is not in mixedCase
+Parameter '_contributor' of Registry.getContributionTokens (/../data/reentrancy/solidity_contract/22902.sol#405) is not in mixedCase
+Parameter '_contributor' of Registry.addRNTBContribution (/../data/reentrancy/solidity_contract/22902.sol#409) is not in mixedCase
+Parameter '_amount' of Registry.addRNTBContribution (/../data/reentrancy/solidity_contract/22902.sol#409) is not in mixedCase
+Parameter '_gasLimit' of OraclizeC.setGasLimit (/../data/reentrancy/solidity_contract/22902.sol#469) is not in mixedCase
+Parameter '__oar' of OraclizeC.setOraclizeAddrResolverI (/../data/reentrancy/solidity_contract/22902.sol#480) is not in mixedCase
+Function 'ETHPriceProvider.__callback' (/../data/reentrancy/solidity_contract/22902.sol#600-616) is not in mixedCase
+Function 'ETHPriceProvider.ETHPriceProvider' (/../data/reentrancy/solidity_contract/22902.sol#574-579) is not in mixedCase
+Parameter '_url' of ETHPriceProvider.ETHPriceProvider (/../data/reentrancy/solidity_contract/22902.sol#574) is not in mixedCase
+Function 'ConvertQuote.ConvertQuote' (/../data/reentrancy/solidity_contract/22902.sol#637-639) is not in mixedCase
+Parameter '_currentPrice' of ConvertQuote.ConvertQuote (/../data/reentrancy/solidity_contract/22902.sol#637) is not in mixedCase
+Parameter '_from' of ERC223ReceivingContract.tokenFallback (/../data/reentrancy/solidity_contract/22902.sol#660) is not in mixedCase
+Parameter '_value' of ERC223ReceivingContract.tokenFallback (/../data/reentrancy/solidity_contract/22902.sol#660) is not in mixedCase
+Parameter '_data' of ERC223ReceivingContract.tokenFallback (/../data/reentrancy/solidity_contract/22902.sol#660) is not in mixedCase
+Parameter 'custom_fallback' of ERC223Interface.transfer (/../data/reentrancy/solidity_contract/22902.sol#683) is not in mixedCase
+Parameter '_owner' of UnityToken.balanceOf (/../data/reentrancy/solidity_contract/22902.sol#804) is not in mixedCase
+Parameter '_owner' of UnityToken.allowedAddressesOf (/../data/reentrancy/solidity_contract/22902.sol#808) is not in mixedCase
+Parameter '_to' of UnityToken.transfer (/../data/reentrancy/solidity_contract/22902.sol#761) is not in mixedCase
+Parameter '_value' of UnityToken.transfer (/../data/reentrancy/solidity_contract/22902.sol#761) is not in mixedCase
+Parameter '_to' of UnityToken.transfer (/../data/reentrancy/solidity_contract/22902.sol#750) is not in mixedCase
+Parameter '_value' of UnityToken.transfer (/../data/reentrancy/solidity_contract/22902.sol#750) is not in mixedCase
+Parameter '_data' of UnityToken.transfer (/../data/reentrancy/solidity_contract/22902.sol#750) is not in mixedCase
+Parameter '_to' of UnityToken.transfer (/../data/reentrancy/solidity_contract/22902.sol#733) is not in mixedCase
+Parameter '_value' of UnityToken.transfer (/../data/reentrancy/solidity_contract/22902.sol#733) is not in mixedCase
+Parameter '_data' of UnityToken.transfer (/../data/reentrancy/solidity_contract/22902.sol#733) is not in mixedCase
+Parameter '_custom_fallback' of UnityToken.transfer (/../data/reentrancy/solidity_contract/22902.sol#733) is not in mixedCase
+Function 'UnityToken.UnityToken' (/../data/reentrancy/solidity_contract/22902.sol#722-726) is not in mixedCase
+Parameter '_to' of UnityToken.transferToAddress (/../data/reentrancy/solidity_contract/22902.sol#782) is not in mixedCase
+Parameter '_value' of UnityToken.transferToAddress (/../data/reentrancy/solidity_contract/22902.sol#782) is not in mixedCase
+Parameter '_data' of UnityToken.transferToAddress (/../data/reentrancy/solidity_contract/22902.sol#782) is not in mixedCase
+Parameter '_to' of UnityToken.transferToContract (/../data/reentrancy/solidity_contract/22902.sol#791) is not in mixedCase
+Parameter '_value' of UnityToken.transferToContract (/../data/reentrancy/solidity_contract/22902.sol#791) is not in mixedCase
+Parameter '_data' of UnityToken.transferToContract (/../data/reentrancy/solidity_contract/22902.sol#791) is not in mixedCase
+Function 'Hold.Hold' (/../data/reentrancy/solidity_contract/22902.sol#847-856) is not in mixedCase
+Parameter '_multisig' of Hold.Hold (/../data/reentrancy/solidity_contract/22902.sol#847) is not in mixedCase
+Parameter '_permadr' of Hold.setPermissionManager (/../data/reentrancy/solidity_contract/22902.sol#858) is not in mixedCase
+Parameter '_numberOfReturns' of Hold.refund (/../data/reentrancy/solidity_contract/22902.sol#920) is not in mixedCase
+Parameter '_ethUsdPrice' of Crowdsale.receiveEthPrice (/../data/reentrancy/solidity_contract/22902.sol#1086) is not in mixedCase
+Function 'Crowdsale.Crowdsale' (/../data/reentrancy/solidity_contract/22902.sol#1032-1061) is not in mixedCase
+Parameter '_permissionManager' of Crowdsale.Crowdsale (/../data/reentrancy/solidity_contract/22902.sol#1035) is not in mixedCase
+Parameter '_softCap' of Crowdsale.Crowdsale (/../data/reentrancy/solidity_contract/22902.sol#1038) is not in mixedCase
+Parameter '_hardCap' of Crowdsale.Crowdsale (/../data/reentrancy/solidity_contract/22902.sol#1039) is not in mixedCase
+Parameter '_ethUsdPrice' of Crowdsale.Crowdsale (/../data/reentrancy/solidity_contract/22902.sol#1041) is not in mixedCase
+Parameter '_permadr' of Crowdsale.setPermissionManager (/../data/reentrancy/solidity_contract/22902.sol#1064) is not in mixedCase
+Parameter '_regadr' of Crowdsale.setRegistry (/../data/reentrancy/solidity_contract/22902.sol#1070) is not in mixedCase
+Parameter '_tokenUSDRate' of Crowdsale.setTokenUSDRate (/../data/reentrancy/solidity_contract/22902.sol#1075) is not in mixedCase
+Parameter '_softCap' of Crowdsale.setSoftCap (/../data/reentrancy/solidity_contract/22902.sol#1124) is not in mixedCase
+Parameter '_hardCap' of Crowdsale.setHardCap (/../data/reentrancy/solidity_contract/22902.sol#1129) is not in mixedCase
+Parameter '_hardCapToken' of Crowdsale.setHardCapToken (/../data/reentrancy/solidity_contract/22902.sol#1140) is not in mixedCase
+Parameter '_amount' of Crowdsale.checkCrowdsaleState (/../data/reentrancy/solidity_contract/22902.sol#1163) is not in mixedCase
+Parameter '_contributor' of Crowdsale.processTransaction (/../data/reentrancy/solidity_contract/22902.sol#1190) is not in mixedCase
+Parameter '_amount' of Crowdsale.processTransaction (/../data/reentrancy/solidity_contract/22902.sol#1190) is not in mixedCase
+Parameter '_stateChanged' of Crowdsale.refundTransaction (/../data/reentrancy/solidity_contract/22902.sol#1233) is not in mixedCase
+Parameter '_numberOfReturns' of Crowdsale.batchReturnUNT (/../data/reentrancy/solidity_contract/22902.sol#1285) is not in mixedCase
+Parameter '_contributor' of Crowdsale.addContributor (/../data/reentrancy/solidity_contract/22902.sol#1414) is not in mixedCase
+Parameter '_amount' of Crowdsale.addContributor (/../data/reentrancy/solidity_contract/22902.sol#1414) is not in mixedCase
+Parameter '_amusd' of Crowdsale.addContributor (/../data/reentrancy/solidity_contract/22902.sol#1414) is not in mixedCase
+Parameter '_tokens' of Crowdsale.addContributor (/../data/reentrancy/solidity_contract/22902.sol#1414) is not in mixedCase
+Parameter '_quote' of Crowdsale.addContributor (/../data/reentrancy/solidity_contract/22902.sol#1414) is not in mixedCase
+Parameter '_contributor' of Crowdsale.editContribution (/../data/reentrancy/solidity_contract/22902.sol#1423) is not in mixedCase
+Parameter '_amount' of Crowdsale.editContribution (/../data/reentrancy/solidity_contract/22902.sol#1423) is not in mixedCase
+Parameter '_amusd' of Crowdsale.editContribution (/../data/reentrancy/solidity_contract/22902.sol#1423) is not in mixedCase
+Parameter '_tokens' of Crowdsale.editContribution (/../data/reentrancy/solidity_contract/22902.sol#1423) is not in mixedCase
+Parameter '_quote' of Crowdsale.editContribution (/../data/reentrancy/solidity_contract/22902.sol#1423) is not in mixedCase
+Parameter '_contributor' of Crowdsale.removeContributor (/../data/reentrancy/solidity_contract/22902.sol#1436) is not in mixedCase
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#conformance-to-solidity-naming-conventions[0m
+INFO:Detectors:[92m
+usingOraclize.day (/../data/reentrancy/solidity_contract/22902.sol#35) is never used in ConvertQuote
+usingOraclize.week (/../data/reentrancy/solidity_contract/22902.sol#36) is never used in ConvertQuote
+usingOraclize.month (/../data/reentrancy/solidity_contract/22902.sol#37) is never used in ConvertQuote
+usingOraclize.proofType_NONE (/../data/reentrancy/solidity_contract/22902.sol#38) is never used in ConvertQuote
+usingOraclize.proofType_TLSNotary (/../data/reentrancy/solidity_contract/22902.sol#39) is never used in ConvertQuote
+usingOraclize.proofType_Android (/../data/reentrancy/solidity_contract/22902.sol#40) is never used in ConvertQuote
+usingOraclize.proofType_Ledger (/../data/reentrancy/solidity_contract/22902.sol#41) is never used in ConvertQuote
+usingOraclize.proofType_Native (/../data/reentrancy/solidity_contract/22902.sol#42) is never used in ConvertQuote
+usingOraclize.proofStorage_IPFS (/../data/reentrancy/solidity_contract/22902.sol#43) is never used in ConvertQuote
+usingOraclize.networkID_mainnet (/../data/reentrancy/solidity_contract/22902.sol#45) is never used in ConvertQuote
+usingOraclize.networkID_testnet (/../data/reentrancy/solidity_contract/22902.sol#46) is never used in ConvertQuote
+usingOraclize.networkID_morden (/../data/reentrancy/solidity_contract/22902.sol#47) is never used in ConvertQuote
+usingOraclize.networkID_consensys (/../data/reentrancy/solidity_contract/22902.sol#48) is never used in ConvertQuote
+Crowdsale.convert (/../data/reentrancy/solidity_contract/22902.sol#957) is never used in Crowdsale
+Crowdsale.minimumTokensToStart (/../data/reentrancy/solidity_contract/22902.sol#994) is never used in Crowdsale
+Crowdsale.nextContributorToClaim (/../data/reentrancy/solidity_contract/22902.sol#997) is never used in Crowdsale
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#unused-state-variables[0m
+INFO:Slither:/../data/reentrancy/solidity_contract/22902.sol analyzed (18 contracts), 253 result(s) found

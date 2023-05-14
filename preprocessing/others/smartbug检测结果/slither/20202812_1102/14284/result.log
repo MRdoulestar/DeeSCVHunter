@@ -1,0 +1,115 @@
+INFO:Slither:Compilation warnings/errors on /../data/reentrancy/solidity_contract/14284.sol:
+/../data/reentrancy/solidity_contract/14284.sol:10:5: Warning: Defining constructors as functions with the same name as the contract is deprecated. Use "constructor(...) { ... }" instead.
+    function AcceptsHalo3D(address _tokenContract) public {
+    ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/14284.sol:172:5: Warning: Defining constructors as functions with the same name as the contract is deprecated. Use "constructor(...) { ... }" instead.
+    function Halo3D()
+    ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/14284.sol:181:22: Warning: This looks like an address but has an invalid checksum. If this is not used as an address, please prepend '00'. Correct checksummed address: '0xE436cBD3892C6dC3D6c8A3580153e6e0fa613cfC'. For more information please see https://solidity.readthedocs.io/en/develop/types.html#address-literals
+        ambassadors_[0xe436cbd3892c6dc3d6c8a3580153e6e0fa613cfc] = true;
+                     ^----------------------------------------^
+/../data/reentrancy/solidity_contract/14284.sol:187:22: Warning: This looks like an address but has an invalid checksum. If this is not used as an address, please prepend '00'. Correct checksummed address: '0x4ffE17a2A72bC7422CB176bC71c04EE6D87cE329'. For more information please see https://solidity.readthedocs.io/en/develop/types.html#address-literals
+        ambassadors_[0x4ffe17a2a72bc7422cb176bc71c04ee6d87ce329] = true;
+                     ^----------------------------------------^
+/../data/reentrancy/solidity_contract/14284.sol:195:22: Warning: This looks like an address but has an invalid checksum. If this is not used as an address, please prepend '00'. Correct checksummed address: '0x2e6236591bfA37c683CE60d6cfDe40396A114fF1'. For more information please see https://solidity.readthedocs.io/en/develop/types.html#address-literals
+        ambassadors_[0x2e6236591bfa37c683ce60d6cfde40396a114ff1] = true;
+                     ^----------------------------------------^
+/../data/reentrancy/solidity_contract/14284.sol:264:9: Warning: Invoking events without "emit" prefix is deprecated.
+        onReinvestment(_customerAddress, _dividends, _tokens);
+        ^---------------------------------------------------^
+/../data/reentrancy/solidity_contract/14284.sol:300:9: Warning: Invoking events without "emit" prefix is deprecated.
+        onWithdraw(_customerAddress, _dividends);
+        ^--------------------------------------^
+/../data/reentrancy/solidity_contract/14284.sol:339:9: Warning: Invoking events without "emit" prefix is deprecated.
+        onTokenSell(_customerAddress, _tokens, _taxedEthereum);
+        ^----------------------------------------------------^
+/../data/reentrancy/solidity_contract/14284.sol:370:9: Warning: Invoking events without "emit" prefix is deprecated.
+        Transfer(_customerAddress, _toAddress, _amountOfTokens);
+        ^-----------------------------------------------------^
+/../data/reentrancy/solidity_contract/14284.sol:455:16: Warning: Using contract member "balance" inherited from the address type is deprecated. Convert the contract to "address" type to access the member, for example use "address(contract).balance" instead.
+        return this.balance;
+               ^----------^
+/../data/reentrancy/solidity_contract/14284.sol:672:9: Warning: Invoking events without "emit" prefix is deprecated.
+        onTokenPurchase(msg.sender, _incomingEthereum, _amountOfTokens, _referredBy);
+        ^--------------------------------------------------------------------------^
+
+INFO:Detectors:[93m
+Halo3D.isContract (/../data/reentrancy/solidity_contract/14284.sol#391-396) is declared view but contains assembly code
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#constant-functions-changing-the-state[0m
+INFO:Detectors:[93m
+excess in Halo3D.purchaseInternal (/../data/reentrancy/solidity_contract/14284.sol#586) is a local variable never initialiazed
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#uninitialized-local-variables[0m
+INFO:Detectors:[92m
+Halo3D.isContract uses assembly (/../data/reentrancy/solidity_contract/14284.sol#391-396)
+	- /../data/reentrancy/solidity_contract/14284.sol#394-395
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#assembly-usage[0m
+INFO:Detectors:[92m
+Halo3D.buy (/../data/reentrancy/solidity_contract/14284.sol#218-224) should be declared external
+Halo3D.fallback (/../data/reentrancy/solidity_contract/14284.sol#227-232) should be declared external
+Halo3D.payCharity (/../data/reentrancy/solidity_contract/14284.sol#235-242) should be declared external
+Halo3D.reinvest (/../data/reentrancy/solidity_contract/14284.sol#245-265) should be declared external
+Halo3D.exit (/../data/reentrancy/solidity_contract/14284.sol#268-278) should be declared external
+Halo3D.disableInitialStage (/../data/reentrancy/solidity_contract/14284.sol#400-405) should be declared external
+Halo3D.setAdministrator (/../data/reentrancy/solidity_contract/14284.sol#408-413) should be declared external
+Halo3D.setStakingRequirement (/../data/reentrancy/solidity_contract/14284.sol#416-421) should be declared external
+Halo3D.setCanAcceptTokens (/../data/reentrancy/solidity_contract/14284.sol#424-429) should be declared external
+Halo3D.setName (/../data/reentrancy/solidity_contract/14284.sol#432-437) should be declared external
+Halo3D.setSymbol (/../data/reentrancy/solidity_contract/14284.sol#440-445) should be declared external
+Halo3D.totalSupply (/../data/reentrancy/solidity_contract/14284.sol#459-465) should be declared external
+Halo3D.sellPrice (/../data/reentrancy/solidity_contract/14284.sol#506-521) should be declared external
+Halo3D.buyPrice (/../data/reentrancy/solidity_contract/14284.sol#524-539) should be declared external
+Halo3D.calculateTokensReceived (/../data/reentrancy/solidity_contract/14284.sol#542-552) should be declared external
+Halo3D.calculateEthereumReceived (/../data/reentrancy/solidity_contract/14284.sol#555-566) should be declared external
+Halo3D.etherToSendCharity (/../data/reentrancy/solidity_contract/14284.sol#569-574) should be declared external
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#public-function-that-could-be-declared-as-external[0m
+INFO:Detectors:[92m
+Detected issues with version pragma in /../data/reentrancy/solidity_contract/14284.sol:
+	- pragma solidity^0.4.21 (/../data/reentrancy/solidity_contract/14284.sol#1): it allows old versions
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#incorrect-version-of-solidity[0m
+INFO:Detectors:[92m
+Low level call in Halo3D.payCharity (/../data/reentrancy/solidity_contract/14284.sol#235-242):
+	-! giveEthCharityAddress.call.value(ethToPay).gas(400000)() /../data/reentrancy/solidity_contract/14284.sol#239-241
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#low-level-calls[0m
+INFO:Detectors:[92m
+Function 'AcceptsHalo3D.AcceptsHalo3D' (/../data/reentrancy/solidity_contract/14284.sol#10-12) is not in mixedCase
+Parameter '_tokenContract' of AcceptsHalo3D.AcceptsHalo3D (/../data/reentrancy/solidity_contract/14284.sol#10) is not in mixedCase
+Event 'Halo3D.onTokenPurchase' (/../data/reentrancy/solidity_contract/14284.sol#91-96) is not in CapWords
+Event 'Halo3D.onTokenSell' (/../data/reentrancy/solidity_contract/14284.sol#98-102) is not in CapWords
+Event 'Halo3D.onReinvestment' (/../data/reentrancy/solidity_contract/14284.sol#104-108) is not in CapWords
+Event 'Halo3D.onWithdraw' (/../data/reentrancy/solidity_contract/14284.sol#110-113) is not in CapWords
+Function 'Halo3D.Halo3D' (/../data/reentrancy/solidity_contract/14284.sol#172-214) is not in mixedCase
+Parameter '_referredBy' of Halo3D.buy (/../data/reentrancy/solidity_contract/14284.sol#218) is not in mixedCase
+Parameter '_amountOfTokens' of Halo3D.sell (/../data/reentrancy/solidity_contract/14284.sol#304) is not in mixedCase
+Parameter '_toAddress' of Halo3D.transfer (/../data/reentrancy/solidity_contract/14284.sol#344) is not in mixedCase
+Parameter '_amountOfTokens' of Halo3D.transfer (/../data/reentrancy/solidity_contract/14284.sol#344) is not in mixedCase
+Parameter '_to' of Halo3D.transferAndCall (/../data/reentrancy/solidity_contract/14284.sol#377) is not in mixedCase
+Parameter '_value' of Halo3D.transferAndCall (/../data/reentrancy/solidity_contract/14284.sol#377) is not in mixedCase
+Parameter '_data' of Halo3D.transferAndCall (/../data/reentrancy/solidity_contract/14284.sol#377) is not in mixedCase
+Parameter '_identifier' of Halo3D.setAdministrator (/../data/reentrancy/solidity_contract/14284.sol#408) is not in mixedCase
+Parameter '_status' of Halo3D.setAdministrator (/../data/reentrancy/solidity_contract/14284.sol#408) is not in mixedCase
+Parameter '_amountOfTokens' of Halo3D.setStakingRequirement (/../data/reentrancy/solidity_contract/14284.sol#416) is not in mixedCase
+Parameter '_address' of Halo3D.setCanAcceptTokens (/../data/reentrancy/solidity_contract/14284.sol#424) is not in mixedCase
+Parameter '_value' of Halo3D.setCanAcceptTokens (/../data/reentrancy/solidity_contract/14284.sol#424) is not in mixedCase
+Parameter '_name' of Halo3D.setName (/../data/reentrancy/solidity_contract/14284.sol#432) is not in mixedCase
+Parameter '_symbol' of Halo3D.setSymbol (/../data/reentrancy/solidity_contract/14284.sol#440) is not in mixedCase
+Parameter '_includeReferralBonus' of Halo3D.myDividends (/../data/reentrancy/solidity_contract/14284.sol#478) is not in mixedCase
+Parameter '_customerAddress' of Halo3D.balanceOf (/../data/reentrancy/solidity_contract/14284.sol#488) is not in mixedCase
+Parameter '_customerAddress' of Halo3D.dividendsOf (/../data/reentrancy/solidity_contract/14284.sol#497) is not in mixedCase
+Parameter '_ethereumToSpend' of Halo3D.calculateTokensReceived (/../data/reentrancy/solidity_contract/14284.sol#542) is not in mixedCase
+Parameter '_tokensToSell' of Halo3D.calculateEthereumReceived (/../data/reentrancy/solidity_contract/14284.sol#555) is not in mixedCase
+Parameter '_incomingEthereum' of Halo3D.purchaseInternal (/../data/reentrancy/solidity_contract/14284.sol#580) is not in mixedCase
+Parameter '_referredBy' of Halo3D.purchaseInternal (/../data/reentrancy/solidity_contract/14284.sol#580) is not in mixedCase
+Parameter '_incomingEthereum' of Halo3D.purchaseTokens (/../data/reentrancy/solidity_contract/14284.sol#602) is not in mixedCase
+Parameter '_referredBy' of Halo3D.purchaseTokens (/../data/reentrancy/solidity_contract/14284.sol#602) is not in mixedCase
+Parameter '_ethereum' of Halo3D.ethereumToTokens_ (/../data/reentrancy/solidity_contract/14284.sol#678) is not in mixedCase
+Parameter '_tokens' of Halo3D.tokensToEthereum_ (/../data/reentrancy/solidity_contract/14284.sol#709) is not in mixedCase
+Constant 'Halo3D.dividendFee_' (/../data/reentrancy/solidity_contract/14284.sol#127) is not in UPPER_CASE_WITH_UNDERSCORES
+Constant 'Halo3D.charityFee_' (/../data/reentrancy/solidity_contract/14284.sol#128) is not in UPPER_CASE_WITH_UNDERSCORES
+Constant 'Halo3D.tokenPriceInitial_' (/../data/reentrancy/solidity_contract/14284.sol#129) is not in UPPER_CASE_WITH_UNDERSCORES
+Constant 'Halo3D.tokenPriceIncremental_' (/../data/reentrancy/solidity_contract/14284.sol#130) is not in UPPER_CASE_WITH_UNDERSCORES
+Constant 'Halo3D.magnitude' (/../data/reentrancy/solidity_contract/14284.sol#131) is not in UPPER_CASE_WITH_UNDERSCORES
+Constant 'Halo3D.giveEthCharityAddress' (/../data/reentrancy/solidity_contract/14284.sol#136) is not in UPPER_CASE_WITH_UNDERSCORES
+Constant 'Halo3D.ambassadorMaxPurchase_' (/../data/reentrancy/solidity_contract/14284.sol#145) is not in UPPER_CASE_WITH_UNDERSCORES
+Constant 'Halo3D.ambassadorQuota_' (/../data/reentrancy/solidity_contract/14284.sol#146) is not in UPPER_CASE_WITH_UNDERSCORES
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#conformance-to-solidity-naming-conventions[0m
+INFO:Slither:/../data/reentrancy/solidity_contract/14284.sol analyzed (3 contracts), 62 result(s) found

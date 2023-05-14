@@ -1,0 +1,46 @@
+{
+  "contract": "30046",
+  "tool": "osiris",
+  "start": 1609156733.432517,
+  "end": 1609156809.410385,
+  "duration": 75.97786784172058,
+  "analysis": [
+    {
+      "errors": [
+        {
+          "line": 115,
+          "column": 23,
+          "message": "overflow_bugs"
+        },
+        {
+          "line": 119,
+          "column": 44,
+          "message": "callstack_bug"
+        },
+        {
+          "line": 115,
+          "column": 9,
+          "message": "time_dependency_bug"
+        },
+        {
+          "line": 119,
+          "column": 44,
+          "message": "reentrancy_bug"
+        }
+      ],
+      "file": "/../data/reentrancy/solidity_contract/30046.sol",
+      "name": "TrustWallet"
+    },
+    {
+      "errors": [
+        {
+          "line": 119,
+          "column": 44,
+          "message": "callstack_bug"
+        }
+      ],
+      "file": "/../data/reentrancy/solidity_contract/30046.sol",
+      "name": "TrustWalletFactory"
+    }
+  ]
+}

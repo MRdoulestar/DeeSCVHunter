@@ -1,0 +1,14 @@
+{
+  "contract": "10604",
+  "tool": "honeybadger",
+  "start": 1609184516.935006,
+  "end": 1609184523.423251,
+  "duration": 6.488245010375977,
+  "analysis": [
+    {
+      "errors": [],
+      "file": "/../data/reentrancy/solidity_contract/10604.sol",
+      "name": "Balancer"
+    }
+  ]
+}

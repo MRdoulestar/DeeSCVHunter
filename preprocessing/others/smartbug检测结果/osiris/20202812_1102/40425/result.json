@@ -1,0 +1,30 @@
+{
+  "contract": "40425",
+  "tool": "osiris",
+  "start": 1609183431.434795,
+  "end": 1609183487.4180832,
+  "duration": 55.983288288116455,
+  "analysis": [
+    {
+      "errors": [
+        {
+          "line": 187,
+          "column": 9,
+          "message": "overflow_bugs"
+        },
+        {
+          "line": 1,
+          "column": 1,
+          "message": "overflow_bugs"
+        },
+        {
+          "line": 184,
+          "column": 32,
+          "message": "truncation_bugs"
+        }
+      ],
+      "file": "/../data/reentrancy/solidity_contract/40425.sol",
+      "name": "MyEtherBank"
+    }
+  ]
+}

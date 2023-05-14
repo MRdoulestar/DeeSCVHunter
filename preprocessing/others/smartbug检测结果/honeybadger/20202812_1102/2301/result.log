@@ -1,0 +1,47 @@
+INFO:root:Contract /../data/reentrancy/solidity_contract/2301.sol:BlockHashRNG:
+INFO:symExec:Running, please wait...
+INFO:symExec:	============ Results ===========
+INFO:symExec:	 EVM code coverage: 	 99.9%
+INFO:symExec:	 Money flow:    	 True
+INFO:symExec:	 Balance disorder: 	 False
+INFO:symExec:	 Hidden transfer: 	 False
+INFO:symExec:	 Inheritance disorder: 	 False
+INFO:symExec:	 Uninitialised struct: 	 False
+INFO:symExec:	 Type overflow: 	 False
+INFO:symExec:	 Skip empty string: 	 False
+INFO:symExec:	 Hidden state update: 	 False
+INFO:symExec:	 Straw man contract: 	 False
+INFO:symExec:	 --- 6.57379293442 seconds ---
+INFO:symExec:	====== Analysis Completed ======
+INFO:root:Contract /../data/reentrancy/solidity_contract/2301.sol:BlockHashRNGFallback:
+INFO:symExec:Running, please wait...
+INFO:symExec:	============ Results ===========
+INFO:symExec:	 EVM code coverage: 	 99.9%
+INFO:symExec:	 Money flow:    	 True
+INFO:symExec:	 Balance disorder: 	 False
+INFO:symExec:	 Hidden transfer: 	 False
+INFO:symExec:	 Inheritance disorder: 	 False
+INFO:symExec:	 Uninitialised struct: 	 False
+INFO:symExec:	 Type overflow: 	 False
+INFO:symExec:	 Skip empty string: 	 False
+INFO:symExec:	 Hidden state update: 	 False
+INFO:symExec:	 Straw man contract: 	 False
+INFO:symExec:	 --- 26.3250808716 seconds ---
+INFO:symExec:	====== Analysis Completed ======
+INFO:root:Contract /../data/reentrancy/solidity_contract/2301.sol:Controlled:
+INFO:symExec:Running, please wait...
+INFO:symExec:	============ Results ===========
+INFO:symExec:	 EVM code coverage: 	 99.4%
+INFO:symExec:	 Money flow:    	 False
+INFO:symExec:	 Balance disorder: 	 False
+INFO:symExec:	 Hidden transfer: 	 False
+INFO:symExec:	 Inheritance disorder: 	 False
+INFO:symExec:	 Uninitialised struct: 	 False
+INFO:symExec:	 Type overflow: 	 False
+INFO:symExec:	 Skip empty string: 	 False
+INFO:symExec:	 Hidden state update: 	 False
+INFO:symExec:	 Straw man contract: 	 False
+INFO:symExec:	 --- 0.333750963211 seconds ---
+INFO:symExec:	====== Analysis Completed ======
+INFO:root:Contract /../data/reentrancy/solidity_contract/2301.sol:Kleros:
+INFO:symExec:Running, please wait...

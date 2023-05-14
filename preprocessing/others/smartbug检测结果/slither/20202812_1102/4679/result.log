@@ -1,0 +1,199 @@
+INFO:Slither:Compilation warnings/errors on /../data/reentrancy/solidity_contract/4679.sol:
+/../data/reentrancy/solidity_contract/4679.sol:392:51: Warning: Unused function parameter. Remove or comment out the variable name to silence this warning.
+    function distrust(address _from, uint _value, bytes _data) public {
+                                                  ^---------^
+
+INFO:Detectors:[91m
+Reentrancy in RC_KYC.giveToken (/../data/reentrancy/solidity_contract/4679.sol#264-275):
+	External calls:
+	- tokenSaleContract.sendTokens(_buyer,pendingTokenUser[_buyer]) (/../data/reentrancy/solidity_contract/4679.sol#269)
+	- require(bool)(address(tokenSaleContract).call.value(etherUser[_buyer])(bytes4(keccak256()(forwardEther())))) (/../data/reentrancy/solidity_contract/4679.sol#273)
+	External calls sending eth:
+	- require(bool)(address(tokenSaleContract).call.value(etherUser[_buyer])(bytes4(keccak256()(forwardEther())))) (/../data/reentrancy/solidity_contract/4679.sol#273)
+	State variables written after the call(s):
+	- etherUser (/../data/reentrancy/solidity_contract/4679.sol#274)
+Reentrancy in RC_KYC.releaseTokensTo (/../data/reentrancy/solidity_contract/4679.sol#190-194):
+	External calls:
+	- takeEther(buyer) (/../data/reentrancy/solidity_contract/4679.sol#191)
+	- giveToken(buyer) (/../data/reentrancy/solidity_contract/4679.sol#192)
+	State variables written after the call(s):
+	- etherUser (/../data/reentrancy/solidity_contract/4679.sol#192)
+	- pendingTokenUser (/../data/reentrancy/solidity_contract/4679.sol#192)
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#reentrancy-vulnerabilities[0m
+INFO:Detectors:[93m
+Reentrancy in RC_KYC.giveToken (/../data/reentrancy/solidity_contract/4679.sol#264-275):
+	External calls:
+	- tokenSaleContract.sendTokens(_buyer,pendingTokenUser[_buyer]) (/../data/reentrancy/solidity_contract/4679.sol#269)
+	State variables written after the call(s):
+	- pendingTokenUser (/../data/reentrancy/solidity_contract/4679.sol#271)
+Reentrancy in RC_KYC.takeEther (/../data/reentrancy/solidity_contract/4679.sol#230-262):
+	External calls:
+	- oneToken = 10 ** uint256(tokenSaleContract.decimals()) (/../data/reentrancy/solidity_contract/4679.sol#236)
+	- remainingTokensGlobal = tokenInterface(tokenSaleContract.tokenContract()).balanceOf(address(tokenSaleContract)) (/../data/reentrancy/solidity_contract/4679.sol#239)
+	State variables written after the call(s):
+	- remainingTokens (/../data/reentrancy/solidity_contract/4679.sol#252)
+	- remainingTokens (/../data/reentrancy/solidity_contract/4679.sol#255)
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#reentrancy-vulnerabilities-1[0m
+INFO:Detectors:[93m
+RC_KYC.giveToken (/../data/reentrancy/solidity_contract/4679.sol#264-275) does not use the value returned by external calls:
+	-tokenSaleContract.sendTokens(_buyer,pendingTokenUser[_buyer]) (/../data/reentrancy/solidity_contract/4679.sol#269)
+MilestoneSystem.trust (/../data/reentrancy/solidity_contract/4679.sol#436-452) does not use the value returned by external calls:
+	-tokenContract.transfer(msg.sender,amount) (/../data/reentrancy/solidity_contract/4679.sol#443)
+MilestoneSystem.refundMe (/../data/reentrancy/solidity_contract/4679.sol#456-480) does not use the value returned by external calls:
+	-tokenContract.burn(tknAmount) (/../data/reentrancy/solidity_contract/4679.sol#468)
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#unused-return[0m
+INFO:Detectors:[92m
+Reentrancy in TokedoDaico.constructor (/../data/reentrancy/solidity_contract/4679.sol#303-308):
+	External calls:
+	- decimals = tokenContract.decimals() (/../data/reentrancy/solidity_contract/4679.sol#305)
+	State variables written after the call(s):
+	- milestoneSystem (/../data/reentrancy/solidity_contract/4679.sol#307)
+	- tokenPrice (/../data/reentrancy/solidity_contract/4679.sol#306)
+Reentrancy in RC_KYC.giveToken (/../data/reentrancy/solidity_contract/4679.sol#264-275):
+	External calls:
+	- tokenSaleContract.sendTokens(_buyer,pendingTokenUser[_buyer]) (/../data/reentrancy/solidity_contract/4679.sol#269)
+	State variables written after the call(s):
+	- soldTokens (/../data/reentrancy/solidity_contract/4679.sol#270)
+Reentrancy in MilestoneSystem.receiveApproval (/../data/reentrancy/solidity_contract/4679.sol#427-431):
+	External calls:
+	- require(bool)(msg.sender.call(bytes4(keccak256()(transferFrom(address,address,uint256))),_from,this,_value)) (/../data/reentrancy/solidity_contract/4679.sol#429)
+	State variables written after the call(s):
+	- balance (/../data/reentrancy/solidity_contract/4679.sol#430)
+	- endTimeToReturnTokens (/../data/reentrancy/solidity_contract/4679.sol#430)
+	- locked (/../data/reentrancy/solidity_contract/4679.sol#430)
+	- tokenDistrusted (/../data/reentrancy/solidity_contract/4679.sol#430)
+Reentrancy in RC_KYC.takeEther (/../data/reentrancy/solidity_contract/4679.sol#230-262):
+	External calls:
+	- oneToken = 10 ** uint256(tokenSaleContract.decimals()) (/../data/reentrancy/solidity_contract/4679.sol#236)
+	- remainingTokensGlobal = tokenInterface(tokenSaleContract.tokenContract()).balanceOf(address(tokenSaleContract)) (/../data/reentrancy/solidity_contract/4679.sol#239)
+	External calls sending eth:
+	- _buyer.transfer(refund) (/../data/reentrancy/solidity_contract/4679.sol#253)
+	State variables written after the call(s):
+	- etherUser (/../data/reentrancy/solidity_contract/4679.sol#258)
+	- pendingTokenUser (/../data/reentrancy/solidity_contract/4679.sol#259)
+Reentrancy in MilestoneSystem.trust (/../data/reentrancy/solidity_contract/4679.sol#436-452):
+	External calls:
+	- tokenContract.transfer(msg.sender,amount) (/../data/reentrancy/solidity_contract/4679.sol#443)
+	State variables written after the call(s):
+	- endTimeToReturnTokens (/../data/reentrancy/solidity_contract/4679.sol#449)
+	- locked (/../data/reentrancy/solidity_contract/4679.sol#448)
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#reentrancy-vulnerabilities-2[0m
+INFO:Detectors:[92m
+tokenInterface.decimals should be constant (/../data/reentrancy/solidity_contract/4679.sol#63)
+tokenInterface.totalSupply should be constant (/../data/reentrancy/solidity_contract/4679.sol#62)
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#state-variables-that-could-be-declared-constant[0m
+INFO:Detectors:[92m
+Ownable.transferOwnership (/../data/reentrancy/solidity_contract/4679.sol#45-48) should be declared external
+Ownable.acceptOwnership (/../data/reentrancy/solidity_contract/4679.sol#50-55) should be declared external
+tokenInterface.balanceOf (/../data/reentrancy/solidity_contract/4679.sol#59) should be declared external
+tokenInterface.transfer (/../data/reentrancy/solidity_contract/4679.sol#60) should be declared external
+tokenInterface.burn (/../data/reentrancy/solidity_contract/4679.sol#61) should be declared external
+RC_KYC.started (/../data/reentrancy/solidity_contract/4679.sol#196-198) should be declared external
+AtomaxKycInterface.started (/../data/reentrancy/solidity_contract/4679.sol#69) should be declared external
+RC_KYC.ended (/../data/reentrancy/solidity_contract/4679.sol#200-202) should be declared external
+AtomaxKycInterface.ended (/../data/reentrancy/solidity_contract/4679.sol#72) should be declared external
+AtomaxKycInterface.startTime (/../data/reentrancy/solidity_contract/4679.sol#75) should be declared external
+RC_KYC.startTime (/../data/reentrancy/solidity_contract/4679.sol#204-206) should be declared external
+RC_KYC.endTime (/../data/reentrancy/solidity_contract/4679.sol#208-210) should be declared external
+AtomaxKycInterface.endTime (/../data/reentrancy/solidity_contract/4679.sol#78) should be declared external
+AtomaxKycInterface.totalTokens (/../data/reentrancy/solidity_contract/4679.sol#81) should be declared external
+RC_KYC.totalTokens (/../data/reentrancy/solidity_contract/4679.sol#212-214) should be declared external
+RC_KYC.remainingTokens (/../data/reentrancy/solidity_contract/4679.sol#216-218) should be declared external
+AtomaxKycInterface.remainingTokens (/../data/reentrancy/solidity_contract/4679.sol#85) should be declared external
+AtomaxKycInterface.price (/../data/reentrancy/solidity_contract/4679.sol#88) should be declared external
+RC_KYC.price (/../data/reentrancy/solidity_contract/4679.sol#220-222) should be declared external
+AtomaxKyc.buyTokensFor (/../data/reentrancy/solidity_contract/4679.sol#108-114) should be declared external
+AtomaxKyc.buyTokens (/../data/reentrancy/solidity_contract/4679.sol#116-118) should be declared external
+RC_KYC.setTime (/../data/reentrancy/solidity_contract/4679.sol#181-184) should be declared external
+RC_KYC.changeMinimum (/../data/reentrancy/solidity_contract/4679.sol#186-188) should be declared external
+RC_KYC.fallback (/../data/reentrancy/solidity_contract/4679.sol#224-226) should be declared external
+RC_KYC.refundEther (/../data/reentrancy/solidity_contract/4679.sol#277-281) should be declared external
+RC_KYC.withdraw (/../data/reentrancy/solidity_contract/4679.sol#283-285) should be declared external
+RC_KYC.userBalance (/../data/reentrancy/solidity_contract/4679.sol#287-289) should be declared external
+TokedoDaico.forwardEther (/../data/reentrancy/solidity_contract/4679.sol#315-318) should be declared external
+TokedoDaico.sendTokens (/../data/reentrancy/solidity_contract/4679.sol#320-322) should be declared external
+TokedoDaico.addRC (/../data/reentrancy/solidity_contract/4679.sol#326-329) should be declared external
+TokedoDaico.withdrawTokens (/../data/reentrancy/solidity_contract/4679.sol#331-333) should be declared external
+TokedoDaico.setTokenContract (/../data/reentrancy/solidity_contract/4679.sol#335-337) should be declared external
+MilestoneSystem.tokenFallback (/../data/reentrancy/solidity_contract/4679.sol#423-425) should be declared external
+MilestoneSystem.receiveApproval (/../data/reentrancy/solidity_contract/4679.sol#427-431) should be declared external
+MilestoneSystem.trust (/../data/reentrancy/solidity_contract/4679.sol#436-452) should be declared external
+MilestoneSystem.refundMe (/../data/reentrancy/solidity_contract/4679.sol#456-480) should be declared external
+MilestoneSystem.ownerWithdraw (/../data/reentrancy/solidity_contract/4679.sol#482-500) should be declared external
+MilestoneSystem.ownerWithdrawTokens (/../data/reentrancy/solidity_contract/4679.sol#502-505) should be declared external
+MilestoneSystem.setWallet (/../data/reentrancy/solidity_contract/4679.sol#507-511) should be declared external
+MilestoneSystem.fallback (/../data/reentrancy/solidity_contract/4679.sol#513-522) should be declared external
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#public-function-that-could-be-declared-as-external[0m
+INFO:Detectors:[92m
+Low level call in RC_KYC.giveToken (/../data/reentrancy/solidity_contract/4679.sol#264-275):
+	-require(bool)(address(tokenSaleContract).call.value(etherUser[_buyer])(bytes4(keccak256()(forwardEther())))) /../data/reentrancy/solidity_contract/4679.sol#273
+Low level call in TokedoDaico.forwardEther (/../data/reentrancy/solidity_contract/4679.sol#315-318):
+	-require(bool,string)(milestoneSystem.call.value(msg.value)(),wallet.call.value(msg.value)()) /../data/reentrancy/solidity_contract/4679.sol#316
+Low level call in MilestoneSystem.receiveApproval (/../data/reentrancy/solidity_contract/4679.sol#427-431):
+	-require(bool)(msg.sender.call(bytes4(keccak256()(transferFrom(address,address,uint256))),_from,this,_value)) /../data/reentrancy/solidity_contract/4679.sol#429
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#low-level-calls[0m
+INFO:Detectors:[92m
+Parameter '_newOwner' of Ownable.transferOwnership (/../data/reentrancy/solidity_contract/4679.sol#45) is not in mixedCase
+Contract 'tokenInterface' (/../data/reentrancy/solidity_contract/4679.sol#58-64) is not in CapWords
+Parameter '_buyerAddress' of AtomaxKyc.buyTokensFor (/../data/reentrancy/solidity_contract/4679.sol#108) is not in mixedCase
+Parameter '_buyerId' of AtomaxKyc.buyTokensFor (/../data/reentrancy/solidity_contract/4679.sol#108) is not in mixedCase
+Parameter '_maxAmount' of AtomaxKyc.buyTokensFor (/../data/reentrancy/solidity_contract/4679.sol#108) is not in mixedCase
+Parameter '_v' of AtomaxKyc.buyTokensFor (/../data/reentrancy/solidity_contract/4679.sol#108) is not in mixedCase
+Parameter '_r' of AtomaxKyc.buyTokensFor (/../data/reentrancy/solidity_contract/4679.sol#108) is not in mixedCase
+Parameter '_s' of AtomaxKyc.buyTokensFor (/../data/reentrancy/solidity_contract/4679.sol#108) is not in mixedCase
+Parameter '_bv' of AtomaxKyc.buyTokensFor (/../data/reentrancy/solidity_contract/4679.sol#108) is not in mixedCase
+Parameter '_br' of AtomaxKyc.buyTokensFor (/../data/reentrancy/solidity_contract/4679.sol#108) is not in mixedCase
+Parameter '_bs' of AtomaxKyc.buyTokensFor (/../data/reentrancy/solidity_contract/4679.sol#108) is not in mixedCase
+Parameter '_buyerAddress' of AtomaxKyc.buyImplementation (/../data/reentrancy/solidity_contract/4679.sol#120) is not in mixedCase
+Parameter '_buyerId' of AtomaxKyc.buyImplementation (/../data/reentrancy/solidity_contract/4679.sol#120) is not in mixedCase
+Parameter '_maxAmount' of AtomaxKyc.buyImplementation (/../data/reentrancy/solidity_contract/4679.sol#120) is not in mixedCase
+Parameter '_v' of AtomaxKyc.buyImplementation (/../data/reentrancy/solidity_contract/4679.sol#120) is not in mixedCase
+Parameter '_r' of AtomaxKyc.buyImplementation (/../data/reentrancy/solidity_contract/4679.sol#120) is not in mixedCase
+Parameter '_s' of AtomaxKyc.buyImplementation (/../data/reentrancy/solidity_contract/4679.sol#120) is not in mixedCase
+Parameter '_buyerAddress' of AtomaxKyc.hasher (/../data/reentrancy/solidity_contract/4679.sol#136) is not in mixedCase
+Parameter '_buyerId' of AtomaxKyc.hasher (/../data/reentrancy/solidity_contract/4679.sol#136) is not in mixedCase
+Parameter '_maxAmount' of AtomaxKyc.hasher (/../data/reentrancy/solidity_contract/4679.sol#136) is not in mixedCase
+Contract 'RC_KYC' (/../data/reentrancy/solidity_contract/4679.sol#141-290) is not in CapWords
+Parameter '_tokenSaleContract' of RC_KYC. (/../data/reentrancy/solidity_contract/4679.sol#158) is not in mixedCase
+Parameter '_tokenPrice' of RC_KYC. (/../data/reentrancy/solidity_contract/4679.sol#158) is not in mixedCase
+Parameter '_remainingTokens' of RC_KYC. (/../data/reentrancy/solidity_contract/4679.sol#158) is not in mixedCase
+Parameter '_etherMinimum' of RC_KYC. (/../data/reentrancy/solidity_contract/4679.sol#158) is not in mixedCase
+Parameter '_startTime' of RC_KYC. (/../data/reentrancy/solidity_contract/4679.sol#158) is not in mixedCase
+Parameter '_endTime' of RC_KYC. (/../data/reentrancy/solidity_contract/4679.sol#158) is not in mixedCase
+Parameter '_newStart' of RC_KYC.setTime (/../data/reentrancy/solidity_contract/4679.sol#181) is not in mixedCase
+Parameter '_newEnd' of RC_KYC.setTime (/../data/reentrancy/solidity_contract/4679.sol#181) is not in mixedCase
+Parameter '_newEtherMinimum' of RC_KYC.changeMinimum (/../data/reentrancy/solidity_contract/4679.sol#186) is not in mixedCase
+Parameter '_buyer' of RC_KYC.takeEther (/../data/reentrancy/solidity_contract/4679.sol#230) is not in mixedCase
+Parameter '_buyer' of RC_KYC.giveToken (/../data/reentrancy/solidity_contract/4679.sol#264) is not in mixedCase
+Parameter '_user' of RC_KYC.userBalance (/../data/reentrancy/solidity_contract/4679.sol#287) is not in mixedCase
+Parameter '_wallet' of TokedoDaico. (/../data/reentrancy/solidity_contract/4679.sol#303) is not in mixedCase
+Parameter '_tokenAddress' of TokedoDaico. (/../data/reentrancy/solidity_contract/4679.sol#303) is not in mixedCase
+Parameter '_time' of TokedoDaico. (/../data/reentrancy/solidity_contract/4679.sol#303) is not in mixedCase
+Parameter '_funds' of TokedoDaico. (/../data/reentrancy/solidity_contract/4679.sol#303) is not in mixedCase
+Parameter '_tokenPrice' of TokedoDaico. (/../data/reentrancy/solidity_contract/4679.sol#303) is not in mixedCase
+Parameter '_activeSupply' of TokedoDaico. (/../data/reentrancy/solidity_contract/4679.sol#303) is not in mixedCase
+Parameter '_buyer' of TokedoDaico.sendTokens (/../data/reentrancy/solidity_contract/4679.sol#320) is not in mixedCase
+Parameter '_amount' of TokedoDaico.sendTokens (/../data/reentrancy/solidity_contract/4679.sol#320) is not in mixedCase
+Parameter '_rc' of TokedoDaico.addRC (/../data/reentrancy/solidity_contract/4679.sol#326) is not in mixedCase
+Parameter '_tokenContract' of TokedoDaico.setTokenContract (/../data/reentrancy/solidity_contract/4679.sol#335) is not in mixedCase
+Parameter '_wallet' of MilestoneSystem. (/../data/reentrancy/solidity_contract/4679.sol#367) is not in mixedCase
+Parameter '_tokenAddress' of MilestoneSystem. (/../data/reentrancy/solidity_contract/4679.sol#367) is not in mixedCase
+Parameter '_time' of MilestoneSystem. (/../data/reentrancy/solidity_contract/4679.sol#367) is not in mixedCase
+Parameter '_funds' of MilestoneSystem. (/../data/reentrancy/solidity_contract/4679.sol#367) is not in mixedCase
+Parameter '_tokenPrice' of MilestoneSystem. (/../data/reentrancy/solidity_contract/4679.sol#367) is not in mixedCase
+Parameter '_activeSupply' of MilestoneSystem. (/../data/reentrancy/solidity_contract/4679.sol#367) is not in mixedCase
+Parameter '_from' of MilestoneSystem.distrust (/../data/reentrancy/solidity_contract/4679.sol#392) is not in mixedCase
+Parameter '_value' of MilestoneSystem.distrust (/../data/reentrancy/solidity_contract/4679.sol#392) is not in mixedCase
+Parameter '_from' of MilestoneSystem.tokenFallback (/../data/reentrancy/solidity_contract/4679.sol#423) is not in mixedCase
+Parameter '_value' of MilestoneSystem.tokenFallback (/../data/reentrancy/solidity_contract/4679.sol#423) is not in mixedCase
+Parameter '_data' of MilestoneSystem.tokenFallback (/../data/reentrancy/solidity_contract/4679.sol#423) is not in mixedCase
+Parameter '_from' of MilestoneSystem.receiveApproval (/../data/reentrancy/solidity_contract/4679.sol#427) is not in mixedCase
+Parameter '_value' of MilestoneSystem.receiveApproval (/../data/reentrancy/solidity_contract/4679.sol#427) is not in mixedCase
+Parameter '_data' of MilestoneSystem.receiveApproval (/../data/reentrancy/solidity_contract/4679.sol#427) is not in mixedCase
+Parameter '_step' of MilestoneSystem.trust (/../data/reentrancy/solidity_contract/4679.sol#436) is not in mixedCase
+Parameter '_tokenContract' of MilestoneSystem.ownerWithdrawTokens (/../data/reentrancy/solidity_contract/4679.sol#502) is not in mixedCase
+Parameter '_wallet' of MilestoneSystem.setWallet (/../data/reentrancy/solidity_contract/4679.sol#507) is not in mixedCase
+Constant 'MilestoneSystem.timeframeMilestone' (/../data/reentrancy/solidity_contract/4679.sol#354) is not in UPPER_CASE_WITH_UNDERSCORES
+Constant 'MilestoneSystem.timeframeDeath' (/../data/reentrancy/solidity_contract/4679.sol#355) is not in UPPER_CASE_WITH_UNDERSCORES
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#conformance-to-solidity-naming-conventions[0m
+INFO:Slither:/../data/reentrancy/solidity_contract/4679.sol analyzed (8 contracts), 118 result(s) found

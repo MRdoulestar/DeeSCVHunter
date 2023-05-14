@@ -1,0 +1,242 @@
+INFO:Slither:Compilation warnings/errors on /../data/reentrancy/solidity_contract/3255.sol:
+/../data/reentrancy/solidity_contract/3255.sol:1206:9: Warning: Return value of low-level calls not used.
+        address(lol_offical_bank).call.value(_com)(bytes4(keccak256("deposit()")));
+        ^------------------------------------------------------------------------^
+/../data/reentrancy/solidity_contract/3255.sol:1183:91: Warning: Unused function parameter. Remove or comment out the variable name to silence this warning.
+    function distributeExternal(uint256 _rID, uint256 _pID, uint256 _eth, uint256 _affID, uint256 _team, LOLdatasets.EventReturns memory _eventData_)
+                                                                                          ^-----------^
+/../data/reentrancy/solidity_contract/3255.sol:1189:9: Warning: Unused local variable.
+        uint256 _p3d;
+        ^----------^
+
+INFO:Detectors:[91m
+Reentrancy in LOLlong.buyCore (/../data/reentrancy/solidity_contract/3255.sol#710-758):
+	External calls:
+	- _eventData_ = endRound(_eventData_) (/../data/reentrancy/solidity_contract/3255.sol#732)
+	State variables written after the call(s):
+	- plyr_ (/../data/reentrancy/solidity_contract/3255.sol#756)
+Reentrancy in LOLlong.core (/../data/reentrancy/solidity_contract/3255.sol#809-908):
+	External calls:
+	- _eventData_ = distributeExternal(_rID,_pID,_eth,_affID,_team,_eventData_) (/../data/reentrancy/solidity_contract/3255.sol#902)
+	State variables written after the call(s):
+	- airDropPot_ (/../data/reentrancy/solidity_contract/3255.sol#903)
+	- plyrRnds_ (/../data/reentrancy/solidity_contract/3255.sol#903)
+	- round_ (/../data/reentrancy/solidity_contract/3255.sol#903)
+Reentrancy in LOLlong.endRound (/../data/reentrancy/solidity_contract/3255.sol#1054-1123):
+	External calls:
+	- ! address(lol_offical_bank).call.value(_com)(bytes4(keccak256()(deposit()))) (/../data/reentrancy/solidity_contract/3255.sol#1089-1099)
+	State variables written after the call(s):
+	- rID_ (/../data/reentrancy/solidity_contract/3255.sol#1116)
+	- round_ (/../data/reentrancy/solidity_contract/3255.sol#1102)
+	- round_ (/../data/reentrancy/solidity_contract/3255.sol#1118)
+	- round_ (/../data/reentrancy/solidity_contract/3255.sol#1119)
+	- round_ (/../data/reentrancy/solidity_contract/3255.sol#1120)
+Reentrancy in LOLlong.withdraw (/../data/reentrancy/solidity_contract/3255.sol#459-521):
+	External calls:
+	- _eventData_ = endRound(_eventData_) (/../data/reentrancy/solidity_contract/3255.sol#480)
+	State variables written after the call(s):
+	- plyr_ (/../data/reentrancy/solidity_contract/3255.sol#483)
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#reentrancy-vulnerabilities[0m
+INFO:Detectors:[93m
+NameFilter.nameFilter (/../data/reentrancy/solidity_contract/3255.sol#1490-1552) is declared view but contains assembly code
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#constant-functions-changing-the-state[0m
+INFO:Detectors:[93m
+Reentrancy in LOLlong.buyXaddr (/../data/reentrancy/solidity_contract/3255.sol#290-323):
+	External calls:
+	- _eventData_ = determinePID(_eventData_) (/../data/reentrancy/solidity_contract/3255.sol#292)
+	State variables written after the call(s):
+	- plyr_ (/../data/reentrancy/solidity_contract/3255.sol#314)
+Reentrancy in LOLlong.buyXid (/../data/reentrancy/solidity_contract/3255.sol#263-288):
+	External calls:
+	- _eventData_ = determinePID(_eventData_) (/../data/reentrancy/solidity_contract/3255.sol#265)
+	State variables written after the call(s):
+	- plyr_ (/../data/reentrancy/solidity_contract/3255.sol#280)
+Reentrancy in LOLlong.buyXname (/../data/reentrancy/solidity_contract/3255.sol#325-358):
+	External calls:
+	- _eventData_ = determinePID(_eventData_) (/../data/reentrancy/solidity_contract/3255.sol#327)
+	State variables written after the call(s):
+	- plyr_ (/../data/reentrancy/solidity_contract/3255.sol#349)
+Reentrancy in LOLlong.determinePID (/../data/reentrancy/solidity_contract/3255.sol#989-1020):
+	External calls:
+	- _pID = PlayerBook.getPlayerID(msg.sender) (/../data/reentrancy/solidity_contract/3255.sol#998)
+	- _name = PlayerBook.getPlayerName(_pID) (/../data/reentrancy/solidity_contract/3255.sol#999)
+	- _laff = PlayerBook.getPlayerLAff(_pID) (/../data/reentrancy/solidity_contract/3255.sol#1000)
+	State variables written after the call(s):
+	- pIDxAddr_ (/../data/reentrancy/solidity_contract/3255.sol#1003)
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#reentrancy-vulnerabilities-1[0m
+INFO:Detectors:[93m
+_prize in LOLlong.core (/../data/reentrancy/solidity_contract/3255.sol#845) is a local variable never initialiazed
+_eventData_ in LOLlong.reLoadXaddr (/../data/reentrancy/solidity_contract/3255.sol#390) is a local variable never initialiazed
+_eventData_ in LOLlong.reLoadXid (/../data/reentrancy/solidity_contract/3255.sol#363) is a local variable never initialiazed
+_eventData_ in LOLlong.withdraw (/../data/reentrancy/solidity_contract/3255.sol#476) is a local variable never initialiazed
+_eventData_ in LOLlong.reLoadXname (/../data/reentrancy/solidity_contract/3255.sol#425) is a local variable never initialiazed
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#uninitialized-local-variables[0m
+INFO:Detectors:[92m
+Reentrancy in LOLlong.determinePID (/../data/reentrancy/solidity_contract/3255.sol#989-1020):
+	External calls:
+	- _pID = PlayerBook.getPlayerID(msg.sender) (/../data/reentrancy/solidity_contract/3255.sol#998)
+	- _name = PlayerBook.getPlayerName(_pID) (/../data/reentrancy/solidity_contract/3255.sol#999)
+	- _laff = PlayerBook.getPlayerLAff(_pID) (/../data/reentrancy/solidity_contract/3255.sol#1000)
+	State variables written after the call(s):
+	- pIDxName_ (/../data/reentrancy/solidity_contract/3255.sol#1008)
+	- plyrNames_ (/../data/reentrancy/solidity_contract/3255.sol#1010)
+	- plyr_ (/../data/reentrancy/solidity_contract/3255.sol#1004)
+	- plyr_ (/../data/reentrancy/solidity_contract/3255.sol#1009)
+	- plyr_ (/../data/reentrancy/solidity_contract/3255.sol#1014)
+Reentrancy in LOLlong.withdraw (/../data/reentrancy/solidity_contract/3255.sol#459-521):
+	External calls:
+	- _eventData_ = endRound(_eventData_) (/../data/reentrancy/solidity_contract/3255.sol#480)
+	State variables written after the call(s):
+	- plyrRnds_ (/../data/reentrancy/solidity_contract/3255.sol#483)
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#reentrancy-vulnerabilities-2[0m
+INFO:Detectors:[92m
+LOLlong.airdrop (/../data/reentrancy/solidity_contract/3255.sol#1161-1180) uses timestamp for comparisons
+	Dangerous comparisons:
+	- (seed - ((seed / 1000) * 1000)) < airDropTracker_ (/../data/reentrancy/solidity_contract/3255.sol#1176-1179)
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#block-timestamp[0m
+INFO:Detectors:[92m
+NameFilter.nameFilter uses assembly (/../data/reentrancy/solidity_contract/3255.sol#1490-1552)
+	- /../data/reentrancy/solidity_contract/3255.sol#1548-1551
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#assembly-usage[0m
+INFO:Detectors:[92m
+LOLlong.rndExtra_ should be constant (/../data/reentrancy/solidity_contract/3255.sol#163)
+LOLlong.rndGap_ should be constant (/../data/reentrancy/solidity_contract/3255.sol#164)
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#state-variables-that-could-be-declared-constant[0m
+INFO:Detectors:[92m
+Owned.transferOwnership (/../data/reentrancy/solidity_contract/3255.sol#16-18) should be declared external
+Owned.acceptOwnership (/../data/reentrancy/solidity_contract/3255.sol#19-23) should be declared external
+LOLlong.fallback (/../data/reentrancy/solidity_contract/3255.sol#251-260) should be declared external
+LOLlong.buyXid (/../data/reentrancy/solidity_contract/3255.sol#263-288) should be declared external
+LOLlong.buyXaddr (/../data/reentrancy/solidity_contract/3255.sol#290-323) should be declared external
+LOLlong.buyXname (/../data/reentrancy/solidity_contract/3255.sol#325-358) should be declared external
+LOLlong.reLoadXid (/../data/reentrancy/solidity_contract/3255.sol#361-386) should be declared external
+LOLlong.reLoadXaddr (/../data/reentrancy/solidity_contract/3255.sol#388-421) should be declared external
+LOLlong.reLoadXname (/../data/reentrancy/solidity_contract/3255.sol#423-456) should be declared external
+LOLlong.withdraw (/../data/reentrancy/solidity_contract/3255.sol#459-521) should be declared external
+LOLlong.registerNameXID (/../data/reentrancy/solidity_contract/3255.sol#524-534) should be declared external
+LOLlong.registerNameXaddr (/../data/reentrancy/solidity_contract/3255.sol#536-546) should be declared external
+LOLlong.registerNameXname (/../data/reentrancy/solidity_contract/3255.sol#548-558) should be declared external
+LOLlong.getBuyPrice (/../data/reentrancy/solidity_contract/3255.sol#564-576) should be declared external
+LOLlong.getTimeLeft (/../data/reentrancy/solidity_contract/3255.sol#579-597) should be declared external
+LOLlong.getPlayerVaults (/../data/reentrancy/solidity_contract/3255.sol#600-639) should be declared external
+LOLlong.getCurrentRoundInfo (/../data/reentrancy/solidity_contract/3255.sol#651-676) should be declared external
+LOLlong.getPlayerInfoByAddress (/../data/reentrancy/solidity_contract/3255.sol#679-703) should be declared external
+LOLlong.calcKeysReceived (/../data/reentrancy/solidity_contract/3255.sol#923-936) should be declared external
+LOLlong.iWantXKeys (/../data/reentrancy/solidity_contract/3255.sol#939-955) should be declared external
+LOLlong.activate (/../data/reentrancy/solidity_contract/3255.sol#1327-1347) should be declared external
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#public-function-that-could-be-declared-as-external[0m
+INFO:Detectors:[92m
+Low level call in LOLlong.endRound (/../data/reentrancy/solidity_contract/3255.sol#1054-1123):
+	-! address(lol_offical_bank).call.value(_com)(bytes4(keccak256()(deposit()))) /../data/reentrancy/solidity_contract/3255.sol#1089-1099
+Low level call in LOLlong.distributeExternal (/../data/reentrancy/solidity_contract/3255.sol#1183-1220):
+	-address(lol_offical_bank).call.value(_com)(bytes4(keccak256()(deposit()))) /../data/reentrancy/solidity_contract/3255.sol#1206
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#low-level-calls[0m
+INFO:Detectors:[92m
+Parameter '_newOwner' of Owned.transferOwnership (/../data/reentrancy/solidity_contract/3255.sol#16) is not in mixedCase
+Event 'LOLevents.onNewName' (/../data/reentrancy/solidity_contract/3255.sol#29-40) is not in CapWords
+Event 'LOLevents.onEndTx' (/../data/reentrancy/solidity_contract/3255.sol#43-59) is not in CapWords
+Event 'LOLevents.onWithdraw' (/../data/reentrancy/solidity_contract/3255.sol#62-69) is not in CapWords
+Event 'LOLevents.onWithdrawAndDistribute' (/../data/reentrancy/solidity_contract/3255.sol#72-85) is not in CapWords
+Event 'LOLevents.onBuyAndDistribute' (/../data/reentrancy/solidity_contract/3255.sol#89-102) is not in CapWords
+Event 'LOLevents.onReLoadAndDistribute' (/../data/reentrancy/solidity_contract/3255.sol#106-118) is not in CapWords
+Event 'LOLevents.onAffiliatePayout' (/../data/reentrancy/solidity_contract/3255.sol#121-130) is not in CapWords
+Event 'LOLevents.onPotSwapDeposit' (/../data/reentrancy/solidity_contract/3255.sol#133-137) is not in CapWords
+Contract 'modularLong' (/../data/reentrancy/solidity_contract/3255.sol#145) is not in CapWords
+Parameter '_affCode' of LOLlong.buyXid (/../data/reentrancy/solidity_contract/3255.sol#263) is not in mixedCase
+Parameter '_team' of LOLlong.buyXid (/../data/reentrancy/solidity_contract/3255.sol#263) is not in mixedCase
+Parameter '_affCode' of LOLlong.buyXaddr (/../data/reentrancy/solidity_contract/3255.sol#290) is not in mixedCase
+Parameter '_team' of LOLlong.buyXaddr (/../data/reentrancy/solidity_contract/3255.sol#290) is not in mixedCase
+Parameter '_affCode' of LOLlong.buyXname (/../data/reentrancy/solidity_contract/3255.sol#325) is not in mixedCase
+Parameter '_team' of LOLlong.buyXname (/../data/reentrancy/solidity_contract/3255.sol#325) is not in mixedCase
+Parameter '_affCode' of LOLlong.reLoadXid (/../data/reentrancy/solidity_contract/3255.sol#361) is not in mixedCase
+Parameter '_team' of LOLlong.reLoadXid (/../data/reentrancy/solidity_contract/3255.sol#361) is not in mixedCase
+Parameter '_eth' of LOLlong.reLoadXid (/../data/reentrancy/solidity_contract/3255.sol#361) is not in mixedCase
+Parameter '_affCode' of LOLlong.reLoadXaddr (/../data/reentrancy/solidity_contract/3255.sol#388) is not in mixedCase
+Parameter '_team' of LOLlong.reLoadXaddr (/../data/reentrancy/solidity_contract/3255.sol#388) is not in mixedCase
+Parameter '_eth' of LOLlong.reLoadXaddr (/../data/reentrancy/solidity_contract/3255.sol#388) is not in mixedCase
+Parameter '_affCode' of LOLlong.reLoadXname (/../data/reentrancy/solidity_contract/3255.sol#423) is not in mixedCase
+Parameter '_team' of LOLlong.reLoadXname (/../data/reentrancy/solidity_contract/3255.sol#423) is not in mixedCase
+Parameter '_eth' of LOLlong.reLoadXname (/../data/reentrancy/solidity_contract/3255.sol#423) is not in mixedCase
+Parameter '_nameString' of LOLlong.registerNameXID (/../data/reentrancy/solidity_contract/3255.sol#524) is not in mixedCase
+Parameter '_affCode' of LOLlong.registerNameXID (/../data/reentrancy/solidity_contract/3255.sol#524) is not in mixedCase
+Parameter '_all' of LOLlong.registerNameXID (/../data/reentrancy/solidity_contract/3255.sol#524) is not in mixedCase
+Parameter '_nameString' of LOLlong.registerNameXaddr (/../data/reentrancy/solidity_contract/3255.sol#536) is not in mixedCase
+Parameter '_affCode' of LOLlong.registerNameXaddr (/../data/reentrancy/solidity_contract/3255.sol#536) is not in mixedCase
+Parameter '_all' of LOLlong.registerNameXaddr (/../data/reentrancy/solidity_contract/3255.sol#536) is not in mixedCase
+Parameter '_nameString' of LOLlong.registerNameXname (/../data/reentrancy/solidity_contract/3255.sol#548) is not in mixedCase
+Parameter '_affCode' of LOLlong.registerNameXname (/../data/reentrancy/solidity_contract/3255.sol#548) is not in mixedCase
+Parameter '_all' of LOLlong.registerNameXname (/../data/reentrancy/solidity_contract/3255.sol#548) is not in mixedCase
+Parameter '_pID' of LOLlong.getPlayerVaults (/../data/reentrancy/solidity_contract/3255.sol#600) is not in mixedCase
+Parameter '_pID' of LOLlong.getPlayerVaultsHelper (/../data/reentrancy/solidity_contract/3255.sol#642) is not in mixedCase
+Parameter '_rID' of LOLlong.getPlayerVaultsHelper (/../data/reentrancy/solidity_contract/3255.sol#642) is not in mixedCase
+Parameter '_addr' of LOLlong.getPlayerInfoByAddress (/../data/reentrancy/solidity_contract/3255.sol#679) is not in mixedCase
+Parameter '_pID' of LOLlong.buyCore (/../data/reentrancy/solidity_contract/3255.sol#710) is not in mixedCase
+Parameter '_affID' of LOLlong.buyCore (/../data/reentrancy/solidity_contract/3255.sol#710) is not in mixedCase
+Parameter '_team' of LOLlong.buyCore (/../data/reentrancy/solidity_contract/3255.sol#710) is not in mixedCase
+Parameter '_eventData_' of LOLlong.buyCore (/../data/reentrancy/solidity_contract/3255.sol#710) is not in mixedCase
+Parameter '_pID' of LOLlong.reLoadCore (/../data/reentrancy/solidity_contract/3255.sol#761) is not in mixedCase
+Parameter '_affID' of LOLlong.reLoadCore (/../data/reentrancy/solidity_contract/3255.sol#761) is not in mixedCase
+Parameter '_team' of LOLlong.reLoadCore (/../data/reentrancy/solidity_contract/3255.sol#761) is not in mixedCase
+Parameter '_eth' of LOLlong.reLoadCore (/../data/reentrancy/solidity_contract/3255.sol#761) is not in mixedCase
+Parameter '_eventData_' of LOLlong.reLoadCore (/../data/reentrancy/solidity_contract/3255.sol#761) is not in mixedCase
+Parameter '_rID' of LOLlong.core (/../data/reentrancy/solidity_contract/3255.sol#809) is not in mixedCase
+Parameter '_pID' of LOLlong.core (/../data/reentrancy/solidity_contract/3255.sol#809) is not in mixedCase
+Parameter '_eth' of LOLlong.core (/../data/reentrancy/solidity_contract/3255.sol#809) is not in mixedCase
+Parameter '_affID' of LOLlong.core (/../data/reentrancy/solidity_contract/3255.sol#809) is not in mixedCase
+Parameter '_team' of LOLlong.core (/../data/reentrancy/solidity_contract/3255.sol#809) is not in mixedCase
+Parameter '_eventData_' of LOLlong.core (/../data/reentrancy/solidity_contract/3255.sol#809) is not in mixedCase
+Parameter '_pID' of LOLlong.calcUnMaskedEarnings (/../data/reentrancy/solidity_contract/3255.sol#914) is not in mixedCase
+Parameter '_rIDlast' of LOLlong.calcUnMaskedEarnings (/../data/reentrancy/solidity_contract/3255.sol#914) is not in mixedCase
+Parameter '_rID' of LOLlong.calcKeysReceived (/../data/reentrancy/solidity_contract/3255.sol#923) is not in mixedCase
+Parameter '_eth' of LOLlong.calcKeysReceived (/../data/reentrancy/solidity_contract/3255.sol#923) is not in mixedCase
+Parameter '_keys' of LOLlong.iWantXKeys (/../data/reentrancy/solidity_contract/3255.sol#939) is not in mixedCase
+Parameter '_pID' of LOLlong.receivePlayerInfo (/../data/reentrancy/solidity_contract/3255.sol#961) is not in mixedCase
+Parameter '_addr' of LOLlong.receivePlayerInfo (/../data/reentrancy/solidity_contract/3255.sol#961) is not in mixedCase
+Parameter '_name' of LOLlong.receivePlayerInfo (/../data/reentrancy/solidity_contract/3255.sol#961) is not in mixedCase
+Parameter '_laff' of LOLlong.receivePlayerInfo (/../data/reentrancy/solidity_contract/3255.sol#961) is not in mixedCase
+Parameter '_pID' of LOLlong.receivePlayerNameList (/../data/reentrancy/solidity_contract/3255.sol#980) is not in mixedCase
+Parameter '_name' of LOLlong.receivePlayerNameList (/../data/reentrancy/solidity_contract/3255.sol#980) is not in mixedCase
+Parameter '_eventData_' of LOLlong.determinePID (/../data/reentrancy/solidity_contract/3255.sol#989) is not in mixedCase
+Parameter '_team' of LOLlong.verifyTeam (/../data/reentrancy/solidity_contract/3255.sol#1023) is not in mixedCase
+Parameter '_pID' of LOLlong.managePlayer (/../data/reentrancy/solidity_contract/3255.sol#1035) is not in mixedCase
+Parameter '_eventData_' of LOLlong.managePlayer (/../data/reentrancy/solidity_contract/3255.sol#1035) is not in mixedCase
+Parameter '_eventData_' of LOLlong.endRound (/../data/reentrancy/solidity_contract/3255.sol#1054) is not in mixedCase
+Parameter '_pID' of LOLlong.updateGenVault (/../data/reentrancy/solidity_contract/3255.sol#1126) is not in mixedCase
+Parameter '_rIDlast' of LOLlong.updateGenVault (/../data/reentrancy/solidity_contract/3255.sol#1126) is not in mixedCase
+Parameter '_keys' of LOLlong.updateTimer (/../data/reentrancy/solidity_contract/3255.sol#1140) is not in mixedCase
+Parameter '_rID' of LOLlong.updateTimer (/../data/reentrancy/solidity_contract/3255.sol#1140) is not in mixedCase
+Parameter '_rID' of LOLlong.distributeExternal (/../data/reentrancy/solidity_contract/3255.sol#1183) is not in mixedCase
+Parameter '_pID' of LOLlong.distributeExternal (/../data/reentrancy/solidity_contract/3255.sol#1183) is not in mixedCase
+Parameter '_eth' of LOLlong.distributeExternal (/../data/reentrancy/solidity_contract/3255.sol#1183) is not in mixedCase
+Parameter '_affID' of LOLlong.distributeExternal (/../data/reentrancy/solidity_contract/3255.sol#1183) is not in mixedCase
+Parameter '_eventData_' of LOLlong.distributeExternal (/../data/reentrancy/solidity_contract/3255.sol#1183) is not in mixedCase
+Parameter '_rID' of LOLlong.distributeInternal (/../data/reentrancy/solidity_contract/3255.sol#1223) is not in mixedCase
+Parameter '_pID' of LOLlong.distributeInternal (/../data/reentrancy/solidity_contract/3255.sol#1223) is not in mixedCase
+Parameter '_eth' of LOLlong.distributeInternal (/../data/reentrancy/solidity_contract/3255.sol#1223) is not in mixedCase
+Parameter '_team' of LOLlong.distributeInternal (/../data/reentrancy/solidity_contract/3255.sol#1223) is not in mixedCase
+Parameter '_keys' of LOLlong.distributeInternal (/../data/reentrancy/solidity_contract/3255.sol#1223) is not in mixedCase
+Parameter '_eventData_' of LOLlong.distributeInternal (/../data/reentrancy/solidity_contract/3255.sol#1223) is not in mixedCase
+Parameter '_rID' of LOLlong.updateMasks (/../data/reentrancy/solidity_contract/3255.sol#1257) is not in mixedCase
+Parameter '_pID' of LOLlong.updateMasks (/../data/reentrancy/solidity_contract/3255.sol#1257) is not in mixedCase
+Parameter '_gen' of LOLlong.updateMasks (/../data/reentrancy/solidity_contract/3255.sol#1257) is not in mixedCase
+Parameter '_keys' of LOLlong.updateMasks (/../data/reentrancy/solidity_contract/3255.sol#1257) is not in mixedCase
+Parameter '_pID' of LOLlong.withdrawEarnings (/../data/reentrancy/solidity_contract/3255.sol#1277) is not in mixedCase
+Parameter '_pID' of LOLlong.endTx (/../data/reentrancy/solidity_contract/3255.sol#1297) is not in mixedCase
+Parameter '_team' of LOLlong.endTx (/../data/reentrancy/solidity_contract/3255.sol#1297) is not in mixedCase
+Parameter '_eth' of LOLlong.endTx (/../data/reentrancy/solidity_contract/3255.sol#1297) is not in mixedCase
+Parameter '_keys' of LOLlong.endTx (/../data/reentrancy/solidity_contract/3255.sol#1297) is not in mixedCase
+Parameter '_eventData_' of LOLlong.endTx (/../data/reentrancy/solidity_contract/3255.sol#1297) is not in mixedCase
+Constant 'LOLlong.lol_offical_bank' (/../data/reentrancy/solidity_contract/3255.sol#154) is not in UPPER_CASE_WITH_UNDERSCORES
+Constant 'LOLlong.PlayerBook' (/../data/reentrancy/solidity_contract/3255.sol#155) is not in UPPER_CASE_WITH_UNDERSCORES
+Constant 'LOLlong.rndInit_' (/../data/reentrancy/solidity_contract/3255.sol#165) is not in UPPER_CASE_WITH_UNDERSCORES
+Constant 'LOLlong.rndInc_' (/../data/reentrancy/solidity_contract/3255.sol#166) is not in UPPER_CASE_WITH_UNDERSCORES
+Constant 'LOLlong.rndMax_' (/../data/reentrancy/solidity_contract/3255.sol#167) is not in UPPER_CASE_WITH_UNDERSCORES
+Parameter '_curEth' of LOLKeysCalcLong.keysRec (/../data/reentrancy/solidity_contract/3255.sol#1431) is not in mixedCase
+Parameter '_newEth' of LOLKeysCalcLong.keysRec (/../data/reentrancy/solidity_contract/3255.sol#1431) is not in mixedCase
+Parameter '_curKeys' of LOLKeysCalcLong.ethRec (/../data/reentrancy/solidity_contract/3255.sol#1440) is not in mixedCase
+Parameter '_sellKeys' of LOLKeysCalcLong.ethRec (/../data/reentrancy/solidity_contract/3255.sol#1440) is not in mixedCase
+Parameter '_eth' of LOLKeysCalcLong.keys (/../data/reentrancy/solidity_contract/3255.sol#1449) is not in mixedCase
+Parameter '_keys' of LOLKeysCalcLong.eth (/../data/reentrancy/solidity_contract/3255.sol#1458) is not in mixedCase
+Parameter '_input' of NameFilter.nameFilter (/../data/reentrancy/solidity_contract/3255.sol#1490) is not in mixedCase
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#conformance-to-solidity-naming-conventions[0m
+INFO:Slither:/../data/reentrancy/solidity_contract/3255.sol analyzed (10 contracts), 148 result(s) found

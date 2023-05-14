@@ -1,0 +1,14 @@
+{
+  "contract": "40425",
+  "tool": "honeybadger",
+  "start": 1609183530.4331698,
+  "end": 1609183726.783185,
+  "duration": 196.35001516342163,
+  "analysis": [
+    {
+      "errors": [],
+      "file": "/../data/reentrancy/solidity_contract/40425.sol",
+      "name": "MyEtherBank"
+    }
+  ]
+}

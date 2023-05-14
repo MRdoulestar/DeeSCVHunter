@@ -1,0 +1,209 @@
+INFO:Slither:Compilation warnings/errors on /../data/reentrancy/solidity_contract/18170.sol:
+/../data/reentrancy/solidity_contract/18170.sol:119:2: Warning: Defining constructors as functions with the same name as the contract is deprecated. Use "constructor(...) { ... }" instead.
+	function Ownable() public {
+ ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/18170.sol:152:2: Warning: Defining constructors as functions with the same name as the contract is deprecated. Use "constructor(...) { ... }" instead.
+	function A2AToken() public {
+ ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/18170.sol:317:2: Warning: Modifiers of functions without implementation are ignored.
+	function mintETHRewards(address _contract, uint256 _amount) public onlyManager();
+	^-------------------------------------------------------------------------------^
+/../data/reentrancy/solidity_contract/18170.sol:320:2: Warning: Modifiers of functions without implementation are ignored.
+	function mintTokenRewards(address _contract, uint256 _amount) public onlyManager();
+	^---------------------------------------------------------------------------------^
+/../data/reentrancy/solidity_contract/18170.sol:323:2: Warning: Modifiers of functions without implementation are ignored.
+	function releaseTokens() public onlyOwner() hasntStopped() whenCrowdsaleSuccessful();
+	^-----------------------------------------------------------------------------------^
+/../data/reentrancy/solidity_contract/18170.sol:327:2: Warning: Modifiers of functions without implementation are ignored.
+	function stop() public onlyManager() hasntStopped();
+	^--------------------------------------------------^
+/../data/reentrancy/solidity_contract/18170.sol:330:2: Warning: Modifiers of functions without implementation are ignored.
+	function start(uint256 _startTimestamp, uint256 _endTimestamp, address _fundingAddress) public onlyManager() hasntStarted() hasntStopped();
+	^-----------------------------------------------------------------------------------------------------------------------------------------^
+/../data/reentrancy/solidity_contract/18170.sol:371:2: Warning: Defining constructors as functions with the same name as the contract is deprecated. Use "constructor(...) { ... }" instead.
+	function A2ACrowdsale() public {
+ ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/18170.sol:563:2: Warning: Defining constructors as functions with the same name as the contract is deprecated. Use "constructor(...) { ... }" instead.
+	function A2ACrowdsalePartner() public {
+ ^ (Relevant source part starts here and spans across multiple lines).
+
+INFO:Detectors:[91m
+Reentrancy in A2ACrowdsale.mintETHRewards (/../data/reentrancy/solidity_contract/18170.sol#383-387):
+	External calls:
+	- require(bool)(_contract.call.value(_amount)()) (/../data/reentrancy/solidity_contract/18170.sol#385)
+	State variables written after the call(s):
+	- wingsETHRewards (/../data/reentrancy/solidity_contract/18170.sol#386)
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#reentrancy-vulnerabilities[0m
+INFO:Detectors:[91m
+BasicToken.totalSupply_ (/../data/reentrancy/solidity_contract/18170.sol#48) is never initialized. It is used in:
+	- totalSupply (/../data/reentrancy/solidity_contract/18170.sol#50-52)
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#uninitialized-state-variables[0m
+INFO:Detectors:[93m
+Reentrancy in A2ACrowdsale.ico (/../data/reentrancy/solidity_contract/18170.sol#491-518):
+	External calls:
+	- require(bool)(totalSold.add(tokensAmount) < token.maxSupply()) (/../data/reentrancy/solidity_contract/18170.sol#503)
+	- require(bool)(token.issueDuringICO(_to,tokensAmount)) (/../data/reentrancy/solidity_contract/18170.sol#504)
+	- require(bool)(token.issueDuringICO(bountyAddress,tokensAmount.mul(bountyPercent) / 1000000)) (/../data/reentrancy/solidity_contract/18170.sol#510)
+	State variables written after the call(s):
+	- totalCollected (/../data/reentrancy/solidity_contract/18170.sol#514)
+	- totalSold (/../data/reentrancy/solidity_contract/18170.sol#515)
+Reentrancy in A2ACrowdsale.mintTokenRewards (/../data/reentrancy/solidity_contract/18170.sol#389-394):
+	External calls:
+	- require(bool)(token.issueDuringICO(_contract,_amount)) (/../data/reentrancy/solidity_contract/18170.sol#392)
+	State variables written after the call(s):
+	- wingsTokenRewards (/../data/reentrancy/solidity_contract/18170.sol#393)
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#reentrancy-vulnerabilities-1[0m
+INFO:Detectors:[92m
+A2ACrowdsale.withdrawToFounders has external calls inside a loop:
+	- ! foundersAddresses[i].send(amount_to_withdraw) (/../data/reentrancy/solidity_contract/18170.sol#541-543)
+A2ACrowdsalePartner.withdrawToFounders has external calls inside a loop:
+	- ! foundersAddresses[i].send(amount_to_withdraw) (/../data/reentrancy/solidity_contract/18170.sol#599-601)
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation/_edit#calls-inside-a-loop[0m
+INFO:Detectors:[92m
+Reentrancy in A2ACrowdsale.ico (/../data/reentrancy/solidity_contract/18170.sol#491-518):
+	External calls:
+	- require(bool)(totalSold.add(tokensAmount) < token.maxSupply()) (/../data/reentrancy/solidity_contract/18170.sol#503)
+	- require(bool)(token.issueDuringICO(_to,tokensAmount)) (/../data/reentrancy/solidity_contract/18170.sol#504)
+	State variables written after the call(s):
+	- wingsETHRewards (/../data/reentrancy/solidity_contract/18170.sol#507)
+	- wingsTokenRewards (/../data/reentrancy/solidity_contract/18170.sol#506)
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#reentrancy-vulnerabilities-2[0m
+INFO:Detectors:[92m
+A2ACrowdsale.start (/../data/reentrancy/solidity_contract/18170.sol#400-410) uses timestamp for comparisons
+	Dangerous comparisons:
+	- require(bool)(_startTimestamp >= block.timestamp) (/../data/reentrancy/solidity_contract/18170.sol#402)
+A2ACrowdsale.isFailed (/../data/reentrancy/solidity_contract/18170.sol#413-424) uses timestamp for comparisons
+	Dangerous comparisons:
+	- (started && block.timestamp >= endTimestamp && totalCollected < minimalGoal) (/../data/reentrancy/solidity_contract/18170.sol#414-423)
+A2ACrowdsale.isActive (/../data/reentrancy/solidity_contract/18170.sol#427-439) uses timestamp for comparisons
+	Dangerous comparisons:
+	- (started && totalCollected < hardCap && block.timestamp >= startTimestamp && block.timestamp < endTimestamp) (/../data/reentrancy/solidity_contract/18170.sol#428-438)
+A2ACrowdsale.isSuccessful (/../data/reentrancy/solidity_contract/18170.sol#442-450) uses timestamp for comparisons
+	Dangerous comparisons:
+	- (totalCollected >= hardCap || (block.timestamp >= endTimestamp && totalCollected >= minimalGoal)) (/../data/reentrancy/solidity_contract/18170.sol#443-449)
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#block-timestamp[0m
+INFO:Detectors:[92m
+A2ACrowdsale.fundingAddress should be constant (/../data/reentrancy/solidity_contract/18170.sol#348)
+BasicToken.totalSupply_ should be constant (/../data/reentrancy/solidity_contract/18170.sol#48)
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#state-variables-that-could-be-declared-constant[0m
+INFO:Detectors:[92m
+BasicToken.totalSupply (/../data/reentrancy/solidity_contract/18170.sol#50-52) should be declared external
+ERC20Basic.totalSupply (/../data/reentrancy/solidity_contract/18170.sol#30) should be declared external
+BasicToken.balanceOf (/../data/reentrancy/solidity_contract/18170.sol#64-66) should be declared external
+ERC20Basic.balanceOf (/../data/reentrancy/solidity_contract/18170.sol#31) should be declared external
+StandardToken.allowance (/../data/reentrancy/solidity_contract/18170.sol#91-93) should be declared external
+ERC20.allowance (/../data/reentrancy/solidity_contract/18170.sol#37) should be declared external
+StandardToken.approve (/../data/reentrancy/solidity_contract/18170.sol#85-89) should be declared external
+ERC20.approve (/../data/reentrancy/solidity_contract/18170.sol#39) should be declared external
+StandardToken.increaseApproval (/../data/reentrancy/solidity_contract/18170.sol#95-99) should be declared external
+StandardToken.decreaseApproval (/../data/reentrancy/solidity_contract/18170.sol#101-110) should be declared external
+Ownable.transferOwnership (/../data/reentrancy/solidity_contract/18170.sol#128-132) should be declared external
+A2AToken.setVesting (/../data/reentrancy/solidity_contract/18170.sol#171-175) should be declared external
+A2AToken._transfer (/../data/reentrancy/solidity_contract/18170.sol#177-189) should be declared external
+A2AToken.issueDuringICO (/../data/reentrancy/solidity_contract/18170.sol#191-199) should be declared external
+A2AToken.setICOaddr (/../data/reentrancy/solidity_contract/18170.sol#201-204) should be declared external
+A2AToken.release (/../data/reentrancy/solidity_contract/18170.sol#211-213) should be declared external
+A2AToken.lock (/../data/reentrancy/solidity_contract/18170.sol#215-217) should be declared external
+HasManager.transferManager (/../data/reentrancy/solidity_contract/18170.sol#229-232) should be declared external
+ICrowdsaleProcessor.deposit (/../data/reentrancy/solidity_contract/18170.sol#311) should be declared external
+A2ACrowdsale.deposit (/../data/reentrancy/solidity_contract/18170.sol#485) should be declared external
+ICrowdsaleProcessor.getToken (/../data/reentrancy/solidity_contract/18170.sol#314) should be declared external
+A2ACrowdsale.getToken (/../data/reentrancy/solidity_contract/18170.sol#456-458) should be declared external
+ICrowdsaleProcessor.mintETHRewards (/../data/reentrancy/solidity_contract/18170.sol#317) should be declared external
+A2ACrowdsale.mintETHRewards (/../data/reentrancy/solidity_contract/18170.sol#383-387) should be declared external
+A2ACrowdsale.mintTokenRewards (/../data/reentrancy/solidity_contract/18170.sol#389-394) should be declared external
+ICrowdsaleProcessor.mintTokenRewards (/../data/reentrancy/solidity_contract/18170.sol#320) should be declared external
+ICrowdsaleProcessor.releaseTokens (/../data/reentrancy/solidity_contract/18170.sol#323) should be declared external
+A2ACrowdsale.releaseTokens (/../data/reentrancy/solidity_contract/18170.sol#530-532) should be declared external
+A2ACrowdsale.stop (/../data/reentrancy/solidity_contract/18170.sol#396-398) should be declared external
+ICrowdsaleProcessor.stop (/../data/reentrancy/solidity_contract/18170.sol#327) should be declared external
+ICrowdsaleProcessor.start (/../data/reentrancy/solidity_contract/18170.sol#330) should be declared external
+A2ACrowdsale.start (/../data/reentrancy/solidity_contract/18170.sol#400-410) should be declared external
+A2ACrowdsale.setToken (/../data/reentrancy/solidity_contract/18170.sol#452-454) should be declared external
+A2ACrowdsale.setPrice (/../data/reentrancy/solidity_contract/18170.sol#460-463) should be declared external
+A2ACrowdsale.setBonus (/../data/reentrancy/solidity_contract/18170.sol#465-468) should be declared external
+A2ACrowdsale.setBountyAddress (/../data/reentrancy/solidity_contract/18170.sol#470-473) should be declared external
+A2ACrowdsale.setBountyPercent (/../data/reentrancy/solidity_contract/18170.sol#475-478) should be declared external
+A2ACrowdsale.setPartnerContracts (/../data/reentrancy/solidity_contract/18170.sol#480-483) should be declared external
+A2ACrowdsale.icoPartner (/../data/reentrancy/solidity_contract/18170.sol#520-524) should be declared external
+A2ACrowdsale.calculateRewards (/../data/reentrancy/solidity_contract/18170.sol#526-528) should be declared external
+A2ACrowdsale.withdrawToFounders (/../data/reentrancy/solidity_contract/18170.sol#534-547) should be declared external
+A2ACrowdsalePartner.setCrowdsale (/../data/reentrancy/solidity_contract/18170.sol#567-570) should be declared external
+A2ACrowdsalePartner.setPartnerETHRewardsPercent (/../data/reentrancy/solidity_contract/18170.sol#572-575) should be declared external
+A2ACrowdsalePartner.setPartnerAddress (/../data/reentrancy/solidity_contract/18170.sol#577-580) should be declared external
+A2ACrowdsalePartner.withdrawToFounders (/../data/reentrancy/solidity_contract/18170.sol#592-605) should be declared external
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#public-function-that-could-be-declared-as-external[0m
+INFO:Detectors:[92m
+Detected issues with version pragma in /../data/reentrancy/solidity_contract/18170.sol:
+	- pragma solidity^0.4.21 (/../data/reentrancy/solidity_contract/18170.sol#1): it allows old versions
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#incorrect-version-of-solidity[0m
+INFO:Detectors:[92m
+Low level call in A2ACrowdsale.mintETHRewards (/../data/reentrancy/solidity_contract/18170.sol#383-387):
+	-require(bool)(_contract.call.value(_amount)()) /../data/reentrancy/solidity_contract/18170.sol#385
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#low-level-calls[0m
+INFO:Detectors:[92m
+Parameter '_owner' of BasicToken.balanceOf (/../data/reentrancy/solidity_contract/18170.sol#64) is not in mixedCase
+Parameter '_to' of BasicToken.transfer (/../data/reentrancy/solidity_contract/18170.sol#54) is not in mixedCase
+Parameter '_value' of BasicToken.transfer (/../data/reentrancy/solidity_contract/18170.sol#54) is not in mixedCase
+Parameter '_owner' of StandardToken.allowance (/../data/reentrancy/solidity_contract/18170.sol#91) is not in mixedCase
+Parameter '_spender' of StandardToken.allowance (/../data/reentrancy/solidity_contract/18170.sol#91) is not in mixedCase
+Parameter '_from' of StandardToken.transferFrom (/../data/reentrancy/solidity_contract/18170.sol#73) is not in mixedCase
+Parameter '_to' of StandardToken.transferFrom (/../data/reentrancy/solidity_contract/18170.sol#73) is not in mixedCase
+Parameter '_value' of StandardToken.transferFrom (/../data/reentrancy/solidity_contract/18170.sol#73) is not in mixedCase
+Parameter '_spender' of StandardToken.approve (/../data/reentrancy/solidity_contract/18170.sol#85) is not in mixedCase
+Parameter '_value' of StandardToken.approve (/../data/reentrancy/solidity_contract/18170.sol#85) is not in mixedCase
+Parameter '_spender' of StandardToken.increaseApproval (/../data/reentrancy/solidity_contract/18170.sol#95) is not in mixedCase
+Parameter '_addedValue' of StandardToken.increaseApproval (/../data/reentrancy/solidity_contract/18170.sol#95) is not in mixedCase
+Parameter '_spender' of StandardToken.decreaseApproval (/../data/reentrancy/solidity_contract/18170.sol#101) is not in mixedCase
+Parameter '_subtractedValue' of StandardToken.decreaseApproval (/../data/reentrancy/solidity_contract/18170.sol#101) is not in mixedCase
+Function 'Ownable.Ownable' (/../data/reentrancy/solidity_contract/18170.sol#119-121) is not in mixedCase
+Parameter '_to' of A2AToken.transfer (/../data/reentrancy/solidity_contract/18170.sol#159) is not in mixedCase
+Parameter '_value' of A2AToken.transfer (/../data/reentrancy/solidity_contract/18170.sol#159) is not in mixedCase
+Parameter '_from' of A2AToken.transferFrom (/../data/reentrancy/solidity_contract/18170.sol#206) is not in mixedCase
+Parameter '_to' of A2AToken.transferFrom (/../data/reentrancy/solidity_contract/18170.sol#206) is not in mixedCase
+Parameter '_value' of A2AToken.transferFrom (/../data/reentrancy/solidity_contract/18170.sol#206) is not in mixedCase
+Function 'A2AToken.A2AToken' (/../data/reentrancy/solidity_contract/18170.sol#152-157) is not in mixedCase
+Parameter '_holder' of A2AToken.setVesting (/../data/reentrancy/solidity_contract/18170.sol#171) is not in mixedCase
+Parameter '_amount' of A2AToken.setVesting (/../data/reentrancy/solidity_contract/18170.sol#171) is not in mixedCase
+Parameter '_bn' of A2AToken.setVesting (/../data/reentrancy/solidity_contract/18170.sol#171) is not in mixedCase
+Function 'A2AToken._transfer' (/../data/reentrancy/solidity_contract/18170.sol#177-189) is not in mixedCase
+Parameter '_from' of A2AToken._transfer (/../data/reentrancy/solidity_contract/18170.sol#177) is not in mixedCase
+Parameter '_to' of A2AToken._transfer (/../data/reentrancy/solidity_contract/18170.sol#177) is not in mixedCase
+Parameter '_value' of A2AToken._transfer (/../data/reentrancy/solidity_contract/18170.sol#177) is not in mixedCase
+Parameter '_vestingBlockNumber' of A2AToken._transfer (/../data/reentrancy/solidity_contract/18170.sol#177) is not in mixedCase
+Parameter '_to' of A2AToken.issueDuringICO (/../data/reentrancy/solidity_contract/18170.sol#191) is not in mixedCase
+Parameter '_amount' of A2AToken.issueDuringICO (/../data/reentrancy/solidity_contract/18170.sol#191) is not in mixedCase
+Parameter '_addr' of A2AToken.setICOaddr (/../data/reentrancy/solidity_contract/18170.sol#201) is not in mixedCase
+Parameter '_value' of A2AToken.setICOaddr (/../data/reentrancy/solidity_contract/18170.sol#201) is not in mixedCase
+Constant 'A2AToken.maxSupply' (/../data/reentrancy/solidity_contract/18170.sol#146) is not in UPPER_CASE_WITH_UNDERSCORES
+Parameter '_newManager' of HasManager.transferManager (/../data/reentrancy/solidity_contract/18170.sol#229) is not in mixedCase
+Event 'A2ACrowdsale.CROWDSALE_START' (/../data/reentrancy/solidity_contract/18170.sol#346) is not in CapWords
+Parameter '_contract' of A2ACrowdsale.mintETHRewards (/../data/reentrancy/solidity_contract/18170.sol#383) is not in mixedCase
+Parameter '_amount' of A2ACrowdsale.mintETHRewards (/../data/reentrancy/solidity_contract/18170.sol#383) is not in mixedCase
+Parameter '_contract' of A2ACrowdsale.mintTokenRewards (/../data/reentrancy/solidity_contract/18170.sol#389) is not in mixedCase
+Parameter '_amount' of A2ACrowdsale.mintTokenRewards (/../data/reentrancy/solidity_contract/18170.sol#389) is not in mixedCase
+Parameter '_startTimestamp' of A2ACrowdsale.start (/../data/reentrancy/solidity_contract/18170.sol#400) is not in mixedCase
+Parameter '_endTimestamp' of A2ACrowdsale.start (/../data/reentrancy/solidity_contract/18170.sol#400) is not in mixedCase
+Parameter '_fundingAddress' of A2ACrowdsale.start (/../data/reentrancy/solidity_contract/18170.sol#400) is not in mixedCase
+Function 'A2ACrowdsale.A2ACrowdsale' (/../data/reentrancy/solidity_contract/18170.sol#371-381) is not in mixedCase
+Parameter '_token' of A2ACrowdsale.setToken (/../data/reentrancy/solidity_contract/18170.sol#452) is not in mixedCase
+Parameter '_icoPrice' of A2ACrowdsale.setPrice (/../data/reentrancy/solidity_contract/18170.sol#460) is not in mixedCase
+Parameter '_icoBonus' of A2ACrowdsale.setBonus (/../data/reentrancy/solidity_contract/18170.sol#465) is not in mixedCase
+Parameter '_bountyAddress' of A2ACrowdsale.setBountyAddress (/../data/reentrancy/solidity_contract/18170.sol#470) is not in mixedCase
+Parameter '_bountyPercent' of A2ACrowdsale.setBountyPercent (/../data/reentrancy/solidity_contract/18170.sol#475) is not in mixedCase
+Parameter '_contract' of A2ACrowdsale.setPartnerContracts (/../data/reentrancy/solidity_contract/18170.sol#480) is not in mixedCase
+Parameter '_to' of A2ACrowdsale.ico (/../data/reentrancy/solidity_contract/18170.sol#491) is not in mixedCase
+Parameter '_val' of A2ACrowdsale.ico (/../data/reentrancy/solidity_contract/18170.sol#491) is not in mixedCase
+Parameter '_to' of A2ACrowdsale.icoPartner (/../data/reentrancy/solidity_contract/18170.sol#520) is not in mixedCase
+Parameter '_val' of A2ACrowdsale.icoPartner (/../data/reentrancy/solidity_contract/18170.sol#520) is not in mixedCase
+Parameter '_amount' of A2ACrowdsale.withdrawToFounders (/../data/reentrancy/solidity_contract/18170.sol#534) is not in mixedCase
+Constant 'A2ACrowdsale.wingsETHRewardsPercent' (/../data/reentrancy/solidity_contract/18170.sol#358) is not in UPPER_CASE_WITH_UNDERSCORES
+Constant 'A2ACrowdsale.wingsTokenRewardsPercent' (/../data/reentrancy/solidity_contract/18170.sol#359) is not in UPPER_CASE_WITH_UNDERSCORES
+Constant 'A2ACrowdsale.maxTokensWithBonus' (/../data/reentrancy/solidity_contract/18170.sol#363) is not in UPPER_CASE_WITH_UNDERSCORES
+Function 'A2ACrowdsalePartner.A2ACrowdsalePartner' (/../data/reentrancy/solidity_contract/18170.sol#563-565) is not in mixedCase
+Parameter '_crowdsale' of A2ACrowdsalePartner.setCrowdsale (/../data/reentrancy/solidity_contract/18170.sol#567) is not in mixedCase
+Parameter '_partnerETHRewardsPercent' of A2ACrowdsalePartner.setPartnerETHRewardsPercent (/../data/reentrancy/solidity_contract/18170.sol#572) is not in mixedCase
+Parameter '_partnerAddress' of A2ACrowdsalePartner.setPartnerAddress (/../data/reentrancy/solidity_contract/18170.sol#577) is not in mixedCase
+Parameter '_amount' of A2ACrowdsalePartner.withdrawToFounders (/../data/reentrancy/solidity_contract/18170.sol#592) is not in mixedCase
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#conformance-to-solidity-naming-conventions[0m
+INFO:Slither:/../data/reentrancy/solidity_contract/18170.sol analyzed (11 contracts), 122 result(s) found

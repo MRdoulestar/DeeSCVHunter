@@ -1,0 +1,25 @@
+{
+  "contract": "21697",
+  "tool": "osiris",
+  "start": 1609206024.399522,
+  "end": 1609206026.494859,
+  "duration": 2.0953369140625,
+  "analysis": [
+    {
+      "errors": [
+        {
+          "line": 11,
+          "column": 13,
+          "message": "concurrency_bug"
+        },
+        {
+          "line": 11,
+          "column": 13,
+          "message": "reentrancy_bug"
+        }
+      ],
+      "file": "/../data/reentrancy/solidity_contract/21697.sol",
+      "name": "SPRING_BOARD_1_ETH"
+    }
+  ]
+}

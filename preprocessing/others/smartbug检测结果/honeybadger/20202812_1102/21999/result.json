@@ -1,0 +1,25 @@
+{
+  "contract": "21999",
+  "tool": "honeybadger",
+  "start": 1609183552.7827818,
+  "end": 1609183582.790283,
+  "duration": 30.007501125335693,
+  "analysis": [
+    {
+      "errors": [],
+      "file": "/../data/reentrancy/solidity_contract/21999.sol",
+      "name": "Owned"
+    },
+    {
+      "errors": [
+        {
+          "line": 59,
+          "column": 13,
+          "message": "inheritance_disorder"
+        }
+      ],
+      "file": "/../data/reentrancy/solidity_contract/21999.sol",
+      "name": "WalletWithEmergencyTransfer"
+    }
+  ]
+}

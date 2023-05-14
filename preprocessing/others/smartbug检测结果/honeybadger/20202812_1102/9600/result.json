@@ -1,0 +1,19 @@
+{
+  "contract": "9600",
+  "tool": "honeybadger",
+  "start": 1609179712.820818,
+  "end": 1609179761.5669692,
+  "duration": 48.74615120887756,
+  "analysis": [
+    {
+      "errors": [],
+      "file": "/../data/reentrancy/solidity_contract/9600.sol",
+      "name": "CanReclaimToken"
+    },
+    {
+      "errors": [],
+      "file": "/../data/reentrancy/solidity_contract/9600.sol",
+      "name": "SVPayments"
+    }
+  ]
+}

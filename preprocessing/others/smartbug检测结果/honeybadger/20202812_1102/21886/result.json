@@ -1,0 +1,29 @@
+{
+  "contract": "21886",
+  "tool": "honeybadger",
+  "start": 1609129337.426197,
+  "end": 1609129566.631955,
+  "duration": 229.20575785636902,
+  "analysis": [
+    {
+      "errors": [],
+      "file": "/../data/reentrancy/solidity_contract/21886.sol",
+      "name": "AutomobileCyberchainToken"
+    },
+    {
+      "errors": [],
+      "file": "/../data/reentrancy/solidity_contract/21886.sol",
+      "name": "SafeMath"
+    },
+    {
+      "errors": [],
+      "file": "/../data/reentrancy/solidity_contract/21886.sol",
+      "name": "StandardToken"
+    },
+    {
+      "errors": [],
+      "file": "/../data/reentrancy/solidity_contract/21886.sol",
+      "name": "Token"
+    }
+  ]
+}

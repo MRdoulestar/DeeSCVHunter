@@ -1,0 +1,19 @@
+{
+  "contract": "14758",
+  "tool": "honeybadger",
+  "start": 1609205013.1232839,
+  "end": 1609205017.895317,
+  "duration": 4.772033214569092,
+  "analysis": [
+    {
+      "errors": [],
+      "file": "/../data/reentrancy/solidity_contract/14758.sol",
+      "name": "Owned"
+    },
+    {
+      "errors": [],
+      "file": "/../data/reentrancy/solidity_contract/14758.sol",
+      "name": "Wforcer"
+    }
+  ]
+}

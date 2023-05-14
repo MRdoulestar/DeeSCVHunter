@@ -1,0 +1,14 @@
+{
+  "contract": "21241",
+  "tool": "honeybadger",
+  "start": 1609200836.689882,
+  "end": 1609200916.8586,
+  "duration": 80.16871786117554,
+  "analysis": [
+    {
+      "errors": [],
+      "file": "/../data/reentrancy/solidity_contract/21241.sol",
+      "name": "AuctusTokenSale"
+    }
+  ]
+}

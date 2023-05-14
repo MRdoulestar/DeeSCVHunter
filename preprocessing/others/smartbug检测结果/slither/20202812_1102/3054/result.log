@@ -1,0 +1,184 @@
+INFO:Slither:Compilation warnings/errors on /../data/reentrancy/solidity_contract/3054.sol:
+/../data/reentrancy/solidity_contract/3054.sol:132:16: Warning: This function only accepts a single "bytes" argument. Please use "abi.encodePacked(...)" or a similar function to encode the data.
+        return keccak256(a) == keccak256(b);
+               ^----------^
+/../data/reentrancy/solidity_contract/3054.sol:132:16: Warning: The provided argument of type string memory is not implicitly convertible to expected type bytes memory.
+        return keccak256(a) == keccak256(b);
+               ^----------^
+/../data/reentrancy/solidity_contract/3054.sol:132:32: Warning: This function only accepts a single "bytes" argument. Please use "abi.encodePacked(...)" or a similar function to encode the data.
+        return keccak256(a) == keccak256(b);
+                               ^----------^
+/../data/reentrancy/solidity_contract/3054.sol:132:32: Warning: The provided argument of type string memory is not implicitly convertible to expected type bytes memory.
+        return keccak256(a) == keccak256(b);
+                               ^----------^
+
+INFO:Detectors:[91m
+Reentrancy in DiceRoll.rollDice (/../data/reentrancy/solidity_contract/3054.sol#499-527):
+	External calls:
+	- betID = callURL(callback,randomAPI_url,constructAPIParam(),randomAPI_extract) (/../data/reentrancy/solidity_contract/3054.sol#503-505)
+	State variables written after the call(s):
+	- gameNumber (/../data/reentrancy/solidity_contract/3054.sol#507)
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#reentrancy-vulnerabilities[0m
+INFO:Detectors:[93m
+clientOfdAppBridge.stringToBytes32 (/../data/reentrancy/solidity_contract/3054.sol#103-112) is declared view but contains assembly code
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#constant-functions-changing-the-state[0m
+INFO:Detectors:[93m
+DiceRoll.callback (/../data/reentrancy/solidity_contract/3054.sol#392-496) uses a dangerous strict equality:
+	- require(bool)(playerRolls[key].win == 2)
+	- playerRolls[key].result == 0
+	- playerRolls[key].result == 0
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#dangerous-strict-equalities[0m
+INFO:Detectors:[93m
+Reentrancy in clientOfdAppBridge.initBridge (/../data/reentrancy/solidity_contract/3054.sol#25-37):
+	External calls:
+	- address(dAppBridge) != dAppBridgeLocator.currentLocation() (/../data/reentrancy/solidity_contract/3054.sol#31-33)
+	- dAppBridge = dAppBridge_I(dAppBridgeLocator.currentLocation()) (/../data/reentrancy/solidity_contract/3054.sol#32)
+	State variables written after the call(s):
+	- dAppBridge (/../data/reentrancy/solidity_contract/3054.sol#32)
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#reentrancy-vulnerabilities-1[0m
+INFO:Detectors:[92m
+Reentrancy in DiceRoll.rollDice (/../data/reentrancy/solidity_contract/3054.sol#499-527):
+	External calls:
+	- betID = callURL(callback,randomAPI_url,constructAPIParam(),randomAPI_extract) (/../data/reentrancy/solidity_contract/3054.sol#503-505)
+	State variables written after the call(s):
+	- maxPendingPayouts (/../data/reentrancy/solidity_contract/3054.sol#521)
+	- playerRolls (/../data/reentrancy/solidity_contract/3054.sol#519)
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#reentrancy-vulnerabilities-2[0m
+INFO:Detectors:[92m
+clientOfdAppBridge.stringToBytes32 uses assembly (/../data/reentrancy/solidity_contract/3054.sol#103-112)
+	- /../data/reentrancy/solidity_contract/3054.sol#109-112
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#assembly-usage[0m
+INFO:Detectors:[92m
+clientOfdAppBridge._dAppBridgeLocator_Prod_addr should be constant (/../data/reentrancy/solidity_contract/3054.sol#18)
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#state-variables-that-could-be-declared-constant[0m
+INFO:Detectors:[92m
+DappBridgeLocator_I.currentLocation (/../data/reentrancy/solidity_contract/3054.sol#14) should be declared external
+DiceRoll.private_getGameState (/../data/reentrancy/solidity_contract/3054.sol#231-260) should be declared external
+DiceRoll.getBet (/../data/reentrancy/solidity_contract/3054.sol#307-327) should be declared external
+DiceRoll.rollDice (/../data/reentrancy/solidity_contract/3054.sol#529-536) should be declared external
+DiceRoll.player_withdrawPendingTransactions (/../data/reentrancy/solidity_contract/3054.sol#571-581) should be declared external
+DiceRoll.player_getPendingTxByAddress (/../data/reentrancy/solidity_contract/3054.sol#584-586) should be declared external
+DiceRoll.private_addPermittedRoll (/../data/reentrancy/solidity_contract/3054.sol#593-595) should be declared external
+DiceRoll.private_delPermittedRoll (/../data/reentrancy/solidity_contract/3054.sol#596-598) should be declared external
+DiceRoll.private_setRandomAPIURL (/../data/reentrancy/solidity_contract/3054.sol#599-601) should be declared external
+DiceRoll.private_setRandomAPIKey (/../data/reentrancy/solidity_contract/3054.sol#602-604) should be declared external
+DiceRoll.private_setRandomAPI_extract (/../data/reentrancy/solidity_contract/3054.sol#605-607) should be declared external
+DiceRoll.private_setminRoll (/../data/reentrancy/solidity_contract/3054.sol#608-612) should be declared external
+DiceRoll.private_setmaxRoll (/../data/reentrancy/solidity_contract/3054.sol#613-617) should be declared external
+DiceRoll.private_setminBet (/../data/reentrancy/solidity_contract/3054.sol#618-622) should be declared external
+DiceRoll.private_setmaxBet (/../data/reentrancy/solidity_contract/3054.sol#623-627) should be declared external
+DiceRoll.private_setPauseState (/../data/reentrancy/solidity_contract/3054.sol#628-630) should be declared external
+DiceRoll.private_setHouseEdge (/../data/reentrancy/solidity_contract/3054.sol#631-633) should be declared external
+DiceRoll.private_kill (/../data/reentrancy/solidity_contract/3054.sol#634-636) should be declared external
+DiceRoll.private_profits (/../data/reentrancy/solidity_contract/3054.sol#648-650) should be declared external
+DiceRoll.private_setMinRollUnder (/../data/reentrancy/solidity_contract/3054.sol#651-653) should be declared external
+DiceRoll.private_setMaxMultiRolls (/../data/reentrancy/solidity_contract/3054.sol#654-656) should be declared external
+DiceRoll.private_setOracleFee (/../data/reentrancy/solidity_contract/3054.sol#657-659) should be declared external
+DiceRoll.deposit (/../data/reentrancy/solidity_contract/3054.sol#660-662) should be declared external
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#public-function-that-could-be-declared-as-external[0m
+INFO:Detectors:[92m
+Detected issues with version pragma in /../data/reentrancy/solidity_contract/3054.sol:
+	- pragma solidity^0.4.16 (/../data/reentrancy/solidity_contract/3054.sol#1): it allows old versions
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#incorrect-version-of-solidity[0m
+INFO:Detectors:[92m
+Low level call in DiceRoll.player_withdrawPendingTransactions (/../data/reentrancy/solidity_contract/3054.sol#571-581):
+	-msg.sender.call.value(withdrawAmount)() /../data/reentrancy/solidity_contract/3054.sol#575-580
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#low-level-calls[0m
+INFO:Detectors:[92m
+Contract 'dAppBridge_I' (/../data/reentrancy/solidity_contract/3054.sol#6-12) is not in CapWords
+Parameter 'callback_method' of dAppBridge_I.callURL (/../data/reentrancy/solidity_contract/3054.sol#11) is not in mixedCase
+Parameter 'external_url' of dAppBridge_I.callURL (/../data/reentrancy/solidity_contract/3054.sol#11) is not in mixedCase
+Parameter 'external_params' of dAppBridge_I.callURL (/../data/reentrancy/solidity_contract/3054.sol#11) is not in mixedCase
+Parameter 'json_extract_element' of dAppBridge_I.callURL (/../data/reentrancy/solidity_contract/3054.sol#11) is not in mixedCase
+Contract 'DappBridgeLocator_I' (/../data/reentrancy/solidity_contract/3054.sol#13-15) is not in CapWords
+Contract 'clientOfdAppBridge' (/../data/reentrancy/solidity_contract/3054.sol#17-145) is not in CapWords
+Event 'clientOfdAppBridge.event_senderAddress' (/../data/reentrancy/solidity_contract/3054.sol#46-48) is not in CapWords
+Event 'clientOfdAppBridge.evnt_dAdppBridge_location' (/../data/reentrancy/solidity_contract/3054.sol#50-52) is not in CapWords
+Event 'clientOfdAppBridge.only_dAppBridgeCheck' (/../data/reentrancy/solidity_contract/3054.sol#54-57) is not in CapWords
+Parameter 'new_gas' of clientOfdAppBridge.setGas (/../data/reentrancy/solidity_contract/3054.sol#80) is not in mixedCase
+Parameter 'new_callback_gas' of clientOfdAppBridge.setCallbackGas (/../data/reentrancy/solidity_contract/3054.sol#85) is not in mixedCase
+Parameter 'callback_method' of clientOfdAppBridge.callURL (/../data/reentrancy/solidity_contract/3054.sol#92) is not in mixedCase
+Parameter 'external_url' of clientOfdAppBridge.callURL (/../data/reentrancy/solidity_contract/3054.sol#92) is not in mixedCase
+Parameter 'external_params' of clientOfdAppBridge.callURL (/../data/reentrancy/solidity_contract/3054.sol#92) is not in mixedCase
+Parameter 'callback_method' of clientOfdAppBridge.callURL (/../data/reentrancy/solidity_contract/3054.sol#96) is not in mixedCase
+Parameter 'external_url' of clientOfdAppBridge.callURL (/../data/reentrancy/solidity_contract/3054.sol#96) is not in mixedCase
+Parameter 'external_params' of clientOfdAppBridge.callURL (/../data/reentrancy/solidity_contract/3054.sol#96) is not in mixedCase
+Parameter 'json_extract_elemen' of clientOfdAppBridge.callURL (/../data/reentrancy/solidity_contract/3054.sol#96) is not in mixedCase
+Parameter '_a' of clientOfdAppBridge.concatStrings (/../data/reentrancy/solidity_contract/3054.sol#135) is not in mixedCase
+Parameter '_b' of clientOfdAppBridge.concatStrings (/../data/reentrancy/solidity_contract/3054.sol#135) is not in mixedCase
+Variable 'clientOfdAppBridge._dAppBridgeLocator_Prod_addr' (/../data/reentrancy/solidity_contract/3054.sol#18) is not in mixedCase
+Variable 'clientOfdAppBridge.current_gas' (/../data/reentrancy/solidity_contract/3054.sol#22) is not in mixedCase
+Variable 'clientOfdAppBridge.user_callback_gas' (/../data/reentrancy/solidity_contract/3054.sol#23) is not in mixedCase
+Modifier 'clientOfdAppBridge.only_dAppBridge_' (/../data/reentrancy/solidity_contract/3054.sol#59-67) is not in mixedCase
+Modifier 'clientOfdAppBridge.only_dAppBridge' (/../data/reentrancy/solidity_contract/3054.sol#70-76) is not in mixedCase
+Struct 'DiceRoll.playerDiceRoll' (/../data/reentrancy/solidity_contract/3054.sol#189-199) is not in CapWords
+Event 'DiceRoll.DiceRollResult_failedSend' (/../data/reentrancy/solidity_contract/3054.sol#369-375) is not in CapWords
+Function 'DiceRoll.private_getGameState' (/../data/reentrancy/solidity_contract/3054.sol#231-260) is not in mixedCase
+Parameter '_betID' of DiceRoll.getBet (/../data/reentrancy/solidity_contract/3054.sol#307) is not in mixedCase
+Parameter 'number_of_rolls' of DiceRoll.rollDice (/../data/reentrancy/solidity_contract/3054.sol#529) is not in mixedCase
+Function 'DiceRoll.player_withdrawPendingTransactions' (/../data/reentrancy/solidity_contract/3054.sol#571-581) is not in mixedCase
+Function 'DiceRoll.player_getPendingTxByAddress' (/../data/reentrancy/solidity_contract/3054.sol#584-586) is not in mixedCase
+Function 'DiceRoll.private_addPermittedRoll' (/../data/reentrancy/solidity_contract/3054.sol#593-595) is not in mixedCase
+Parameter '_rollUnder' of DiceRoll.private_addPermittedRoll (/../data/reentrancy/solidity_contract/3054.sol#593) is not in mixedCase
+Function 'DiceRoll.private_delPermittedRoll' (/../data/reentrancy/solidity_contract/3054.sol#596-598) is not in mixedCase
+Parameter '_rollUnder' of DiceRoll.private_delPermittedRoll (/../data/reentrancy/solidity_contract/3054.sol#596) is not in mixedCase
+Function 'DiceRoll.private_setRandomAPIURL' (/../data/reentrancy/solidity_contract/3054.sol#599-601) is not in mixedCase
+Parameter 'newRandomAPI_url' of DiceRoll.private_setRandomAPIURL (/../data/reentrancy/solidity_contract/3054.sol#599) is not in mixedCase
+Function 'DiceRoll.private_setRandomAPIKey' (/../data/reentrancy/solidity_contract/3054.sol#602-604) is not in mixedCase
+Parameter 'newRandomAPI_key' of DiceRoll.private_setRandomAPIKey (/../data/reentrancy/solidity_contract/3054.sol#602) is not in mixedCase
+Function 'DiceRoll.private_setRandomAPI_extract' (/../data/reentrancy/solidity_contract/3054.sol#605-607) is not in mixedCase
+Parameter 'newRandomAPI_extract' of DiceRoll.private_setRandomAPI_extract (/../data/reentrancy/solidity_contract/3054.sol#605) is not in mixedCase
+Function 'DiceRoll.private_setminRoll' (/../data/reentrancy/solidity_contract/3054.sol#608-612) is not in mixedCase
+Function 'DiceRoll.private_setmaxRoll' (/../data/reentrancy/solidity_contract/3054.sol#613-617) is not in mixedCase
+Function 'DiceRoll.private_setminBet' (/../data/reentrancy/solidity_contract/3054.sol#618-622) is not in mixedCase
+Function 'DiceRoll.private_setmaxBet' (/../data/reentrancy/solidity_contract/3054.sol#623-627) is not in mixedCase
+Function 'DiceRoll.private_setPauseState' (/../data/reentrancy/solidity_contract/3054.sol#628-630) is not in mixedCase
+Function 'DiceRoll.private_setHouseEdge' (/../data/reentrancy/solidity_contract/3054.sol#631-633) is not in mixedCase
+Function 'DiceRoll.private_kill' (/../data/reentrancy/solidity_contract/3054.sol#634-636) is not in mixedCase
+Function 'DiceRoll.private_withdrawAll' (/../data/reentrancy/solidity_contract/3054.sol#637-640) is not in mixedCase
+Parameter 'send_to' of DiceRoll.private_withdrawAll (/../data/reentrancy/solidity_contract/3054.sol#637) is not in mixedCase
+Function 'DiceRoll.private_withdraw' (/../data/reentrancy/solidity_contract/3054.sol#641-646) is not in mixedCase
+Parameter 'send_to' of DiceRoll.private_withdraw (/../data/reentrancy/solidity_contract/3054.sol#641) is not in mixedCase
+Function 'DiceRoll.private_profits' (/../data/reentrancy/solidity_contract/3054.sol#648-650) is not in mixedCase
+Function 'DiceRoll.private_setMinRollUnder' (/../data/reentrancy/solidity_contract/3054.sol#651-653) is not in mixedCase
+Parameter '_minRollUnder' of DiceRoll.private_setMinRollUnder (/../data/reentrancy/solidity_contract/3054.sol#651) is not in mixedCase
+Function 'DiceRoll.private_setMaxMultiRolls' (/../data/reentrancy/solidity_contract/3054.sol#654-656) is not in mixedCase
+Parameter '_maxMultiRolls' of DiceRoll.private_setMaxMultiRolls (/../data/reentrancy/solidity_contract/3054.sol#654) is not in mixedCase
+Function 'DiceRoll.private_setOracleFee' (/../data/reentrancy/solidity_contract/3054.sol#657-659) is not in mixedCase
+Parameter '_oracleFee' of DiceRoll.private_setOracleFee (/../data/reentrancy/solidity_contract/3054.sol#657) is not in mixedCase
+Parameter '_a' of DiceRoll.parseInt (/../data/reentrancy/solidity_contract/3054.sol#667) is not in mixedCase
+Parameter '_a' of DiceRoll.parseInt (/../data/reentrancy/solidity_contract/3054.sol#670) is not in mixedCase
+Parameter '_b' of DiceRoll.parseInt (/../data/reentrancy/solidity_contract/3054.sol#670) is not in mixedCase
+Parameter '_a' of DiceRoll.strConcat (/../data/reentrancy/solidity_contract/3054.sol#688) is not in mixedCase
+Parameter '_b' of DiceRoll.strConcat (/../data/reentrancy/solidity_contract/3054.sol#688) is not in mixedCase
+Parameter '_c' of DiceRoll.strConcat (/../data/reentrancy/solidity_contract/3054.sol#688) is not in mixedCase
+Parameter '_d' of DiceRoll.strConcat (/../data/reentrancy/solidity_contract/3054.sol#688) is not in mixedCase
+Parameter '_e' of DiceRoll.strConcat (/../data/reentrancy/solidity_contract/3054.sol#688) is not in mixedCase
+Parameter '_f' of DiceRoll.strConcat (/../data/reentrancy/solidity_contract/3054.sol#688) is not in mixedCase
+Parameter '_g' of DiceRoll.strConcat (/../data/reentrancy/solidity_contract/3054.sol#688) is not in mixedCase
+Parameter '_a' of DiceRoll.strConcat (/../data/reentrancy/solidity_contract/3054.sol#692) is not in mixedCase
+Parameter '_b' of DiceRoll.strConcat (/../data/reentrancy/solidity_contract/3054.sol#692) is not in mixedCase
+Parameter '_c' of DiceRoll.strConcat (/../data/reentrancy/solidity_contract/3054.sol#692) is not in mixedCase
+Parameter '_d' of DiceRoll.strConcat (/../data/reentrancy/solidity_contract/3054.sol#692) is not in mixedCase
+Parameter '_e' of DiceRoll.strConcat (/../data/reentrancy/solidity_contract/3054.sol#692) is not in mixedCase
+Parameter '_f' of DiceRoll.strConcat (/../data/reentrancy/solidity_contract/3054.sol#692) is not in mixedCase
+Parameter '_a' of DiceRoll.strConcat (/../data/reentrancy/solidity_contract/3054.sol#706) is not in mixedCase
+Parameter '_b' of DiceRoll.strConcat (/../data/reentrancy/solidity_contract/3054.sol#706) is not in mixedCase
+Parameter '_c' of DiceRoll.strConcat (/../data/reentrancy/solidity_contract/3054.sol#706) is not in mixedCase
+Parameter '_d' of DiceRoll.strConcat (/../data/reentrancy/solidity_contract/3054.sol#706) is not in mixedCase
+Parameter '_e' of DiceRoll.strConcat (/../data/reentrancy/solidity_contract/3054.sol#706) is not in mixedCase
+Parameter '_a' of DiceRoll.strConcat (/../data/reentrancy/solidity_contract/3054.sol#722) is not in mixedCase
+Parameter '_b' of DiceRoll.strConcat (/../data/reentrancy/solidity_contract/3054.sol#722) is not in mixedCase
+Parameter '_c' of DiceRoll.strConcat (/../data/reentrancy/solidity_contract/3054.sol#722) is not in mixedCase
+Parameter '_d' of DiceRoll.strConcat (/../data/reentrancy/solidity_contract/3054.sol#722) is not in mixedCase
+Parameter '_a' of DiceRoll.strConcat (/../data/reentrancy/solidity_contract/3054.sol#725) is not in mixedCase
+Parameter '_b' of DiceRoll.strConcat (/../data/reentrancy/solidity_contract/3054.sol#725) is not in mixedCase
+Parameter '_c' of DiceRoll.strConcat (/../data/reentrancy/solidity_contract/3054.sol#725) is not in mixedCase
+Parameter '_a' of DiceRoll.strConcat (/../data/reentrancy/solidity_contract/3054.sol#728) is not in mixedCase
+Parameter '_b' of DiceRoll.strConcat (/../data/reentrancy/solidity_contract/3054.sol#728) is not in mixedCase
+Variable 'DiceRoll.randomAPI_url' (/../data/reentrancy/solidity_contract/3054.sol#185) is not in mixedCase
+Variable 'DiceRoll.randomAPI_key' (/../data/reentrancy/solidity_contract/3054.sol#186) is not in mixedCase
+Variable 'DiceRoll.randomAPI_extract' (/../data/reentrancy/solidity_contract/3054.sol#187) is not in mixedCase
+Variable 'DiceRoll.game_paused' (/../data/reentrancy/solidity_contract/3054.sol#207) is not in mixedCase
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#conformance-to-solidity-naming-conventions[0m
+INFO:Slither:/../data/reentrancy/solidity_contract/3054.sol analyzed (5 contracts), 127 result(s) found

@@ -1,0 +1,24 @@
+{
+  "contract": "39932",
+  "tool": "honeybadger",
+  "start": 1609144786.7597592,
+  "end": 1609144811.094974,
+  "duration": 24.335214853286743,
+  "analysis": [
+    {
+      "errors": [],
+      "file": "/../data/reentrancy/solidity_contract/39932.sol",
+      "name": "Builder"
+    },
+    {
+      "errors": [],
+      "file": "/../data/reentrancy/solidity_contract/39932.sol",
+      "name": "BuilderInvoice"
+    },
+    {
+      "errors": [],
+      "file": "/../data/reentrancy/solidity_contract/39932.sol",
+      "name": "Comission"
+    }
+  ]
+}

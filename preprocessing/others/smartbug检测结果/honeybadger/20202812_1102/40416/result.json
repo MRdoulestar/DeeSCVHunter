@@ -1,0 +1,14 @@
+{
+  "contract": "40416",
+  "tool": "honeybadger",
+  "start": 1609162590.830546,
+  "end": 1609162619.2826061,
+  "duration": 28.452060222625732,
+  "analysis": [
+    {
+      "errors": [],
+      "file": "/../data/reentrancy/solidity_contract/40416.sol",
+      "name": "EtherDelta"
+    }
+  ]
+}

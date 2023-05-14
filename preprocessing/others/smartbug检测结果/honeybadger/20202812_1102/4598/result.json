@@ -1,0 +1,14 @@
+{
+  "contract": "4598",
+  "tool": "honeybadger",
+  "start": 1609150021.003345,
+  "end": 1609150031.835753,
+  "duration": 10.83240795135498,
+  "analysis": [
+    {
+      "errors": [],
+      "file": "/../data/reentrancy/solidity_contract/4598.sol",
+      "name": "mnyminer"
+    }
+  ]
+}

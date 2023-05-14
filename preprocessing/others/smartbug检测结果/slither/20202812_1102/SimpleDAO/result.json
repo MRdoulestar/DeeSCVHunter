@@ -1,0 +1,310 @@
+{
+  "contract": "SimpleDAO",
+  "tool": "slither",
+  "start": 1609202868.494557,
+  "end": 1609202869.4701371,
+  "duration": 0.9755802154541016,
+  "analysis": [
+    {
+      "check": "reentrancy-eth",
+      "impact": "High",
+      "confidence": "Medium",
+      "description": "Reentrancy in SimpleDAO.withdraw (/../data/reentrancy/solidity_contract/SimpleDAO.sol#8-13):\n\tExternal calls:\n\t- msg.sender.call.value(amount)() (/../data/reentrancy/solidity_contract/SimpleDAO.sol#10)\n\tState variables written after the call(s):\n\t- credit (/../data/reentrancy/solidity_contract/SimpleDAO.sol#11)\n",
+      "elements": [
+        {
+          "type": "function",
+          "name": "withdraw",
+          "source_mapping": {
+            "start": 141,
+            "length": 154,
+            "filename": "/../data/reentrancy/solidity_contract/SimpleDAO.sol",
+            "lines": [
+              8,
+              9,
+              10,
+              11,
+              12,
+              13
+            ]
+          },
+          "contract": {
+            "type": "contract",
+            "name": "SimpleDAO",
+            "source_mapping": {
+              "start": 0,
+              "length": 378,
+              "filename": "/../data/reentrancy/solidity_contract/SimpleDAO.sol",
+              "lines": [
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10,
+                11,
+                12,
+                13,
+                14,
+                15,
+                16,
+                17,
+                18
+              ]
+            }
+          }
+        },
+        {
+          "type": "external_calls",
+          "expression": "msg.sender.call.value(amount)()",
+          "source_mapping": {
+            "start": 219,
+            "length": 31,
+            "filename": "/../data/reentrancy/solidity_contract/SimpleDAO.sol",
+            "lines": [
+              10
+            ]
+          }
+        },
+        {
+          "type": "variables_written",
+          "name": "credit",
+          "expression": "credit[msg.sender] -= amount",
+          "source_mapping": {
+            "start": 258,
+            "length": 26,
+            "filename": "/../data/reentrancy/solidity_contract/SimpleDAO.sol",
+            "lines": [
+              11
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "external-function",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "SimpleDAO.donate (/../data/reentrancy/solidity_contract/SimpleDAO.sol#4-6) should be declared external\n",
+      "elements": [
+        {
+          "type": "function",
+          "name": "donate",
+          "source_mapping": {
+            "start": 71,
+            "length": 62,
+            "filename": "/../data/reentrancy/solidity_contract/SimpleDAO.sol",
+            "lines": [
+              4,
+              5,
+              6
+            ]
+          },
+          "contract": {
+            "type": "contract",
+            "name": "SimpleDAO",
+            "source_mapping": {
+              "start": 0,
+              "length": 378,
+              "filename": "/../data/reentrancy/solidity_contract/SimpleDAO.sol",
+              "lines": [
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10,
+                11,
+                12,
+                13,
+                14,
+                15,
+                16,
+                17,
+                18
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "check": "external-function",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "SimpleDAO.withdraw (/../data/reentrancy/solidity_contract/SimpleDAO.sol#8-13) should be declared external\n",
+      "elements": [
+        {
+          "type": "function",
+          "name": "withdraw",
+          "source_mapping": {
+            "start": 141,
+            "length": 154,
+            "filename": "/../data/reentrancy/solidity_contract/SimpleDAO.sol",
+            "lines": [
+              8,
+              9,
+              10,
+              11,
+              12,
+              13
+            ]
+          },
+          "contract": {
+            "type": "contract",
+            "name": "SimpleDAO",
+            "source_mapping": {
+              "start": 0,
+              "length": 378,
+              "filename": "/../data/reentrancy/solidity_contract/SimpleDAO.sol",
+              "lines": [
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10,
+                11,
+                12,
+                13,
+                14,
+                15,
+                16,
+                17,
+                18
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "check": "external-function",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "SimpleDAO.queryCredit (/../data/reentrancy/solidity_contract/SimpleDAO.sol#15-17) should be declared external\n",
+      "elements": [
+        {
+          "type": "function",
+          "name": "queryCredit",
+          "source_mapping": {
+            "start": 301,
+            "length": 75,
+            "filename": "/../data/reentrancy/solidity_contract/SimpleDAO.sol",
+            "lines": [
+              15,
+              16,
+              17
+            ]
+          },
+          "contract": {
+            "type": "contract",
+            "name": "SimpleDAO",
+            "source_mapping": {
+              "start": 0,
+              "length": 378,
+              "filename": "/../data/reentrancy/solidity_contract/SimpleDAO.sol",
+              "lines": [
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10,
+                11,
+                12,
+                13,
+                14,
+                15,
+                16,
+                17,
+                18
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "check": "low-level-calls",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Low level call in SimpleDAO.withdraw (/../data/reentrancy/solidity_contract/SimpleDAO.sol#8-13):\n\t-msg.sender.call.value(amount)() /../data/reentrancy/solidity_contract/SimpleDAO.sol#10\n",
+      "elements": [
+        {
+          "type": "function",
+          "name": "withdraw",
+          "source_mapping": {
+            "start": 141,
+            "length": 154,
+            "filename": "/../data/reentrancy/solidity_contract/SimpleDAO.sol",
+            "lines": [
+              8,
+              9,
+              10,
+              11,
+              12,
+              13
+            ]
+          },
+          "contract": {
+            "type": "contract",
+            "name": "SimpleDAO",
+            "source_mapping": {
+              "start": 0,
+              "length": 378,
+              "filename": "/../data/reentrancy/solidity_contract/SimpleDAO.sol",
+              "lines": [
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10,
+                11,
+                12,
+                13,
+                14,
+                15,
+                16,
+                17,
+                18
+              ]
+            }
+          }
+        },
+        {
+          "type": "expression",
+          "expression": "msg.sender.call.value(amount)()",
+          "source_mapping": {
+            "start": 219,
+            "length": 31,
+            "filename": "/../data/reentrancy/solidity_contract/SimpleDAO.sol",
+            "lines": [
+              10
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "contract": "30460",
+  "tool": "honeybadger",
+  "start": 1609184158.015738,
+  "end": 1609184317.593685,
+  "duration": 159.5779469013214,
+  "analysis": [
+    {
+      "errors": [],
+      "file": "/../data/reentrancy/solidity_contract/30460.sol",
+      "name": "BasicToken"
+    },
+    {
+      "errors": [],
+      "file": "/../data/reentrancy/solidity_contract/30460.sol",
+      "name": "BullToken"
+    },
+    {
+      "errors": [],
+      "file": "/../data/reentrancy/solidity_contract/30460.sol",
+      "name": "BullTokenCrowdsale"
+    }
+  ]
+}

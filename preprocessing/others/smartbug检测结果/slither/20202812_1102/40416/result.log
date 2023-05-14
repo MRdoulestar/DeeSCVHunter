@@ -1,0 +1,324 @@
+INFO:Slither:Compilation warnings/errors on /../data/reentrancy/solidity_contract/40416.sol:
+/../data/reentrancy/solidity_contract/40416.sol:90:67: Warning: "throw" is deprecated in favour of "revert()", "require()" and "assert()".
+        if (balancesVersions[version].balances[account] < amount) throw;
+                                                                  ^---^
+/../data/reentrancy/solidity_contract/40416.sol:114:3: Warning: Defining constructors as functions with the same name as the contract is deprecated. Use "constructor(...) { ... }" instead.
+  function EtherDelta(address feeAccount_, uint feeMake_, uint feeTake_) {
+  ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/40416.sol:121:5: Warning: "throw" is deprecated in favour of "revert()", "require()" and "assert()".
+    throw;
+    ^---^
+/../data/reentrancy/solidity_contract/40416.sol:130:22: Warning: "throw" is deprecated in favour of "revert()", "require()" and "assert()".
+    if (msg.value>0) throw;
+                     ^---^
+/../data/reentrancy/solidity_contract/40416.sol:131:41: Warning: "throw" is deprecated in favour of "revert()", "require()" and "assert()".
+    if (tokens[0][msg.sender] < amount) throw;
+                                        ^---^
+/../data/reentrancy/solidity_contract/40416.sol:133:43: Warning: "throw" is deprecated in favour of "revert()", "require()" and "assert()".
+    if (!msg.sender.call.value(amount)()) throw;
+                                          ^---^
+/../data/reentrancy/solidity_contract/40416.sol:139:34: Warning: "throw" is deprecated in favour of "revert()", "require()" and "assert()".
+    if (msg.value>0 || token==0) throw;
+                                 ^---^
+/../data/reentrancy/solidity_contract/40416.sol:140:63: Warning: "throw" is deprecated in favour of "revert()", "require()" and "assert()".
+    if (!Token(token).transferFrom(msg.sender, this, amount)) throw;
+                                                              ^---^
+/../data/reentrancy/solidity_contract/40416.sol:146:34: Warning: "throw" is deprecated in favour of "revert()", "require()" and "assert()".
+    if (msg.value>0 || token==0) throw;
+                                 ^---^
+/../data/reentrancy/solidity_contract/40416.sol:147:45: Warning: "throw" is deprecated in favour of "revert()", "require()" and "assert()".
+    if (tokens[token][msg.sender] < amount) throw;
+                                            ^---^
+/../data/reentrancy/solidity_contract/40416.sol:149:53: Warning: "throw" is deprecated in favour of "revert()", "require()" and "assert()".
+    if (!Token(token).transfer(msg.sender, amount)) throw;
+                                                    ^---^
+/../data/reentrancy/solidity_contract/40416.sol:158:22: Warning: "throw" is deprecated in favour of "revert()", "require()" and "assert()".
+    if (msg.value>0) throw;
+                     ^---^
+/../data/reentrancy/solidity_contract/40416.sol:164:22: Warning: "throw" is deprecated in favour of "revert()", "require()" and "assert()".
+    if (msg.value>0) throw;
+                     ^---^
+/../data/reentrancy/solidity_contract/40416.sol:172:8: Warning: "throw" is deprecated in favour of "revert()", "require()" and "assert()".
+    )) throw;
+       ^---^
+/../data/reentrancy/solidity_contract/40416.sol:1:1: Warning: Source file does not specify required compiler version!Consider adding "pragma solidity ^0.4.25;"
+contract Token {
+^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/40416.sol:29:13: Warning: Invoking events without "emit" prefix is deprecated.
+            Transfer(msg.sender, _to, _value);
+            ^-------------------------------^
+/../data/reentrancy/solidity_contract/40416.sol:41:13: Warning: Invoking events without "emit" prefix is deprecated.
+            Transfer(_from, _to, _value);
+            ^--------------------------^
+/../data/reentrancy/solidity_contract/40416.sol:52:9: Warning: Invoking events without "emit" prefix is deprecated.
+        Approval(msg.sender, _spender, _value);
+        ^------------------------------------^
+/../data/reentrancy/solidity_contract/40416.sol:126:5: Warning: Invoking events without "emit" prefix is deprecated.
+    Deposit(0, msg.sender, msg.value, tokens[0][msg.sender]);
+    ^------------------------------------------------------^
+/../data/reentrancy/solidity_contract/40416.sol:134:5: Warning: Invoking events without "emit" prefix is deprecated.
+    Withdraw(0, msg.sender, amount, tokens[0][msg.sender]);
+    ^----------------------------------------------------^
+/../data/reentrancy/solidity_contract/40416.sol:142:5: Warning: Invoking events without "emit" prefix is deprecated.
+    Deposit(token, msg.sender, amount, tokens[token][msg.sender]);
+    ^-----------------------------------------------------------^
+/../data/reentrancy/solidity_contract/40416.sol:150:5: Warning: Invoking events without "emit" prefix is deprecated.
+    Withdraw(token, msg.sender, amount, tokens[token][msg.sender]);
+    ^------------------------------------------------------------^
+/../data/reentrancy/solidity_contract/40416.sol:159:5: Warning: Invoking events without "emit" prefix is deprecated.
+    Order(tokenGet, amountGet, tokenGive, amountGive, expires, nonce, msg.sender, v, r, s);
+    ^------------------------------------------------------------------------------------^
+/../data/reentrancy/solidity_contract/40416.sol:165:20: Warning: This function only accepts a single "bytes" argument. Please use "abi.encodePacked(...)" or a similar function to encode the data.
+    bytes32 hash = sha256(tokenGet, amountGet, tokenGive, amountGive, expires, nonce);
+                   ^----------------------------------------------------------------^
+/../data/reentrancy/solidity_contract/40416.sol:180:5: Warning: Invoking events without "emit" prefix is deprecated.
+    Trade(tokenGet, amount, tokenGive, amountGive * amount / amountGet, user, msg.sender);
+    ^-----------------------------------------------------------------------------------^
+/../data/reentrancy/solidity_contract/40416.sol:192:20: Warning: This function only accepts a single "bytes" argument. Please use "abi.encodePacked(...)" or a similar function to encode the data.
+    bytes32 hash = sha256(tokenGet, amountGet, tokenGive, amountGive, expires, nonce);
+                   ^----------------------------------------------------------------^
+/../data/reentrancy/solidity_contract/40416.sol:4:5: Warning: No visibility specified. Defaulting to "public". 
+    function totalSupply() constant returns (uint256 supply) {}
+    ^---------------------------------------------------------^
+/../data/reentrancy/solidity_contract/40416.sol:4:46: Warning: Unused function parameter. Remove or comment out the variable name to silence this warning.
+    function totalSupply() constant returns (uint256 supply) {}
+                                             ^------------^
+/../data/reentrancy/solidity_contract/40416.sol:6:5: Warning: No visibility specified. Defaulting to "public". 
+    function balanceOf(address _owner) constant returns (uint256 balance) {}
+    ^----------------------------------------------------------------------^
+/../data/reentrancy/solidity_contract/40416.sol:6:24: Warning: Unused function parameter. Remove or comment out the variable name to silence this warning.
+    function balanceOf(address _owner) constant returns (uint256 balance) {}
+                       ^------------^
+/../data/reentrancy/solidity_contract/40416.sol:6:58: Warning: Unused function parameter. Remove or comment out the variable name to silence this warning.
+    function balanceOf(address _owner) constant returns (uint256 balance) {}
+                                                         ^-------------^
+/../data/reentrancy/solidity_contract/40416.sol:8:5: Warning: No visibility specified. Defaulting to "public". 
+    function transfer(address _to, uint256 _value) returns (bool success) {}
+    ^----------------------------------------------------------------------^
+/../data/reentrancy/solidity_contract/40416.sol:8:23: Warning: Unused function parameter. Remove or comment out the variable name to silence this warning.
+    function transfer(address _to, uint256 _value) returns (bool success) {}
+                      ^---------^
+/../data/reentrancy/solidity_contract/40416.sol:8:36: Warning: Unused function parameter. Remove or comment out the variable name to silence this warning.
+    function transfer(address _to, uint256 _value) returns (bool success) {}
+                                   ^------------^
+/../data/reentrancy/solidity_contract/40416.sol:8:61: Warning: Unused function parameter. Remove or comment out the variable name to silence this warning.
+    function transfer(address _to, uint256 _value) returns (bool success) {}
+                                                            ^----------^
+/../data/reentrancy/solidity_contract/40416.sol:10:5: Warning: No visibility specified. Defaulting to "public". 
+    function transferFrom(address _from, address _to, uint256 _value) returns (bool success) {}
+    ^-----------------------------------------------------------------------------------------^
+/../data/reentrancy/solidity_contract/40416.sol:10:27: Warning: Unused function parameter. Remove or comment out the variable name to silence this warning.
+    function transferFrom(address _from, address _to, uint256 _value) returns (bool success) {}
+                          ^-----------^
+/../data/reentrancy/solidity_contract/40416.sol:10:42: Warning: Unused function parameter. Remove or comment out the variable name to silence this warning.
+    function transferFrom(address _from, address _to, uint256 _value) returns (bool success) {}
+                                         ^---------^
+/../data/reentrancy/solidity_contract/40416.sol:10:55: Warning: Unused function parameter. Remove or comment out the variable name to silence this warning.
+    function transferFrom(address _from, address _to, uint256 _value) returns (bool success) {}
+                                                      ^------------^
+/../data/reentrancy/solidity_contract/40416.sol:10:80: Warning: Unused function parameter. Remove or comment out the variable name to silence this warning.
+    function transferFrom(address _from, address _to, uint256 _value) returns (bool success) {}
+                                                                               ^----------^
+/../data/reentrancy/solidity_contract/40416.sol:12:5: Warning: No visibility specified. Defaulting to "public". 
+    function approve(address _spender, uint256 _value) returns (bool success) {}
+    ^--------------------------------------------------------------------------^
+/../data/reentrancy/solidity_contract/40416.sol:12:22: Warning: Unused function parameter. Remove or comment out the variable name to silence this warning.
+    function approve(address _spender, uint256 _value) returns (bool success) {}
+                     ^--------------^
+/../data/reentrancy/solidity_contract/40416.sol:12:40: Warning: Unused function parameter. Remove or comment out the variable name to silence this warning.
+    function approve(address _spender, uint256 _value) returns (bool success) {}
+                                       ^------------^
+/../data/reentrancy/solidity_contract/40416.sol:12:65: Warning: Unused function parameter. Remove or comment out the variable name to silence this warning.
+    function approve(address _spender, uint256 _value) returns (bool success) {}
+                                                                ^----------^
+/../data/reentrancy/solidity_contract/40416.sol:14:5: Warning: No visibility specified. Defaulting to "public". 
+    function allowance(address _owner, address _spender) constant returns (uint256 remaining) {}
+    ^------------------------------------------------------------------------------------------^
+/../data/reentrancy/solidity_contract/40416.sol:14:24: Warning: Unused function parameter. Remove or comment out the variable name to silence this warning.
+    function allowance(address _owner, address _spender) constant returns (uint256 remaining) {}
+                       ^------------^
+/../data/reentrancy/solidity_contract/40416.sol:14:40: Warning: Unused function parameter. Remove or comment out the variable name to silence this warning.
+    function allowance(address _owner, address _spender) constant returns (uint256 remaining) {}
+                                       ^--------------^
+/../data/reentrancy/solidity_contract/40416.sol:14:76: Warning: Unused function parameter. Remove or comment out the variable name to silence this warning.
+    function allowance(address _owner, address _spender) constant returns (uint256 remaining) {}
+                                                                           ^---------------^
+/../data/reentrancy/solidity_contract/40416.sol:23:5: Warning: No visibility specified. Defaulting to "public". 
+    function transfer(address _to, uint256 _value) returns (bool success) {
+    ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/40416.sol:34:5: Warning: No visibility specified. Defaulting to "public". 
+    function transferFrom(address _from, address _to, uint256 _value) returns (bool success) {
+    ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/40416.sol:46:5: Warning: No visibility specified. Defaulting to "public". 
+    function balanceOf(address _owner) constant returns (uint256 balance) {
+    ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/40416.sol:50:5: Warning: No visibility specified. Defaulting to "public". 
+    function approve(address _spender, uint256 _value) returns (bool success) {
+    ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/40416.sol:56:5: Warning: No visibility specified. Defaulting to "public". 
+    function allowance(address _owner, address _spender) constant returns (uint256 remaining) {
+    ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/40416.sol:79:5: Warning: No visibility specified. Defaulting to "public". 
+    function setMinter() {
+    ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/40416.sol:85:5: Warning: No visibility specified. Defaulting to "public". 
+    function create(address account, uint amount) onlyMinter {
+    ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/40416.sol:89:5: Warning: No visibility specified. Defaulting to "public". 
+    function destroy(address account, uint amount) onlyMinter {
+    ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/40416.sol:94:5: Warning: No visibility specified. Defaulting to "public". 
+    function reset() onlyMinter {
+    ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/40416.sol:114:3: Warning: No visibility specified. Defaulting to "public". 
+  function EtherDelta(address feeAccount_, uint feeMake_, uint feeTake_) {
+  ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/40416.sol:120:3: Warning: No visibility specified. Defaulting to "public". 
+  function() {
+  ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/40416.sol:124:3: Warning: No visibility specified. Defaulting to "public". 
+  function deposit() {
+  ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/40416.sol:125:30: Warning: "msg.value" used in non-payable function. Do you want to add the "payable" modifier to this function?
+    tokens[0][msg.sender] += msg.value;
+                             ^-------^
+/../data/reentrancy/solidity_contract/40416.sol:126:28: Warning: "msg.value" used in non-payable function. Do you want to add the "payable" modifier to this function?
+    Deposit(0, msg.sender, msg.value, tokens[0][msg.sender]);
+                           ^-------^
+/../data/reentrancy/solidity_contract/40416.sol:129:3: Warning: No visibility specified. Defaulting to "public". 
+  function withdraw(uint amount) {
+  ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/40416.sol:130:9: Warning: "msg.value" used in non-payable function. Do you want to add the "payable" modifier to this function?
+    if (msg.value>0) throw;
+        ^-------^
+/../data/reentrancy/solidity_contract/40416.sol:137:3: Warning: No visibility specified. Defaulting to "public". 
+  function depositToken(address token, uint amount) {
+  ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/40416.sol:139:9: Warning: "msg.value" used in non-payable function. Do you want to add the "payable" modifier to this function?
+    if (msg.value>0 || token==0) throw;
+        ^-------^
+/../data/reentrancy/solidity_contract/40416.sol:145:3: Warning: No visibility specified. Defaulting to "public". 
+  function withdrawToken(address token, uint amount) {
+  ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/40416.sol:146:9: Warning: "msg.value" used in non-payable function. Do you want to add the "payable" modifier to this function?
+    if (msg.value>0 || token==0) throw;
+        ^-------^
+/../data/reentrancy/solidity_contract/40416.sol:153:3: Warning: No visibility specified. Defaulting to "public". 
+  function balanceOf(address token, address user) constant returns (uint) {
+  ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/40416.sol:157:3: Warning: No visibility specified. Defaulting to "public". 
+  function order(address tokenGet, uint amountGet, address tokenGive, uint amountGive, uint expires, uint nonce, uint8 v, bytes32 r, bytes32 s) {
+  ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/40416.sol:158:9: Warning: "msg.value" used in non-payable function. Do you want to add the "payable" modifier to this function?
+    if (msg.value>0) throw;
+        ^-------^
+/../data/reentrancy/solidity_contract/40416.sol:162:3: Warning: No visibility specified. Defaulting to "public". 
+  function trade(address tokenGet, uint amountGet, address tokenGive, uint amountGive, uint expires, uint nonce, address user, uint8 v, bytes32 r, bytes32 s, uint amount) {
+  ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/40416.sol:164:9: Warning: "msg.value" used in non-payable function. Do you want to add the "payable" modifier to this function?
+    if (msg.value>0) throw;
+        ^-------^
+/../data/reentrancy/solidity_contract/40416.sol:183:3: Warning: No visibility specified. Defaulting to "public". 
+  function testTrade(address tokenGet, uint amountGet, address tokenGive, uint amountGive, uint expires, uint nonce, address user, uint8 v, bytes32 r, bytes32 s, uint amount, address sender) constant returns(bool) {
+  ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/40416.sol:191:3: Warning: No visibility specified. Defaulting to "public". 
+  function availableVolume(address tokenGet, uint amountGet, address tokenGive, uint amountGive, uint expires, uint nonce, address user, uint8 v, bytes32 r, bytes32 s) constant returns(uint) {
+  ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/40416.sol:4:5: Warning: Function state mutability can be restricted to pure
+    function totalSupply() constant returns (uint256 supply) {}
+    ^---------------------------------------------------------^
+/../data/reentrancy/solidity_contract/40416.sol:6:5: Warning: Function state mutability can be restricted to pure
+    function balanceOf(address _owner) constant returns (uint256 balance) {}
+    ^----------------------------------------------------------------------^
+/../data/reentrancy/solidity_contract/40416.sol:8:5: Warning: Function state mutability can be restricted to pure
+    function transfer(address _to, uint256 _value) returns (bool success) {}
+    ^----------------------------------------------------------------------^
+/../data/reentrancy/solidity_contract/40416.sol:10:5: Warning: Function state mutability can be restricted to pure
+    function transferFrom(address _from, address _to, uint256 _value) returns (bool success) {}
+    ^-----------------------------------------------------------------------------------------^
+/../data/reentrancy/solidity_contract/40416.sol:12:5: Warning: Function state mutability can be restricted to pure
+    function approve(address _spender, uint256 _value) returns (bool success) {}
+    ^--------------------------------------------------------------------------^
+/../data/reentrancy/solidity_contract/40416.sol:14:5: Warning: Function state mutability can be restricted to pure
+    function allowance(address _owner, address _spender) constant returns (uint256 remaining) {}
+    ^------------------------------------------------------------------------------------------^
+
+INFO:Detectors:[92m
+Reentrancy in EtherDelta.depositToken (/../data/reentrancy/solidity_contract/40416.sol#137-143):
+	External calls:
+	- ! Token(token).transferFrom(msg.sender,this,amount) (/../data/reentrancy/solidity_contract/40416.sol#140)
+	State variables written after the call(s):
+	- tokens (/../data/reentrancy/solidity_contract/40416.sol#141)
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#reentrancy-vulnerabilities-2[0m
+INFO:Detectors:[92m
+Deprecated standard detected @ /../data/reentrancy/solidity_contract/40416.sol#90:
+	- Usage of "throw" should be replaced with "revert()"
+Deprecated standard detected @ /../data/reentrancy/solidity_contract/40416.sol#121:
+	- Usage of "throw" should be replaced with "revert()"
+Deprecated standard detected @ /../data/reentrancy/solidity_contract/40416.sol#130:
+	- Usage of "throw" should be replaced with "revert()"
+Deprecated standard detected @ /../data/reentrancy/solidity_contract/40416.sol#131:
+	- Usage of "throw" should be replaced with "revert()"
+Deprecated standard detected @ /../data/reentrancy/solidity_contract/40416.sol#133:
+	- Usage of "throw" should be replaced with "revert()"
+Deprecated standard detected @ /../data/reentrancy/solidity_contract/40416.sol#139:
+	- Usage of "throw" should be replaced with "revert()"
+Deprecated standard detected @ /../data/reentrancy/solidity_contract/40416.sol#140:
+	- Usage of "throw" should be replaced with "revert()"
+Deprecated standard detected @ /../data/reentrancy/solidity_contract/40416.sol#146:
+	- Usage of "throw" should be replaced with "revert()"
+Deprecated standard detected @ /../data/reentrancy/solidity_contract/40416.sol#147:
+	- Usage of "throw" should be replaced with "revert()"
+Deprecated standard detected @ /../data/reentrancy/solidity_contract/40416.sol#149:
+	- Usage of "throw" should be replaced with "revert()"
+Deprecated standard detected @ /../data/reentrancy/solidity_contract/40416.sol#158:
+	- Usage of "throw" should be replaced with "revert()"
+Deprecated standard detected @ /../data/reentrancy/solidity_contract/40416.sol#164:
+	- Usage of "throw" should be replaced with "revert()"
+Deprecated standard detected @ /../data/reentrancy/solidity_contract/40416.sol#172:
+	- Usage of "throw" should be replaced with "revert()"
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#deprecated-standards[0m
+INFO:Detectors:[92m
+Token.totalSupply (/../data/reentrancy/solidity_contract/40416.sol#4) should be declared external
+Token.balanceOf (/../data/reentrancy/solidity_contract/40416.sol#6) should be declared external
+StandardToken.balanceOf (/../data/reentrancy/solidity_contract/40416.sol#46-48) should be declared external
+Token.transfer (/../data/reentrancy/solidity_contract/40416.sol#8) should be declared external
+StandardToken.transfer (/../data/reentrancy/solidity_contract/40416.sol#23-32) should be declared external
+StandardToken.transferFrom (/../data/reentrancy/solidity_contract/40416.sol#34-44) should be declared external
+Token.transferFrom (/../data/reentrancy/solidity_contract/40416.sol#10) should be declared external
+StandardToken.approve (/../data/reentrancy/solidity_contract/40416.sol#50-54) should be declared external
+Token.approve (/../data/reentrancy/solidity_contract/40416.sol#12) should be declared external
+StandardToken.allowance (/../data/reentrancy/solidity_contract/40416.sol#56-58) should be declared external
+Token.allowance (/../data/reentrancy/solidity_contract/40416.sol#14) should be declared external
+ReserveToken.setMinter (/../data/reentrancy/solidity_contract/40416.sol#79-83) should be declared external
+ReserveToken.create (/../data/reentrancy/solidity_contract/40416.sol#85-88) should be declared external
+ReserveToken.destroy (/../data/reentrancy/solidity_contract/40416.sol#89-93) should be declared external
+ReserveToken.reset (/../data/reentrancy/solidity_contract/40416.sol#94-97) should be declared external
+EtherDelta.fallback (/../data/reentrancy/solidity_contract/40416.sol#120-122) should be declared external
+EtherDelta.deposit (/../data/reentrancy/solidity_contract/40416.sol#124-127) should be declared external
+EtherDelta.withdraw (/../data/reentrancy/solidity_contract/40416.sol#129-135) should be declared external
+EtherDelta.depositToken (/../data/reentrancy/solidity_contract/40416.sol#137-143) should be declared external
+EtherDelta.withdrawToken (/../data/reentrancy/solidity_contract/40416.sol#145-151) should be declared external
+EtherDelta.balanceOf (/../data/reentrancy/solidity_contract/40416.sol#153-155) should be declared external
+EtherDelta.order (/../data/reentrancy/solidity_contract/40416.sol#157-160) should be declared external
+EtherDelta.trade (/../data/reentrancy/solidity_contract/40416.sol#162-181) should be declared external
+EtherDelta.testTrade (/../data/reentrancy/solidity_contract/40416.sol#183-189) should be declared external
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#public-function-that-could-be-declared-as-external[0m
+INFO:Detectors:[92m
+Low level call in EtherDelta.withdraw (/../data/reentrancy/solidity_contract/40416.sol#129-135):
+	-! msg.sender.call.value(amount)() /../data/reentrancy/solidity_contract/40416.sol#133
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#low-level-calls[0m
+INFO:Detectors:[92m
+Parameter '_owner' of StandardToken.balanceOf (/../data/reentrancy/solidity_contract/40416.sol#46) is not in mixedCase
+Parameter '_to' of StandardToken.transfer (/../data/reentrancy/solidity_contract/40416.sol#23) is not in mixedCase
+Parameter '_value' of StandardToken.transfer (/../data/reentrancy/solidity_contract/40416.sol#23) is not in mixedCase
+Parameter '_from' of StandardToken.transferFrom (/../data/reentrancy/solidity_contract/40416.sol#34) is not in mixedCase
+Parameter '_to' of StandardToken.transferFrom (/../data/reentrancy/solidity_contract/40416.sol#34) is not in mixedCase
+Parameter '_value' of StandardToken.transferFrom (/../data/reentrancy/solidity_contract/40416.sol#34) is not in mixedCase
+Parameter '_spender' of StandardToken.approve (/../data/reentrancy/solidity_contract/40416.sol#50) is not in mixedCase
+Parameter '_value' of StandardToken.approve (/../data/reentrancy/solidity_contract/40416.sol#50) is not in mixedCase
+Parameter '_owner' of StandardToken.allowance (/../data/reentrancy/solidity_contract/40416.sol#56) is not in mixedCase
+Parameter '_spender' of StandardToken.allowance (/../data/reentrancy/solidity_contract/40416.sol#56) is not in mixedCase
+Function 'EtherDelta.EtherDelta' (/../data/reentrancy/solidity_contract/40416.sol#114-118) is not in mixedCase
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#conformance-to-solidity-naming-conventions[0m
+INFO:Slither:/../data/reentrancy/solidity_contract/40416.sol analyzed (4 contracts), 50 result(s) found

@@ -1,0 +1,40 @@
+{
+  "contract": "14579",
+  "tool": "osiris",
+  "start": 1609132280.050615,
+  "end": 1609132343.1147342,
+  "duration": 63.06411910057068,
+  "analysis": [
+    {
+      "errors": [
+        {
+          "line": 257,
+          "column": 5,
+          "message": "concurrency_bug"
+        }
+      ],
+      "file": "/../data/reentrancy/solidity_contract/14579.sol",
+      "name": "ICOStartReservation"
+    },
+    {
+      "errors": [],
+      "file": "/../data/reentrancy/solidity_contract/14579.sol",
+      "name": "ICOStartSaleInterface"
+    },
+    {
+      "errors": [],
+      "file": "/../data/reentrancy/solidity_contract/14579.sol",
+      "name": "Ownable"
+    },
+    {
+      "errors": [],
+      "file": "/../data/reentrancy/solidity_contract/14579.sol",
+      "name": "Pausable"
+    },
+    {
+      "errors": [],
+      "file": "/../data/reentrancy/solidity_contract/14579.sol",
+      "name": "SafeMath"
+    }
+  ]
+}

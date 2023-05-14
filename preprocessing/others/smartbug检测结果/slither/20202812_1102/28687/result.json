@@ -1,0 +1,821 @@
+{
+  "contract": "28687",
+  "tool": "slither",
+  "start": 1609133376.0637062,
+  "end": 1609133377.397834,
+  "duration": 1.3341279029846191,
+  "analysis": [
+    {
+      "check": "reentrancy-eth",
+      "impact": "High",
+      "confidence": "Medium",
+      "description": "Reentrancy in PrivateBank.CashOut (/../data/reentrancy/solidity_contract/28687.sol#27-34):\n\tExternal calls:\n\t- msg.sender.call.value(_am)() (/../data/reentrancy/solidity_contract/28687.sol#29-32)\n\tState variables written after the call(s):\n\t- balances (/../data/reentrancy/solidity_contract/28687.sol#30)\n",
+      "elements": [
+        {
+          "type": "function",
+          "name": "CashOut",
+          "source_mapping": {
+            "start": 495,
+            "length": 255,
+            "filename": "/../data/reentrancy/solidity_contract/28687.sol",
+            "lines": [
+              27,
+              28,
+              29,
+              30,
+              31,
+              32,
+              33,
+              34
+            ]
+          },
+          "contract": {
+            "type": "contract",
+            "name": "PrivateBank",
+            "source_mapping": {
+              "start": 26,
+              "length": 772,
+              "filename": "/../data/reentrancy/solidity_contract/28687.sol",
+              "lines": [
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10,
+                11,
+                12,
+                13,
+                14,
+                15,
+                16,
+                17,
+                18,
+                19,
+                20,
+                21,
+                22,
+                23,
+                24,
+                25,
+                26,
+                27,
+                28,
+                29,
+                30,
+                31,
+                32,
+                33,
+                34,
+                35,
+                36,
+                37,
+                38
+              ]
+            }
+          }
+        },
+        {
+          "type": "external_calls",
+          "expression": "msg.sender.call.value(_am)()",
+          "source_mapping": {
+            "start": 577,
+            "length": 157,
+            "filename": "/../data/reentrancy/solidity_contract/28687.sol",
+            "lines": [
+              29,
+              30,
+              31,
+              32
+            ]
+          }
+        },
+        {
+          "type": "variables_written",
+          "name": "balances",
+          "expression": "balances[msg.sender] -= _am",
+          "source_mapping": {
+            "start": 628,
+            "length": 25,
+            "filename": "/../data/reentrancy/solidity_contract/28687.sol",
+            "lines": [
+              30
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "constable-states",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "PrivateBank.MinDeposit should be constant (/../data/reentrancy/solidity_contract/28687.sol#7)\n",
+      "elements": [
+        {
+          "type": "variable",
+          "name": "MinDeposit",
+          "source_mapping": {
+            "start": 105,
+            "length": 32,
+            "filename": "/../data/reentrancy/solidity_contract/28687.sol",
+            "lines": [
+              7
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "external-function",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "PrivateBank.Deposit (/../data/reentrancy/solidity_contract/28687.sol#16-25) should be declared external\n",
+      "elements": [
+        {
+          "type": "function",
+          "name": "Deposit",
+          "source_mapping": {
+            "start": 263,
+            "length": 222,
+            "filename": "/../data/reentrancy/solidity_contract/28687.sol",
+            "lines": [
+              16,
+              17,
+              18,
+              19,
+              20,
+              21,
+              22,
+              23,
+              24,
+              25
+            ]
+          },
+          "contract": {
+            "type": "contract",
+            "name": "PrivateBank",
+            "source_mapping": {
+              "start": 26,
+              "length": 772,
+              "filename": "/../data/reentrancy/solidity_contract/28687.sol",
+              "lines": [
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10,
+                11,
+                12,
+                13,
+                14,
+                15,
+                16,
+                17,
+                18,
+                19,
+                20,
+                21,
+                22,
+                23,
+                24,
+                25,
+                26,
+                27,
+                28,
+                29,
+                30,
+                31,
+                32,
+                33,
+                34,
+                35,
+                36,
+                37,
+                38
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "check": "external-function",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "PrivateBank.CashOut (/../data/reentrancy/solidity_contract/28687.sol#27-34) should be declared external\n",
+      "elements": [
+        {
+          "type": "function",
+          "name": "CashOut",
+          "source_mapping": {
+            "start": 495,
+            "length": 255,
+            "filename": "/../data/reentrancy/solidity_contract/28687.sol",
+            "lines": [
+              27,
+              28,
+              29,
+              30,
+              31,
+              32,
+              33,
+              34
+            ]
+          },
+          "contract": {
+            "type": "contract",
+            "name": "PrivateBank",
+            "source_mapping": {
+              "start": 26,
+              "length": 772,
+              "filename": "/../data/reentrancy/solidity_contract/28687.sol",
+              "lines": [
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10,
+                11,
+                12,
+                13,
+                14,
+                15,
+                16,
+                17,
+                18,
+                19,
+                20,
+                21,
+                22,
+                23,
+                24,
+                25,
+                26,
+                27,
+                28,
+                29,
+                30,
+                31,
+                32,
+                33,
+                34,
+                35,
+                36,
+                37,
+                38
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "check": "external-function",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "PrivateBank.fallback (/../data/reentrancy/solidity_contract/28687.sol#36) should be declared external\n",
+      "elements": [
+        {
+          "type": "function",
+          "name": "fallback",
+          "source_mapping": {
+            "start": 760,
+            "length": 27,
+            "filename": "/../data/reentrancy/solidity_contract/28687.sol",
+            "lines": [
+              36
+            ]
+          },
+          "contract": {
+            "type": "contract",
+            "name": "PrivateBank",
+            "source_mapping": {
+              "start": 26,
+              "length": 772,
+              "filename": "/../data/reentrancy/solidity_contract/28687.sol",
+              "lines": [
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10,
+                11,
+                12,
+                13,
+                14,
+                15,
+                16,
+                17,
+                18,
+                19,
+                20,
+                21,
+                22,
+                23,
+                24,
+                25,
+                26,
+                27,
+                28,
+                29,
+                30,
+                31,
+                32,
+                33,
+                34,
+                35,
+                36,
+                37,
+                38
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "check": "external-function",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Log.AddMessage (/../data/reentrancy/solidity_contract/28687.sol#55-63) should be declared external\n",
+      "elements": [
+        {
+          "type": "function",
+          "name": "AddMessage",
+          "source_mapping": {
+            "start": 1005,
+            "length": 227,
+            "filename": "/../data/reentrancy/solidity_contract/28687.sol",
+            "lines": [
+              55,
+              56,
+              57,
+              58,
+              59,
+              60,
+              61,
+              62,
+              63
+            ]
+          },
+          "contract": {
+            "type": "contract",
+            "name": "Log",
+            "source_mapping": {
+              "start": 800,
+              "length": 434,
+              "filename": "/../data/reentrancy/solidity_contract/28687.sol",
+              "lines": [
+                40,
+                41,
+                42,
+                43,
+                44,
+                45,
+                46,
+                47,
+                48,
+                49,
+                50,
+                51,
+                52,
+                53,
+                54,
+                55,
+                56,
+                57,
+                58,
+                59,
+                60,
+                61,
+                62,
+                63,
+                64
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "check": "solc-version",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Detected issues with version pragma in /../data/reentrancy/solidity_contract/28687.sol:\n\t- pragma solidity^0.4.19 (/../data/reentrancy/solidity_contract/28687.sol#1): it allows old versions\n",
+      "elements": [
+        {
+          "type": "expression",
+          "expression": "^0.4.19",
+          "source_mapping": {
+            "start": 0,
+            "length": 24,
+            "filename": "/../data/reentrancy/solidity_contract/28687.sol",
+            "lines": [
+              1
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "low-level-calls",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Low level call in PrivateBank.CashOut (/../data/reentrancy/solidity_contract/28687.sol#27-34):\n\t-msg.sender.call.value(_am)() /../data/reentrancy/solidity_contract/28687.sol#29-32\n",
+      "elements": [
+        {
+          "type": "function",
+          "name": "CashOut",
+          "source_mapping": {
+            "start": 495,
+            "length": 255,
+            "filename": "/../data/reentrancy/solidity_contract/28687.sol",
+            "lines": [
+              27,
+              28,
+              29,
+              30,
+              31,
+              32,
+              33,
+              34
+            ]
+          },
+          "contract": {
+            "type": "contract",
+            "name": "PrivateBank",
+            "source_mapping": {
+              "start": 26,
+              "length": 772,
+              "filename": "/../data/reentrancy/solidity_contract/28687.sol",
+              "lines": [
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10,
+                11,
+                12,
+                13,
+                14,
+                15,
+                16,
+                17,
+                18,
+                19,
+                20,
+                21,
+                22,
+                23,
+                24,
+                25,
+                26,
+                27,
+                28,
+                29,
+                30,
+                31,
+                32,
+                33,
+                34,
+                35,
+                36,
+                37,
+                38
+              ]
+            }
+          }
+        },
+        {
+          "type": "expression",
+          "expression": "msg.sender.call.value(_am)()",
+          "source_mapping": {
+            "start": 577,
+            "length": 157,
+            "filename": "/../data/reentrancy/solidity_contract/28687.sol",
+            "lines": [
+              29,
+              30,
+              31,
+              32
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "naming-convention",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Function 'PrivateBank.PrivateBank' (/../data/reentrancy/solidity_contract/28687.sol#11-14) is not in mixedCase\n",
+      "elements": [
+        {
+          "target": "function",
+          "convention": "mixedCase",
+          "name": "PrivateBank",
+          "source_mapping": {
+            "start": 174,
+            "length": 79,
+            "filename": "/../data/reentrancy/solidity_contract/28687.sol",
+            "lines": [
+              11,
+              12,
+              13,
+              14
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "naming-convention",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Parameter '_log' of PrivateBank.PrivateBank (/../data/reentrancy/solidity_contract/28687.sol#11) is not in mixedCase\n",
+      "elements": [
+        {
+          "target": "parameter",
+          "convention": "mixedCase",
+          "name": "_log",
+          "source_mapping": {
+            "start": 195,
+            "length": 12,
+            "filename": "/../data/reentrancy/solidity_contract/28687.sol",
+            "lines": [
+              11
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "naming-convention",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Function 'PrivateBank.Deposit' (/../data/reentrancy/solidity_contract/28687.sol#16-25) is not in mixedCase\n",
+      "elements": [
+        {
+          "target": "function",
+          "convention": "mixedCase",
+          "name": "Deposit",
+          "source_mapping": {
+            "start": 263,
+            "length": 222,
+            "filename": "/../data/reentrancy/solidity_contract/28687.sol",
+            "lines": [
+              16,
+              17,
+              18,
+              19,
+              20,
+              21,
+              22,
+              23,
+              24,
+              25
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "naming-convention",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Function 'PrivateBank.CashOut' (/../data/reentrancy/solidity_contract/28687.sol#27-34) is not in mixedCase\n",
+      "elements": [
+        {
+          "target": "function",
+          "convention": "mixedCase",
+          "name": "CashOut",
+          "source_mapping": {
+            "start": 495,
+            "length": 255,
+            "filename": "/../data/reentrancy/solidity_contract/28687.sol",
+            "lines": [
+              27,
+              28,
+              29,
+              30,
+              31,
+              32,
+              33,
+              34
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "naming-convention",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Parameter '_am' of PrivateBank.CashOut (/../data/reentrancy/solidity_contract/28687.sol#27) is not in mixedCase\n",
+      "elements": [
+        {
+          "target": "parameter",
+          "convention": "mixedCase",
+          "name": "_am",
+          "source_mapping": {
+            "start": 512,
+            "length": 8,
+            "filename": "/../data/reentrancy/solidity_contract/28687.sol",
+            "lines": [
+              27
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "naming-convention",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Variable 'PrivateBank.MinDeposit' (/../data/reentrancy/solidity_contract/28687.sol#7) is not in mixedCase\n",
+      "elements": [
+        {
+          "target": "variable",
+          "convention": "mixedCase",
+          "name": "MinDeposit",
+          "source_mapping": {
+            "start": 105,
+            "length": 32,
+            "filename": "/../data/reentrancy/solidity_contract/28687.sol",
+            "lines": [
+              7
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "naming-convention",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Variable 'PrivateBank.TransferLog' (/../data/reentrancy/solidity_contract/28687.sol#9) is not in mixedCase\n",
+      "elements": [
+        {
+          "target": "variable",
+          "convention": "mixedCase",
+          "name": "TransferLog",
+          "source_mapping": {
+            "start": 148,
+            "length": 15,
+            "filename": "/../data/reentrancy/solidity_contract/28687.sol",
+            "lines": [
+              9
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "naming-convention",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Function 'Log.AddMessage' (/../data/reentrancy/solidity_contract/28687.sol#55-63) is not in mixedCase\n",
+      "elements": [
+        {
+          "target": "function",
+          "convention": "mixedCase",
+          "name": "AddMessage",
+          "source_mapping": {
+            "start": 1005,
+            "length": 227,
+            "filename": "/../data/reentrancy/solidity_contract/28687.sol",
+            "lines": [
+              55,
+              56,
+              57,
+              58,
+              59,
+              60,
+              61,
+              62,
+              63
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "naming-convention",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Parameter '_adr' of Log.AddMessage (/../data/reentrancy/solidity_contract/28687.sol#55) is not in mixedCase\n",
+      "elements": [
+        {
+          "target": "parameter",
+          "convention": "mixedCase",
+          "name": "_adr",
+          "source_mapping": {
+            "start": 1025,
+            "length": 12,
+            "filename": "/../data/reentrancy/solidity_contract/28687.sol",
+            "lines": [
+              55
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "naming-convention",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Parameter '_val' of Log.AddMessage (/../data/reentrancy/solidity_contract/28687.sol#55) is not in mixedCase\n",
+      "elements": [
+        {
+          "target": "parameter",
+          "convention": "mixedCase",
+          "name": "_val",
+          "source_mapping": {
+            "start": 1038,
+            "length": 9,
+            "filename": "/../data/reentrancy/solidity_contract/28687.sol",
+            "lines": [
+              55
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "naming-convention",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Parameter '_data' of Log.AddMessage (/../data/reentrancy/solidity_contract/28687.sol#55) is not in mixedCase\n",
+      "elements": [
+        {
+          "target": "parameter",
+          "convention": "mixedCase",
+          "name": "_data",
+          "source_mapping": {
+            "start": 1048,
+            "length": 12,
+            "filename": "/../data/reentrancy/solidity_contract/28687.sol",
+            "lines": [
+              55
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "naming-convention",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Variable 'Log.History' (/../data/reentrancy/solidity_contract/28687.sol#51) is not in mixedCase\n",
+      "elements": [
+        {
+          "target": "variable",
+          "convention": "mixedCase",
+          "name": "History",
+          "source_mapping": {
+            "start": 944,
+            "length": 24,
+            "filename": "/../data/reentrancy/solidity_contract/28687.sol",
+            "lines": [
+              51
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "naming-convention",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Variable 'Log.LastMsg' (/../data/reentrancy/solidity_contract/28687.sol#53) is not in mixedCase\n",
+      "elements": [
+        {
+          "target": "variable",
+          "convention": "mixedCase",
+          "name": "LastMsg",
+          "source_mapping": {
+            "start": 979,
+            "length": 15,
+            "filename": "/../data/reentrancy/solidity_contract/28687.sol",
+            "lines": [
+              53
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

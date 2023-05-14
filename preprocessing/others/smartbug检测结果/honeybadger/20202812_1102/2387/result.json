@@ -1,0 +1,19 @@
+{
+  "contract": "2387",
+  "tool": "honeybadger",
+  "start": 1609176133.963299,
+  "end": 1609176152.8624341,
+  "duration": 18.89913511276245,
+  "analysis": [
+    {
+      "errors": [],
+      "file": "/../data/reentrancy/solidity_contract/2387.sol",
+      "name": "AddressExtension"
+    },
+    {
+      "errors": [],
+      "file": "/../data/reentrancy/solidity_contract/2387.sol",
+      "name": "ERC20Like"
+    }
+  ]
+}

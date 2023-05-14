@@ -1,0 +1,39 @@
+INFO:Detectors:[91m
+Reentrancy in safeSend.doSafeSendWData (/../data/reentrancy/solidity_contract/9611.sol#21-26):
+	External calls:
+	- require(bool,string)(toAddr.call.value(amount)(data),ss-failed) (/../data/reentrancy/solidity_contract/9611.sol#24)
+	State variables written after the call(s):
+	- txMutex3847834 (/../data/reentrancy/solidity_contract/9611.sol#25)
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#reentrancy-vulnerabilities[0m
+INFO:Detectors:[92m
+permissioned.hasPermissions (/../data/reentrancy/solidity_contract/9611.sol#248-250) should be declared external
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#public-function-that-could-be-declared-as-external[0m
+INFO:Detectors:[92m
+Low level call in safeSend.doSafeSendWData (/../data/reentrancy/solidity_contract/9611.sol#21-26):
+	-require(bool,string)(toAddr.call.value(amount)(data),ss-failed) /../data/reentrancy/solidity_contract/9611.sol#24
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#low-level-calls[0m
+INFO:Detectors:[92m
+Contract 'safeSend' (/../data/reentrancy/solidity_contract/9611.sol#12-27) is not in CapWords
+Contract 'payoutAllC' (/../data/reentrancy/solidity_contract/9611.sol#29-54) is not in CapWords
+Function 'payoutAllC._getPayTo' (/../data/reentrancy/solidity_contract/9611.sol#40-42) is not in mixedCase
+Function 'payoutAllC._setPayTo' (/../data/reentrancy/solidity_contract/9611.sol#44-46) is not in mixedCase
+Contract 'payoutAllCSettable' (/../data/reentrancy/solidity_contract/9611.sol#56-64) is not in CapWords
+Parameter '' of payoutAllCSettable.setPayTo (/../data/reentrancy/solidity_contract/9611.sol#60) is not in mixedCase
+Contract 'owned' (/../data/reentrancy/solidity_contract/9611.sol#66-89) is not in CapWords
+Modifier 'owned.only_owner' (/../data/reentrancy/solidity_contract/9611.sol#71-74) is not in mixedCase
+Modifier 'owned.owner_or' (/../data/reentrancy/solidity_contract/9611.sol#76-79) is not in mixedCase
+Parameter '' of CommunityAuctionSimple.getNextPrice (/../data/reentrancy/solidity_contract/9611.sol#103) is not in mixedCase
+Contract 'controlledIface' (/../data/reentrancy/solidity_contract/9611.sol#126-128) is not in CapWords
+Contract 'hasAdmins' (/../data/reentrancy/solidity_contract/9611.sol#130-199) is not in CapWords
+Parameter '_givePerms' of hasAdmins.setAdmin (/../data/reentrancy/solidity_contract/9611.sol#170) is not in mixedCase
+Function 'hasAdmins._setAdmin' (/../data/reentrancy/solidity_contract/9611.sol#175-183) is not in mixedCase
+Parameter '_givePerms' of hasAdmins._setAdmin (/../data/reentrancy/solidity_contract/9611.sol#175) is not in mixedCase
+Modifier 'hasAdmins.only_admin' (/../data/reentrancy/solidity_contract/9611.sol#141-145) is not in mixedCase
+Contract 'permissioned' (/../data/reentrancy/solidity_contract/9611.sol#201-257) is not in CapWords
+Parameter '_editPerms' of permissioned.setPermissions (/../data/reentrancy/solidity_contract/9611.sol#227) is not in mixedCase
+Modifier 'permissioned.only_editors' (/../data/reentrancy/solidity_contract/9611.sol#212-215) is not in mixedCase
+Modifier 'permissioned.no_lockdown' (/../data/reentrancy/solidity_contract/9611.sol#217-220) is not in mixedCase
+Contract 'upgradePtr' (/../data/reentrancy/solidity_contract/9611.sol#259-274) is not in CapWords
+Modifier 'upgradePtr.not_upgraded' (/../data/reentrancy/solidity_contract/9611.sol#262-265) is not in mixedCase
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#conformance-to-solidity-naming-conventions[0m
+INFO:Slither:/../data/reentrancy/solidity_contract/9611.sol analyzed (11 contracts), 25 result(s) found

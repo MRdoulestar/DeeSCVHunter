@@ -1,0 +1,76 @@
+{
+  "contract": "14274",
+  "tool": "osiris",
+  "start": 1609171097.743422,
+  "end": 1609171148.656372,
+  "duration": 50.91295003890991,
+  "analysis": [
+    {
+      "errors": [
+        {
+          "line": 410,
+          "column": 7,
+          "message": "concurrency_bug"
+        },
+        {
+          "line": 386,
+          "column": 7,
+          "message": "concurrency_bug"
+        },
+        {
+          "line": 386,
+          "column": 7,
+          "message": "reentrancy_bug"
+        },
+        {
+          "line": 404,
+          "column": 18,
+          "message": "reentrancy_bug"
+        },
+        {
+          "line": 400,
+          "column": 5,
+          "message": "reentrancy_bug"
+        }
+      ],
+      "file": "/../data/reentrancy/solidity_contract/14274.sol",
+      "name": "InstantTrade"
+    },
+    {
+      "errors": [],
+      "file": "/../data/reentrancy/solidity_contract/14274.sol",
+      "name": "Ownable"
+    },
+    {
+      "errors": [],
+      "file": "/../data/reentrancy/solidity_contract/14274.sol",
+      "name": "SafeMath"
+    },
+    {
+      "errors": [
+        {
+          "line": 182,
+          "column": 10,
+          "message": "concurrency_bug"
+        },
+        {
+          "line": 321,
+          "column": 7,
+          "message": "concurrency_bug"
+        },
+        {
+          "line": 182,
+          "column": 10,
+          "message": "reentrancy_bug"
+        },
+        {
+          "line": 321,
+          "column": 7,
+          "message": "reentrancy_bug"
+        }
+      ],
+      "file": "/../data/reentrancy/solidity_contract/14274.sol",
+      "name": "TokenStore"
+    }
+  ]
+}

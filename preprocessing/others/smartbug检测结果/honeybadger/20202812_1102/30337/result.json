@@ -1,0 +1,19 @@
+{
+  "contract": "30337",
+  "tool": "honeybadger",
+  "start": 1609154390.5437062,
+  "end": 1609154424.0353332,
+  "duration": 33.49162697792053,
+  "analysis": [
+    {
+      "errors": [],
+      "file": "/../data/reentrancy/solidity_contract/30337.sol",
+      "name": "CertificationDb"
+    },
+    {
+      "errors": [],
+      "file": "/../data/reentrancy/solidity_contract/30337.sol",
+      "name": "Owned"
+    }
+  ]
+}

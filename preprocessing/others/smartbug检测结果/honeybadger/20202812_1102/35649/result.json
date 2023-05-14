@@ -1,0 +1,19 @@
+{
+  "contract": "35649",
+  "tool": "honeybadger",
+  "start": 1609148263.687212,
+  "end": 1609148272.185388,
+  "duration": 8.498176097869873,
+  "analysis": [
+    {
+      "errors": [],
+      "file": "/../data/reentrancy/solidity_contract/35649.sol",
+      "name": "DSSafeAddSub"
+    },
+    {
+      "errors": [],
+      "file": "/../data/reentrancy/solidity_contract/35649.sol",
+      "name": "MyDice"
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "contract": "Bank_attack",
+  "tool": "osiris",
+  "start": 1609150242.155193,
+  "end": 1609150247.456886,
+  "duration": 5.301692962646484,
+  "analysis": [
+    {
+      "errors": [
+        {
+          "line": 11,
+          "column": 13,
+          "message": "concurrency_bug"
+        },
+        {
+          "line": 11,
+          "column": 13,
+          "message": "reentrancy_bug"
+        },
+        {
+          "line": 16,
+          "column": 9,
+          "message": "reentrancy_bug"
+        }
+      ],
+      "file": "/../data/reentrancy/solidity_contract/Bank_attack.sol",
+      "name": "Attack"
+    }
+  ]
+}

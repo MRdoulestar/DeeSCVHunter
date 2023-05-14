@@ -1,0 +1,60 @@
+{
+  "contract": "18438",
+  "tool": "osiris",
+  "start": 1609199268.358117,
+  "end": 1609199273.7374852,
+  "duration": 5.37936806678772,
+  "analysis": [
+    {
+      "errors": [
+        {
+          "line": 62,
+          "column": 21,
+          "message": "concurrency_bug"
+        },
+        {
+          "line": 62,
+          "column": 21,
+          "message": "concurrency_bug"
+        },
+        {
+          "line": 63,
+          "column": 13,
+          "message": "concurrency_bug"
+        },
+        {
+          "line": 62,
+          "column": 21,
+          "message": "reentrancy_bug"
+        },
+        {
+          "line": 83,
+          "column": 17,
+          "message": "reentrancy_bug"
+        },
+        {
+          "line": 87,
+          "column": 9,
+          "message": "reentrancy_bug"
+        },
+        {
+          "line": 63,
+          "column": 13,
+          "message": "reentrancy_bug"
+        },
+        {
+          "line": 91,
+          "column": 9,
+          "message": "reentrancy_bug"
+        }
+      ],
+      "file": "/../data/reentrancy/solidity_contract/18438.sol",
+      "name": "BoomerangLiquidity"
+    },
+    {
+      "errors": [],
+      "file": "/../data/reentrancy/solidity_contract/18438.sol",
+      "name": "Owned"
+    }
+  ]
+}

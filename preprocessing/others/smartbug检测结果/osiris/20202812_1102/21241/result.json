@@ -1,0 +1,45 @@
+{
+  "contract": "21241",
+  "tool": "osiris",
+  "start": 1609200787.740724,
+  "end": 1609200810.86683,
+  "duration": 23.126106023788452,
+  "analysis": [
+    {
+      "errors": [
+        {
+          "line": 151,
+          "column": 3,
+          "message": "concurrency_bug"
+        },
+        {
+          "line": 161,
+          "column": 3,
+          "message": "concurrency_bug"
+        },
+        {
+          "line": 93,
+          "column": 3,
+          "message": "time_dependency_bug"
+        },
+        {
+          "line": 88,
+          "column": 36,
+          "message": "time_dependency_bug"
+        },
+        {
+          "line": 88,
+          "column": 3,
+          "message": "time_dependency_bug"
+        }
+      ],
+      "file": "/../data/reentrancy/solidity_contract/21241.sol",
+      "name": "AuctusTokenSale"
+    },
+    {
+      "errors": [],
+      "file": "/../data/reentrancy/solidity_contract/21241.sol",
+      "name": "SafeMath"
+    }
+  ]
+}

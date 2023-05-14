@@ -1,0 +1,39 @@
+{
+  "contract": "14620",
+  "tool": "honeybadger",
+  "start": 1609127116.6495528,
+  "end": 1609127189.409742,
+  "duration": 72.76018929481506,
+  "analysis": [
+    {
+      "errors": [],
+      "file": "/../data/reentrancy/solidity_contract/14620.sol",
+      "name": "BasicToken"
+    },
+    {
+      "errors": [],
+      "file": "/../data/reentrancy/solidity_contract/14620.sol",
+      "name": "MintableToken"
+    },
+    {
+      "errors": [],
+      "file": "/../data/reentrancy/solidity_contract/14620.sol",
+      "name": "Ownable"
+    },
+    {
+      "errors": [],
+      "file": "/../data/reentrancy/solidity_contract/14620.sol",
+      "name": "SafeMath"
+    },
+    {
+      "errors": [],
+      "file": "/../data/reentrancy/solidity_contract/14620.sol",
+      "name": "StandardToken"
+    },
+    {
+      "errors": [],
+      "file": "/../data/reentrancy/solidity_contract/14620.sol",
+      "name": "TokensGate"
+    }
+  ]
+}

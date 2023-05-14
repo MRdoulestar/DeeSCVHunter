@@ -1,0 +1,24 @@
+{
+  "contract": "14994",
+  "tool": "honeybadger",
+  "start": 1609201057.5344481,
+  "end": 1609201365.1415648,
+  "duration": 307.60711669921875,
+  "analysis": [
+    {
+      "errors": [],
+      "file": "/../data/reentrancy/solidity_contract/14994.sol",
+      "name": "DividendToken"
+    },
+    {
+      "errors": [],
+      "file": "/../data/reentrancy/solidity_contract/14994.sol",
+      "name": "ERC20"
+    },
+    {
+      "errors": [],
+      "file": "/../data/reentrancy/solidity_contract/14994.sol",
+      "name": "ERC667"
+    }
+  ]
+}

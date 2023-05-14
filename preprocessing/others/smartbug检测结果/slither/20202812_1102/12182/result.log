@@ -1,0 +1,108 @@
+INFO:Slither:Compilation warnings/errors on /../data/reentrancy/solidity_contract/12182.sol:
+/../data/reentrancy/solidity_contract/12182.sol:24:5: Warning: Functions in interfaces should be declared external.
+    function handleTokens(Token _token) public returns (bool);
+    ^--------------------------------------------------------^
+/../data/reentrancy/solidity_contract/12182.sol:229:23: Warning: Using contract member "balance" inherited from the address type is deprecated. Convert the contract to "address" type to access the member, for example use "address(contract).balance" instead.
+            balance = wallet.balance;
+                      ^------------^
+/../data/reentrancy/solidity_contract/12182.sol:236:9: Warning: Return value of low-level calls not used.
+        forward.call.value(address(this).balance)();
+        ^-----------------------------------------^
+/../data/reentrancy/solidity_contract/12182.sol:137:5: Warning: No visibility specified. Defaulting to "public". 
+    function transfer(address _to, uint _value) returns (bool success);
+    ^-----------------------------------------------------------------^
+/../data/reentrancy/solidity_contract/12182.sol:138:5: Warning: No visibility specified. Defaulting to "public". 
+    function transferFrom(address _from, address _to, uint256 _value) returns (bool success);
+    ^---------------------------------------------------------------------------------------^
+/../data/reentrancy/solidity_contract/12182.sol:139:5: Warning: No visibility specified. Defaulting to "public". 
+    function allowance(address _owner, address _spender) constant returns (uint256 remaining);
+    ^----------------------------------------------------------------------------------------^
+/../data/reentrancy/solidity_contract/12182.sol:140:5: Warning: No visibility specified. Defaulting to "public". 
+    function approve(address _spender, uint256 _value) returns (bool success);
+    ^------------------------------------------------------------------------^
+
+INFO:Detectors:[91m
+WalletStorage.owner (/../data/reentrancy/solidity_contract/12182.sol#89) is never initialized. It is used in:
+	- transferERC20Token (/../data/reentrancy/solidity_contract/12182.sol#163-166)
+	- transferEther (/../data/reentrancy/solidity_contract/12182.sol#168-171)
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#uninitialized-state-variables[0m
+INFO:Detectors:[93m
+Contract locking ether found in /../data/reentrancy/solidity_contract/12182.sol:
+	Contract ControllerProxy has payable functions:
+	 - fallback (/../data/reentrancy/solidity_contract/12182.sol#129-133)
+	But does not have a function to withdraw the ether
+Contract locking ether found in /../data/reentrancy/solidity_contract/12182.sol:
+	Contract WalletProxy has payable functions:
+	 - fallback (/../data/reentrancy/solidity_contract/12182.sol#152-159)
+	But does not have a function to withdraw the ether
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#contracts-that-lock-ether[0m
+INFO:Detectors:[93m
+Controller.withdrawERC20 (/../data/reentrancy/solidity_contract/12182.sol#242-251) does not use the value returned by external calls:
+	-TokenHandler(forward).handleTokens(token) (/../data/reentrancy/solidity_contract/12182.sol#250)
+Controller.withdrawERC20Batch (/../data/reentrancy/solidity_contract/12182.sol#254-271) does not use the value returned by external calls:
+	-TokenHandler(forward).handleTokens(token) (/../data/reentrancy/solidity_contract/12182.sol#268)
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#unused-return[0m
+INFO:Detectors:[92m
+Controller.withdrawEthBatch has external calls inside a loop:
+	- wallet.transferEther(this,balance) (/../data/reentrancy/solidity_contract/12182.sol#231-233)
+Controller.withdrawERC20Batch has external calls inside a loop:
+	- balance = token.balanceOf(wallet) (/../data/reentrancy/solidity_contract/12182.sol#261)
+Controller.withdrawERC20Batch has external calls inside a loop:
+	- wallet.transferERC20Token(token,forward,balance) (/../data/reentrancy/solidity_contract/12182.sol#263-265)
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation/_edit#calls-inside-a-loop[0m
+INFO:Detectors:[92m
+DelegateProxy.delegatedFwd uses assembly (/../data/reentrancy/solidity_contract/12182.sol#94-107)
+	- /../data/reentrancy/solidity_contract/12182.sol#95-107
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#assembly-usage[0m
+INFO:Detectors:[92m
+Ownable.setOwner (/../data/reentrancy/solidity_contract/12182.sol#16-20) should be declared external
+TokenHandler.handleTokens (/../data/reentrancy/solidity_contract/12182.sol#24) should be declared external
+HasWorkers.allWorkers (/../data/reentrancy/solidity_contract/12182.sol#52-57) should be declared external
+HasWorkers.addWorker (/../data/reentrancy/solidity_contract/12182.sol#59-65) should be declared external
+HasWorkers.removeWorker (/../data/reentrancy/solidity_contract/12182.sol#67-77) should be declared external
+ControllerProxy.getDelegate (/../data/reentrancy/solidity_contract/12182.sol#115-117) should be declared external
+DelegateProvider.getDelegate (/../data/reentrancy/solidity_contract/12182.sol#111) should be declared external
+ControllerProxy.setWalletsDelegate (/../data/reentrancy/solidity_contract/12182.sol#119-122) should be declared external
+ControllerProxy.setControllerDelegate (/../data/reentrancy/solidity_contract/12182.sol#124-127) should be declared external
+ControllerProxy.fallback (/../data/reentrancy/solidity_contract/12182.sol#129-133) should be declared external
+Token.transfer (/../data/reentrancy/solidity_contract/12182.sol#137) should be declared external
+Token.transferFrom (/../data/reentrancy/solidity_contract/12182.sol#138) should be declared external
+Token.allowance (/../data/reentrancy/solidity_contract/12182.sol#139) should be declared external
+Token.approve (/../data/reentrancy/solidity_contract/12182.sol#140) should be declared external
+Token.increaseApproval (/../data/reentrancy/solidity_contract/12182.sol#141) should be declared external
+Token.balanceOf (/../data/reentrancy/solidity_contract/12182.sol#142) should be declared external
+WalletProxy.fallback (/../data/reentrancy/solidity_contract/12182.sol#152-159) should be declared external
+Wallet.transferERC20Token (/../data/reentrancy/solidity_contract/12182.sol#163-166) should be declared external
+Wallet.transferEther (/../data/reentrancy/solidity_contract/12182.sol#168-171) should be declared external
+Wallet.fallback (/../data/reentrancy/solidity_contract/12182.sol#173) should be declared external
+Controller.executeTransaction (/../data/reentrancy/solidity_contract/12182.sol#189-191) should be declared external
+Controller.createWallets (/../data/reentrancy/solidity_contract/12182.sol#201-208) should be declared external
+Controller.withdrawEth (/../data/reentrancy/solidity_contract/12182.sol#211-218) should be declared external
+Controller.withdrawEthBatch (/../data/reentrancy/solidity_contract/12182.sol#221-239) should be declared external
+Controller.withdrawERC20 (/../data/reentrancy/solidity_contract/12182.sol#242-251) should be declared external
+Controller.withdrawERC20Batch (/../data/reentrancy/solidity_contract/12182.sol#254-271) should be declared external
+Controller.fallback (/../data/reentrancy/solidity_contract/12182.sol#273) should be declared external
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#public-function-that-could-be-declared-as-external[0m
+INFO:Detectors:[92m
+Detected issues with version pragma in /../data/reentrancy/solidity_contract/12182.sol:
+	- pragma solidity^0.4.23 (/../data/reentrancy/solidity_contract/12182.sol#1): it allows old versions
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#incorrect-version-of-solidity[0m
+INFO:Detectors:[92m
+Low level call in Wallet.transferEther (/../data/reentrancy/solidity_contract/12182.sol#168-171):
+	-to.call.value(amount)() /../data/reentrancy/solidity_contract/12182.sol#170
+Low level call in Controller.executeTransaction (/../data/reentrancy/solidity_contract/12182.sol#189-191):
+	-destination.call.value(value)(_bytes) /../data/reentrancy/solidity_contract/12182.sol#190
+Low level call in Controller.withdrawEthBatch (/../data/reentrancy/solidity_contract/12182.sol#221-239):
+	-forward.call.value(address(this).balance)() /../data/reentrancy/solidity_contract/12182.sol#236
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#low-level-calls[0m
+INFO:Detectors:[92m
+Parameter '_owner' of Ownable.setOwner (/../data/reentrancy/solidity_contract/12182.sol#16) is not in mixedCase
+Parameter '_worker' of HasWorkers.isWorker (/../data/reentrancy/solidity_contract/12182.sol#48) is not in mixedCase
+Parameter '_worker' of HasWorkers.addWorker (/../data/reentrancy/solidity_contract/12182.sol#59) is not in mixedCase
+Parameter '_worker' of HasWorkers.removeWorker (/../data/reentrancy/solidity_contract/12182.sol#67) is not in mixedCase
+Parameter '_delegate' of ControllerProxy.setWalletsDelegate (/../data/reentrancy/solidity_contract/12182.sol#119) is not in mixedCase
+Parameter '_delegate' of ControllerProxy.setControllerDelegate (/../data/reentrancy/solidity_contract/12182.sol#124) is not in mixedCase
+Parameter '_bytes' of Controller.executeTransaction (/../data/reentrancy/solidity_contract/12182.sol#189) is not in mixedCase
+Parameter '_forward' of Controller.setForward (/../data/reentrancy/solidity_contract/12182.sol#194) is not in mixedCase
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#conformance-to-solidity-naming-conventions[0m
+INFO:Slither:/../data/reentrancy/solidity_contract/12182.sol analyzed (12 contracts), 48 result(s) found

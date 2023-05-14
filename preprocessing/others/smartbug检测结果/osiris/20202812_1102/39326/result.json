@@ -1,0 +1,55 @@
+{
+  "contract": "39326",
+  "tool": "osiris",
+  "start": 1609185693.380633,
+  "end": 1609185781.652384,
+  "duration": 88.27175092697144,
+  "analysis": [
+    {
+      "errors": [],
+      "file": "/../data/reentrancy/solidity_contract/39326.sol",
+      "name": "Builder"
+    },
+    {
+      "errors": [],
+      "file": "/../data/reentrancy/solidity_contract/39326.sol",
+      "name": "BuilderCongress"
+    },
+    {
+      "errors": [
+        {
+          "line": 117,
+          "column": 5,
+          "message": "truncation_bugs"
+        }
+      ],
+      "file": "/../data/reentrancy/solidity_contract/39326.sol",
+      "name": "Congress"
+    },
+    {
+      "errors": [],
+      "file": "/../data/reentrancy/solidity_contract/39326.sol",
+      "name": "CreatorCongress"
+    },
+    {
+      "errors": [],
+      "file": "/../data/reentrancy/solidity_contract/39326.sol",
+      "name": "Destroyable"
+    },
+    {
+      "errors": [],
+      "file": "/../data/reentrancy/solidity_contract/39326.sol",
+      "name": "Object"
+    },
+    {
+      "errors": [],
+      "file": "/../data/reentrancy/solidity_contract/39326.sol",
+      "name": "Owned"
+    },
+    {
+      "errors": [],
+      "file": "/../data/reentrancy/solidity_contract/39326.sol",
+      "name": "Recipient"
+    }
+  ]
+}

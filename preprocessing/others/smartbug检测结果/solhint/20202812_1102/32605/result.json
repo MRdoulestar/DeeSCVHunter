@@ -1,0 +1,25 @@
+{
+  "contract": "32605",
+  "tool": "solhint",
+  "start": 1609203080.5709288,
+  "end": 1609203081.82453,
+  "duration": 1.25360107421875,
+  "analysis": [
+    {
+      "file": "/data/reentrancy/solidity_contract/32605.sol",
+      "line": "143",
+      "column": "2",
+      "message": "Line length must be no more than 120 but current length is 139.",
+      "level": "Error",
+      "type": "max-line-length"
+    },
+    {
+      "file": "/data/reentrancy/solidity_contract/32605.sol",
+      "line": "163",
+      "column": "2",
+      "message": "Line length must be no more than 120 but current length is 150.",
+      "level": "Error",
+      "type": "max-line-length"
+    }
+  ]
+}

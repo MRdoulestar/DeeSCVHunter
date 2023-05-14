@@ -1,0 +1,25 @@
+{
+  "contract": "7530",
+  "tool": "osiris",
+  "start": 1609129432.801475,
+  "end": 1609129489.817021,
+  "duration": 57.01554584503174,
+  "analysis": [
+    {
+      "errors": [
+        {
+          "line": 716,
+          "column": 9,
+          "message": "callstack_bug"
+        }
+      ],
+      "file": "/../data/reentrancy/solidity_contract/7530.sol",
+      "name": "MyWill"
+    },
+    {
+      "errors": [],
+      "file": "/../data/reentrancy/solidity_contract/7530.sol",
+      "name": "strings"
+    }
+  ]
+}

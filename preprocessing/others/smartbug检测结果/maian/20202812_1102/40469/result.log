@@ -1,0 +1,709 @@
+====================================================================================================
+[1m[ ] Compiling Solidity contract from the file /../data/reentrancy/solidity_contract/40469.sol ... [0m/../data/reentrancy/solidity_contract/40469.sol:7:37: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function owner(bytes32 _symbol) constant returns(address);
+                                    ^------^
+/../data/reentrancy/solidity_contract/40469.sol:8:41: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function isCreated(bytes32 _symbol) constant returns(bool);
+                                        ^------^
+/../data/reentrancy/solidity_contract/40469.sol:9:43: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function totalSupply(bytes32 _symbol) constant returns(uint);
+                                          ^------^
+/../data/reentrancy/solidity_contract/40469.sol:10:58: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function balanceOf(address _holder, bytes32 _symbol) constant returns(uint);
+                                                         ^------^
+/../data/reentrancy/solidity_contract/40469.sol:15:74: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function allowance(address _from, address _spender, bytes32 _symbol) constant returns(uint);
+                                                                         ^------^
+/../data/reentrancy/solidity_contract/40469.sol:44:28: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function totalSupply() constant returns(uint) {
+                           ^------^
+/../data/reentrancy/solidity_contract/40469.sol:48:40: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function balanceOf(address _owner) constant returns(uint) {
+                                       ^------^
+/../data/reentrancy/solidity_contract/40469.sol:52:57: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function allowance(address _from, address _spender) constant returns(uint) {
+                                                        ^------^
+/../data/reentrancy/solidity_contract/40469.sol:128:38: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function getNodeAddress(bytes32) constant returns(address);
+                                     ^------^
+/../data/reentrancy/solidity_contract/40469.sol:130:53: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function hasRelation(bytes32, bytes32, address) constant returns(bool);
+                                                    ^------^
+/../data/reentrancy/solidity_contract/40469.sol:143:40: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function getAddress(bytes32 _name) constant returns (address) {
+                                       ^------^
+/../data/reentrancy/solidity_contract/40469.sol:244:41: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function _stringGas(string _string) constant internal returns(uint) {
+                                        ^------^
+/../data/reentrancy/solidity_contract/40469.sol:400:54: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function checkTransfer(address _to, uint _value) constant returns(bool, bool) {
+                                                     ^------^
+/../data/reentrancy/solidity_contract/40469.sol:404:73: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function checkTransferFrom(address _from, address _to, uint _value) constant returns(bool, bool) {
+                                                                        ^------^
+/../data/reentrancy/solidity_contract/40469.sol:408:62: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function checkTransferToICAP(bytes32 _icap, uint _value) constant returns(bool, bool) {
+                                                             ^------^
+/../data/reentrancy/solidity_contract/40469.sol:412:81: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function checkTransferFromToICAP(address _from, bytes32 _icap, uint _value) constant returns(bool, bool) {
+                                                                                ^------^
+/../data/reentrancy/solidity_contract/40469.sol:416:86: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function checkTransferWithReference(address _to, uint _value, string _reference) constant returns(bool, bool) {
+                                                                                     ^------^
+/../data/reentrancy/solidity_contract/40469.sol:420:105: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function checkTransferFromWithReference(address _from, address _to, uint _value, string _reference) constant returns(bool, bool) {
+                                                                                                        ^------^
+/../data/reentrancy/solidity_contract/40469.sol:424:94: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function checkTransferToICAPWithReference(bytes32 _icap, uint _value, string _reference) constant returns(bool, bool) {
+                                                                                             ^------^
+/../data/reentrancy/solidity_contract/40469.sol:428:113: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function checkTransferFromToICAPWithReference(address _from, bytes32 _icap, uint _value, string _reference) constant returns(bool, bool) {
+                                                                                                                ^------^
+/../data/reentrancy/solidity_contract/40469.sol:432:58: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function checkApprove(address _spender, uint _value) constant returns(bool, bool) {
+                                                         ^------^
+/../data/reentrancy/solidity_contract/40469.sol:436:57: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function checkSetCosignerAddress(address _cosigner) constant returns(bool, bool) {
+                                                        ^------^
+
+[91m[-] Cannot compile the contract [0m
+
+====================================================================================================
+[1m[ ] Compiling Solidity contract from the file /../data/reentrancy/solidity_contract/40469.sol ... [0m/../data/reentrancy/solidity_contract/40469.sol:7:37: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function owner(bytes32 _symbol) constant returns(address);
+                                    ^------^
+/../data/reentrancy/solidity_contract/40469.sol:8:41: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function isCreated(bytes32 _symbol) constant returns(bool);
+                                        ^------^
+/../data/reentrancy/solidity_contract/40469.sol:9:43: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function totalSupply(bytes32 _symbol) constant returns(uint);
+                                          ^------^
+/../data/reentrancy/solidity_contract/40469.sol:10:58: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function balanceOf(address _holder, bytes32 _symbol) constant returns(uint);
+                                                         ^------^
+/../data/reentrancy/solidity_contract/40469.sol:15:74: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function allowance(address _from, address _spender, bytes32 _symbol) constant returns(uint);
+                                                                         ^------^
+/../data/reentrancy/solidity_contract/40469.sol:44:28: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function totalSupply() constant returns(uint) {
+                           ^------^
+/../data/reentrancy/solidity_contract/40469.sol:48:40: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function balanceOf(address _owner) constant returns(uint) {
+                                       ^------^
+/../data/reentrancy/solidity_contract/40469.sol:52:57: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function allowance(address _from, address _spender) constant returns(uint) {
+                                                        ^------^
+/../data/reentrancy/solidity_contract/40469.sol:128:38: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+
+[91m[-] Cannot compile the contract [0m
+
+====================================================================================================
+[1m[ ] Compiling Solidity contract from the file /../data/reentrancy/solidity_contract/40469.sol ... [0m/../data/reentrancy/solidity_contract/40469.sol:7:37: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function owner(bytes32 _symbol) constant returns(address);
+                                    ^------^
+/../data/reentrancy/solidity_contract/40469.sol:8:41: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function isCreated(bytes32 _symbol) constant returns(bool);
+                                        ^------^
+/../data/reentrancy/solidity_contract/40469.sol:9:43: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function totalSupply(bytes32 _symbol) constant returns(uint);
+                                          ^------^
+/../data/reentrancy/solidity_contract/40469.sol:10:58: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function balanceOf(address _holder, bytes32 _symbol) constant returns(uint);
+                                                         ^------^
+/../data/reentrancy/solidity_contract/40469.sol:15:74: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function allowance(address _from, address _spender, bytes32 _symbol) constant returns(uint);
+                                                                         ^------^
+
+[91m[-] Cannot compile the contract [0m
+
+====================================================================================================
+[1m[ ] Compiling Solidity contract from the file /../data/reentrancy/solidity_contract/40469.sol ... [0m/../data/reentrancy/solidity_contract/40469.sol:7:37: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function owner(bytes32 _symbol) constant returns(address);
+                                    ^------^
+/../data/reentrancy/solidity_contract/40469.sol:8:41: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function isCreated(bytes32 _symbol) constant returns(bool);
+                                        ^------^
+/../data/reentrancy/solidity_contract/40469.sol:9:43: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function totalSupply(bytes32 _symbol) constant returns(uint);
+                                          ^------^
+/../data/reentrancy/solidity_contract/40469.sol:10:58: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function balanceOf(address _holder, bytes32 _symbol) constant returns(uint);
+                                                         ^------^
+/../data/reentrancy/solidity_contract/40469.sol:15:74: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function allowance(address _from, address _spender, bytes32 _symbol) constant returns(uint);
+                                                                         ^------^
+/../data/reentrancy/solidity_contract/40469.sol:44:28: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function totalSupply() constant returns(uint) {
+                           ^------^
+/../data/reentrancy/solidity_contract/40469.sol:48:40: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function balanceOf(address _owner) constant returns(uint) {
+                                       ^------^
+/../data/reentrancy/solidity_contract/40469.sol:52:57: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function allowance(address _from, address _spender) constant returns(uint) {
+                                                        ^------^
+/../data/reentrancy/solidity_contract/40469.sol:128:38: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function getNodeAddress(bytes32) constant returns(address);
+                                     ^------^
+/../data/reentrancy/solidity_contract/40469.sol:130:53: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function hasRelation(bytes32, bytes32, address) constant returns(bool);
+                                                    ^------^
+/../data/reentrancy/solidity_contract/40469.sol:143:40: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function getAddress(bytes32 _name) constant returns (address) {
+                                       ^------^
+/../data/reentrancy/solidity_contract/40469.sol:244:41: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function _stringGas(string _string) constant internal returns(uint) {
+                                        ^------^
+/../data/reentrancy/solidity_contract/40469.sol:400:54: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function checkTransfer(address _to, uint _value) constant returns(bool, bool) {
+                                                     ^------^
+/../data/reentrancy/solidity_contract/40469.sol:404:73: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function checkTransferFrom(address _from, address _to, uint _value) constant returns(bool, bool) {
+                                                                        ^------^
+/../data/reentrancy/solidity_contract/40469.sol:408:62: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function checkTransferToICAP(bytes32 _icap, uint _value) constant returns(bool, bool) {
+                                                             ^------^
+/../data/reentrancy/solidity_contract/40469.sol:412:81: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function checkTransferFromToICAP(address _from, bytes32 _icap, uint _value) constant returns(bool, bool) {
+                                                                                ^------^
+/../data/reentrancy/solidity_contract/40469.sol:416:86: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function checkTransferWithReference(address _to, uint _value, string _reference) constant returns(bool, bool) {
+                                                                                     ^------^
+/../data/reentrancy/solidity_contract/40469.sol:420:105: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function checkTransferFromWithReference(address _from, address _to, uint _value, string _reference) constant returns(bool, bool) {
+                                                                                                        ^------^
+/../data/reentrancy/solidity_contract/40469.sol:424:94: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function checkTransferToICAPWithReference(bytes32 _icap, uint _value, string _reference) constant returns(bool, bool) {
+                                                                                             ^------^
+/../data/reentrancy/solidity_contract/40469.sol:428:113: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function checkTransferFromToICAPWithReference(address _from, bytes32 _icap, uint _value, string _reference) constant returns(bool, bool) {
+                                                                                                                ^------^
+/../data/reentrancy/solidity_contract/40469.sol:432:58: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function checkApprove(address _spender, uint _value) constant returns(bool, bool) {
+                                                         ^------^
+/../data/reentrancy/solidity_contract/40469.sol:436:57: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function checkSetCosignerAddress(address _cosigner) constant returns(bool, bool) {
+                                                        ^------^
+
+[91m[-] Cannot compile the contract [0m
+
+====================================================================================================
+[1m[ ] Compiling Solidity contract from the file /../data/reentrancy/solidity_contract/40469.sol ... [0m/../data/reentrancy/solidity_contract/40469.sol:7:37: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+
+[91m[-] Cannot compile the contract [0m
+
+====================================================================================================
+[1m[ ] Compiling Solidity contract from the file /../data/reentrancy/solidity_contract/40469.sol ... [0m/../data/reentrancy/solidity_contract/40469.sol:7:37: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function owner(bytes32 _symbol) constant returns(address);
+                                    ^------^
+/../data/reentrancy/solidity_contract/40469.sol:8:41: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function isCreated(bytes32 _symbol) constant returns(bool);
+                                        ^------^
+/../data/reentrancy/solidity_contract/40469.sol:9:43: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function totalSupply(bytes32 _symbol) constant returns(uint);
+                                          ^------^
+/../data/reentrancy/solidity_contract/40469.sol:10:58: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function balanceOf(address _holder, bytes32 _symbol) constant returns(uint);
+                                                         ^------^
+/../data/reentrancy/solidity_contract/40469.sol:15:74: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function allowance(address _from, address _spender, bytes32 _symbol) constant returns(uint);
+                                                                         ^------^
+/../data/reentrancy/solidity_contract/40469.sol:44:28: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function totalSupply() constant returns(uint) {
+                           ^------^
+/../data/reentrancy/solidity_contract/40469.sol:48:40: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+
+[91m[-] Cannot compile the contract [0m
+
+====================================================================================================
+[1m[ ] Compiling Solidity contract from the file /../data/reentrancy/solidity_contract/40469.sol ... [0m/../data/reentrancy/solidity_contract/40469.sol:7:37: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function owner(bytes32 _symbol) constant returns(address);
+                                    ^------^
+/../data/reentrancy/solidity_contract/40469.sol:8:41: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function isCreated(bytes32 _symbol) constant returns(bool);
+                                        ^------^
+/../data/reentrancy/solidity_contract/40469.sol:9:43: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function totalSupply(bytes32 _symbol) constant returns(uint);
+                                          ^------^
+/../data/reentrancy/solidity_contract/40469.sol:10:58: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function balanceOf(address _holder, bytes32 _symbol) constant returns(uint);
+                                                         ^------^
+/../data/reentrancy/solidity_contract/40469.sol:15:74: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function allowance(address _from, address _spender, bytes32 _symbol) constant returns(uint);
+                                                                         ^------^
+/../data/reentrancy/solidity_contract/40469.sol:44:28: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function totalSupply() constant returns(uint) {
+                           ^------^
+/../data/reentrancy/solidity_contract/40469.sol:48:40: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function balanceOf(address _owner) constant returns(uint) {
+                                       ^------^
+/../data/reentrancy/solidity_contract/40469.sol:52:57: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function allowance(address _from, address _spender) constant returns(uint) {
+                                                        ^------^
+/../data/reentrancy/solidity_contract/40469.sol:128:38: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function getNodeAddress(bytes32) constant returns(address);
+                                     ^------^
+/../data/reentrancy/solidity_contract/40469.sol:130:53: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function hasRelation(bytes32, bytes32, address) constant returns(bool);
+                                                    ^------^
+/../data/reentrancy/solidity_contract/40469.sol:143:40: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function getAddress(bytes32 _name) constant returns (address) {
+                                       ^------^
+/../data/reentrancy/solidity_contract/40469.sol:244:41: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function _stringGas(string _string) constant internal returns(uint) {
+                                        ^------^
+/../data/reentrancy/solidity_contract/40469.sol:400:54: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function checkTransfer(address _to, uint _value) constant returns(bool, bool) {
+                                                     ^------^
+/../data/reentrancy/solidity_contract/40469.sol:404:73: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function checkTransferFrom(address _from, address _to, uint _value) constant returns(bool, bool) {
+                                                                        ^------^
+/../data/reentrancy/solidity_contract/40469.sol:408:62: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+
+[91m[-] Cannot compile the contract [0m
+
+====================================================================================================
+[1m[ ] Compiling Solidity contract from the file /../data/reentrancy/solidity_contract/40469.sol ... [0m/../data/reentrancy/solidity_contract/40469.sol:7:37: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function owner(bytes32 _symbol) constant returns(address);
+                                    ^------^
+/../data/reentrancy/solidity_contract/40469.sol:8:41: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function isCreated(bytes32 _symbol) constant returns(bool);
+                                        ^------^
+/../data/reentrancy/solidity_contract/40469.sol:9:43: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function totalSupply(bytes32 _symbol) constant returns(uint);
+                                          ^------^
+/../data/reentrancy/solidity_contract/40469.sol:10:58: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function balanceOf(address _holder, bytes32 _symbol) constant returns(uint);
+                                                         ^------^
+/../data/reentrancy/solidity_contract/40469.sol:15:74: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function allowance(address _from, address _spender, bytes32 _symbol) constant returns(uint);
+                                                                         ^------^
+/../data/reentrancy/solidity_contract/40469.sol:44:28: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function totalSupply() constant returns(uint) {
+                           ^------^
+/../data/reentrancy/solidity_contract/40469.sol:48:40: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function balanceOf(address _owner) constant returns(uint) {
+                                       ^------^
+/../data/reentrancy/solidity_contract/40469.sol:52:57: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function allowance(address _from, address _spender) constant returns(uint) {
+                                                        ^------^
+/../data/reentrancy/solidity_contract/40469.sol:128:38: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function getNodeAddress(bytes32) constant returns(address);
+                                     ^------^
+
+[91m[-] Cannot compile the contract [0m
+
+====================================================================================================
+[1m[ ] Compiling Solidity contract from the file /../data/reentrancy/solidity_contract/40469.sol ... [0m/../data/reentrancy/solidity_contract/40469.sol:7:37: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function owner(bytes32 _symbol) constant returns(address);
+                                    ^------^
+/../data/reentrancy/solidity_contract/40469.sol:8:41: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function isCreated(bytes32 _symbol) constant returns(bool);
+                                        ^------^
+/../data/reentrancy/solidity_contract/40469.sol:9:43: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function totalSupply(bytes32 _symbol) constant returns(uint);
+                                          ^------^
+/../data/reentrancy/solidity_contract/40469.sol:10:58: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function balanceOf(address _holder, bytes32 _symbol) constant returns(uint);
+                                                         ^------^
+/../data/reentrancy/solidity_contract/40469.sol:15:74: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function allowance(address _from, address _spender, bytes32 _symbol) constant returns(uint);
+                                                                         ^------^
+/../data/reentrancy/solidity_contract/40469.sol:44:28: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function totalSupply() constant returns(uint) {
+                           ^------^
+/../data/reentrancy/solidity_contract/40469.sol:48:40: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function balanceOf(address _owner) constant returns(uint) {
+                                       ^------^
+/../data/reentrancy/solidity_contract/40469.sol:52:57: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function allowance(address _from, address _spender) constant returns(uint) {
+                                                        ^------^
+/../data/reentrancy/solidity_contract/40469.sol:128:38: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function getNodeAddress(bytes32) constant returns(address);
+                                     ^------^
+/../data/reentrancy/solidity_contract/40469.sol:130:53: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function hasRelation(bytes32, bytes32, address) constant returns(bool);
+                                                    ^------^
+/../data/reentrancy/solidity_contract/40469.sol:143:40: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function getAddress(bytes32 _name) constant returns (address) {
+
+[91m[-] Cannot compile the contract [0m
+
+====================================================================================================
+[1m[ ] Compiling Solidity contract from the file /../data/reentrancy/solidity_contract/40469.sol ... [0m/../data/reentrancy/solidity_contract/40469.sol:7:37: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function owner(bytes32 _symbol) constant returns(address);
+                                    ^------^
+/../data/reentrancy/solidity_contract/40469.sol:8:41: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function isCreated(bytes32 _symbol) constant returns(bool);
+                                        ^------^
+/../data/reentrancy/solidity_contract/40469.sol:9:43: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function totalSupply(bytes32 _symbol) constant returns(uint);
+                                          ^------^
+/../data/reentrancy/solidity_contract/40469.sol:10:58: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function balanceOf(address _holder, bytes32 _symbol) constant returns(uint);
+                                                         ^------^
+/../data/reentrancy/solidity_contract/40469.sol:15:74: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function allowance(address _from, address _spender, bytes32 _symbol) constant returns(uint);
+                                                                         ^------^
+/../data/reentrancy/solidity_contract/40469.sol:44:28: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function totalSupply() constant returns(uint) {
+                           ^------^
+/../data/reentrancy/solidity_contract/40469.sol:48:40: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function balanceOf(address _owner) constant returns(uint) {
+                                       ^------^
+/../data/reentrancy/solidity_contract/40469.sol:52:57: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function allowance(address _from, address _spender) constant returns(uint) {
+                                                        ^------^
+/../data/reentrancy/solidity_contract/40469.sol:128:38: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function getNodeAddress(bytes32) constant returns(address);
+                                     ^------^
+/../data/reentrancy/solidity_contract/40469.sol:130:53: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function hasRelation(bytes32, bytes32, address) constant returns(bool);
+                                                    ^------^
+/../data/reentrancy/solidity_contract/40469.sol:143:40: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function getAddress(bytes32 _name) constant returns (address) {
+                                       ^------^
+/../data/reentrancy/solidity_contract/40469.sol:244:41: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function _stringGas(string _string) constant internal returns(uint) {
+                                        ^------^
+/../data/reentrancy/solidity_contract/40469.sol:400:54: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function checkTransfer(address _to, uint _value) constant returns(bool, bool) {
+                                                     ^------^
+/../data/reentrancy/solidity_contract/40469.sol:404:73: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function checkTransferFrom(address _from, address _to, uint _value) constant returns(bool, bool) {
+                                                                        ^------^
+/../data/reentrancy/solidity_contract/40469.sol:408:62: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function checkTransferToICAP(bytes32 _icap, uint _value) constant returns(bool, bool) {
+                                                             ^------^
+/../data/reentrancy/solidity_contract/40469.sol:412:81: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function checkTransferFromToICAP(address _from, bytes32 _icap, uint _value) constant returns(bool, bool) {
+                                                                                ^------^
+/../data/reentrancy/solidity_contract/40469.sol:416:86: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function checkTransferWithReference(address _to, uint _value, string _reference) constant returns(bool, bool) {
+                                                                                     ^------^
+/../data/reentrancy/solidity_contract/40469.sol:420:105: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function checkTransferFromWithReference(address _from, address _to, uint _value, string _reference) constant returns(bool, bool) {
+                                                                                                        ^------^
+/../data/reentrancy/solidity_contract/40469.sol:424:94: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function checkTransferToICAPWithReference(bytes32 _icap, uint _value, string _reference) constant returns(bool, bool) {
+                                                                                             ^------^
+/../data/reentrancy/solidity_contract/40469.sol:428:113: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function checkTransferFromToICAPWithReference(address _from, bytes32 _icap, uint _value, string _reference) constant returns(bool, bool) {
+                                                                                                                ^------^
+/../data/reentrancy/solidity_contract/40469.sol:432:58: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function checkApprove(address _spender, uint _value) constant returns(bool, bool) {
+                                                         ^------^
+/../data/reentrancy/solidity_contract/40469.sol:436:57: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function checkSetCosignerAddress(address _cosigner) constant returns(bool, bool) {
+                                                        ^------^
+
+[91m[-] Cannot compile the contract [0m
+
+====================================================================================================
+[1m[ ] Compiling Solidity contract from the file /../data/reentrancy/solidity_contract/40469.sol ... [0m/../data/reentrancy/solidity_contract/40469.sol:7:37: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function owner(bytes32 _symbol) constant returns(address);
+                                    ^------^
+/../data/reentrancy/solidity_contract/40469.sol:8:41: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function isCreated(bytes32 _symbol) constant returns(bool);
+                                        ^------^
+/../data/reentrancy/solidity_contract/40469.sol:9:43: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function totalSupply(bytes32 _symbol) constant returns(uint);
+                                          ^------^
+/../data/reentrancy/solidity_contract/40469.sol:10:58: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function balanceOf(address _holder, bytes32 _symbol) constant returns(uint);
+                                                         ^------^
+/../data/reentrancy/solidity_contract/40469.sol:15:74: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function allowance(address _from, address _spender, bytes32 _symbol) constant returns(uint);
+                                                                         ^------^
+/../data/reentrancy/solidity_contract/40469.sol:44:28: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function totalSupply() constant returns(uint) {
+                           ^------^
+/../data/reentrancy/solidity_contract/40469.sol:48:40: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function balanceOf(address _owner) constant returns(uint) {
+                                       ^------^
+/../data/reentrancy/solidity_contract/40469.sol:52:57: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function allowance(address _from, address _spender) constant returns(uint) {
+                                                        ^------^
+/../data/reentrancy/solidity_contract/40469.sol:128:38: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function getNodeAddress(bytes32) constant returns(address);
+                                     ^------^
+/../data/reentrancy/solidity_contract/40469.sol:130:53: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function hasRelation(bytes32, bytes32, address) constant returns(bool);
+                                                    ^------^
+/../data/reentrancy/solidity_contract/40469.sol:143:40: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function getAddress(bytes32 _name) constant returns (address) {
+                                       ^------^
+/../data/reentrancy/solidity_contract/40469.sol:244:41: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function _stringGas(string _string) constant internal returns(uint) {
+                                        ^------^
+/../data/reentrancy/solidity_contract/40469.sol:400:54: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function checkTransfer(address _to, uint _value) constant returns(bool, bool) {
+                                                     ^------^
+/../data/reentrancy/solidity_contract/40469.sol:404:73: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function checkTransferFrom(address _from, address _to, uint _value) constant returns(bool, bool) {
+                                                                        ^------^
+/../data/reentrancy/solidity_contract/40469.sol:408:62: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function checkTransferToICAP(bytes32 _icap, uint _value) constant returns(bool, bool) {
+                                                             ^------^
+/../data/reentrancy/solidity_contract/40469.sol:412:81: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function checkTransferFromToICAP(address _from, bytes32 _icap, uint _value) constant returns(bool, bool) {
+                                                                                ^------^
+/../data/reentrancy/solidity_contract/40469.sol:416:86: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function checkTransferWithReference(address _to, uint _value, string _reference) constant returns(bool, bool) {
+                                                                                     ^------^
+/../data/reentrancy/solidity_contract/40469.sol:420:105: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function checkTransferFromWithReference(address _from, address _to, uint _value, string _reference) constant returns(bool, bool) {
+                                                                                                        ^------^
+/../data/reentrancy/solidity_contract/40469.sol:424:94: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function checkTransferToICAPWithReference(bytes32 _icap, uint _value, string _reference) constant returns(bool, bool) {
+                                                                                             ^------^
+/../data/reentrancy/solidity_contract/40469.sol:428:113: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function checkTransferFromToICAPWithReference(address _from, bytes32 _icap, uint _value, string _reference) constant returns(bool, bool) {
+                                                                                                                ^------^
+/../data/reentrancy/solidity_contract/40469.sol:432:58: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function checkApprove(address _spender, uint _value) constant returns(bool, bool) {
+                                                         ^------^
+/../data/reentrancy/solidity_contract/40469.sol:436:57: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function checkSetCosignerAddress(address _cosigner) constant returns(bool, bool) {
+                                                        ^------^
+
+[91m[-] Cannot compile the contract [0m
+
+====================================================================================================
+[1m[ ] Compiling Solidity contract from the file /../data/reentrancy/solidity_contract/40469.sol ... [0m/../data/reentrancy/solidity_contract/40469.sol:7:37: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function owner(bytes32 _symbol) constant returns(address);
+                                    ^------^
+/../data/reentrancy/solidity_contract/40469.sol:8:41: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function isCreated(bytes32 _symbol) constant returns(bool);
+                                        ^------^
+/../data/reentrancy/solidity_contract/40469.sol:9:43: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function totalSupply(bytes32 _symbol) constant returns(uint);
+                                          ^------^
+/../data/reentrancy/solidity_contract/40469.sol:10:58: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function balanceOf(address _holder, bytes32 _symbol) constant returns(uint);
+                                                         ^------^
+/../data/reentrancy/solidity_contract/40469.sol:15:74: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function allowance(address _from, address _spender, bytes32 _symbol) constant returns(uint);
+                                                                         ^------^
+/../data/reentrancy/solidity_contract/40469.sol:44:28: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function totalSupply() constant returns(uint) {
+                           ^------^
+/../data/reentrancy/solidity_contract/40469.sol:48:40: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function balanceOf(address _owner) constant returns(uint) {
+                                       ^------^
+/../data/reentrancy/solidity_contract/40469.sol:52:57: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function allowance(address _from, address _spender) constant returns(uint) {
+                                                        ^------^
+/../data/reentrancy/solidity_contract/40469.sol:128:38: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function getNodeAddress(bytes32) constant returns(address);
+                                     ^------^
+/../data/reentrancy/solidity_contract/40469.sol:130:53: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function hasRelation(bytes32, bytes32, address) constant returns(bool);
+                                                    ^------^
+/../data/reentrancy/solidity_contract/40469.sol:143:40: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function getAddress(bytes32 _name) constant returns (address) {
+                                       ^------^
+/../data/reentrancy/solidity_contract/40469.sol:244:41: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function _stringGas(string _string) constant internal returns(uint) {
+                                        ^------^
+
+[91m[-] Cannot compile the contract [0m
+
+====================================================================================================
+[1m[ ] Compiling Solidity contract from the file /../data/reentrancy/solidity_contract/40469.sol ... [0m/../data/reentrancy/solidity_contract/40469.sol:7:37: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function owner(bytes32 _symbol) constant returns(address);
+                                    ^------^
+/../data/reentrancy/solidity_contract/40469.sol:8:41: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function isCreated(bytes32 _symbol) constant returns(bool);
+                                        ^------^
+/../data/reentrancy/solidity_contract/40469.sol:9:43: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function totalSupply(bytes32 _symbol) constant returns(uint);
+                                          ^------^
+/../data/reentrancy/solidity_contract/40469.sol:10:58: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function balanceOf(address _holder, bytes32 _symbol) constant returns(uint);
+                                                         ^------^
+/../data/reentrancy/solidity_contract/40469.sol:15:74: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+
+[91m[-] Cannot compile the contract [0m
+
+====================================================================================================
+[1m[ ] Compiling Solidity contract from the file /../data/reentrancy/solidity_contract/40469.sol ... [0m/../data/reentrancy/solidity_contract/40469.sol:7:37: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function owner(bytes32 _symbol) constant returns(address);
+                                    ^------^
+/../data/reentrancy/solidity_contract/40469.sol:8:41: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function isCreated(bytes32 _symbol) constant returns(bool);
+                                        ^------^
+/../data/reentrancy/solidity_contract/40469.sol:9:43: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function totalSupply(bytes32 _symbol) constant returns(uint);
+                                          ^------^
+/../data/reentrancy/solidity_contract/40469.sol:10:58: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function balanceOf(address _holder, bytes32 _symbol) constant returns(uint);
+                                                         ^------^
+/../data/reentrancy/solidity_contract/40469.sol:15:74: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function allowance(address _from, address _spender, bytes32 _symbol) constant returns(uint);
+                                                                         ^------^
+/../data/reentrancy/solidity_contract/40469.sol:44:28: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function totalSupply() constant returns(uint) {
+                           ^------^
+/../data/reentrancy/solidity_contract/40469.sol:48:40: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function balanceOf(address _owner) constant returns(uint) {
+                                       ^------^
+/../data/reentrancy/solidity_contract/40469.sol:52:57: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function allowance(address _from, address _spender) constant returns(uint) {
+                                                        ^------^
+/../data/reentrancy/solidity_contract/40469.sol:128:38: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function getNodeAddress(bytes32) constant returns(address);
+                                     ^------^
+/../data/reentrancy/solidity_contract/40469.sol:130:53: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function hasRelation(bytes32, bytes32, address) constant returns(bool);
+                                                    ^------^
+/../data/reentrancy/solidity_contract/40469.sol:143:40: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function getAddress(bytes32 _name) constant returns (address) {
+                                       ^------^
+/../data/reentrancy/solidity_contract/40469.sol:244:41: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function _stringGas(string _string) constant internal returns(uint) {
+                                        ^------^
+/../data/reentrancy/solidity_contract/40469.sol:400:54: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function checkTransfer(address _to, uint _value) constant returns(bool, bool) {
+                                                     ^------^
+/../data/reentrancy/solidity_contract/40469.sol:404:73: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function checkTransferFrom(address _from, address _to, uint _value) constant returns(bool, bool) {
+                                                                        ^------^
+
+[91m[-] Cannot compile the contract [0m
+
+====================================================================================================
+[1m[ ] Compiling Solidity contract from the file /../data/reentrancy/solidity_contract/40469.sol ... [0m/../data/reentrancy/solidity_contract/40469.sol:7:37: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function owner(bytes32 _symbol) constant returns(address);
+                                    ^------^
+/../data/reentrancy/solidity_contract/40469.sol:8:41: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function isCreated(bytes32 _symbol) constant returns(bool);
+                                        ^------^
+/../data/reentrancy/solidity_contract/40469.sol:9:43: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function totalSupply(bytes32 _symbol) constant returns(uint);
+                                          ^------^
+/../data/reentrancy/solidity_contract/40469.sol:10:58: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function balanceOf(address _holder, bytes32 _symbol) constant returns(uint);
+                                                         ^------^
+/../data/reentrancy/solidity_contract/40469.sol:15:74: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function allowance(address _from, address _spender, bytes32 _symbol) constant returns(uint);
+                                                                         ^------^
+/../data/reentrancy/solidity_contract/40469.sol:44:28: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function totalSupply() constant returns(uint) {
+                           ^------^
+/../data/reentrancy/solidity_contract/40469.sol:48:40: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function balanceOf(address _owner) constant returns(uint) {
+                                       ^------^
+/../data/reentrancy/solidity_contract/40469.sol:52:57: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function allowance(address _from, address _spender) constant returns(uint) {
+                                                        ^------^
+/../data/reentrancy/solidity_contract/40469.sol:128:38: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function getNodeAddress(bytes32) constant returns(address);
+                                     ^------^
+/../data/reentrancy/solidity_contract/40469.sol:130:53: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function hasRelation(bytes32, bytes32, address) constant returns(bool);
+                                                    ^------^
+/../data/reentrancy/solidity_contract/40469.sol:143:40: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function getAddress(bytes32 _name) constant returns (address) {
+                                       ^------^
+/../data/reentrancy/solidity_contract/40469.sol:244:41: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function _stringGas(string _string) constant internal returns(uint) {
+                                        ^------^
+/../data/reentrancy/solidity_contract/40469.sol:400:54: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function checkTransfer(address _to, uint _value) constant returns(bool, bool) {
+                                                     ^------^
+/../data/reentrancy/solidity_contract/40469.sol:404:73: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function checkTransferFrom(address _from, address _to, uint _value) constant returns(bool, bool) {
+                                                                        ^------^
+/../data/reentrancy/solidity_contract/40469.sol:408:62: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+
+[91m[-] Cannot compile the contract [0m
+
+====================================================================================================
+[1m[ ] Compiling Solidity contract from the file /../data/reentrancy/solidity_contract/40469.sol ... [0m/../data/reentrancy/solidity_contract/40469.sol:7:37: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function owner(bytes32 _symbol) constant returns(address);
+                                    ^------^
+/../data/reentrancy/solidity_contract/40469.sol:8:41: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function isCreated(bytes32 _symbol) constant returns(bool);
+                                        ^------^
+/../data/reentrancy/solidity_contract/40469.sol:9:43: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function totalSupply(bytes32 _symbol) constant returns(uint);
+                                          ^------^
+/../data/reentrancy/solidity_contract/40469.sol:10:58: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function balanceOf(address _holder, bytes32 _symbol) constant returns(uint);
+                                                         ^------^
+
+[91m[-] Cannot compile the contract [0m
+
+====================================================================================================
+[1m[ ] Compiling Solidity contract from the file /../data/reentrancy/solidity_contract/40469.sol ... [0m/../data/reentrancy/solidity_contract/40469.sol:7:37: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function owner(bytes32 _symbol) constant returns(address);
+                                    ^------^
+/../data/reentrancy/solidity_contract/40469.sol:8:41: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function isCreated(bytes32 _symbol) constant returns(bool);
+                                        ^------^
+/../data/reentrancy/solidity_contract/40469.sol:9:43: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function totalSupply(bytes32 _symbol) constant returns(uint);
+                                          ^------^
+/../data/reentrancy/solidity_contract/40469.sol:10:58: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function balanceOf(address _holder, bytes32 _symbol) constant returns(uint);
+                                                         ^------^
+/../data/reentrancy/solidity_contract/40469.sol:15:74: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function allowance(address _from, address _spender, bytes32 _symbol) constant returns(uint);
+                                                                         ^------^
+/../data/reentrancy/solidity_contract/40469.sol:44:28: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function totalSupply() constant returns(uint) {
+                           ^------^
+/../data/reentrancy/solidity_contract/40469.sol:48:40: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function balanceOf(address _owner) constant returns(uint) {
+                                       ^------^
+/../data/reentrancy/solidity_contract/40469.sol:52:57: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function allowance(address _from, address _spender) constant returns(uint) {
+                                                        ^------^
+/../data/reentrancy/solidity_contract/40469.sol:128:38: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function getNodeAddress(bytes32) constant returns(address);
+                                     ^------^
+/../data/reentrancy/solidity_contract/40469.sol:130:53: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function hasRelation(bytes32, bytes32, address) constant returns(bool);
+                                                    ^------^
+/../data/reentrancy/solidity_contract/40469.sol:143:40: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function getAddress(bytes32 _name) constant returns (address) {
+                                       ^------^
+/../data/reentrancy/solidity_contract/40469.sol:244:41: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function _stringGas(string _string) constant internal returns(uint) {
+                                        ^------^
+/../data/reentrancy/solidity_contract/40469.sol:400:54: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function checkTransfer(address _to, uint _value) constant returns(bool, bool) {
+                                                     ^------^
+/../data/reentrancy/solidity_contract/40469.sol:404:73: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function checkTransferFrom(address _from, address _to, uint _value) constant returns(bool, bool) {
+                                                                        ^------^
+/../data/reentrancy/solidity_contract/40469.sol:408:62: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function checkTransferToICAP(bytes32 _icap, uint _value) constant returns(bool, bool) {
+                                                             ^------^
+/../data/reentrancy/solidity_contract/40469.sol:412:81: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function checkTransferFromToICAP(address _from, bytes32 _icap, uint _value) constant returns(bool, bool) {
+
+[91m[-] Cannot compile the contract [0m
+
+====================================================================================================
+[1m[ ] Compiling Solidity contract from the file /../data/reentrancy/solidity_contract/40469.sol ... [0m/../data/reentrancy/solidity_contract/40469.sol:7:37: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function owner(bytes32 _symbol) constant returns(address);
+                                    ^------^
+/../data/reentrancy/solidity_contract/40469.sol:8:41: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function isCreated(bytes32 _symbol) constant returns(bool);
+                                        ^------^
+/../data/reentrancy/solidity_contract/40469.sol:9:43: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function totalSupply(bytes32 _symbol) constant returns(uint);
+                                          ^------^
+/../data/reentrancy/solidity_contract/40469.sol:10:58: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function balanceOf(address _holder, bytes32 _symbol) constant returns(uint);
+                                                         ^------^
+/../data/reentrancy/solidity_contract/40469.sol:15:74: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function allowance(address _from, address _spender, bytes32 _symbol) constant returns(uint);
+                                                                         ^------^
+/../data/reentrancy/solidity_contract/40469.sol:44:28: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function totalSupply() constant returns(uint) {
+                           ^------^
+/../data/reentrancy/solidity_contract/40469.sol:48:40: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+
+[91m[-] Cannot compile the contract [0m

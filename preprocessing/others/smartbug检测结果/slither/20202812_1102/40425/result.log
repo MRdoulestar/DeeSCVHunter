@@ -1,0 +1,301 @@
+INFO:Slither:Compilation warnings/errors on /../data/reentrancy/solidity_contract/40425.sol:
+/../data/reentrancy/solidity_contract/40425.sol:34:5: Warning: Defining constructors as functions with the same name as the contract is deprecated. Use "constructor(...) { ... }" instead.
+    function MyEtherBank() public
+    ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/40425.sol:80:13: Warning: "throw" is deprecated in favour of "revert()", "require()" and "assert()".
+            throw;       
+            ^---^
+/../data/reentrancy/solidity_contract/40425.sol:90:13: Warning: "throw" is deprecated in favour of "revert()", "require()" and "assert()".
+            throw;
+            ^---^
+/../data/reentrancy/solidity_contract/40425.sol:99:17: Warning: "throw" is deprecated in favour of "revert()", "require()" and "assert()".
+                throw;        
+                ^---^
+/../data/reentrancy/solidity_contract/40425.sol:111:13: Warning: "throw" is deprecated in favour of "revert()", "require()" and "assert()".
+            throw;        
+            ^---^
+/../data/reentrancy/solidity_contract/40425.sol:180:13: Warning: "throw" is deprecated in favour of "revert()", "require()" and "assert()".
+            throw;
+            ^---^
+/../data/reentrancy/solidity_contract/40425.sol:258:17: Warning: "throw" is deprecated in favour of "revert()", "require()" and "assert()".
+                throw;
+                ^---^
+/../data/reentrancy/solidity_contract/40425.sol:288:17: Warning: "throw" is deprecated in favour of "revert()", "require()" and "assert()".
+                throw;
+                ^---^
+/../data/reentrancy/solidity_contract/40425.sol:544:25: Warning: "throw" is deprecated in favour of "revert()", "require()" and "assert()".
+                        throw;
+                        ^---^
+/../data/reentrancy/solidity_contract/40425.sol:553:21: Warning: "throw" is deprecated in favour of "revert()", "require()" and "assert()".
+                    throw;
+                    ^---^
+/../data/reentrancy/solidity_contract/40425.sol:559:17: Warning: "throw" is deprecated in favour of "revert()", "require()" and "assert()".
+                throw;
+                ^---^
+/../data/reentrancy/solidity_contract/40425.sol:1:1: Warning: Source file does not specify required compiler version!Consider adding "pragma solidity ^0.4.25;"
+contract MyEtherBank
+^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/40425.sol:124:13: Warning: Invoking events without "emit" prefix is deprecated.
+            event_donationMadeToBank_ThankYou(msg.value);
+            ^------------------------------------------^
+/../data/reentrancy/solidity_contract/40425.sol:133:9: Warning: Invoking events without "emit" prefix is deprecated.
+        event_getBankDonationsBalance(_bankDonationsBalance);
+        ^--------------------------------------------------^
+/../data/reentrancy/solidity_contract/40425.sol:143:17: Warning: Invoking events without "emit" prefix is deprecated.
+                event_bankDonationsWithdrawn(amount_);
+                ^-----------------------------------^
+/../data/reentrancy/solidity_contract/40425.sol:145:17: Warning: Invoking events without "emit" prefix is deprecated.
+                event_bankDonationsWithdrawn(amount_);
+                ^-----------------------------------^
+/../data/reentrancy/solidity_contract/40425.sol:200:33: Warning: "sha3" has been deprecated in favour of "keccak256"
+        bytes32 passwordHash_ = sha3("password");
+                                ^--------------^
+/../data/reentrancy/solidity_contract/40425.sol:202:25: Warning: "sha3" has been deprecated in favour of "keccak256"
+        passwordHash_ = sha3("Password");
+                        ^--------------^
+/../data/reentrancy/solidity_contract/40425.sol:219:9: Warning: Invoking events without "emit" prefix is deprecated.
+        event_bankAccountOpened_Successful(msg.sender, newBankAccountNumber, msg.value);
+        ^-----------------------------------------------------------------------------^
+/../data/reentrancy/solidity_contract/40425.sol:229:9: Warning: Invoking events without "emit" prefix is deprecated.
+        event_getBankAccountNumber_Successful(_bankAccountAddresses[msg.sender].accountNumber);
+        ^------------------------------------------------------------------------------------^
+/../data/reentrancy/solidity_contract/40425.sol:239:9: Warning: Invoking events without "emit" prefix is deprecated.
+        event_getBankAccountBalance_Successful(accountNumber_, _bankAccountsArray[accountNumber_].balance);
+        ^------------------------------------------------------------------------------------------------^
+/../data/reentrancy/solidity_contract/40425.sol:262:13: Warning: Invoking events without "emit" prefix is deprecated.
+            event_depositMadeToBankAccount_Successful(accountNumber_, msg.value);
+            ^------------------------------------------------------------------^
+/../data/reentrancy/solidity_contract/40425.sol:267:13: Warning: Invoking events without "emit" prefix is deprecated.
+            event_depositMadeToBankAccount_Failed(accountNumber_, msg.value);
+            ^--------------------------------------------------------------^
+/../data/reentrancy/solidity_contract/40425.sol:278:12: Warning: Invoking events without "emit" prefix is deprecated.
+           event_depositMadeToBankAccountFromDifferentAddress_Failed(bankAccountNumber, msg.sender, msg.value);
+           ^-------------------------------------------------------------------------------------------------^
+/../data/reentrancy/solidity_contract/40425.sol:292:13: Warning: Invoking events without "emit" prefix is deprecated.
+            event_depositMadeToBankAccountFromDifferentAddress_Successful(bankAccountNumber, msg.sender, msg.value);
+            ^-----------------------------------------------------------------------------------------------------^
+/../data/reentrancy/solidity_contract/40425.sol:297:13: Warning: Invoking events without "emit" prefix is deprecated.
+            event_depositMadeToBankAccountFromDifferentAddress_Failed(bankAccountNumber, msg.sender, msg.value);
+            ^-------------------------------------------------------------------------------------------------^
+/../data/reentrancy/solidity_contract/40425.sol:327:13: Warning: Invoking events without "emit" prefix is deprecated.
+            event_withdrawalMadeFromBankAccount_Successful(accountNumber_, amount); 
+            ^--------------------------------------------------------------------^
+/../data/reentrancy/solidity_contract/40425.sol:330:13: Warning: Invoking events without "emit" prefix is deprecated.
+            event_withdrawalMadeFromBankAccount_Failed(accountNumber_, amount); 
+            ^----------------------------------------------------------------^
+/../data/reentrancy/solidity_contract/40425.sol:360:13: Warning: Invoking events without "emit" prefix is deprecated.
+            event_withdrawalMadeFromBankAccount_Successful(accountNumber_, fullBalance_); 
+            ^--------------------------------------------------------------------------^
+/../data/reentrancy/solidity_contract/40425.sol:363:13: Warning: Invoking events without "emit" prefix is deprecated.
+            event_withdrawalMadeFromBankAccount_Failed(accountNumber_, fullBalance_); 
+            ^----------------------------------------------------------------------^
+/../data/reentrancy/solidity_contract/40425.sol:387:13: Warning: Invoking events without "emit" prefix is deprecated.
+            event_transferMadeFromBankAccountToAddress_Successful(accountNumber_, amount, destinationAddress); 
+            ^-----------------------------------------------------------------------------------------------^
+/../data/reentrancy/solidity_contract/40425.sol:390:13: Warning: Invoking events without "emit" prefix is deprecated.
+            event_transferMadeFromBankAccountToAddress_Failed(accountNumber_, amount, destinationAddress); 
+            ^-------------------------------------------------------------------------------------------^
+/../data/reentrancy/solidity_contract/40425.sol:408:13: Warning: Invoking events without "emit" prefix is deprecated.
+            event_securityHasPasswordSha3HashBeenAddedToBankAccount_Yes(accountNumber_);
+            ^-------------------------------------------------------------------------^
+/../data/reentrancy/solidity_contract/40425.sol:413:13: Warning: Invoking events without "emit" prefix is deprecated.
+            event_securityHasPasswordSha3HashBeenAddedToBankAccount_No(accountNumber_);
+            ^------------------------------------------------------------------------^
+/../data/reentrancy/solidity_contract/40425.sol:435:13: Warning: Invoking events without "emit" prefix is deprecated.
+            event_securityPasswordSha3HashAddedToBankAccount_Failed_PasswordHashPreviouslyUsed(accountNumber_);
+            ^------------------------------------------------------------------------------------------------^
+/../data/reentrancy/solidity_contract/40425.sol:447:9: Warning: Invoking events without "emit" prefix is deprecated.
+        event_securityPasswordSha3HashAddedToBankAccount_Successful(accountNumber_);
+        ^-------------------------------------------------------------------------^
+/../data/reentrancy/solidity_contract/40425.sol:465:13: Warning: Invoking events without "emit" prefix is deprecated.
+            event_securityConnectingABankAccountToANewOwnerAddressIsDisabled();
+            ^----------------------------------------------------------------^
+/../data/reentrancy/solidity_contract/40425.sol:485:13: Warning: Invoking events without "emit" prefix is deprecated.
+            event_securityBankAccountConnectedToNewAddressOwner_Failed_PasswordHashHasNotBeenAddedToBankAccount(bankAccountNumber);
+            ^--------------------------------------------------------------------------------------------------------------------^
+/../data/reentrancy/solidity_contract/40425.sol:491:13: Warning: "sha3" has been deprecated in favour of "keccak256"
+        if (sha3(passwordString) != _bankAccountsArray[bankAccountNumber].passwordSha3Hash)
+            ^------------------^
+/../data/reentrancy/solidity_contract/40425.sol:495:13: Warning: Invoking events without "emit" prefix is deprecated.
+            event_securityBankAccountConnectedT ... ankAccountNumber].passwordAttempts); 
+            ^-------------------------------------------------------------------------^
+/../data/reentrancy/solidity_contract/40425.sol:511:9: Warning: Invoking events without "emit" prefix is deprecated.
+        event_securityBankAccountConnectedToNewAddressOwner_Successful(bankAccountNumber, msg.sender);
+        ^-------------------------------------------------------------------------------------------^
+/../data/reentrancy/solidity_contract/40425.sol:521:9: Warning: Invoking events without "emit" prefix is deprecated.
+        event_securityGetNumberOfAttemptsToConnectBankAccountToANewOwnerAddress(accountNumber_, _bankAccountsArray[accountNumber_].passwordAttempts);
+        ^------------------------------------------------------------------------------------------------------------------------------------------^
+/../data/reentrancy/solidity_contract/40425.sol:549:21: Warning: Invoking events without "emit" prefix is deprecated.
+                    event_depositMadeToBankAccount_Successful(accountNumber_, msg.value);
+                    ^------------------------------------------------------------------^
+/../data/reentrancy/solidity_contract/40425.sol:121:13: Warning: "msg.value" used in non-payable function. Do you want to add the "payable" modifier to this function?
+        if (msg.value > 0)
+            ^-------^
+/../data/reentrancy/solidity_contract/40425.sol:123:38: Warning: "msg.value" used in non-payable function. Do you want to add the "payable" modifier to this function?
+            _bankDonationsBalance += msg.value;
+                                     ^-------^
+/../data/reentrancy/solidity_contract/40425.sol:124:47: Warning: "msg.value" used in non-payable function. Do you want to add the "payable" modifier to this function?
+            event_donationMadeToBank_ThankYou(msg.value);
+                                              ^-------^
+/../data/reentrancy/solidity_contract/40425.sol:210:13: Warning: "msg.value" used in non-payable function. Do you want to add the "payable" modifier to this function?
+        if (msg.value > 0)
+            ^-------^
+/../data/reentrancy/solidity_contract/40425.sol:212:65: Warning: "msg.value" used in non-payable function. Do you want to add the "payable" modifier to this function?
+            _bankAccountsArray[newBankAccountNumber].balance += msg.value;
+                                                                ^-------^
+/../data/reentrancy/solidity_contract/40425.sol:219:78: Warning: "msg.value" used in non-payable function. Do you want to add the "payable" modifier to this function?
+        event_bankAccountOpened_Successful(msg.sender, newBankAccountNumber, msg.value);
+                                                                             ^-------^
+/../data/reentrancy/solidity_contract/40425.sol:251:13: Warning: "msg.value" used in non-payable function. Do you want to add the "payable" modifier to this function?
+        if (msg.value > 0)
+            ^-------^
+/../data/reentrancy/solidity_contract/40425.sol:256:63: Warning: "msg.value" used in non-payable function. Do you want to add the "payable" modifier to this function?
+            if ((_bankAccountsArray[accountNumber_].balance + msg.value) < _bankAccountsArray[accountNumber_].balance)
+                                                              ^-------^
+/../data/reentrancy/solidity_contract/40425.sol:261:59: Warning: "msg.value" used in non-payable function. Do you want to add the "payable" modifier to this function?
+            _bankAccountsArray[accountNumber_].balance += msg.value; 
+                                                          ^-------^
+/../data/reentrancy/solidity_contract/40425.sol:262:71: Warning: "msg.value" used in non-payable function. Do you want to add the "payable" modifier to this function?
+            event_depositMadeToBankAccount_Successful(accountNumber_, msg.value);
+                                                                      ^-------^
+/../data/reentrancy/solidity_contract/40425.sol:267:67: Warning: "msg.value" used in non-payable function. Do you want to add the "payable" modifier to this function?
+            event_depositMadeToBankAccount_Failed(accountNumber_, msg.value);
+                                                                  ^-------^
+/../data/reentrancy/solidity_contract/40425.sol:278:101: Warning: "msg.value" used in non-payable function. Do you want to add the "payable" modifier to this function?
+           event_depositMadeToBankAccountFromDifferentAddress_Failed(bankAccountNumber, msg.sender, msg.value);
+                                                                                                    ^-------^
+/../data/reentrancy/solidity_contract/40425.sol:283:13: Warning: "msg.value" used in non-payable function. Do you want to add the "payable" modifier to this function?
+        if (msg.value > 0)
+            ^-------^
+/../data/reentrancy/solidity_contract/40425.sol:286:66: Warning: "msg.value" used in non-payable function. Do you want to add the "payable" modifier to this function?
+            if ((_bankAccountsArray[bankAccountNumber].balance + msg.value) < _bankAccountsArray[bankAccountNumber].balance)
+                                                                 ^-------^
+/../data/reentrancy/solidity_contract/40425.sol:291:62: Warning: "msg.value" used in non-payable function. Do you want to add the "payable" modifier to this function?
+            _bankAccountsArray[bankAccountNumber].balance += msg.value; 
+                                                             ^-------^
+/../data/reentrancy/solidity_contract/40425.sol:292:106: Warning: "msg.value" used in non-payable function. Do you want to add the "payable" modifier to this function?
+            event_depositMadeToBankAccountFromDifferentAddress_Successful(bankAccountNumber, msg.sender, msg.value);
+                                                                                                         ^-------^
+/../data/reentrancy/solidity_contract/40425.sol:297:102: Warning: "msg.value" used in non-payable function. Do you want to add the "payable" modifier to this function?
+            event_depositMadeToBankAccountFromDifferentAddress_Failed(bankAccountNumber, msg.sender, msg.value);
+                                                                                                     ^-------^
+/../data/reentrancy/solidity_contract/40425.sol:528:5: Warning: No visibility specified. Defaulting to "public". 
+    function() 
+    ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/40425.sol:539:21: Warning: "msg.value" used in non-payable function. Do you want to add the "payable" modifier to this function?
+                if (msg.value > 0)
+                    ^-------^
+/../data/reentrancy/solidity_contract/40425.sol:542:71: Warning: "msg.value" used in non-payable function. Do you want to add the "payable" modifier to this function?
+                    if ((_bankAccountsArray[accountNumber_].balance + msg.value) < _bankAccountsArray[accountNumber_].balance)
+                                                                      ^-------^
+/../data/reentrancy/solidity_contract/40425.sol:548:67: Warning: "msg.value" used in non-payable function. Do you want to add the "payable" modifier to this function?
+                    _bankAccountsArray[accountNumber_].balance += msg.value;
+                                                                  ^-------^
+/../data/reentrancy/solidity_contract/40425.sol:549:79: Warning: "msg.value" used in non-payable function. Do you want to add the "payable" modifier to this function?
+                    event_depositMadeToBankAccount_Successful(accountNumber_, msg.value);
+                                                                              ^-------^
+
+INFO:Detectors:[92m
+Deprecated standard detected @ /../data/reentrancy/solidity_contract/40425.sol#180:
+	- Usage of "throw" should be replaced with "revert()"
+Deprecated standard detected @ /../data/reentrancy/solidity_contract/40425.sol#200:
+	- Usage of "sha3()" should be replaced with "keccak256()"
+Deprecated standard detected @ /../data/reentrancy/solidity_contract/40425.sol#202:
+	- Usage of "sha3()" should be replaced with "keccak256()"
+Deprecated standard detected @ /../data/reentrancy/solidity_contract/40425.sol#258:
+	- Usage of "throw" should be replaced with "revert()"
+Deprecated standard detected @ /../data/reentrancy/solidity_contract/40425.sol#288:
+	- Usage of "throw" should be replaced with "revert()"
+Deprecated standard detected @ /../data/reentrancy/solidity_contract/40425.sol#491-497:
+	- Usage of "sha3()" should be replaced with "keccak256()"
+Deprecated standard detected @ /../data/reentrancy/solidity_contract/40425.sol#544:
+	- Usage of "throw" should be replaced with "revert()"
+Deprecated standard detected @ /../data/reentrancy/solidity_contract/40425.sol#553:
+	- Usage of "throw" should be replaced with "revert()"
+Deprecated standard detected @ /../data/reentrancy/solidity_contract/40425.sol#559:
+	- Usage of "throw" should be replaced with "revert()"
+Deprecated standard detected @ /../data/reentrancy/solidity_contract/40425.sol#80:
+	- Usage of "throw" should be replaced with "revert()"
+Deprecated standard detected @ /../data/reentrancy/solidity_contract/40425.sol#90:
+	- Usage of "throw" should be replaced with "revert()"
+Deprecated standard detected @ /../data/reentrancy/solidity_contract/40425.sol#99:
+	- Usage of "throw" should be replaced with "revert()"
+Deprecated standard detected @ /../data/reentrancy/solidity_contract/40425.sol#111:
+	- Usage of "throw" should be replaced with "revert()"
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#deprecated-standards[0m
+INFO:Detectors:[92m
+MyEtherBank.Donate (/../data/reentrancy/solidity_contract/40425.sol#119-126) should be declared external
+MyEtherBank.BankOwner_GetDonationsBalance (/../data/reentrancy/solidity_contract/40425.sol#128-135) should be declared external
+MyEtherBank.BankOwner_WithdrawDonations (/../data/reentrancy/solidity_contract/40425.sol#137-150) should be declared external
+MyEtherBank.BankOwner_EnableConnectBankAccountToNewOwnerAddress (/../data/reentrancy/solidity_contract/40425.sol#152-159) should be declared external
+MyEtherBank.BankOwner_DisableConnectBankAccountToNewOwnerAddress (/../data/reentrancy/solidity_contract/40425.sol#161-168) should be declared external
+MyEtherBank.GetBankAccountNumber (/../data/reentrancy/solidity_contract/40425.sol#224-231) should be declared external
+MyEtherBank.GetBankAccountBalance (/../data/reentrancy/solidity_contract/40425.sol#233-241) should be declared external
+MyEtherBank.DepositToBankAccount (/../data/reentrancy/solidity_contract/40425.sol#246-270) should be declared external
+MyEtherBank.DepositToBankAccountFromDifferentAddress (/../data/reentrancy/solidity_contract/40425.sol#272-300) should be declared external
+MyEtherBank.WithdrawAmountFromBankAccount (/../data/reentrancy/solidity_contract/40425.sol#305-333) should be declared external
+MyEtherBank.WithdrawFullBalanceFromBankAccount (/../data/reentrancy/solidity_contract/40425.sol#335-366) should be declared external
+MyEtherBank.TransferAmountFromBankAccountToAddress (/../data/reentrancy/solidity_contract/40425.sol#368-393) should be declared external
+MyEtherBank.Security_HasPasswordSha3HashBeenAddedToBankAccount (/../data/reentrancy/solidity_contract/40425.sol#398-416) should be declared external
+MyEtherBank.Security_AddPasswordSha3HashToBankAccount (/../data/reentrancy/solidity_contract/40425.sol#418-449) should be declared external
+MyEtherBank.Security_ConnectBankAccountToNewOwnerAddress (/../data/reentrancy/solidity_contract/40425.sol#451-513) should be declared external
+MyEtherBank.Security_GetNumberOfAttemptsToConnectBankAccountToANewOwnerAddress (/../data/reentrancy/solidity_contract/40425.sol#515-523) should be declared external
+MyEtherBank.fallback (/../data/reentrancy/solidity_contract/40425.sol#528-567) should be declared external
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#public-function-that-could-be-declared-as-external[0m
+INFO:Detectors:[92m
+Low level call in MyEtherBank.BankOwner_WithdrawDonations (/../data/reentrancy/solidity_contract/40425.sol#137-150):
+	-msg.sender.call.value(amount_)() /../data/reentrancy/solidity_contract/40425.sol#144-148
+Low level call in MyEtherBank.WithdrawAmountFromBankAccount (/../data/reentrancy/solidity_contract/40425.sol#305-333):
+	-msg.sender.call.value(amount)() /../data/reentrancy/solidity_contract/40425.sol#318-323
+Low level call in MyEtherBank.WithdrawFullBalanceFromBankAccount (/../data/reentrancy/solidity_contract/40425.sol#335-366):
+	-msg.sender.call.value(fullBalance_)() /../data/reentrancy/solidity_contract/40425.sol#351-356
+Low level call in MyEtherBank.TransferAmountFromBankAccountToAddress (/../data/reentrancy/solidity_contract/40425.sol#368-393):
+	-destinationAddress.call.value(amount)() /../data/reentrancy/solidity_contract/40425.sol#378-383
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#low-level-calls[0m
+INFO:Detectors:[92m
+Event 'MyEtherBank.event_donationMadeToBank_ThankYou' (/../data/reentrancy/solidity_contract/40425.sol#44) is not in CapWords
+Event 'MyEtherBank.event_getBankDonationsBalance' (/../data/reentrancy/solidity_contract/40425.sol#45) is not in CapWords
+Event 'MyEtherBank.event_bankDonationsWithdrawn' (/../data/reentrancy/solidity_contract/40425.sol#46) is not in CapWords
+Event 'MyEtherBank.event_bankAccountOpened_Successful' (/../data/reentrancy/solidity_contract/40425.sol#49) is not in CapWords
+Event 'MyEtherBank.event_getBankAccountNumber_Successful' (/../data/reentrancy/solidity_contract/40425.sol#50) is not in CapWords
+Event 'MyEtherBank.event_getBankAccountBalance_Successful' (/../data/reentrancy/solidity_contract/40425.sol#51) is not in CapWords
+Event 'MyEtherBank.event_depositMadeToBankAccount_Successful' (/../data/reentrancy/solidity_contract/40425.sol#52) is not in CapWords
+Event 'MyEtherBank.event_depositMadeToBankAccount_Failed' (/../data/reentrancy/solidity_contract/40425.sol#53) is not in CapWords
+Event 'MyEtherBank.event_depositMadeToBankAccountFromDifferentAddress_Successful' (/../data/reentrancy/solidity_contract/40425.sol#54) is not in CapWords
+Event 'MyEtherBank.event_depositMadeToBankAccountFromDifferentAddress_Failed' (/../data/reentrancy/solidity_contract/40425.sol#55) is not in CapWords
+Event 'MyEtherBank.event_withdrawalMadeFromBankAccount_Successful' (/../data/reentrancy/solidity_contract/40425.sol#56) is not in CapWords
+Event 'MyEtherBank.event_withdrawalMadeFromBankAccount_Failed' (/../data/reentrancy/solidity_contract/40425.sol#57) is not in CapWords
+Event 'MyEtherBank.event_transferMadeFromBankAccountToAddress_Successful' (/../data/reentrancy/solidity_contract/40425.sol#58) is not in CapWords
+Event 'MyEtherBank.event_transferMadeFromBankAccountToAddress_Failed' (/../data/reentrancy/solidity_contract/40425.sol#59) is not in CapWords
+Event 'MyEtherBank.event_securityConnectingABankAccountToANewOwnerAddressIsDisabled' (/../data/reentrancy/solidity_contract/40425.sol#62) is not in CapWords
+Event 'MyEtherBank.event_securityHasPasswordSha3HashBeenAddedToBankAccount_Yes' (/../data/reentrancy/solidity_contract/40425.sol#63) is not in CapWords
+Event 'MyEtherBank.event_securityHasPasswordSha3HashBeenAddedToBankAccount_No' (/../data/reentrancy/solidity_contract/40425.sol#64) is not in CapWords
+Event 'MyEtherBank.event_securityPasswordSha3HashAddedToBankAccount_Successful' (/../data/reentrancy/solidity_contract/40425.sol#65) is not in CapWords
+Event 'MyEtherBank.event_securityPasswordSha3HashAddedToBankAccount_Failed_PasswordHashPreviouslyUsed' (/../data/reentrancy/solidity_contract/40425.sol#66) is not in CapWords
+Event 'MyEtherBank.event_securityBankAccountConnectedToNewAddressOwner_Successful' (/../data/reentrancy/solidity_contract/40425.sol#67) is not in CapWords
+Event 'MyEtherBank.event_securityBankAccountConnectedToNewAddressOwner_Failed_PasswordHashHasNotBeenAddedToBankAccount' (/../data/reentrancy/solidity_contract/40425.sol#68) is not in CapWords
+Event 'MyEtherBank.event_securityBankAccountConnectedToNewAddressOwner_Failed_SentPasswordDoesNotMatchAccountPasswordHash' (/../data/reentrancy/solidity_contract/40425.sol#69) is not in CapWords
+Event 'MyEtherBank.event_securityGetNumberOfAttemptsToConnectBankAccountToANewOwnerAddress' (/../data/reentrancy/solidity_contract/40425.sol#70) is not in CapWords
+Function 'MyEtherBank.MyEtherBank' (/../data/reentrancy/solidity_contract/40425.sol#34-38) is not in mixedCase
+Function 'MyEtherBank.Donate' (/../data/reentrancy/solidity_contract/40425.sol#119-126) is not in mixedCase
+Function 'MyEtherBank.BankOwner_GetDonationsBalance' (/../data/reentrancy/solidity_contract/40425.sol#128-135) is not in mixedCase
+Function 'MyEtherBank.BankOwner_WithdrawDonations' (/../data/reentrancy/solidity_contract/40425.sol#137-150) is not in mixedCase
+Function 'MyEtherBank.BankOwner_EnableConnectBankAccountToNewOwnerAddress' (/../data/reentrancy/solidity_contract/40425.sol#152-159) is not in mixedCase
+Function 'MyEtherBank.BankOwner_DisableConnectBankAccountToNewOwnerAddress' (/../data/reentrancy/solidity_contract/40425.sol#161-168) is not in mixedCase
+Function 'MyEtherBank.OpenBankAccount' (/../data/reentrancy/solidity_contract/40425.sol#174-221) is not in mixedCase
+Function 'MyEtherBank.GetBankAccountNumber' (/../data/reentrancy/solidity_contract/40425.sol#224-231) is not in mixedCase
+Function 'MyEtherBank.GetBankAccountBalance' (/../data/reentrancy/solidity_contract/40425.sol#233-241) is not in mixedCase
+Function 'MyEtherBank.DepositToBankAccount' (/../data/reentrancy/solidity_contract/40425.sol#246-270) is not in mixedCase
+Function 'MyEtherBank.DepositToBankAccountFromDifferentAddress' (/../data/reentrancy/solidity_contract/40425.sol#272-300) is not in mixedCase
+Function 'MyEtherBank.WithdrawAmountFromBankAccount' (/../data/reentrancy/solidity_contract/40425.sol#305-333) is not in mixedCase
+Function 'MyEtherBank.WithdrawFullBalanceFromBankAccount' (/../data/reentrancy/solidity_contract/40425.sol#335-366) is not in mixedCase
+Function 'MyEtherBank.TransferAmountFromBankAccountToAddress' (/../data/reentrancy/solidity_contract/40425.sol#368-393) is not in mixedCase
+Function 'MyEtherBank.Security_HasPasswordSha3HashBeenAddedToBankAccount' (/../data/reentrancy/solidity_contract/40425.sol#398-416) is not in mixedCase
+Function 'MyEtherBank.Security_AddPasswordSha3HashToBankAccount' (/../data/reentrancy/solidity_contract/40425.sol#418-449) is not in mixedCase
+Function 'MyEtherBank.Security_ConnectBankAccountToNewOwnerAddress' (/../data/reentrancy/solidity_contract/40425.sol#451-513) is not in mixedCase
+Function 'MyEtherBank.Security_GetNumberOfAttemptsToConnectBankAccountToANewOwnerAddress' (/../data/reentrancy/solidity_contract/40425.sol#515-523) is not in mixedCase
+Modifier 'MyEtherBank.modifier_isContractOwner' (/../data/reentrancy/solidity_contract/40425.sol#75-83) is not in mixedCase
+Modifier 'MyEtherBank.modifier_doesSenderHaveABankAccount' (/../data/reentrancy/solidity_contract/40425.sol#85-103) is not in mixedCase
+Modifier 'MyEtherBank.modifier_wasValueSent' (/../data/reentrancy/solidity_contract/40425.sol#105-114) is not in mixedCase
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#conformance-to-solidity-naming-conventions[0m
+INFO:Slither:/../data/reentrancy/solidity_contract/40425.sol analyzed (1 contracts), 78 result(s) found

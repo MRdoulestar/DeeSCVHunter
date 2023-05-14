@@ -1,0 +1,30 @@
+{
+  "contract": "27263",
+  "tool": "osiris",
+  "start": 1609164014.568712,
+  "end": 1609164016.023675,
+  "duration": 1.454962968826294,
+  "analysis": [
+    {
+      "errors": [
+        {
+          "line": 21,
+          "column": 13,
+          "message": "overflow_bugs"
+        },
+        {
+          "line": 28,
+          "column": 13,
+          "message": "underflow_bugs"
+        },
+        {
+          "line": 14,
+          "column": 11,
+          "message": "reentrancy_bug"
+        }
+      ],
+      "file": "/../data/reentrancy/solidity_contract/27263.sol",
+      "name": "PreSaleFund"
+    }
+  ]
+}

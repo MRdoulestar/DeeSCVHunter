@@ -1,0 +1,14 @@
+{
+  "contract": "18170",
+  "tool": "honeybadger",
+  "start": 1609213285.534935,
+  "end": 1609213348.1414652,
+  "duration": 62.60653018951416,
+  "analysis": [
+    {
+      "errors": [],
+      "file": "/../data/reentrancy/solidity_contract/18170.sol",
+      "name": "A2ACrowdsale"
+    }
+  ]
+}

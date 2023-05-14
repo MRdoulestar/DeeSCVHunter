@@ -1,0 +1,28 @@
+INFO:Slither:Compilation warnings/errors on /../data/reentrancy/solidity_contract/EtherStore.sol:
+/../data/reentrancy/solidity_contract/EtherStore.sol:1:1: Warning: Source file does not specify required compiler version!Consider adding "pragma solidity ^0.4.25;"
+contract EtherStore {
+^ (Relevant source part starts here and spans across multiple lines).
+
+INFO:Detectors:[91m
+Reentrancy in EtherStore.withdrawFunds (/../data/reentrancy/solidity_contract/EtherStore.sol#11-18):
+	External calls:
+	- require(bool)(msg.sender.call.value(_weiToWithdraw)()) (/../data/reentrancy/solidity_contract/EtherStore.sol#15)
+	State variables written after the call(s):
+	- balances (/../data/reentrancy/solidity_contract/EtherStore.sol#16)
+	- lastWithdrawTime (/../data/reentrancy/solidity_contract/EtherStore.sol#17)
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#reentrancy-vulnerabilities[0m
+INFO:Detectors:[92m
+EtherStore.withdrawalLimit should be constant (/../data/reentrancy/solidity_contract/EtherStore.sol#3)
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#state-variables-that-could-be-declared-constant[0m
+INFO:Detectors:[92m
+EtherStore.depositFunds (/../data/reentrancy/solidity_contract/EtherStore.sol#7-9) should be declared external
+EtherStore.withdrawFunds (/../data/reentrancy/solidity_contract/EtherStore.sol#11-18) should be declared external
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#public-function-that-could-be-declared-as-external[0m
+INFO:Detectors:[92m
+Low level call in EtherStore.withdrawFunds (/../data/reentrancy/solidity_contract/EtherStore.sol#11-18):
+	-require(bool)(msg.sender.call.value(_weiToWithdraw)()) /../data/reentrancy/solidity_contract/EtherStore.sol#15
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#low-level-calls[0m
+INFO:Detectors:[92m
+Parameter '_weiToWithdraw' of EtherStore.withdrawFunds (/../data/reentrancy/solidity_contract/EtherStore.sol#11) is not in mixedCase
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#conformance-to-solidity-naming-conventions[0m
+INFO:Slither:/../data/reentrancy/solidity_contract/EtherStore.sol analyzed (1 contracts), 6 result(s) found

@@ -1,0 +1,5 @@
+/data/reentrancy/solidity_contract/7530.sol:558:2: Line length must be no more than 120 but current length is 125. [Error/max-line-length]
+/data/reentrancy/solidity_contract/7530.sol:704:2: Line length must be no more than 120 but current length is 161. [Error/max-line-length]
+/data/reentrancy/solidity_contract/7530.sol:779:14: Expected indentation of 12 spaces but found 13 [Error/indent]
+
+3 problems

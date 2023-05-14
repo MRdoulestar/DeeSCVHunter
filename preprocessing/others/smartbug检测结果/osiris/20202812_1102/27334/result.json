@@ -1,0 +1,30 @@
+{
+  "contract": "27334",
+  "tool": "osiris",
+  "start": 1609193301.084706,
+  "end": 1609193302.47909,
+  "duration": 1.3943839073181152,
+  "analysis": [
+    {
+      "errors": [
+        {
+          "line": 39,
+          "column": 21,
+          "message": "concurrency_bug"
+        },
+        {
+          "line": 39,
+          "column": 21,
+          "message": "reentrancy_bug"
+        }
+      ],
+      "file": "/../data/reentrancy/solidity_contract/27334.sol",
+      "name": "AddressLottery"
+    },
+    {
+      "errors": [],
+      "file": "/../data/reentrancy/solidity_contract/27334.sol",
+      "name": "Ownable"
+    }
+  ]
+}

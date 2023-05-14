@@ -1,0 +1,29 @@
+{
+  "contract": "22805",
+  "tool": "honeybadger",
+  "start": 1609147991.6519501,
+  "end": 1609148064.766853,
+  "duration": 73.11490297317505,
+  "analysis": [
+    {
+      "errors": [],
+      "file": "/../data/reentrancy/solidity_contract/22805.sol",
+      "name": "Ownable"
+    },
+    {
+      "errors": [],
+      "file": "/../data/reentrancy/solidity_contract/22805.sol",
+      "name": "PowerCoin"
+    },
+    {
+      "errors": [],
+      "file": "/../data/reentrancy/solidity_contract/22805.sol",
+      "name": "SafeMath"
+    },
+    {
+      "errors": [],
+      "file": "/../data/reentrancy/solidity_contract/22805.sol",
+      "name": "StandardToken"
+    }
+  ]
+}

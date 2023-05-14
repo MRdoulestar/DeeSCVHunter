@@ -1,0 +1,12 @@
+{
+  "contract": "SendBalance",
+  "tool": "maian",
+  "start": 1609169003.09169,
+  "end": 1609169004.414269,
+  "duration": 1.3225789070129395,
+  "analysis": {
+    "is_lock_vulnerable": false,
+    "is_prodigal_vulnerable": false,
+    "is_suicidal_vulnerable": false
+  }
+}

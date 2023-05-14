@@ -1,0 +1,283 @@
+INFO:Slither:Compilation warnings/errors on /../data/reentrancy/solidity_contract/21111.sol:
+/../data/reentrancy/solidity_contract/21111.sol:146:3: Warning: Defining constructors as functions with the same name as the contract is deprecated. Use "constructor(...) { ... }" instead.
+  function PresalePool(address receiverAddr, uint[] capAmounts, uint fee) public {
+  ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/21111.sol:175:5: Warning: Use of the "var" keyword is deprecated.
+    var c = whitelist[msg.sender];
+    ^---^
+/../data/reentrancy/solidity_contract/21111.sol:198:5: Warning: Use of the "var" keyword is deprecated.
+    var c = whitelist[msg.sender];
+    ^---^
+/../data/reentrancy/solidity_contract/21111.sol:221:5: Warning: Use of the "var" keyword is deprecated.
+    var c = whitelist[receiver];
+    ^---^
+/../data/reentrancy/solidity_contract/21111.sol:225:5: Warning: Use of the "var" keyword is deprecated.
+    var d = distributionMap[tokenAddr];
+    ^---^
+/../data/reentrancy/solidity_contract/21111.sol:301:5: Warning: Use of the "var" keyword is deprecated.
+    var c = whitelist[addr];
+    ^---^
+/../data/reentrancy/solidity_contract/21111.sol:359:5: Warning: Use of the "var" keyword is deprecated.
+    var c = whitelist[addr];
+    ^---^
+/../data/reentrancy/solidity_contract/21111.sol:371:5: Warning: Use of the "var" keyword is deprecated.
+    var c = whitelist[addr];
+    ^---^
+/../data/reentrancy/solidity_contract/21111.sol:373:7: Warning: Use of the "var" keyword is deprecated.
+      var level = whitelistContract.checkMemberLevel(addr);
+      ^-------^
+/../data/reentrancy/solidity_contract/21111.sol:392:5: Warning: Use of the "var" keyword is deprecated.
+    var c = whitelist[addr];
+    ^---^
+/../data/reentrancy/solidity_contract/21111.sol:418:5: Warning: Use of the "var" keyword is deprecated.
+    var c = whitelist[addr];
+    ^---^
+/../data/reentrancy/solidity_contract/21111.sol:419:5: Warning: Use of the "var" keyword is deprecated.
+    var d = distributionMap[tokenAddr];
+    ^---^
+/../data/reentrancy/solidity_contract/21111.sol:481:5: Warning: Use of the "var" keyword is deprecated.
+    var d = distributionMap[tokenAddr];    
+    ^---^
+/../data/reentrancy/solidity_contract/21111.sol:174:14: Warning: Using contract member "balance" inherited from the address type is deprecated. Convert the contract to "address" type to access the member, for example use "address(contract).balance" instead.
+    require (this.balance <= contributionCaps[0]);
+             ^----------^
+/../data/reentrancy/solidity_contract/21111.sol:180:5: Warning: Invoking events without "emit" prefix is deprecated.
+    ContributorBalanceChanged(msg.sender, newBalance);
+    ^-----------------------------------------------^
+/../data/reentrancy/solidity_contract/21111.sol:189:5: Warning: Invoking events without "emit" prefix is deprecated.
+    EthRefundReceived(msg.sender, msg.value);
+    ^--------------------------------------^
+/../data/reentrancy/solidity_contract/21111.sol:204:7: Warning: Invoking events without "emit" prefix is deprecated.
+      ContributorBalanceChanged(msg.sender, 0);
+      ^--------------------------------------^
+/../data/reentrancy/solidity_contract/21111.sol:236:9: Warning: Invoking events without "emit" prefix is deprecated.
+        EthRefunded(receiver,ethAmount);
+        ^-----------------------------^
+/../data/reentrancy/solidity_contract/21111.sol:248:9: Warning: Invoking events without "emit" prefix is deprecated.
+        TokensWithdrawn(receiver,tokenAddr,tokenAmount);
+        ^---------------------------------------------^
+/../data/reentrancy/solidity_contract/21111.sol:291:7: Warning: Invoking events without "emit" prefix is deprecated.
+      ContributorBalanceChanged(addr, 0);
+      ^--------------------------------^
+/../data/reentrancy/solidity_contract/21111.sol:309:7: Warning: Invoking events without "emit" prefix is deprecated.
+      ContributorBalanceChanged(addr, capAmount);
+      ^----------------------------------------^
+/../data/reentrancy/solidity_contract/21111.sol:318:14: Warning: Using contract member "balance" inherited from the address type is deprecated. Convert the contract to "address" type to access the member, for example use "address(contract).balance" instead.
+    require (this.balance <= cap && contributionCaps[0] >= cap);
+             ^----------^
+/../data/reentrancy/solidity_contract/21111.sol:348:24: Warning: Using contract member "balance" inherited from the address type is deprecated. Convert the contract to "address" type to access the member, for example use "address(contract).balance" instead.
+    require (amount >= this.balance);
+                       ^----------^
+/../data/reentrancy/solidity_contract/21111.sol:383:43: Warning: Using contract member "balance" inherited from the address type is deprecated. Convert the contract to "address" type to access the member, for example use "address(contract).balance" instead.
+      remaining = contributionCaps[0].sub(this.balance);
+                                          ^----------^
+/../data/reentrancy/solidity_contract/21111.sol:387:33: Warning: Using contract member "balance" inherited from the address type is deprecated. Convert the contract to "address" type to access the member, for example use "address(contract).balance" instead.
+    return (contributionCaps[0],this.balance,remaining);
+                                ^----------^
+/../data/reentrancy/solidity_contract/21111.sol:409:35: Warning: Using contract member "balance" inherited from the address type is deprecated. Convert the contract to "address" type to access the member, for example use "address(contract).balance" instead.
+      if (contributionCaps[0].sub(this.balance) < remaining) remaining = contributionCaps[0].sub(this.balance);
+                                  ^----------^
+/../data/reentrancy/solidity_contract/21111.sol:409:98: Warning: Using contract member "balance" inherited from the address type is deprecated. Convert the contract to "address" type to access the member, for example use "address(contract).balance" instead.
+      if (contributionCaps[0].sub(this.balance) < remaining) remaining = contributionCaps[0].sub(this.balance);
+                                                                                                 ^----------^
+/../data/reentrancy/solidity_contract/21111.sol:451:5: Warning: Invoking events without "emit" prefix is deprecated.
+    ReceiverAddressSet(addr);
+    ^----------------------^
+/../data/reentrancy/solidity_contract/21111.sol:462:62: Warning: Using contract member "balance" inherited from the address type is deprecated. Convert the contract to "address" type to access the member, for example use "address(contract).balance" instead.
+    require(contributionMin <= amountInWei && amountInWei <= this.balance);
+                                                             ^----------^
+/../data/reentrancy/solidity_contract/21111.sol:463:20: Warning: Using contract member "balance" inherited from the address type is deprecated. Convert the contract to "address" type to access the member, for example use "address(contract).balance" instead.
+    finalBalance = this.balance;
+                   ^----------^
+/../data/reentrancy/solidity_contract/21111.sol:465:9: Warning: Using contract member "balance" inherited from the address type is deprecated. Convert the contract to "address" type to access the member, for example use "address(contract).balance" instead.
+    if (this.balance > 0) ethRefundAmount.push(this.balance);
+        ^----------^
+/../data/reentrancy/solidity_contract/21111.sol:465:48: Warning: Using contract member "balance" inherited from the address type is deprecated. Convert the contract to "address" type to access the member, for example use "address(contract).balance" instead.
+    if (this.balance > 0) ethRefundAmount.push(this.balance);
+                                               ^----------^
+/../data/reentrancy/solidity_contract/21111.sol:467:5: Warning: Invoking events without "emit" prefix is deprecated.
+    PoolSubmitted(receiverAddress, amountInWei);
+    ^-----------------------------------------^
+/../data/reentrancy/solidity_contract/21111.sol:495:5: Warning: Invoking events without "emit" prefix is deprecated.
+    ERC223Received (from, value);
+    ^--------------------------^
+/../data/reentrancy/solidity_contract/21111.sol:30:3: Warning: No visibility specified. Defaulting to "public". 
+  function balanceOf(address _owner) constant returns (uint256 balance) {}
+  ^----------------------------------------------------------------------^
+/../data/reentrancy/solidity_contract/21111.sol:30:22: Warning: Unused function parameter. Remove or comment out the variable name to silence this warning.
+  function balanceOf(address _owner) constant returns (uint256 balance) {}
+                     ^------------^
+/../data/reentrancy/solidity_contract/21111.sol:30:56: Warning: Unused function parameter. Remove or comment out the variable name to silence this warning.
+  function balanceOf(address _owner) constant returns (uint256 balance) {}
+                                                       ^-------------^
+/../data/reentrancy/solidity_contract/21111.sol:31:3: Warning: No visibility specified. Defaulting to "public". 
+  function transfer(address _to, uint256 _value) returns (bool success) {}
+  ^----------------------------------------------------------------------^
+/../data/reentrancy/solidity_contract/21111.sol:31:21: Warning: Unused function parameter. Remove or comment out the variable name to silence this warning.
+  function transfer(address _to, uint256 _value) returns (bool success) {}
+                    ^---------^
+/../data/reentrancy/solidity_contract/21111.sol:31:34: Warning: Unused function parameter. Remove or comment out the variable name to silence this warning.
+  function transfer(address _to, uint256 _value) returns (bool success) {}
+                                 ^------------^
+/../data/reentrancy/solidity_contract/21111.sol:31:59: Warning: Unused function parameter. Remove or comment out the variable name to silence this warning.
+  function transfer(address _to, uint256 _value) returns (bool success) {}
+                                                          ^----------^
+/../data/reentrancy/solidity_contract/21111.sol:36:31: Warning: Unused function parameter. Remove or comment out the variable name to silence this warning.
+   function checkMemberLevel (address addr) view public returns (uint) {}
+                              ^----------^
+/../data/reentrancy/solidity_contract/21111.sol:464:57: Warning: "msg.gas" has been deprecated in favor of "gasleft()"
+    require(receiverAddress.call.value(amountInWei).gas(msg.gas.sub(5000))());
+                                                        ^-----^
+/../data/reentrancy/solidity_contract/21111.sol:494:53: Warning: Unused function parameter. Remove or comment out the variable name to silence this warning.
+  function tokenFallback (address from, uint value, bytes data) public {
+                                                    ^--------^
+/../data/reentrancy/solidity_contract/21111.sol:30:3: Warning: Function state mutability can be restricted to pure
+  function balanceOf(address _owner) constant returns (uint256 balance) {}
+  ^----------------------------------------------------------------------^
+/../data/reentrancy/solidity_contract/21111.sol:31:3: Warning: Function state mutability can be restricted to pure
+  function transfer(address _to, uint256 _value) returns (bool success) {}
+  ^----------------------------------------------------------------------^
+/../data/reentrancy/solidity_contract/21111.sol:36:4: Warning: Function state mutability can be restricted to pure
+   function checkMemberLevel (address addr) view public returns (uint) {}
+   ^--------------------------------------------------------------------^
+
+INFO:Detectors:[91m
+Reentrancy in PresalePool._withdraw (/../data/reentrancy/solidity_contract/21111.sol#219-252):
+	External calls:
+	- require(bool)(d.token.transfer(receiver,tokenAmount)) (/../data/reentrancy/solidity_contract/21111.sol#246)
+	External calls sending eth:
+	- receiver.transfer(ethAmount) (/../data/reentrancy/solidity_contract/21111.sol#235)
+	State variables written after the call(s):
+	- distributionMap (/../data/reentrancy/solidity_contract/21111.sol#247)
+Reentrancy in PresalePool.submitPool (/../data/reentrancy/solidity_contract/21111.sol#458-468):
+	External calls:
+	- require(bool)(receiverAddress.call.value(amountInWei).gas(msg.gas.sub(5000))()) (/../data/reentrancy/solidity_contract/21111.sol#464)
+	State variables written after the call(s):
+	- contractStage (/../data/reentrancy/solidity_contract/21111.sol#466)
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#reentrancy-vulnerabilities[0m
+INFO:Detectors:[93m
+Reentrancy in PresalePool._checkCap (/../data/reentrancy/solidity_contract/21111.sol#357-367):
+	External calls:
+	- _checkWhitelistContract(addr) (/../data/reentrancy/solidity_contract/21111.sol#358)
+	State variables written after the call(s):
+	- contributionCaps (/../data/reentrancy/solidity_contract/21111.sol#362)
+Reentrancy in PresalePool._checkWhitelistContract (/../data/reentrancy/solidity_contract/21111.sol#370-378):
+	External calls:
+	- level = whitelistContract.checkMemberLevel(addr) (/../data/reentrancy/solidity_contract/21111.sol#373)
+	State variables written after the call(s):
+	- whitelist (/../data/reentrancy/solidity_contract/21111.sol#375)
+	- whitelist (/../data/reentrancy/solidity_contract/21111.sol#376)
+Reentrancy in PresalePool._ethDeposit (/../data/reentrancy/solidity_contract/21111.sol#171-181):
+	External calls:
+	- require(bool)(newBalance <= _checkCap(msg.sender)) (/../data/reentrancy/solidity_contract/21111.sol#178)
+	State variables written after the call(s):
+	- whitelist (/../data/reentrancy/solidity_contract/21111.sol#179)
+Reentrancy in PresalePool.authorize (/../data/reentrancy/solidity_contract/21111.sol#257-267):
+	External calls:
+	- _checkWhitelistContract(addr) (/../data/reentrancy/solidity_contract/21111.sol#259)
+	State variables written after the call(s):
+	- whitelist (/../data/reentrancy/solidity_contract/21111.sol#265)
+	- whitelist (/../data/reentrancy/solidity_contract/21111.sol#266)
+Reentrancy in PresalePool.enableTokenWithdrawals (/../data/reentrancy/solidity_contract/21111.sol#474-491):
+	External calls:
+	- amount = d.token.balanceOf(this).sub(d.balanceRemaining) (/../data/reentrancy/solidity_contract/21111.sol#483)
+	- require(bool)(d.token.transfer(owner,_applyPct(amount,feePct))) (/../data/reentrancy/solidity_contract/21111.sol#486)
+	- amount = d.token.balanceOf(this).sub(d.balanceRemaining) (/../data/reentrancy/solidity_contract/21111.sol#488)
+	- d.balanceRemaining = d.token.balanceOf(this) (/../data/reentrancy/solidity_contract/21111.sol#489)
+	State variables written after the call(s):
+	- distributionMap (/../data/reentrancy/solidity_contract/21111.sol#489)
+Reentrancy in PresalePool.modifyIndividualCap (/../data/reentrancy/solidity_contract/21111.sol#297-311):
+	External calls:
+	- _checkWhitelistContract(addr) (/../data/reentrancy/solidity_contract/21111.sol#300)
+	State variables written after the call(s):
+	- whitelist (/../data/reentrancy/solidity_contract/21111.sol#304)
+Reentrancy in PresalePool.modifyIndividualCap (/../data/reentrancy/solidity_contract/21111.sol#297-311):
+	External calls:
+	- _checkWhitelistContract(addr) (/../data/reentrancy/solidity_contract/21111.sol#300)
+	- capAmount = _checkCap(addr) (/../data/reentrancy/solidity_contract/21111.sol#305)
+	State variables written after the call(s):
+	- contributionCaps (/../data/reentrancy/solidity_contract/21111.sol#305)
+	- whitelist (/../data/reentrancy/solidity_contract/21111.sol#305)
+	- whitelist (/../data/reentrancy/solidity_contract/21111.sol#307)
+Reentrancy in PresalePool.revoke (/../data/reentrancy/solidity_contract/21111.sol#282-293):
+	External calls:
+	- require(bool)(whitelistContract.checkMemberLevel(addr) == 0) (/../data/reentrancy/solidity_contract/21111.sol#285)
+	State variables written after the call(s):
+	- whitelist (/../data/reentrancy/solidity_contract/21111.sol#286)
+	- whitelist (/../data/reentrancy/solidity_contract/21111.sol#289)
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#reentrancy-vulnerabilities-1[0m
+INFO:Detectors:[92m
+Reentrancy in PresalePool._checkCap (/../data/reentrancy/solidity_contract/21111.sol#357-367):
+	External calls:
+	- _checkWhitelistContract(addr) (/../data/reentrancy/solidity_contract/21111.sol#358)
+	State variables written after the call(s):
+	- nextCapTime (/../data/reentrancy/solidity_contract/21111.sol#363)
+Reentrancy in PresalePool.submitPool (/../data/reentrancy/solidity_contract/21111.sol#458-468):
+	External calls:
+	- require(bool)(receiverAddress.call.value(amountInWei).gas(msg.gas.sub(5000))()) (/../data/reentrancy/solidity_contract/21111.sol#464)
+	State variables written after the call(s):
+	- ethRefundAmount (/../data/reentrancy/solidity_contract/21111.sol#465)
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#reentrancy-vulnerabilities-2[0m
+INFO:Detectors:[92m
+PresalePool.modifyAllLevelCaps (/../data/reentrancy/solidity_contract/21111.sol#325-341) uses timestamp for comparisons
+	Dangerous comparisons:
+	- require(bool)(time == 0 || time > block.timestamp) (/../data/reentrancy/solidity_contract/21111.sol#328)
+PresalePool._checkCap (/../data/reentrancy/solidity_contract/21111.sol#357-367) uses timestamp for comparisons
+	Dangerous comparisons:
+	- nextCapTime > 0 && block.timestamp > nextCapTime (/../data/reentrancy/solidity_contract/21111.sol#361-364)
+PresalePool.checkContributorBalance (/../data/reentrancy/solidity_contract/21111.sol#391-414) uses timestamp for comparisons
+	Dangerous comparisons:
+	- nextCapTime == 0 || nextCapTime > block.timestamp (/../data/reentrancy/solidity_contract/21111.sol#402-406)
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#block-timestamp[0m
+INFO:Detectors:[92m
+PresalePool.authorize uses assembly (/../data/reentrancy/solidity_contract/21111.sol#257-267)
+	- /../data/reentrancy/solidity_contract/21111.sol#263-264
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#assembly-usage[0m
+INFO:Detectors:[92m
+Deprecated standard detected @ /../data/reentrancy/solidity_contract/21111.sol#464:
+	- Usage of "msg.gas" should be replaced with "gasleft()"
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#deprecated-standards[0m
+INFO:Detectors:[92m
+ERC20.balanceOf (/../data/reentrancy/solidity_contract/21111.sol#30) should be declared external
+ERC20.transfer (/../data/reentrancy/solidity_contract/21111.sol#31) should be declared external
+WhiteList.checkMemberLevel (/../data/reentrancy/solidity_contract/21111.sol#36) should be declared external
+PresalePool.fallback (/../data/reentrancy/solidity_contract/21111.sol#162-168) should be declared external
+PresalePool.withdraw (/../data/reentrancy/solidity_contract/21111.sol#197-208) should be declared external
+PresalePool.withdrawFor (/../data/reentrancy/solidity_contract/21111.sol#211-215) should be declared external
+PresalePool.authorizeMany (/../data/reentrancy/solidity_contract/21111.sol#271-277) should be declared external
+PresalePool.revoke (/../data/reentrancy/solidity_contract/21111.sol#282-293) should be declared external
+PresalePool.modifyIndividualCap (/../data/reentrancy/solidity_contract/21111.sol#297-311) should be declared external
+PresalePool.modifyAllLevelCaps (/../data/reentrancy/solidity_contract/21111.sol#325-341) should be declared external
+PresalePool.modifyMaxContractBalance (/../data/reentrancy/solidity_contract/21111.sol#345-354) should be declared external
+PresalePool.checkPoolBalance (/../data/reentrancy/solidity_contract/21111.sol#381-388) should be declared external
+PresalePool.checkContributorBalance (/../data/reentrancy/solidity_contract/21111.sol#391-414) should be declared external
+PresalePool.checkAvailableTokens (/../data/reentrancy/solidity_contract/21111.sol#417-424) should be declared external
+PresalePool.closeContributions (/../data/reentrancy/solidity_contract/21111.sol#429-432) should be declared external
+PresalePool.reopenContributions (/../data/reentrancy/solidity_contract/21111.sol#436-439) should be declared external
+PresalePool.setReceiverAddress (/../data/reentrancy/solidity_contract/21111.sol#446-452) should be declared external
+PresalePool.submitPool (/../data/reentrancy/solidity_contract/21111.sol#458-468) should be declared external
+PresalePool.enableTokenWithdrawals (/../data/reentrancy/solidity_contract/21111.sol#474-491) should be declared external
+PresalePool.tokenFallback (/../data/reentrancy/solidity_contract/21111.sol#494-496) should be declared external
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#public-function-that-could-be-declared-as-external[0m
+INFO:Detectors:[92m
+Detected issues with version pragma in /../data/reentrancy/solidity_contract/21111.sol:
+	- pragma solidity^0.4.19 (/../data/reentrancy/solidity_contract/21111.sol#1): it allows old versions
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#incorrect-version-of-solidity[0m
+INFO:Detectors:[92m
+Low level call in PresalePool.submitPool (/../data/reentrancy/solidity_contract/21111.sol#458-468):
+	-require(bool)(receiverAddress.call.value(amountInWei).gas(msg.gas.sub(5000))()) /../data/reentrancy/solidity_contract/21111.sol#464
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#low-level-calls[0m
+INFO:Detectors:[92m
+Function 'PresalePool._toPct' (/../data/reentrancy/solidity_contract/21111.sol#135-137) is not in mixedCase
+Function 'PresalePool._applyPct' (/../data/reentrancy/solidity_contract/21111.sol#140-142) is not in mixedCase
+Function 'PresalePool.PresalePool' (/../data/reentrancy/solidity_contract/21111.sol#146-157) is not in mixedCase
+Function 'PresalePool._ethDeposit' (/../data/reentrancy/solidity_contract/21111.sol#171-181) is not in mixedCase
+Function 'PresalePool._ethRefund' (/../data/reentrancy/solidity_contract/21111.sol#184-190) is not in mixedCase
+Function 'PresalePool._withdraw' (/../data/reentrancy/solidity_contract/21111.sol#219-252) is not in mixedCase
+Function 'PresalePool._checkCap' (/../data/reentrancy/solidity_contract/21111.sol#357-367) is not in mixedCase
+Function 'PresalePool._checkWhitelistContract' (/../data/reentrancy/solidity_contract/21111.sol#370-378) is not in mixedCase
+Constant 'PresalePool.contributionMin' (/../data/reentrancy/solidity_contract/21111.sol#65) is not in UPPER_CASE_WITH_UNDERSCORES
+Constant 'PresalePool.maxGasPrice' (/../data/reentrancy/solidity_contract/21111.sol#67) is not in UPPER_CASE_WITH_UNDERSCORES
+Constant 'PresalePool.whitelistContract' (/../data/reentrancy/solidity_contract/21111.sol#69) is not in UPPER_CASE_WITH_UNDERSCORES
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#conformance-to-solidity-naming-conventions[0m
+INFO:Slither:/../data/reentrancy/solidity_contract/21111.sol analyzed (4 contracts), 50 result(s) found

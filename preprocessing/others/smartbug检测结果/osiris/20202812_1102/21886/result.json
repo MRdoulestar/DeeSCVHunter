@@ -1,0 +1,40 @@
+{
+  "contract": "21886",
+  "tool": "osiris",
+  "start": 1609129217.662192,
+  "end": 1609129281.4592488,
+  "duration": 63.797056674957275,
+  "analysis": [
+    {
+      "errors": [
+        {
+          "line": 183,
+          "column": 55,
+          "message": "overflow_bugs"
+        },
+        {
+          "line": 160,
+          "column": 59,
+          "message": "overflow_bugs"
+        }
+      ],
+      "file": "/../data/reentrancy/solidity_contract/21886.sol",
+      "name": "AutomobileCyberchainToken"
+    },
+    {
+      "errors": [],
+      "file": "/../data/reentrancy/solidity_contract/21886.sol",
+      "name": "SafeMath"
+    },
+    {
+      "errors": [],
+      "file": "/../data/reentrancy/solidity_contract/21886.sol",
+      "name": "StandardToken"
+    },
+    {
+      "errors": [],
+      "file": "/../data/reentrancy/solidity_contract/21886.sol",
+      "name": "Token"
+    }
+  ]
+}

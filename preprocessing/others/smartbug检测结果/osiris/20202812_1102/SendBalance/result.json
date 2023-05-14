@@ -1,0 +1,8 @@
+{
+  "contract": "SendBalance",
+  "tool": "osiris",
+  "start": 1609189384.123469,
+  "end": 1609189385.993576,
+  "duration": 1.8701069355010986,
+  "analysis": []
+}

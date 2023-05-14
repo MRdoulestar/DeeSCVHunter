@@ -1,0 +1,14 @@
+{
+  "contract": "4679",
+  "tool": "honeybadger",
+  "start": 1609181009.491874,
+  "end": 1609181156.1949298,
+  "duration": 146.70305585861206,
+  "analysis": [
+    {
+      "errors": [],
+      "file": "/../data/reentrancy/solidity_contract/4679.sol",
+      "name": "MilestoneSystem"
+    }
+  ]
+}

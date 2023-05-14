@@ -1,0 +1,15 @@
+/data/reentrancy/solidity_contract/SimpleDAO.sol:2:3: Expected indentation of 4 spaces but found 2 [Error/indent]
+/data/reentrancy/solidity_contract/SimpleDAO.sol:4:3: Expected indentation of 4 spaces but found 2 [Error/indent]
+/data/reentrancy/solidity_contract/SimpleDAO.sol:5:5: Expected indentation of 8 spaces but found 4 [Error/indent]
+/data/reentrancy/solidity_contract/SimpleDAO.sol:6:3: Expected indentation of 4 spaces but found 2 [Error/indent]
+/data/reentrancy/solidity_contract/SimpleDAO.sol:8:3: Expected indentation of 4 spaces but found 2 [Error/indent]
+/data/reentrancy/solidity_contract/SimpleDAO.sol:9:5: Expected indentation of 8 spaces but found 4 [Error/indent]
+/data/reentrancy/solidity_contract/SimpleDAO.sol:10:7: Expected indentation of 12 spaces but found 6 [Error/indent]
+/data/reentrancy/solidity_contract/SimpleDAO.sol:11:7: Expected indentation of 12 spaces but found 6 [Error/indent]
+/data/reentrancy/solidity_contract/SimpleDAO.sol:12:5: Expected indentation of 8 spaces but found 4 [Error/indent]
+/data/reentrancy/solidity_contract/SimpleDAO.sol:13:3: Expected indentation of 4 spaces but found 2 [Error/indent]
+/data/reentrancy/solidity_contract/SimpleDAO.sol:15:3: Expected indentation of 4 spaces but found 2 [Error/indent]
+/data/reentrancy/solidity_contract/SimpleDAO.sol:16:5: Expected indentation of 8 spaces but found 4 [Error/indent]
+/data/reentrancy/solidity_contract/SimpleDAO.sol:17:3: Expected indentation of 4 spaces but found 2 [Error/indent]
+
+13 problems

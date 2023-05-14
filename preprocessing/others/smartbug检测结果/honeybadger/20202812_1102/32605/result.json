@@ -1,0 +1,14 @@
+{
+  "contract": "32605",
+  "tool": "honeybadger",
+  "start": 1609203085.373052,
+  "end": 1609203110.216853,
+  "duration": 24.843801021575928,
+  "analysis": [
+    {
+      "errors": [],
+      "file": "/../data/reentrancy/solidity_contract/32605.sol",
+      "name": "MetaIdentityManager"
+    }
+  ]
+}

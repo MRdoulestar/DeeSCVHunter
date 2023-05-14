@@ -1,0 +1,32 @@
+INFO:root:Contract /../data/reentrancy/solidity_contract/22902.sol:BuildingStatus:
+INFO:symExec:Running, please wait...
+INFO:symExec:	============ Results ===========
+INFO:symExec:	 EVM code coverage: 	 99.9%
+INFO:symExec:	 Money flow:    	 False
+INFO:symExec:	 Balance disorder: 	 False
+INFO:symExec:	 Hidden transfer: 	 False
+INFO:symExec:	 Inheritance disorder: 	 False
+INFO:symExec:	 Uninitialised struct: 	 False
+INFO:symExec:	 Type overflow: 	 False
+INFO:symExec:	 Skip empty string: 	 False
+INFO:symExec:	 Hidden state update: 	 False
+INFO:symExec:	 Straw man contract: 	 False
+INFO:symExec:	 --- 48.4937479496 seconds ---
+INFO:symExec:	====== Analysis Completed ======
+INFO:root:Contract /../data/reentrancy/solidity_contract/22902.sol:ConvertQuote:
+INFO:symExec:Running, please wait...
+INFO:symExec:	============ Results ===========
+INFO:symExec:	 EVM code coverage: 	 64.9%
+INFO:symExec:	 Money flow:    	 False
+INFO:symExec:	 Balance disorder: 	 False
+INFO:symExec:	 Hidden transfer: 	 False
+INFO:symExec:	 Inheritance disorder: 	 False
+INFO:symExec:	 Uninitialised struct: 	 False
+INFO:symExec:	 Type overflow: 	 False
+INFO:symExec:	 Skip empty string: 	 False
+INFO:symExec:	 Hidden state update: 	 False
+INFO:symExec:	 Straw man contract: 	 False
+INFO:symExec:	 --- 261.16304493 seconds ---
+INFO:symExec:	====== Analysis Completed ======
+INFO:root:Contract /../data/reentrancy/solidity_contract/22902.sol:Crowdsale:
+INFO:symExec:Running, please wait...

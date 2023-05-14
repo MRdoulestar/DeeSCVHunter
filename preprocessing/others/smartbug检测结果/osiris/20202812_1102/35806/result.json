@@ -1,0 +1,24 @@
+{
+  "contract": "35806",
+  "tool": "osiris",
+  "start": 1609206164.809246,
+  "end": 1609206255.702476,
+  "duration": 90.89322996139526,
+  "analysis": [
+    {
+      "errors": [],
+      "file": "/../data/reentrancy/solidity_contract/35806.sol",
+      "name": "SafeMath"
+    },
+    {
+      "errors": [],
+      "file": "/../data/reentrancy/solidity_contract/35806.sol",
+      "name": "Token"
+    },
+    {
+      "errors": [],
+      "file": "/../data/reentrancy/solidity_contract/35806.sol",
+      "name": "TokenLab"
+    }
+  ]
+}

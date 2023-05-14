@@ -1,0 +1,12 @@
+{
+  "contract": "simple_dao_fixed",
+  "tool": "maian",
+  "start": 1609199144.458441,
+  "end": 1609199261.385278,
+  "duration": 116.92683696746826,
+  "analysis": {
+    "is_lock_vulnerable": false,
+    "is_prodigal_vulnerable": false,
+    "is_suicidal_vulnerable": false
+  }
+}

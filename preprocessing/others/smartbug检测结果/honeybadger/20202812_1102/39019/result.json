@@ -1,0 +1,14 @@
+{
+  "contract": "39019",
+  "tool": "honeybadger",
+  "start": 1609194941.801923,
+  "end": 1609194957.772324,
+  "duration": 15.970401048660278,
+  "analysis": [
+    {
+      "errors": [],
+      "file": "/../data/reentrancy/solidity_contract/39019.sol",
+      "name": "TokenPool"
+    }
+  ]
+}

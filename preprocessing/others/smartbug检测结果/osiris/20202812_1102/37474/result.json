@@ -1,0 +1,40 @@
+{
+  "contract": "37474",
+  "tool": "osiris",
+  "start": 1609165953.067338,
+  "end": 1609165966.3280268,
+  "duration": 13.260688781738281,
+  "analysis": [
+    {
+      "errors": [
+        {
+          "line": 82,
+          "column": 17,
+          "message": "overflow_bugs"
+        },
+        {
+          "line": 82,
+          "column": 17,
+          "message": "underflow_bugs"
+        },
+        {
+          "line": 120,
+          "column": 9,
+          "message": "concurrency_bug"
+        },
+        {
+          "line": 82,
+          "column": 17,
+          "message": "reentrancy_bug"
+        },
+        {
+          "line": 120,
+          "column": 9,
+          "message": "reentrancy_bug"
+        }
+      ],
+      "file": "/../data/reentrancy/solidity_contract/37474.sol",
+      "name": "TradersWallet"
+    }
+  ]
+}

@@ -1,0 +1,321 @@
+{
+  "contract": "27248",
+  "tool": "slither",
+  "start": 1609154582.421383,
+  "end": 1609154583.3379688,
+  "duration": 0.9165859222412109,
+  "analysis": [
+    {
+      "check": "external-function",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "SimpleMultiSig.execute (/../data/reentrancy/solidity_contract/27248.sol#23-39) should be declared external\n",
+      "elements": [
+        {
+          "type": "function",
+          "name": "execute",
+          "source_mapping": {
+            "start": 612,
+            "length": 655,
+            "filename": "/../data/reentrancy/solidity_contract/27248.sol",
+            "lines": [
+              23,
+              24,
+              25,
+              26,
+              27,
+              28,
+              29,
+              30,
+              31,
+              32,
+              33,
+              34,
+              35,
+              36,
+              37,
+              38,
+              39
+            ]
+          },
+          "contract": {
+            "type": "contract",
+            "name": "SimpleMultiSig",
+            "source_mapping": {
+              "start": 25,
+              "length": 1277,
+              "filename": "/../data/reentrancy/solidity_contract/27248.sol",
+              "lines": [
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10,
+                11,
+                12,
+                13,
+                14,
+                15,
+                16,
+                17,
+                18,
+                19,
+                20,
+                21,
+                22,
+                23,
+                24,
+                25,
+                26,
+                27,
+                28,
+                29,
+                30,
+                31,
+                32,
+                33,
+                34,
+                35,
+                36,
+                37,
+                38,
+                39,
+                40,
+                41,
+                42
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "check": "external-function",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "SimpleMultiSig.fallback (/../data/reentrancy/solidity_contract/27248.sol#41) should be declared external\n",
+      "elements": [
+        {
+          "type": "function",
+          "name": "fallback",
+          "source_mapping": {
+            "start": 1271,
+            "length": 29,
+            "filename": "/../data/reentrancy/solidity_contract/27248.sol",
+            "lines": [
+              41
+            ]
+          },
+          "contract": {
+            "type": "contract",
+            "name": "SimpleMultiSig",
+            "source_mapping": {
+              "start": 25,
+              "length": 1277,
+              "filename": "/../data/reentrancy/solidity_contract/27248.sol",
+              "lines": [
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10,
+                11,
+                12,
+                13,
+                14,
+                15,
+                16,
+                17,
+                18,
+                19,
+                20,
+                21,
+                22,
+                23,
+                24,
+                25,
+                26,
+                27,
+                28,
+                29,
+                30,
+                31,
+                32,
+                33,
+                34,
+                35,
+                36,
+                37,
+                38,
+                39,
+                40,
+                41,
+                42
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "check": "solc-version",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Detected issues with version pragma in /../data/reentrancy/solidity_contract/27248.sol:\n\t- pragma solidity^0.4.18 (/../data/reentrancy/solidity_contract/27248.sol#1): it allows old versions\n",
+      "elements": [
+        {
+          "type": "expression",
+          "expression": "^0.4.18",
+          "source_mapping": {
+            "start": 0,
+            "length": 24,
+            "filename": "/../data/reentrancy/solidity_contract/27248.sol",
+            "lines": [
+              1
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "low-level-calls",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Low level call in SimpleMultiSig.execute (/../data/reentrancy/solidity_contract/27248.sol#23-39):\n\t-require(bool)(destination.call.value(value)(data)) /../data/reentrancy/solidity_contract/27248.sol#38\n",
+      "elements": [
+        {
+          "type": "function",
+          "name": "execute",
+          "source_mapping": {
+            "start": 612,
+            "length": 655,
+            "filename": "/../data/reentrancy/solidity_contract/27248.sol",
+            "lines": [
+              23,
+              24,
+              25,
+              26,
+              27,
+              28,
+              29,
+              30,
+              31,
+              32,
+              33,
+              34,
+              35,
+              36,
+              37,
+              38,
+              39
+            ]
+          },
+          "contract": {
+            "type": "contract",
+            "name": "SimpleMultiSig",
+            "source_mapping": {
+              "start": 25,
+              "length": 1277,
+              "filename": "/../data/reentrancy/solidity_contract/27248.sol",
+              "lines": [
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10,
+                11,
+                12,
+                13,
+                14,
+                15,
+                16,
+                17,
+                18,
+                19,
+                20,
+                21,
+                22,
+                23,
+                24,
+                25,
+                26,
+                27,
+                28,
+                29,
+                30,
+                31,
+                32,
+                33,
+                34,
+                35,
+                36,
+                37,
+                38,
+                39,
+                40,
+                41,
+                42
+              ]
+            }
+          }
+        },
+        {
+          "type": "expression",
+          "expression": "require(bool)(destination.call.value(value)(data))",
+          "source_mapping": {
+            "start": 1218,
+            "length": 44,
+            "filename": "/../data/reentrancy/solidity_contract/27248.sol",
+            "lines": [
+              38
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "naming-convention",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Function 'SimpleMultiSig.SimpleMultiSig' (/../data/reentrancy/solidity_contract/27248.sol#9-20) is not in mixedCase\n",
+      "elements": [
+        {
+          "target": "function",
+          "convention": "mixedCase",
+          "name": "SimpleMultiSig",
+          "source_mapping": {
+            "start": 209,
+            "length": 395,
+            "filename": "/../data/reentrancy/solidity_contract/27248.sol",
+            "lines": [
+              9,
+              10,
+              11,
+              12,
+              13,
+              14,
+              15,
+              16,
+              17,
+              18,
+              19,
+              20
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "contract": "25196",
+  "tool": "osiris",
+  "start": 1609201235.134876,
+  "end": 1609201238.621977,
+  "duration": 3.4871010780334473,
+  "analysis": [
+    {
+      "errors": [],
+      "file": "/../data/reentrancy/solidity_contract/25196.sol",
+      "name": "FruitFarm"
+    }
+  ]
+}

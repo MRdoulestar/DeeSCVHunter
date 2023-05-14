@@ -1,0 +1,61 @@
+INFO:root:Contract /../data/reentrancy/solidity_contract/30046.sol:TrustWallet:
+INFO:symExec:Running, please wait...
+INFO:symExec:	============ Results ===========
+INFO:symExec:	  EVM code coverage: 	 14.6%
+INFO:symExec:	  Arithmetic bugs: 	 True
+INFO:symExec:	  └> Overflow bugs: 	 True
+/../data/reentrancy/solidity_contract/30046.sol:TrustWallet:115:23
+transaction.time_initiated + users[transaction.initiated_by].waiting_time
+^
+INFO:symExec:	  └> Underflow bugs: 	 False
+INFO:symExec:	  └> Division bugs: 	 False
+INFO:symExec:	  └> Modulo bugs:   	 False
+INFO:symExec:	  └> Truncation bugs: 	 False
+INFO:symExec:	  └> Signedness bugs: 	 False
+INFO:symExec:	  Callstack bug: 	 True
+/../data/reentrancy/solidity_contract/30046.sol:TrustWallet:119:44
+transaction.destination.call.value(transaction.value)(transaction.data)
+^
+INFO:symExec:	  Concurrency bug: 	 False
+INFO:symExec:	  Time dependency bug: 	 True
+/../data/reentrancy/solidity_contract/30046.sol:TrustWallet:115:9
+require(now > transaction.time_initiated + users[transaction.initiated_by].waiting_time)
+^
+INFO:symExec:	  Reentrancy bug: 	 True
+/../data/reentrancy/solidity_contract/30046.sol:TrustWallet:119:44
+transaction.destination.call.value(transaction.value)(transaction.data)
+^
+INFO:symExec:	 --- 50.3098621368 seconds ---
+INFO:symExec:	====== Analysis Completed ======
+INFO:root:Contract /../data/reentrancy/solidity_contract/30046.sol:TrustWalletFactory:
+incomplete push instruction at 7250
+INFO:symExec:Running, please wait...
+INFO:symExec:	============ Results ===========
+INFO:symExec:	  EVM code coverage: 	 8.6%
+INFO:symExec:	  Arithmetic bugs: 	 False
+INFO:symExec:	  └> Overflow bugs: 	 False
+INFO:symExec:	  └> Underflow bugs: 	 False
+INFO:symExec:	  └> Division bugs: 	 False
+INFO:symExec:	  └> Modulo bugs:   	 False
+INFO:symExec:	  └> Truncation bugs: 	 False
+INFO:symExec:	  └> Signedness bugs: 	 False
+INFO:symExec:	  Callstack bug: 	 True
+/../data/reentrancy/solidity_contract/30046.sol:TrustWalletFactory:119:44
+transaction.destination.call.value(transaction.value)(transaction.data)
+^
+INFO:symExec:	  Concurrency bug: 	 False
+INFO:symExec:	  Time dependency bug: 	 False
+INFO:symExec:	  Reentrancy bug: 	 False
+INFO:symExec:	 --- 20.6423459053 seconds ---
+INFO:symExec:	====== Analysis Completed ======
+
+  .oooooo.             o8o            o8o          
+ d8P'  `Y8b            `"'            `"'          
+888      888  .oooo.o oooo  oooo d8b oooo   .oooo.o
+888      888 d88(  "8 `888  `888""8P `888  d88(  "8
+888      888 `"Y88b.   888   888      888  `"Y88b. 
+`88b    d88' o.  )88b  888   888      888  o.  )88b
+ `Y8bood8P'  8""888P' o888o d888b    o888o 8""888P'
+
+
+!!! SYMBOLIC EXECUTION TIMEOUT !!!

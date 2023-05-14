@@ -1,0 +1,40 @@
+{
+  "contract": "24007",
+  "tool": "osiris",
+  "start": 1609197605.381931,
+  "end": 1609197607.304111,
+  "duration": 1.922179937362671,
+  "analysis": [
+    {
+      "errors": [
+        {
+          "line": 31,
+          "column": 39,
+          "message": "overflow_bugs"
+        },
+        {
+          "line": 20,
+          "column": 13,
+          "message": "callstack_bug"
+        },
+        {
+          "line": 20,
+          "column": 13,
+          "message": "concurrency_bug"
+        },
+        {
+          "line": 31,
+          "column": 9,
+          "message": "time_dependency_bug"
+        },
+        {
+          "line": 20,
+          "column": 13,
+          "message": "reentrancy_bug"
+        }
+      ],
+      "file": "/../data/reentrancy/solidity_contract/24007.sol",
+      "name": "GetSomeEther"
+    }
+  ]
+}

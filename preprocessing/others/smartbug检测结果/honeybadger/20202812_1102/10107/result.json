@@ -1,0 +1,19 @@
+{
+  "contract": "10107",
+  "tool": "honeybadger",
+  "start": 1609192173.743867,
+  "end": 1609192340.910483,
+  "duration": 167.16661596298218,
+  "analysis": [
+    {
+      "errors": [],
+      "file": "/../data/reentrancy/solidity_contract/10107.sol",
+      "name": "MyToken"
+    },
+    {
+      "errors": [],
+      "file": "/../data/reentrancy/solidity_contract/10107.sol",
+      "name": "SafeMath"
+    }
+  ]
+}

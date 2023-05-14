@@ -1,0 +1,29 @@
+{
+  "contract": "39664",
+  "tool": "osiris",
+  "start": 1609166871.00994,
+  "end": 1609166881.647996,
+  "duration": 10.63805603981018,
+  "analysis": [
+    {
+      "errors": [],
+      "file": "/../data/reentrancy/solidity_contract/39664.sol",
+      "name": "ArrayLib"
+    },
+    {
+      "errors": [],
+      "file": "/../data/reentrancy/solidity_contract/39664.sol",
+      "name": "Blockjack"
+    },
+    {
+      "errors": [],
+      "file": "/../data/reentrancy/solidity_contract/39664.sol",
+      "name": "DeckLib"
+    },
+    {
+      "errors": [],
+      "file": "/../data/reentrancy/solidity_contract/39664.sol",
+      "name": "GameLib"
+    }
+  ]
+}

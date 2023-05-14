@@ -1,0 +1,17 @@
+{
+  "contract": "24007",
+  "tool": "solhint",
+  "start": 1609197610.7556438,
+  "end": 1609197611.807055,
+  "duration": 1.0514111518859863,
+  "analysis": [
+    {
+      "file": "/data/reentrancy/solidity_contract/24007.sol",
+      "line": "34",
+      "column": "6",
+      "message": "Expected indentation of 12 spaces but found 5",
+      "level": "Error",
+      "type": "indent"
+    }
+  ]
+}

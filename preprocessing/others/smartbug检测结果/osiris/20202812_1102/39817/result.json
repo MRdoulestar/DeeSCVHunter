@@ -1,0 +1,56 @@
+{
+  "contract": "39817",
+  "tool": "osiris",
+  "start": 1609197666.89949,
+  "end": 1609197806.5178392,
+  "duration": 139.61834907531738,
+  "analysis": [
+    {
+      "errors": [
+        {
+          "line": 470,
+          "column": 16,
+          "message": "reentrancy_bug"
+        }
+      ],
+      "file": "/../data/reentrancy/solidity_contract/39817.sol",
+      "name": "ProfitContainerAdapter"
+    },
+    {
+      "errors": [],
+      "file": "/../data/reentrancy/solidity_contract/39817.sol",
+      "name": "SafeMath"
+    },
+    {
+      "errors": [],
+      "file": "/../data/reentrancy/solidity_contract/39817.sol",
+      "name": "ShopKeeper"
+    },
+    {
+      "errors": [],
+      "file": "/../data/reentrancy/solidity_contract/39817.sol",
+      "name": "Token"
+    },
+    {
+      "errors": [],
+      "file": "/../data/reentrancy/solidity_contract/39817.sol",
+      "name": "ValueToken"
+    },
+    {
+      "errors": [
+        {
+          "line": 317,
+          "column": 18,
+          "message": "callstack_bug"
+        },
+        {
+          "line": 303,
+          "column": 16,
+          "message": "callstack_bug"
+        }
+      ],
+      "file": "/../data/reentrancy/solidity_contract/39817.sol",
+      "name": "ValueTrader"
+    }
+  ]
+}

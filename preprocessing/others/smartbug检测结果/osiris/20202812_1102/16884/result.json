@@ -1,0 +1,75 @@
+{
+  "contract": "16884",
+  "tool": "osiris",
+  "start": 1609176890.006915,
+  "end": 1609176985.044397,
+  "duration": 95.03748202323914,
+  "analysis": [
+    {
+      "errors": [],
+      "file": "/../data/reentrancy/solidity_contract/16884.sol",
+      "name": "BasicToken"
+    },
+    {
+      "errors": [
+        {
+          "line": 678,
+          "column": 33,
+          "message": "overflow_bugs"
+        },
+        {
+          "line": 695,
+          "column": 5,
+          "message": "overflow_bugs"
+        },
+        {
+          "line": 697,
+          "column": 5,
+          "message": "overflow_bugs"
+        }
+      ],
+      "file": "/../data/reentrancy/solidity_contract/16884.sol",
+      "name": "Crowdsale"
+    },
+    {
+      "errors": [],
+      "file": "/../data/reentrancy/solidity_contract/16884.sol",
+      "name": "Crowdsaled"
+    },
+    {
+      "errors": [],
+      "file": "/../data/reentrancy/solidity_contract/16884.sol",
+      "name": "HasManager"
+    },
+    {
+      "errors": [],
+      "file": "/../data/reentrancy/solidity_contract/16884.sol",
+      "name": "LetItPlayToken"
+    },
+    {
+      "errors": [],
+      "file": "/../data/reentrancy/solidity_contract/16884.sol",
+      "name": "Ownable"
+    },
+    {
+      "errors": [],
+      "file": "/../data/reentrancy/solidity_contract/16884.sol",
+      "name": "SafeMath"
+    },
+    {
+      "errors": [],
+      "file": "/../data/reentrancy/solidity_contract/16884.sol",
+      "name": "StandardToken"
+    },
+    {
+      "errors": [],
+      "file": "/../data/reentrancy/solidity_contract/16884.sol",
+      "name": "Whitelist"
+    },
+    {
+      "errors": [],
+      "file": "/../data/reentrancy/solidity_contract/16884.sol",
+      "name": "WithBonusPeriods"
+    }
+  ]
+}

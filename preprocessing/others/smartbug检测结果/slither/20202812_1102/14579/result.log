@@ -1,0 +1,69 @@
+INFO:Slither:Compilation warnings/errors on /../data/reentrancy/solidity_contract/14579.sol:
+/../data/reentrancy/solidity_contract/14579.sol:15:3: Warning: Defining constructors as functions with the same name as the contract is deprecated. Use "constructor(...) { ... }" instead.
+  function Ownable() public {
+  ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/14579.sol:150:3: Warning: Defining constructors as functions with the same name as the contract is deprecated. Use "constructor(...) { ... }" instead.
+  function ICOStartReservation(ICOStartSaleInterface _sale, uint256 _cap, uint8 _feePerc, address _manager) public {
+  ^ (Relevant source part starts here and spans across multiple lines).
+
+INFO:Detectors:[93m
+ICOStartReservation.claimTokens (/../data/reentrancy/solidity_contract/14579.sol#262-272) does not use the value returned by external calls:
+	-getToken().transfer(_beneficiary,tokens) (/../data/reentrancy/solidity_contract/14579.sol#270)
+ICOStartReservation.destroy (/../data/reentrancy/solidity_contract/14579.sol#275-281) does not use the value returned by external calls:
+	-getToken().transfer(owner,myTokens) (/../data/reentrancy/solidity_contract/14579.sol#278)
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#unused-return[0m
+INFO:Detectors:[92m
+Reentrancy in ICOStartReservation.pay (/../data/reentrancy/solidity_contract/14579.sol#233-249):
+	External calls:
+	- require(bool)(address(sale).call.value(netAmount)(this)) (/../data/reentrancy/solidity_contract/14579.sol#240)
+	- tokensReceived = getToken().balanceOf(this) (/../data/reentrancy/solidity_contract/14579.sol#241)
+	External calls sending eth:
+	- require(bool)(address(sale).call.value(netAmount)(this)) (/../data/reentrancy/solidity_contract/14579.sol#240)
+	State variables written after the call(s):
+	- tokensReceived (/../data/reentrancy/solidity_contract/14579.sol#241)
+Reentrancy in ICOStartReservation.pay (/../data/reentrancy/solidity_contract/14579.sol#233-249):
+	External calls:
+	- require(bool)(address(sale).call.value(netAmount)(this)) (/../data/reentrancy/solidity_contract/14579.sol#240)
+	- tokensReceived = getToken().balanceOf(this) (/../data/reentrancy/solidity_contract/14579.sol#241)
+	External calls sending eth:
+	- require(bool)(address(sale).call.value(netAmount)(this)) (/../data/reentrancy/solidity_contract/14579.sol#240)
+	- manager.transfer(fee) (/../data/reentrancy/solidity_contract/14579.sol#244)
+	State variables written after the call(s):
+	- paid (/../data/reentrancy/solidity_contract/14579.sol#247)
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#reentrancy-vulnerabilities-2[0m
+INFO:Detectors:[92m
+Ownable.transferOwnership (/../data/reentrancy/solidity_contract/14579.sol#26-30) should be declared external
+Pausable.pause (/../data/reentrancy/solidity_contract/14579.sol#57-60) should be declared external
+Pausable.unpause (/../data/reentrancy/solidity_contract/14579.sol#63-66) should be declared external
+ERC20Basic.totalSupply (/../data/reentrancy/solidity_contract/14579.sol#110) should be declared external
+ERC20Basic.balanceOf (/../data/reentrancy/solidity_contract/14579.sol#111) should be declared external
+ERC20Basic.transfer (/../data/reentrancy/solidity_contract/14579.sol#112) should be declared external
+ERC20.allowance (/../data/reentrancy/solidity_contract/14579.sol#120) should be declared external
+ERC20.transferFrom (/../data/reentrancy/solidity_contract/14579.sol#121) should be declared external
+ERC20.approve (/../data/reentrancy/solidity_contract/14579.sol#122) should be declared external
+ICOStartReservation.cancel (/../data/reentrancy/solidity_contract/14579.sol#228-230) should be declared external
+ICOStartReservation.pay (/../data/reentrancy/solidity_contract/14579.sol#233-249) should be declared external
+ICOStartReservation.withdraw (/../data/reentrancy/solidity_contract/14579.sol#252-259) should be declared external
+ICOStartReservation.destroy (/../data/reentrancy/solidity_contract/14579.sol#275-281) should be declared external
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#public-function-that-could-be-declared-as-external[0m
+INFO:Detectors:[92m
+Detected issues with version pragma in /../data/reentrancy/solidity_contract/14579.sol:
+	- pragma solidity^0.4.21 (/../data/reentrancy/solidity_contract/14579.sol#2): it allows old versions
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#incorrect-version-of-solidity[0m
+INFO:Detectors:[92m
+Low level call in ICOStartReservation.pay (/../data/reentrancy/solidity_contract/14579.sol#233-249):
+	-require(bool)(address(sale).call.value(netAmount)(this)) /../data/reentrancy/solidity_contract/14579.sol#240
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#low-level-calls[0m
+INFO:Detectors:[92m
+Function 'Ownable.Ownable' (/../data/reentrancy/solidity_contract/14579.sol#15-17) is not in mixedCase
+Function 'ICOStartReservation.ICOStartReservation' (/../data/reentrancy/solidity_contract/14579.sol#150-162) is not in mixedCase
+Parameter '_sale' of ICOStartReservation.ICOStartReservation (/../data/reentrancy/solidity_contract/14579.sol#150) is not in mixedCase
+Parameter '_cap' of ICOStartReservation.ICOStartReservation (/../data/reentrancy/solidity_contract/14579.sol#150) is not in mixedCase
+Parameter '_feePerc' of ICOStartReservation.ICOStartReservation (/../data/reentrancy/solidity_contract/14579.sol#150) is not in mixedCase
+Parameter '_manager' of ICOStartReservation.ICOStartReservation (/../data/reentrancy/solidity_contract/14579.sol#150) is not in mixedCase
+Parameter '_depositor' of ICOStartReservation.deposit (/../data/reentrancy/solidity_contract/14579.sol#219) is not in mixedCase
+Parameter '_beneficiary' of ICOStartReservation.claimTokens (/../data/reentrancy/solidity_contract/14579.sol#262) is not in mixedCase
+Function 'ICOStartReservation._getFeeAndNetAmount' (/../data/reentrancy/solidity_contract/14579.sol#286-289) is not in mixedCase
+Parameter '_grossAmount' of ICOStartReservation._getFeeAndNetAmount (/../data/reentrancy/solidity_contract/14579.sol#286) is not in mixedCase
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#conformance-to-solidity-naming-conventions[0m
+INFO:Slither:/../data/reentrancy/solidity_contract/14579.sol analyzed (7 contracts), 29 result(s) found

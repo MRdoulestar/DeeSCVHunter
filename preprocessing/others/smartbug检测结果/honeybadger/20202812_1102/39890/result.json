@@ -1,0 +1,19 @@
+{
+  "contract": "39890",
+  "tool": "honeybadger",
+  "start": 1609153880.755051,
+  "end": 1609154314.32725,
+  "duration": 433.57219910621643,
+  "analysis": [
+    {
+      "errors": [],
+      "file": "/../data/reentrancy/solidity_contract/39890.sol",
+      "name": "MilestoneTracker"
+    },
+    {
+      "errors": [],
+      "file": "/../data/reentrancy/solidity_contract/39890.sol",
+      "name": "RLP"
+    }
+  ]
+}

@@ -1,0 +1,56 @@
+{
+  "contract": "32605",
+  "tool": "osiris",
+  "start": 1609202977.763459,
+  "end": 1609203050.3850439,
+  "duration": 72.62158489227295,
+  "analysis": [
+    {
+      "errors": [
+        {
+          "line": 148,
+          "column": 9,
+          "message": "overflow_bugs"
+        },
+        {
+          "line": 264,
+          "column": 49,
+          "message": "overflow_bugs"
+        },
+        {
+          "line": 104,
+          "column": 46,
+          "message": "underflow_bugs"
+        },
+        {
+          "line": 145,
+          "column": 35,
+          "message": "underflow_bugs"
+        },
+        {
+          "line": 148,
+          "column": 9,
+          "message": "underflow_bugs"
+        }
+      ],
+      "file": "/../data/reentrancy/solidity_contract/32605.sol",
+      "name": "MetaIdentityManager"
+    },
+    {
+      "errors": [],
+      "file": "/../data/reentrancy/solidity_contract/32605.sol",
+      "name": "Owned"
+    },
+    {
+      "errors": [
+        {
+          "line": 29,
+          "column": 17,
+          "message": "reentrancy_bug"
+        }
+      ],
+      "file": "/../data/reentrancy/solidity_contract/32605.sol",
+      "name": "Proxy"
+    }
+  ]
+}

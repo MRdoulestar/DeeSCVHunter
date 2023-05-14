@@ -1,0 +1,228 @@
+{
+  "contract": "37891",
+  "tool": "slither",
+  "start": 1609168752.620416,
+  "end": 1609168754.002526,
+  "duration": 1.3821101188659668,
+  "analysis": [
+    {
+      "check": "external-function",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Escrow.deposit (/../data/reentrancy/solidity_contract/37891.sol#6-9) should be declared external\n",
+      "elements": [
+        {
+          "type": "function",
+          "name": "deposit",
+          "source_mapping": {
+            "start": 96,
+            "length": 127,
+            "filename": "/../data/reentrancy/solidity_contract/37891.sol",
+            "lines": [
+              6,
+              7,
+              8,
+              9
+            ]
+          },
+          "contract": {
+            "type": "contract",
+            "name": "Escrow",
+            "source_mapping": {
+              "start": 26,
+              "length": 423,
+              "filename": "/../data/reentrancy/solidity_contract/37891.sol",
+              "lines": [
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10,
+                11,
+                12,
+                13,
+                14,
+                15,
+                16,
+                17,
+                18,
+                19,
+                20
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "check": "external-function",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Escrow.claim (/../data/reentrancy/solidity_contract/37891.sol#11-19) should be declared external\n",
+      "elements": [
+        {
+          "type": "function",
+          "name": "claim",
+          "source_mapping": {
+            "start": 229,
+            "length": 218,
+            "filename": "/../data/reentrancy/solidity_contract/37891.sol",
+            "lines": [
+              11,
+              12,
+              13,
+              14,
+              15,
+              16,
+              17,
+              18,
+              19
+            ]
+          },
+          "contract": {
+            "type": "contract",
+            "name": "Escrow",
+            "source_mapping": {
+              "start": 26,
+              "length": 423,
+              "filename": "/../data/reentrancy/solidity_contract/37891.sol",
+              "lines": [
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10,
+                11,
+                12,
+                13,
+                14,
+                15,
+                16,
+                17,
+                18,
+                19,
+                20
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "check": "solc-version",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Detected issues with version pragma in /../data/reentrancy/solidity_contract/37891.sol:\n\t- pragma solidity^0.4.13 (/../data/reentrancy/solidity_contract/37891.sol#1): it allows old versions\n",
+      "elements": [
+        {
+          "type": "expression",
+          "expression": "^0.4.13",
+          "source_mapping": {
+            "start": 0,
+            "length": 24,
+            "filename": "/../data/reentrancy/solidity_contract/37891.sol",
+            "lines": [
+              1
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "low-level-calls",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Low level call in Escrow.claim (/../data/reentrancy/solidity_contract/37891.sol#11-19):\n\t-claimed = msg.sender.call.value(balance)() /../data/reentrancy/solidity_contract/37891.sol#16\n",
+      "elements": [
+        {
+          "type": "function",
+          "name": "claim",
+          "source_mapping": {
+            "start": 229,
+            "length": 218,
+            "filename": "/../data/reentrancy/solidity_contract/37891.sol",
+            "lines": [
+              11,
+              12,
+              13,
+              14,
+              15,
+              16,
+              17,
+              18,
+              19
+            ]
+          },
+          "contract": {
+            "type": "contract",
+            "name": "Escrow",
+            "source_mapping": {
+              "start": 26,
+              "length": 423,
+              "filename": "/../data/reentrancy/solidity_contract/37891.sol",
+              "lines": [
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10,
+                11,
+                12,
+                13,
+                14,
+                15,
+                16,
+                17,
+                18,
+                19,
+                20
+              ]
+            }
+          }
+        },
+        {
+          "type": "expression",
+          "expression": "claimed = msg.sender.call.value(balance)()",
+          "source_mapping": {
+            "start": 366,
+            "length": 47,
+            "filename": "/../data/reentrancy/solidity_contract/37891.sol",
+            "lines": [
+              16
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "naming-convention",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Parameter '_recipient' of Escrow.deposit (/../data/reentrancy/solidity_contract/37891.sol#6) is not in mixedCase\n",
+      "elements": [
+        {
+          "target": "parameter",
+          "convention": "mixedCase",
+          "name": "_recipient",
+          "source_mapping": {
+            "start": 113,
+            "length": 18,
+            "filename": "/../data/reentrancy/solidity_contract/37891.sol",
+            "lines": [
+              6
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,118 @@
+INFO:Slither:Compilation warnings/errors on /../data/reentrancy/solidity_contract/33501.sol:
+/../data/reentrancy/solidity_contract/33501.sol:117:5: Warning: Defining constructors as functions with the same name as the contract is deprecated. Use "constructor(...) { ... }" instead.
+    function Gifto() 
+    ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/33501.sol:481:5: Warning: Defining constructors as functions with the same name as the contract is deprecated. Use "constructor(...) { ... }" instead.
+    function MultiSigWallet(address[] _owners, uint _required)
+    ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/33501.sol:121:9: Warning: Invoking events without "emit" prefix is deprecated.
+        Transfer(0x0, owner, _totalSupply);
+        ^--------------------------------^
+/../data/reentrancy/solidity_contract/33501.sol:267:21: Warning: Invoking events without "emit" prefix is deprecated.
+                    Transfer(owner, buyers[i], requestedUnits);
+                    ^----------------------------------------^
+/../data/reentrancy/solidity_contract/33501.sol:312:13: Warning: Invoking events without "emit" prefix is deprecated.
+            Transfer(msg.sender, _to, _amount);
+            ^--------------------------------^
+/../data/reentrancy/solidity_contract/33501.sol:392:9: Warning: Invoking events without "emit" prefix is deprecated.
+        Transfer(owner, msg.sender, requestedUnits);
+        ^-----------------------------------------^
+/../data/reentrancy/solidity_contract/33501.sol:405:27: Warning: Using contract member "balance" inherited from the address type is deprecated. Convert the contract to "address" type to access the member, for example use "address(contract).balance" instead.
+        return owner.send(this.balance);
+                          ^----------^
+/../data/reentrancy/solidity_contract/33501.sol:501:13: Warning: Invoking events without "emit" prefix is deprecated.
+            Deposit(msg.sender, msg.value);
+            ^----------------------------^
+/../data/reentrancy/solidity_contract/33501.sol:512:9: Warning: Invoking events without "emit" prefix is deprecated.
+        OwnerAddition(owner);
+        ^------------------^
+/../data/reentrancy/solidity_contract/33501.sol:533:9: Warning: Invoking events without "emit" prefix is deprecated.
+        OwnerRemoval(owner);
+        ^-----------------^
+/../data/reentrancy/solidity_contract/33501.sol:543:9: Warning: Invoking events without "emit" prefix is deprecated.
+        RequirementChange(_required);
+        ^--------------------------^
+/../data/reentrancy/solidity_contract/33501.sol:557:25: Warning: This function only accepts a single "bytes" argument. Please use "abi.encodePacked(...)" or a similar function to encode the data.
+        transactionId = keccak256(destination, value, data, nonce);
+                        ^----------------------------------------^
+/../data/reentrancy/solidity_contract/33501.sol:567:13: Warning: Invoking events without "emit" prefix is deprecated.
+            Submission(transactionId);
+            ^-----------------------^
+/../data/reentrancy/solidity_contract/33501.sol:586:9: Warning: Invoking events without "emit" prefix is deprecated.
+        Confirmation(msg.sender, transactionId);
+        ^-------------------------------------^
+/../data/reentrancy/solidity_contract/33501.sol:599:13: Warning: Invoking events without "emit" prefix is deprecated.
+            Execution(transactionId);
+            ^----------------------^
+/../data/reentrancy/solidity_contract/33501.sol:611:9: Warning: Invoking events without "emit" prefix is deprecated.
+        Revocation(msg.sender, transactionId);
+        ^-----------------------------------^
+/../data/reentrancy/solidity_contract/33501.sol:684:9: Warning: Invoking events without "emit" prefix is deprecated.
+        CoinCreation(new Gifto());
+        ^-----------------------^
+
+INFO:Detectors:[92m
+Gifto.returnETHforNormalBuyers has external calls inside a loop:
+	- buyers[i].transfer(buyerDeposit) (/../data/reentrancy/solidity_contract/33501.sol#291)
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation/_edit#calls-inside-a-loop[0m
+INFO:Detectors:[92m
+Gifto._totalSupply should be constant (/../data/reentrancy/solidity_contract/33501.sol#34)
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#state-variables-that-could-be-declared-constant[0m
+INFO:Detectors:[92m
+ERC20Interface.totalSupply (/../data/reentrancy/solidity_contract/33501.sol#12) should be declared external
+Gifto.totalSupply (/../data/reentrancy/solidity_contract/33501.sol#126-131) should be declared external
+Gifto.balanceOf (/../data/reentrancy/solidity_contract/33501.sol#164-169) should be declared external
+ERC20Interface.balanceOf (/../data/reentrancy/solidity_contract/33501.sol#15) should be declared external
+Gifto.transfer (/../data/reentrancy/solidity_contract/33501.sol#300-319) should be declared external
+ERC20Interface.transfer (/../data/reentrancy/solidity_contract/33501.sol#18) should be declared external
+Gifto.fallback (/../data/reentrancy/solidity_contract/33501.sol#103-114) should be declared external
+Gifto.setIcoPercent (/../data/reentrancy/solidity_contract/33501.sol#135-141) should be declared external
+Gifto.setMinimumBuy (/../data/reentrancy/solidity_contract/33501.sol#145-150) should be declared external
+Gifto.setMaximumBuy (/../data/reentrancy/solidity_contract/33501.sol#154-159) should be declared external
+Gifto.isApprovedInvestor (/../data/reentrancy/solidity_contract/33501.sol#173-178) should be declared external
+Gifto.getInvestorBuyers (/../data/reentrancy/solidity_contract/33501.sol#204-209) should be declared external
+Gifto.getNormalBuyers (/../data/reentrancy/solidity_contract/33501.sol#212-217) should be declared external
+Gifto.getDeposit (/../data/reentrancy/solidity_contract/33501.sol#222-227) should be declared external
+Gifto.getTotalDeposit (/../data/reentrancy/solidity_contract/33501.sol#231-239) should be declared external
+Gifto.deliveryToken (/../data/reentrancy/solidity_contract/33501.sol#245-277) should be declared external
+Gifto.returnETHforNormalBuyers (/../data/reentrancy/solidity_contract/33501.sol#280-294) should be declared external
+Gifto.turnOnSale (/../data/reentrancy/solidity_contract/33501.sol#322-325) should be declared external
+Gifto.turnOffSale (/../data/reentrancy/solidity_contract/33501.sol#328-331) should be declared external
+Gifto.isSellingNow (/../data/reentrancy/solidity_contract/33501.sol#334-339) should be declared external
+Gifto.setBuyPrice (/../data/reentrancy/solidity_contract/33501.sol#343-347) should be declared external
+Gifto.addInvestorList (/../data/reentrancy/solidity_contract/33501.sol#351-357) should be declared external
+Gifto.removeInvestorList (/../data/reentrancy/solidity_contract/33501.sol#361-367) should be declared external
+Gifto.buy (/../data/reentrancy/solidity_contract/33501.sol#371-398) should be declared external
+Gifto.withdraw (/../data/reentrancy/solidity_contract/33501.sol#402-406) should be declared external
+MultiSigWallet.fallback (/../data/reentrancy/solidity_contract/33501.sol#497-502) should be declared external
+MultiSigWallet.addOwner (/../data/reentrancy/solidity_contract/33501.sol#506-513) should be declared external
+MultiSigWallet.removeOwner (/../data/reentrancy/solidity_contract/33501.sol#517-534) should be declared external
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#public-function-that-could-be-declared-as-external[0m
+INFO:Detectors:[92m
+Detected issues with version pragma in /../data/reentrancy/solidity_contract/33501.sol:
+	- pragma solidity^0.4.18 (/../data/reentrancy/solidity_contract/33501.sol#1): it allows old versions
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#incorrect-version-of-solidity[0m
+INFO:Detectors:[92m
+Low level call in MultiSigWallet.executeTransaction (/../data/reentrancy/solidity_contract/33501.sol#593-601):
+	-! txn.destination.call.value(txn.value)(txn.data) /../data/reentrancy/solidity_contract/33501.sol#597-598
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#low-level-calls[0m
+INFO:Detectors:[92m
+Parameter '_addr' of Gifto.balanceOf (/../data/reentrancy/solidity_contract/33501.sol#164) is not in mixedCase
+Parameter '_to' of Gifto.transfer (/../data/reentrancy/solidity_contract/33501.sol#300) is not in mixedCase
+Parameter '_amount' of Gifto.transfer (/../data/reentrancy/solidity_contract/33501.sol#300) is not in mixedCase
+Function 'Gifto.Gifto' (/../data/reentrancy/solidity_contract/33501.sol#117-122) is not in mixedCase
+Parameter '_addr' of Gifto.isApprovedInvestor (/../data/reentrancy/solidity_contract/33501.sol#173) is not in mixedCase
+Parameter '_addr' of Gifto.getDeposit (/../data/reentrancy/solidity_contract/33501.sol#222) is not in mixedCase
+Variable 'Gifto._selling' (/../data/reentrancy/solidity_contract/33501.sol#33) is not in mixedCase
+Variable 'Gifto._totalSupply' (/../data/reentrancy/solidity_contract/33501.sol#34) is not in mixedCase
+Variable 'Gifto._originalBuyPrice' (/../data/reentrancy/solidity_contract/33501.sol#35) is not in mixedCase
+Variable 'Gifto._icoPercent' (/../data/reentrancy/solidity_contract/33501.sol#53) is not in mixedCase
+Variable 'Gifto._icoSupply' (/../data/reentrancy/solidity_contract/33501.sol#56) is not in mixedCase
+Variable 'Gifto._minimumBuy' (/../data/reentrancy/solidity_contract/33501.sol#59) is not in mixedCase
+Variable 'Gifto._maximumBuy' (/../data/reentrancy/solidity_contract/33501.sol#62) is not in mixedCase
+Function 'MultiSigWallet.MultiSigWallet' (/../data/reentrancy/solidity_contract/33501.sol#481-494) is not in mixedCase
+Parameter '_owners' of MultiSigWallet.MultiSigWallet (/../data/reentrancy/solidity_contract/33501.sol#481) is not in mixedCase
+Parameter '_required' of MultiSigWallet.MultiSigWallet (/../data/reentrancy/solidity_contract/33501.sol#481) is not in mixedCase
+Parameter '_required' of MultiSigWallet.changeRequirement (/../data/reentrancy/solidity_contract/33501.sol#538) is not in mixedCase
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#conformance-to-solidity-naming-conventions[0m
+INFO:Slither:/../data/reentrancy/solidity_contract/33501.sol analyzed (3 contracts), 49 result(s) found

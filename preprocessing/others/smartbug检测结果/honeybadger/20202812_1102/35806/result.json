@@ -1,0 +1,24 @@
+{
+  "contract": "35806",
+  "tool": "honeybadger",
+  "start": 1609206335.088115,
+  "end": 1609206382.6475258,
+  "duration": 47.55941081047058,
+  "analysis": [
+    {
+      "errors": [],
+      "file": "/../data/reentrancy/solidity_contract/35806.sol",
+      "name": "SafeMath"
+    },
+    {
+      "errors": [],
+      "file": "/../data/reentrancy/solidity_contract/35806.sol",
+      "name": "Token"
+    },
+    {
+      "errors": [],
+      "file": "/../data/reentrancy/solidity_contract/35806.sol",
+      "name": "TokenLab"
+    }
+  ]
+}

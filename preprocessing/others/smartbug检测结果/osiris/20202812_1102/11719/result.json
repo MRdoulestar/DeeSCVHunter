@@ -1,0 +1,56 @@
+{
+  "contract": "11719",
+  "tool": "osiris",
+  "start": 1609198225.0444741,
+  "end": 1609198310.331019,
+  "duration": 85.28654479980469,
+  "analysis": [
+    {
+      "errors": [
+        {
+          "line": 28,
+          "column": 9,
+          "message": "overflow_bugs"
+        },
+        {
+          "line": 35,
+          "column": 17,
+          "message": "underflow_bugs"
+        },
+        {
+          "line": 34,
+          "column": 16,
+          "message": "reentrancy_bug"
+        },
+        {
+          "line": 36,
+          "column": 17,
+          "message": "reentrancy_bug"
+        }
+      ],
+      "file": "/../data/reentrancy/solidity_contract/11719.sol",
+      "name": "DEP_BANK"
+    },
+    {
+      "errors": [
+        {
+          "line": 67,
+          "column": 9,
+          "message": "overflow_bugs"
+        },
+        {
+          "line": 48,
+          "column": 1,
+          "message": "overflow_bugs"
+        },
+        {
+          "line": 67,
+          "column": 9,
+          "message": "overflow_bugs"
+        }
+      ],
+      "file": "/../data/reentrancy/solidity_contract/11719.sol",
+      "name": "LogFile"
+    }
+  ]
+}

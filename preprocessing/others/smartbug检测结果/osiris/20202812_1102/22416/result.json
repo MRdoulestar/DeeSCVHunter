@@ -1,0 +1,40 @@
+{
+  "contract": "22416",
+  "tool": "osiris",
+  "start": 1609206236.8937001,
+  "end": 1609206247.246853,
+  "duration": 10.353152990341187,
+  "analysis": [
+    {
+      "errors": [],
+      "file": "/../data/reentrancy/solidity_contract/22416.sol",
+      "name": "Ownable"
+    },
+    {
+      "errors": [],
+      "file": "/../data/reentrancy/solidity_contract/22416.sol",
+      "name": "Token"
+    },
+    {
+      "errors": [
+        {
+          "line": 65,
+          "column": 13,
+          "message": "overflow_bugs"
+        },
+        {
+          "line": 79,
+          "column": 17,
+          "message": "underflow_bugs"
+        },
+        {
+          "line": 78,
+          "column": 16,
+          "message": "reentrancy_bug"
+        }
+      ],
+      "file": "/../data/reentrancy/solidity_contract/22416.sol",
+      "name": "TokenBank"
+    }
+  ]
+}

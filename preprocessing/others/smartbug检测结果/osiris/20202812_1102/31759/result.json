@@ -1,0 +1,20 @@
+{
+  "contract": "31759",
+  "tool": "osiris",
+  "start": 1609153529.531586,
+  "end": 1609153580.650858,
+  "duration": 51.119271993637085,
+  "analysis": [
+    {
+      "errors": [
+        {
+          "line": 59,
+          "column": 13,
+          "message": "overflow_bugs"
+        }
+      ],
+      "file": "/../data/reentrancy/solidity_contract/31759.sol",
+      "name": "TransferableMultsig"
+    }
+  ]
+}

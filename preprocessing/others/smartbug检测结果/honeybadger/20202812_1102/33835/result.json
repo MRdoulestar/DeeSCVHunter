@@ -1,0 +1,19 @@
+{
+  "contract": "33835",
+  "tool": "honeybadger",
+  "start": 1609165240.257372,
+  "end": 1609165785.385587,
+  "duration": 545.1282150745392,
+  "analysis": [
+    {
+      "errors": [],
+      "file": "/../data/reentrancy/solidity_contract/33835.sol",
+      "name": "Wallet"
+    },
+    {
+      "errors": [],
+      "file": "/../data/reentrancy/solidity_contract/33835.sol",
+      "name": "multiowned"
+    }
+  ]
+}

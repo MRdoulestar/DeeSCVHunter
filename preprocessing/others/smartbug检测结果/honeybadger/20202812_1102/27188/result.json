@@ -1,0 +1,19 @@
+{
+  "contract": "27188",
+  "tool": "honeybadger",
+  "start": 1609150659.202825,
+  "end": 1609150683.1259751,
+  "duration": 23.923150062561035,
+  "analysis": [
+    {
+      "errors": [],
+      "file": "/../data/reentrancy/solidity_contract/27188.sol",
+      "name": "DividendDistributor"
+    },
+    {
+      "errors": [],
+      "file": "/../data/reentrancy/solidity_contract/27188.sol",
+      "name": "Ownable"
+    }
+  ]
+}

@@ -1,0 +1,51 @@
+INFO:Slither:Compilation warnings/errors on /../data/reentrancy/solidity_contract/10297.sol:
+/../data/reentrancy/solidity_contract/10297.sol:3:1: Warning: Experimental features are turned on. Do not use experimental features on live deployments.
+pragma experimental ABIEncoderV2;
+^-------------------------------^
+
+INFO:Detectors:[91m
+FsTKColdWallet.execute0 (/../data/reentrancy/solidity_contract/10297.sol#283-289) sends eth to arbitrary user
+	Dangerous calls:
+	- require(bool)(to.call.value(value)(data)) (/../data/reentrancy/solidity_contract/10297.sol#287)
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#functions-that-send-ether-to-arbitrary-destinations[0m
+INFO:Detectors:[91m
+Reentrancy in FsTKColdWallet.confirm (/../data/reentrancy/solidity_contract/10297.sol#273-281):
+	External calls:
+	- MultiTransaction(msg.sender,operation,status.info.to,status.info.value,status.info.data,execute0(status.info.to,status.info.value,status.info.data)) (/../data/reentrancy/solidity_contract/10297.sol#276)
+	State variables written after the call(s):
+	- pendingTransaction (/../data/reentrancy/solidity_contract/10297.sol#277)
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#reentrancy-vulnerabilities[0m
+INFO:Detectors:[92m
+FsTKColdWallet.create0 uses assembly (/../data/reentrancy/solidity_contract/10297.sol#291-298)
+	- /../data/reentrancy/solidity_contract/10297.sol#292-298
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#assembly-usage[0m
+INFO:Detectors:[92m
+Different versions of Solidity is used in /../data/reentrancy/solidity_contract/10297.sol:
+	- Version used: ['ABIEncoderV2', '^0.4.24', 'v0.5.0']
+	- /../data/reentrancy/solidity_contract/10297.sol#1 declares pragma solidity^0.4.24
+	- /../data/reentrancy/solidity_contract/10297.sol#2 declares pragma experimentalv0.5.0
+	- /../data/reentrancy/solidity_contract/10297.sol#3 declares pragma experimentalABIEncoderV2
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#different-pragma-directives-are-used[0m
+INFO:Detectors:[92m
+FsTKColdWallet.getAuthority (/../data/reentrancy/solidity_contract/10297.sol#171-173) should be declared external
+FsTKColdWallet.hasConfirmed (/../data/reentrancy/solidity_contract/10297.sol#184-186) should be declared external
+FsTKColdWallet.changeAuthority (/../data/reentrancy/solidity_contract/10297.sol#188-198) should be declared external
+FsTKColdWallet.addAuthority (/../data/reentrancy/solidity_contract/10297.sol#200-213) should be declared external
+FsTKColdWallet.removeAuthority (/../data/reentrancy/solidity_contract/10297.sol#215-225) should be declared external
+FsTKColdWallet.setRequirement (/../data/reentrancy/solidity_contract/10297.sol#227-232) should be declared external
+FsTKColdWallet.setDailyLimit (/../data/reentrancy/solidity_contract/10297.sol#234-238) should be declared external
+FsTKColdWallet.resetSpentToday (/../data/reentrancy/solidity_contract/10297.sol#240-245) should be declared external
+FsTKColdWallet.propose (/../data/reentrancy/solidity_contract/10297.sol#247-261) should be declared external
+FsTKColdWallet.revoke (/../data/reentrancy/solidity_contract/10297.sol#263-271) should be declared external
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#public-function-that-could-be-declared-as-external[0m
+INFO:Detectors:[92m
+Low level call in FsTKColdWallet.execute0 (/../data/reentrancy/solidity_contract/10297.sol#283-289):
+	-require(bool)(to.call.value(value)(data)) /../data/reentrancy/solidity_contract/10297.sol#287
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#low-level-calls[0m
+INFO:Detectors:[92m
+Parameter '_authorities' of FsTKColdWallet. (/../data/reentrancy/solidity_contract/10297.sol#147) is not in mixedCase
+Parameter '_daylimit' of FsTKColdWallet. (/../data/reentrancy/solidity_contract/10297.sol#147) is not in mixedCase
+Parameter '_address' of FsTKColdWallet.hasConfirmed (/../data/reentrancy/solidity_contract/10297.sol#184) is not in mixedCase
+Parameter '_dailyLimit' of FsTKColdWallet.setDailyLimit (/../data/reentrancy/solidity_contract/10297.sol#234) is not in mixedCase
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#conformance-to-solidity-naming-conventions[0m
+INFO:Slither:/../data/reentrancy/solidity_contract/10297.sol analyzed (2 contracts), 19 result(s) found

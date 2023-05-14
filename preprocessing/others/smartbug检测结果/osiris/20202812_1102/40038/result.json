@@ -1,0 +1,19 @@
+{
+  "contract": "40038",
+  "tool": "osiris",
+  "start": 1609165579.643792,
+  "end": 1609165590.772057,
+  "duration": 11.128265142440796,
+  "analysis": [
+    {
+      "errors": [],
+      "file": "/../data/reentrancy/solidity_contract/40038.sol",
+      "name": "Lockable"
+    },
+    {
+      "errors": [],
+      "file": "/../data/reentrancy/solidity_contract/40038.sol",
+      "name": "Token"
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "contract": "7530",
+  "tool": "honeybadger",
+  "start": 1609129532.851372,
+  "end": 1609129836.338599,
+  "duration": 303.4872269630432,
+  "analysis": [
+    {
+      "errors": [],
+      "file": "/../data/reentrancy/solidity_contract/7530.sol",
+      "name": "MyWill"
+    },
+    {
+      "errors": [],
+      "file": "/../data/reentrancy/solidity_contract/7530.sol",
+      "name": "strings"
+    }
+  ]
+}

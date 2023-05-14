@@ -1,0 +1,25 @@
+{
+  "contract": "PrivateBank",
+  "tool": "honeybadger",
+  "start": 1609165210.930867,
+  "end": 1609165290.3782132,
+  "duration": 79.44734621047974,
+  "analysis": [
+    {
+      "errors": [],
+      "file": "/../data/reentrancy/solidity_contract/PrivateBank.sol",
+      "name": "Log"
+    },
+    {
+      "errors": [
+        {
+          "line": 27,
+          "column": 17,
+          "message": "straw_man_contract"
+        }
+      ],
+      "file": "/../data/reentrancy/solidity_contract/PrivateBank.sol",
+      "name": "Private_Bank"
+    }
+  ]
+}

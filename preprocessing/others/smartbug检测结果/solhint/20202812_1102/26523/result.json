@@ -1,0 +1,25 @@
+{
+  "contract": "26523",
+  "tool": "solhint",
+  "start": 1609141440.236564,
+  "end": 1609141441.498831,
+  "duration": 1.2622671127319336,
+  "analysis": [
+    {
+      "file": "/data/reentrancy/solidity_contract/26523.sol",
+      "line": "57",
+      "column": "13",
+      "message": "Expected indentation of 8 spaces but found 12",
+      "level": "Error",
+      "type": "indent"
+    },
+    {
+      "file": "/data/reentrancy/solidity_contract/26523.sol",
+      "line": "82",
+      "column": "7",
+      "message": "Expected indentation of 12 spaces but found 6",
+      "level": "Error",
+      "type": "indent"
+    }
+  ]
+}

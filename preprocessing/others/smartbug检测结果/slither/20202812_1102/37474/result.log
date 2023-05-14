@@ -1,0 +1,127 @@
+INFO:Slither:Compilation warnings/errors on /../data/reentrancy/solidity_contract/37474.sol:
+/../data/reentrancy/solidity_contract/37474.sol:35:5: Warning: Defining constructors as functions with the same name as the contract is deprecated. Use "constructor(...) { ... }" instead.
+    function TradersWallet() {
+    ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/37474.sol:133:9: Warning: "suicide" has been deprecated in favour of "selfdestruct"
+        suicide(msg.sender);
+        ^-----------------^
+/../data/reentrancy/solidity_contract/37474.sol:4:5: Warning: No visibility specified. Defaulting to "public". 
+    function deposit() payable;
+    ^-------------------------^
+/../data/reentrancy/solidity_contract/37474.sol:5:5: Warning: No visibility specified. Defaulting to "public". 
+    function withdraw(uint amount);
+    ^-----------------------------^
+/../data/reentrancy/solidity_contract/37474.sol:6:5: Warning: No visibility specified. Defaulting to "public". 
+    function depositToken(address token, uint amount);
+    ^------------------------------------------------^
+/../data/reentrancy/solidity_contract/37474.sol:7:5: Warning: No visibility specified. Defaulting to "public". 
+    function withdrawToken(address token, uint amount);
+    ^-------------------------------------------------^
+/../data/reentrancy/solidity_contract/37474.sol:8:5: Warning: No visibility specified. Defaulting to "public". 
+    function balanceOf(address token, address user) constant returns (uint);
+    ^----------------------------------------------------------------------^
+/../data/reentrancy/solidity_contract/37474.sol:9:5: Warning: No visibility specified. Defaulting to "public". 
+    function order(address tokenGet, uint amountGet, address tokenGive, uint amountGive, uint expires, uint nonce);
+    ^-------------------------------------------------------------------------------------------------------------^
+/../data/reentrancy/solidity_contract/37474.sol:10:5: Warning: No visibility specified. Defaulting to "public". 
+    function trade(address tokenGet, ui ... bytes32 r, bytes32 s, uint amount);
+    ^-------------------------------------------------------------------------^
+/../data/reentrancy/solidity_contract/37474.sol:12:5: Warning: No visibility specified. Defaulting to "public". 
+    function availableVolume(address to ...  bytes32 s) constant returns(uint);
+    ^-------------------------------------------------------------------------^
+/../data/reentrancy/solidity_contract/37474.sol:13:5: Warning: No visibility specified. Defaulting to "public". 
+    function amountFilled(address token ...  bytes32 s) constant returns(uint);
+    ^-------------------------------------------------------------------------^
+/../data/reentrancy/solidity_contract/37474.sol:14:5: Warning: No visibility specified. Defaulting to "public". 
+ ... function cancelOrder(address tokenGet, uint amountGet, address tokenGive, uint amountGive, uint expires, uint nonce, uint8 v, bytes32 r, bytes32 s); ... 
+     ^--------------------------------------------------------------------------------------------------------------------------------------------------^
+/../data/reentrancy/solidity_contract/37474.sol:18:5: Warning: No visibility specified. Defaulting to "public". 
+    function totalSupply() constant returns (uint256 supply);
+    ^-------------------------------------------------------^
+/../data/reentrancy/solidity_contract/37474.sol:19:5: Warning: No visibility specified. Defaulting to "public". 
+    function approve(address _spender, uint256 _value) returns (bool success);
+    ^------------------------------------------------------------------------^
+/../data/reentrancy/solidity_contract/37474.sol:20:5: Warning: No visibility specified. Defaulting to "public". 
+    function allowance(address _owner, address _spender) constant returns (uint256 remaining);
+    ^----------------------------------------------------------------------------------------^
+/../data/reentrancy/solidity_contract/37474.sol:21:5: Warning: No visibility specified. Defaulting to "public". 
+    function balanceOf(address _owner) constant returns (uint256 balance);
+    ^--------------------------------------------------------------------^
+/../data/reentrancy/solidity_contract/37474.sol:22:5: Warning: No visibility specified. Defaulting to "public". 
+    function transfer(address _to, uint256 _value) returns (bool success);
+    ^--------------------------------------------------------------------^
+/../data/reentrancy/solidity_contract/37474.sol:23:5: Warning: No visibility specified. Defaulting to "public". 
+    function transferFrom(address _from, address _to, uint256 _value) returns (bool success);
+    ^---------------------------------------------------------------------------------------^
+/../data/reentrancy/solidity_contract/37474.sol:35:5: Warning: No visibility specified. Defaulting to "public". 
+    function TradersWallet() {
+    ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/37474.sol:43:5: Warning: No visibility specified. Defaulting to "public". 
+    function() payable {
+    ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/37474.sol:48:5: Warning: No visibility specified. Defaulting to "public". 
+    function tokenBalance(address tokenAddress) constant returns (uint) {
+    ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/37474.sol:87:5: Warning: No visibility specified. Defaulting to "public". 
+    function EtherDeltaTokenBalance(address tokenAddress) constant returns (uint) {
+    ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/37474.sol:131:5: Warning: No visibility specified. Defaulting to "public". 
+    function kill() {
+    ^ (Relevant source part starts here and spans across multiple lines).
+
+INFO:Detectors:[93m
+TradersWallet.transferFromToken (/../data/reentrancy/solidity_contract/37474.sol#54-58) does not use the value returned by external calls:
+	-token.transferFrom(sendTo,sendFrom,amount) (/../data/reentrancy/solidity_contract/37474.sol#57)
+TradersWallet.sendToken (/../data/reentrancy/solidity_contract/37474.sol#73-77) does not use the value returned by external calls:
+	-token.transfer(sendTo,amount) (/../data/reentrancy/solidity_contract/37474.sol#76)
+TradersWallet.EtherDeltaApproveToken (/../data/reentrancy/solidity_contract/37474.sol#111-115) does not use the value returned by external calls:
+	-token.approve(ethDeltaDepositAddress,amount) (/../data/reentrancy/solidity_contract/37474.sol#114)
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#unused-return[0m
+INFO:Detectors:[92m
+Deprecated standard detected @ /../data/reentrancy/solidity_contract/37474.sol#133:
+	- Usage of "suicide()" should be replaced with "selfdestruct()"
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#deprecated-standards[0m
+INFO:Detectors:[92m
+etherDelta.deposit (/../data/reentrancy/solidity_contract/37474.sol#4) should be declared external
+etherDelta.withdraw (/../data/reentrancy/solidity_contract/37474.sol#5) should be declared external
+etherDelta.depositToken (/../data/reentrancy/solidity_contract/37474.sol#6) should be declared external
+etherDelta.withdrawToken (/../data/reentrancy/solidity_contract/37474.sol#7) should be declared external
+etherDelta.balanceOf (/../data/reentrancy/solidity_contract/37474.sol#8) should be declared external
+etherDelta.order (/../data/reentrancy/solidity_contract/37474.sol#9) should be declared external
+etherDelta.trade (/../data/reentrancy/solidity_contract/37474.sol#10) should be declared external
+etherDelta.availableVolume (/../data/reentrancy/solidity_contract/37474.sol#12) should be declared external
+etherDelta.amountFilled (/../data/reentrancy/solidity_contract/37474.sol#13) should be declared external
+etherDelta.cancelOrder (/../data/reentrancy/solidity_contract/37474.sol#14) should be declared external
+Token.totalSupply (/../data/reentrancy/solidity_contract/37474.sol#18) should be declared external
+Token.approve (/../data/reentrancy/solidity_contract/37474.sol#19) should be declared external
+Token.allowance (/../data/reentrancy/solidity_contract/37474.sol#20) should be declared external
+Token.balanceOf (/../data/reentrancy/solidity_contract/37474.sol#21) should be declared external
+Token.transfer (/../data/reentrancy/solidity_contract/37474.sol#22) should be declared external
+Token.transferFrom (/../data/reentrancy/solidity_contract/37474.sol#23) should be declared external
+TradersWallet.fallback (/../data/reentrancy/solidity_contract/37474.sol#43-45) should be declared external
+TradersWallet.tokenBalance (/../data/reentrancy/solidity_contract/37474.sol#48-51) should be declared external
+TradersWallet.EtherDeltaTokenBalance (/../data/reentrancy/solidity_contract/37474.sol#87-89) should be declared external
+TradersWallet.kill (/../data/reentrancy/solidity_contract/37474.sol#131-134) should be declared external
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#public-function-that-could-be-declared-as-external[0m
+INFO:Detectors:[92m
+Detected issues with version pragma in /../data/reentrancy/solidity_contract/37474.sol:
+	- pragma solidity^0.4.15 (/../data/reentrancy/solidity_contract/37474.sol#1): it allows old versions
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#incorrect-version-of-solidity[0m
+INFO:Detectors:[92m
+Low level call in TradersWallet.execute (/../data/reentrancy/solidity_contract/37474.sol#80-84):
+	-require(bool)(_to.call.value(_value)(_data)) /../data/reentrancy/solidity_contract/37474.sol#82
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#low-level-calls[0m
+INFO:Detectors:[92m
+Contract 'etherDelta' (/../data/reentrancy/solidity_contract/37474.sol#3-15) is not in CapWords
+Function 'TradersWallet.TradersWallet' (/../data/reentrancy/solidity_contract/37474.sol#35-40) is not in mixedCase
+Parameter '_to' of TradersWallet.execute (/../data/reentrancy/solidity_contract/37474.sol#80) is not in mixedCase
+Parameter '_value' of TradersWallet.execute (/../data/reentrancy/solidity_contract/37474.sol#80) is not in mixedCase
+Parameter '_data' of TradersWallet.execute (/../data/reentrancy/solidity_contract/37474.sol#80) is not in mixedCase
+Function 'TradersWallet.EtherDeltaTokenBalance' (/../data/reentrancy/solidity_contract/37474.sol#87-89) is not in mixedCase
+Function 'TradersWallet.EtherDeltaWithdrawToken' (/../data/reentrancy/solidity_contract/37474.sol#92-95) is not in mixedCase
+Function 'TradersWallet.EtherDeltaDepositToken' (/../data/reentrancy/solidity_contract/37474.sol#105-108) is not in mixedCase
+Function 'TradersWallet.EtherDeltaApproveToken' (/../data/reentrancy/solidity_contract/37474.sol#111-115) is not in mixedCase
+Function 'TradersWallet.EtherDeltaDeposit' (/../data/reentrancy/solidity_contract/37474.sol#118-121) is not in mixedCase
+Function 'TradersWallet.EtherDeltaWithdraw' (/../data/reentrancy/solidity_contract/37474.sol#124-127) is not in mixedCase
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#conformance-to-solidity-naming-conventions[0m
+INFO:Slither:/../data/reentrancy/solidity_contract/37474.sol analyzed (3 contracts), 37 result(s) found

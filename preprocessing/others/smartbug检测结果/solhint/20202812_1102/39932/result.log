@@ -1,0 +1,7 @@
+/data/reentrancy/solidity_contract/39932.sol:61:22: Indentation is incorrect [Error/indent]
+/data/reentrancy/solidity_contract/39932.sol:62:22: Indentation is incorrect [Error/indent]
+/data/reentrancy/solidity_contract/39932.sol:63:22: Indentation is incorrect [Error/indent]
+/data/reentrancy/solidity_contract/39932.sol:81:32: Expected indentation of 12 spaces but found 31 [Error/indent]
+/data/reentrancy/solidity_contract/39932.sol:102:2: Line length must be no more than 120 but current length is 1494. [Error/max-line-length]
+
+5 problems

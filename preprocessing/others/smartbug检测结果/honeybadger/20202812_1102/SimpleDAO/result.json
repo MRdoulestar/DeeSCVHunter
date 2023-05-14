@@ -1,0 +1,14 @@
+{
+  "contract": "SimpleDAO",
+  "tool": "honeybadger",
+  "start": 1609202875.55321,
+  "end": 1609202876.821818,
+  "duration": 1.2686080932617188,
+  "analysis": [
+    {
+      "errors": [],
+      "file": "/../data/reentrancy/solidity_contract/SimpleDAO.sol",
+      "name": "SimpleDAO"
+    }
+  ]
+}

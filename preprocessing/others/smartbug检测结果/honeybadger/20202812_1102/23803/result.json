@@ -1,0 +1,14 @@
+{
+  "contract": "23803",
+  "tool": "honeybadger",
+  "start": 1609172950.920154,
+  "end": 1609172976.2829309,
+  "duration": 25.36277675628662,
+  "analysis": [
+    {
+      "errors": [],
+      "file": "/../data/reentrancy/solidity_contract/23803.sol",
+      "name": "TRUEToken"
+    }
+  ]
+}

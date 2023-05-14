@@ -1,0 +1,24 @@
+{
+  "contract": "35878",
+  "tool": "honeybadger",
+  "start": 1609160000.866264,
+  "end": 1609160018.838447,
+  "duration": 17.972182989120483,
+  "analysis": [
+    {
+      "errors": [],
+      "file": "/../data/reentrancy/solidity_contract/35878.sol",
+      "name": "Forwarder"
+    },
+    {
+      "errors": [],
+      "file": "/../data/reentrancy/solidity_contract/35878.sol",
+      "name": "ForwarderFactory"
+    },
+    {
+      "errors": [],
+      "file": "/../data/reentrancy/solidity_contract/35878.sol",
+      "name": "RegBase"
+    }
+  ]
+}

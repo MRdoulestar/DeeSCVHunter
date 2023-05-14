@@ -1,0 +1,17 @@
+{
+  "contract": "31759",
+  "tool": "solhint",
+  "start": 1609153583.8876789,
+  "end": 1609153584.9533281,
+  "duration": 1.0656492710113525,
+  "analysis": [
+    {
+      "file": "/data/reentrancy/solidity_contract/31759.sol",
+      "line": "34",
+      "column": "2",
+      "message": "Line length must be no more than 120 but current length is 124.",
+      "level": "Error",
+      "type": "max-line-length"
+    }
+  ]
+}

@@ -1,0 +1,41 @@
+{
+  "contract": "9600",
+  "tool": "solhint",
+  "start": 1609179697.006815,
+  "end": 1609179701.445765,
+  "duration": 4.438950061798096,
+  "analysis": [
+    {
+      "file": "/data/reentrancy/solidity_contract/9600.sol",
+      "line": "322",
+      "column": "2",
+      "message": "Line length must be no more than 120 but current length is 142.",
+      "level": "Error",
+      "type": "max-line-length"
+    },
+    {
+      "file": "/data/reentrancy/solidity_contract/9600.sol",
+      "line": "351",
+      "column": "2",
+      "message": "Line length must be no more than 120 but current length is 125.",
+      "level": "Error",
+      "type": "max-line-length"
+    },
+    {
+      "file": "/data/reentrancy/solidity_contract/9600.sol",
+      "line": "526",
+      "column": "2",
+      "message": "Line length must be no more than 120 but current length is 143.",
+      "level": "Error",
+      "type": "max-line-length"
+    },
+    {
+      "file": "/data/reentrancy/solidity_contract/9600.sol",
+      "line": "637",
+      "column": "2",
+      "message": "Line length must be no more than 120 but current length is 126.",
+      "level": "Error",
+      "type": "max-line-length"
+    }
+  ]
+}

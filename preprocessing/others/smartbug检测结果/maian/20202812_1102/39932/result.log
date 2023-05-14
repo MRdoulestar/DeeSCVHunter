@@ -1,0 +1,774 @@
+/usr/local/lib/python2.7/dist-packages/web3/main.py:130: DeprecationWarning: Python 2 support is ending! Please upgrade to Python 3 promptly. Support will end at the beginning of 2018.
+  category=DeprecationWarning,
+/usr/local/lib/python2.7/dist-packages/web3/main.py:130: DeprecationWarning: Python 2 support is ending! Please upgrade to Python 3 promptly. Support will end at the beginning of 2018.
+  category=DeprecationWarning,
+
+====================================================================================================
+[1m[ ] Compiling Solidity contract from the file /../data/reentrancy/solidity_contract/39932.sol ... [0m[92m Done [0m
+[1m[ ] Connecting to PRIVATE blockchain emptychain  [0m.[92m ESTABLISHED [0m
+[1m[ ] Deploying contract [0m..................................................................................................................................................................................................................................................................................................................................................................................................[92m confirmed at address: 0x9E536236ABF2288a7864C6A1AfaA4Cb98D464306 [0m
+[1m[ ] Contract code length on the blockchain : [0m [92m  3884  : 0x6080604052600436106100a45760... [0m
+[1m[ ] Contract address saved in file: [0m[92m./out/Invoice.address [0m
+[94m[ ] Check if contract is SUICIDAL[0m
+
+[ ] Contract address   : 0x9E536236ABF2288a7864C6A1AfaA4Cb98D464306
+[ ] Contract bytecode  : 6080604052600436106100a4576000357c0100000000000000...
+[ ] Bytecode length    : 3882
+[ ] Blockchain contract: True
+[ ] Debug              : False
+
+[ ][1m Search with call depth: 1   : [0m111111111
+[ ][1m Search with call depth: 2   : [0m1222222212222222221222222222122222222212222222221222222222122222222212222222221
+[ ][1m Search with call depth: 3   : [0m12333333322333333322333333323333333212223333333332333333333233333333323333333332333333333233333333321222233333333323333333332333333333233333333323333333332122222333333333233333333323333333332333333333212333333322222333333333233333333323333333332
+[92m[-] No suicidal vulnerability found [0m
+/usr/local/lib/python2.7/dist-packages/web3/main.py:130: DeprecationWarning: Python 2 support is ending! Please upgrade to Python 3 promptly. Support will end at the beginning of 2018.
+  category=DeprecationWarning,
+/usr/local/lib/python2.7/dist-packages/web3/main.py:130: DeprecationWarning: Python 2 support is ending! Please upgrade to Python 3 promptly. Support will end at the beginning of 2018.
+  category=DeprecationWarning,
+
+====================================================================================================
+[1m[ ] Compiling Solidity contract from the file /../data/reentrancy/solidity_contract/39932.sol ... [0m[92m Done [0m
+[1m[ ] Connecting to PRIVATE blockchain emptychain  [0m.[92m ESTABLISHED [0m
+Traceback (most recent call last):
+  File "maian.py", line 182, in <module>
+    main(sys.argv[1:])
+  File "maian.py", line 120, in main
+[1m[ ] Sending Ether to contract 0x9e536236abf2288a7864c6a1afaa4cb98d464306  [0m....................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................Exception: ('Connection aborted.', error(104, 'Connection reset by peer'))
+[92m Sent! [0m
+    if args.soliditycode:   contract_address = deploy_contract(args.soliditycode[1], MyGlobals.etherbase_account)
+  File "/MAIAN/tool/contracts.py", line 87, in deploy_contract
+    MyGlobals.web3.personal.unlockAccount(etherbase, '1', 15000)
+  File "/usr/local/lib/python2.7/dist-packages/web3/personal.py", line 93, in unlockAccount
+    [account, passphrase, duration],
+  File "/usr/local/lib/python2.7/dist-packages/web3/manager.py", line 93, in request_blocking
+    response = self._make_request(method, params)
+  File "/usr/local/lib/python2.7/dist-packages/web3/manager.py", line 76, in _make_request
+    return request_func(method, params)
+  File "/usr/local/lib/python2.7/dist-packages/web3/middleware/attrdict.py", line 20, in middleware
+    response = make_request(method, params)
+  File "/usr/local/lib/python2.7/dist-packages/web3/middleware/formatting.py", line 25, in middleware
+    response = make_request(method, params)
+  File "/usr/local/lib/python2.7/dist-packages/web3/providers/rpc.py", line 52, in make_request
+    **self.get_request_kwargs()
+  File "/usr/local/lib/python2.7/dist-packages/web3/utils/compat/compat_requests.py", line 21, in make_post_request
+    response = session.post(endpoint_uri, data=data, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/requests/sessions.py", line 581, in post
+    return self.request('POST', url, data=data, json=json, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/requests/sessions.py", line 533, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/requests/sessions.py", line 646, in send
+    r = adapter.send(request, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/requests/adapters.py", line 516, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPConnectionPool(host='127.0.0.1', port=8550): Max retries exceeded with url: / (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f221b47fcd0>: Failed to establish a new connection: [Errno 111] Connection refused',))
+/usr/local/lib/python2.7/dist-packages/web3/main.py:130: DeprecationWarning: Python 2 support is ending! Please upgrade to Python 3 promptly. Support will end at the beginning of 2018.
+  category=DeprecationWarning,
+/usr/local/lib/python2.7/dist-packages/web3/main.py:130: DeprecationWarning: Python 2 support is ending! Please upgrade to Python 3 promptly. Support will end at the beginning of 2018.
+  category=DeprecationWarning,
+[1m[ ] Deploying contract [0m
+====================================================================================================
+[1m[ ] Compiling Solidity contract from the file /../data/reentrancy/solidity_contract/39932.sol ... [0m[92m Done [0m
+[1m[ ] Connecting to PRIVATE blockchain emptychain  [0m.[92m ESTABLISHED [0m
+Traceback (most recent call last):
+  File "maian.py", line 182, in <module>
+    main(sys.argv[1:])
+  File "maian.py", line 120, in main
+    if args.soliditycode:   contract_address = deploy_contract(args.soliditycode[1], MyGlobals.etherbase_account)
+  File "/MAIAN/tool/contracts.py", line 99, in deploy_contract
+    s.run()
+  File "/usr/lib/python2.7/sched.py", line 117, in run
+    action(*argument)
+  File "/MAIAN/tool/contracts.py", line 115, in confirm_contract
+    receipt = MyGlobals.web3.eth.getTransactionReceipt(transaction_creation_hash)
+  File "/usr/local/lib/python2.7/dist-packages/web3/eth.py", line 192, in getTransactionReceipt
+    [transaction_hash],
+  File "/usr/local/lib/python2.7/dist-packages/web3/manager.py", line 93, in request_blocking
+    response = self._make_request(method, params)
+  File "/usr/local/lib/python2.7/dist-packages/web3/manager.py", line 76, in _make_request
+    return request_func(method, params)
+  File "/usr/local/lib/python2.7/dist-packages/web3/middleware/attrdict.py", line 20, in middleware
+    response = make_request(method, params)
+  File "/usr/local/lib/python2.7/dist-packages/web3/middleware/formatting.py", line 25, in middleware
+    response = make_request(method, params)
+  File "/usr/local/lib/python2.7/dist-packages/web3/providers/rpc.py", line 52, in make_request
+    **self.get_request_kwargs()
+  File "/usr/local/lib/python2.7/dist-packages/web3/utils/compat/compat_requests.py", line 21, in make_post_request
+    response = session.post(endpoint_uri, data=data, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/requests/sessions.py", line 581, in post
+    return self.request('POST', url, data=data, json=json, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/requests/sessions.py", line 533, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/requests/sessions.py", line 646, in send
+    r = adapter.send(request, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/requests/adapters.py", line 498, in send
+    raise ConnectionError(err, request=request)
+requests.exceptions.ConnectionError: ('Connection aborted.', error(104, 'Connection reset by peer'))
+/usr/local/lib/python2.7/dist-packages/web3/main.py:130: DeprecationWarning: Python 2 support is ending! Please upgrade to Python 3 promptly. Support will end at the beginning of 2018.
+  category=DeprecationWarning,
+/usr/local/lib/python2.7/dist-packages/web3/main.py:130: DeprecationWarning: Python 2 support is ending! Please upgrade to Python 3 promptly. Support will end at the beginning of 2018.
+  category=DeprecationWarning,
+[1m[ ] Deploying contract [0m...................................................................................................
+====================================================================================================
+[1m[ ] Compiling Solidity contract from the file /../data/reentrancy/solidity_contract/39932.sol ... [0m[92m Done [0m
+Traceback (most recent call last):
+  File "maian.py", line 182, in <module>
+[1m[ ] Connecting to PRIVATE blockchain emptychain  [0m.[92m ESTABLISHED [0m
+    main(sys.argv[1:])
+  File "maian.py", line 120, in main
+    if args.soliditycode:   contract_address = deploy_contract(args.soliditycode[1], MyGlobals.etherbase_account)
+  File "/MAIAN/tool/contracts.py", line 99, in deploy_contract
+    s.run()
+  File "/usr/lib/python2.7/sched.py", line 117, in run
+    action(*argument)
+  File "/MAIAN/tool/contracts.py", line 115, in confirm_contract
+    receipt = MyGlobals.web3.eth.getTransactionReceipt(transaction_creation_hash)
+  File "/usr/local/lib/python2.7/dist-packages/web3/eth.py", line 192, in getTransactionReceipt
+    [transaction_hash],
+  File "/usr/local/lib/python2.7/dist-packages/web3/manager.py", line 93, in request_blocking
+    response = self._make_request(method, params)
+  File "/usr/local/lib/python2.7/dist-packages/web3/manager.py", line 76, in _make_request
+    return request_func(method, params)
+  File "/usr/local/lib/python2.7/dist-packages/web3/middleware/attrdict.py", line 20, in middleware
+    response = make_request(method, params)
+  File "/usr/local/lib/python2.7/dist-packages/web3/middleware/formatting.py", line 25, in middleware
+    response = make_request(method, params)
+  File "/usr/local/lib/python2.7/dist-packages/web3/providers/rpc.py", line 52, in make_request
+    **self.get_request_kwargs()
+  File "/usr/local/lib/python2.7/dist-packages/web3/utils/compat/compat_requests.py", line 21, in make_post_request
+    response = session.post(endpoint_uri, data=data, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/requests/sessions.py", line 581, in post
+    return self.request('POST', url, data=data, json=json, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/requests/sessions.py", line 533, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/requests/sessions.py", line 646, in send
+    r = adapter.send(request, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/requests/adapters.py", line 516, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPConnectionPool(host='127.0.0.1', port=8550): Max retries exceeded with url: / (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7ff0f5603410>: Failed to establish a new connection: [Errno 111] Connection refused',))
+/usr/local/lib/python2.7/dist-packages/web3/main.py:130: DeprecationWarning: Python 2 support is ending! Please upgrade to Python 3 promptly. Support will end at the beginning of 2018.
+  category=DeprecationWarning,
+/usr/local/lib/python2.7/dist-packages/web3/main.py:130: DeprecationWarning: Python 2 support is ending! Please upgrade to Python 3 promptly. Support will end at the beginning of 2018.
+  category=DeprecationWarning,
+[1m[ ] Deploying contract [0m..............
+====================================================================================================
+[1m[ ] Compiling Solidity contract from the file /../data/reentrancy/solidity_contract/39932.sol ... [0m[92m Done [0m
+[1m[ ] Connecting to PRIVATE blockchain emptychain  [0m.[92m ESTABLISHED [0m
+[1m[ ] Sending Ether to contract 0x9e536236abf2288a7864c6a1afaa4cb98d464306  [0m......Exception: HTTPConnectionPool(host='127.0.0.1', port=8550): Max retries exceeded with url: / (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f3f49a0d410>: Failed to establish a new connection: [Errno 111] Connection refused',))
+[92m Sent! [0m
+Traceback (most recent call last):
+  File "maian.py", line 182, in <module>
+    main(sys.argv[1:])
+  File "maian.py", line 120, in main
+    if args.soliditycode:   contract_address = deploy_contract(args.soliditycode[1], MyGlobals.etherbase_account)
+  File "/MAIAN/tool/contracts.py", line 87, in deploy_contract
+    MyGlobals.web3.personal.unlockAccount(etherbase, '1', 15000)
+  File "/usr/local/lib/python2.7/dist-packages/web3/personal.py", line 93, in unlockAccount
+    [account, passphrase, duration],
+  File "/usr/local/lib/python2.7/dist-packages/web3/manager.py", line 93, in request_blocking
+    response = self._make_request(method, params)
+  File "/usr/local/lib/python2.7/dist-packages/web3/manager.py", line 76, in _make_request
+    return request_func(method, params)
+  File "/usr/local/lib/python2.7/dist-packages/web3/middleware/attrdict.py", line 20, in middleware
+    response = make_request(method, params)
+  File "/usr/local/lib/python2.7/dist-packages/web3/middleware/formatting.py", line 25, in middleware
+    response = make_request(method, params)
+  File "/usr/local/lib/python2.7/dist-packages/web3/providers/rpc.py", line 52, in make_request
+    **self.get_request_kwargs()
+  File "/usr/local/lib/python2.7/dist-packages/web3/utils/compat/compat_requests.py", line 21, in make_post_request
+    response = session.post(endpoint_uri, data=data, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/requests/sessions.py", line 581, in post
+    return self.request('POST', url, data=data, json=json, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/requests/sessions.py", line 533, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/requests/sessions.py", line 646, in send
+    r = adapter.send(request, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/requests/adapters.py", line 516, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPConnectionPool(host='127.0.0.1', port=8550): Max retries exceeded with url: / (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f3f499c3c50>: Failed to establish a new connection: [Errno 111] Connection refused',))
+/usr/local/lib/python2.7/dist-packages/web3/main.py:130: DeprecationWarning: Python 2 support is ending! Please upgrade to Python 3 promptly. Support will end at the beginning of 2018.
+  category=DeprecationWarning,
+/usr/local/lib/python2.7/dist-packages/web3/main.py:130: DeprecationWarning: Python 2 support is ending! Please upgrade to Python 3 promptly. Support will end at the beginning of 2018.
+  category=DeprecationWarning,
+[1m[ ] Deploying contract [0m
+====================================================================================================
+[1m[ ] Compiling Solidity contract from the file /../data/reentrancy/solidity_contract/39932.sol ... [0m[92m Done [0m
+Traceback (most recent call last):
+  File "maian.py", line 182, in <module>
+    main(sys.argv[1:])
+  File "maian.py", line 120, in main
+    if args.soliditycode:   contract_address = deploy_contract(args.soliditycode[1], MyGlobals.etherbase_account)
+  File "/MAIAN/tool/contracts.py", line 87, in deploy_contract
+    MyGlobals.web3.personal.unlockAccount(etherbase, '1', 15000)
+  File "/usr/local/lib/python2.7/dist-packages/web3/personal.py", line 93, in unlockAccount
+    [account, passphrase, duration],
+  File "/usr/local/lib/python2.7/dist-packages/web3/manager.py", line 93, in request_blocking
+    response = self._make_request(method, params)
+  File "/usr/local/lib/python2.7/dist-packages/web3/manager.py", line 76, in _make_request
+    return request_func(method, params)
+  File "/usr/local/lib/python2.7/dist-packages/web3/middleware/attrdict.py", line 20, in middleware
+    response = make_request(method, params)
+  File "/usr/local/lib/python2.7/dist-packages/web3/middleware/formatting.py", line 25, in middleware
+[1m[ ] Connecting to PRIVATE blockchain emptychain  [0m.[92m ESTABLISHED [0m
+    response = make_request(method, params)
+  File "/usr/local/lib/python2.7/dist-packages/web3/providers/rpc.py", line 52, in make_request
+    **self.get_request_kwargs()
+  File "/usr/local/lib/python2.7/dist-packages/web3/utils/compat/compat_requests.py", line 21, in make_post_request
+    response = session.post(endpoint_uri, data=data, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/requests/sessions.py", line 581, in post
+    return self.request('POST', url, data=data, json=json, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/requests/sessions.py", line 533, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/requests/sessions.py", line 646, in send
+    r = adapter.send(request, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/requests/adapters.py", line 498, in send
+    raise ConnectionError(err, request=request)
+requests.exceptions.ConnectionError: ('Connection aborted.', BadStatusLine("''",))
+/usr/local/lib/python2.7/dist-packages/web3/main.py:130: DeprecationWarning: Python 2 support is ending! Please upgrade to Python 3 promptly. Support will end at the beginning of 2018.
+  category=DeprecationWarning,
+/usr/local/lib/python2.7/dist-packages/web3/main.py:130: DeprecationWarning: Python 2 support is ending! Please upgrade to Python 3 promptly. Support will end at the beginning of 2018.
+  category=DeprecationWarning,
+[1m[ ] Deploying contract [0m
+====================================================================================================
+[1m[ ] Compiling Solidity contract from the file /../data/reentrancy/solidity_contract/39932.sol ... [0m[92m Done [0m
+[1m[ ] Connecting to PRIVATE blockchain emptychain  [0m.[92m ESTABLISHED [0m
+Traceback (most recent call last):
+  File "maian.py", line 182, in <module>
+    main(sys.argv[1:])
+  File "maian.py", line 120, in main
+    if args.soliditycode:   contract_address = deploy_contract(args.soliditycode[1], MyGlobals.etherbase_account)
+  File "/MAIAN/tool/contracts.py", line 87, in deploy_contract
+    MyGlobals.web3.personal.unlockAccount(etherbase, '1', 15000)
+  File "/usr/local/lib/python2.7/dist-packages/web3/personal.py", line 93, in unlockAccount
+    [account, passphrase, duration],
+  File "/usr/local/lib/python2.7/dist-packages/web3/manager.py", line 93, in request_blocking
+    response = self._make_request(method, params)
+  File "/usr/local/lib/python2.7/dist-packages/web3/manager.py", line 76, in _make_request
+    return request_func(method, params)
+  File "/usr/local/lib/python2.7/dist-packages/web3/middleware/attrdict.py", line 20, in middleware
+    response = make_request(method, params)
+  File "/usr/local/lib/python2.7/dist-packages/web3/middleware/formatting.py", line 25, in middleware
+    response = make_request(method, params)
+  File "/usr/local/lib/python2.7/dist-packages/web3/providers/rpc.py", line 52, in make_request
+    **self.get_request_kwargs()
+  File "/usr/local/lib/python2.7/dist-packages/web3/utils/compat/compat_requests.py", line 21, in make_post_request
+    response = session.post(endpoint_uri, data=data, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/requests/sessions.py", line 581, in post
+    return self.request('POST', url, data=data, json=json, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/requests/sessions.py", line 533, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/requests/sessions.py", line 646, in send
+    r = adapter.send(request, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/requests/adapters.py", line 498, in send
+    raise ConnectionError(err, request=request)
+requests.exceptions.ConnectionError: ('Connection aborted.', BadStatusLine("''",))
+/usr/local/lib/python2.7/dist-packages/web3/main.py:130: DeprecationWarning: Python 2 support is ending! Please upgrade to Python 3 promptly. Support will end at the beginning of 2018.
+  category=DeprecationWarning,
+/usr/local/lib/python2.7/dist-packages/web3/main.py:130: DeprecationWarning: Python 2 support is ending! Please upgrade to Python 3 promptly. Support will end at the beginning of 2018.
+  category=DeprecationWarning,
+[1m[ ] Deploying contract [0m
+====================================================================================================
+[1m[ ] Compiling Solidity contract from the file /../data/reentrancy/solidity_contract/39932.sol ... [0m[92m Done [0m
+[1m[ ] Connecting to PRIVATE blockchain emptychain  [0m.[92m ESTABLISHED [0m
+Traceback (most recent call last):
+  File "maian.py", line 182, in <module>
+    main(sys.argv[1:])
+  File "maian.py", line 116, in main
+    execute_transactions([{'from':'0x'+MyGlobals.sendingether_account,'to':supposed_contract_address,'value':MyGlobals.send_initial_wei}])
+  File "/MAIAN/tool/blockchain.py", line 95, in execute_transactions
+    MyGlobals.web3.personal.unlockAccount(tx['from'],'1',15000)
+  File "/usr/local/lib/python2.7/dist-packages/web3/personal.py", line 93, in unlockAccount
+    [account, passphrase, duration],
+  File "/usr/local/lib/python2.7/dist-packages/web3/manager.py", line 93, in request_blocking
+    response = self._make_request(method, params)
+  File "/usr/local/lib/python2.7/dist-packages/web3/manager.py", line 76, in _make_request
+    return request_func(method, params)
+  File "/usr/local/lib/python2.7/dist-packages/web3/middleware/attrdict.py", line 20, in middleware
+    response = make_request(method, params)
+  File "/usr/local/lib/python2.7/dist-packages/web3/middleware/formatting.py", line 25, in middleware
+    response = make_request(method, params)
+  File "/usr/local/lib/python2.7/dist-packages/web3/providers/rpc.py", line 52, in make_request
+    **self.get_request_kwargs()
+  File "/usr/local/lib/python2.7/dist-packages/web3/utils/compat/compat_requests.py", line 21, in make_post_request
+    response = session.post(endpoint_uri, data=data, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/requests/sessions.py", line 581, in post
+    return self.request('POST', url, data=data, json=json, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/requests/sessions.py", line 533, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/requests/sessions.py", line 646, in send
+    r = adapter.send(request, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/requests/adapters.py", line 498, in send
+    raise ConnectionError(err, request=request)
+requests.exceptions.ConnectionError: ('Connection aborted.', BadStatusLine("''",))
+/usr/local/lib/python2.7/dist-packages/web3/main.py:130: DeprecationWarning: Python 2 support is ending! Please upgrade to Python 3 promptly. Support will end at the beginning of 2018.
+  category=DeprecationWarning,
+/usr/local/lib/python2.7/dist-packages/web3/main.py:130: DeprecationWarning: Python 2 support is ending! Please upgrade to Python 3 promptly. Support will end at the beginning of 2018.
+  category=DeprecationWarning,
+[1m[ ] Sending Ether to contract 0x9e536236abf2288a7864c6a1afaa4cb98d464306  [0m
+====================================================================================================
+[1m[ ] Compiling Solidity contract from the file /../data/reentrancy/solidity_contract/39932.sol ... [0m[92m Done [0m
+[1m[ ] Connecting to PRIVATE blockchain emptychain  [0m.[92m ESTABLISHED [0m
+Traceback (most recent call last):
+  File "maian.py", line 182, in <module>
+    main(sys.argv[1:])
+  File "maian.py", line 120, in main
+    if args.soliditycode:   contract_address = deploy_contract(args.soliditycode[1], MyGlobals.etherbase_account)
+  File "/MAIAN/tool/contracts.py", line 87, in deploy_contract
+    MyGlobals.web3.personal.unlockAccount(etherbase, '1', 15000)
+  File "/usr/local/lib/python2.7/dist-packages/web3/personal.py", line 93, in unlockAccount
+    [account, passphrase, duration],
+  File "/usr/local/lib/python2.7/dist-packages/web3/manager.py", line 93, in request_blocking
+    response = self._make_request(method, params)
+  File "/usr/local/lib/python2.7/dist-packages/web3/manager.py", line 76, in _make_request
+    return request_func(method, params)
+  File "/usr/local/lib/python2.7/dist-packages/web3/middleware/attrdict.py", line 20, in middleware
+    response = make_request(method, params)
+  File "/usr/local/lib/python2.7/dist-packages/web3/middleware/formatting.py", line 25, in middleware
+    response = make_request(method, params)
+  File "/usr/local/lib/python2.7/dist-packages/web3/providers/rpc.py", line 52, in make_request
+    **self.get_request_kwargs()
+  File "/usr/local/lib/python2.7/dist-packages/web3/utils/compat/compat_requests.py", line 21, in make_post_request
+    response = session.post(endpoint_uri, data=data, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/requests/sessions.py", line 581, in post
+    return self.request('POST', url, data=data, json=json, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/requests/sessions.py", line 533, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/requests/sessions.py", line 646, in send
+    r = adapter.send(request, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/requests/adapters.py", line 498, in send
+    raise ConnectionError(err, request=request)
+requests.exceptions.ConnectionError: ('Connection aborted.', BadStatusLine("''",))
+/usr/local/lib/python2.7/dist-packages/web3/main.py:130: DeprecationWarning: Python 2 support is ending! Please upgrade to Python 3 promptly. Support will end at the beginning of 2018.
+  category=DeprecationWarning,
+/usr/local/lib/python2.7/dist-packages/web3/main.py:130: DeprecationWarning: Python 2 support is ending! Please upgrade to Python 3 promptly. Support will end at the beginning of 2018.
+  category=DeprecationWarning,
+[1m[ ] Deploying contract [0m
+====================================================================================================
+[1m[ ] Compiling Solidity contract from the file /../data/reentrancy/solidity_contract/39932.sol ... [0m[92m Done [0m
+[1m[ ] Connecting to PRIVATE blockchain emptychain  [0m.[92m ESTABLISHED [0m
+Traceback (most recent call last):
+  File "maian.py", line 182, in <module>
+    main(sys.argv[1:])
+  File "maian.py", line 120, in main
+    if args.soliditycode:   contract_address = deploy_contract(args.soliditycode[1], MyGlobals.etherbase_account)
+  File "/MAIAN/tool/contracts.py", line 87, in deploy_contract
+    MyGlobals.web3.personal.unlockAccount(etherbase, '1', 15000)
+  File "/usr/local/lib/python2.7/dist-packages/web3/personal.py", line 93, in unlockAccount
+    [account, passphrase, duration],
+  File "/usr/local/lib/python2.7/dist-packages/web3/manager.py", line 93, in request_blocking
+    response = self._make_request(method, params)
+  File "/usr/local/lib/python2.7/dist-packages/web3/manager.py", line 76, in _make_request
+    return request_func(method, params)
+  File "/usr/local/lib/python2.7/dist-packages/web3/middleware/attrdict.py", line 20, in middleware
+    response = make_request(method, params)
+  File "/usr/local/lib/python2.7/dist-packages/web3/middleware/formatting.py", line 25, in middleware
+    response = make_request(method, params)
+  File "/usr/local/lib/python2.7/dist-packages/web3/providers/rpc.py", line 52, in make_request
+    **self.get_request_kwargs()
+  File "/usr/local/lib/python2.7/dist-packages/web3/utils/compat/compat_requests.py", line 21, in make_post_request
+    response = session.post(endpoint_uri, data=data, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/requests/sessions.py", line 581, in post
+    return self.request('POST', url, data=data, json=json, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/requests/sessions.py", line 533, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/requests/sessions.py", line 646, in send
+    r = adapter.send(request, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/requests/adapters.py", line 498, in send
+    raise ConnectionError(err, request=request)
+requests.exceptions.ConnectionError: ('Connection aborted.', BadStatusLine("''",))
+/usr/local/lib/python2.7/dist-packages/web3/main.py:130: DeprecationWarning: Python 2 support is ending! Please upgrade to Python 3 promptly. Support will end at the beginning of 2018.
+  category=DeprecationWarning,
+/usr/local/lib/python2.7/dist-packages/web3/main.py:130: DeprecationWarning: Python 2 support is ending! Please upgrade to Python 3 promptly. Support will end at the beginning of 2018.
+  category=DeprecationWarning,
+[1m[ ] Deploying contract [0m
+====================================================================================================
+[1m[ ] Compiling Solidity contract from the file /../data/reentrancy/solidity_contract/39932.sol ... [0m[92m Done [0m
+Traceback (most recent call last):
+  File "maian.py", line 182, in <module>
+[1m[ ] Connecting to PRIVATE blockchain emptychain  [0m.[92m ESTABLISHED [0m
+    main(sys.argv[1:])
+[1m[ ] Sending Ether to contract 0x9e536236abf2288a7864c6a1afaa4cb98d464306  [0mException: ('Connection aborted.', error(104, 'Connection reset by peer'))
+  File "maian.py", line 120, in main
+[92m Sent! [0m
+    if args.soliditycode:   contract_address = deploy_contract(args.soliditycode[1], MyGlobals.etherbase_account)
+  File "/MAIAN/tool/contracts.py", line 87, in deploy_contract
+    MyGlobals.web3.personal.unlockAccount(etherbase, '1', 15000)
+  File "/usr/local/lib/python2.7/dist-packages/web3/personal.py", line 93, in unlockAccount
+    [account, passphrase, duration],
+  File "/usr/local/lib/python2.7/dist-packages/web3/manager.py", line 93, in request_blocking
+    response = self._make_request(method, params)
+  File "/usr/local/lib/python2.7/dist-packages/web3/manager.py", line 76, in _make_request
+    return request_func(method, params)
+  File "/usr/local/lib/python2.7/dist-packages/web3/middleware/attrdict.py", line 20, in middleware
+    response = make_request(method, params)
+  File "/usr/local/lib/python2.7/dist-packages/web3/middleware/formatting.py", line 25, in middleware
+    response = make_request(method, params)
+  File "/usr/local/lib/python2.7/dist-packages/web3/providers/rpc.py", line 52, in make_request
+    **self.get_request_kwargs()
+  File "/usr/local/lib/python2.7/dist-packages/web3/utils/compat/compat_requests.py", line 21, in make_post_request
+    response = session.post(endpoint_uri, data=data, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/requests/sessions.py", line 581, in post
+    return self.request('POST', url, data=data, json=json, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/requests/sessions.py", line 533, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/requests/sessions.py", line 646, in send
+    r = adapter.send(request, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/requests/adapters.py", line 516, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPConnectionPool(host='127.0.0.1', port=8550): Max retries exceeded with url: / (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f6c07276a90>: Failed to establish a new connection: [Errno 111] Connection refused',))
+/usr/local/lib/python2.7/dist-packages/web3/main.py:130: DeprecationWarning: Python 2 support is ending! Please upgrade to Python 3 promptly. Support will end at the beginning of 2018.
+  category=DeprecationWarning,
+/usr/local/lib/python2.7/dist-packages/web3/main.py:130: DeprecationWarning: Python 2 support is ending! Please upgrade to Python 3 promptly. Support will end at the beginning of 2018.
+  category=DeprecationWarning,
+[1m[ ] Deploying contract [0m
+====================================================================================================
+[1m[ ] Compiling Solidity contract from the file /../data/reentrancy/solidity_contract/39932.sol ... [0m[92m Done [0m
+[1m[ ] Connecting to PRIVATE blockchain emptychain  [0m.[92m ESTABLISHED [0m
+Traceback (most recent call last):
+  File "maian.py", line 182, in <module>
+    main(sys.argv[1:])
+  File "maian.py", line 120, in main
+    if args.soliditycode:   contract_address = deploy_contract(args.soliditycode[1], MyGlobals.etherbase_account)
+  File "/MAIAN/tool/contracts.py", line 87, in deploy_contract
+    MyGlobals.web3.personal.unlockAccount(etherbase, '1', 15000)
+  File "/usr/local/lib/python2.7/dist-packages/web3/personal.py", line 93, in unlockAccount
+    [account, passphrase, duration],
+  File "/usr/local/lib/python2.7/dist-packages/web3/manager.py", line 93, in request_blocking
+    response = self._make_request(method, params)
+  File "/usr/local/lib/python2.7/dist-packages/web3/manager.py", line 76, in _make_request
+    return request_func(method, params)
+  File "/usr/local/lib/python2.7/dist-packages/web3/middleware/attrdict.py", line 20, in middleware
+    response = make_request(method, params)
+  File "/usr/local/lib/python2.7/dist-packages/web3/middleware/formatting.py", line 25, in middleware
+    response = make_request(method, params)
+  File "/usr/local/lib/python2.7/dist-packages/web3/providers/rpc.py", line 52, in make_request
+    **self.get_request_kwargs()
+  File "/usr/local/lib/python2.7/dist-packages/web3/utils/compat/compat_requests.py", line 21, in make_post_request
+    response = session.post(endpoint_uri, data=data, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/requests/sessions.py", line 581, in post
+    return self.request('POST', url, data=data, json=json, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/requests/sessions.py", line 533, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/requests/sessions.py", line 646, in send
+    r = adapter.send(request, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/requests/adapters.py", line 498, in send
+    raise ConnectionError(err, request=request)
+requests.exceptions.ConnectionError: ('Connection aborted.', BadStatusLine("''",))
+/usr/local/lib/python2.7/dist-packages/web3/main.py:130: DeprecationWarning: Python 2 support is ending! Please upgrade to Python 3 promptly. Support will end at the beginning of 2018.
+  category=DeprecationWarning,
+/usr/local/lib/python2.7/dist-packages/web3/main.py:130: DeprecationWarning: Python 2 support is ending! Please upgrade to Python 3 promptly. Support will end at the beginning of 2018.
+  category=DeprecationWarning,
+[1m[ ] Deploying contract [0m
+====================================================================================================
+[1m[ ] Compiling Solidity contract from the file /../data/reentrancy/solidity_contract/39932.sol ... [0m[92m Done [0m
+[1m[ ] Connecting to PRIVATE blockchain emptychain  [0m.[92m ESTABLISHED [0m
+[1m[ ] Deploying contract [0mException: ('Connection aborted.', error(104, 'Connection reset by peer'))
+[91m[-] Cannot deploy the contract [0m
+/usr/local/lib/python2.7/dist-packages/web3/main.py:130: DeprecationWarning: Python 2 support is ending! Please upgrade to Python 3 promptly. Support will end at the beginning of 2018.
+  category=DeprecationWarning,
+/usr/local/lib/python2.7/dist-packages/web3/main.py:130: DeprecationWarning: Python 2 support is ending! Please upgrade to Python 3 promptly. Support will end at the beginning of 2018.
+  category=DeprecationWarning,
+
+====================================================================================================
+[1m[ ] Compiling Solidity contract from the file /../data/reentrancy/solidity_contract/39932.sol ... [0m[92m Done [0m
+Traceback (most recent call last):
+  File "maian.py", line 182, in <module>
+    main(sys.argv[1:])
+  File "maian.py", line 116, in main
+    execute_transactions([{'from':'0x'+MyGlobals.sendingether_account,'to':supposed_contract_address,'value':MyGlobals.send_initial_wei}])
+  File "/MAIAN/tool/blockchain.py", line 95, in execute_transactions
+[1m[ ] Connecting to PRIVATE blockchain emptychain  [0m.[92m ESTABLISHED [0m
+    MyGlobals.web3.personal.unlockAccount(tx['from'],'1',15000)
+  File "/usr/local/lib/python2.7/dist-packages/web3/personal.py", line 93, in unlockAccount
+    [account, passphrase, duration],
+  File "/usr/local/lib/python2.7/dist-packages/web3/manager.py", line 93, in request_blocking
+    response = self._make_request(method, params)
+  File "/usr/local/lib/python2.7/dist-packages/web3/manager.py", line 76, in _make_request
+    return request_func(method, params)
+  File "/usr/local/lib/python2.7/dist-packages/web3/middleware/attrdict.py", line 20, in middleware
+    response = make_request(method, params)
+  File "/usr/local/lib/python2.7/dist-packages/web3/middleware/formatting.py", line 25, in middleware
+    response = make_request(method, params)
+  File "/usr/local/lib/python2.7/dist-packages/web3/providers/rpc.py", line 52, in make_request
+    **self.get_request_kwargs()
+  File "/usr/local/lib/python2.7/dist-packages/web3/utils/compat/compat_requests.py", line 21, in make_post_request
+    response = session.post(endpoint_uri, data=data, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/requests/sessions.py", line 581, in post
+    return self.request('POST', url, data=data, json=json, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/requests/sessions.py", line 533, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/requests/sessions.py", line 646, in send
+    r = adapter.send(request, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/requests/adapters.py", line 498, in send
+    raise ConnectionError(err, request=request)
+requests.exceptions.ConnectionError: ('Connection aborted.', BadStatusLine("''",))
+/usr/local/lib/python2.7/dist-packages/web3/main.py:130: DeprecationWarning: Python 2 support is ending! Please upgrade to Python 3 promptly. Support will end at the beginning of 2018.
+  category=DeprecationWarning,
+/usr/local/lib/python2.7/dist-packages/web3/main.py:130: DeprecationWarning: Python 2 support is ending! Please upgrade to Python 3 promptly. Support will end at the beginning of 2018.
+  category=DeprecationWarning,
+[1m[ ] Sending Ether to contract 0x9e536236abf2288a7864c6a1afaa4cb98d464306  [0m
+====================================================================================================
+[1m[ ] Compiling Solidity contract from the file /../data/reentrancy/solidity_contract/39932.sol ... [0m[92m Done [0m
+Traceback (most recent call last):
+  File "maian.py", line 182, in <module>
+    main(sys.argv[1:])
+  File "maian.py", line 120, in main
+    if args.soliditycode:   contract_address = deploy_contract(args.soliditycode[1], MyGlobals.etherbase_account)
+[1m[ ] Connecting to PRIVATE blockchain emptychain  [0m.[92m ESTABLISHED [0m
+  File "/MAIAN/tool/contracts.py", line 87, in deploy_contract
+    MyGlobals.web3.personal.unlockAccount(etherbase, '1', 15000)
+  File "/usr/local/lib/python2.7/dist-packages/web3/personal.py", line 93, in unlockAccount
+    [account, passphrase, duration],
+  File "/usr/local/lib/python2.7/dist-packages/web3/manager.py", line 93, in request_blocking
+    response = self._make_request(method, params)
+  File "/usr/local/lib/python2.7/dist-packages/web3/manager.py", line 76, in _make_request
+    return request_func(method, params)
+  File "/usr/local/lib/python2.7/dist-packages/web3/middleware/attrdict.py", line 20, in middleware
+    response = make_request(method, params)
+  File "/usr/local/lib/python2.7/dist-packages/web3/middleware/formatting.py", line 25, in middleware
+    response = make_request(method, params)
+  File "/usr/local/lib/python2.7/dist-packages/web3/providers/rpc.py", line 52, in make_request
+    **self.get_request_kwargs()
+  File "/usr/local/lib/python2.7/dist-packages/web3/utils/compat/compat_requests.py", line 21, in make_post_request
+    response = session.post(endpoint_uri, data=data, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/requests/sessions.py", line 581, in post
+    return self.request('POST', url, data=data, json=json, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/requests/sessions.py", line 533, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/requests/sessions.py", line 646, in send
+    r = adapter.send(request, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/requests/adapters.py", line 498, in send
+    raise ConnectionError(err, request=request)
+requests.exceptions.ConnectionError: ('Connection aborted.', BadStatusLine("''",))
+/usr/local/lib/python2.7/dist-packages/web3/main.py:130: DeprecationWarning: Python 2 support is ending! Please upgrade to Python 3 promptly. Support will end at the beginning of 2018.
+  category=DeprecationWarning,
+/usr/local/lib/python2.7/dist-packages/web3/main.py:130: DeprecationWarning: Python 2 support is ending! Please upgrade to Python 3 promptly. Support will end at the beginning of 2018.
+  category=DeprecationWarning,
+[1m[ ] Deploying contract [0m
+====================================================================================================
+[1m[ ] Compiling Solidity contract from the file /../data/reentrancy/solidity_contract/39932.sol ... [0m[92m Done [0m
+[1m[ ] Connecting to PRIVATE blockchain emptychain  [0m.[92m ESTABLISHED [0m
+Traceback (most recent call last):
+  File "maian.py", line 182, in <module>
+    main(sys.argv[1:])
+  File "maian.py", line 120, in main
+    if args.soliditycode:   contract_address = deploy_contract(args.soliditycode[1], MyGlobals.etherbase_account)
+  File "/MAIAN/tool/contracts.py", line 87, in deploy_contract
+    MyGlobals.web3.personal.unlockAccount(etherbase, '1', 15000)
+  File "/usr/local/lib/python2.7/dist-packages/web3/personal.py", line 93, in unlockAccount
+    [account, passphrase, duration],
+  File "/usr/local/lib/python2.7/dist-packages/web3/manager.py", line 93, in request_blocking
+    response = self._make_request(method, params)
+  File "/usr/local/lib/python2.7/dist-packages/web3/manager.py", line 76, in _make_request
+    return request_func(method, params)
+  File "/usr/local/lib/python2.7/dist-packages/web3/middleware/attrdict.py", line 20, in middleware
+    response = make_request(method, params)
+  File "/usr/local/lib/python2.7/dist-packages/web3/middleware/formatting.py", line 25, in middleware
+    response = make_request(method, params)
+  File "/usr/local/lib/python2.7/dist-packages/web3/providers/rpc.py", line 52, in make_request
+    **self.get_request_kwargs()
+  File "/usr/local/lib/python2.7/dist-packages/web3/utils/compat/compat_requests.py", line 21, in make_post_request
+    response = session.post(endpoint_uri, data=data, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/requests/sessions.py", line 581, in post
+    return self.request('POST', url, data=data, json=json, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/requests/sessions.py", line 533, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/requests/sessions.py", line 646, in send
+    r = adapter.send(request, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/requests/adapters.py", line 498, in send
+    raise ConnectionError(err, request=request)
+requests.exceptions.ConnectionError: ('Connection aborted.', BadStatusLine("''",))
+/usr/local/lib/python2.7/dist-packages/web3/main.py:130: DeprecationWarning: Python 2 support is ending! Please upgrade to Python 3 promptly. Support will end at the beginning of 2018.
+  category=DeprecationWarning,
+/usr/local/lib/python2.7/dist-packages/web3/main.py:130: DeprecationWarning: Python 2 support is ending! Please upgrade to Python 3 promptly. Support will end at the beginning of 2018.
+  category=DeprecationWarning,
+[1m[ ] Deploying contract [0m
+====================================================================================================
+[1m[ ] Compiling Solidity contract from the file /../data/reentrancy/solidity_contract/39932.sol ... [0m[92m Done [0m
+Traceback (most recent call last):
+  File "maian.py", line 182, in <module>
+    main(sys.argv[1:])
+  File "maian.py", line 116, in main
+[1m[ ] Connecting to PRIVATE blockchain emptychain  [0m.[92m ESTABLISHED [0m
+    execute_transactions([{'from':'0x'+MyGlobals.sendingether_account,'to':supposed_contract_address,'value':MyGlobals.send_initial_wei}])
+  File "/MAIAN/tool/blockchain.py", line 95, in execute_transactions
+    MyGlobals.web3.personal.unlockAccount(tx['from'],'1',15000)
+  File "/usr/local/lib/python2.7/dist-packages/web3/personal.py", line 93, in unlockAccount
+    [account, passphrase, duration],
+  File "/usr/local/lib/python2.7/dist-packages/web3/manager.py", line 93, in request_blocking
+    response = self._make_request(method, params)
+  File "/usr/local/lib/python2.7/dist-packages/web3/manager.py", line 76, in _make_request
+    return request_func(method, params)
+  File "/usr/local/lib/python2.7/dist-packages/web3/middleware/attrdict.py", line 20, in middleware
+    response = make_request(method, params)
+  File "/usr/local/lib/python2.7/dist-packages/web3/middleware/formatting.py", line 25, in middleware
+    response = make_request(method, params)
+  File "/usr/local/lib/python2.7/dist-packages/web3/providers/rpc.py", line 52, in make_request
+    **self.get_request_kwargs()
+  File "/usr/local/lib/python2.7/dist-packages/web3/utils/compat/compat_requests.py", line 21, in make_post_request
+    response = session.post(endpoint_uri, data=data, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/requests/sessions.py", line 581, in post
+    return self.request('POST', url, data=data, json=json, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/requests/sessions.py", line 533, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/requests/sessions.py", line 646, in send
+    r = adapter.send(request, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/requests/adapters.py", line 498, in send
+    raise ConnectionError(err, request=request)
+requests.exceptions.ConnectionError: ('Connection aborted.', BadStatusLine("''",))
+/usr/local/lib/python2.7/dist-packages/web3/main.py:130: DeprecationWarning: Python 2 support is ending! Please upgrade to Python 3 promptly. Support will end at the beginning of 2018.
+  category=DeprecationWarning,
+/usr/local/lib/python2.7/dist-packages/web3/main.py:130: DeprecationWarning: Python 2 support is ending! Please upgrade to Python 3 promptly. Support will end at the beginning of 2018.
+  category=DeprecationWarning,
+[1m[ ] Sending Ether to contract 0x9e536236abf2288a7864c6a1afaa4cb98d464306  [0m
+====================================================================================================
+[1m[ ] Compiling Solidity contract from the file /../data/reentrancy/solidity_contract/39932.sol ... [0m[92m Done [0m
+Traceback (most recent call last):
+  File "maian.py", line 182, in <module>
+    main(sys.argv[1:])
+  File "maian.py", line 120, in main
+    if args.soliditycode:   contract_address = deploy_contract(args.soliditycode[1], MyGlobals.etherbase_account)
+  File "/MAIAN/tool/contracts.py", line 87, in deploy_contract
+    MyGlobals.web3.personal.unlockAccount(etherbase, '1', 15000)
+[1m[ ] Connecting to PRIVATE blockchain emptychain  [0m...[92m ESTABLISHED [0m
+  File "/usr/local/lib/python2.7/dist-packages/web3/personal.py", line 93, in unlockAccount
+    [account, passphrase, duration],
+  File "/usr/local/lib/python2.7/dist-packages/web3/manager.py", line 93, in request_blocking
+    response = self._make_request(method, params)
+  File "/usr/local/lib/python2.7/dist-packages/web3/manager.py", line 76, in _make_request
+    return request_func(method, params)
+  File "/usr/local/lib/python2.7/dist-packages/web3/middleware/attrdict.py", line 20, in middleware
+    response = make_request(method, params)
+  File "/usr/local/lib/python2.7/dist-packages/web3/middleware/formatting.py", line 25, in middleware
+    response = make_request(method, params)
+  File "/usr/local/lib/python2.7/dist-packages/web3/providers/rpc.py", line 52, in make_request
+    **self.get_request_kwargs()
+  File "/usr/local/lib/python2.7/dist-packages/web3/utils/compat/compat_requests.py", line 21, in make_post_request
+    response = session.post(endpoint_uri, data=data, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/requests/sessions.py", line 581, in post
+    return self.request('POST', url, data=data, json=json, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/requests/sessions.py", line 533, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/requests/sessions.py", line 646, in send
+    r = adapter.send(request, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/requests/adapters.py", line 498, in send
+    raise ConnectionError(err, request=request)
+requests.exceptions.ConnectionError: ('Connection aborted.', BadStatusLine("''",))
+/usr/local/lib/python2.7/dist-packages/web3/main.py:130: DeprecationWarning: Python 2 support is ending! Please upgrade to Python 3 promptly. Support will end at the beginning of 2018.
+  category=DeprecationWarning,
+/usr/local/lib/python2.7/dist-packages/web3/main.py:130: DeprecationWarning: Python 2 support is ending! Please upgrade to Python 3 promptly. Support will end at the beginning of 2018.
+  category=DeprecationWarning,
+[1m[ ] Deploying contract [0m
+====================================================================================================
+[1m[ ] Compiling Solidity contract from the file /../data/reentrancy/solidity_contract/39932.sol ... [0m[92m Done [0m
+[1m[ ] Connecting to PRIVATE blockchain emptychain  [0m.[92m ESTABLISHED [0m
+Traceback (most recent call last):
+  File "maian.py", line 182, in <module>
+    main(sys.argv[1:])
+  File "maian.py", line 120, in main
+    if args.soliditycode:   contract_address = deploy_contract(args.soliditycode[1], MyGlobals.etherbase_account)
+  File "/MAIAN/tool/contracts.py", line 87, in deploy_contract
+    MyGlobals.web3.personal.unlockAccount(etherbase, '1', 15000)
+  File "/usr/local/lib/python2.7/dist-packages/web3/personal.py", line 93, in unlockAccount
+    [account, passphrase, duration],
+  File "/usr/local/lib/python2.7/dist-packages/web3/manager.py", line 93, in request_blocking
+    response = self._make_request(method, params)
+  File "/usr/local/lib/python2.7/dist-packages/web3/manager.py", line 76, in _make_request
+    return request_func(method, params)
+  File "/usr/local/lib/python2.7/dist-packages/web3/middleware/attrdict.py", line 20, in middleware
+    response = make_request(method, params)
+  File "/usr/local/lib/python2.7/dist-packages/web3/middleware/formatting.py", line 25, in middleware
+    response = make_request(method, params)
+  File "/usr/local/lib/python2.7/dist-packages/web3/providers/rpc.py", line 52, in make_request
+    **self.get_request_kwargs()
+  File "/usr/local/lib/python2.7/dist-packages/web3/utils/compat/compat_requests.py", line 21, in make_post_request
+    response = session.post(endpoint_uri, data=data, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/requests/sessions.py", line 581, in post
+    return self.request('POST', url, data=data, json=json, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/requests/sessions.py", line 533, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/requests/sessions.py", line 646, in send
+    r = adapter.send(request, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/requests/adapters.py", line 498, in send
+    raise ConnectionError(err, request=request)
+requests.exceptions.ConnectionError: ('Connection aborted.', BadStatusLine("''",))
+/usr/local/lib/python2.7/dist-packages/web3/main.py:130: DeprecationWarning: Python 2 support is ending! Please upgrade to Python 3 promptly. Support will end at the beginning of 2018.
+  category=DeprecationWarning,
+/usr/local/lib/python2.7/dist-packages/web3/main.py:130: DeprecationWarning: Python 2 support is ending! Please upgrade to Python 3 promptly. Support will end at the beginning of 2018.
+  category=DeprecationWarning,
+[1m[ ] Deploying contract [0m
+====================================================================================================
+[1m[ ] Compiling Solidity contract from the file /../data/reentrancy/solidity_contract/39932.sol ... [0m[92m Done [0m
+[1m[ ] Connecting to PRIVATE blockchain emptychain  [0m.[92m ESTABLISHED [0m
+Traceback (most recent call last):
+  File "maian.py", line 182, in <module>
+    main(sys.argv[1:])
+  File "maian.py", line 116, in main
+    execute_transactions([{'from':'0x'+MyGlobals.sendingether_account,'to':supposed_contract_address,'value':MyGlobals.send_initial_wei}])
+  File "/MAIAN/tool/blockchain.py", line 95, in execute_transactions
+    MyGlobals.web3.personal.unlockAccount(tx['from'],'1',15000)
+  File "/usr/local/lib/python2.7/dist-packages/web3/personal.py", line 93, in unlockAccount
+    [account, passphrase, duration],
+  File "/usr/local/lib/python2.7/dist-packages/web3/manager.py", line 93, in request_blocking
+    response = self._make_request(method, params)
+  File "/usr/local/lib/python2.7/dist-packages/web3/manager.py", line 76, in _make_request
+    return request_func(method, params)
+  File "/usr/local/lib/python2.7/dist-packages/web3/middleware/attrdict.py", line 20, in middleware
+    response = make_request(method, params)
+  File "/usr/local/lib/python2.7/dist-packages/web3/middleware/formatting.py", line 25, in middleware
+    response = make_request(method, params)
+  File "/usr/local/lib/python2.7/dist-packages/web3/providers/rpc.py", line 52, in make_request
+    **self.get_request_kwargs()
+  File "/usr/local/lib/python2.7/dist-packages/web3/utils/compat/compat_requests.py", line 21, in make_post_request
+    response = session.post(endpoint_uri, data=data, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/requests/sessions.py", line 581, in post
+    return self.request('POST', url, data=data, json=json, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/requests/sessions.py", line 533, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/requests/sessions.py", line 646, in send
+    r = adapter.send(request, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/requests/adapters.py", line 498, in send
+    raise ConnectionError(err, request=request)
+requests.exceptions.ConnectionError: ('Connection aborted.', BadStatusLine("''",))
+/usr/local/lib/python2.7/dist-packages/web3/main.py:130: DeprecationWarning: Python 2 support is ending! Please upgrade to Python 3 promptly. Support will end at the beginning of 2018.
+  category=DeprecationWarning,
+/usr/local/lib/python2.7/dist-packages/web3/main.py:130: DeprecationWarning: Python 2 support is ending! Please upgrade to Python 3 promptly. Support will end at the beginning of 2018.
+  category=DeprecationWarning,
+[1m[ ] Sending Ether to contract 0x9e536236abf2288a7864c6a1afaa4cb98d464306  [0m
+====================================================================================================
+[1m[ ] Compiling Solidity contract from the file /../data/reentrancy/solidity_contract/39932.sol ... [0m[92m Done [0m
+[1m[ ] Connecting to PRIVATE blockchain emptychain  [0m.[92m ESTABLISHED [0m
+Traceback (most recent call last):
+  File "maian.py", line 182, in <module>
+    main(sys.argv[1:])
+  File "maian.py", line 120, in main
+    if args.soliditycode:   contract_address = deploy_contract(args.soliditycode[1], MyGlobals.etherbase_account)
+  File "/MAIAN/tool/contracts.py", line 99, in deploy_contract
+    s.run()
+  File "/usr/lib/python2.7/sched.py", line 117, in run
+    action(*argument)
+  File "/MAIAN/tool/contracts.py", line 115, in confirm_contract
+    receipt = MyGlobals.web3.eth.getTransactionReceipt(transaction_creation_hash)
+  File "/usr/local/lib/python2.7/dist-packages/web3/eth.py", line 192, in getTransactionReceipt
+    [transaction_hash],
+  File "/usr/local/lib/python2.7/dist-packages/web3/manager.py", line 93, in request_blocking
+    response = self._make_request(method, params)
+  File "/usr/local/lib/python2.7/dist-packages/web3/manager.py", line 76, in _make_request
+    return request_func(method, params)
+  File "/usr/local/lib/python2.7/dist-packages/web3/middleware/attrdict.py", line 20, in middleware
+    response = make_request(method, params)
+  File "/usr/local/lib/python2.7/dist-packages/web3/middleware/formatting.py", line 25, in middleware
+    response = make_request(method, params)
+  File "/usr/local/lib/python2.7/dist-packages/web3/providers/rpc.py", line 52, in make_request
+    **self.get_request_kwargs()
+  File "/usr/local/lib/python2.7/dist-packages/web3/utils/compat/compat_requests.py", line 21, in make_post_request
+    response = session.post(endpoint_uri, data=data, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/requests/sessions.py", line 581, in post
+    return self.request('POST', url, data=data, json=json, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/requests/sessions.py", line 533, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/requests/sessions.py", line 646, in send
+    r = adapter.send(request, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/requests/adapters.py", line 516, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPConnectionPool(host='127.0.0.1', port=8550): Max retries exceeded with url: / (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f8c0c09d4d0>: Failed to establish a new connection: [Errno 111] Connection refused',))
+[1m[ ] Deploying contract [0m...

@@ -1,0 +1,14 @@
+{
+  "contract": "2013",
+  "tool": "honeybadger",
+  "start": 1609150393.2964091,
+  "end": 1609150435.368408,
+  "duration": 42.071998834609985,
+  "analysis": [
+    {
+      "errors": [],
+      "file": "/../data/reentrancy/solidity_contract/2013.sol",
+      "name": "DutchAuction"
+    }
+  ]
+}

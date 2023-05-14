@@ -1,0 +1,14 @@
+{
+  "contract": "23088",
+  "tool": "honeybadger",
+  "start": 1609133241.521067,
+  "end": 1609133248.614878,
+  "duration": 7.09381103515625,
+  "analysis": [
+    {
+      "errors": [],
+      "file": "/../data/reentrancy/solidity_contract/23088.sol",
+      "name": "WyvernAtomicizer"
+    }
+  ]
+}

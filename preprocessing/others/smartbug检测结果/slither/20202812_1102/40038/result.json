@@ -1,0 +1,4696 @@
+{
+  "contract": "40038",
+  "tool": "slither",
+  "start": 1609165590.796027,
+  "end": 1609165592.7364,
+  "duration": 1.9403729438781738,
+  "analysis": [
+    {
+      "check": "reentrancy-eth",
+      "impact": "High",
+      "confidence": "Medium",
+      "description": "Reentrancy in Wallet.confirm (/../data/reentrancy/solidity_contract/40038.sol#637-644):\n\tExternal calls:\n\t- ! m_txs[_h].to.call.value(m_txs[_h].value)(m_txs[_h].data) (/../data/reentrancy/solidity_contract/40038.sol#639-640)\n\tState variables written after the call(s):\n\t- m_txs (/../data/reentrancy/solidity_contract/40038.sol#641)\n",
+      "elements": [
+        {
+          "type": "function",
+          "name": "confirm",
+          "source_mapping": {
+            "start": 15274,
+            "length": 332,
+            "filename": "/../data/reentrancy/solidity_contract/40038.sol",
+            "lines": [
+              637,
+              638,
+              639,
+              640,
+              641,
+              642,
+              643,
+              644
+            ]
+          },
+          "contract": {
+            "type": "contract",
+            "name": "Wallet",
+            "source_mapping": {
+              "start": 13971,
+              "length": 1907,
+              "filename": "/../data/reentrancy/solidity_contract/40038.sol",
+              "lines": [
+                572,
+                573,
+                574,
+                575,
+                576,
+                577,
+                578,
+                579,
+                580,
+                581,
+                582,
+                583,
+                584,
+                585,
+                586,
+                587,
+                588,
+                589,
+                590,
+                591,
+                592,
+                593,
+                594,
+                595,
+                596,
+                597,
+                598,
+                599,
+                600,
+                601,
+                602,
+                603,
+                604,
+                605,
+                606,
+                607,
+                608,
+                609,
+                610,
+                611,
+                612,
+                613,
+                614,
+                615,
+                616,
+                617,
+                618,
+                619,
+                620,
+                621,
+                622,
+                623,
+                624,
+                625,
+                626,
+                627,
+                628,
+                629,
+                630,
+                631,
+                632,
+                633,
+                634,
+                635,
+                636,
+                637,
+                638,
+                639,
+                640,
+                641,
+                642,
+                643,
+                644,
+                645,
+                646,
+                647,
+                648,
+                649,
+                650,
+                651,
+                652,
+                653,
+                654,
+                655,
+                656,
+                657,
+                658,
+                659
+              ]
+            }
+          }
+        },
+        {
+          "type": "external_calls",
+          "expression": "! m_txs[_h].to.call.value(m_txs[_h].value)(m_txs[_h].data)",
+          "source_mapping": {
+            "start": 15384,
+            "length": 150,
+            "filename": "/../data/reentrancy/solidity_contract/40038.sol",
+            "lines": [
+              639,
+              640
+            ]
+          }
+        },
+        {
+          "type": "variables_written",
+          "name": "m_txs",
+          "expression": "delete m_txs[_h]",
+          "source_mapping": {
+            "start": 15548,
+            "length": 16,
+            "filename": "/../data/reentrancy/solidity_contract/40038.sol",
+            "lines": [
+              641
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "reentrancy-eth",
+      "impact": "High",
+      "confidence": "Medium",
+      "description": "Reentrancy in Wallet.execute (/../data/reentrancy/solidity_contract/40038.sol#612-633):\n\tExternal calls:\n\t- ! _to.call.value(_value)(_data) (/../data/reentrancy/solidity_contract/40038.sol#622-623)\n\t- ! confirm(_r) && m_txs[_r].to == 0 (/../data/reentrancy/solidity_contract/40038.sol#627-632)\n\tState variables written after the call(s):\n\t- m_txs (/../data/reentrancy/solidity_contract/40038.sol#628)\n\t- m_txs (/../data/reentrancy/solidity_contract/40038.sol#629)\n\t- m_txs (/../data/reentrancy/solidity_contract/40038.sol#630)\n",
+      "elements": [
+        {
+          "type": "function",
+          "name": "execute",
+          "source_mapping": {
+            "start": 14594,
+            "length": 662,
+            "filename": "/../data/reentrancy/solidity_contract/40038.sol",
+            "lines": [
+              612,
+              613,
+              614,
+              615,
+              616,
+              617,
+              618,
+              619,
+              620,
+              621,
+              622,
+              623,
+              624,
+              625,
+              626,
+              627,
+              628,
+              629,
+              630,
+              631,
+              632,
+              633
+            ]
+          },
+          "contract": {
+            "type": "contract",
+            "name": "Wallet",
+            "source_mapping": {
+              "start": 13971,
+              "length": 1907,
+              "filename": "/../data/reentrancy/solidity_contract/40038.sol",
+              "lines": [
+                572,
+                573,
+                574,
+                575,
+                576,
+                577,
+                578,
+                579,
+                580,
+                581,
+                582,
+                583,
+                584,
+                585,
+                586,
+                587,
+                588,
+                589,
+                590,
+                591,
+                592,
+                593,
+                594,
+                595,
+                596,
+                597,
+                598,
+                599,
+                600,
+                601,
+                602,
+                603,
+                604,
+                605,
+                606,
+                607,
+                608,
+                609,
+                610,
+                611,
+                612,
+                613,
+                614,
+                615,
+                616,
+                617,
+                618,
+                619,
+                620,
+                621,
+                622,
+                623,
+                624,
+                625,
+                626,
+                627,
+                628,
+                629,
+                630,
+                631,
+                632,
+                633,
+                634,
+                635,
+                636,
+                637,
+                638,
+                639,
+                640,
+                641,
+                642,
+                643,
+                644,
+                645,
+                646,
+                647,
+                648,
+                649,
+                650,
+                651,
+                652,
+                653,
+                654,
+                655,
+                656,
+                657,
+                658,
+                659
+              ]
+            }
+          }
+        },
+        {
+          "type": "external_calls",
+          "expression": "! _to.call.value(_value)(_data)",
+          "source_mapping": {
+            "start": 14898,
+            "length": 55,
+            "filename": "/../data/reentrancy/solidity_contract/40038.sol",
+            "lines": [
+              622,
+              623
+            ]
+          }
+        },
+        {
+          "type": "external_calls",
+          "expression": "! confirm(_r) && m_txs[_r].to == 0",
+          "source_mapping": {
+            "start": 15026,
+            "length": 224,
+            "filename": "/../data/reentrancy/solidity_contract/40038.sol",
+            "lines": [
+              627,
+              628,
+              629,
+              630,
+              631,
+              632
+            ]
+          }
+        },
+        {
+          "type": "variables_written",
+          "name": "m_txs",
+          "expression": "m_txs[_r].value = _value",
+          "source_mapping": {
+            "start": 15111,
+            "length": 24,
+            "filename": "/../data/reentrancy/solidity_contract/40038.sol",
+            "lines": [
+              629
+            ]
+          }
+        },
+        {
+          "type": "variables_written",
+          "name": "m_txs",
+          "expression": "m_txs[_r].data = _data",
+          "source_mapping": {
+            "start": 15149,
+            "length": 22,
+            "filename": "/../data/reentrancy/solidity_contract/40038.sol",
+            "lines": [
+              630
+            ]
+          }
+        },
+        {
+          "type": "variables_written",
+          "name": "m_txs",
+          "expression": "m_txs[_r].to = _to",
+          "source_mapping": {
+            "start": 15079,
+            "length": 18,
+            "filename": "/../data/reentrancy/solidity_contract/40038.sol",
+            "lines": [
+              628
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "reentrancy-benign",
+      "impact": "Low",
+      "confidence": "Medium",
+      "description": "Reentrancy in tokenswap.areConditionsSatisfied (/../data/reentrancy/solidity_contract/40038.sol#520-534):\n\tExternal calls:\n\t- tokenCtr.creationTime() + SWAP_LENGTH < now (/../data/reentrancy/solidity_contract/40038.sol#522-533)\n\t- tokenCtr.disableTokenSwapLock() (/../data/reentrancy/solidity_contract/40038.sol#523)\n\tState variables written after the call(s):\n\t- tokenSwap (/../data/reentrancy/solidity_contract/40038.sol#524)\n",
+      "elements": [
+        {
+          "type": "function",
+          "name": "areConditionsSatisfied",
+          "source_mapping": {
+            "start": 12760,
+            "length": 372,
+            "filename": "/../data/reentrancy/solidity_contract/40038.sol",
+            "lines": [
+              520,
+              521,
+              522,
+              523,
+              524,
+              525,
+              526,
+              527,
+              528,
+              529,
+              530,
+              531,
+              532,
+              533,
+              534
+            ]
+          },
+          "contract": {
+            "type": "contract",
+            "name": "tokenswap",
+            "source_mapping": {
+              "start": 12279,
+              "length": 1684,
+              "filename": "/../data/reentrancy/solidity_contract/40038.sol",
+              "lines": [
+                498,
+                499,
+                500,
+                501,
+                502,
+                503,
+                504,
+                505,
+                506,
+                507,
+                508,
+                509,
+                510,
+                511,
+                512,
+                513,
+                514,
+                515,
+                516,
+                517,
+                518,
+                519,
+                520,
+                521,
+                522,
+                523,
+                524,
+                525,
+                526,
+                527,
+                528,
+                529,
+                530,
+                531,
+                532,
+                533,
+                534,
+                535,
+                536,
+                537,
+                538,
+                539,
+                540,
+                541,
+                542,
+                543,
+                544,
+                545,
+                546,
+                547,
+                548,
+                549,
+                550,
+                551,
+                552,
+                553,
+                554,
+                555,
+                556,
+                557,
+                558,
+                559,
+                560,
+                561,
+                562,
+                563,
+                564,
+                565,
+                566,
+                567
+              ]
+            }
+          }
+        },
+        {
+          "type": "external_calls",
+          "expression": "tokenCtr.creationTime() + SWAP_LENGTH < now",
+          "source_mapping": {
+            "start": 12798,
+            "length": 328,
+            "filename": "/../data/reentrancy/solidity_contract/40038.sol",
+            "lines": [
+              522,
+              523,
+              524,
+              525,
+              526,
+              527,
+              528,
+              529,
+              530,
+              531,
+              532,
+              533
+            ]
+          }
+        },
+        {
+          "type": "external_calls",
+          "expression": "tokenCtr.disableTokenSwapLock()",
+          "source_mapping": {
+            "start": 12861,
+            "length": 31,
+            "filename": "/../data/reentrancy/solidity_contract/40038.sol",
+            "lines": [
+              523
+            ]
+          }
+        },
+        {
+          "type": "variables_written",
+          "name": "tokenSwap",
+          "expression": "tokenSwap = false",
+          "source_mapping": {
+            "start": 12906,
+            "length": 17,
+            "filename": "/../data/reentrancy/solidity_contract/40038.sol",
+            "lines": [
+              524
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "reentrancy-benign",
+      "impact": "Low",
+      "confidence": "Medium",
+      "description": "Reentrancy in tokenswap.areConditionsSatisfied (/../data/reentrancy/solidity_contract/40038.sol#520-534):\n\tExternal calls:\n\t- tokenCtr.disableTokenSwapLock() (/../data/reentrancy/solidity_contract/40038.sol#530)\n\tState variables written after the call(s):\n\t- tokenSwap (/../data/reentrancy/solidity_contract/40038.sol#531)\n",
+      "elements": [
+        {
+          "type": "function",
+          "name": "areConditionsSatisfied",
+          "source_mapping": {
+            "start": 12760,
+            "length": 372,
+            "filename": "/../data/reentrancy/solidity_contract/40038.sol",
+            "lines": [
+              520,
+              521,
+              522,
+              523,
+              524,
+              525,
+              526,
+              527,
+              528,
+              529,
+              530,
+              531,
+              532,
+              533,
+              534
+            ]
+          },
+          "contract": {
+            "type": "contract",
+            "name": "tokenswap",
+            "source_mapping": {
+              "start": 12279,
+              "length": 1684,
+              "filename": "/../data/reentrancy/solidity_contract/40038.sol",
+              "lines": [
+                498,
+                499,
+                500,
+                501,
+                502,
+                503,
+                504,
+                505,
+                506,
+                507,
+                508,
+                509,
+                510,
+                511,
+                512,
+                513,
+                514,
+                515,
+                516,
+                517,
+                518,
+                519,
+                520,
+                521,
+                522,
+                523,
+                524,
+                525,
+                526,
+                527,
+                528,
+                529,
+                530,
+                531,
+                532,
+                533,
+                534,
+                535,
+                536,
+                537,
+                538,
+                539,
+                540,
+                541,
+                542,
+                543,
+                544,
+                545,
+                546,
+                547,
+                548,
+                549,
+                550,
+                551,
+                552,
+                553,
+                554,
+                555,
+                556,
+                557,
+                558,
+                559,
+                560,
+                561,
+                562,
+                563,
+                564,
+                565,
+                566,
+                567
+              ]
+            }
+          }
+        },
+        {
+          "type": "external_calls",
+          "expression": "tokenCtr.disableTokenSwapLock()",
+          "source_mapping": {
+            "start": 13035,
+            "length": 31,
+            "filename": "/../data/reentrancy/solidity_contract/40038.sol",
+            "lines": [
+              530
+            ]
+          }
+        },
+        {
+          "type": "variables_written",
+          "name": "tokenSwap",
+          "expression": "tokenSwap = false",
+          "source_mapping": {
+            "start": 13084,
+            "length": 17,
+            "filename": "/../data/reentrancy/solidity_contract/40038.sol",
+            "lines": [
+              531
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "reentrancy-benign",
+      "impact": "Low",
+      "confidence": "Medium",
+      "description": "Reentrancy in tokenswap.buyTokens (/../data/reentrancy/solidity_contract/40038.sol#556-566):\n\tExternal calls:\n\t- tokenCtr.mintTokens(_beneficiary,msg.value) (/../data/reentrancy/solidity_contract/40038.sol#563)\n\tState variables written after the call(s):\n\t- amountRaised (/../data/reentrancy/solidity_contract/40038.sol#565)\n",
+      "elements": [
+        {
+          "type": "function",
+          "name": "buyTokens",
+          "source_mapping": {
+            "start": 13641,
+            "length": 320,
+            "filename": "/../data/reentrancy/solidity_contract/40038.sol",
+            "lines": [
+              556,
+              557,
+              558,
+              559,
+              560,
+              561,
+              562,
+              563,
+              564,
+              565,
+              566
+            ]
+          },
+          "contract": {
+            "type": "contract",
+            "name": "tokenswap",
+            "source_mapping": {
+              "start": 12279,
+              "length": 1684,
+              "filename": "/../data/reentrancy/solidity_contract/40038.sol",
+              "lines": [
+                498,
+                499,
+                500,
+                501,
+                502,
+                503,
+                504,
+                505,
+                506,
+                507,
+                508,
+                509,
+                510,
+                511,
+                512,
+                513,
+                514,
+                515,
+                516,
+                517,
+                518,
+                519,
+                520,
+                521,
+                522,
+                523,
+                524,
+                525,
+                526,
+                527,
+                528,
+                529,
+                530,
+                531,
+                532,
+                533,
+                534,
+                535,
+                536,
+                537,
+                538,
+                539,
+                540,
+                541,
+                542,
+                543,
+                544,
+                545,
+                546,
+                547,
+                548,
+                549,
+                550,
+                551,
+                552,
+                553,
+                554,
+                555,
+                556,
+                557,
+                558,
+                559,
+                560,
+                561,
+                562,
+                563,
+                564,
+                565,
+                566,
+                567
+              ]
+            }
+          }
+        },
+        {
+          "type": "external_calls",
+          "expression": "tokenCtr.mintTokens(_beneficiary,msg.value)",
+          "source_mapping": {
+            "start": 13819,
+            "length": 44,
+            "filename": "/../data/reentrancy/solidity_contract/40038.sol",
+            "lines": [
+              563
+            ]
+          }
+        },
+        {
+          "type": "variables_written",
+          "name": "amountRaised",
+          "expression": "amountRaised += msg.value",
+          "source_mapping": {
+            "start": 13929,
+            "length": 25,
+            "filename": "/../data/reentrancy/solidity_contract/40038.sol",
+            "lines": [
+              565
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "deprecated-standards",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Deprecated standard detected @ /../data/reentrancy/solidity_contract/40038.sol#19:\n\t- Usage of \"throw\" should be replaced with \"revert()\"\n",
+      "elements": [
+        {
+          "type": "expression",
+          "expression": "None",
+          "source_mapping": {
+            "start": 423,
+            "length": 5,
+            "filename": "/../data/reentrancy/solidity_contract/40038.sol",
+            "lines": [
+              19
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "deprecated-standards",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Deprecated standard detected @ /../data/reentrancy/solidity_contract/40038.sol#40:\n\t- Usage of \"throw\" should be replaced with \"revert()\"\n",
+      "elements": [
+        {
+          "type": "expression",
+          "expression": "None",
+          "source_mapping": {
+            "start": 862,
+            "length": 5,
+            "filename": "/../data/reentrancy/solidity_contract/40038.sol",
+            "lines": [
+              40
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "deprecated-standards",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Deprecated standard detected @ /../data/reentrancy/solidity_contract/40038.sol#120:\n\t- Usage of \"throw\" should be replaced with \"revert()\"\n",
+      "elements": [
+        {
+          "type": "expression",
+          "expression": "None",
+          "source_mapping": {
+            "start": 2943,
+            "length": 5,
+            "filename": "/../data/reentrancy/solidity_contract/40038.sol",
+            "lines": [
+              120
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "deprecated-standards",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Deprecated standard detected @ /../data/reentrancy/solidity_contract/40038.sol#123:\n\t- Usage of \"throw\" should be replaced with \"revert()\"\n",
+      "elements": [
+        {
+          "type": "expression",
+          "expression": "None",
+          "source_mapping": {
+            "start": 3009,
+            "length": 5,
+            "filename": "/../data/reentrancy/solidity_contract/40038.sol",
+            "lines": [
+              123
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "deprecated-standards",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Deprecated standard detected @ /../data/reentrancy/solidity_contract/40038.sol#135:\n\t- Usage of \"throw\" should be replaced with \"revert()\"\n",
+      "elements": [
+        {
+          "type": "expression",
+          "expression": "None",
+          "source_mapping": {
+            "start": 3316,
+            "length": 5,
+            "filename": "/../data/reentrancy/solidity_contract/40038.sol",
+            "lines": [
+              135
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "deprecated-standards",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Deprecated standard detected @ /../data/reentrancy/solidity_contract/40038.sol#139:\n\t- Usage of \"throw\" should be replaced with \"revert()\"\n",
+      "elements": [
+        {
+          "type": "expression",
+          "expression": "None",
+          "source_mapping": {
+            "start": 3392,
+            "length": 5,
+            "filename": "/../data/reentrancy/solidity_contract/40038.sol",
+            "lines": [
+              139
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "deprecated-standards",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Deprecated standard detected @ /../data/reentrancy/solidity_contract/40038.sol#142:\n\t- Usage of \"throw\" should be replaced with \"revert()\"\n",
+      "elements": [
+        {
+          "type": "expression",
+          "expression": "None",
+          "source_mapping": {
+            "start": 3458,
+            "length": 5,
+            "filename": "/../data/reentrancy/solidity_contract/40038.sol",
+            "lines": [
+              142
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "deprecated-standards",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Deprecated standard detected @ /../data/reentrancy/solidity_contract/40038.sol#182:\n\t- Usage of \"throw\" should be replaced with \"revert()\"\n",
+      "elements": [
+        {
+          "type": "expression",
+          "expression": "None",
+          "source_mapping": {
+            "start": 4413,
+            "length": 5,
+            "filename": "/../data/reentrancy/solidity_contract/40038.sol",
+            "lines": [
+              182
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "deprecated-standards",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Deprecated standard detected @ /../data/reentrancy/solidity_contract/40038.sol#183:\n\t- Usage of \"throw\" should be replaced with \"revert()\"\n",
+      "elements": [
+        {
+          "type": "expression",
+          "expression": "None",
+          "source_mapping": {
+            "start": 4465,
+            "length": 5,
+            "filename": "/../data/reentrancy/solidity_contract/40038.sol",
+            "lines": [
+              183
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "deprecated-standards",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Deprecated standard detected @ /../data/reentrancy/solidity_contract/40038.sol#89:\n\t- Usage of \"throw\" should be replaced with \"revert()\"\n",
+      "elements": [
+        {
+          "type": "expression",
+          "expression": "None",
+          "source_mapping": {
+            "start": 2171,
+            "length": 5,
+            "filename": "/../data/reentrancy/solidity_contract/40038.sol",
+            "lines": [
+              89
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "deprecated-standards",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Deprecated standard detected @ /../data/reentrancy/solidity_contract/40038.sol#549:\n\t- Usage of \"throw\" should be replaced with \"revert()\"\n",
+      "elements": [
+        {
+          "type": "expression",
+          "expression": "None",
+          "source_mapping": {
+            "start": 13519,
+            "length": 5,
+            "filename": "/../data/reentrancy/solidity_contract/40038.sol",
+            "lines": [
+              549
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "deprecated-standards",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Deprecated standard detected @ /../data/reentrancy/solidity_contract/40038.sol#551:\n\t- Usage of \"throw\" should be replaced with \"revert()\"\n",
+      "elements": [
+        {
+          "type": "expression",
+          "expression": "None",
+          "source_mapping": {
+            "start": 13574,
+            "length": 5,
+            "filename": "/../data/reentrancy/solidity_contract/40038.sol",
+            "lines": [
+              551
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "deprecated-standards",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Deprecated standard detected @ /../data/reentrancy/solidity_contract/40038.sol#564:\n\t- Usage of \"throw\" should be replaced with \"revert()\"\n",
+      "elements": [
+        {
+          "type": "expression",
+          "expression": "None",
+          "source_mapping": {
+            "start": 13914,
+            "length": 5,
+            "filename": "/../data/reentrancy/solidity_contract/40038.sol",
+            "lines": [
+              564
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "deprecated-standards",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Deprecated standard detected @ /../data/reentrancy/solidity_contract/40038.sol#506:\n\t- Usage of \"throw\" should be replaced with \"revert()\"\n",
+      "elements": [
+        {
+          "type": "expression",
+          "expression": "None",
+          "source_mapping": {
+            "start": 12562,
+            "length": 5,
+            "filename": "/../data/reentrancy/solidity_contract/40038.sol",
+            "lines": [
+              506
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "deprecated-standards",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Deprecated standard detected @ /../data/reentrancy/solidity_contract/40038.sol#511:\n\t- Usage of \"throw\" should be replaced with \"revert()\"\n",
+      "elements": [
+        {
+          "type": "expression",
+          "expression": "None",
+          "source_mapping": {
+            "start": 12653,
+            "length": 5,
+            "filename": "/../data/reentrancy/solidity_contract/40038.sol",
+            "lines": [
+              511
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "deprecated-standards",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Deprecated standard detected @ /../data/reentrancy/solidity_contract/40038.sol#516:\n\t- Usage of \"throw\" should be replaced with \"revert()\"\n",
+      "elements": [
+        {
+          "type": "expression",
+          "expression": "None",
+          "source_mapping": {
+            "start": 12731,
+            "length": 5,
+            "filename": "/../data/reentrancy/solidity_contract/40038.sol",
+            "lines": [
+              516
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "deprecated-standards",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Deprecated standard detected @ /../data/reentrancy/solidity_contract/40038.sol#616:\n\t- Usage of \"throw\" should be replaced with \"revert()\"\n",
+      "elements": [
+        {
+          "type": "expression",
+          "expression": "None",
+          "source_mapping": {
+            "start": 14760,
+            "length": 5,
+            "filename": "/../data/reentrancy/solidity_contract/40038.sol",
+            "lines": [
+              616
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "deprecated-standards",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Deprecated standard detected @ /../data/reentrancy/solidity_contract/40038.sol#626:\n\t- Usage of \"sha3()\" should be replaced with \"keccak256()\"\n",
+      "elements": [
+        {
+          "type": "expression",
+          "expression": "_r = sha3()(msg.data,block.number)",
+          "source_mapping": {
+            "start": 14983,
+            "length": 33,
+            "filename": "/../data/reentrancy/solidity_contract/40038.sol",
+            "lines": [
+              626
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "deprecated-standards",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Deprecated standard detected @ /../data/reentrancy/solidity_contract/40038.sol#597:\n\t- Usage of \"throw\" should be replaced with \"revert()\"\n",
+      "elements": [
+        {
+          "type": "expression",
+          "expression": "None",
+          "source_mapping": {
+            "start": 14456,
+            "length": 5,
+            "filename": "/../data/reentrancy/solidity_contract/40038.sol",
+            "lines": [
+              597
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "deprecated-standards",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Deprecated standard detected @ /../data/reentrancy/solidity_contract/40038.sol#599:\n\t- Usage of \"suicide()\" should be replaced with \"selfdestruct()\"\n",
+      "elements": [
+        {
+          "type": "expression",
+          "expression": "suicide(address)(_to)",
+          "source_mapping": {
+            "start": 14472,
+            "length": 12,
+            "filename": "/../data/reentrancy/solidity_contract/40038.sol",
+            "lines": [
+              599
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "external-function",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Token.totalSupply (/../data/reentrancy/solidity_contract/40038.sol#99-101) should be declared external\n",
+      "elements": [
+        {
+          "type": "function",
+          "name": "totalSupply",
+          "source_mapping": {
+            "start": 2361,
+            "length": 79,
+            "filename": "/../data/reentrancy/solidity_contract/40038.sol",
+            "lines": [
+              99,
+              100,
+              101
+            ]
+          },
+          "contract": {
+            "type": "contract",
+            "name": "Token",
+            "source_mapping": {
+              "start": 1825,
+              "length": 2916,
+              "filename": "/../data/reentrancy/solidity_contract/40038.sol",
+              "lines": [
+                78,
+                79,
+                80,
+                81,
+                82,
+                83,
+                84,
+                85,
+                86,
+                87,
+                88,
+                89,
+                90,
+                91,
+                92,
+                93,
+                94,
+                95,
+                96,
+                97,
+                98,
+                99,
+                100,
+                101,
+                102,
+                103,
+                104,
+                105,
+                106,
+                107,
+                108,
+                109,
+                110,
+                111,
+                112,
+                113,
+                114,
+                115,
+                116,
+                117,
+                118,
+                119,
+                120,
+                121,
+                122,
+                123,
+                124,
+                125,
+                126,
+                127,
+                128,
+                129,
+                130,
+                131,
+                132,
+                133,
+                134,
+                135,
+                136,
+                137,
+                138,
+                139,
+                140,
+                141,
+                142,
+                143,
+                144,
+                145,
+                146,
+                147,
+                148,
+                149,
+                150,
+                151,
+                152,
+                153,
+                154,
+                155,
+                156,
+                157,
+                158,
+                159,
+                160,
+                161,
+                162,
+                163,
+                164,
+                165,
+                166,
+                167,
+                168,
+                169,
+                170,
+                171,
+                172,
+                173,
+                174,
+                175,
+                176,
+                177,
+                178,
+                179,
+                180,
+                181,
+                182,
+                183,
+                184,
+                185,
+                186,
+                187,
+                188,
+                189,
+                190,
+                191,
+                192,
+                193,
+                194,
+                195,
+                196,
+                197
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "check": "external-function",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "ERC20.totalSupply (/../data/reentrancy/solidity_contract/40038.sol#66) should be declared external\n",
+      "elements": [
+        {
+          "type": "function",
+          "name": "totalSupply",
+          "source_mapping": {
+            "start": 1260,
+            "length": 47,
+            "filename": "/../data/reentrancy/solidity_contract/40038.sol",
+            "lines": [
+              66
+            ]
+          },
+          "contract": {
+            "type": "contract",
+            "name": "ERC20",
+            "source_mapping": {
+              "start": 1239,
+              "length": 584,
+              "filename": "/../data/reentrancy/solidity_contract/40038.sol",
+              "lines": [
+                65,
+                66,
+                67,
+                68,
+                69,
+                70,
+                71,
+                72,
+                73,
+                74,
+                75,
+                76
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "check": "external-function",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "ERC20.balanceOf (/../data/reentrancy/solidity_contract/40038.sol#67) should be declared external\n",
+      "elements": [
+        {
+          "type": "function",
+          "name": "balanceOf",
+          "source_mapping": {
+            "start": 1312,
+            "length": 56,
+            "filename": "/../data/reentrancy/solidity_contract/40038.sol",
+            "lines": [
+              67
+            ]
+          },
+          "contract": {
+            "type": "contract",
+            "name": "ERC20",
+            "source_mapping": {
+              "start": 1239,
+              "length": 584,
+              "filename": "/../data/reentrancy/solidity_contract/40038.sol",
+              "lines": [
+                65,
+                66,
+                67,
+                68,
+                69,
+                70,
+                71,
+                72,
+                73,
+                74,
+                75,
+                76
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "check": "external-function",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Token.balanceOf (/../data/reentrancy/solidity_contract/40038.sol#103-105) should be declared external\n",
+      "elements": [
+        {
+          "type": "function",
+          "name": "balanceOf",
+          "source_mapping": {
+            "start": 2444,
+            "length": 96,
+            "filename": "/../data/reentrancy/solidity_contract/40038.sol",
+            "lines": [
+              103,
+              104,
+              105
+            ]
+          },
+          "contract": {
+            "type": "contract",
+            "name": "Token",
+            "source_mapping": {
+              "start": 1825,
+              "length": 2916,
+              "filename": "/../data/reentrancy/solidity_contract/40038.sol",
+              "lines": [
+                78,
+                79,
+                80,
+                81,
+                82,
+                83,
+                84,
+                85,
+                86,
+                87,
+                88,
+                89,
+                90,
+                91,
+                92,
+                93,
+                94,
+                95,
+                96,
+                97,
+                98,
+                99,
+                100,
+                101,
+                102,
+                103,
+                104,
+                105,
+                106,
+                107,
+                108,
+                109,
+                110,
+                111,
+                112,
+                113,
+                114,
+                115,
+                116,
+                117,
+                118,
+                119,
+                120,
+                121,
+                122,
+                123,
+                124,
+                125,
+                126,
+                127,
+                128,
+                129,
+                130,
+                131,
+                132,
+                133,
+                134,
+                135,
+                136,
+                137,
+                138,
+                139,
+                140,
+                141,
+                142,
+                143,
+                144,
+                145,
+                146,
+                147,
+                148,
+                149,
+                150,
+                151,
+                152,
+                153,
+                154,
+                155,
+                156,
+                157,
+                158,
+                159,
+                160,
+                161,
+                162,
+                163,
+                164,
+                165,
+                166,
+                167,
+                168,
+                169,
+                170,
+                171,
+                172,
+                173,
+                174,
+                175,
+                176,
+                177,
+                178,
+                179,
+                180,
+                181,
+                182,
+                183,
+                184,
+                185,
+                186,
+                187,
+                188,
+                189,
+                190,
+                191,
+                192,
+                193,
+                194,
+                195,
+                196,
+                197
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "check": "external-function",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Token.allowance (/../data/reentrancy/solidity_contract/40038.sol#107-109) should be declared external\n",
+      "elements": [
+        {
+          "type": "function",
+          "name": "allowance",
+          "source_mapping": {
+            "start": 2544,
+            "length": 130,
+            "filename": "/../data/reentrancy/solidity_contract/40038.sol",
+            "lines": [
+              107,
+              108,
+              109
+            ]
+          },
+          "contract": {
+            "type": "contract",
+            "name": "Token",
+            "source_mapping": {
+              "start": 1825,
+              "length": 2916,
+              "filename": "/../data/reentrancy/solidity_contract/40038.sol",
+              "lines": [
+                78,
+                79,
+                80,
+                81,
+                82,
+                83,
+                84,
+                85,
+                86,
+                87,
+                88,
+                89,
+                90,
+                91,
+                92,
+                93,
+                94,
+                95,
+                96,
+                97,
+                98,
+                99,
+                100,
+                101,
+                102,
+                103,
+                104,
+                105,
+                106,
+                107,
+                108,
+                109,
+                110,
+                111,
+                112,
+                113,
+                114,
+                115,
+                116,
+                117,
+                118,
+                119,
+                120,
+                121,
+                122,
+                123,
+                124,
+                125,
+                126,
+                127,
+                128,
+                129,
+                130,
+                131,
+                132,
+                133,
+                134,
+                135,
+                136,
+                137,
+                138,
+                139,
+                140,
+                141,
+                142,
+                143,
+                144,
+                145,
+                146,
+                147,
+                148,
+                149,
+                150,
+                151,
+                152,
+                153,
+                154,
+                155,
+                156,
+                157,
+                158,
+                159,
+                160,
+                161,
+                162,
+                163,
+                164,
+                165,
+                166,
+                167,
+                168,
+                169,
+                170,
+                171,
+                172,
+                173,
+                174,
+                175,
+                176,
+                177,
+                178,
+                179,
+                180,
+                181,
+                182,
+                183,
+                184,
+                185,
+                186,
+                187,
+                188,
+                189,
+                190,
+                191,
+                192,
+                193,
+                194,
+                195,
+                196,
+                197
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "check": "external-function",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "ERC20.allowance (/../data/reentrancy/solidity_contract/40038.sol#68) should be declared external\n",
+      "elements": [
+        {
+          "type": "function",
+          "name": "allowance",
+          "source_mapping": {
+            "start": 1373,
+            "length": 75,
+            "filename": "/../data/reentrancy/solidity_contract/40038.sol",
+            "lines": [
+              68
+            ]
+          },
+          "contract": {
+            "type": "contract",
+            "name": "ERC20",
+            "source_mapping": {
+              "start": 1239,
+              "length": 584,
+              "filename": "/../data/reentrancy/solidity_contract/40038.sol",
+              "lines": [
+                65,
+                66,
+                67,
+                68,
+                69,
+                70,
+                71,
+                72,
+                73,
+                74,
+                75,
+                76
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "check": "external-function",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Token.transfer (/../data/reentrancy/solidity_contract/40038.sol#116-130) should be declared external\n",
+      "elements": [
+        {
+          "type": "function",
+          "name": "transfer",
+          "source_mapping": {
+            "start": 2789,
+            "length": 357,
+            "filename": "/../data/reentrancy/solidity_contract/40038.sol",
+            "lines": [
+              116,
+              117,
+              118,
+              119,
+              120,
+              121,
+              122,
+              123,
+              124,
+              125,
+              126,
+              127,
+              128,
+              129,
+              130
+            ]
+          },
+          "contract": {
+            "type": "contract",
+            "name": "Token",
+            "source_mapping": {
+              "start": 1825,
+              "length": 2916,
+              "filename": "/../data/reentrancy/solidity_contract/40038.sol",
+              "lines": [
+                78,
+                79,
+                80,
+                81,
+                82,
+                83,
+                84,
+                85,
+                86,
+                87,
+                88,
+                89,
+                90,
+                91,
+                92,
+                93,
+                94,
+                95,
+                96,
+                97,
+                98,
+                99,
+                100,
+                101,
+                102,
+                103,
+                104,
+                105,
+                106,
+                107,
+                108,
+                109,
+                110,
+                111,
+                112,
+                113,
+                114,
+                115,
+                116,
+                117,
+                118,
+                119,
+                120,
+                121,
+                122,
+                123,
+                124,
+                125,
+                126,
+                127,
+                128,
+                129,
+                130,
+                131,
+                132,
+                133,
+                134,
+                135,
+                136,
+                137,
+                138,
+                139,
+                140,
+                141,
+                142,
+                143,
+                144,
+                145,
+                146,
+                147,
+                148,
+                149,
+                150,
+                151,
+                152,
+                153,
+                154,
+                155,
+                156,
+                157,
+                158,
+                159,
+                160,
+                161,
+                162,
+                163,
+                164,
+                165,
+                166,
+                167,
+                168,
+                169,
+                170,
+                171,
+                172,
+                173,
+                174,
+                175,
+                176,
+                177,
+                178,
+                179,
+                180,
+                181,
+                182,
+                183,
+                184,
+                185,
+                186,
+                187,
+                188,
+                189,
+                190,
+                191,
+                192,
+                193,
+                194,
+                195,
+                196,
+                197
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "check": "external-function",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "ERC20.transfer (/../data/reentrancy/solidity_contract/40038.sol#70) should be declared external\n",
+      "elements": [
+        {
+          "type": "function",
+          "name": "transfer",
+          "source_mapping": {
+            "start": 1454,
+            "length": 60,
+            "filename": "/../data/reentrancy/solidity_contract/40038.sol",
+            "lines": [
+              70
+            ]
+          },
+          "contract": {
+            "type": "contract",
+            "name": "ERC20",
+            "source_mapping": {
+              "start": 1239,
+              "length": 584,
+              "filename": "/../data/reentrancy/solidity_contract/40038.sol",
+              "lines": [
+                65,
+                66,
+                67,
+                68,
+                69,
+                70,
+                71,
+                72,
+                73,
+                74,
+                75,
+                76
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "check": "external-function",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "ERC20.transferFrom (/../data/reentrancy/solidity_contract/40038.sol#71) should be declared external\n",
+      "elements": [
+        {
+          "type": "function",
+          "name": "transferFrom",
+          "source_mapping": {
+            "start": 1519,
+            "length": 78,
+            "filename": "/../data/reentrancy/solidity_contract/40038.sol",
+            "lines": [
+              71
+            ]
+          },
+          "contract": {
+            "type": "contract",
+            "name": "ERC20",
+            "source_mapping": {
+              "start": 1239,
+              "length": 584,
+              "filename": "/../data/reentrancy/solidity_contract/40038.sol",
+              "lines": [
+                65,
+                66,
+                67,
+                68,
+                69,
+                70,
+                71,
+                72,
+                73,
+                74,
+                75,
+                76
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "check": "external-function",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Token.transferFrom (/../data/reentrancy/solidity_contract/40038.sol#132-150) should be declared external\n",
+      "elements": [
+        {
+          "type": "function",
+          "name": "transferFrom",
+          "source_mapping": {
+            "start": 3150,
+            "length": 481,
+            "filename": "/../data/reentrancy/solidity_contract/40038.sol",
+            "lines": [
+              132,
+              133,
+              134,
+              135,
+              136,
+              137,
+              138,
+              139,
+              140,
+              141,
+              142,
+              143,
+              144,
+              145,
+              146,
+              147,
+              148,
+              149,
+              150
+            ]
+          },
+          "contract": {
+            "type": "contract",
+            "name": "Token",
+            "source_mapping": {
+              "start": 1825,
+              "length": 2916,
+              "filename": "/../data/reentrancy/solidity_contract/40038.sol",
+              "lines": [
+                78,
+                79,
+                80,
+                81,
+                82,
+                83,
+                84,
+                85,
+                86,
+                87,
+                88,
+                89,
+                90,
+                91,
+                92,
+                93,
+                94,
+                95,
+                96,
+                97,
+                98,
+                99,
+                100,
+                101,
+                102,
+                103,
+                104,
+                105,
+                106,
+                107,
+                108,
+                109,
+                110,
+                111,
+                112,
+                113,
+                114,
+                115,
+                116,
+                117,
+                118,
+                119,
+                120,
+                121,
+                122,
+                123,
+                124,
+                125,
+                126,
+                127,
+                128,
+                129,
+                130,
+                131,
+                132,
+                133,
+                134,
+                135,
+                136,
+                137,
+                138,
+                139,
+                140,
+                141,
+                142,
+                143,
+                144,
+                145,
+                146,
+                147,
+                148,
+                149,
+                150,
+                151,
+                152,
+                153,
+                154,
+                155,
+                156,
+                157,
+                158,
+                159,
+                160,
+                161,
+                162,
+                163,
+                164,
+                165,
+                166,
+                167,
+                168,
+                169,
+                170,
+                171,
+                172,
+                173,
+                174,
+                175,
+                176,
+                177,
+                178,
+                179,
+                180,
+                181,
+                182,
+                183,
+                184,
+                185,
+                186,
+                187,
+                188,
+                189,
+                190,
+                191,
+                192,
+                193,
+                194,
+                195,
+                196,
+                197
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "check": "external-function",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "ERC20.approve (/../data/reentrancy/solidity_contract/40038.sol#72) should be declared external\n",
+      "elements": [
+        {
+          "type": "function",
+          "name": "approve",
+          "source_mapping": {
+            "start": 1602,
+            "length": 64,
+            "filename": "/../data/reentrancy/solidity_contract/40038.sol",
+            "lines": [
+              72
+            ]
+          },
+          "contract": {
+            "type": "contract",
+            "name": "ERC20",
+            "source_mapping": {
+              "start": 1239,
+              "length": 584,
+              "filename": "/../data/reentrancy/solidity_contract/40038.sol",
+              "lines": [
+                65,
+                66,
+                67,
+                68,
+                69,
+                70,
+                71,
+                72,
+                73,
+                74,
+                75,
+                76
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "check": "external-function",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Token.approve (/../data/reentrancy/solidity_contract/40038.sol#152-156) should be declared external\n",
+      "elements": [
+        {
+          "type": "function",
+          "name": "approve",
+          "source_mapping": {
+            "start": 3635,
+            "length": 210,
+            "filename": "/../data/reentrancy/solidity_contract/40038.sol",
+            "lines": [
+              152,
+              153,
+              154,
+              155,
+              156
+            ]
+          },
+          "contract": {
+            "type": "contract",
+            "name": "Token",
+            "source_mapping": {
+              "start": 1825,
+              "length": 2916,
+              "filename": "/../data/reentrancy/solidity_contract/40038.sol",
+              "lines": [
+                78,
+                79,
+                80,
+                81,
+                82,
+                83,
+                84,
+                85,
+                86,
+                87,
+                88,
+                89,
+                90,
+                91,
+                92,
+                93,
+                94,
+                95,
+                96,
+                97,
+                98,
+                99,
+                100,
+                101,
+                102,
+                103,
+                104,
+                105,
+                106,
+                107,
+                108,
+                109,
+                110,
+                111,
+                112,
+                113,
+                114,
+                115,
+                116,
+                117,
+                118,
+                119,
+                120,
+                121,
+                122,
+                123,
+                124,
+                125,
+                126,
+                127,
+                128,
+                129,
+                130,
+                131,
+                132,
+                133,
+                134,
+                135,
+                136,
+                137,
+                138,
+                139,
+                140,
+                141,
+                142,
+                143,
+                144,
+                145,
+                146,
+                147,
+                148,
+                149,
+                150,
+                151,
+                152,
+                153,
+                154,
+                155,
+                156,
+                157,
+                158,
+                159,
+                160,
+                161,
+                162,
+                163,
+                164,
+                165,
+                166,
+                167,
+                168,
+                169,
+                170,
+                171,
+                172,
+                173,
+                174,
+                175,
+                176,
+                177,
+                178,
+                179,
+                180,
+                181,
+                182,
+                183,
+                184,
+                185,
+                186,
+                187,
+                188,
+                189,
+                190,
+                191,
+                192,
+                193,
+                194,
+                195,
+                196,
+                197
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "check": "external-function",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "multiowned.hasConfirmed (/../data/reentrancy/solidity_contract/40038.sol#327-337) should be declared external\n",
+      "elements": [
+        {
+          "type": "function",
+          "name": "hasConfirmed",
+          "source_mapping": {
+            "start": 8052,
+            "length": 356,
+            "filename": "/../data/reentrancy/solidity_contract/40038.sol",
+            "lines": [
+              327,
+              328,
+              329,
+              330,
+              331,
+              332,
+              333,
+              334,
+              335,
+              336,
+              337
+            ]
+          },
+          "contract": {
+            "type": "contract",
+            "name": "multiowned",
+            "source_mapping": {
+              "start": 4771,
+              "length": 5806,
+              "filename": "/../data/reentrancy/solidity_contract/40038.sol",
+              "lines": [
+                203,
+                204,
+                205,
+                206,
+                207,
+                208,
+                209,
+                210,
+                211,
+                212,
+                213,
+                214,
+                215,
+                216,
+                217,
+                218,
+                219,
+                220,
+                221,
+                222,
+                223,
+                224,
+                225,
+                226,
+                227,
+                228,
+                229,
+                230,
+                231,
+                232,
+                233,
+                234,
+                235,
+                236,
+                237,
+                238,
+                239,
+                240,
+                241,
+                242,
+                243,
+                244,
+                245,
+                246,
+                247,
+                248,
+                249,
+                250,
+                251,
+                252,
+                253,
+                254,
+                255,
+                256,
+                257,
+                258,
+                259,
+                260,
+                261,
+                262,
+                263,
+                264,
+                265,
+                266,
+                267,
+                268,
+                269,
+                270,
+                271,
+                272,
+                273,
+                274,
+                275,
+                276,
+                277,
+                278,
+                279,
+                280,
+                281,
+                282,
+                283,
+                284,
+                285,
+                286,
+                287,
+                288,
+                289,
+                290,
+                291,
+                292,
+                293,
+                294,
+                295,
+                296,
+                297,
+                298,
+                299,
+                300,
+                301,
+                302,
+                303,
+                304,
+                305,
+                306,
+                307,
+                308,
+                309,
+                310,
+                311,
+                312,
+                313,
+                314,
+                315,
+                316,
+                317,
+                318,
+                319,
+                320,
+                321,
+                322,
+                323,
+                324,
+                325,
+                326,
+                327,
+                328,
+                329,
+                330,
+                331,
+                332,
+                333,
+                334,
+                335,
+                336,
+                337,
+                338,
+                339,
+                340,
+                341,
+                342,
+                343,
+                344,
+                345,
+                346,
+                347,
+                348,
+                349,
+                350,
+                351,
+                352,
+                353,
+                354,
+                355,
+                356,
+                357,
+                358,
+                359,
+                360,
+                361,
+                362,
+                363,
+                364,
+                365,
+                366,
+                367,
+                368,
+                369,
+                370,
+                371,
+                372,
+                373,
+                374,
+                375,
+                376,
+                377,
+                378,
+                379,
+                380,
+                381,
+                382,
+                383,
+                384,
+                385,
+                386,
+                387,
+                388,
+                389,
+                390,
+                391,
+                392,
+                393,
+                394,
+                395,
+                396,
+                397,
+                398,
+                399,
+                400,
+                401,
+                402,
+                403,
+                404,
+                405,
+                406,
+                407,
+                408,
+                409,
+                410,
+                411,
+                412,
+                413,
+                414,
+                415,
+                416
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "check": "external-function",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "tokenswap.startTokenSwap (/../data/reentrancy/solidity_contract/40038.sol#540-542) should be declared external\n",
+      "elements": [
+        {
+          "type": "function",
+          "name": "startTokenSwap",
+          "source_mapping": {
+            "start": 13251,
+            "length": 69,
+            "filename": "/../data/reentrancy/solidity_contract/40038.sol",
+            "lines": [
+              540,
+              541,
+              542
+            ]
+          },
+          "contract": {
+            "type": "contract",
+            "name": "tokenswap",
+            "source_mapping": {
+              "start": 12279,
+              "length": 1684,
+              "filename": "/../data/reentrancy/solidity_contract/40038.sol",
+              "lines": [
+                498,
+                499,
+                500,
+                501,
+                502,
+                503,
+                504,
+                505,
+                506,
+                507,
+                508,
+                509,
+                510,
+                511,
+                512,
+                513,
+                514,
+                515,
+                516,
+                517,
+                518,
+                519,
+                520,
+                521,
+                522,
+                523,
+                524,
+                525,
+                526,
+                527,
+                528,
+                529,
+                530,
+                531,
+                532,
+                533,
+                534,
+                535,
+                536,
+                537,
+                538,
+                539,
+                540,
+                541,
+                542,
+                543,
+                544,
+                545,
+                546,
+                547,
+                548,
+                549,
+                550,
+                551,
+                552,
+                553,
+                554,
+                555,
+                556,
+                557,
+                558,
+                559,
+                560,
+                561,
+                562,
+                563,
+                564,
+                565,
+                566,
+                567
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "check": "external-function",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "tokenswap.stopTokenSwap (/../data/reentrancy/solidity_contract/40038.sol#544-546) should be declared external\n",
+      "elements": [
+        {
+          "type": "function",
+          "name": "stopTokenSwap",
+          "source_mapping": {
+            "start": 13326,
+            "length": 69,
+            "filename": "/../data/reentrancy/solidity_contract/40038.sol",
+            "lines": [
+              544,
+              545,
+              546
+            ]
+          },
+          "contract": {
+            "type": "contract",
+            "name": "tokenswap",
+            "source_mapping": {
+              "start": 12279,
+              "length": 1684,
+              "filename": "/../data/reentrancy/solidity_contract/40038.sol",
+              "lines": [
+                498,
+                499,
+                500,
+                501,
+                502,
+                503,
+                504,
+                505,
+                506,
+                507,
+                508,
+                509,
+                510,
+                511,
+                512,
+                513,
+                514,
+                515,
+                516,
+                517,
+                518,
+                519,
+                520,
+                521,
+                522,
+                523,
+                524,
+                525,
+                526,
+                527,
+                528,
+                529,
+                530,
+                531,
+                532,
+                533,
+                534,
+                535,
+                536,
+                537,
+                538,
+                539,
+                540,
+                541,
+                542,
+                543,
+                544,
+                545,
+                546,
+                547,
+                548,
+                549,
+                550,
+                551,
+                552,
+                553,
+                554,
+                555,
+                556,
+                557,
+                558,
+                559,
+                560,
+                561,
+                562,
+                563,
+                564,
+                565,
+                566,
+                567
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "check": "external-function",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "tokenswap.setTokenContract (/../data/reentrancy/solidity_contract/40038.sol#548-554) should be declared external\n",
+      "elements": [
+        {
+          "type": "function",
+          "name": "setTokenContract",
+          "source_mapping": {
+            "start": 13401,
+            "length": 234,
+            "filename": "/../data/reentrancy/solidity_contract/40038.sol",
+            "lines": [
+              548,
+              549,
+              550,
+              551,
+              552,
+              553,
+              554
+            ]
+          },
+          "contract": {
+            "type": "contract",
+            "name": "tokenswap",
+            "source_mapping": {
+              "start": 12279,
+              "length": 1684,
+              "filename": "/../data/reentrancy/solidity_contract/40038.sol",
+              "lines": [
+                498,
+                499,
+                500,
+                501,
+                502,
+                503,
+                504,
+                505,
+                506,
+                507,
+                508,
+                509,
+                510,
+                511,
+                512,
+                513,
+                514,
+                515,
+                516,
+                517,
+                518,
+                519,
+                520,
+                521,
+                522,
+                523,
+                524,
+                525,
+                526,
+                527,
+                528,
+                529,
+                530,
+                531,
+                532,
+                533,
+                534,
+                535,
+                536,
+                537,
+                538,
+                539,
+                540,
+                541,
+                542,
+                543,
+                544,
+                545,
+                546,
+                547,
+                548,
+                549,
+                550,
+                551,
+                552,
+                553,
+                554,
+                555,
+                556,
+                557,
+                558,
+                559,
+                560,
+                561,
+                562,
+                563,
+                564,
+                565,
+                566,
+                567
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "check": "external-function",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Wallet.fallback (/../data/reentrancy/solidity_contract/40038.sol#603-606) should be declared external\n",
+      "elements": [
+        {
+          "type": "function",
+          "name": "fallback",
+          "source_mapping": {
+            "start": 14503,
+            "length": 61,
+            "filename": "/../data/reentrancy/solidity_contract/40038.sol",
+            "lines": [
+              603,
+              604,
+              605,
+              606
+            ]
+          },
+          "contract": {
+            "type": "contract",
+            "name": "Wallet",
+            "source_mapping": {
+              "start": 13971,
+              "length": 1907,
+              "filename": "/../data/reentrancy/solidity_contract/40038.sol",
+              "lines": [
+                572,
+                573,
+                574,
+                575,
+                576,
+                577,
+                578,
+                579,
+                580,
+                581,
+                582,
+                583,
+                584,
+                585,
+                586,
+                587,
+                588,
+                589,
+                590,
+                591,
+                592,
+                593,
+                594,
+                595,
+                596,
+                597,
+                598,
+                599,
+                600,
+                601,
+                602,
+                603,
+                604,
+                605,
+                606,
+                607,
+                608,
+                609,
+                610,
+                611,
+                612,
+                613,
+                614,
+                615,
+                616,
+                617,
+                618,
+                619,
+                620,
+                621,
+                622,
+                623,
+                624,
+                625,
+                626,
+                627,
+                628,
+                629,
+                630,
+                631,
+                632,
+                633,
+                634,
+                635,
+                636,
+                637,
+                638,
+                639,
+                640,
+                641,
+                642,
+                643,
+                644,
+                645,
+                646,
+                647,
+                648,
+                649,
+                650,
+                651,
+                652,
+                653,
+                654,
+                655,
+                656,
+                657,
+                658,
+                659
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "check": "solc-version",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Detected issues with version pragma in /../data/reentrancy/solidity_contract/40038.sol:\n\t- pragma solidity^0.4.0 (/../data/reentrancy/solidity_contract/40038.sol#1): it allows old versions\n\t- pragma solidity^0.4.0 (/../data/reentrancy/solidity_contract/40038.sol#199): it allows old versions\n",
+      "elements": [
+        {
+          "type": "expression",
+          "expression": "^0.4.0",
+          "source_mapping": {
+            "start": 0,
+            "length": 23,
+            "filename": "/../data/reentrancy/solidity_contract/40038.sol",
+            "lines": [
+              1
+            ]
+          }
+        },
+        {
+          "type": "expression",
+          "expression": "^0.4.0",
+          "source_mapping": {
+            "start": 4743,
+            "length": 23,
+            "filename": "/../data/reentrancy/solidity_contract/40038.sol",
+            "lines": [
+              199
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "low-level-calls",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Low level call in Wallet.execute (/../data/reentrancy/solidity_contract/40038.sol#612-633):\n\t-! _to.call.value(_value)(_data) /../data/reentrancy/solidity_contract/40038.sol#622-623\n",
+      "elements": [
+        {
+          "type": "function",
+          "name": "execute",
+          "source_mapping": {
+            "start": 14594,
+            "length": 662,
+            "filename": "/../data/reentrancy/solidity_contract/40038.sol",
+            "lines": [
+              612,
+              613,
+              614,
+              615,
+              616,
+              617,
+              618,
+              619,
+              620,
+              621,
+              622,
+              623,
+              624,
+              625,
+              626,
+              627,
+              628,
+              629,
+              630,
+              631,
+              632,
+              633
+            ]
+          },
+          "contract": {
+            "type": "contract",
+            "name": "Wallet",
+            "source_mapping": {
+              "start": 13971,
+              "length": 1907,
+              "filename": "/../data/reentrancy/solidity_contract/40038.sol",
+              "lines": [
+                572,
+                573,
+                574,
+                575,
+                576,
+                577,
+                578,
+                579,
+                580,
+                581,
+                582,
+                583,
+                584,
+                585,
+                586,
+                587,
+                588,
+                589,
+                590,
+                591,
+                592,
+                593,
+                594,
+                595,
+                596,
+                597,
+                598,
+                599,
+                600,
+                601,
+                602,
+                603,
+                604,
+                605,
+                606,
+                607,
+                608,
+                609,
+                610,
+                611,
+                612,
+                613,
+                614,
+                615,
+                616,
+                617,
+                618,
+                619,
+                620,
+                621,
+                622,
+                623,
+                624,
+                625,
+                626,
+                627,
+                628,
+                629,
+                630,
+                631,
+                632,
+                633,
+                634,
+                635,
+                636,
+                637,
+                638,
+                639,
+                640,
+                641,
+                642,
+                643,
+                644,
+                645,
+                646,
+                647,
+                648,
+                649,
+                650,
+                651,
+                652,
+                653,
+                654,
+                655,
+                656,
+                657,
+                658,
+                659
+              ]
+            }
+          }
+        },
+        {
+          "type": "expression",
+          "expression": "! _to.call.value(_value)(_data)",
+          "source_mapping": {
+            "start": 14898,
+            "length": 55,
+            "filename": "/../data/reentrancy/solidity_contract/40038.sol",
+            "lines": [
+              622,
+              623
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "low-level-calls",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Low level call in Wallet.confirm (/../data/reentrancy/solidity_contract/40038.sol#637-644):\n\t-! m_txs[_h].to.call.value(m_txs[_h].value)(m_txs[_h].data) /../data/reentrancy/solidity_contract/40038.sol#639-640\n",
+      "elements": [
+        {
+          "type": "function",
+          "name": "confirm",
+          "source_mapping": {
+            "start": 15274,
+            "length": 332,
+            "filename": "/../data/reentrancy/solidity_contract/40038.sol",
+            "lines": [
+              637,
+              638,
+              639,
+              640,
+              641,
+              642,
+              643,
+              644
+            ]
+          },
+          "contract": {
+            "type": "contract",
+            "name": "Wallet",
+            "source_mapping": {
+              "start": 13971,
+              "length": 1907,
+              "filename": "/../data/reentrancy/solidity_contract/40038.sol",
+              "lines": [
+                572,
+                573,
+                574,
+                575,
+                576,
+                577,
+                578,
+                579,
+                580,
+                581,
+                582,
+                583,
+                584,
+                585,
+                586,
+                587,
+                588,
+                589,
+                590,
+                591,
+                592,
+                593,
+                594,
+                595,
+                596,
+                597,
+                598,
+                599,
+                600,
+                601,
+                602,
+                603,
+                604,
+                605,
+                606,
+                607,
+                608,
+                609,
+                610,
+                611,
+                612,
+                613,
+                614,
+                615,
+                616,
+                617,
+                618,
+                619,
+                620,
+                621,
+                622,
+                623,
+                624,
+                625,
+                626,
+                627,
+                628,
+                629,
+                630,
+                631,
+                632,
+                633,
+                634,
+                635,
+                636,
+                637,
+                638,
+                639,
+                640,
+                641,
+                642,
+                643,
+                644,
+                645,
+                646,
+                647,
+                648,
+                649,
+                650,
+                651,
+                652,
+                653,
+                654,
+                655,
+                656,
+                657,
+                658,
+                659
+              ]
+            }
+          }
+        },
+        {
+          "type": "expression",
+          "expression": "! m_txs[_h].to.call.value(m_txs[_h].value)(m_txs[_h].data)",
+          "source_mapping": {
+            "start": 15384,
+            "length": 150,
+            "filename": "/../data/reentrancy/solidity_contract/40038.sol",
+            "lines": [
+              639,
+              640
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "naming-convention",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Function 'Lockable.Lockable' (/../data/reentrancy/solidity_contract/40038.sol#57-61) is not in mixedCase\n",
+      "elements": [
+        {
+          "target": "function",
+          "convention": "mixedCase",
+          "name": "Lockable",
+          "source_mapping": {
+            "start": 1118,
+            "length": 116,
+            "filename": "/../data/reentrancy/solidity_contract/40038.sol",
+            "lines": [
+              57,
+              58,
+              59,
+              60,
+              61
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "naming-convention",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Function 'Token.Token' (/../data/reentrancy/solidity_contract/40038.sol#93-97) is not in mixedCase\n",
+      "elements": [
+        {
+          "target": "function",
+          "convention": "mixedCase",
+          "name": "Token",
+          "source_mapping": {
+            "start": 2194,
+            "length": 163,
+            "filename": "/../data/reentrancy/solidity_contract/40038.sol",
+            "lines": [
+              93,
+              94,
+              95,
+              96,
+              97
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "naming-convention",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Parameter 'initial_balance' of Token.Token (/../data/reentrancy/solidity_contract/40038.sol#93) is not in mixedCase\n",
+      "elements": [
+        {
+          "target": "parameter",
+          "convention": "mixedCase",
+          "name": "initial_balance",
+          "source_mapping": {
+            "start": 2210,
+            "length": 20,
+            "filename": "/../data/reentrancy/solidity_contract/40038.sol",
+            "lines": [
+              93
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "naming-convention",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Variable 'Token._balances' (/../data/reentrancy/solidity_contract/40038.sol#80) is not in mixedCase\n",
+      "elements": [
+        {
+          "target": "variable",
+          "convention": "mixedCase",
+          "name": "_balances",
+          "source_mapping": {
+            "start": 1864,
+            "length": 36,
+            "filename": "/../data/reentrancy/solidity_contract/40038.sol",
+            "lines": [
+              80
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "naming-convention",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Variable 'Token._approvals' (/../data/reentrancy/solidity_contract/40038.sol#81) is not in mixedCase\n",
+      "elements": [
+        {
+          "target": "variable",
+          "convention": "mixedCase",
+          "name": "_approvals",
+          "source_mapping": {
+            "start": 1904,
+            "length": 59,
+            "filename": "/../data/reentrancy/solidity_contract/40038.sol",
+            "lines": [
+              81
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "naming-convention",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Variable 'Token._supply' (/../data/reentrancy/solidity_contract/40038.sol#82) is not in mixedCase\n",
+      "elements": [
+        {
+          "target": "variable",
+          "convention": "mixedCase",
+          "name": "_supply",
+          "source_mapping": {
+            "start": 1967,
+            "length": 12,
+            "filename": "/../data/reentrancy/solidity_contract/40038.sol",
+            "lines": [
+              82
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "naming-convention",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Contract 'multiowned' (/../data/reentrancy/solidity_contract/40038.sol#203-416) is not in CapWords\n",
+      "elements": [
+        {
+          "target": "contract",
+          "convention": "CapWords",
+          "name": "multiowned",
+          "source_mapping": {
+            "start": 4771,
+            "length": 5806,
+            "filename": "/../data/reentrancy/solidity_contract/40038.sol",
+            "lines": [
+              203,
+              204,
+              205,
+              206,
+              207,
+              208,
+              209,
+              210,
+              211,
+              212,
+              213,
+              214,
+              215,
+              216,
+              217,
+              218,
+              219,
+              220,
+              221,
+              222,
+              223,
+              224,
+              225,
+              226,
+              227,
+              228,
+              229,
+              230,
+              231,
+              232,
+              233,
+              234,
+              235,
+              236,
+              237,
+              238,
+              239,
+              240,
+              241,
+              242,
+              243,
+              244,
+              245,
+              246,
+              247,
+              248,
+              249,
+              250,
+              251,
+              252,
+              253,
+              254,
+              255,
+              256,
+              257,
+              258,
+              259,
+              260,
+              261,
+              262,
+              263,
+              264,
+              265,
+              266,
+              267,
+              268,
+              269,
+              270,
+              271,
+              272,
+              273,
+              274,
+              275,
+              276,
+              277,
+              278,
+              279,
+              280,
+              281,
+              282,
+              283,
+              284,
+              285,
+              286,
+              287,
+              288,
+              289,
+              290,
+              291,
+              292,
+              293,
+              294,
+              295,
+              296,
+              297,
+              298,
+              299,
+              300,
+              301,
+              302,
+              303,
+              304,
+              305,
+              306,
+              307,
+              308,
+              309,
+              310,
+              311,
+              312,
+              313,
+              314,
+              315,
+              316,
+              317,
+              318,
+              319,
+              320,
+              321,
+              322,
+              323,
+              324,
+              325,
+              326,
+              327,
+              328,
+              329,
+              330,
+              331,
+              332,
+              333,
+              334,
+              335,
+              336,
+              337,
+              338,
+              339,
+              340,
+              341,
+              342,
+              343,
+              344,
+              345,
+              346,
+              347,
+              348,
+              349,
+              350,
+              351,
+              352,
+              353,
+              354,
+              355,
+              356,
+              357,
+              358,
+              359,
+              360,
+              361,
+              362,
+              363,
+              364,
+              365,
+              366,
+              367,
+              368,
+              369,
+              370,
+              371,
+              372,
+              373,
+              374,
+              375,
+              376,
+              377,
+              378,
+              379,
+              380,
+              381,
+              382,
+              383,
+              384,
+              385,
+              386,
+              387,
+              388,
+              389,
+              390,
+              391,
+              392,
+              393,
+              394,
+              395,
+              396,
+              397,
+              398,
+              399,
+              400,
+              401,
+              402,
+              403,
+              404,
+              405,
+              406,
+              407,
+              408,
+              409,
+              410,
+              411,
+              412,
+              413,
+              414,
+              415,
+              416
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "naming-convention",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Parameter '_owners' of multiowned.multiowned (/../data/reentrancy/solidity_contract/40038.sol#246) is not in mixedCase\n",
+      "elements": [
+        {
+          "target": "parameter",
+          "convention": "mixedCase",
+          "name": "_owners",
+          "source_mapping": {
+            "start": 5498,
+            "length": 17,
+            "filename": "/../data/reentrancy/solidity_contract/40038.sol",
+            "lines": [
+              246
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "naming-convention",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Parameter '_required' of multiowned.multiowned (/../data/reentrancy/solidity_contract/40038.sol#246) is not in mixedCase\n",
+      "elements": [
+        {
+          "target": "parameter",
+          "convention": "mixedCase",
+          "name": "_required",
+          "source_mapping": {
+            "start": 5517,
+            "length": 14,
+            "filename": "/../data/reentrancy/solidity_contract/40038.sol",
+            "lines": [
+              246
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "naming-convention",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Parameter '_operation' of multiowned.revoke (/../data/reentrancy/solidity_contract/40038.sol#259) is not in mixedCase\n",
+      "elements": [
+        {
+          "target": "parameter",
+          "convention": "mixedCase",
+          "name": "_operation",
+          "source_mapping": {
+            "start": 5896,
+            "length": 18,
+            "filename": "/../data/reentrancy/solidity_contract/40038.sol",
+            "lines": [
+              259
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "naming-convention",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Parameter '_from' of multiowned.changeOwner (/../data/reentrancy/solidity_contract/40038.sol#273) is not in mixedCase\n",
+      "elements": [
+        {
+          "target": "parameter",
+          "convention": "mixedCase",
+          "name": "_from",
+          "source_mapping": {
+            "start": 6349,
+            "length": 13,
+            "filename": "/../data/reentrancy/solidity_contract/40038.sol",
+            "lines": [
+              273
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "naming-convention",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Parameter '_to' of multiowned.changeOwner (/../data/reentrancy/solidity_contract/40038.sol#273) is not in mixedCase\n",
+      "elements": [
+        {
+          "target": "parameter",
+          "convention": "mixedCase",
+          "name": "_to",
+          "source_mapping": {
+            "start": 6364,
+            "length": 11,
+            "filename": "/../data/reentrancy/solidity_contract/40038.sol",
+            "lines": [
+              273
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "naming-convention",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Parameter '_owner' of multiowned.addOwner (/../data/reentrancy/solidity_contract/40038.sol#285) is not in mixedCase\n",
+      "elements": [
+        {
+          "target": "parameter",
+          "convention": "mixedCase",
+          "name": "_owner",
+          "source_mapping": {
+            "start": 6758,
+            "length": 14,
+            "filename": "/../data/reentrancy/solidity_contract/40038.sol",
+            "lines": [
+              285
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "naming-convention",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Parameter '_owner' of multiowned.removeOwner (/../data/reentrancy/solidity_contract/40038.sol#299) is not in mixedCase\n",
+      "elements": [
+        {
+          "target": "parameter",
+          "convention": "mixedCase",
+          "name": "_owner",
+          "source_mapping": {
+            "start": 7189,
+            "length": 14,
+            "filename": "/../data/reentrancy/solidity_contract/40038.sol",
+            "lines": [
+              299
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "naming-convention",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Parameter '_newRequired' of multiowned.changeRequirement (/../data/reentrancy/solidity_contract/40038.sol#311) is not in mixedCase\n",
+      "elements": [
+        {
+          "target": "parameter",
+          "convention": "mixedCase",
+          "name": "_newRequired",
+          "source_mapping": {
+            "start": 7585,
+            "length": 17,
+            "filename": "/../data/reentrancy/solidity_contract/40038.sol",
+            "lines": [
+              311
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "naming-convention",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Parameter '_addr' of multiowned.isOwner (/../data/reentrancy/solidity_contract/40038.sol#323) is not in mixedCase\n",
+      "elements": [
+        {
+          "target": "parameter",
+          "convention": "mixedCase",
+          "name": "_addr",
+          "source_mapping": {
+            "start": 7963,
+            "length": 13,
+            "filename": "/../data/reentrancy/solidity_contract/40038.sol",
+            "lines": [
+              323
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "naming-convention",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Parameter '_operation' of multiowned.hasConfirmed (/../data/reentrancy/solidity_contract/40038.sol#327) is not in mixedCase\n",
+      "elements": [
+        {
+          "target": "parameter",
+          "convention": "mixedCase",
+          "name": "_operation",
+          "source_mapping": {
+            "start": 8074,
+            "length": 18,
+            "filename": "/../data/reentrancy/solidity_contract/40038.sol",
+            "lines": [
+              327
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "naming-convention",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Parameter '_owner' of multiowned.hasConfirmed (/../data/reentrancy/solidity_contract/40038.sol#327) is not in mixedCase\n",
+      "elements": [
+        {
+          "target": "parameter",
+          "convention": "mixedCase",
+          "name": "_owner",
+          "source_mapping": {
+            "start": 8094,
+            "length": 14,
+            "filename": "/../data/reentrancy/solidity_contract/40038.sol",
+            "lines": [
+              327
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "naming-convention",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Parameter '_operation' of multiowned.confirmAndCheck (/../data/reentrancy/solidity_contract/40038.sol#341) is not in mixedCase\n",
+      "elements": [
+        {
+          "target": "parameter",
+          "convention": "mixedCase",
+          "name": "_operation",
+          "source_mapping": {
+            "start": 8446,
+            "length": 18,
+            "filename": "/../data/reentrancy/solidity_contract/40038.sol",
+            "lines": [
+              341
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "naming-convention",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Variable 'multiowned.m_required' (/../data/reentrancy/solidity_contract/40038.sol#404) is not in mixedCase\n",
+      "elements": [
+        {
+          "target": "variable",
+          "convention": "mixedCase",
+          "name": "m_required",
+          "source_mapping": {
+            "start": 10319,
+            "length": 22,
+            "filename": "/../data/reentrancy/solidity_contract/40038.sol",
+            "lines": [
+              404
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "naming-convention",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Variable 'multiowned.m_numOwners' (/../data/reentrancy/solidity_contract/40038.sol#406) is not in mixedCase\n",
+      "elements": [
+        {
+          "target": "variable",
+          "convention": "mixedCase",
+          "name": "m_numOwners",
+          "source_mapping": {
+            "start": 10353,
+            "length": 23,
+            "filename": "/../data/reentrancy/solidity_contract/40038.sol",
+            "lines": [
+              406
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "naming-convention",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Variable 'multiowned.m_owners' (/../data/reentrancy/solidity_contract/40038.sol#409) is not in mixedCase\n",
+      "elements": [
+        {
+          "target": "variable",
+          "convention": "mixedCase",
+          "name": "m_owners",
+          "source_mapping": {
+            "start": 10389,
+            "length": 18,
+            "filename": "/../data/reentrancy/solidity_contract/40038.sol",
+            "lines": [
+              409
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "naming-convention",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Constant 'multiowned.c_maxOwners' (/../data/reentrancy/solidity_contract/40038.sol#410) is not in UPPER_CASE_WITH_UNDERSCORES\n",
+      "elements": [
+        {
+          "target": "variable_constant",
+          "convention": "UPPER_CASE_WITH_UNDERSCORES",
+          "name": "c_maxOwners",
+          "source_mapping": {
+            "start": 10413,
+            "length": 31,
+            "filename": "/../data/reentrancy/solidity_contract/40038.sol",
+            "lines": [
+              410
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "naming-convention",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Variable 'multiowned.m_ownerIndex' (/../data/reentrancy/solidity_contract/40038.sol#412) is not in mixedCase\n",
+      "elements": [
+        {
+          "target": "variable",
+          "convention": "mixedCase",
+          "name": "m_ownerIndex",
+          "source_mapping": {
+            "start": 10456,
+            "length": 34,
+            "filename": "/../data/reentrancy/solidity_contract/40038.sol",
+            "lines": [
+              412
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "naming-convention",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Variable 'multiowned.m_pending' (/../data/reentrancy/solidity_contract/40038.sol#414) is not in mixedCase\n",
+      "elements": [
+        {
+          "target": "variable",
+          "convention": "mixedCase",
+          "name": "m_pending",
+          "source_mapping": {
+            "start": 10502,
+            "length": 42,
+            "filename": "/../data/reentrancy/solidity_contract/40038.sol",
+            "lines": [
+              414
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "naming-convention",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Variable 'multiowned.m_pendingIndex' (/../data/reentrancy/solidity_contract/40038.sol#415) is not in mixedCase\n",
+      "elements": [
+        {
+          "target": "variable",
+          "convention": "mixedCase",
+          "name": "m_pendingIndex",
+          "source_mapping": {
+            "start": 10550,
+            "length": 24,
+            "filename": "/../data/reentrancy/solidity_contract/40038.sol",
+            "lines": [
+              415
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "naming-convention",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Contract 'daylimit' (/../data/reentrancy/solidity_contract/40038.sol#421-473) is not in CapWords\n",
+      "elements": [
+        {
+          "target": "contract",
+          "convention": "CapWords",
+          "name": "daylimit",
+          "source_mapping": {
+            "start": 10585,
+            "length": 1096,
+            "filename": "/../data/reentrancy/solidity_contract/40038.sol",
+            "lines": [
+              421,
+              422,
+              423,
+              424,
+              425,
+              426,
+              427,
+              428,
+              429,
+              430,
+              431,
+              432,
+              433,
+              434,
+              435,
+              436,
+              437,
+              438,
+              439,
+              440,
+              441,
+              442,
+              443,
+              444,
+              445,
+              446,
+              447,
+              448,
+              449,
+              450,
+              451,
+              452,
+              453,
+              454,
+              455,
+              456,
+              457,
+              458,
+              459,
+              460,
+              461,
+              462,
+              463,
+              464,
+              465,
+              466,
+              467,
+              468,
+              469,
+              470,
+              471,
+              472,
+              473
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "naming-convention",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Parameter '_limit' of daylimit.daylimit (/../data/reentrancy/solidity_contract/40038.sol#434) is not in mixedCase\n",
+      "elements": [
+        {
+          "target": "parameter",
+          "convention": "mixedCase",
+          "name": "_limit",
+          "source_mapping": {
+            "start": 10757,
+            "length": 11,
+            "filename": "/../data/reentrancy/solidity_contract/40038.sol",
+            "lines": [
+              434
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "naming-convention",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Parameter '_newLimit' of daylimit.setDailyLimit (/../data/reentrancy/solidity_contract/40038.sol#439) is not in mixedCase\n",
+      "elements": [
+        {
+          "target": "parameter",
+          "convention": "mixedCase",
+          "name": "_newLimit",
+          "source_mapping": {
+            "start": 10871,
+            "length": 14,
+            "filename": "/../data/reentrancy/solidity_contract/40038.sol",
+            "lines": [
+              439
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "naming-convention",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Parameter '_value' of daylimit.underLimit (/../data/reentrancy/solidity_contract/40038.sol#451) is not in mixedCase\n",
+      "elements": [
+        {
+          "target": "parameter",
+          "convention": "mixedCase",
+          "name": "_value",
+          "source_mapping": {
+            "start": 11124,
+            "length": 11,
+            "filename": "/../data/reentrancy/solidity_contract/40038.sol",
+            "lines": [
+              451
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "naming-convention",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Variable 'daylimit.m_dailyLimit' (/../data/reentrancy/solidity_contract/40038.sol#470) is not in mixedCase\n",
+      "elements": [
+        {
+          "target": "variable",
+          "convention": "mixedCase",
+          "name": "m_dailyLimit",
+          "source_mapping": {
+            "start": 11597,
+            "length": 24,
+            "filename": "/../data/reentrancy/solidity_contract/40038.sol",
+            "lines": [
+              470
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "naming-convention",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Variable 'daylimit.m_spentToday' (/../data/reentrancy/solidity_contract/40038.sol#471) is not in mixedCase\n",
+      "elements": [
+        {
+          "target": "variable",
+          "convention": "mixedCase",
+          "name": "m_spentToday",
+          "source_mapping": {
+            "start": 11627,
+            "length": 24,
+            "filename": "/../data/reentrancy/solidity_contract/40038.sol",
+            "lines": [
+              471
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "naming-convention",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Variable 'daylimit.m_lastDay' (/../data/reentrancy/solidity_contract/40038.sol#472) is not in mixedCase\n",
+      "elements": [
+        {
+          "target": "variable",
+          "convention": "mixedCase",
+          "name": "m_lastDay",
+          "source_mapping": {
+            "start": 11657,
+            "length": 21,
+            "filename": "/../data/reentrancy/solidity_contract/40038.sol",
+            "lines": [
+              472
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "naming-convention",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Contract 'multisig' (/../data/reentrancy/solidity_contract/40038.sol#476-496) is not in CapWords\n",
+      "elements": [
+        {
+          "target": "contract",
+          "convention": "CapWords",
+          "name": "multisig",
+          "source_mapping": {
+            "start": 11685,
+            "length": 592,
+            "filename": "/../data/reentrancy/solidity_contract/40038.sol",
+            "lines": [
+              476,
+              477,
+              478,
+              479,
+              480,
+              481,
+              482,
+              483,
+              484,
+              485,
+              486,
+              487,
+              488,
+              489,
+              490,
+              491,
+              492,
+              493,
+              494,
+              495,
+              496
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "naming-convention",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Contract 'tokenswap' (/../data/reentrancy/solidity_contract/40038.sol#498-567) is not in CapWords\n",
+      "elements": [
+        {
+          "target": "contract",
+          "convention": "CapWords",
+          "name": "tokenswap",
+          "source_mapping": {
+            "start": 12279,
+            "length": 1684,
+            "filename": "/../data/reentrancy/solidity_contract/40038.sol",
+            "lines": [
+              498,
+              499,
+              500,
+              501,
+              502,
+              503,
+              504,
+              505,
+              506,
+              507,
+              508,
+              509,
+              510,
+              511,
+              512,
+              513,
+              514,
+              515,
+              516,
+              517,
+              518,
+              519,
+              520,
+              521,
+              522,
+              523,
+              524,
+              525,
+              526,
+              527,
+              528,
+              529,
+              530,
+              531,
+              532,
+              533,
+              534,
+              535,
+              536,
+              537,
+              538,
+              539,
+              540,
+              541,
+              542,
+              543,
+              544,
+              545,
+              546,
+              547,
+              548,
+              549,
+              550,
+              551,
+              552,
+              553,
+              554,
+              555,
+              556,
+              557,
+              558,
+              559,
+              560,
+              561,
+              562,
+              563,
+              564,
+              565,
+              566,
+              567
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "naming-convention",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Parameter '_beneficiary' of tokenswap.buyTokens (/../data/reentrancy/solidity_contract/40038.sol#556) is not in mixedCase\n",
+      "elements": [
+        {
+          "target": "parameter",
+          "convention": "mixedCase",
+          "name": "_beneficiary",
+          "source_mapping": {
+            "start": 13660,
+            "length": 20,
+            "filename": "/../data/reentrancy/solidity_contract/40038.sol",
+            "lines": [
+              556
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "naming-convention",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Parameter '_to' of Wallet.execute (/../data/reentrancy/solidity_contract/40038.sol#612) is not in mixedCase\n",
+      "elements": [
+        {
+          "target": "parameter",
+          "convention": "mixedCase",
+          "name": "_to",
+          "source_mapping": {
+            "start": 14611,
+            "length": 11,
+            "filename": "/../data/reentrancy/solidity_contract/40038.sol",
+            "lines": [
+              612
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "naming-convention",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Parameter '_value' of Wallet.execute (/../data/reentrancy/solidity_contract/40038.sol#612) is not in mixedCase\n",
+      "elements": [
+        {
+          "target": "parameter",
+          "convention": "mixedCase",
+          "name": "_value",
+          "source_mapping": {
+            "start": 14624,
+            "length": 11,
+            "filename": "/../data/reentrancy/solidity_contract/40038.sol",
+            "lines": [
+              612
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "naming-convention",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Parameter '_data' of Wallet.execute (/../data/reentrancy/solidity_contract/40038.sol#612) is not in mixedCase\n",
+      "elements": [
+        {
+          "target": "parameter",
+          "convention": "mixedCase",
+          "name": "_data",
+          "source_mapping": {
+            "start": 14637,
+            "length": 11,
+            "filename": "/../data/reentrancy/solidity_contract/40038.sol",
+            "lines": [
+              612
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "naming-convention",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Parameter '_h' of Wallet.confirm (/../data/reentrancy/solidity_contract/40038.sol#637) is not in mixedCase\n",
+      "elements": [
+        {
+          "target": "parameter",
+          "convention": "mixedCase",
+          "name": "_h",
+          "source_mapping": {
+            "start": 15291,
+            "length": 10,
+            "filename": "/../data/reentrancy/solidity_contract/40038.sol",
+            "lines": [
+              637
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "naming-convention",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Function 'Wallet.Wallet' (/../data/reentrancy/solidity_contract/40038.sol#587-589) is not in mixedCase\n",
+      "elements": [
+        {
+          "target": "function",
+          "convention": "mixedCase",
+          "name": "Wallet",
+          "source_mapping": {
+            "start": 14160,
+            "length": 137,
+            "filename": "/../data/reentrancy/solidity_contract/40038.sol",
+            "lines": [
+              587,
+              588,
+              589
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "naming-convention",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Parameter '_to' of Wallet.kill (/../data/reentrancy/solidity_contract/40038.sol#592) is not in mixedCase\n",
+      "elements": [
+        {
+          "target": "parameter",
+          "convention": "mixedCase",
+          "name": "_to",
+          "source_mapping": {
+            "start": 14323,
+            "length": 11,
+            "filename": "/../data/reentrancy/solidity_contract/40038.sol",
+            "lines": [
+              592
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "naming-convention",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Variable 'Wallet.m_txs' (/../data/reentrancy/solidity_contract/40038.sol#658) is not in mixedCase\n",
+      "elements": [
+        {
+          "target": "variable",
+          "convention": "mixedCase",
+          "name": "m_txs",
+          "source_mapping": {
+            "start": 15837,
+            "length": 38,
+            "filename": "/../data/reentrancy/solidity_contract/40038.sol",
+            "lines": [
+              658
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

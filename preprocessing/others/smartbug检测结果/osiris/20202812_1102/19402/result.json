@@ -1,0 +1,29 @@
+{
+  "contract": "19402",
+  "tool": "osiris",
+  "start": 1609170205.155736,
+  "end": 1609170259.293464,
+  "duration": 54.13772797584534,
+  "analysis": [
+    {
+      "errors": [],
+      "file": "/../data/reentrancy/solidity_contract/19402.sol",
+      "name": "SafeMath"
+    },
+    {
+      "errors": [],
+      "file": "/../data/reentrancy/solidity_contract/19402.sol",
+      "name": "StandardToken"
+    },
+    {
+      "errors": [],
+      "file": "/../data/reentrancy/solidity_contract/19402.sol",
+      "name": "Token"
+    },
+    {
+      "errors": [],
+      "file": "/../data/reentrancy/solidity_contract/19402.sol",
+      "name": "monechainToken"
+    }
+  ]
+}

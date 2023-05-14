@@ -1,0 +1,347 @@
+====================================================================================================
+[1m[ ] Compiling Solidity contract from the file /../data/reentrancy/solidity_contract/39664.sol ... [0m/../data/reentrancy/solidity_contract/39664.sol:53:39: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+	function cardDescription(uint8 self) constant returns (Suit, uint8) {
+	                                     ^------^
+/../data/reentrancy/solidity_contract/39664.sol:57:37: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+	function cardEmojified(uint8 self) constant returns (uint8, string) {
+	                                   ^------^
+/../data/reentrancy/solidity_contract/39664.sol:69:37: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+	function cardFacevalue(uint8 self) constant returns (uint8) {
+	                                   ^------^
+/../data/reentrancy/solidity_contract/39664.sol:73:38: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+	function blackjackValue(uint8 self) constant returns (uint8) {
+	                                    ^------^
+/../data/reentrancy/solidity_contract/39664.sol:78:83: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+	function getRandomNumber(uint b, address player, uint256 gameID, uint n, uint m) constant returns (uint) {
+	                                                                                 ^------^
+/../data/reentrancy/solidity_contract/39664.sol:166:41: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function needsTick(Game storage self) constant returns (bool) {
+                                        ^------^
+/../data/reentrancy/solidity_contract/39664.sol:470:30: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function gameState(uint i) constant returns (uint8[], uint8[], uint8, uint8, uint256, uint256, uint8, uint8, bool, uint256) {
+                             ^------^
+/../data/reentrancy/solidity_contract/39664.sol:539:32: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function remainingBankroll() constant returns (uint256) {
+                               ^------^
+
+[91m[-] Cannot compile the contract [0m
+
+====================================================================================================
+[1m[ ] Compiling Solidity contract from the file /../data/reentrancy/solidity_contract/39664.sol ... [0m/../data/reentrancy/solidity_contract/39664.sol:53:39: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+	function cardDescription(uint8 self) constant returns (Suit, uint8) {
+	                                     ^------^
+/../data/reentrancy/solidity_contract/39664.sol:57:37: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+	function cardEmojified(uint8 self) constant returns (uint8, string) {
+	                                   ^------^
+/../data/reentrancy/solidity_contract/39664.sol:69:37: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+	function cardFacevalue(uint8 self) constant returns (uint8) {
+	                                   ^------^
+/../data/reentrancy/solidity_contract/39664.sol:73:38: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+	function blackjackValue(uint8 self) constant returns (uint8) {
+	                                    ^------^
+
+[91m[-] Cannot compile the contract [0m
+
+====================================================================================================
+[1m[ ] Compiling Solidity contract from the file /../data/reentrancy/solidity_contract/39664.sol ... [0m/../data/reentrancy/solidity_contract/39664.sol:53:39: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+	function cardDescription(uint8 self) constant returns (Suit, uint8) {
+	                                     ^------^
+/../data/reentrancy/solidity_contract/39664.sol:57:37: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+	function cardEmojified(uint8 self) constant returns (uint8, string) {
+	                                   ^------^
+/../data/reentrancy/solidity_contract/39664.sol:69:37: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+	function cardFacevalue(uint8 self) constant returns (uint8) {
+	                                   ^------^
+/../data/reentrancy/solidity_contract/39664.sol:73:38: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+	function blackjackValue(uint8 self) constant returns (uint8) {
+	                                    ^------^
+/../data/reentrancy/solidity_contract/39664.sol:78:83: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+	function getRandomNumber(uint b, address player, uint256 gameID, uint n, uint m) constant returns (uint) {
+	                                                                                 ^------^
+/../data/reentrancy/solidity_contract/39664.sol:166:41: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function needsTick(Game storage self) constant returns (bool) {
+                                        ^------^
+/../data/reentrancy/solidity_contract/39664.sol:470:30: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function gameState(uint i) constant returns (uint8[], uint8[], uint8, uint8, uint256, uint256, uint8, uint8, bool, uint256) {
+                             ^------^
+/../data/reentrancy/solidity_contract/39664.sol:539:32: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function remainingBankroll() constant returns (uint256) {
+                               ^------^
+
+[91m[-] Cannot compile the contract [0m
+
+====================================================================================================
+[1m[ ] Compiling Solidity contract from the file /../data/reentrancy/solidity_contract/39664.sol ... [0m/../data/reentrancy/solidity_contract/39664.sol:53:39: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+	function cardDescription(uint8 self) constant returns (Suit, uint8) {
+	                                     ^------^
+/../data/reentrancy/solidity_contract/39664.sol:57:37: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+	function cardEmojified(uint8 self) constant returns (uint8, string) {
+	                                   ^------^
+/../data/reentrancy/solidity_contract/39664.sol:69:37: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+	function cardFacevalue(uint8 self) constant returns (uint8) {
+	                                   ^------^
+/../data/reentrancy/solidity_contract/39664.sol:73:38: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+	function blackjackValue(uint8 self) constant returns (uint8) {
+	                                    ^------^
+/../data/reentrancy/solidity_contract/39664.sol:78:83: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+	function getRandomNumber(uint b, address player, uint256 gameID, uint n, uint m) constant returns (uint) {
+	                                                                                 ^------^
+/../data/reentrancy/solidity_contract/39664.sol:166:41: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function needsTick(Game storage self) constant returns (bool) {
+                                        ^------^
+/../data/reentrancy/solidity_contract/39664.sol:470:30: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+
+[91m[-] Cannot compile the contract [0m
+
+====================================================================================================
+[1m[ ] Compiling Solidity contract from the file /../data/reentrancy/solidity_contract/39664.sol ... [0m/../data/reentrancy/solidity_contract/39664.sol:53:39: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+	function cardDescription(uint8 self) constant returns (Suit, uint8) {
+	                                     ^------^
+/../data/reentrancy/solidity_contract/39664.sol:57:37: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+	function cardEmojified(uint8 self) constant returns (uint8, string) {
+	                                   ^------^
+/../data/reentrancy/solidity_contract/39664.sol:69:37: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+	function cardFacevalue(uint8 self) constant returns (uint8) {
+	                                   ^------^
+/../data/reentrancy/solidity_contract/39664.sol:73:38: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+	function blackjackValue(uint8 self) constant returns (uint8) {
+	                                    ^------^
+/../data/reentrancy/solidity_contract/39664.sol:78:83: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+	function getRandomNumber(uint b, address player, uint256 gameID, uint n, uint m) constant returns (uint) {
+	                                                                                 ^------^
+/../data/reentrancy/solidity_contract/39664.sol:166:41: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function needsTick(Game storage self) constant returns (bool) {
+                                        ^------^
+/../data/reentrancy/solidity_contract/39664.sol:470:30: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function gameState(uint i) constant returns (uint8[], uint8[], uint8, uint8, uint256, uint256, uint8, uint8, bool, uint256) {
+                             ^------^
+/../data/reentrancy/solidity_contract/39664.sol:539:32: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+
+[91m[-] Cannot compile the contract [0m
+
+====================================================================================================
+[1m[ ] Compiling Solidity contract from the file /../data/reentrancy/solidity_contract/39664.sol ... [0m/../data/reentrancy/solidity_contract/39664.sol:53:39: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+	function cardDescription(uint8 self) constant returns (Suit, uint8) {
+	                                     ^------^
+/../data/reentrancy/solidity_contract/39664.sol:57:37: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+	function cardEmojified(uint8 self) constant returns (uint8, string) {
+	                                   ^------^
+/../data/reentrancy/solidity_contract/39664.sol:69:37: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+	function cardFacevalue(uint8 self) constant returns (uint8) {
+	                                   ^------^
+/../data/reentrancy/solidity_contract/39664.sol:73:38: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+	function blackjackValue(uint8 self) constant returns (uint8) {
+
+[91m[-] Cannot compile the contract [0m
+
+====================================================================================================
+[1m[ ] Compiling Solidity contract from the file /../data/reentrancy/solidity_contract/39664.sol ... [0m/../data/reentrancy/solidity_contract/39664.sol:53:39: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+	function cardDescription(uint8 self) constant returns (Suit, uint8) {
+	                                     ^------^
+/../data/reentrancy/solidity_contract/39664.sol:57:37: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+	function cardEmojified(uint8 self) constant returns (uint8, string) {
+	                                   ^------^
+/../data/reentrancy/solidity_contract/39664.sol:69:37: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+	function cardFacevalue(uint8 self) constant returns (uint8) {
+	                                   ^------^
+/../data/reentrancy/solidity_contract/39664.sol:73:38: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+	function blackjackValue(uint8 self) constant returns (uint8) {
+	                                    ^------^
+/../data/reentrancy/solidity_contract/39664.sol:78:83: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+	function getRandomNumber(uint b, address player, uint256 gameID, uint n, uint m) constant returns (uint) {
+	                                                                                 ^------^
+/../data/reentrancy/solidity_contract/39664.sol:166:41: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function needsTick(Game storage self) constant returns (bool) {
+                                        ^------^
+/../data/reentrancy/solidity_contract/39664.sol:470:30: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+
+[91m[-] Cannot compile the contract [0m
+
+====================================================================================================
+[1m[ ] Compiling Solidity contract from the file /../data/reentrancy/solidity_contract/39664.sol ... [0m/../data/reentrancy/solidity_contract/39664.sol:53:39: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+	function cardDescription(uint8 self) constant returns (Suit, uint8) {
+	                                     ^------^
+/../data/reentrancy/solidity_contract/39664.sol:57:37: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+	function cardEmojified(uint8 self) constant returns (uint8, string) {
+	                                   ^------^
+/../data/reentrancy/solidity_contract/39664.sol:69:37: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+	function cardFacevalue(uint8 self) constant returns (uint8) {
+	                                   ^------^
+/../data/reentrancy/solidity_contract/39664.sol:73:38: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+	function blackjackValue(uint8 self) constant returns (uint8) {
+	                                    ^------^
+/../data/reentrancy/solidity_contract/39664.sol:78:83: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+	function getRandomNumber(uint b, address player, uint256 gameID, uint n, uint m) constant returns (uint) {
+	                                                                                 ^------^
+/../data/reentrancy/solidity_contract/39664.sol:166:41: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function needsTick(Game storage self) constant returns (bool) {
+                                        ^------^
+/../data/reentrancy/solidity_contract/39664.sol:470:30: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+
+[91m[-] Cannot compile the contract [0m
+
+====================================================================================================
+[1m[ ] Compiling Solidity contract from the file /../data/reentrancy/solidity_contract/39664.sol ... [0m/../data/reentrancy/solidity_contract/39664.sol:53:39: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+	function cardDescription(uint8 self) constant returns (Suit, uint8) {
+	                                     ^------^
+/../data/reentrancy/solidity_contract/39664.sol:57:37: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+	function cardEmojified(uint8 self) constant returns (uint8, string) {
+	                                   ^------^
+/../data/reentrancy/solidity_contract/39664.sol:69:37: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+	function cardFacevalue(uint8 self) constant returns (uint8) {
+	                                   ^------^
+/../data/reentrancy/solidity_contract/39664.sol:73:38: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+	function blackjackValue(uint8 self) constant returns (uint8) {
+	                                    ^------^
+/../data/reentrancy/solidity_contract/39664.sol:78:83: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+	function getRandomNumber(uint b, address player, uint256 gameID, uint n, uint m) constant returns (uint) {
+	                                                                                 ^------^
+/../data/reentrancy/solidity_contract/39664.sol:166:41: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function needsTick(Game storage self) constant returns (bool) {
+                                        ^------^
+/../data/reentrancy/solidity_contract/39664.sol:470:30: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+
+[91m[-] Cannot compile the contract [0m
+
+====================================================================================================
+[1m[ ] Compiling Solidity contract from the file /../data/reentrancy/solidity_contract/39664.sol ... [0m/../data/reentrancy/solidity_contract/39664.sol:53:39: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+	function cardDescription(uint8 self) constant returns (Suit, uint8) {
+	                                     ^------^
+/../data/reentrancy/solidity_contract/39664.sol:57:37: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+	function cardEmojified(uint8 self) constant returns (uint8, string) {
+	                                   ^------^
+/../data/reentrancy/solidity_contract/39664.sol:69:37: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+	function cardFacevalue(uint8 self) constant returns (uint8) {
+	                                   ^------^
+/../data/reentrancy/solidity_contract/39664.sol:73:38: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+	function blackjackValue(uint8 self) constant returns (uint8) {
+	                                    ^------^
+/../data/reentrancy/solidity_contract/39664.sol:78:83: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+	function getRandomNumber(uint b, address player, uint256 gameID, uint n, uint m) constant returns (uint) {
+	                                                                                 ^------^
+/../data/reentrancy/solidity_contract/39664.sol:166:41: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function needsTick(Game storage self) constant returns (bool) {
+                                        ^------^
+/../data/reentrancy/solidity_contract/39664.sol:470:30: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+
+[91m[-] Cannot compile the contract [0m
+
+====================================================================================================
+[1m[ ] Compiling Solidity contract from the file /../data/reentrancy/solidity_contract/39664.sol ... [0m/../data/reentrancy/solidity_contract/39664.sol:53:39: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+	function cardDescription(uint8 self) constant returns (Suit, uint8) {
+	                                     ^------^
+/../data/reentrancy/solidity_contract/39664.sol:57:37: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+	function cardEmojified(uint8 self) constant returns (uint8, string) {
+	                                   ^------^
+/../data/reentrancy/solidity_contract/39664.sol:69:37: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+	function cardFacevalue(uint8 self) constant returns (uint8) {
+	                                   ^------^
+/../data/reentrancy/solidity_contract/39664.sol:73:38: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+	function blackjackValue(uint8 self) constant returns (uint8) {
+	                                    ^------^
+/../data/reentrancy/solidity_contract/39664.sol:78:83: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+	function getRandomNumber(uint b, address player, uint256 gameID, uint n, uint m) constant returns (uint) {
+	                                                                                 ^------^
+/../data/reentrancy/solidity_contract/39664.sol:166:41: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function needsTick(Game storage self) constant returns (bool) {
+                                        ^------^
+/../data/reentrancy/solidity_contract/39664.sol:470:30: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function gameState(uint i) constant returns (uint8[], uint8[], uint8, uint8, uint256, uint256, uint8, uint8, bool, uint256) {
+
+[91m[-] Cannot compile the contract [0m
+
+====================================================================================================
+[1m[ ] Compiling Solidity contract from the file /../data/reentrancy/solidity_contract/39664.sol ... [0m/../data/reentrancy/solidity_contract/39664.sol:53:39: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+	function cardDescription(uint8 self) constant returns (Suit, uint8) {
+	                                     ^------^
+/../data/reentrancy/solidity_contract/39664.sol:57:37: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+	function cardEmojified(uint8 self) constant returns (uint8, string) {
+	                                   ^------^
+/../data/reentrancy/solidity_contract/39664.sol:69:37: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+	function cardFacevalue(uint8 self) constant returns (uint8) {
+	                                   ^------^
+/../data/reentrancy/solidity_contract/39664.sol:73:38: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+	function blackjackValue(uint8 self) constant returns (uint8) {
+	                                    ^------^
+/../data/reentrancy/solidity_contract/39664.sol:78:83: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+	function getRandomNumber(uint b, address player, uint256 gameID, uint n, uint m) constant returns (uint) {
+	                                                                                 ^------^
+/../data/reentrancy/solidity_contract/39664.sol:166:41: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function needsTick(Game storage self) constant returns (bool) {
+                                        ^------^
+/../data/reentrancy/solidity_contract/39664.sol:470:30: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function gameState(uint i) constant returns (uint8[], uint8[], uint8, uint8, uint256, uint256, uint8, uint8, bool, uint256) {
+
+[91m[-] Cannot compile the contract [0m
+
+====================================================================================================
+[1m[ ] Compiling Solidity contract from the file /../data/reentrancy/solidity_contract/39664.sol ... [0m/../data/reentrancy/solidity_contract/39664.sol:53:39: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+	function cardDescription(uint8 self) constant returns (Suit, uint8) {
+	                                     ^------^
+/../data/reentrancy/solidity_contract/39664.sol:57:37: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+	function cardEmojified(uint8 self) constant returns (uint8, string) {
+	                                   ^------^
+/../data/reentrancy/solidity_contract/39664.sol:69:37: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+	function cardFacevalue(uint8 self) constant returns (uint8) {
+	                                   ^------^
+/../data/reentrancy/solidity_contract/39664.sol:73:38: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+	function blackjackValue(uint8 self) constant returns (uint8) {
+	                                    ^------^
+/../data/reentrancy/solidity_contract/39664.sol:78:83: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+	function getRandomNumber(uint b, address player, uint256 gameID, uint n, uint m) constant returns (uint) {
+	                                                                                 ^------^
+/../data/reentrancy/solidity_contract/39664.sol:166:41: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function needsTick(Game storage self) constant returns (bool) {
+                                        ^------^
+/../data/reentrancy/solidity_contract/39664.sol:470:30: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+
+[91m[-] Cannot compile the contract [0m
+
+====================================================================================================
+[1m[ ] Compiling Solidity contract from the file /../data/reentrancy/solidity_contract/39664.sol ... [0m/../data/reentrancy/solidity_contract/39664.sol:53:39: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+	function cardDescription(uint8 self) constant returns (Suit, uint8) {
+	                                     ^------^
+/../data/reentrancy/solidity_contract/39664.sol:57:37: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+	function cardEmojified(uint8 self) constant returns (uint8, string) {
+	                                   ^------^
+/../data/reentrancy/solidity_contract/39664.sol:69:37: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+	function cardFacevalue(uint8 self) constant returns (uint8) {
+	                                   ^------^
+/../data/reentrancy/solidity_contract/39664.sol:73:38: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+	function blackjackValue(uint8 self) constant returns (uint8) {
+	                                    ^------^
+/../data/reentrancy/solidity_contract/39664.sol:78:83: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+	function getRandomNumber(uint b, address player, uint256 gameID, uint n, uint m) constant returns (uint) {
+	                                                                                 ^------^
+/../data/reentrancy/solidity_contract/39664.sol:166:41: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function needsTick(Game storage self) constant returns (bool) {
+                                        ^------^
+/../data/reentrancy/solidity_contract/39664.sol:470:30: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function gameState(uint i) constant returns (uint8[], uint8[], uint8, uint8, uint256, uint256, uint8, uint8, bool, uint256) {
+
+[91m[-] Cannot compile the contract [0m
+
+====================================================================================================
+[1m[ ] Compiling Solidity contract from the file /../data/reentrancy/solidity_contract/39664.sol ... [0m/../data/reentrancy/solidity_contract/39664.sol:53:39: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+	function cardDescription(uint8 self) constant returns (Suit, uint8) {
+	                                     ^------^
+/../data/reentrancy/solidity_contract/39664.sol:57:37: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+	function cardEmojified(uint8 self) constant returns (uint8, string) {
+	                                   ^------^
+/../data/reentrancy/solidity_contract/39664.sol:69:37: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+	function cardFacevalue(uint8 self) constant returns (uint8) {
+	                                   ^------^
+/../data/reentrancy/solidity_contract/39664.sol:73:38: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+	function blackjackValue(uint8 self) constant returns (uint8) {
+	                                    ^------^
+/../data/reentrancy/solidity_contract/39664.sol:78:83: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+	function getRandomNumber(uint b, address player, uint256 gameID, uint n, uint m) constant returns (uint) {
+	                                                                                 ^------^
+/../data/reentrancy/solidity_contract/39664.sol:166:41: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function needsTick(Game storage self) constant returns (bool) {
+                                        ^------^
+/../data/reentrancy/solidity_contract/39664.sol:470:30: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+  function gameState(uint i) constant returns (uint8[], uint8[], uint8, uint8, uint256, uint256, uint8, uint8, bool, uint256) {
+                             ^------^
+
+[91m[-] Cannot compile the contract [0m

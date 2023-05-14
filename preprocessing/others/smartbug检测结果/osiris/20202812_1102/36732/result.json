@@ -1,0 +1,60 @@
+{
+  "contract": "36732",
+  "tool": "osiris",
+  "start": 1609137704.290525,
+  "end": 1609137757.7479832,
+  "duration": 53.45745825767517,
+  "analysis": [
+    {
+      "errors": [
+        {
+          "line": 162,
+          "column": 42,
+          "message": "overflow_bugs"
+        },
+        {
+          "line": 176,
+          "column": 5,
+          "message": "overflow_bugs"
+        },
+        {
+          "line": 149,
+          "column": 5,
+          "message": "overflow_bugs"
+        },
+        {
+          "line": 141,
+          "column": 5,
+          "message": "overflow_bugs"
+        },
+        {
+          "line": 162,
+          "column": 26,
+          "message": "underflow_bugs"
+        },
+        {
+          "line": 163,
+          "column": 13,
+          "message": "concurrency_bug"
+        },
+        {
+          "line": 163,
+          "column": 13,
+          "message": "concurrency_bug"
+        },
+        {
+          "line": 164,
+          "column": 5,
+          "message": "concurrency_bug"
+        },
+        {
+          "line": 156,
+          "column": 5,
+          "message": "time_dependency_bug"
+        }
+      ],
+      "file": "/../data/reentrancy/solidity_contract/36732.sol",
+      "name": "EnjinBuyer"
+    }
+  ]
+}

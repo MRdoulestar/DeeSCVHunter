@@ -1,0 +1,36 @@
+INFO:Slither:Compilation warnings/errors on /../data/reentrancy/solidity_contract/24007.sol:
+/../data/reentrancy/solidity_contract/24007.sol:20:13: Warning: Return value of low-level calls not used.
+            msg.sender.call.value(0.3 ether)();
+            ^--------------------------------^
+
+INFO:Detectors:[91m
+Reentrancy in GetSomeEther.GetEther (/../data/reentrancy/solidity_contract/24007.sol#18-23):
+	External calls:
+	- msg.sender.call.value(300000000000000000)() (/../data/reentrancy/solidity_contract/24007.sol#20)
+	State variables written after the call(s):
+	- ExtractDepositTime (/../data/reentrancy/solidity_contract/24007.sol#21)
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#reentrancy-vulnerabilities[0m
+INFO:Detectors:[92m
+GetSomeEther.Deposit (/../data/reentrancy/solidity_contract/24007.sol#10-16) should be declared external
+GetSomeEther.GetEther (/../data/reentrancy/solidity_contract/24007.sol#18-23) should be declared external
+GetSomeEther.PutEther (/../data/reentrancy/solidity_contract/24007.sol#25-28) should be declared external
+GetSomeEther.Kill (/../data/reentrancy/solidity_contract/24007.sol#30-35) should be declared external
+GetSomeEther.fallback (/../data/reentrancy/solidity_contract/24007.sol#37) should be declared external
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#public-function-that-could-be-declared-as-external[0m
+INFO:Detectors:[92m
+Detected issues with version pragma in /../data/reentrancy/solidity_contract/24007.sol:
+	- pragma solidity^0.4.19 (/../data/reentrancy/solidity_contract/24007.sol#1): it allows old versions
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#incorrect-version-of-solidity[0m
+INFO:Detectors:[92m
+Low level call in GetSomeEther.GetEther (/../data/reentrancy/solidity_contract/24007.sol#18-23):
+	-msg.sender.call.value(300000000000000000)() /../data/reentrancy/solidity_contract/24007.sol#20
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#low-level-calls[0m
+INFO:Detectors:[92m
+Function 'GetSomeEther.Deposit' (/../data/reentrancy/solidity_contract/24007.sol#10-16) is not in mixedCase
+Function 'GetSomeEther.GetEther' (/../data/reentrancy/solidity_contract/24007.sol#18-23) is not in mixedCase
+Function 'GetSomeEther.PutEther' (/../data/reentrancy/solidity_contract/24007.sol#25-28) is not in mixedCase
+Function 'GetSomeEther.Kill' (/../data/reentrancy/solidity_contract/24007.sol#30-35) is not in mixedCase
+Variable 'GetSomeEther.LastExtractTime' (/../data/reentrancy/solidity_contract/24007.sol#6) is not in mixedCase
+Variable 'GetSomeEther.ExtractDepositTime' (/../data/reentrancy/solidity_contract/24007.sol#7) is not in mixedCase
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#conformance-to-solidity-naming-conventions[0m
+INFO:Slither:/../data/reentrancy/solidity_contract/24007.sol analyzed (1 contracts), 14 result(s) found

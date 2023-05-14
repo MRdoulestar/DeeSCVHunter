@@ -1,0 +1,24 @@
+{
+  "contract": "33410",
+  "tool": "honeybadger",
+  "start": 1609153077.240584,
+  "end": 1609153245.719031,
+  "duration": 168.4784471988678,
+  "analysis": [
+    {
+      "errors": [],
+      "file": "/../data/reentrancy/solidity_contract/33410.sol",
+      "name": "BCDCToken"
+    },
+    {
+      "errors": [],
+      "file": "/../data/reentrancy/solidity_contract/33410.sol",
+      "name": "BCDCVault"
+    },
+    {
+      "errors": [],
+      "file": "/../data/reentrancy/solidity_contract/33410.sol",
+      "name": "MultiSigWallet"
+    }
+  ]
+}

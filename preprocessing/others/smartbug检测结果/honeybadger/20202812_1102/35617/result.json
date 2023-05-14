@@ -1,0 +1,29 @@
+{
+  "contract": "35617",
+  "tool": "honeybadger",
+  "start": 1609127031.1671848,
+  "end": 1609127238.914422,
+  "duration": 207.74723720550537,
+  "analysis": [
+    {
+      "errors": [],
+      "file": "/../data/reentrancy/solidity_contract/35617.sol",
+      "name": "MoldCoin"
+    },
+    {
+      "errors": [],
+      "file": "/../data/reentrancy/solidity_contract/35617.sol",
+      "name": "MoldCoinBonus"
+    },
+    {
+      "errors": [],
+      "file": "/../data/reentrancy/solidity_contract/35617.sol",
+      "name": "SafeMath"
+    },
+    {
+      "errors": [],
+      "file": "/../data/reentrancy/solidity_contract/35617.sol",
+      "name": "StandardToken"
+    }
+  ]
+}

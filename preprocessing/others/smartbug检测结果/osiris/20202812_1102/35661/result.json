@@ -1,0 +1,24 @@
+{
+  "contract": "35661",
+  "tool": "osiris",
+  "start": 1609148899.007384,
+  "end": 1609148918.7515259,
+  "duration": 19.744141817092896,
+  "analysis": [
+    {
+      "errors": [],
+      "file": "/../data/reentrancy/solidity_contract/35661.sol",
+      "name": "Haltable"
+    },
+    {
+      "errors": [],
+      "file": "/../data/reentrancy/solidity_contract/35661.sol",
+      "name": "Ownable"
+    },
+    {
+      "errors": [],
+      "file": "/../data/reentrancy/solidity_contract/35661.sol",
+      "name": "PreICOProxyBuyer"
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "contract": "12454",
+  "tool": "honeybadger",
+  "start": 1609134921.701171,
+  "end": 1609134958.920786,
+  "duration": 37.21961498260498,
+  "analysis": [
+    {
+      "errors": [],
+      "file": "/../data/reentrancy/solidity_contract/12454.sol",
+      "name": "FacultyPool"
+    }
+  ]
+}

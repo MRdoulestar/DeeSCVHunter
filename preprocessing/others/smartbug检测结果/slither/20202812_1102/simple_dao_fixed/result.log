@@ -1,0 +1,10 @@
+INFO:Detectors:[92m
+SimpleDAO.donate (/../data/reentrancy/solidity_contract/simple_dao_fixed.sol#6-8) should be declared external
+SimpleDAO.withdraw (/../data/reentrancy/solidity_contract/simple_dao_fixed.sol#10-15) should be declared external
+SimpleDAO.queryCredit (/../data/reentrancy/solidity_contract/simple_dao_fixed.sol#17-19) should be declared external
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#public-function-that-could-be-declared-as-external[0m
+INFO:Detectors:[92m
+Low level call in SimpleDAO.withdraw (/../data/reentrancy/solidity_contract/simple_dao_fixed.sol#10-15):
+	-require(bool)(msg.sender.call.value(amount)()) /../data/reentrancy/solidity_contract/simple_dao_fixed.sol#13
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#low-level-calls[0m
+INFO:Slither:/../data/reentrancy/solidity_contract/simple_dao_fixed.sol analyzed (1 contracts), 4 result(s) found

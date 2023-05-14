@@ -1,0 +1,39 @@
+{
+  "contract": "39817",
+  "tool": "honeybadger",
+  "start": 1609197857.920439,
+  "end": 1609198027.48238,
+  "duration": 169.561940908432,
+  "analysis": [
+    {
+      "errors": [],
+      "file": "/../data/reentrancy/solidity_contract/39817.sol",
+      "name": "ProfitContainerAdapter"
+    },
+    {
+      "errors": [],
+      "file": "/../data/reentrancy/solidity_contract/39817.sol",
+      "name": "SafeMath"
+    },
+    {
+      "errors": [],
+      "file": "/../data/reentrancy/solidity_contract/39817.sol",
+      "name": "ShopKeeper"
+    },
+    {
+      "errors": [],
+      "file": "/../data/reentrancy/solidity_contract/39817.sol",
+      "name": "Token"
+    },
+    {
+      "errors": [],
+      "file": "/../data/reentrancy/solidity_contract/39817.sol",
+      "name": "ValueToken"
+    },
+    {
+      "errors": [],
+      "file": "/../data/reentrancy/solidity_contract/39817.sol",
+      "name": "ValueTrader"
+    }
+  ]
+}

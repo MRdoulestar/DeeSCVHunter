@@ -1,0 +1,24 @@
+{
+  "contract": "23421",
+  "tool": "honeybadger",
+  "start": 1609177578.3537831,
+  "end": 1609177678.486242,
+  "duration": 100.13245892524719,
+  "analysis": [
+    {
+      "errors": [],
+      "file": "/../data/reentrancy/solidity_contract/23421.sol",
+      "name": "Escapable"
+    },
+    {
+      "errors": [],
+      "file": "/../data/reentrancy/solidity_contract/23421.sol",
+      "name": "Multiplexor"
+    },
+    {
+      "errors": [],
+      "file": "/../data/reentrancy/solidity_contract/23421.sol",
+      "name": "Owned"
+    }
+  ]
+}

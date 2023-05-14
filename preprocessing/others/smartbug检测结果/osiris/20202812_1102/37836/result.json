@@ -1,0 +1,50 @@
+{
+  "contract": "37836",
+  "tool": "osiris",
+  "start": 1609145537.145299,
+  "end": 1609145604.2303302,
+  "duration": 67.08503127098083,
+  "analysis": [
+    {
+      "errors": [
+        {
+          "line": 181,
+          "column": 26,
+          "message": "overflow_bugs"
+        },
+        {
+          "line": 183,
+          "column": 26,
+          "message": "overflow_bugs"
+        },
+        {
+          "line": 179,
+          "column": 26,
+          "message": "overflow_bugs"
+        },
+        {
+          "line": 177,
+          "column": 26,
+          "message": "overflow_bugs"
+        }
+      ],
+      "file": "/../data/reentrancy/solidity_contract/37836.sol",
+      "name": "HUNT"
+    },
+    {
+      "errors": [],
+      "file": "/../data/reentrancy/solidity_contract/37836.sol",
+      "name": "Owned"
+    },
+    {
+      "errors": [],
+      "file": "/../data/reentrancy/solidity_contract/37836.sol",
+      "name": "SafeMath"
+    },
+    {
+      "errors": [],
+      "file": "/../data/reentrancy/solidity_contract/37836.sol",
+      "name": "StandardToken"
+    }
+  ]
+}

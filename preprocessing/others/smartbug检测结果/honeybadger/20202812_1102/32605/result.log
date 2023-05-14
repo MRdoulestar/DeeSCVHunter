@@ -1,0 +1,3 @@
+INFO:root:Contract /../data/reentrancy/solidity_contract/32605.sol:MetaIdentityManager:
+incomplete push instruction at 12070
+INFO:symExec:Running, please wait...

@@ -1,0 +1,14 @@
+{
+  "contract": "27159",
+  "tool": "osiris",
+  "start": 1609139908.407695,
+  "end": 1609139959.5173938,
+  "duration": 51.10969877243042,
+  "analysis": [
+    {
+      "errors": [],
+      "file": "/../data/reentrancy/solidity_contract/27159.sol",
+      "name": "ERC223Token"
+    }
+  ]
+}

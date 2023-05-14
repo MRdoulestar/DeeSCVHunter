@@ -1,0 +1,233 @@
+{
+  "contract": "23088",
+  "tool": "slither",
+  "start": 1609133206.657639,
+  "end": 1609133209.282357,
+  "duration": 2.624717950820923,
+  "analysis": [
+    {
+      "check": "arbitrary-send",
+      "impact": "High",
+      "confidence": "Medium",
+      "description": "WyvernAtomicizer.atomicize (/../data/reentrancy/solidity_contract/23088.sol#5-17) sends eth to arbitrary user\n\tDangerous calls:\n\t- require(bool)(addrs[i].call.value(values[i])(calldata)) (/../data/reentrancy/solidity_contract/23088.sol#15)\n",
+      "elements": [
+        {
+          "type": "function",
+          "name": "atomicize",
+          "source_mapping": {
+            "start": 58,
+            "length": 546,
+            "filename": "/../data/reentrancy/solidity_contract/23088.sol",
+            "lines": [
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11,
+              12,
+              13,
+              14,
+              15,
+              16,
+              17
+            ]
+          },
+          "contract": {
+            "type": "contract",
+            "name": "WyvernAtomicizer",
+            "source_mapping": {
+              "start": 26,
+              "length": 581,
+              "filename": "/../data/reentrancy/solidity_contract/23088.sol",
+              "lines": [
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10,
+                11,
+                12,
+                13,
+                14,
+                15,
+                16,
+                17,
+                18,
+                19
+              ]
+            }
+          }
+        },
+        {
+          "type": "expression",
+          "expression": "require(bool)(addrs[i].call.value(values[i])(calldata))",
+          "source_mapping": {
+            "start": 538,
+            "length": 49,
+            "filename": "/../data/reentrancy/solidity_contract/23088.sol",
+            "lines": [
+              15
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "external-function",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "WyvernAtomicizer.atomicize (/../data/reentrancy/solidity_contract/23088.sol#5-17) should be declared external\n",
+      "elements": [
+        {
+          "type": "function",
+          "name": "atomicize",
+          "source_mapping": {
+            "start": 58,
+            "length": 546,
+            "filename": "/../data/reentrancy/solidity_contract/23088.sol",
+            "lines": [
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11,
+              12,
+              13,
+              14,
+              15,
+              16,
+              17
+            ]
+          },
+          "contract": {
+            "type": "contract",
+            "name": "WyvernAtomicizer",
+            "source_mapping": {
+              "start": 26,
+              "length": 581,
+              "filename": "/../data/reentrancy/solidity_contract/23088.sol",
+              "lines": [
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10,
+                11,
+                12,
+                13,
+                14,
+                15,
+                16,
+                17,
+                18,
+                19
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "check": "solc-version",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Detected issues with version pragma in /../data/reentrancy/solidity_contract/23088.sol:\n\t- pragma solidity^0.4.13 (/../data/reentrancy/solidity_contract/23088.sol#1): it allows old versions\n",
+      "elements": [
+        {
+          "type": "expression",
+          "expression": "^0.4.13",
+          "source_mapping": {
+            "start": 0,
+            "length": 24,
+            "filename": "/../data/reentrancy/solidity_contract/23088.sol",
+            "lines": [
+              1
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "low-level-calls",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Low level call in WyvernAtomicizer.atomicize (/../data/reentrancy/solidity_contract/23088.sol#5-17):\n\t-require(bool)(addrs[i].call.value(values[i])(calldata)) /../data/reentrancy/solidity_contract/23088.sol#15\n",
+      "elements": [
+        {
+          "type": "function",
+          "name": "atomicize",
+          "source_mapping": {
+            "start": 58,
+            "length": 546,
+            "filename": "/../data/reentrancy/solidity_contract/23088.sol",
+            "lines": [
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11,
+              12,
+              13,
+              14,
+              15,
+              16,
+              17
+            ]
+          },
+          "contract": {
+            "type": "contract",
+            "name": "WyvernAtomicizer",
+            "source_mapping": {
+              "start": 26,
+              "length": 581,
+              "filename": "/../data/reentrancy/solidity_contract/23088.sol",
+              "lines": [
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10,
+                11,
+                12,
+                13,
+                14,
+                15,
+                16,
+                17,
+                18,
+                19
+              ]
+            }
+          }
+        },
+        {
+          "type": "expression",
+          "expression": "require(bool)(addrs[i].call.value(values[i])(calldata))",
+          "source_mapping": {
+            "start": 538,
+            "length": 49,
+            "filename": "/../data/reentrancy/solidity_contract/23088.sol",
+            "lines": [
+              15
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

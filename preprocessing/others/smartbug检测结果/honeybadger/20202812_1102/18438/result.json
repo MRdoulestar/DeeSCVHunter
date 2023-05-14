@@ -1,0 +1,19 @@
+{
+  "contract": "18438",
+  "tool": "honeybadger",
+  "start": 1609199294.784792,
+  "end": 1609199330.8911622,
+  "duration": 36.10637021064758,
+  "analysis": [
+    {
+      "errors": [],
+      "file": "/../data/reentrancy/solidity_contract/18438.sol",
+      "name": "BoomerangLiquidity"
+    },
+    {
+      "errors": [],
+      "file": "/../data/reentrancy/solidity_contract/18438.sol",
+      "name": "Owned"
+    }
+  ]
+}

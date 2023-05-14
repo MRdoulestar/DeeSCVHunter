@@ -1,0 +1,6 @@
+/data/reentrancy/solidity_contract/27263.sol:13:8: Expected indentation of 8 spaces but found 7 [Error/indent]
+/data/reentrancy/solidity_contract/27263.sol:14:8: Expected indentation of 8 spaces but found 7 [Error/indent]
+/data/reentrancy/solidity_contract/27263.sol:15:11: Expected indentation of 12 spaces but found 10 [Error/indent]
+/data/reentrancy/solidity_contract/27263.sol:16:8: Expected indentation of 8 spaces but found 7 [Error/indent]
+
+4 problems

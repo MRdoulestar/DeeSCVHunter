@@ -1,0 +1,40 @@
+{
+  "contract": "36334",
+  "tool": "osiris",
+  "start": 1609138026.2737138,
+  "end": 1609138032.471874,
+  "duration": 6.198160171508789,
+  "analysis": [
+    {
+      "errors": [
+        {
+          "line": 87,
+          "column": 13,
+          "message": "overflow_bugs"
+        },
+        {
+          "line": 89,
+          "column": 5,
+          "message": "overflow_bugs"
+        },
+        {
+          "line": 46,
+          "column": 5,
+          "message": "underflow_bugs"
+        },
+        {
+          "line": 71,
+          "column": 13,
+          "message": "concurrency_bug"
+        },
+        {
+          "line": 60,
+          "column": 5,
+          "message": "concurrency_bug"
+        }
+      ],
+      "file": "/../data/reentrancy/solidity_contract/36334.sol",
+      "name": "RequestSale"
+    }
+  ]
+}

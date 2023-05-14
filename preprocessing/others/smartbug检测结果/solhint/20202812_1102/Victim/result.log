@@ -1,0 +1,12 @@
+/data/reentrancy/solidity_contract/Victim.sol:4:3: Expected indentation of 4 spaces but found 2 [Error/indent]
+/data/reentrancy/solidity_contract/Victim.sol:6:3: Expected indentation of 4 spaces but found 2 [Error/indent]
+/data/reentrancy/solidity_contract/Victim.sol:7:5: Expected indentation of 8 spaces but found 4 [Error/indent]
+/data/reentrancy/solidity_contract/Victim.sol:8:9: Expected indentation of 12 spaces but found 8 [Error/indent]
+/data/reentrancy/solidity_contract/Victim.sol:9:13: Expected indentation of 16 spaces but found 12 [Error/indent]
+/data/reentrancy/solidity_contract/Victim.sol:10:9: Expected indentation of 12 spaces but found 8 [Error/indent]
+/data/reentrancy/solidity_contract/Victim.sol:11:9: Expected indentation of 12 spaces but found 8 [Error/indent]
+/data/reentrancy/solidity_contract/Victim.sol:12:5: Expected indentation of 8 spaces but found 4 [Error/indent]
+/data/reentrancy/solidity_contract/Victim.sol:13:3: Expected indentation of 4 spaces but found 2 [Error/indent]
+/data/reentrancy/solidity_contract/Victim.sol:14:3: Expected indentation of 4 spaces but found 2 [Error/indent]
+
+10 problems

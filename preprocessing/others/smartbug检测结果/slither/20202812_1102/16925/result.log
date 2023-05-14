@@ -1,0 +1,19 @@
+INFO:Detectors:[91m
+Reentrancy in PoormansHoneyPot.withdraw (/../data/reentrancy/solidity_contract/16925.sol#14-17):
+	External calls:
+	- assert(bool)(msg.sender.call.value(balances[msg.sender])()) (/../data/reentrancy/solidity_contract/16925.sol#15)
+	State variables written after the call(s):
+	- balances (/../data/reentrancy/solidity_contract/16925.sol#16)
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#reentrancy-vulnerabilities[0m
+INFO:Detectors:[92m
+PoormansHoneyPot.withdraw (/../data/reentrancy/solidity_contract/16925.sol#14-17) should be declared external
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#public-function-that-could-be-declared-as-external[0m
+INFO:Detectors:[92m
+Detected issues with version pragma in /../data/reentrancy/solidity_contract/16925.sol:
+	- pragma solidity^0.4.23 (/../data/reentrancy/solidity_contract/16925.sol#1): it allows old versions
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#incorrect-version-of-solidity[0m
+INFO:Detectors:[92m
+Low level call in PoormansHoneyPot.withdraw (/../data/reentrancy/solidity_contract/16925.sol#14-17):
+	-assert(bool)(msg.sender.call.value(balances[msg.sender])()) /../data/reentrancy/solidity_contract/16925.sol#15
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#low-level-calls[0m
+INFO:Slither:/../data/reentrancy/solidity_contract/16925.sol analyzed (1 contracts), 4 result(s) found

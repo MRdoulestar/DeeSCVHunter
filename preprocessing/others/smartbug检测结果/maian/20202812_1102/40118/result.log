@@ -1,0 +1,255 @@
+====================================================================================================
+[1m[ ] Compiling Solidity contract from the file /../data/reentrancy/solidity_contract/40118.sol ... [0m/../data/reentrancy/solidity_contract/40118.sol:34:3: Error: Functions are not allowed to have the same name as the contract. If you intend this to be a constructor, use "constructor(...) { ... }" to define it.
+  function DaoAccount (address _owner, address _challengeOwner) {
+  ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/40118.sol:26:41: Error: "throw" is deprecated in favour of "revert()", "require()" and "assert()".
+	modifier noEther() {if (msg.value > 0) throw; _;}
+	                                       ^---^
+/../data/reentrancy/solidity_contract/40118.sol:28:49: Error: "throw" is deprecated in favour of "revert()", "require()" and "assert()".
+	modifier onlyOwner() {if (owner != msg.sender) throw; _;}
+	                                               ^---^
+/../data/reentrancy/solidity_contract/40118.sol:30:67: Error: "throw" is deprecated in favour of "revert()", "require()" and "assert()".
+	modifier onlyChallengeOwner() {if (challengeOwner != msg.sender) throw; _;}
+	                                                                 ^---^
+/../data/reentrancy/solidity_contract/40118.sol:34:3: Error: No visibility specified. Did you intend to add "public"?
+  function DaoAccount (address _owner, address _challengeOwner) {
+  ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/40118.sol:43:2: Error: No visibility specified. Did you intend to add "external"?
+	function () onlyOwner returns (uint256 newBalance){
+ ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/40118.sol:48:4: Error: "throw" is deprecated in favour of "revert()", "require()" and "assert()".
+			throw;
+			^---^
+/../data/reentrancy/solidity_contract/40118.sol:59:34: Error: "throw" is deprecated in favour of "revert()", "require()" and "assert()".
+        if (msg.sender != owner) throw;
+                                 ^---^
+/../data/reentrancy/solidity_contract/40118.sol:61:18: Error: "throw" is deprecated in favour of "revert()", "require()" and "assert()".
+		if (!result) { throw;}
+		               ^---^
+/../data/reentrancy/solidity_contract/40118.sol:66:2: Error: No visibility specified. Did you intend to add "public"?
+	function refund() noEther onlyOwner {
+ ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/40118.sol:67:26: Error: "throw" is deprecated in favour of "revert()", "require()" and "assert()".
+		if (tokenBalance == 0) throw;
+		                       ^---^
+/../data/reentrancy/solidity_contract/40118.sol:73:2: Error: No visibility specified. Did you intend to add "public"?
+	function terminate() noEther onlyChallengeOwner {
+ ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/40118.sol:104:2: Error: Functions are not allowed to have the same name as the contract. If you intend this to be a constructor, use "constructor(...) { ... }" to define it.
+	function DaoChallenge () {
+ ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/40118.sol:98:41: Error: "throw" is deprecated in favour of "revert()", "require()" and "assert()".
+	modifier noEther() {if (msg.value > 0) throw; _;}
+	                                       ^---^
+/../data/reentrancy/solidity_contract/40118.sol:100:49: Error: "throw" is deprecated in favour of "revert()", "require()" and "assert()".
+	modifier onlyOwner() {if (owner != msg.sender) throw; _;}
+	                                               ^---^
+
+[91m[-] Cannot compile the contract [0m
+
+====================================================================================================
+[1m[ ] Compiling Solidity contract from the file /../data/reentrancy/solidity_contract/40118.sol ... [0m/../data/reentrancy/solidity_contract/40118.sol:34:3: Error: Functions are not allowed to have the same name as the contract. If you intend this to be a constructor, use "constructor(...) { ... }" to define it.
+  function DaoAccount (address _owner, address _challengeOwner) {
+  ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/40118.sol:26:41: Error: "throw" is deprecated in favour of "revert()", "require()" and "assert()".
+	modifier noEther() {if (msg.value > 0) throw; _;}
+	                                       ^---^
+/../data/reentrancy/solidity_contract/40118.sol:28:49: Error: "throw" is deprecated in favour of "revert()", "require()" and "assert()".
+	modifier onlyOwner() {if (owner != msg.sender) throw; _;}
+	                                               ^---^
+/../data/reentrancy/solidity_contract/40118.sol:30:67: Error: "throw" is deprecated in favour of "revert()", "require()" and "assert()".
+	modifier onlyChallengeOwner() {if (challengeOwner != msg.sender) throw; _;}
+	                                                                 ^---^
+/../data/reentrancy/solidity_contract/40118.sol:34:3: Error: No visibility specified. Did you intend to add "public"?
+  function DaoAccount (address _owner, address _challengeOwner) {
+  ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/40118.sol:43:2: Error: No visibility specified. Did you intend to add "external"?
+	function () onlyOwner returns (uint256 newBalance){
+ ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/40118.sol:48:4: Error: "throw" is deprecated in favour of "revert()", "require()" and "assert()".
+			throw;
+			^---^
+/../data/reentrancy/solidity_contract/40118.sol:59:34: Error: "throw" is deprecated in favour of "revert()", "require()" and "assert()".
+        if (msg.sender != owner) throw;
+                                 ^---^
+/../data/reentrancy/solidity_contract/40118.sol:61:18: Error: "throw" is deprecated in favour of "revert()", "require()" and "assert()".
+		if (!result) { throw;}
+		               ^---^
+/../data/reentrancy/solidity_contract/40118.sol:66:2: Error: No visibility specified. Did you intend to add "public"?
+	function refund() noEther onlyOwner {
+ ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/40118.sol:67:26: Error: "throw" is deprecated in favour of "revert()", "require()" and "assert()".
+		if (tokenBalance == 0) throw;
+		                       ^---^
+/../data/reentrancy/solidity_contract/40118.sol:73:2: Error: No visibility specified. Did you intend to add "public"?
+	function terminate() noEther onlyChallengeOwner {
+ ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/40118.sol:104:2: Error: Functions are not allowed to have the same name as the contract. If you intend this to be a constructor, use "constructor(...) { ... }" to define it.
+
+[91m[-] Cannot compile the contract [0m
+
+====================================================================================================
+[1m[ ] Compiling Solidity contract from the file /../data/reentrancy/solidity_contract/40118.sol ... [0m/../data/reentrancy/solidity_contract/40118.sol:34:3: Error: Functions are not allowed to have the same name as the contract. If you intend this to be a constructor, use "constructor(...) { ... }" to define it.
+  function DaoAccount (address _owner, address _challengeOwner) {
+  ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/40118.sol:26:41: Error: "throw" is deprecated in favour of "revert()", "require()" and "assert()".
+	modifier noEther() {if (msg.value > 0) throw; _;}
+	                                       ^---^
+/../data/reentrancy/solidity_contract/40118.sol:28:49: Error: "throw" is deprecated in favour of "revert()", "require()" and "assert()".
+	modifier onlyOwner() {if (owner != msg.sender) throw; _;}
+	                                               ^---^
+/../data/reentrancy/solidity_contract/40118.sol:30:67: Error: "throw" is deprecated in favour of "revert()", "require()" and "assert()".
+	modifier onlyChallengeOwner() {if (challengeOwner != msg.sender) throw; _;}
+	                                                                 ^---^
+/../data/reentrancy/solidity_contract/40118.sol:34:3: Error: No visibility specified. Did you intend to add "public"?
+  function DaoAccount (address _owner, address _challengeOwner) {
+  ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/40118.sol:43:2: Error: No visibility specified. Did you intend to add "external"?
+	function () onlyOwner returns (uint256 newBalance){
+ ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/40118.sol:48:4: Error: "throw" is deprecated in favour of "revert()", "require()" and "assert()".
+			throw;
+			^---^
+/../data/reentrancy/solidity_contract/40118.sol:59:34: Error: "throw" is deprecated in favour of "revert()", "require()" and "assert()".
+        if (msg.sender != owner) throw;
+                                 ^---^
+/../data/reentrancy/solidity_contract/40118.sol:61:18: Error: "throw" is deprecated in favour of "revert()", "require()" and "assert()".
+		if (!result) { throw;}
+		               ^---^
+/../data/reentrancy/solidity_contract/40118.sol:66:2: Error: No visibility specified. Did you intend to add "public"?
+	function refund() noEther onlyOwner {
+ ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/40118.sol:67:26: Error: "throw" is deprecated in favour of "revert()", "require()" and "assert()".
+
+[91m[-] Cannot compile the contract [0m
+
+====================================================================================================
+[1m[ ] Compiling Solidity contract from the file /../data/reentrancy/solidity_contract/40118.sol ... [0m/../data/reentrancy/solidity_contract/40118.sol:34:3: Error: Functions are not allowed to have the same name as the contract. If you intend this to be a constructor, use "constructor(...) { ... }" to define it.
+  function DaoAccount (address _owner, address _challengeOwner) {
+  ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/40118.sol:26:41: Error: "throw" is deprecated in favour of "revert()", "require()" and "assert()".
+	modifier noEther() {if (msg.value > 0) throw; _;}
+	                                       ^---^
+/../data/reentrancy/solidity_contract/40118.sol:28:49: Error: "throw" is deprecated in favour of "revert()", "require()" and "assert()".
+	modifier onlyOwner() {if (owner != msg.sender) throw; _;}
+	                                               ^---^
+/../data/reentrancy/solidity_contract/40118.sol:30:67: Error: "throw" is deprecated in favour of "revert()", "require()" and "assert()".
+	modifier onlyChallengeOwner() {if (challengeOwner != msg.sender) throw; _;}
+	                                                                 ^---^
+/../data/reentrancy/solidity_contract/40118.sol:34:3: Error: No visibility specified. Did you intend to add "public"?
+  function DaoAccount (address _owner, address _challengeOwner) {
+  ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/40118.sol:43:2: Error: No visibility specified. Did you intend to add "external"?
+	function () onlyOwner returns (uint256 newBalance){
+ ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/40118.sol:48:4: Error: "throw" is deprecated in favour of "revert()", "require()" and "assert()".
+			throw;
+			^---^
+/../data/reentrancy/solidity_contract/40118.sol:59:34: Error: "throw" is deprecated in favour of "revert()", "require()" and "assert()".
+        if (msg.sender != owner) throw;
+                                 ^---^
+/../data/reentrancy/solidity_contract/40118.sol:61:18: Error: "throw" is deprecated in favour of "revert()", "require()" and "assert()".
+		if (!result) { throw;}
+		               ^---^
+/../data/reentrancy/solidity_contract/40118.sol:66:2: Error: No visibility specified. Did you intend to add "public"?
+	function refund() noEther onlyOwner {
+ ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/40118.sol:67:26: Error: "throw" is deprecated in favour of "revert()", "require()" and "assert()".
+		if (tokenBalance == 0) throw;
+		                       ^---^
+/../data/reentrancy/solidity_contract/40118.sol:73:2: Error: No visibility specified. Did you intend to add "public"?
+	function terminate() noEther onlyChallengeOwner {
+ ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/40118.sol:104:2: Error: Functions are not allowed to have the same name as the contract. If you intend this to be a constructor, use "constructor(...) { ... }" to define it.
+	function DaoChallenge () {
+ ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/40118.sol:98:41: Error: "throw" is deprecated in favour of "revert()", "require()" and "assert()".
+	modifier noEther() {if (msg.value > 0) throw; _;}
+	                                       ^---^
+/../data/reentrancy/solidity_contract/40118.sol:100:49: Error: "throw" is deprecated in favour of "revert()", "require()" and "assert()".
+	modifier onlyOwner() {if (owner != msg.sender) throw; _;}
+	                                               ^---^
+/../data/reentrancy/solidity_contract/40118.sol:104:2: Error: No visibility specified. Did you intend to add "public"?
+	function DaoChallenge () {
+ ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/40118.sol:108:2: Error: No visibility specified. Did you intend to add "external"?
+	function () noEther {
+ ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/40118.sol:117:2: Error: No visibility specified. Did you intend to add "public"?
+	function createAccount () noEther returns (DaoAccount account) {
+ ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/40118.sol:122:53: Error: "throw" is deprecated in favour of "revert()", "require()" and "assert()".
+
+[91m[-] Cannot compile the contract [0m
+
+====================================================================================================
+[1m[ ] Compiling Solidity contract from the file /../data/reentrancy/solidity_contract/40118.sol ... [0m/../data/reentrancy/solidity_contract/40118.sol:34:3: Error: Functions are not allowed to have the same name as the contract. If you intend this to be a constructor, use "constructor(...) { ... }" to define it.
+  function DaoAccount (address _owner, address _challengeOwner) {
+  ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/40118.sol:26:41: Error: "throw" is deprecated in favour of "revert()", "require()" and "assert()".
+	modifier noEther() {if (msg.value > 0) throw; _;}
+	                                       ^---^
+/../data/reentrancy/solidity_contract/40118.sol:28:49: Error: "throw" is deprecated in favour of "revert()", "require()" and "assert()".
+	modifier onlyOwner() {if (owner != msg.sender) throw; _;}
+	                                               ^---^
+/../data/reentrancy/solidity_contract/40118.sol:30:67: Error: "throw" is deprecated in favour of "revert()", "require()" and "assert()".
+	modifier onlyChallengeOwner() {if (challengeOwner != msg.sender) throw; _;}
+	                                                                 ^---^
+/../data/reentrancy/solidity_contract/40118.sol:34:3: Error: No visibility specified. Did you intend to add "public"?
+  function DaoAccount (address _owner, address _challengeOwner) {
+  ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/40118.sol:43:2: Error: No visibility specified. Did you intend to add "external"?
+	function () onlyOwner returns (uint256 newBalance){
+ ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/40118.sol:48:4: Error: "throw" is deprecated in favour of "revert()", "require()" and "assert()".
+			throw;
+			^---^
+/../data/reentrancy/solidity_contract/40118.sol:59:34: Error: "throw" is deprecated in favour of "revert()", "require()" and "assert()".
+        if (msg.sender != owner) throw;
+                                 ^---^
+/../data/reentrancy/solidity_contract/40118.sol:61:18: Error: "throw" is deprecated in favour of "revert()", "require()" and "assert()".
+		if (!result) { throw;}
+		               ^---^
+/../data/reentrancy/solidity_contract/40118.sol:66:2: Error: No visibility specified. Did you intend to add "public"?
+	function refund() noEther onlyOwner {
+ ^ (Relevant source part starts here and spans across multiple lines).
+
+[91m[-] Cannot compile the contract [0m
+
+====================================================================================================
+[1m[ ] Compiling Solidity contract from the file /../data/reentrancy/solidity_contract/40118.sol ... [0m/../data/reentrancy/solidity_contract/40118.sol:34:3: Error: Functions are not allowed to have the same name as the contract. If you intend this to be a constructor, use "constructor(...) { ... }" to define it.
+  function DaoAccount (address _owner, address _challengeOwner) {
+  ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/40118.sol:26:41: Error: "throw" is deprecated in favour of "revert()", "require()" and "assert()".
+	modifier noEther() {if (msg.value > 0) throw; _;}
+	                                       ^---^
+/../data/reentrancy/solidity_contract/40118.sol:28:49: Error: "throw" is deprecated in favour of "revert()", "require()" and "assert()".
+	modifier onlyOwner() {if (owner != msg.sender) throw; _;}
+	                                               ^---^
+/../data/reentrancy/solidity_contract/40118.sol:30:67: Error: "throw" is deprecated in favour of "revert()", "require()" and "assert()".
+	modifier onlyChallengeOwner() {if (challengeOwner != msg.sender) throw; _;}
+	                                                                 ^---^
+/../data/reentrancy/solidity_contract/40118.sol:34:3: Error: No visibility specified. Did you intend to add "public"?
+  function DaoAccount (address _owner, address _challengeOwner) {
+  ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/40118.sol:43:2: Error: No visibility specified. Did you intend to add "external"?
+	function () onlyOwner returns (uint256 newBalance){
+ ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/40118.sol:48:4: Error: "throw" is deprecated in favour of "revert()", "require()" and "assert()".
+			throw;
+			^---^
+/../data/reentrancy/solidity_contract/40118.sol:59:34: Error: "throw" is deprecated in favour of "revert()", "require()" and "assert()".
+        if (msg.sender != owner) throw;
+                                 ^---^
+/../data/reentrancy/solidity_contract/40118.sol:61:18: Error: "throw" is deprecated in favour of "revert()", "require()" and "assert()".
+		if (!result) { throw;}
+		               ^---^
+/../data/reentrancy/solidity_contract/40118.sol:66:2: Error: No visibility specified. Did you intend to add "public"?
+	function refund() noEther onlyOwner {
+ ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/40118.sol:67:26: Error: "throw" is deprecated in favour of "revert()", "require()" and "assert()".
+		if (tokenBalance == 0) throw;
+		                       ^---^
+/../data/reentrancy/solidity_contract/40118.sol:73:2: Error: No visibility specified. Did you intend to add "public"?
+
+[91m[-] Cannot compile the contract [0m

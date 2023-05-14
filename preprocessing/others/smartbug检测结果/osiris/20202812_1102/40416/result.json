@@ -1,0 +1,14 @@
+{
+  "contract": "40416",
+  "tool": "osiris",
+  "start": 1609162492.3802931,
+  "end": 1609162549.05278,
+  "duration": 56.672486782073975,
+  "analysis": [
+    {
+      "errors": [],
+      "file": "/../data/reentrancy/solidity_contract/40416.sol",
+      "name": "EtherDelta"
+    }
+  ]
+}

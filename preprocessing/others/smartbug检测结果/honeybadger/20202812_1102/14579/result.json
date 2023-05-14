@@ -1,0 +1,14 @@
+{
+  "contract": "14579",
+  "tool": "honeybadger",
+  "start": 1609132380.77788,
+  "end": 1609132456.9376671,
+  "duration": 76.15978717803955,
+  "analysis": [
+    {
+      "errors": [],
+      "file": "/../data/reentrancy/solidity_contract/14579.sol",
+      "name": "ICOStartReservation"
+    }
+  ]
+}

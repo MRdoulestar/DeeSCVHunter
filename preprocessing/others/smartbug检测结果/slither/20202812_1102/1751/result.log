@@ -1,0 +1,28 @@
+INFO:Slither:Compilation warnings/errors on /../data/reentrancy/solidity_contract/1751.sol:
+/../data/reentrancy/solidity_contract/1751.sol:8:9: Warning: Return value of low-level calls not used.
+        target.call.value(msg.value)(data);
+        ^--------------------------------^
+
+INFO:Detectors:[91m
+VaultProxy.Owner (/../data/reentrancy/solidity_contract/1751.sol#13) shadows:
+	- Proxy.Owner (/../data/reentrancy/solidity_contract/1751.sol#5)
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#state-variable-shadowing[0m
+INFO:Detectors:[92m
+Proxy.transferOwner (/../data/reentrancy/solidity_contract/1751.sol#6) should be declared external
+Proxy.proxy (/../data/reentrancy/solidity_contract/1751.sol#7-9) should be declared external
+VaultProxy.fallback (/../data/reentrancy/solidity_contract/1751.sol#16) should be declared external
+VaultProxy.Vault (/../data/reentrancy/solidity_contract/1751.sol#18-23) should be declared external
+VaultProxy.withdraw (/../data/reentrancy/solidity_contract/1751.sol#31-35) should be declared external
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#public-function-that-could-be-declared-as-external[0m
+INFO:Detectors:[92m
+Low level call in Proxy.proxy (/../data/reentrancy/solidity_contract/1751.sol#7-9):
+	-target.call.value(msg.value)(data) /../data/reentrancy/solidity_contract/1751.sol#8
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#low-level-calls[0m
+INFO:Detectors:[92m
+Parameter '_owner' of Proxy.transferOwner (/../data/reentrancy/solidity_contract/1751.sol#6) is not in mixedCase
+Variable 'Proxy.Owner' (/../data/reentrancy/solidity_contract/1751.sol#5) is not in mixedCase
+Function 'VaultProxy.Vault' (/../data/reentrancy/solidity_contract/1751.sol#18-23) is not in mixedCase
+Variable 'VaultProxy.Owner' (/../data/reentrancy/solidity_contract/1751.sol#13) is not in mixedCase
+Variable 'VaultProxy.Deposits' (/../data/reentrancy/solidity_contract/1751.sol#14) is not in mixedCase
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#conformance-to-solidity-naming-conventions[0m
+INFO:Slither:/../data/reentrancy/solidity_contract/1751.sol analyzed (2 contracts), 12 result(s) found

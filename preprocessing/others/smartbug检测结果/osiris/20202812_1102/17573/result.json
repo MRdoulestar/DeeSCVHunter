@@ -1,0 +1,65 @@
+{
+  "contract": "17573",
+  "tool": "osiris",
+  "start": 1609168994.289043,
+  "end": 1609169073.631825,
+  "duration": 79.34278202056885,
+  "analysis": [
+    {
+      "errors": [],
+      "file": "/../data/reentrancy/solidity_contract/17573.sol",
+      "name": "Controlled"
+    },
+    {
+      "errors": [],
+      "file": "/../data/reentrancy/solidity_contract/17573.sol",
+      "name": "DSAuth"
+    },
+    {
+      "errors": [],
+      "file": "/../data/reentrancy/solidity_contract/17573.sol",
+      "name": "DSAuthEvents"
+    },
+    {
+      "errors": [],
+      "file": "/../data/reentrancy/solidity_contract/17573.sol",
+      "name": "DSMath"
+    },
+    {
+      "errors": [],
+      "file": "/../data/reentrancy/solidity_contract/17573.sol",
+      "name": "DSNote"
+    },
+    {
+      "errors": [],
+      "file": "/../data/reentrancy/solidity_contract/17573.sol",
+      "name": "DSStop"
+    },
+    {
+      "errors": [],
+      "file": "/../data/reentrancy/solidity_contract/17573.sol",
+      "name": "DSToken"
+    },
+    {
+      "errors": [],
+      "file": "/../data/reentrancy/solidity_contract/17573.sol",
+      "name": "DSTokenBase"
+    },
+    {
+      "errors": [
+        {
+          "line": 470,
+          "column": 13,
+          "message": "callstack_bug"
+        },
+        {
+          "line": 548,
+          "column": 19,
+          "message": "reentrancy_bug"
+        }
+      ],
+      "file": "/../data/reentrancy/solidity_contract/17573.sol",
+      "name": "OMT"
+    }
+  ]
+}

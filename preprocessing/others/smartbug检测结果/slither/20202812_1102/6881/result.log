@@ -1,0 +1,107 @@
+INFO:Detectors:[91m
+Reentrancy in BancorBuyer.buyOne (/../data/reentrancy/solidity_contract/6881.sol#111-117):
+	External calls:
+	- tokenBalance = token.balanceOf(this) (/../data/reentrancy/solidity_contract/6881.sol#113)
+	- require(bool)(_exchange.call.value(_value)(_data)) (/../data/reentrancy/solidity_contract/6881.sol#114)
+	External calls sending eth:
+	- require(bool)(_exchange.call.value(_value)(_data)) (/../data/reentrancy/solidity_contract/6881.sol#114)
+	State variables written after the call(s):
+	- balances (/../data/reentrancy/solidity_contract/6881.sol#115)
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#reentrancy-vulnerabilities[0m
+INFO:Detectors:[93m
+BancorBuyer.deposit (/../data/reentrancy/solidity_contract/6881.sol#78-92) uses a dangerous strict equality:
+	- require(bool)(token.balanceOf(this) == balance.add(tokenValue))
+BancorBuyer.deposit (/../data/reentrancy/solidity_contract/6881.sol#78-92) uses a dangerous strict equality:
+	- require(bool)(token.balanceOf(this) == balance.add(tokenValue))
+BancorBuyer.withdraw (/../data/reentrancy/solidity_contract/6881.sol#94-109) uses a dangerous strict equality:
+	- require(bool)(token.balanceOf(this) == tokenBalance.sub(tokenValue))
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#dangerous-strict-equalities[0m
+INFO:Detectors:[93m
+BancorBuyer.deposit (/../data/reentrancy/solidity_contract/6881.sol#78-92) does not use the value returned by external calls:
+	-token.transferFrom(msg.sender,this,tokenValue) (/../data/reentrancy/solidity_contract/6881.sol#88)
+BancorBuyer.withdraw (/../data/reentrancy/solidity_contract/6881.sol#94-109) does not use the value returned by external calls:
+	-token.transfer(_to,tokenValue) (/../data/reentrancy/solidity_contract/6881.sol#105)
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#unused-return[0m
+INFO:Detectors:[92m
+BancorBuyer.sumWeightOfMultiToken has external calls inside a loop:
+	- sumWeight += mtkn.weights(mtkn.tokens(i - 1)) (/../data/reentrancy/solidity_contract/6881.sol#74)
+BancorBuyer.deposit has external calls inside a loop:
+	- balance = token.balanceOf(this) (/../data/reentrancy/solidity_contract/6881.sol#87)
+BancorBuyer.deposit has external calls inside a loop:
+	- token.transferFrom(msg.sender,this,tokenValue) (/../data/reentrancy/solidity_contract/6881.sol#88)
+BancorBuyer.deposit has external calls inside a loop:
+	- require(bool)(token.balanceOf(this) == balance.add(tokenValue)) (/../data/reentrancy/solidity_contract/6881.sol#89)
+BancorBuyer.withdraw has external calls inside a loop:
+	- tokenBalance = token.balanceOf(this) (/../data/reentrancy/solidity_contract/6881.sol#104)
+BancorBuyer.withdraw has external calls inside a loop:
+	- token.transfer(_to,tokenValue) (/../data/reentrancy/solidity_contract/6881.sol#105)
+BancorBuyer.withdraw has external calls inside a loop:
+	- require(bool)(token.balanceOf(this) == tokenBalance.sub(tokenValue)) (/../data/reentrancy/solidity_contract/6881.sol#106)
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation/_edit#calls-inside-a-loop[0m
+INFO:Detectors:[92m
+Reentrancy in BancorBuyer.deposit (/../data/reentrancy/solidity_contract/6881.sol#78-92):
+	External calls:
+	- balance = token.balanceOf(this) (/../data/reentrancy/solidity_contract/6881.sol#87)
+	- token.transferFrom(msg.sender,this,tokenValue) (/../data/reentrancy/solidity_contract/6881.sol#88)
+	- require(bool)(token.balanceOf(this) == balance.add(tokenValue)) (/../data/reentrancy/solidity_contract/6881.sol#89)
+	State variables written after the call(s):
+	- tokenBalances (/../data/reentrancy/solidity_contract/6881.sol#90)
+Reentrancy in BancorBuyer.withdraw (/../data/reentrancy/solidity_contract/6881.sol#94-109):
+	External calls:
+	- tokenBalance = token.balanceOf(this) (/../data/reentrancy/solidity_contract/6881.sol#104)
+	- token.transfer(_to,tokenValue) (/../data/reentrancy/solidity_contract/6881.sol#105)
+	- require(bool)(token.balanceOf(this) == tokenBalance.sub(tokenValue)) (/../data/reentrancy/solidity_contract/6881.sol#106)
+	External calls sending eth:
+	- _to.transfer(_value) (/../data/reentrancy/solidity_contract/6881.sol#96)
+	State variables written after the call(s):
+	- tokenBalances (/../data/reentrancy/solidity_contract/6881.sol#107)
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#reentrancy-vulnerabilities-2[0m
+INFO:Detectors:[92m
+ERC20Basic.totalSupply (/../data/reentrancy/solidity_contract/6881.sol#36) should be declared external
+ERC20Basic.balanceOf (/../data/reentrancy/solidity_contract/6881.sol#37) should be declared external
+ERC20Basic.transfer (/../data/reentrancy/solidity_contract/6881.sol#38) should be declared external
+ERC20.allowance (/../data/reentrancy/solidity_contract/6881.sol#43-44) should be declared external
+ERC20.transferFrom (/../data/reentrancy/solidity_contract/6881.sol#46-47) should be declared external
+ERC20.approve (/../data/reentrancy/solidity_contract/6881.sol#49) should be declared external
+IMultiToken.tokens (/../data/reentrancy/solidity_contract/6881.sol#59) should be declared external
+IMultiToken.weights (/../data/reentrancy/solidity_contract/6881.sol#60) should be declared external
+IMultiToken.totalSupply (/../data/reentrancy/solidity_contract/6881.sol#61) should be declared external
+IMultiToken.mint (/../data/reentrancy/solidity_contract/6881.sol#62) should be declared external
+BancorBuyer.sumWeightOfMultiToken (/../data/reentrancy/solidity_contract/6881.sol#72-76) should be declared external
+BancorBuyer.buyOne (/../data/reentrancy/solidity_contract/6881.sol#111-117) should be declared external
+BancorBuyer.buy1 (/../data/reentrancy/solidity_contract/6881.sol#119-122) should be declared external
+BancorBuyer.buy2 (/../data/reentrancy/solidity_contract/6881.sol#124-128) should be declared external
+BancorBuyer.buy3 (/../data/reentrancy/solidity_contract/6881.sol#130-135) should be declared external
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#public-function-that-could-be-declared-as-external[0m
+INFO:Detectors:[92m
+Low level call in BancorBuyer.buyOne (/../data/reentrancy/solidity_contract/6881.sol#111-117):
+	-require(bool)(_exchange.call.value(_value)(_data)) /../data/reentrancy/solidity_contract/6881.sol#114
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#low-level-calls[0m
+INFO:Detectors:[92m
+Parameter '_beneficiary' of BancorBuyer.deposit (/../data/reentrancy/solidity_contract/6881.sol#78) is not in mixedCase
+Parameter '_tokens' of BancorBuyer.deposit (/../data/reentrancy/solidity_contract/6881.sol#78) is not in mixedCase
+Parameter '_tokenValues' of BancorBuyer.deposit (/../data/reentrancy/solidity_contract/6881.sol#78) is not in mixedCase
+Parameter '_to' of BancorBuyer.withdraw (/../data/reentrancy/solidity_contract/6881.sol#94) is not in mixedCase
+Parameter '_value' of BancorBuyer.withdraw (/../data/reentrancy/solidity_contract/6881.sol#94) is not in mixedCase
+Parameter '_tokens' of BancorBuyer.withdraw (/../data/reentrancy/solidity_contract/6881.sol#94) is not in mixedCase
+Parameter '_tokenValues' of BancorBuyer.withdraw (/../data/reentrancy/solidity_contract/6881.sol#94) is not in mixedCase
+Parameter '_exchange' of BancorBuyer.buyOne (/../data/reentrancy/solidity_contract/6881.sol#111) is not in mixedCase
+Parameter '_value' of BancorBuyer.buyOne (/../data/reentrancy/solidity_contract/6881.sol#111) is not in mixedCase
+Parameter '_data' of BancorBuyer.buyOne (/../data/reentrancy/solidity_contract/6881.sol#111) is not in mixedCase
+Parameter '_tokens' of BancorBuyer.buy1 (/../data/reentrancy/solidity_contract/6881.sol#119) is not in mixedCase
+Parameter '_exchanges' of BancorBuyer.buy1 (/../data/reentrancy/solidity_contract/6881.sol#119) is not in mixedCase
+Parameter '_values' of BancorBuyer.buy1 (/../data/reentrancy/solidity_contract/6881.sol#119) is not in mixedCase
+Parameter '_data1' of BancorBuyer.buy1 (/../data/reentrancy/solidity_contract/6881.sol#119) is not in mixedCase
+Parameter '_tokens' of BancorBuyer.buy2 (/../data/reentrancy/solidity_contract/6881.sol#124) is not in mixedCase
+Parameter '_exchanges' of BancorBuyer.buy2 (/../data/reentrancy/solidity_contract/6881.sol#124) is not in mixedCase
+Parameter '_values' of BancorBuyer.buy2 (/../data/reentrancy/solidity_contract/6881.sol#124) is not in mixedCase
+Parameter '_data1' of BancorBuyer.buy2 (/../data/reentrancy/solidity_contract/6881.sol#124) is not in mixedCase
+Parameter '_data2' of BancorBuyer.buy2 (/../data/reentrancy/solidity_contract/6881.sol#124) is not in mixedCase
+Parameter '_tokens' of BancorBuyer.buy3 (/../data/reentrancy/solidity_contract/6881.sol#130) is not in mixedCase
+Parameter '_exchanges' of BancorBuyer.buy3 (/../data/reentrancy/solidity_contract/6881.sol#130) is not in mixedCase
+Parameter '_values' of BancorBuyer.buy3 (/../data/reentrancy/solidity_contract/6881.sol#130) is not in mixedCase
+Parameter '_data1' of BancorBuyer.buy3 (/../data/reentrancy/solidity_contract/6881.sol#130) is not in mixedCase
+Parameter '_data2' of BancorBuyer.buy3 (/../data/reentrancy/solidity_contract/6881.sol#130) is not in mixedCase
+Parameter '_data3' of BancorBuyer.buy3 (/../data/reentrancy/solidity_contract/6881.sol#130) is not in mixedCase
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#conformance-to-solidity-naming-conventions[0m
+INFO:Slither:/../data/reentrancy/solidity_contract/6881.sol analyzed (5 contracts), 55 result(s) found

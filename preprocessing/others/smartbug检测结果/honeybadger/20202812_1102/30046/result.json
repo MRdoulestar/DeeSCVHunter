@@ -1,0 +1,19 @@
+{
+  "contract": "30046",
+  "tool": "honeybadger",
+  "start": 1609156849.464255,
+  "end": 1609157052.1698408,
+  "duration": 202.7055857181549,
+  "analysis": [
+    {
+      "errors": [],
+      "file": "/../data/reentrancy/solidity_contract/30046.sol",
+      "name": "TrustWallet"
+    },
+    {
+      "errors": [],
+      "file": "/../data/reentrancy/solidity_contract/30046.sol",
+      "name": "TrustWalletFactory"
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+line 8:20 mismatched input '.' expecting {';', '='}
+/data/reentrancy/solidity_contract/SendBalance.sol:2:2: Expected indentation of 4 spaces but found 1 [Error/indent]
+/data/reentrancy/solidity_contract/SendBalance.sol:3:2: Expected indentation of 4 spaces but found 1 [Error/indent]
+/data/reentrancy/solidity_contract/SendBalance.sol:4:2: Expected indentation of 4 spaces but found 1 [Error/indent]
+/data/reentrancy/solidity_contract/SendBalance.sol:5:5: Expected indentation of 8 spaces but found 4 [Error/indent]
+/data/reentrancy/solidity_contract/SendBalance.sol:6:2: Expected indentation of 4 spaces but found 1 [Error/indent]
+/data/reentrancy/solidity_contract/SendBalance.sol:7:2: Expected indentation of 4 spaces but found 1 [Error/indent]
+/data/reentrancy/solidity_contract/SendBalance.sol:8:33: Expected indentation of 8 spaces but found 32 [Error/indent]
+/data/reentrancy/solidity_contract/SendBalance.sol:8:5: Expected indentation of 8 spaces but found 4 [Error/indent]
+/data/reentrancy/solidity_contract/SendBalance.sol:8:22: Expected indentation of 8 spaces but found 21 [Error/indent]
+/data/reentrancy/solidity_contract/SendBalance.sol:8:22: Expected indentation of 8 spaces but found 21 [Error/indent]
+/data/reentrancy/solidity_contract/SendBalance.sol:9:2: Expected indentation of 4 spaces but found 1 [Error/indent]
+/data/reentrancy/solidity_contract/SendBalance.sol:10:2: Expected indentation of 4 spaces but found 1 [Error/indent]
+/data/reentrancy/solidity_contract/SendBalance.sol:11:5: Expected indentation of 8 spaces but found 4 [Error/indent]
+/data/reentrancy/solidity_contract/SendBalance.sol:12:5: Expected indentation of 8 spaces but found 4 [Error/indent]
+/data/reentrancy/solidity_contract/SendBalance.sol:13:2: Expected indentation of 4 spaces but found 1 [Error/indent]
+
+15 problems

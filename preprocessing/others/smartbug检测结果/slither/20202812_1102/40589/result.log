@@ -1,0 +1,122 @@
+INFO:Slither:Compilation warnings/errors on /../data/reentrancy/solidity_contract/40589.sol:
+/../data/reentrancy/solidity_contract/40589.sol:2:5: Warning: Defining constructors as functions with the same name as the contract is deprecated. Use "constructor(...) { ... }" instead.
+    function owned() {
+    ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/40589.sol:8:51: Warning: "throw" is deprecated in favour of "revert()", "require()" and "assert()".
+    modifier onlyowner { if (msg.sender != owner) throw; _; }
+                                                  ^---^
+/../data/reentrancy/solidity_contract/40589.sol:36:5: Warning: Defining constructors as functions with the same name as the contract is deprecated. Use "constructor(...) { ... }" instead.
+    function Order(address _token, uint _weiPerToken, uint _decimalPlaces) {
+    ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/40589.sol:44:42: Warning: "throw" is deprecated in favour of "revert()", "require()" and "assert()".
+            if (!to.call.value(value)()) throw;
+                                         ^---^
+/../data/reentrancy/solidity_contract/40589.sol:73:29: Warning: "throw" is deprecated in favour of "revert()", "require()" and "assert()".
+        if (numTokens == 0) throw;
+                            ^---^
+/../data/reentrancy/solidity_contract/40589.sol:74:69: Warning: "throw" is deprecated in favour of "revert()", "require()" and "assert()".
+        if (this.balance < numTokens * weiPerToken / decimalPlaces) throw;
+                                                                    ^---^
+/../data/reentrancy/solidity_contract/40589.sol:1:1: Warning: Source file does not specify required compiler version!Consider adding "pragma solidity ^0.4.25;"
+contract owned {
+^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/40589.sol:14:9: Warning: Invoking events without "emit" prefix is deprecated.
+        OwnershipTransfer(msg.sender, to);
+        ^-------------------------------^
+/../data/reentrancy/solidity_contract/40589.sol:66:17: Warning: Using contract member "balance" inherited from the address type is deprecated. Convert the contract to "address" type to access the member, for example use "address(contract).balance" instead.
+        return (this.balance / weiPerToken) * decimalPlaces;
+                ^----------^
+/../data/reentrancy/solidity_contract/40589.sol:74:13: Warning: Using contract member "balance" inherited from the address type is deprecated. Convert the contract to "address" type to access the member, for example use "address(contract).balance" instead.
+        if (this.balance < numTokens * weiPerToken / decimalPlaces) throw;
+            ^----------^
+/../data/reentrancy/solidity_contract/40589.sol:78:9: Warning: Invoking events without "emit" prefix is deprecated.
+        OrderFilled(_from, numTokens);
+        ^---------------------------^
+/../data/reentrancy/solidity_contract/40589.sol:2:5: Warning: No visibility specified. Defaulting to "public". 
+    function owned() {
+    ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/40589.sol:20:5: Warning: No visibility specified. Defaulting to "public". 
+    function totalSupply() constant returns (uint supply);
+    ^----------------------------------------------------^
+/../data/reentrancy/solidity_contract/40589.sol:21:5: Warning: No visibility specified. Defaulting to "public". 
+    function balanceOf(address who) constant returns (uint value);
+    ^------------------------------------------------------------^
+/../data/reentrancy/solidity_contract/40589.sol:22:5: Warning: No visibility specified. Defaulting to "public". 
+    function allowance(address owner, address spender) constant returns (uint _allowance);
+    ^------------------------------------------------------------------------------------^
+/../data/reentrancy/solidity_contract/40589.sol:23:5: Warning: No visibility specified. Defaulting to "public". 
+    function transfer(address to, uint value) returns (bool ok);
+    ^----------------------------------------------------------^
+/../data/reentrancy/solidity_contract/40589.sol:24:5: Warning: No visibility specified. Defaulting to "public". 
+    function transferFrom(address from, address to, uint value) returns (bool ok);
+    ^----------------------------------------------------------------------------^
+/../data/reentrancy/solidity_contract/40589.sol:25:5: Warning: No visibility specified. Defaulting to "public". 
+    function approve(address spender, uint value) returns (bool ok);
+    ^--------------------------------------------------------------^
+/../data/reentrancy/solidity_contract/40589.sol:36:5: Warning: No visibility specified. Defaulting to "public". 
+    function Order(address _token, uint _weiPerToken, uint _decimalPlaces) {
+    ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/40589.sol:56:37: Warning: Unused function parameter. Remove or comment out the variable name to silence this warning.
+    function getTransferableBalance(address who) internal returns (uint amount) {
+                                    ^---------^
+/../data/reentrancy/solidity_contract/40589.sol:65:5: Warning: No visibility specified. Defaulting to "public". 
+    function numTokensAbleToPurchase() constant returns (uint) {
+    ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/40589.sol:103:5: Warning: No visibility specified. Defaulting to "public". 
+    function () {
+    ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/40589.sol:105:13: Warning: "msg.value" used in non-payable function. Do you want to add the "payable" modifier to this function?
+        if (msg.value > 0) {
+            ^-------^
+/../data/reentrancy/solidity_contract/40589.sol:113:5: Warning: No visibility specified. Defaulting to "public". 
+    function cancel() onlyowner {
+    ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/40589.sol:48:5: Warning: Function state mutability can be restricted to pure
+    function min(uint a, uint b) internal returns (uint) {
+    ^ (Relevant source part starts here and spans across multiple lines).
+
+INFO:Detectors:[91m
+Order.sendRobust (/../data/reentrancy/solidity_contract/40589.sol#42-46) sends eth to arbitrary user
+	Dangerous calls:
+	- ! to.send(value) (/../data/reentrancy/solidity_contract/40589.sol#43-45)
+	- ! to.call.value(value)() (/../data/reentrancy/solidity_contract/40589.sol#44)
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#functions-that-send-ether-to-arbitrary-destinations[0m
+INFO:Detectors:[92m
+Deprecated standard detected @ /../data/reentrancy/solidity_contract/40589.sol#8:
+	- Usage of "throw" should be replaced with "revert()"
+Deprecated standard detected @ /../data/reentrancy/solidity_contract/40589.sol#44:
+	- Usage of "throw" should be replaced with "revert()"
+Deprecated standard detected @ /../data/reentrancy/solidity_contract/40589.sol#73:
+	- Usage of "throw" should be replaced with "revert()"
+Deprecated standard detected @ /../data/reentrancy/solidity_contract/40589.sol#74:
+	- Usage of "throw" should be replaced with "revert()"
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#deprecated-standards[0m
+INFO:Detectors:[92m
+owned.transferOwnership (/../data/reentrancy/solidity_contract/40589.sol#12-15) should be declared external
+ERC20.totalSupply (/../data/reentrancy/solidity_contract/40589.sol#20) should be declared external
+ERC20.balanceOf (/../data/reentrancy/solidity_contract/40589.sol#21) should be declared external
+ERC20.allowance (/../data/reentrancy/solidity_contract/40589.sol#22) should be declared external
+ERC20.transfer (/../data/reentrancy/solidity_contract/40589.sol#23) should be declared external
+ERC20.transferFrom (/../data/reentrancy/solidity_contract/40589.sol#24) should be declared external
+ERC20.approve (/../data/reentrancy/solidity_contract/40589.sol#25) should be declared external
+Order.fillOrder (/../data/reentrancy/solidity_contract/40589.sol#82-84) should be declared external
+Order.fillMyOrder (/../data/reentrancy/solidity_contract/40589.sol#87-89) should be declared external
+Order.fillTheirOrder (/../data/reentrancy/solidity_contract/40589.sol#92-94) should be declared external
+Order.fallback (/../data/reentrancy/solidity_contract/40589.sol#103-110) should be declared external
+Order.cancel (/../data/reentrancy/solidity_contract/40589.sol#113-115) should be declared external
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#public-function-that-could-be-declared-as-external[0m
+INFO:Detectors:[92m
+Low level call in Order.sendRobust (/../data/reentrancy/solidity_contract/40589.sol#42-46):
+	-! to.call.value(value)() /../data/reentrancy/solidity_contract/40589.sol#44
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#low-level-calls[0m
+INFO:Detectors:[92m
+Contract 'owned' (/../data/reentrancy/solidity_contract/40589.sol#1-16) is not in CapWords
+Function 'Order.Order' (/../data/reentrancy/solidity_contract/40589.sol#36-40) is not in mixedCase
+Parameter '_token' of Order.Order (/../data/reentrancy/solidity_contract/40589.sol#36) is not in mixedCase
+Parameter '_weiPerToken' of Order.Order (/../data/reentrancy/solidity_contract/40589.sol#36) is not in mixedCase
+Parameter '_decimalPlaces' of Order.Order (/../data/reentrancy/solidity_contract/40589.sol#36) is not in mixedCase
+Function 'Order._fillOrder' (/../data/reentrancy/solidity_contract/40589.sol#72-80) is not in mixedCase
+Parameter '_from' of Order._fillOrder (/../data/reentrancy/solidity_contract/40589.sol#72) is not in mixedCase
+Parameter '_from' of Order.fillOrder (/../data/reentrancy/solidity_contract/40589.sol#82) is not in mixedCase
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#conformance-to-solidity-naming-conventions[0m
+INFO:Slither:/../data/reentrancy/solidity_contract/40589.sol analyzed (3 contracts), 26 result(s) found

@@ -1,0 +1,161 @@
+INFO:Detectors:[91m
+NamiMarket.withdrawToken (/../data/reentrancy/solidity_contract/5515.sol#942-952) sends eth to arbitrary user
+	Dangerous calls:
+	- _account.transfer(_amount) (/../data/reentrancy/solidity_contract/5515.sol#948)
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#functions-that-send-ether-to-arbitrary-destinations[0m
+INFO:Detectors:[93m
+NamiCrowdSale (/../data/reentrancy/solidity_contract/5515.sol#364-758) has incorrect ERC20 function interface(s):
+	-transfer (/../data/reentrancy/solidity_contract/5515.sol#482-486)
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#incorrect-erc20-interface[0m
+INFO:Detectors:[93m
+NamiCrowdSale._transfer (/../data/reentrancy/solidity_contract/5515.sol#455-471) uses a dangerous strict equality:
+	- assert(bool)(balanceOf[_from] + balanceOf[_to] == previousBalances)
+NamiCrowdSale._transfer (/../data/reentrancy/solidity_contract/5515.sol#455-471) uses a dangerous strict equality:
+	- assert(bool)(balanceOf[_from] + balanceOf[_to] == previousBalances)
+NamiCrowdSale.burnTokens (/../data/reentrancy/solidity_contract/5515.sol#613-631) uses a dangerous strict equality:
+	- totalSupply == 0
+NamiCrowdSale._transfer (/../data/reentrancy/solidity_contract/5515.sol#455-471) uses a dangerous strict equality:
+	- assert(bool)(balanceOf[_from] + balanceOf[_to] == previousBalances)
+NamiCrowdSale.burnTokens (/../data/reentrancy/solidity_contract/5515.sol#613-631) uses a dangerous strict equality:
+	- totalSupply == 0
+NamiCrowdSale.setPresalePhase (/../data/reentrancy/solidity_contract/5515.sol#635-653) uses a dangerous strict equality:
+	- canSwitchPhase = (currentPhase == Phase.Created && _nextPhase == Phase.Running) || (currentPhase == Phase.Running && _nextPhase == Phase.Paused) || ((currentPhase == Phase.Running || currentPhase == Phase.Paused) && _nextPhase == Phase.Migrating && crowdsaleManager != 0x0) || (currentPhase == Phase.Paused && _nextPhase == Phase.Running) || (currentPhase == Phase.Migrating && _nextPhase == Phase.Migrated && totalSupply == 0)
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#dangerous-strict-equalities[0m
+INFO:Detectors:[93m
+NamiCrowdSale.transferToExchange (/../data/reentrancy/solidity_contract/5515.sol#722-737) does not use the value returned by external calls:
+	-receiver.tokenFallbackExchange(msg.sender,_value,_price) (/../data/reentrancy/solidity_contract/5515.sol#734)
+NamiCrowdSale.transferToBuyer (/../data/reentrancy/solidity_contract/5515.sol#741-756) does not use the value returned by external calls:
+	-receiver.tokenFallbackBuyer(msg.sender,_value,_buyer) (/../data/reentrancy/solidity_contract/5515.sol#753)
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#unused-return[0m
+INFO:Detectors:[92m
+Reentrancy in NamiCrowdSale._migrateToken (/../data/reentrancy/solidity_contract/5515.sol#685-699):
+	External calls:
+	- newToken = presale.balanceOf(_from) (/../data/reentrancy/solidity_contract/5515.sol#689)
+	- presale.burnTokens(_from) (/../data/reentrancy/solidity_contract/5515.sol#692)
+	State variables written after the call(s):
+	- balanceOf (/../data/reentrancy/solidity_contract/5515.sol#694)
+	- totalSupply (/../data/reentrancy/solidity_contract/5515.sol#696)
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#reentrancy-vulnerabilities-2[0m
+INFO:Detectors:[92m
+NamiCrowdSale.transferToExchange uses assembly (/../data/reentrancy/solidity_contract/5515.sol#722-737)
+	- /../data/reentrancy/solidity_contract/5515.sol#725-729
+NamiCrowdSale.transferToBuyer uses assembly (/../data/reentrancy/solidity_contract/5515.sol#741-756)
+	- /../data/reentrancy/solidity_contract/5515.sol#744-748
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#assembly-usage[0m
+INFO:Detectors:[92m
+NamiCrowdSale.decimals should be constant (/../data/reentrancy/solidity_contract/5515.sol#381)
+NamiCrowdSale.name should be constant (/../data/reentrancy/solidity_contract/5515.sol#379)
+NamiCrowdSale.symbol should be constant (/../data/reentrancy/solidity_contract/5515.sol#380)
+NamiMarket.name should be constant (/../data/reentrancy/solidity_contract/5515.sol#929)
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#state-variables-that-could-be-declared-constant[0m
+INFO:Detectors:[92m
+NamiMultiSigWallet.fallback (/../data/reentrancy/solidity_contract/5515.sol#83-86) should be declared external
+NamiMultiSigWallet.addOwner (/../data/reentrancy/solidity_contract/5515.sol#106-116) should be declared external
+NamiMultiSigWallet.removeOwner (/../data/reentrancy/solidity_contract/5515.sol#120-136) should be declared external
+NamiMultiSigWallet.replaceOwner (/../data/reentrancy/solidity_contract/5515.sol#141-157) should be declared external
+NamiMultiSigWallet.submitTransaction (/../data/reentrancy/solidity_contract/5515.sol#175-181) should be declared external
+NamiMultiSigWallet.revokeConfirmation (/../data/reentrancy/solidity_contract/5515.sol#193-201) should be declared external
+NamiMultiSigWallet.getConfirmationCount (/../data/reentrancy/solidity_contract/5515.sol#260-269) should be declared external
+NamiMultiSigWallet.getTransactionCount (/../data/reentrancy/solidity_contract/5515.sol#275-284) should be declared external
+NamiMultiSigWallet.getOwners (/../data/reentrancy/solidity_contract/5515.sol#288-294) should be declared external
+NamiMultiSigWallet.getConfirmations (/../data/reentrancy/solidity_contract/5515.sol#299-317) should be declared external
+NamiMultiSigWallet.getTransactionIds (/../data/reentrancy/solidity_contract/5515.sol#325-343) should be declared external
+ERC223ReceivingContract.tokenFallback (/../data/reentrancy/solidity_contract/5515.sol#352) should be declared external
+ERC223ReceivingContract.tokenFallbackBuyer (/../data/reentrancy/solidity_contract/5515.sol#353) should be declared external
+ERC223ReceivingContract.tokenFallbackExchange (/../data/reentrancy/solidity_contract/5515.sol#354) should be declared external
+PresaleToken.burnTokens (/../data/reentrancy/solidity_contract/5515.sol#358) should be declared external
+NamiCrowdSale.transferForTeam (/../data/reentrancy/solidity_contract/5515.sol#475-479) should be declared external
+NamiCrowdSale.transfer (/../data/reentrancy/solidity_contract/5515.sol#482-486) should be declared external
+NamiCrowdSale.transferFrom (/../data/reentrancy/solidity_contract/5515.sol#489-498) should be declared external
+NamiCrowdSale.approveAndCall (/../data/reentrancy/solidity_contract/5515.sol#510-520) should be declared external
+NamiCrowdSale.changeTransferable (/../data/reentrancy/solidity_contract/5515.sol#523-527) should be declared external
+NamiCrowdSale.changeEscrow (/../data/reentrancy/solidity_contract/5515.sol#530-535) should be declared external
+NamiCrowdSale.changeBinary (/../data/reentrancy/solidity_contract/5515.sol#538-543) should be declared external
+NamiCrowdSale.changeBinaryAddress (/../data/reentrancy/solidity_contract/5515.sol#546-552) should be declared external
+NamiCrowdSale.fallback (/../data/reentrancy/solidity_contract/5515.sol#589-591) should be declared external
+NamiCrowdSale.burnTokens (/../data/reentrancy/solidity_contract/5515.sol#613-631) should be declared external
+NamiCrowdSale.setPresalePhase (/../data/reentrancy/solidity_contract/5515.sol#635-653) should be declared external
+NamiCrowdSale.withdrawEther (/../data/reentrancy/solidity_contract/5515.sol#656-664) should be declared external
+NamiCrowdSale.safeWithdraw (/../data/reentrancy/solidity_contract/5515.sol#666-673) should be declared external
+NamiCrowdSale.setCrowdsaleManager (/../data/reentrancy/solidity_contract/5515.sol#676-682) should be declared external
+NamiCrowdSale.migrateToken (/../data/reentrancy/solidity_contract/5515.sol#702-706) should be declared external
+NamiCrowdSale.migrateForInvestor (/../data/reentrancy/solidity_contract/5515.sol#709-711) should be declared external
+NamiCrowdSale.transferToExchange (/../data/reentrancy/solidity_contract/5515.sol#722-737) should be declared external
+NamiCrowdSale.transferToBuyer (/../data/reentrancy/solidity_contract/5515.sol#741-756) should be declared external
+NamiMarket.changeEscrow (/../data/reentrancy/solidity_contract/5515.sol#855-860) should be declared external
+NamiMarket.changePause (/../data/reentrancy/solidity_contract/5515.sol#863-867) should be declared external
+NamiMarket.changeMinWithdraw (/../data/reentrancy/solidity_contract/5515.sol#870-875) should be declared external
+NamiMarket.changeMaxWithdraw (/../data/reentrancy/solidity_contract/5515.sol#877-882) should be declared external
+NamiMarket.withdrawEther (/../data/reentrancy/solidity_contract/5515.sol#886-894) should be declared external
+NamiMarket.withdrawNac (/../data/reentrancy/solidity_contract/5515.sol#899-908) should be declared external
+NamiMarket.setController (/../data/reentrancy/solidity_contract/5515.sol#912-918) should be declared external
+NamiMarket.removeController (/../data/reentrancy/solidity_contract/5515.sol#921-927) should be declared external
+NamiMarket.fallback (/../data/reentrancy/solidity_contract/5515.sol#937-940) should be declared external
+NamiMarket.withdrawToken (/../data/reentrancy/solidity_contract/5515.sol#942-952) should be declared external
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#public-function-that-could-be-declared-as-external[0m
+INFO:Detectors:[92m
+Low level call in NamiMultiSigWallet.executeTransaction (/../data/reentrancy/solidity_contract/5515.sol#205-215):
+	-transactions[transactionId].destination.call.value(transactions[transactionId].value)(transactions[transactionId].data) /../data/reentrancy/solidity_contract/5515.sol#208-213
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#low-level-calls[0m
+INFO:Detectors:[92m
+Parameter '_owners' of NamiMultiSigWallet. (/../data/reentrancy/solidity_contract/5515.sol#92) is not in mixedCase
+Parameter '_required' of NamiMultiSigWallet. (/../data/reentrancy/solidity_contract/5515.sol#92) is not in mixedCase
+Parameter '_required' of NamiMultiSigWallet.changeRequirement (/../data/reentrancy/solidity_contract/5515.sol#161) is not in mixedCase
+Contract 'tokenRecipient' (/../data/reentrancy/solidity_contract/5515.sol#362) is not in CapWords
+Parameter '_escrow' of NamiCrowdSale. (/../data/reentrancy/solidity_contract/5515.sol#369) is not in mixedCase
+Parameter '_namiMultiSigWallet' of NamiCrowdSale. (/../data/reentrancy/solidity_contract/5515.sol#369) is not in mixedCase
+Parameter '_namiPresale' of NamiCrowdSale. (/../data/reentrancy/solidity_contract/5515.sol#369) is not in mixedCase
+Function 'NamiCrowdSale._transfer' (/../data/reentrancy/solidity_contract/5515.sol#455-471) is not in mixedCase
+Parameter '_from' of NamiCrowdSale._transfer (/../data/reentrancy/solidity_contract/5515.sol#455) is not in mixedCase
+Parameter '_to' of NamiCrowdSale._transfer (/../data/reentrancy/solidity_contract/5515.sol#455) is not in mixedCase
+Parameter '_value' of NamiCrowdSale._transfer (/../data/reentrancy/solidity_contract/5515.sol#455) is not in mixedCase
+Parameter '_to' of NamiCrowdSale.transferForTeam (/../data/reentrancy/solidity_contract/5515.sol#475) is not in mixedCase
+Parameter '_value' of NamiCrowdSale.transferForTeam (/../data/reentrancy/solidity_contract/5515.sol#475) is not in mixedCase
+Parameter '_to' of NamiCrowdSale.transfer (/../data/reentrancy/solidity_contract/5515.sol#482) is not in mixedCase
+Parameter '_value' of NamiCrowdSale.transfer (/../data/reentrancy/solidity_contract/5515.sol#482) is not in mixedCase
+Parameter '_from' of NamiCrowdSale.transferFrom (/../data/reentrancy/solidity_contract/5515.sol#489) is not in mixedCase
+Parameter '_to' of NamiCrowdSale.transferFrom (/../data/reentrancy/solidity_contract/5515.sol#489) is not in mixedCase
+Parameter '_value' of NamiCrowdSale.transferFrom (/../data/reentrancy/solidity_contract/5515.sol#489) is not in mixedCase
+Parameter '_spender' of NamiCrowdSale.approve (/../data/reentrancy/solidity_contract/5515.sol#501) is not in mixedCase
+Parameter '_value' of NamiCrowdSale.approve (/../data/reentrancy/solidity_contract/5515.sol#501) is not in mixedCase
+Parameter '_spender' of NamiCrowdSale.approveAndCall (/../data/reentrancy/solidity_contract/5515.sol#510) is not in mixedCase
+Parameter '_value' of NamiCrowdSale.approveAndCall (/../data/reentrancy/solidity_contract/5515.sol#510) is not in mixedCase
+Parameter '_extraData' of NamiCrowdSale.approveAndCall (/../data/reentrancy/solidity_contract/5515.sol#510) is not in mixedCase
+Parameter '_escrow' of NamiCrowdSale.changeEscrow (/../data/reentrancy/solidity_contract/5515.sol#530) is not in mixedCase
+Parameter '_binary' of NamiCrowdSale.changeBinary (/../data/reentrancy/solidity_contract/5515.sol#538) is not in mixedCase
+Parameter '_binaryAddress' of NamiCrowdSale.changeBinaryAddress (/../data/reentrancy/solidity_contract/5515.sol#546) is not in mixedCase
+Parameter '_buyer' of NamiCrowdSale.buy (/../data/reentrancy/solidity_contract/5515.sol#594) is not in mixedCase
+Parameter '_owner' of NamiCrowdSale.burnTokens (/../data/reentrancy/solidity_contract/5515.sol#613) is not in mixedCase
+Parameter '_nextPhase' of NamiCrowdSale.setPresalePhase (/../data/reentrancy/solidity_contract/5515.sol#635) is not in mixedCase
+Parameter '_amount' of NamiCrowdSale.withdrawEther (/../data/reentrancy/solidity_contract/5515.sol#656) is not in mixedCase
+Parameter '_withdraw' of NamiCrowdSale.safeWithdraw (/../data/reentrancy/solidity_contract/5515.sol#666) is not in mixedCase
+Parameter '_amount' of NamiCrowdSale.safeWithdraw (/../data/reentrancy/solidity_contract/5515.sol#666) is not in mixedCase
+Parameter '_mgr' of NamiCrowdSale.setCrowdsaleManager (/../data/reentrancy/solidity_contract/5515.sol#676) is not in mixedCase
+Function 'NamiCrowdSale._migrateToken' (/../data/reentrancy/solidity_contract/5515.sol#685-699) is not in mixedCase
+Parameter '_from' of NamiCrowdSale._migrateToken (/../data/reentrancy/solidity_contract/5515.sol#685) is not in mixedCase
+Parameter '_to' of NamiCrowdSale._migrateToken (/../data/reentrancy/solidity_contract/5515.sol#685) is not in mixedCase
+Parameter '_from' of NamiCrowdSale.migrateToken (/../data/reentrancy/solidity_contract/5515.sol#702) is not in mixedCase
+Parameter '_to' of NamiCrowdSale.migrateToken (/../data/reentrancy/solidity_contract/5515.sol#702) is not in mixedCase
+Parameter '_to' of NamiCrowdSale.transferToExchange (/../data/reentrancy/solidity_contract/5515.sol#722) is not in mixedCase
+Parameter '_value' of NamiCrowdSale.transferToExchange (/../data/reentrancy/solidity_contract/5515.sol#722) is not in mixedCase
+Parameter '_price' of NamiCrowdSale.transferToExchange (/../data/reentrancy/solidity_contract/5515.sol#722) is not in mixedCase
+Parameter '_to' of NamiCrowdSale.transferToBuyer (/../data/reentrancy/solidity_contract/5515.sol#741) is not in mixedCase
+Parameter '_value' of NamiCrowdSale.transferToBuyer (/../data/reentrancy/solidity_contract/5515.sol#741) is not in mixedCase
+Parameter '_buyer' of NamiCrowdSale.transferToBuyer (/../data/reentrancy/solidity_contract/5515.sol#741) is not in mixedCase
+Variable 'NamiCrowdSale.TRANSFERABLE' (/../data/reentrancy/solidity_contract/5515.sol#383) is not in mixedCase
+Parameter '_escrow' of NamiMarket. (/../data/reentrancy/solidity_contract/5515.sol#808) is not in mixedCase
+Parameter '_namiMultiSigWallet' of NamiMarket. (/../data/reentrancy/solidity_contract/5515.sol#808) is not in mixedCase
+Parameter '_namiAddress' of NamiMarket. (/../data/reentrancy/solidity_contract/5515.sol#808) is not in mixedCase
+Parameter '_escrow' of NamiMarket.changeEscrow (/../data/reentrancy/solidity_contract/5515.sol#855) is not in mixedCase
+Parameter '_minWithdraw' of NamiMarket.changeMinWithdraw (/../data/reentrancy/solidity_contract/5515.sol#870) is not in mixedCase
+Parameter '_maxNac' of NamiMarket.changeMaxWithdraw (/../data/reentrancy/solidity_contract/5515.sol#877) is not in mixedCase
+Parameter '_amount' of NamiMarket.withdrawEther (/../data/reentrancy/solidity_contract/5515.sol#886) is not in mixedCase
+Parameter '_to' of NamiMarket.withdrawEther (/../data/reentrancy/solidity_contract/5515.sol#886) is not in mixedCase
+Parameter '_amount' of NamiMarket.withdrawNac (/../data/reentrancy/solidity_contract/5515.sol#899) is not in mixedCase
+Parameter '_controller' of NamiMarket.setController (/../data/reentrancy/solidity_contract/5515.sol#912) is not in mixedCase
+Parameter '_controller' of NamiMarket.removeController (/../data/reentrancy/solidity_contract/5515.sol#921) is not in mixedCase
+Parameter '_account' of NamiMarket.withdrawToken (/../data/reentrancy/solidity_contract/5515.sol#942) is not in mixedCase
+Parameter '_amount' of NamiMarket.withdrawToken (/../data/reentrancy/solidity_contract/5515.sol#942) is not in mixedCase
+Variable 'NamiMarket.NamiAddr' (/../data/reentrancy/solidity_contract/5515.sol#825) is not in mixedCase
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#conformance-to-solidity-naming-conventions[0m
+INFO:Slither:/../data/reentrancy/solidity_contract/5515.sol analyzed (7 contracts), 114 result(s) found

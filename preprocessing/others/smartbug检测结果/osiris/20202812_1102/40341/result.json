@@ -1,0 +1,56 @@
+{
+  "contract": "40341",
+  "tool": "osiris",
+  "start": 1609169009.571265,
+  "end": 1609169101.1957781,
+  "duration": 91.62451314926147,
+  "analysis": [
+    {
+      "errors": [],
+      "file": "/../data/reentrancy/solidity_contract/40341.sol",
+      "name": "CarefulSenderMixin"
+    },
+    {
+      "errors": [
+        {
+          "line": 143,
+          "column": 17,
+          "message": "overflow_bugs"
+        },
+        {
+          "line": 143,
+          "column": 17,
+          "message": "underflow_bugs"
+        }
+      ],
+      "file": "/../data/reentrancy/solidity_contract/40341.sol",
+      "name": "ExposedInternalsForTesting"
+    },
+    {
+      "errors": [
+        {
+          "line": 31,
+          "column": 16,
+          "message": "callstack_bug"
+        },
+        {
+          "line": 31,
+          "column": 16,
+          "message": "concurrency_bug"
+        },
+        {
+          "line": 31,
+          "column": 16,
+          "message": "concurrency_bug"
+        }
+      ],
+      "file": "/../data/reentrancy/solidity_contract/40341.sol",
+      "name": "FundsHolderMixin"
+    },
+    {
+      "errors": [],
+      "file": "/../data/reentrancy/solidity_contract/40341.sol",
+      "name": "Kingdom"
+    }
+  ]
+}

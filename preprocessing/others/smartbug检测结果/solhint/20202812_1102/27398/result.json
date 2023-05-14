@@ -1,0 +1,49 @@
+{
+  "contract": "27398",
+  "tool": "solhint",
+  "start": 1609137408.632939,
+  "end": 1609137410.14055,
+  "duration": 1.50761079788208,
+  "analysis": [
+    {
+      "file": "/data/reentrancy/solidity_contract/27398.sol",
+      "line": "12",
+      "column": "2",
+      "message": "Line length must be no more than 120 but current length is 4637.",
+      "level": "Error",
+      "type": "max-line-length"
+    },
+    {
+      "file": "/data/reentrancy/solidity_contract/27398.sol",
+      "line": "12",
+      "column": "3036",
+      "message": "Expected indentation of 12 spaces but found 3035",
+      "level": "Error",
+      "type": "indent"
+    },
+    {
+      "file": "/data/reentrancy/solidity_contract/27398.sol",
+      "line": "14",
+      "column": "2",
+      "message": "Line length must be no more than 120 but current length is 121.",
+      "level": "Error",
+      "type": "max-line-length"
+    },
+    {
+      "file": "/data/reentrancy/solidity_contract/27398.sol",
+      "line": "17",
+      "column": "2",
+      "message": "Line length must be no more than 120 but current length is 4731.",
+      "level": "Error",
+      "type": "max-line-length"
+    },
+    {
+      "file": "/data/reentrancy/solidity_contract/27398.sol",
+      "line": "17",
+      "column": "2049",
+      "message": "Expected indentation of 8 spaces but found 2048",
+      "level": "Error",
+      "type": "indent"
+    }
+  ]
+}

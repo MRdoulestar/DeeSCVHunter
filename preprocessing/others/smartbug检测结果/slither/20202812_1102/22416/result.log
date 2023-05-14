@@ -1,0 +1,61 @@
+INFO:Slither:Compilation warnings/errors on /../data/reentrancy/solidity_contract/22416.sol:
+/../data/reentrancy/solidity_contract/22416.sol:37:27: Warning: "sha3" has been deprecated in favour of "keccak256"
+        token.call(bytes4(sha3("transfer(address,uint256)")),to,amount); 
+                          ^-------------------------------^
+/../data/reentrancy/solidity_contract/22416.sol:37:9: Warning: Return value of low-level calls not used.
+        token.call(bytes4(sha3("transfer(address,uint256)")),to,amount); 
+        ^-------------------------------------------------------------^
+/../data/reentrancy/solidity_contract/22416.sol:54:5: Warning: No visibility specified. Defaulting to "public". 
+    function()
+    ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/22416.sol:60:5: Warning: No visibility specified. Defaulting to "public". 
+    function Deposit() 
+    ^ (Relevant source part starts here and spans across multiple lines).
+
+INFO:Detectors:[91m
+Reentrancy in TokenBank.WithdrawToHolder (/../data/reentrancy/solidity_contract/22416.sol#76-82):
+	External calls:
+	- _addr.call.value(_wei)() (/../data/reentrancy/solidity_contract/22416.sol#78-80)
+	State variables written after the call(s):
+	- Holders (/../data/reentrancy/solidity_contract/22416.sol#79)
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#reentrancy-vulnerabilities[0m
+INFO:Detectors:[91m
+Token.owner (/../data/reentrancy/solidity_contract/22416.sol#32) shadows:
+	- Ownable.owner (/../data/reentrancy/solidity_contract/22416.sol#6)
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#state-variable-shadowing[0m
+INFO:Detectors:[92m
+Deprecated standard detected @ /../data/reentrancy/solidity_contract/22416.sol#37:
+	- Usage of "sha3()" should be replaced with "keccak256()"
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#deprecated-standards[0m
+INFO:Detectors:[92m
+Ownable.changeOwner (/../data/reentrancy/solidity_contract/22416.sol#8-13) should be declared external
+Ownable.confirmOwner (/../data/reentrancy/solidity_contract/22416.sol#15-22) should be declared external
+TokenBank.initTokenBank (/../data/reentrancy/solidity_contract/22416.sol#47-52) should be declared external
+TokenBank.fallback (/../data/reentrancy/solidity_contract/22416.sol#54-58) should be declared external
+TokenBank.WitdrawTokenToHolder (/../data/reentrancy/solidity_contract/22416.sol#69-74) should be declared external
+TokenBank.WithdrawToHolder (/../data/reentrancy/solidity_contract/22416.sol#76-82) should be declared external
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#public-function-that-could-be-declared-as-external[0m
+INFO:Detectors:[92m
+Detected issues with version pragma in /../data/reentrancy/solidity_contract/22416.sol:
+	- pragma solidity^0.4.19 (/../data/reentrancy/solidity_contract/22416.sol#1): it allows old versions
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#incorrect-version-of-solidity[0m
+INFO:Detectors:[92m
+Low level call in Token.WithdrawToken (/../data/reentrancy/solidity_contract/22416.sol#33-38):
+	-token.call(bytes4(sha3()(transfer(address,uint256))),to,amount) /../data/reentrancy/solidity_contract/22416.sol#37
+Low level call in TokenBank.WithdrawToHolder (/../data/reentrancy/solidity_contract/22416.sol#76-82):
+	-_addr.call.value(_wei)() /../data/reentrancy/solidity_contract/22416.sol#78-80
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#low-level-calls[0m
+INFO:Detectors:[92m
+Function 'Token.WithdrawToken' (/../data/reentrancy/solidity_contract/22416.sol#33-38) is not in mixedCase
+Function 'TokenBank.Deposit' (/../data/reentrancy/solidity_contract/22416.sol#60-67) is not in mixedCase
+Function 'TokenBank.WitdrawTokenToHolder' (/../data/reentrancy/solidity_contract/22416.sol#69-74) is not in mixedCase
+Parameter '_to' of TokenBank.WitdrawTokenToHolder (/../data/reentrancy/solidity_contract/22416.sol#69) is not in mixedCase
+Parameter '_token' of TokenBank.WitdrawTokenToHolder (/../data/reentrancy/solidity_contract/22416.sol#69) is not in mixedCase
+Parameter '_amount' of TokenBank.WitdrawTokenToHolder (/../data/reentrancy/solidity_contract/22416.sol#69) is not in mixedCase
+Function 'TokenBank.WithdrawToHolder' (/../data/reentrancy/solidity_contract/22416.sol#76-82) is not in mixedCase
+Parameter '_addr' of TokenBank.WithdrawToHolder (/../data/reentrancy/solidity_contract/22416.sol#76) is not in mixedCase
+Parameter '_wei' of TokenBank.WithdrawToHolder (/../data/reentrancy/solidity_contract/22416.sol#76) is not in mixedCase
+Variable 'TokenBank.MinDeposit' (/../data/reentrancy/solidity_contract/22416.sol#43) is not in mixedCase
+Variable 'TokenBank.Holders' (/../data/reentrancy/solidity_contract/22416.sol#44) is not in mixedCase
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#conformance-to-solidity-naming-conventions[0m
+INFO:Slither:/../data/reentrancy/solidity_contract/22416.sol analyzed (3 contracts), 23 result(s) found

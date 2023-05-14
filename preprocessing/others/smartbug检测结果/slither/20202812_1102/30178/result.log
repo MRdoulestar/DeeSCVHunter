@@ -1,0 +1,90 @@
+INFO:Slither:Compilation warnings/errors on /../data/reentrancy/solidity_contract/30178.sol:
+/../data/reentrancy/solidity_contract/30178.sol:44:5: Warning: Defining constructors as functions with the same name as the contract is deprecated. Use "constructor(...) { ... }" instead.
+    function Owned() public {
+    ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/30178.sol:55:9: Warning: Invoking events without "emit" prefix is deprecated.
+        LogContractOwnershipChangeInitiated(_to);
+        ^--------------------------------------^
+/../data/reentrancy/solidity_contract/30178.sol:65:9: Warning: Invoking events without "emit" prefix is deprecated.
+        LogContractOwnershipChangeCompleted(contractOwner);
+        ^------------------------------------------------^
+/../data/reentrancy/solidity_contract/30178.sol:71:9: Warning: Invoking events without "emit" prefix is deprecated.
+        LogContractOwnershipChangeCompleted(contractOwner);
+        ^------------------------------------------------^
+/../data/reentrancy/solidity_contract/30178.sol:113:9: Warning: Invoking events without "emit" prefix is deprecated.
+        LogPaused(_value);
+        ^---------------^
+/../data/reentrancy/solidity_contract/30178.sol:120:9: Warning: Invoking events without "emit" prefix is deprecated.
+        LogWalletUpdated(_wallet);
+        ^-----------------------^
+/../data/reentrancy/solidity_contract/30178.sol:145:9: Warning: Invoking events without "emit" prefix is deprecated.
+        LogBought(msg.sender, msg.value, totalTokensToTransfer, 0);
+        ^--------------------------------------------------------^
+/../data/reentrancy/solidity_contract/30178.sol:166:9: Warning: Invoking events without "emit" prefix is deprecated.
+        LogBought(_beneficiary, _value, totalTokensToTransfer, _customerId);
+        ^-----------------------------------------------------------------^
+
+INFO:Detectors:[93m
+totalBonus in NeuroSale._calculateVolumeBonus (/../data/reentrancy/solidity_contract/30178.sol#207) is a local variable never initialiazed
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#uninitialized-local-variables[0m
+INFO:Detectors:[92m
+Token.transfer (/../data/reentrancy/solidity_contract/30178.sol#4) should be declared external
+Token.burn (/../data/reentrancy/solidity_contract/30178.sol#5) should be declared external
+Token.balanceOf (/../data/reentrancy/solidity_contract/30178.sol#6) should be declared external
+Token.decimals (/../data/reentrancy/solidity_contract/30178.sol#7) should be declared external
+Token.transferOwnership (/../data/reentrancy/solidity_contract/30178.sol#8) should be declared external
+Owned.changeContractOwnership (/../data/reentrancy/solidity_contract/30178.sol#53-57) should be declared external
+Owned.claimContractOwnership (/../data/reentrancy/solidity_contract/30178.sol#59-67) should be declared external
+Owned.forceChangeContractOwnership (/../data/reentrancy/solidity_contract/30178.sol#69-73) should be declared external
+NeuroSale.init (/../data/reentrancy/solidity_contract/30178.sol#101-109) should be declared external
+NeuroSale.setSalePause (/../data/reentrancy/solidity_contract/30178.sol#111-115) should be declared external
+NeuroSale.setWallet (/../data/reentrancy/solidity_contract/30178.sol#117-122) should be declared external
+NeuroSale.transferOwnership (/../data/reentrancy/solidity_contract/30178.sol#124-127) should be declared external
+NeuroSale.burnUnsold (/../data/reentrancy/solidity_contract/30178.sol#129-133) should be declared external
+NeuroSale.buyWithCustomerId (/../data/reentrancy/solidity_contract/30178.sol#150-168) should be declared external
+NeuroSale.fallback (/../data/reentrancy/solidity_contract/30178.sol#238-240) should be declared external
+NeuroSale.recoverTokens (/../data/reentrancy/solidity_contract/30178.sol#243-245) should be declared external
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#public-function-that-could-be-declared-as-external[0m
+INFO:Detectors:[92m
+Detected issues with version pragma in /../data/reentrancy/solidity_contract/30178.sol:
+	- pragma solidity^0.4.18 (/../data/reentrancy/solidity_contract/30178.sol#1): it allows old versions
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#incorrect-version-of-solidity[0m
+INFO:Detectors:[92m
+Low level call in NeuroSale.buy (/../data/reentrancy/solidity_contract/30178.sol#135-148):
+	-require(bool)(wallet.call.value(msg.value)()) /../data/reentrancy/solidity_contract/30178.sol#146
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#low-level-calls[0m
+INFO:Detectors:[92m
+Parameter '_a' of SafeMath.add (/../data/reentrancy/solidity_contract/30178.sol#12) is not in mixedCase
+Parameter '_b' of SafeMath.add (/../data/reentrancy/solidity_contract/30178.sol#12) is not in mixedCase
+Parameter '_a' of SafeMath.mul (/../data/reentrancy/solidity_contract/30178.sol#18) is not in mixedCase
+Parameter '_b' of SafeMath.mul (/../data/reentrancy/solidity_contract/30178.sol#18) is not in mixedCase
+Parameter '_a' of SafeMath.div (/../data/reentrancy/solidity_contract/30178.sol#27) is not in mixedCase
+Parameter '_b' of SafeMath.div (/../data/reentrancy/solidity_contract/30178.sol#27) is not in mixedCase
+Parameter '_a' of SafeMath.sub (/../data/reentrancy/solidity_contract/30178.sol#31) is not in mixedCase
+Parameter '_b' of SafeMath.sub (/../data/reentrancy/solidity_contract/30178.sol#31) is not in mixedCase
+Function 'Owned.Owned' (/../data/reentrancy/solidity_contract/30178.sol#44-46) is not in mixedCase
+Parameter '_to' of Owned.changeContractOwnership (/../data/reentrancy/solidity_contract/30178.sol#53) is not in mixedCase
+Parameter '_to' of Owned.forceChangeContractOwnership (/../data/reentrancy/solidity_contract/30178.sol#69) is not in mixedCase
+Parameter '_token' of NeuroSale.init (/../data/reentrancy/solidity_contract/30178.sol#101) is not in mixedCase
+Parameter '_wallet' of NeuroSale.init (/../data/reentrancy/solidity_contract/30178.sol#101) is not in mixedCase
+Parameter '_start' of NeuroSale.init (/../data/reentrancy/solidity_contract/30178.sol#101) is not in mixedCase
+Parameter '_deadline' of NeuroSale.init (/../data/reentrancy/solidity_contract/30178.sol#101) is not in mixedCase
+Parameter '_value' of NeuroSale.setSalePause (/../data/reentrancy/solidity_contract/30178.sol#111) is not in mixedCase
+Parameter '_wallet' of NeuroSale.setWallet (/../data/reentrancy/solidity_contract/30178.sol#117) is not in mixedCase
+Parameter '_beneficiary' of NeuroSale.buyWithCustomerId (/../data/reentrancy/solidity_contract/30178.sol#150) is not in mixedCase
+Parameter '_value' of NeuroSale.buyWithCustomerId (/../data/reentrancy/solidity_contract/30178.sol#150) is not in mixedCase
+Parameter '_amount' of NeuroSale.buyWithCustomerId (/../data/reentrancy/solidity_contract/30178.sol#150) is not in mixedCase
+Parameter '_customerId' of NeuroSale.buyWithCustomerId (/../data/reentrancy/solidity_contract/30178.sol#150) is not in mixedCase
+Parameter '_date' of NeuroSale.buyWithCustomerId (/../data/reentrancy/solidity_contract/30178.sol#150) is not in mixedCase
+Parameter '_autobonus' of NeuroSale.buyWithCustomerId (/../data/reentrancy/solidity_contract/30178.sol#150) is not in mixedCase
+Function 'NeuroSale._calculateTimeBonus' (/../data/reentrancy/solidity_contract/30178.sol#170-201) is not in mixedCase
+Parameter '_value' of NeuroSale._calculateTimeBonus (/../data/reentrancy/solidity_contract/30178.sol#170) is not in mixedCase
+Parameter '_date' of NeuroSale._calculateTimeBonus (/../data/reentrancy/solidity_contract/30178.sol#170) is not in mixedCase
+Function 'NeuroSale._calculateVolumeBonus' (/../data/reentrancy/solidity_contract/30178.sol#203-236) is not in mixedCase
+Parameter '_amount' of NeuroSale._calculateVolumeBonus (/../data/reentrancy/solidity_contract/30178.sol#203) is not in mixedCase
+Parameter '_receiver' of NeuroSale._calculateVolumeBonus (/../data/reentrancy/solidity_contract/30178.sol#203) is not in mixedCase
+Parameter '_value' of NeuroSale._calculateVolumeBonus (/../data/reentrancy/solidity_contract/30178.sol#203) is not in mixedCase
+Parameter '_token' of NeuroSale.recoverTokens (/../data/reentrancy/solidity_contract/30178.sol#243) is not in mixedCase
+Parameter '_amount' of NeuroSale.recoverTokens (/../data/reentrancy/solidity_contract/30178.sol#243) is not in mixedCase
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#conformance-to-solidity-naming-conventions[0m
+INFO:Slither:/../data/reentrancy/solidity_contract/30178.sol analyzed (4 contracts), 51 result(s) found

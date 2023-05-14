@@ -1,0 +1,14 @@
+{
+  "contract": "12182",
+  "tool": "honeybadger",
+  "start": 1609151850.587662,
+  "end": 1609151855.9693608,
+  "duration": 5.381698846817017,
+  "analysis": [
+    {
+      "errors": [],
+      "file": "/../data/reentrancy/solidity_contract/12182.sol",
+      "name": "Controller"
+    }
+  ]
+}

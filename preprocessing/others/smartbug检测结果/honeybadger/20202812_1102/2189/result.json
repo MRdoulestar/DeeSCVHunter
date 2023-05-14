@@ -1,0 +1,34 @@
+{
+  "contract": "2189",
+  "tool": "honeybadger",
+  "start": 1609167632.0871732,
+  "end": 1609167736.202209,
+  "duration": 104.11503577232361,
+  "analysis": [
+    {
+      "errors": [],
+      "file": "/../data/reentrancy/solidity_contract/2189.sol",
+      "name": "BasicToken"
+    },
+    {
+      "errors": [],
+      "file": "/../data/reentrancy/solidity_contract/2189.sol",
+      "name": "BurnableToken"
+    },
+    {
+      "errors": [],
+      "file": "/../data/reentrancy/solidity_contract/2189.sol",
+      "name": "Claimable"
+    },
+    {
+      "errors": [],
+      "file": "/../data/reentrancy/solidity_contract/2189.sol",
+      "name": "GOeureka"
+    },
+    {
+      "errors": [],
+      "file": "/../data/reentrancy/solidity_contract/2189.sol",
+      "name": "GOeurekaSale"
+    }
+  ]
+}

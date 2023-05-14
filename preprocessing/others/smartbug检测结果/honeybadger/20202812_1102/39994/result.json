@@ -1,0 +1,44 @@
+{
+  "contract": "39994",
+  "tool": "honeybadger",
+  "start": 1609133239.261475,
+  "end": 1609133539.418706,
+  "duration": 300.1572308540344,
+  "analysis": [
+    {
+      "errors": [],
+      "file": "/../data/reentrancy/solidity_contract/39994.sol",
+      "name": "Base"
+    },
+    {
+      "errors": [],
+      "file": "/../data/reentrancy/solidity_contract/39994.sol",
+      "name": "ERC20Interface"
+    },
+    {
+      "errors": [],
+      "file": "/../data/reentrancy/solidity_contract/39994.sol",
+      "name": "ERC20Token"
+    },
+    {
+      "errors": [],
+      "file": "/../data/reentrancy/solidity_contract/39994.sol",
+      "name": "ITT"
+    },
+    {
+      "errors": [],
+      "file": "/../data/reentrancy/solidity_contract/39994.sol",
+      "name": "LibCLLi"
+    },
+    {
+      "errors": [],
+      "file": "/../data/reentrancy/solidity_contract/39994.sol",
+      "name": "LibCLLu"
+    },
+    {
+      "errors": [],
+      "file": "/../data/reentrancy/solidity_contract/39994.sol",
+      "name": "Math"
+    }
+  ]
+}

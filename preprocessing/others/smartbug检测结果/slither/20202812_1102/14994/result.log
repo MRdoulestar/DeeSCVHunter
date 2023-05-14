@@ -1,0 +1,57 @@
+INFO:Detectors:[92m
+ERC20.decimals should be constant (/../data/reentrancy/solidity_contract/14994.sol#7)
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#state-variables-that-could-be-declared-constant[0m
+INFO:Detectors:[92m
+ERC20.approve (/../data/reentrancy/solidity_contract/14994.sol#32-39) should be declared external
+DividendToken.fallback (/../data/reentrancy/solidity_contract/14994.sol#145-155) should be declared external
+DividendToken.mint (/../data/reentrancy/solidity_contract/14994.sol#161-169) should be declared external
+DividendToken.burn (/../data/reentrancy/solidity_contract/14994.sol#172-182) should be declared external
+DividendToken.freeze (/../data/reentrancy/solidity_contract/14994.sol#185-193) should be declared external
+DividendToken.collectOwedDividends (/../data/reentrancy/solidity_contract/14994.sol#237-244) should be declared external
+DividendToken.getOwedDividends (/../data/reentrancy/solidity_contract/14994.sol#273-279) should be declared external
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#public-function-that-could-be-declared-as-external[0m
+INFO:Detectors:[92m
+Detected issues with version pragma in /../data/reentrancy/solidity_contract/14994.sol:
+	- pragma solidity^0.4.23 (/../data/reentrancy/solidity_contract/14994.sol#1): it allows old versions
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#incorrect-version-of-solidity[0m
+INFO:Detectors:[92m
+Low level call in DividendToken.collectOwedDividends (/../data/reentrancy/solidity_contract/14994.sol#237-244):
+	-require(bool)(msg.sender.call.value(_amount)()) /../data/reentrancy/solidity_contract/14994.sol#243
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#low-level-calls[0m
+INFO:Detectors:[92m
+Parameter '_name' of ERC20. (/../data/reentrancy/solidity_contract/14994.sol#17) is not in mixedCase
+Parameter '_symbol' of ERC20. (/../data/reentrancy/solidity_contract/14994.sol#17) is not in mixedCase
+Parameter '_to' of ERC20.transfer (/../data/reentrancy/solidity_contract/14994.sol#25) is not in mixedCase
+Parameter '_value' of ERC20.transfer (/../data/reentrancy/solidity_contract/14994.sol#25) is not in mixedCase
+Parameter '_spender' of ERC20.approve (/../data/reentrancy/solidity_contract/14994.sol#32) is not in mixedCase
+Parameter '_value' of ERC20.approve (/../data/reentrancy/solidity_contract/14994.sol#32) is not in mixedCase
+Parameter '_from' of ERC20.transferFrom (/../data/reentrancy/solidity_contract/14994.sol#43) is not in mixedCase
+Parameter '_to' of ERC20.transferFrom (/../data/reentrancy/solidity_contract/14994.sol#43) is not in mixedCase
+Parameter '_value' of ERC20.transferFrom (/../data/reentrancy/solidity_contract/14994.sol#43) is not in mixedCase
+Function 'ERC20._transfer' (/../data/reentrancy/solidity_contract/14994.sol#56-66) is not in mixedCase
+Parameter '_from' of ERC20._transfer (/../data/reentrancy/solidity_contract/14994.sol#56) is not in mixedCase
+Parameter '_to' of ERC20._transfer (/../data/reentrancy/solidity_contract/14994.sol#56) is not in mixedCase
+Parameter '_value' of ERC20._transfer (/../data/reentrancy/solidity_contract/14994.sol#56) is not in mixedCase
+Parameter '_to' of ERC667.transferAndCall (/../data/reentrancy/solidity_contract/14994.sol#80) is not in mixedCase
+Parameter '_value' of ERC667.transferAndCall (/../data/reentrancy/solidity_contract/14994.sol#80) is not in mixedCase
+Parameter '_data' of ERC667.transferAndCall (/../data/reentrancy/solidity_contract/14994.sol#80) is not in mixedCase
+Parameter '_to' of DividendToken.transfer (/../data/reentrancy/solidity_contract/14994.sol#201) is not in mixedCase
+Parameter '_value' of DividendToken.transfer (/../data/reentrancy/solidity_contract/14994.sol#201) is not in mixedCase
+Parameter '_from' of DividendToken.transferFrom (/../data/reentrancy/solidity_contract/14994.sol#214) is not in mixedCase
+Parameter '_to' of DividendToken.transferFrom (/../data/reentrancy/solidity_contract/14994.sol#214) is not in mixedCase
+Parameter '_value' of DividendToken.transferFrom (/../data/reentrancy/solidity_contract/14994.sol#214) is not in mixedCase
+Parameter '_to' of DividendToken.transferAndCall (/../data/reentrancy/solidity_contract/14994.sol#226) is not in mixedCase
+Parameter '_value' of DividendToken.transferAndCall (/../data/reentrancy/solidity_contract/14994.sol#226) is not in mixedCase
+Parameter '_data' of DividendToken.transferAndCall (/../data/reentrancy/solidity_contract/14994.sol#226) is not in mixedCase
+Parameter '_to' of DividendToken.mint (/../data/reentrancy/solidity_contract/14994.sol#161) is not in mixedCase
+Parameter '_amount' of DividendToken.mint (/../data/reentrancy/solidity_contract/14994.sol#161) is not in mixedCase
+Parameter '_account' of DividendToken.burn (/../data/reentrancy/solidity_contract/14994.sol#172) is not in mixedCase
+Parameter '_amount' of DividendToken.burn (/../data/reentrancy/solidity_contract/14994.sol#172) is not in mixedCase
+Parameter '_isFrozen' of DividendToken.freeze (/../data/reentrancy/solidity_contract/14994.sol#185) is not in mixedCase
+Function 'DividendToken._updateCreditedPoints' (/../data/reentrancy/solidity_contract/14994.sol#247-252) is not in mixedCase
+Parameter '_account' of DividendToken._updateCreditedPoints (/../data/reentrancy/solidity_contract/14994.sol#247) is not in mixedCase
+Function 'DividendToken._getUncreditedPoints' (/../data/reentrancy/solidity_contract/14994.sol#255-266) is not in mixedCase
+Parameter '_account' of DividendToken._getUncreditedPoints (/../data/reentrancy/solidity_contract/14994.sol#255) is not in mixedCase
+Parameter '_account' of DividendToken.getOwedDividends (/../data/reentrancy/solidity_contract/14994.sol#273) is not in mixedCase
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#conformance-to-solidity-naming-conventions[0m
+INFO:Slither:/../data/reentrancy/solidity_contract/14994.sol analyzed (4 contracts), 44 result(s) found

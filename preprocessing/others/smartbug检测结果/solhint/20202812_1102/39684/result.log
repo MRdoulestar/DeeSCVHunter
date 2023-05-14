@@ -1,0 +1,5 @@
+/data/reentrancy/solidity_contract/39684.sol:134:2: Line length must be no more than 120 but current length is 161. [Error/max-line-length]
+/data/reentrancy/solidity_contract/39684.sol:137:2: Line length must be no more than 120 but current length is 169. [Error/max-line-length]
+/data/reentrancy/solidity_contract/39684.sol:195:2: Line length must be no more than 120 but current length is 181. [Error/max-line-length]
+
+3 problems

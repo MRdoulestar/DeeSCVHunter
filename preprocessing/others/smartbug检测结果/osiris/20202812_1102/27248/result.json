@@ -1,0 +1,25 @@
+{
+  "contract": "27248",
+  "tool": "osiris",
+  "start": 1609154531.377632,
+  "end": 1609154582.405653,
+  "duration": 51.02802109718323,
+  "analysis": [
+    {
+      "errors": [
+        {
+          "line": 37,
+          "column": 13,
+          "message": "overflow_bugs"
+        },
+        {
+          "line": 38,
+          "column": 13,
+          "message": "reentrancy_bug"
+        }
+      ],
+      "file": "/../data/reentrancy/solidity_contract/27248.sol",
+      "name": "SimpleMultiSig"
+    }
+  ]
+}

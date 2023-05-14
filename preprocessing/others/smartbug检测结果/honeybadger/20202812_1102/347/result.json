@@ -1,0 +1,24 @@
+{
+  "contract": "347",
+  "tool": "honeybadger",
+  "start": 1609196415.9433641,
+  "end": 1609196477.9815319,
+  "duration": 62.03816771507263,
+  "analysis": [
+    {
+      "errors": [],
+      "file": "/../data/reentrancy/solidity_contract/347.sol",
+      "name": "AddressesFilterFeature"
+    },
+    {
+      "errors": [],
+      "file": "/../data/reentrancy/solidity_contract/347.sol",
+      "name": "BasicToken"
+    },
+    {
+      "errors": [],
+      "file": "/../data/reentrancy/solidity_contract/347.sol",
+      "name": "CrowdsaleWPTByRounds"
+    }
+  ]
+}

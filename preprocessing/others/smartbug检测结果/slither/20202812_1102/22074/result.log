@@ -1,0 +1,40 @@
+INFO:Slither:Compilation warnings/errors on /../data/reentrancy/solidity_contract/22074.sol:
+/../data/reentrancy/solidity_contract/22074.sol:17:13: Warning: Return value of low-level calls not used.
+            msg.sender.call.value(_am)();
+            ^--------------------------^
+/../data/reentrancy/solidity_contract/22074.sol:23:35: Warning: Using contract member "balance" inherited from the address type is deprecated. Convert the contract to "address" type to access the member, for example use "address(contract).balance" instead.
+        if(msg.sender==creator && this.balance>= MinSum)   {
+                                  ^----------^
+
+INFO:Detectors:[91m
+Reentrancy in SIMPLE_PIGGY_BANK.Collect (/../data/reentrancy/solidity_contract/22074.sol#15-20):
+	External calls:
+	- msg.sender.call.value(_am)() (/../data/reentrancy/solidity_contract/22074.sol#17)
+	State variables written after the call(s):
+	- Bal (/../data/reentrancy/solidity_contract/22074.sol#18)
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#reentrancy-vulnerabilities[0m
+INFO:Detectors:[92m
+SIMPLE_PIGGY_BANK.MinSum should be constant (/../data/reentrancy/solidity_contract/22074.sol#9)
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#state-variables-that-could-be-declared-constant[0m
+INFO:Detectors:[92m
+SIMPLE_PIGGY_BANK.fallback (/../data/reentrancy/solidity_contract/22074.sol#11-13) should be declared external
+SIMPLE_PIGGY_BANK.Collect (/../data/reentrancy/solidity_contract/22074.sol#15-20) should be declared external
+SIMPLE_PIGGY_BANK.Break (/../data/reentrancy/solidity_contract/22074.sol#22-26) should be declared external
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#public-function-that-could-be-declared-as-external[0m
+INFO:Detectors:[92m
+Detected issues with version pragma in /../data/reentrancy/solidity_contract/22074.sol:
+	- pragma solidity^0.4.19 (/../data/reentrancy/solidity_contract/22074.sol#1): it allows old versions
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#incorrect-version-of-solidity[0m
+INFO:Detectors:[92m
+Low level call in SIMPLE_PIGGY_BANK.Collect (/../data/reentrancy/solidity_contract/22074.sol#15-20):
+	-msg.sender.call.value(_am)() /../data/reentrancy/solidity_contract/22074.sol#17
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#low-level-calls[0m
+INFO:Detectors:[92m
+Contract 'SIMPLE_PIGGY_BANK' (/../data/reentrancy/solidity_contract/22074.sol#3-27) is not in CapWords
+Function 'SIMPLE_PIGGY_BANK.Collect' (/../data/reentrancy/solidity_contract/22074.sol#15-20) is not in mixedCase
+Parameter '_am' of SIMPLE_PIGGY_BANK.Collect (/../data/reentrancy/solidity_contract/22074.sol#15) is not in mixedCase
+Function 'SIMPLE_PIGGY_BANK.Break' (/../data/reentrancy/solidity_contract/22074.sol#22-26) is not in mixedCase
+Variable 'SIMPLE_PIGGY_BANK.Bal' (/../data/reentrancy/solidity_contract/22074.sol#7) is not in mixedCase
+Variable 'SIMPLE_PIGGY_BANK.MinSum' (/../data/reentrancy/solidity_contract/22074.sol#9) is not in mixedCase
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#conformance-to-solidity-naming-conventions[0m
+INFO:Slither:/../data/reentrancy/solidity_contract/22074.sol analyzed (1 contracts), 13 result(s) found

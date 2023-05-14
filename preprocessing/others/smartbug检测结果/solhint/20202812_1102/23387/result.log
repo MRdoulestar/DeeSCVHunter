@@ -1,0 +1,18 @@
+/data/reentrancy/solidity_contract/23387.sol:6:2: Expected indentation of 4 spaces but found 1 [Error/indent]
+/data/reentrancy/solidity_contract/23387.sol:7:2: Expected indentation of 4 spaces but found 1 [Error/indent]
+/data/reentrancy/solidity_contract/23387.sol:8:2: Expected indentation of 4 spaces but found 1 [Error/indent]
+/data/reentrancy/solidity_contract/23387.sol:9:2: Expected indentation of 4 spaces but found 1 [Error/indent]
+/data/reentrancy/solidity_contract/23387.sol:10:2: Expected indentation of 4 spaces but found 1 [Error/indent]
+/data/reentrancy/solidity_contract/23387.sol:11:2: Expected indentation of 4 spaces but found 1 [Error/indent]
+/data/reentrancy/solidity_contract/23387.sol:12:2: Expected indentation of 4 spaces but found 1 [Error/indent]
+/data/reentrancy/solidity_contract/23387.sol:13:2: Expected indentation of 4 spaces but found 1 [Error/indent]
+/data/reentrancy/solidity_contract/23387.sol:199:2: Line length must be no more than 120 but current length is 157. [Error/max-line-length]
+/data/reentrancy/solidity_contract/23387.sol:219:2: Line length must be no more than 120 but current length is 148. [Error/max-line-length]
+/data/reentrancy/solidity_contract/23387.sol:261:16: Indentation is incorrect [Error/indent]
+/data/reentrancy/solidity_contract/23387.sol:366:7: Indentation is incorrect [Error/indent]
+/data/reentrancy/solidity_contract/23387.sol:367:7: Indentation is incorrect [Error/indent]
+/data/reentrancy/solidity_contract/23387.sol:368:7: Indentation is incorrect [Error/indent]
+/data/reentrancy/solidity_contract/23387.sol:369:9: Expected indentation of 10 spaces but found 8 [Error/indent]
+/data/reentrancy/solidity_contract/23387.sol:370:7: Indentation is incorrect [Error/indent]
+
+16 problems

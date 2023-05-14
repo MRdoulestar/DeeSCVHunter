@@ -1,0 +1,14 @@
+{
+  "contract": "39662",
+  "tool": "honeybadger",
+  "start": 1609145775.215892,
+  "end": 1609145787.540726,
+  "duration": 12.324833869934082,
+  "analysis": [
+    {
+      "errors": [],
+      "file": "/../data/reentrancy/solidity_contract/39662.sol",
+      "name": "ElectricQueue"
+    }
+  ]
+}

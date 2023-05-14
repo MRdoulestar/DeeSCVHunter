@@ -1,0 +1,402 @@
+{
+  "contract": "21697",
+  "tool": "slither",
+  "start": 1609206026.55965,
+  "end": 1609206028.13385,
+  "duration": 1.57420015335083,
+  "analysis": [
+    {
+      "check": "arbitrary-send",
+      "impact": "High",
+      "confidence": "Medium",
+      "description": "SPRING_BOARD_1_ETH.Jump (/../data/reentrancy/solidity_contract/21697.sol#9-13) sends eth to arbitrary user\n\tDangerous calls:\n\t- msg.sender.call.value(this.balance)() (/../data/reentrancy/solidity_contract/21697.sol#11)\n",
+      "elements": [
+        {
+          "type": "function",
+          "name": "Jump",
+          "source_mapping": {
+            "start": 138,
+            "length": 135,
+            "filename": "/../data/reentrancy/solidity_contract/21697.sol",
+            "lines": [
+              9,
+              10,
+              11,
+              12,
+              13
+            ]
+          },
+          "contract": {
+            "type": "contract",
+            "name": "SPRING_BOARD_1_ETH",
+            "source_mapping": {
+              "start": 26,
+              "length": 388,
+              "filename": "/../data/reentrancy/solidity_contract/21697.sol",
+              "lines": [
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10,
+                11,
+                12,
+                13,
+                14,
+                15,
+                16,
+                17,
+                18,
+                19,
+                20
+              ]
+            }
+          }
+        },
+        {
+          "type": "expression",
+          "expression": "msg.sender.call.value(this.balance)()",
+          "source_mapping": {
+            "start": 219,
+            "length": 37,
+            "filename": "/../data/reentrancy/solidity_contract/21697.sol",
+            "lines": [
+              11
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "external-function",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "SPRING_BOARD_1_ETH.fallback (/../data/reentrancy/solidity_contract/21697.sol#7) should be declared external\n",
+      "elements": [
+        {
+          "type": "function",
+          "name": "fallback",
+          "source_mapping": {
+            "start": 100,
+            "length": 28,
+            "filename": "/../data/reentrancy/solidity_contract/21697.sol",
+            "lines": [
+              7
+            ]
+          },
+          "contract": {
+            "type": "contract",
+            "name": "SPRING_BOARD_1_ETH",
+            "source_mapping": {
+              "start": 26,
+              "length": 388,
+              "filename": "/../data/reentrancy/solidity_contract/21697.sol",
+              "lines": [
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10,
+                11,
+                12,
+                13,
+                14,
+                15,
+                16,
+                17,
+                18,
+                19,
+                20
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "check": "external-function",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "SPRING_BOARD_1_ETH.Jump (/../data/reentrancy/solidity_contract/21697.sol#9-13) should be declared external\n",
+      "elements": [
+        {
+          "type": "function",
+          "name": "Jump",
+          "source_mapping": {
+            "start": 138,
+            "length": 135,
+            "filename": "/../data/reentrancy/solidity_contract/21697.sol",
+            "lines": [
+              9,
+              10,
+              11,
+              12,
+              13
+            ]
+          },
+          "contract": {
+            "type": "contract",
+            "name": "SPRING_BOARD_1_ETH",
+            "source_mapping": {
+              "start": 26,
+              "length": 388,
+              "filename": "/../data/reentrancy/solidity_contract/21697.sol",
+              "lines": [
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10,
+                11,
+                12,
+                13,
+                14,
+                15,
+                16,
+                17,
+                18,
+                19,
+                20
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "check": "external-function",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "SPRING_BOARD_1_ETH.Kill (/../data/reentrancy/solidity_contract/21697.sol#15-19) should be declared external\n",
+      "elements": [
+        {
+          "type": "function",
+          "name": "Kill",
+          "source_mapping": {
+            "start": 283,
+            "length": 129,
+            "filename": "/../data/reentrancy/solidity_contract/21697.sol",
+            "lines": [
+              15,
+              16,
+              17,
+              18,
+              19
+            ]
+          },
+          "contract": {
+            "type": "contract",
+            "name": "SPRING_BOARD_1_ETH",
+            "source_mapping": {
+              "start": 26,
+              "length": 388,
+              "filename": "/../data/reentrancy/solidity_contract/21697.sol",
+              "lines": [
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10,
+                11,
+                12,
+                13,
+                14,
+                15,
+                16,
+                17,
+                18,
+                19,
+                20
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "check": "solc-version",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Detected issues with version pragma in /../data/reentrancy/solidity_contract/21697.sol:\n\t- pragma solidity^0.4.19 (/../data/reentrancy/solidity_contract/21697.sol#1): it allows old versions\n",
+      "elements": [
+        {
+          "type": "expression",
+          "expression": "^0.4.19",
+          "source_mapping": {
+            "start": 0,
+            "length": 24,
+            "filename": "/../data/reentrancy/solidity_contract/21697.sol",
+            "lines": [
+              1
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "low-level-calls",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Low level call in SPRING_BOARD_1_ETH.Jump (/../data/reentrancy/solidity_contract/21697.sol#9-13):\n\t-msg.sender.call.value(this.balance)() /../data/reentrancy/solidity_contract/21697.sol#11\n",
+      "elements": [
+        {
+          "type": "function",
+          "name": "Jump",
+          "source_mapping": {
+            "start": 138,
+            "length": 135,
+            "filename": "/../data/reentrancy/solidity_contract/21697.sol",
+            "lines": [
+              9,
+              10,
+              11,
+              12,
+              13
+            ]
+          },
+          "contract": {
+            "type": "contract",
+            "name": "SPRING_BOARD_1_ETH",
+            "source_mapping": {
+              "start": 26,
+              "length": 388,
+              "filename": "/../data/reentrancy/solidity_contract/21697.sol",
+              "lines": [
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10,
+                11,
+                12,
+                13,
+                14,
+                15,
+                16,
+                17,
+                18,
+                19,
+                20
+              ]
+            }
+          }
+        },
+        {
+          "type": "expression",
+          "expression": "msg.sender.call.value(this.balance)()",
+          "source_mapping": {
+            "start": 219,
+            "length": 37,
+            "filename": "/../data/reentrancy/solidity_contract/21697.sol",
+            "lines": [
+              11
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "naming-convention",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Contract 'SPRING_BOARD_1_ETH' (/../data/reentrancy/solidity_contract/21697.sol#3-20) is not in CapWords\n",
+      "elements": [
+        {
+          "target": "contract",
+          "convention": "CapWords",
+          "name": "SPRING_BOARD_1_ETH",
+          "source_mapping": {
+            "start": 26,
+            "length": 388,
+            "filename": "/../data/reentrancy/solidity_contract/21697.sol",
+            "lines": [
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11,
+              12,
+              13,
+              14,
+              15,
+              16,
+              17,
+              18,
+              19,
+              20
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "naming-convention",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Function 'SPRING_BOARD_1_ETH.Jump' (/../data/reentrancy/solidity_contract/21697.sol#9-13) is not in mixedCase\n",
+      "elements": [
+        {
+          "target": "function",
+          "convention": "mixedCase",
+          "name": "Jump",
+          "source_mapping": {
+            "start": 138,
+            "length": 135,
+            "filename": "/../data/reentrancy/solidity_contract/21697.sol",
+            "lines": [
+              9,
+              10,
+              11,
+              12,
+              13
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "naming-convention",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Function 'SPRING_BOARD_1_ETH.Kill' (/../data/reentrancy/solidity_contract/21697.sol#15-19) is not in mixedCase\n",
+      "elements": [
+        {
+          "target": "function",
+          "convention": "mixedCase",
+          "name": "Kill",
+          "source_mapping": {
+            "start": 283,
+            "length": 129,
+            "filename": "/../data/reentrancy/solidity_contract/21697.sol",
+            "lines": [
+              15,
+              16,
+              17,
+              18,
+              19
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

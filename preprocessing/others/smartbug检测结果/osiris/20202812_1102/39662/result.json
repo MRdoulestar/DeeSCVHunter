@@ -1,0 +1,45 @@
+{
+  "contract": "39662",
+  "tool": "osiris",
+  "start": 1609145679.45391,
+  "end": 1609145730.661002,
+  "duration": 51.20709180831909,
+  "analysis": [
+    {
+      "errors": [
+        {
+          "line": 172,
+          "column": 37,
+          "message": "overflow_bugs"
+        },
+        {
+          "line": 172,
+          "column": 37,
+          "message": "overflow_bugs"
+        },
+        {
+          "line": 174,
+          "column": 40,
+          "message": "overflow_bugs"
+        },
+        {
+          "line": 174,
+          "column": 40,
+          "message": "overflow_bugs"
+        },
+        {
+          "line": 173,
+          "column": 45,
+          "message": "overflow_bugs"
+        },
+        {
+          "line": 173,
+          "column": 45,
+          "message": "overflow_bugs"
+        }
+      ],
+      "file": "/../data/reentrancy/solidity_contract/39662.sol",
+      "name": "ElectricQueue"
+    }
+  ]
+}

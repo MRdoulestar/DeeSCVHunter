@@ -1,0 +1,12 @@
+line 10:25 mismatched input 'calldata' expecting {'from', Identifier}
+line 12:16 extraneous input 'calldata' expecting {'~', 'from', '{', '}', '(', 'for', 'function', '[', 'address', 'mapping', 'if', 'while', 'assembly', 'do', 'return', 'throw', 'emit', 'var', 'bool', 'string', 'byte', '++', '--', 'new', '+', '-', 'after', 'delete', '!', Int, Uint, Byte, Fixed, Ufixed, BooleanLiteral, DecimalNumber, HexNumber, HexLiteral, 'break', 'continue', Identifier, StringLiteral}
+line 15:19 missing ';' at '('
+line 15:50 missing ';' at '('
+/data/reentrancy/solidity_contract/23088.sol:12:25: Expected indentation of 16 spaces but found 24 [Error/indent]
+/data/reentrancy/solidity_contract/23088.sol:15:20: Expected indentation of 12 spaces but found 19 [Error/indent]
+/data/reentrancy/solidity_contract/23088.sol:15:20: Expected indentation of 12 spaces but found 19 [Error/indent]
+/data/reentrancy/solidity_contract/23088.sol:15:21: Expected indentation of 12 spaces but found 20 [Error/indent]
+/data/reentrancy/solidity_contract/23088.sol:15:51: Expected indentation of 12 spaces but found 50 [Error/indent]
+/data/reentrancy/solidity_contract/23088.sol:15:51: Expected indentation of 12 spaces but found 50 [Error/indent]
+
+6 problems

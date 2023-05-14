@@ -1,0 +1,253 @@
+INFO:Slither:Compilation warnings/errors on /../data/reentrancy/solidity_contract/31565.sol:
+/../data/reentrancy/solidity_contract/31565.sol:54:5: Warning: Defining constructors as functions with the same name as the contract is deprecated. Use "constructor(...) { ... }" instead.
+    function Telcoin(address _distributor) public {
+    ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/31565.sol:161:5: Warning: Defining constructors as functions with the same name as the contract is deprecated. Use "constructor(...) { ... }" instead.
+    function TelcoinSaleToken(
+    ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/31565.sol:381:5: Warning: Defining constructors as functions with the same name as the contract is deprecated. Use "constructor(...) { ... }" instead.
+    function TelcoinSale(
+    ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/31565.sol:733:5: Warning: Defining constructors as functions with the same name as the contract is deprecated. Use "constructor(...) { ... }" instead.
+    function TelcoinSaleKYCEscrow(TelcoinSale _sale) public {
+    ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/31565.sol:56:9: Warning: Invoking events without "emit" prefix is deprecated.
+        Transfer(0x0, _distributor, totalSupply);
+        ^--------------------------------------^
+/../data/reentrancy/solidity_contract/31565.sol:72:9: Warning: Invoking events without "emit" prefix is deprecated.
+        Transfer(msg.sender, _to, _value);
+        ^-------------------------------^
+/../data/reentrancy/solidity_contract/31565.sol:85:9: Warning: Invoking events without "emit" prefix is deprecated.
+        Transfer(_from, _to, _value);
+        ^--------------------------^
+/../data/reentrancy/solidity_contract/31565.sol:96:9: Warning: Invoking events without "emit" prefix is deprecated.
+        Approval(msg.sender, _spender, _value);
+        ^------------------------------------^
+/../data/reentrancy/solidity_contract/31565.sol:108:9: Warning: Invoking events without "emit" prefix is deprecated.
+        Approval(msg.sender, _spender, allowed[msg.sender][_spender]);
+        ^-----------------------------------------------------------^
+/../data/reentrancy/solidity_contract/31565.sol:120:9: Warning: Invoking events without "emit" prefix is deprecated.
+        Approval(msg.sender, _spender, allowed[msg.sender][_spender]);
+        ^-----------------------------------------------------------^
+/../data/reentrancy/solidity_contract/31565.sol:178:9: Warning: Invoking events without "emit" prefix is deprecated.
+        MintFinished();
+        ^------------^
+/../data/reentrancy/solidity_contract/31565.sol:190:9: Warning: Invoking events without "emit" prefix is deprecated.
+        Mint(_to, _amount);
+        ^----------------^
+/../data/reentrancy/solidity_contract/31565.sol:191:9: Warning: Invoking events without "emit" prefix is deprecated.
+        Transfer(0x0, _to, _amount);
+        ^-------------------------^
+/../data/reentrancy/solidity_contract/31565.sol:222:9: Warning: Invoking events without "emit" prefix is deprecated.
+        Transfer(_beneficiary, telcoin, balance);
+        ^--------------------------------------^
+/../data/reentrancy/solidity_contract/31565.sol:223:9: Warning: Invoking events without "emit" prefix is deprecated.
+        Redeem(_beneficiary, balance, amount);
+        ^-----------------------------------^
+/../data/reentrancy/solidity_contract/31565.sol:232:9: Warning: Invoking events without "emit" prefix is deprecated.
+        OwnershipTransferred(owner, _to);
+        ^------------------------------^
+/../data/reentrancy/solidity_contract/31565.sol:455:9: Warning: Invoking events without "emit" prefix is deprecated.
+        TokenPurchase(
+        ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/31565.sol:468:9: Warning: Invoking events without "emit" prefix is deprecated.
+        WalletChanged(wallet, _wallet);
+        ^----------------------------^
+/../data/reentrancy/solidity_contract/31565.sol:482:9: Warning: Invoking events without "emit" prefix is deprecated.
+        Extended(endTime.add(timeExtension));
+        ^----------------------------------^
+/../data/reentrancy/solidity_contract/31565.sol:516:13: Warning: Invoking events without "emit" prefix is deprecated.
+            Refunding();
+            ^---------^
+/../data/reentrancy/solidity_contract/31565.sol:519:9: Warning: Invoking events without "emit" prefix is deprecated.
+        Finalized();
+        ^---------^
+/../data/reentrancy/solidity_contract/31565.sol:525:9: Warning: Invoking events without "emit" prefix is deprecated.
+        Pause();
+        ^-----^
+/../data/reentrancy/solidity_contract/31565.sol:542:9: Warning: Invoking events without "emit" prefix is deprecated.
+        Refunded(_investor, weiAmount);
+        ^----------------------------^
+/../data/reentrancy/solidity_contract/31565.sol:576:9: Warning: Invoking events without "emit" prefix is deprecated.
+        TokenAltPurchase(
+        ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/31565.sol:589:9: Warning: Invoking events without "emit" prefix is deprecated.
+        OwnershipTransferred(owner, _to);
+        ^------------------------------^
+/../data/reentrancy/solidity_contract/31565.sol:596:9: Warning: Invoking events without "emit" prefix is deprecated.
+        Unpause();
+        ^-------^
+/../data/reentrancy/solidity_contract/31565.sol:602:9: Warning: Invoking events without "emit" prefix is deprecated.
+        CapFlexed(capFlex);
+        ^----------------^
+/../data/reentrancy/solidity_contract/31565.sol:639:9: Warning: Invoking events without "emit" prefix is deprecated.
+        Whitelisted(
+        ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/31565.sol:650:29: Warning: Using contract member "balance" inherited from the address type is deprecated. Convert the contract to "address" type to access the member, for example use "address(contract).balance" instead.
+        uint256 weiAmount = this.balance;
+                            ^----------^
+/../data/reentrancy/solidity_contract/31565.sol:654:13: Warning: Invoking events without "emit" prefix is deprecated.
+            Withdrawal(wallet, weiAmount);
+            ^---------------------------^
+/../data/reentrancy/solidity_contract/31565.sol:749:9: Warning: Invoking events without "emit" prefix is deprecated.
+        Approved(_participant);
+        ^--------------------^
+/../data/reentrancy/solidity_contract/31565.sol:763:9: Warning: Invoking events without "emit" prefix is deprecated.
+        Closed();
+        ^------^
+/../data/reentrancy/solidity_contract/31565.sol:775:9: Warning: Invoking events without "emit" prefix is deprecated.
+        ValuePlaced(
+        ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/31565.sol:787:9: Warning: Invoking events without "emit" prefix is deprecated.
+        Rejected(_participant);
+        ^--------------------^
+/../data/reentrancy/solidity_contract/31565.sol:799:9: Warning: Invoking events without "emit" prefix is deprecated.
+        OwnershipTransferred(owner, _to);
+        ^------------------------------^
+
+INFO:Detectors:[93m
+Reentrancy in TelcoinSaleToken.redeem (/../data/reentrancy/solidity_contract/31565.sol#202-228):
+	External calls:
+	- totalDistributable = telcoin.balanceOf(this).add(totalRedeemed) (/../data/reentrancy/solidity_contract/31565.sol#211)
+	State variables written after the call(s):
+	- balances (/../data/reentrancy/solidity_contract/31565.sol#217)
+	- balances (/../data/reentrancy/solidity_contract/31565.sol#219)
+	- redeemed (/../data/reentrancy/solidity_contract/31565.sol#218)
+	- totalRedeemed (/../data/reentrancy/solidity_contract/31565.sol#220)
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#reentrancy-vulnerabilities-1[0m
+INFO:Detectors:[93m
+TelcoinSaleToken.redeem (/../data/reentrancy/solidity_contract/31565.sol#202-228) does not use the value returned by external calls:
+	-telcoin.transfer(_beneficiary,amount) (/../data/reentrancy/solidity_contract/31565.sol#225)
+TelcoinSale.buyTokens (/../data/reentrancy/solidity_contract/31565.sol#428-462) does not use the value returned by external calls:
+	-saleToken.mint(_beneficiary,saleTokens) (/../data/reentrancy/solidity_contract/31565.sol#450)
+	-bonusToken.mint(_beneficiary,bonusTokens) (/../data/reentrancy/solidity_contract/31565.sol#452)
+TelcoinSale.finish (/../data/reentrancy/solidity_contract/31565.sol#485-520) does not use the value returned by external calls:
+	-saleToken.finishMinting() (/../data/reentrancy/solidity_contract/31565.sol#491)
+	-bonusToken.finishMinting() (/../data/reentrancy/solidity_contract/31565.sol#492)
+	-telcoin.transfer(saleToken,salePortion) (/../data/reentrancy/solidity_contract/31565.sol#509)
+	-telcoin.transfer(bonusToken,bonusPortion) (/../data/reentrancy/solidity_contract/31565.sol#510)
+	-telcoin.transfer(wallet,distributableCoins) (/../data/reentrancy/solidity_contract/31565.sol#515)
+TelcoinSale.registerAltPurchase (/../data/reentrancy/solidity_contract/31565.sol#547-585) does not use the value returned by external calls:
+	-saleToken.mint(_beneficiary,saleTokens) (/../data/reentrancy/solidity_contract/31565.sol#571)
+	-bonusToken.mint(_beneficiary,bonusTokens) (/../data/reentrancy/solidity_contract/31565.sol#573)
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#unused-return[0m
+INFO:Detectors:[92m
+Reentrancy in TelcoinSale.finish (/../data/reentrancy/solidity_contract/31565.sol#485-520):
+	External calls:
+	- saleToken.finishMinting() (/../data/reentrancy/solidity_contract/31565.sol#491)
+	- bonusToken.finishMinting() (/../data/reentrancy/solidity_contract/31565.sol#492)
+	- distributableCoins = telcoin.balanceOf(this) (/../data/reentrancy/solidity_contract/31565.sol#494)
+	State variables written after the call(s):
+	- refunding (/../data/reentrancy/solidity_contract/31565.sol#514)
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#reentrancy-vulnerabilities-2[0m
+INFO:Detectors:[92m
+Telcoin.balanceOf (/../data/reentrancy/solidity_contract/31565.sol#60-62) should be declared external
+Telcoin.transfer (/../data/reentrancy/solidity_contract/31565.sol#65-74) should be declared external
+Telcoin.transferFrom (/../data/reentrancy/solidity_contract/31565.sol#77-87) should be declared external
+Telcoin.approve (/../data/reentrancy/solidity_contract/31565.sol#94-98) should be declared external
+Telcoin.allowance (/../data/reentrancy/solidity_contract/31565.sol#101-103) should be declared external
+Telcoin.increaseApproval (/../data/reentrancy/solidity_contract/31565.sol#106-110) should be declared external
+Telcoin.decreaseApproval (/../data/reentrancy/solidity_contract/31565.sol#113-122) should be declared external
+TelcoinSaleToken.finishMinting (/../data/reentrancy/solidity_contract/31565.sol#174-181) should be declared external
+TelcoinSaleToken.mint (/../data/reentrancy/solidity_contract/31565.sol#183-194) should be declared external
+TelcoinSaleToken.redeemMany (/../data/reentrancy/solidity_contract/31565.sol#196-200) should be declared external
+TelcoinSaleToken.transferOwnership (/../data/reentrancy/solidity_contract/31565.sol#230-234) should be declared external
+TelcoinSaleToken.balanceOf (/../data/reentrancy/solidity_contract/31565.sol#236-238) should be declared external
+TelcoinSale.fallback (/../data/reentrancy/solidity_contract/31565.sol#424-426) should be declared external
+TelcoinSale.changeWallet (/../data/reentrancy/solidity_contract/31565.sol#464-472) should be declared external
+TelcoinSale.extendTime (/../data/reentrancy/solidity_contract/31565.sol#474-483) should be declared external
+TelcoinSale.finish (/../data/reentrancy/solidity_contract/31565.sol#485-520) should be declared external
+TelcoinSale.pause (/../data/reentrancy/solidity_contract/31565.sol#522-526) should be declared external
+TelcoinSale.refundMany (/../data/reentrancy/solidity_contract/31565.sol#528-532) should be declared external
+TelcoinSale.registerAltPurchase (/../data/reentrancy/solidity_contract/31565.sol#547-585) should be declared external
+TelcoinSale.transferOwnership (/../data/reentrancy/solidity_contract/31565.sol#587-591) should be declared external
+TelcoinSale.unpause (/../data/reentrancy/solidity_contract/31565.sol#593-597) should be declared external
+TelcoinSale.updateCapFlex (/../data/reentrancy/solidity_contract/31565.sol#599-603) should be declared external
+TelcoinSale.whitelistMany (/../data/reentrancy/solidity_contract/31565.sol#605-622) should be declared external
+TelcoinSaleKYCEscrow.fallback (/../data/reentrancy/solidity_contract/31565.sol#740-742) should be declared external
+TelcoinSaleKYCEscrow.approveMany (/../data/reentrancy/solidity_contract/31565.sol#753-757) should be declared external
+TelcoinSaleKYCEscrow.close (/../data/reentrancy/solidity_contract/31565.sol#759-764) should be declared external
+TelcoinSaleKYCEscrow.rejectMany (/../data/reentrancy/solidity_contract/31565.sol#791-795) should be declared external
+TelcoinSaleKYCEscrow.transferOwnership (/../data/reentrancy/solidity_contract/31565.sol#797-801) should be declared external
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#public-function-that-could-be-declared-as-external[0m
+INFO:Detectors:[92m
+Detected issues with version pragma in /../data/reentrancy/solidity_contract/31565.sol:
+	- pragma solidity^0.4.18 (/../data/reentrancy/solidity_contract/31565.sol#1): it allows old versions
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#incorrect-version-of-solidity[0m
+INFO:Detectors:[92m
+Low level call in TelcoinSaleKYCEscrow.reject (/../data/reentrancy/solidity_contract/31565.sol#782-789):
+	-require(bool)(_participant.call.value(weiAmount)()) /../data/reentrancy/solidity_contract/31565.sol#788
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#low-level-calls[0m
+INFO:Detectors:[92m
+Function 'Telcoin.Telcoin' (/../data/reentrancy/solidity_contract/31565.sol#54-57) is not in mixedCase
+Parameter '_distributor' of Telcoin.Telcoin (/../data/reentrancy/solidity_contract/31565.sol#54) is not in mixedCase
+Parameter '_owner' of Telcoin.balanceOf (/../data/reentrancy/solidity_contract/31565.sol#60) is not in mixedCase
+Parameter '_to' of Telcoin.transfer (/../data/reentrancy/solidity_contract/31565.sol#65) is not in mixedCase
+Parameter '_value' of Telcoin.transfer (/../data/reentrancy/solidity_contract/31565.sol#65) is not in mixedCase
+Parameter '_from' of Telcoin.transferFrom (/../data/reentrancy/solidity_contract/31565.sol#77) is not in mixedCase
+Parameter '_to' of Telcoin.transferFrom (/../data/reentrancy/solidity_contract/31565.sol#77) is not in mixedCase
+Parameter '_value' of Telcoin.transferFrom (/../data/reentrancy/solidity_contract/31565.sol#77) is not in mixedCase
+Parameter '_spender' of Telcoin.approve (/../data/reentrancy/solidity_contract/31565.sol#94) is not in mixedCase
+Parameter '_value' of Telcoin.approve (/../data/reentrancy/solidity_contract/31565.sol#94) is not in mixedCase
+Parameter '_owner' of Telcoin.allowance (/../data/reentrancy/solidity_contract/31565.sol#101) is not in mixedCase
+Parameter '_spender' of Telcoin.allowance (/../data/reentrancy/solidity_contract/31565.sol#101) is not in mixedCase
+Parameter '_spender' of Telcoin.increaseApproval (/../data/reentrancy/solidity_contract/31565.sol#106) is not in mixedCase
+Parameter '_addedValue' of Telcoin.increaseApproval (/../data/reentrancy/solidity_contract/31565.sol#106) is not in mixedCase
+Parameter '_spender' of Telcoin.decreaseApproval (/../data/reentrancy/solidity_contract/31565.sol#113) is not in mixedCase
+Parameter '_subtractedValue' of Telcoin.decreaseApproval (/../data/reentrancy/solidity_contract/31565.sol#113) is not in mixedCase
+Constant 'Telcoin.totalSupply' (/../data/reentrancy/solidity_contract/31565.sol#43) is not in UPPER_CASE_WITH_UNDERSCORES
+Function 'TelcoinSaleToken.TelcoinSaleToken' (/../data/reentrancy/solidity_contract/31565.sol#161-172) is not in mixedCase
+Parameter '_telcoin' of TelcoinSaleToken.TelcoinSaleToken (/../data/reentrancy/solidity_contract/31565.sol#162) is not in mixedCase
+Parameter '_vestingStart' of TelcoinSaleToken.TelcoinSaleToken (/../data/reentrancy/solidity_contract/31565.sol#163) is not in mixedCase
+Parameter '_vestingDuration' of TelcoinSaleToken.TelcoinSaleToken (/../data/reentrancy/solidity_contract/31565.sol#164) is not in mixedCase
+Parameter '_to' of TelcoinSaleToken.mint (/../data/reentrancy/solidity_contract/31565.sol#183) is not in mixedCase
+Parameter '_amount' of TelcoinSaleToken.mint (/../data/reentrancy/solidity_contract/31565.sol#183) is not in mixedCase
+Parameter '_beneficiaries' of TelcoinSaleToken.redeemMany (/../data/reentrancy/solidity_contract/31565.sol#196) is not in mixedCase
+Parameter '_beneficiary' of TelcoinSaleToken.redeem (/../data/reentrancy/solidity_contract/31565.sol#202) is not in mixedCase
+Parameter '_to' of TelcoinSaleToken.transferOwnership (/../data/reentrancy/solidity_contract/31565.sol#230) is not in mixedCase
+Parameter '_owner' of TelcoinSaleToken.balanceOf (/../data/reentrancy/solidity_contract/31565.sol#236) is not in mixedCase
+Parameter '_beneficiary' of TelcoinSaleToken.redeemableBalance (/../data/reentrancy/solidity_contract/31565.sol#240) is not in mixedCase
+Parameter '_beneficiary' of TelcoinSaleToken.vestedBalance (/../data/reentrancy/solidity_contract/31565.sol#244) is not in mixedCase
+Function 'TelcoinSale.TelcoinSale' (/../data/reentrancy/solidity_contract/31565.sol#381-422) is not in mixedCase
+Parameter '_softCap' of TelcoinSale.TelcoinSale (/../data/reentrancy/solidity_contract/31565.sol#382) is not in mixedCase
+Parameter '_hardCap' of TelcoinSale.TelcoinSale (/../data/reentrancy/solidity_contract/31565.sol#383) is not in mixedCase
+Parameter '_capFlex' of TelcoinSale.TelcoinSale (/../data/reentrancy/solidity_contract/31565.sol#384) is not in mixedCase
+Parameter '_startTime' of TelcoinSale.TelcoinSale (/../data/reentrancy/solidity_contract/31565.sol#385) is not in mixedCase
+Parameter '_endTime' of TelcoinSale.TelcoinSale (/../data/reentrancy/solidity_contract/31565.sol#386) is not in mixedCase
+Parameter '_rate' of TelcoinSale.TelcoinSale (/../data/reentrancy/solidity_contract/31565.sol#387) is not in mixedCase
+Parameter '_wallet' of TelcoinSale.TelcoinSale (/../data/reentrancy/solidity_contract/31565.sol#388) is not in mixedCase
+Parameter '_telcoin' of TelcoinSale.TelcoinSale (/../data/reentrancy/solidity_contract/31565.sol#389) is not in mixedCase
+Parameter '_bonusVestingStart' of TelcoinSale.TelcoinSale (/../data/reentrancy/solidity_contract/31565.sol#390) is not in mixedCase
+Parameter '_bonusVestingDuration' of TelcoinSale.TelcoinSale (/../data/reentrancy/solidity_contract/31565.sol#391) is not in mixedCase
+Parameter '_beneficiary' of TelcoinSale.buyTokens (/../data/reentrancy/solidity_contract/31565.sol#428) is not in mixedCase
+Parameter '_wallet' of TelcoinSale.changeWallet (/../data/reentrancy/solidity_contract/31565.sol#464) is not in mixedCase
+Parameter '_timeExtension' of TelcoinSale.extendTime (/../data/reentrancy/solidity_contract/31565.sol#474) is not in mixedCase
+Parameter '_investors' of TelcoinSale.refundMany (/../data/reentrancy/solidity_contract/31565.sol#528) is not in mixedCase
+Parameter '_investor' of TelcoinSale.refund (/../data/reentrancy/solidity_contract/31565.sol#534) is not in mixedCase
+Parameter '_beneficiary' of TelcoinSale.registerAltPurchase (/../data/reentrancy/solidity_contract/31565.sol#548) is not in mixedCase
+Parameter '_symbol' of TelcoinSale.registerAltPurchase (/../data/reentrancy/solidity_contract/31565.sol#549) is not in mixedCase
+Parameter '_transactionId' of TelcoinSale.registerAltPurchase (/../data/reentrancy/solidity_contract/31565.sol#550) is not in mixedCase
+Parameter '_weiAmount' of TelcoinSale.registerAltPurchase (/../data/reentrancy/solidity_contract/31565.sol#551) is not in mixedCase
+Parameter '_to' of TelcoinSale.transferOwnership (/../data/reentrancy/solidity_contract/31565.sol#587) is not in mixedCase
+Parameter '_capFlex' of TelcoinSale.updateCapFlex (/../data/reentrancy/solidity_contract/31565.sol#599) is not in mixedCase
+Parameter '_participants' of TelcoinSale.whitelistMany (/../data/reentrancy/solidity_contract/31565.sol#606) is not in mixedCase
+Parameter '_minWeiAmount' of TelcoinSale.whitelistMany (/../data/reentrancy/solidity_contract/31565.sol#607) is not in mixedCase
+Parameter '_maxWeiAmount' of TelcoinSale.whitelistMany (/../data/reentrancy/solidity_contract/31565.sol#608) is not in mixedCase
+Parameter '_bonusRate' of TelcoinSale.whitelistMany (/../data/reentrancy/solidity_contract/31565.sol#609) is not in mixedCase
+Parameter '_participant' of TelcoinSale.whitelist (/../data/reentrancy/solidity_contract/31565.sol#625) is not in mixedCase
+Parameter '_minWeiAmount' of TelcoinSale.whitelist (/../data/reentrancy/solidity_contract/31565.sol#626) is not in mixedCase
+Parameter '_maxWeiAmount' of TelcoinSale.whitelist (/../data/reentrancy/solidity_contract/31565.sol#627) is not in mixedCase
+Parameter '_bonusRate' of TelcoinSale.whitelist (/../data/reentrancy/solidity_contract/31565.sol#628) is not in mixedCase
+Parameter '_beneficiary' of TelcoinSale.tokensForPurchase (/../data/reentrancy/solidity_contract/31565.sol#663) is not in mixedCase
+Parameter '_weiAmount' of TelcoinSale.tokensForPurchase (/../data/reentrancy/solidity_contract/31565.sol#664) is not in mixedCase
+Parameter '_investor' of TelcoinSale.totalDeposited (/../data/reentrancy/solidity_contract/31565.sol#692) is not in mixedCase
+Function 'TelcoinSaleKYCEscrow.TelcoinSaleKYCEscrow' (/../data/reentrancy/solidity_contract/31565.sol#733-738) is not in mixedCase
+Parameter '_sale' of TelcoinSaleKYCEscrow.TelcoinSaleKYCEscrow (/../data/reentrancy/solidity_contract/31565.sol#733) is not in mixedCase
+Parameter '_participant' of TelcoinSaleKYCEscrow.approve (/../data/reentrancy/solidity_contract/31565.sol#744) is not in mixedCase
+Parameter '_participants' of TelcoinSaleKYCEscrow.approveMany (/../data/reentrancy/solidity_contract/31565.sol#753) is not in mixedCase
+Parameter '_beneficiary' of TelcoinSaleKYCEscrow.placeValue (/../data/reentrancy/solidity_contract/31565.sol#766) is not in mixedCase
+Parameter '_participant' of TelcoinSaleKYCEscrow.reject (/../data/reentrancy/solidity_contract/31565.sol#782) is not in mixedCase
+Parameter '_participants' of TelcoinSaleKYCEscrow.rejectMany (/../data/reentrancy/solidity_contract/31565.sol#791) is not in mixedCase
+Parameter '_to' of TelcoinSaleKYCEscrow.transferOwnership (/../data/reentrancy/solidity_contract/31565.sol#797) is not in mixedCase
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#conformance-to-solidity-naming-conventions[0m
+INFO:Slither:/../data/reentrancy/solidity_contract/31565.sol analyzed (5 contracts), 106 result(s) found

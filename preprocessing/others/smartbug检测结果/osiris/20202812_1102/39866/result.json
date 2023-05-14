@@ -1,0 +1,14 @@
+{
+  "contract": "39866",
+  "tool": "osiris",
+  "start": 1609186803.841289,
+  "end": 1609186843.497277,
+  "duration": 39.65598797798157,
+  "analysis": [
+    {
+      "errors": [],
+      "file": "/../data/reentrancy/solidity_contract/39866.sol",
+      "name": "NinjaToken"
+    }
+  ]
+}

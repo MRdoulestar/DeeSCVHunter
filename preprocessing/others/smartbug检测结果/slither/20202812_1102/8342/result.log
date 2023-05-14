@@ -1,0 +1,141 @@
+INFO:Detectors:[92m
+CHGameBase._unclaimedChickenOf (/../data/reentrancy/solidity_contract/8342.sol#289-298) uses timestamp for comparisons
+	Dangerous comparisons:
+	- _timestamp > 0 && _timestamp < block.timestamp (/../data/reentrancy/solidity_contract/8342.sol#291-297)
+CHArena.attack (/../data/reentrancy/solidity_contract/8342.sol#587-601) uses timestamp for comparisons
+	Dangerous comparisons:
+	- require(bool)(attackCooldown[msg.sender] < block.timestamp) (/../data/reentrancy/solidity_contract/8342.sol#588)
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#block-timestamp[0m
+INFO:Detectors:[92m
+CHStock.decimals should be constant (/../data/reentrancy/solidity_contract/8342.sol#72)
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#state-variables-that-could-be-declared-constant[0m
+INFO:Detectors:[92m
+CHStock.totalSupply (/../data/reentrancy/solidity_contract/8342.sol#122-124) should be declared external
+ERC20Interface.totalSupply (/../data/reentrancy/solidity_contract/8342.sol#45) should be declared external
+CHStock.balanceOf (/../data/reentrancy/solidity_contract/8342.sol#126-128) should be declared external
+ERC20Interface.balanceOf (/../data/reentrancy/solidity_contract/8342.sol#46) should be declared external
+CHStock.transfer (/../data/reentrancy/solidity_contract/8342.sol#97-100) should be declared external
+ERC20Interface.transfer (/../data/reentrancy/solidity_contract/8342.sol#47) should be declared external
+CHStock.transferFrom (/../data/reentrancy/solidity_contract/8342.sol#102-110) should be declared external
+ERC20Interface.transferFrom (/../data/reentrancy/solidity_contract/8342.sol#48) should be declared external
+ERC20Interface.approve (/../data/reentrancy/solidity_contract/8342.sol#49) should be declared external
+CHStock.approve (/../data/reentrancy/solidity_contract/8342.sol#112-116) should be declared external
+CHStock.allowance (/../data/reentrancy/solidity_contract/8342.sol#130-136) should be declared external
+ERC20Interface.allowance (/../data/reentrancy/solidity_contract/8342.sol#50) should be declared external
+CHStock.redeemShares (/../data/reentrancy/solidity_contract/8342.sol#84-95) should be declared external
+CHGameBase.transferChickenFrom (/../data/reentrancy/solidity_contract/8342.sol#227-237) should be declared external
+CHGameBase.chickenOf (/../data/reentrancy/solidity_contract/8342.sol#239-241) should be declared external
+CHHouse.withdrawStoreBalance (/../data/reentrancy/solidity_contract/8342.sol#561-564) should be declared external
+CHAltar.tradeBookOf (/../data/reentrancy/solidity_contract/8342.sol#660-678) should be declared external
+CHCommittee.changePet (/../data/reentrancy/solidity_contract/8342.sol#803-821) should be declared external
+CHCommittee.setNameAndSymbol (/../data/reentrancy/solidity_contract/8342.sol#925-933) should be declared external
+CHCommittee.setDeveloper (/../data/reentrancy/solidity_contract/8342.sol#935-941) should be declared external
+CHCommittee.setCommittee (/../data/reentrancy/solidity_contract/8342.sol#943-948) should be declared external
+ChickenHunt.hunterOf (/../data/reentrancy/solidity_contract/8342.sol#1021-1038) should be declared external
+ChickenHunt.detailsOf (/../data/reentrancy/solidity_contract/8342.sol#1040-1071) should be declared external
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#public-function-that-could-be-declared-as-external[0m
+INFO:Detectors:[92m
+Low level call in CHCommittee.callFor (/../data/reentrancy/solidity_contract/8342.sol#771-773):
+	-_to.call.value(_value).gas(_gas)(_code) /../data/reentrancy/solidity_contract/8342.sol#772
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#low-level-calls[0m
+INFO:Detectors:[92m
+Parameter '_owner' of CHStock.balanceOf (/../data/reentrancy/solidity_contract/8342.sol#126) is not in mixedCase
+Parameter '_to' of CHStock.transfer (/../data/reentrancy/solidity_contract/8342.sol#97) is not in mixedCase
+Parameter '_value' of CHStock.transfer (/../data/reentrancy/solidity_contract/8342.sol#97) is not in mixedCase
+Parameter '_from' of CHStock.transferFrom (/../data/reentrancy/solidity_contract/8342.sol#102) is not in mixedCase
+Parameter '_to' of CHStock.transferFrom (/../data/reentrancy/solidity_contract/8342.sol#102) is not in mixedCase
+Parameter '_value' of CHStock.transferFrom (/../data/reentrancy/solidity_contract/8342.sol#102) is not in mixedCase
+Parameter '_spender' of CHStock.approve (/../data/reentrancy/solidity_contract/8342.sol#112) is not in mixedCase
+Parameter '_value' of CHStock.approve (/../data/reentrancy/solidity_contract/8342.sol#112) is not in mixedCase
+Parameter '_owner' of CHStock.allowance (/../data/reentrancy/solidity_contract/8342.sol#130) is not in mixedCase
+Parameter '_spender' of CHStock.allowance (/../data/reentrancy/solidity_contract/8342.sol#130) is not in mixedCase
+Parameter '_shareholder' of CHStock.dividendsOf (/../data/reentrancy/solidity_contract/8342.sol#118) is not in mixedCase
+Function 'CHStock._giveShares' (/../data/reentrancy/solidity_contract/8342.sol#140-149) is not in mixedCase
+Parameter '_user' of CHStock._giveShares (/../data/reentrancy/solidity_contract/8342.sol#140) is not in mixedCase
+Parameter '_ethereum' of CHStock._giveShares (/../data/reentrancy/solidity_contract/8342.sol#140) is not in mixedCase
+Function 'CHStock._transfer' (/../data/reentrancy/solidity_contract/8342.sol#151-166) is not in mixedCase
+Parameter '_from' of CHStock._transfer (/../data/reentrancy/solidity_contract/8342.sol#151) is not in mixedCase
+Parameter '_to' of CHStock._transfer (/../data/reentrancy/solidity_contract/8342.sol#151) is not in mixedCase
+Parameter '_value' of CHStock._transfer (/../data/reentrancy/solidity_contract/8342.sol#151) is not in mixedCase
+Parameter '_user' of CHGameBase.saveChickenOf (/../data/reentrancy/solidity_contract/8342.sol#218) is not in mixedCase
+Parameter '_from' of CHGameBase.transferChickenFrom (/../data/reentrancy/solidity_contract/8342.sol#227) is not in mixedCase
+Parameter '_to' of CHGameBase.transferChickenFrom (/../data/reentrancy/solidity_contract/8342.sol#227) is not in mixedCase
+Parameter '_value' of CHGameBase.transferChickenFrom (/../data/reentrancy/solidity_contract/8342.sol#227) is not in mixedCase
+Parameter '_user' of CHGameBase.chickenOf (/../data/reentrancy/solidity_contract/8342.sol#239) is not in mixedCase
+Function 'CHGameBase._payChicken' (/../data/reentrancy/solidity_contract/8342.sol#245-261) is not in mixedCase
+Parameter '_user' of CHGameBase._payChicken (/../data/reentrancy/solidity_contract/8342.sol#245) is not in mixedCase
+Parameter '_chicken' of CHGameBase._payChicken (/../data/reentrancy/solidity_contract/8342.sol#245) is not in mixedCase
+Function 'CHGameBase._payEthereumAndDistribute' (/../data/reentrancy/solidity_contract/8342.sol#263-275) is not in mixedCase
+Parameter '_cost' of CHGameBase._payEthereumAndDistribute (/../data/reentrancy/solidity_contract/8342.sol#263) is not in mixedCase
+Function 'CHGameBase._payEthereum' (/../data/reentrancy/solidity_contract/8342.sol#277-287) is not in mixedCase
+Parameter '_cost' of CHGameBase._payEthereum (/../data/reentrancy/solidity_contract/8342.sol#277) is not in mixedCase
+Function 'CHGameBase._unclaimedChickenOf' (/../data/reentrancy/solidity_contract/8342.sol#289-298) is not in mixedCase
+Parameter '_user' of CHGameBase._unclaimedChickenOf (/../data/reentrancy/solidity_contract/8342.sol#289) is not in mixedCase
+Function 'CHGameBase._houseOf' (/../data/reentrancy/solidity_contract/8342.sol#300-307) is not in mixedCase
+Parameter '_user' of CHGameBase._houseOf (/../data/reentrancy/solidity_contract/8342.sol#300) is not in mixedCase
+Parameter '_to' of CHHunter.upgradeStrength (/../data/reentrancy/solidity_contract/8342.sol#338) is not in mixedCase
+Parameter '_to' of CHHunter.upgradeDexterity (/../data/reentrancy/solidity_contract/8342.sol#352) is not in mixedCase
+Parameter '_to' of CHHunter.upgradeConstitution (/../data/reentrancy/solidity_contract/8342.sol#366) is not in mixedCase
+Parameter '_to' of CHHunter.upgradeResistance (/../data/reentrancy/solidity_contract/8342.sol#379) is not in mixedCase
+Function 'CHHunter._payForUpgrade' (/../data/reentrancy/solidity_contract/8342.sol#394-399) is not in mixedCase
+Parameter '_from' of CHHunter._payForUpgrade (/../data/reentrancy/solidity_contract/8342.sol#394) is not in mixedCase
+Parameter '_to' of CHHunter._payForUpgrade (/../data/reentrancy/solidity_contract/8342.sol#394) is not in mixedCase
+Parameter '_type' of CHHunter._payForUpgrade (/../data/reentrancy/solidity_contract/8342.sol#394) is not in mixedCase
+Function 'CHHunter._gapOfSquareSum' (/../data/reentrancy/solidity_contract/8342.sol#401-408) is not in mixedCase
+Parameter '_before' of CHHunter._gapOfSquareSum (/../data/reentrancy/solidity_contract/8342.sol#401) is not in mixedCase
+Parameter '_after' of CHHunter._gapOfSquareSum (/../data/reentrancy/solidity_contract/8342.sol#401) is not in mixedCase
+Function 'CHHunter._gapOfCubeSum' (/../data/reentrancy/solidity_contract/8342.sol#410-417) is not in mixedCase
+Parameter '_before' of CHHunter._gapOfCubeSum (/../data/reentrancy/solidity_contract/8342.sol#410) is not in mixedCase
+Parameter '_after' of CHHunter._gapOfCubeSum (/../data/reentrancy/solidity_contract/8342.sol#410) is not in mixedCase
+Parameter '_amount' of CHHouse.buyDepots (/../data/reentrancy/solidity_contract/8342.sol#484) is not in mixedCase
+Parameter '_id' of CHHouse.buyPets (/../data/reentrancy/solidity_contract/8342.sol#493) is not in mixedCase
+Parameter '_amount' of CHHouse.buyPets (/../data/reentrancy/solidity_contract/8342.sol#493) is not in mixedCase
+Parameter '_id' of CHHouse.buyItem (/../data/reentrancy/solidity_contract/8342.sol#516) is not in mixedCase
+Parameter '_target' of CHArena.attack (/../data/reentrancy/solidity_contract/8342.sol#587) is not in mixedCase
+Parameter '_chicken' of CHAltar.chickenToAltar (/../data/reentrancy/solidity_contract/8342.sol#635) is not in mixedCase
+Parameter '_user' of CHAltar.tradeBookOf (/../data/reentrancy/solidity_contract/8342.sol#660) is not in mixedCase
+Function 'CHAltar._resolveTradeBook' (/../data/reentrancy/solidity_contract/8342.sol#682-691) is not in mixedCase
+Parameter '_tradeBook' of CHAltar._resolveTradeBook (/../data/reentrancy/solidity_contract/8342.sol#682) is not in mixedCase
+Function 'CHAltar._getCurrentAltarRecordId' (/../data/reentrancy/solidity_contract/8342.sol#693-695) is not in mixedCase
+Function 'CHAltar._getAltarRecord' (/../data/reentrancy/solidity_contract/8342.sol#697-706) is not in mixedCase
+Parameter '_id' of CHAltar._getAltarRecord (/../data/reentrancy/solidity_contract/8342.sol#697) is not in mixedCase
+Parameter '_to' of CHCommittee.callFor (/../data/reentrancy/solidity_contract/8342.sol#771) is not in mixedCase
+Parameter '_value' of CHCommittee.callFor (/../data/reentrancy/solidity_contract/8342.sol#771) is not in mixedCase
+Parameter '_gas' of CHCommittee.callFor (/../data/reentrancy/solidity_contract/8342.sol#771) is not in mixedCase
+Parameter '_code' of CHCommittee.callFor (/../data/reentrancy/solidity_contract/8342.sol#771) is not in mixedCase
+Parameter '_huntingPower' of CHCommittee.addPet (/../data/reentrancy/solidity_contract/8342.sol#776) is not in mixedCase
+Parameter '_offensePower' of CHCommittee.addPet (/../data/reentrancy/solidity_contract/8342.sol#777) is not in mixedCase
+Parameter '_defense' of CHCommittee.addPet (/../data/reentrancy/solidity_contract/8342.sol#778) is not in mixedCase
+Parameter '_chicken' of CHCommittee.addPet (/../data/reentrancy/solidity_contract/8342.sol#779) is not in mixedCase
+Parameter '_ethereum' of CHCommittee.addPet (/../data/reentrancy/solidity_contract/8342.sol#780) is not in mixedCase
+Parameter '_max' of CHCommittee.addPet (/../data/reentrancy/solidity_contract/8342.sol#781) is not in mixedCase
+Parameter '_id' of CHCommittee.changePet (/../data/reentrancy/solidity_contract/8342.sol#804) is not in mixedCase
+Parameter '_chicken' of CHCommittee.changePet (/../data/reentrancy/solidity_contract/8342.sol#805) is not in mixedCase
+Parameter '_ethereum' of CHCommittee.changePet (/../data/reentrancy/solidity_contract/8342.sol#806) is not in mixedCase
+Parameter '_max' of CHCommittee.changePet (/../data/reentrancy/solidity_contract/8342.sol#807) is not in mixedCase
+Parameter '_huntingMultiplier' of CHCommittee.addItem (/../data/reentrancy/solidity_contract/8342.sol#824) is not in mixedCase
+Parameter '_offenseMultiplier' of CHCommittee.addItem (/../data/reentrancy/solidity_contract/8342.sol#825) is not in mixedCase
+Parameter '_defenseMultiplier' of CHCommittee.addItem (/../data/reentrancy/solidity_contract/8342.sol#826) is not in mixedCase
+Parameter '_price' of CHCommittee.addItem (/../data/reentrancy/solidity_contract/8342.sol#827) is not in mixedCase
+Parameter '_price' of CHCommittee.setDepot (/../data/reentrancy/solidity_contract/8342.sol#863) is not in mixedCase
+Parameter '_max' of CHCommittee.setDepot (/../data/reentrancy/solidity_contract/8342.sol#863) is not in mixedCase
+Parameter '_chickenA' of CHCommittee.setConfiguration (/../data/reentrancy/solidity_contract/8342.sol#873) is not in mixedCase
+Parameter '_ethereumA' of CHCommittee.setConfiguration (/../data/reentrancy/solidity_contract/8342.sol#874) is not in mixedCase
+Parameter '_maxA' of CHCommittee.setConfiguration (/../data/reentrancy/solidity_contract/8342.sol#875) is not in mixedCase
+Parameter '_chickenB' of CHCommittee.setConfiguration (/../data/reentrancy/solidity_contract/8342.sol#876) is not in mixedCase
+Parameter '_ethereumB' of CHCommittee.setConfiguration (/../data/reentrancy/solidity_contract/8342.sol#877) is not in mixedCase
+Parameter '_maxB' of CHCommittee.setConfiguration (/../data/reentrancy/solidity_contract/8342.sol#878) is not in mixedCase
+Parameter '_dividendRate' of CHCommittee.setDistribution (/../data/reentrancy/solidity_contract/8342.sol#898) is not in mixedCase
+Parameter '_altarCut' of CHCommittee.setDistribution (/../data/reentrancy/solidity_contract/8342.sol#899) is not in mixedCase
+Parameter '_storeCut' of CHCommittee.setDistribution (/../data/reentrancy/solidity_contract/8342.sol#900) is not in mixedCase
+Parameter '_devCut' of CHCommittee.setDistribution (/../data/reentrancy/solidity_contract/8342.sol#901) is not in mixedCase
+Parameter '_cooldownTime' of CHCommittee.setCooldownTime (/../data/reentrancy/solidity_contract/8342.sol#919) is not in mixedCase
+Parameter '_name' of CHCommittee.setNameAndSymbol (/../data/reentrancy/solidity_contract/8342.sol#925) is not in mixedCase
+Parameter '_symbol' of CHCommittee.setNameAndSymbol (/../data/reentrancy/solidity_contract/8342.sol#925) is not in mixedCase
+Parameter '_developer' of CHCommittee.setDeveloper (/../data/reentrancy/solidity_contract/8342.sol#935) is not in mixedCase
+Parameter '_committee' of CHCommittee.setCommittee (/../data/reentrancy/solidity_contract/8342.sol#943) is not in mixedCase
+Parameter '_chickenTokenDelegator' of ChickenHunt.init (/../data/reentrancy/solidity_contract/8342.sol#981) is not in mixedCase
+Parameter '_user' of ChickenHunt.hunterOf (/../data/reentrancy/solidity_contract/8342.sol#1021) is not in mixedCase
+Parameter '_user' of ChickenHunt.detailsOf (/../data/reentrancy/solidity_contract/8342.sol#1040) is not in mixedCase
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#conformance-to-solidity-naming-conventions[0m
+INFO:Slither:/../data/reentrancy/solidity_contract/8342.sol analyzed (10 contracts), 125 result(s) found

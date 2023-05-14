@@ -1,0 +1,41 @@
+{
+  "contract": "35878",
+  "tool": "osiris",
+  "start": 1609159963.9933171,
+  "end": 1609159972.125216,
+  "duration": 8.131898880004883,
+  "analysis": [
+    {
+      "errors": [
+        {
+          "line": 285,
+          "column": 17,
+          "message": "concurrency_bug"
+        },
+        {
+          "line": 285,
+          "column": 17,
+          "message": "reentrancy_bug"
+        }
+      ],
+      "file": "/../data/reentrancy/solidity_contract/35878.sol",
+      "name": "Forwarder"
+    },
+    {
+      "errors": [
+        {
+          "line": 228,
+          "column": 9,
+          "message": "concurrency_bug"
+        }
+      ],
+      "file": "/../data/reentrancy/solidity_contract/35878.sol",
+      "name": "ForwarderFactory"
+    },
+    {
+      "errors": [],
+      "file": "/../data/reentrancy/solidity_contract/35878.sol",
+      "name": "RegBase"
+    }
+  ]
+}

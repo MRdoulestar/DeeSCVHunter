@@ -1,0 +1,193 @@
+INFO:Slither:Compilation warnings/errors on /../data/reentrancy/solidity_contract/39684.sol:
+/../data/reentrancy/solidity_contract/39684.sol:39:5: Warning: Defining constructors as functions with the same name as the contract is deprecated. Use "constructor(...) { ... }" instead.
+    function EtherprisesLLC() {
+    ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/39684.sol:46:13: Warning: "throw" is deprecated in favour of "revert()", "require()" and "assert()".
+            throw;
+            ^---^
+/../data/reentrancy/solidity_contract/39684.sol:54:13: Warning: "throw" is deprecated in favour of "revert()", "require()" and "assert()".
+            throw;
+            ^---^
+/../data/reentrancy/solidity_contract/39684.sol:93:13: Warning: "throw" is deprecated in favour of "revert()", "require()" and "assert()".
+            throw;
+            ^---^
+/../data/reentrancy/solidity_contract/39684.sol:137:13: Warning: Use of the "var" keyword is deprecated.
+ ... latestAddress ... 
+     ^-----------^
+/../data/reentrancy/solidity_contract/39684.sol:137:28: Warning: Use of the "var" keyword is deprecated.
+ ... latestName ... 
+     ^--------^
+/../data/reentrancy/solidity_contract/39684.sol:139:13: Warning: "throw" is deprecated in favour of "revert()", "require()" and "assert()".
+            throw;
+            ^---^
+/../data/reentrancy/solidity_contract/39684.sol:145:17: Warning: "throw" is deprecated in favour of "revert()", "require()" and "assert()".
+                throw;
+                ^---^
+/../data/reentrancy/solidity_contract/39684.sol:62:29: Warning: Using contract member "balance" inherited from the address type is deprecated. Convert the contract to "address" type to access the member, for example use "address(contract).balance" instead.
+        generalManager.send(this.balance);
+                            ^----------^
+/../data/reentrancy/solidity_contract/39684.sol:62:9: Warning: Failure condition of 'send' ignored. Consider using 'transfer' instead.
+        generalManager.send(this.balance);
+        ^-------------------------------^
+/../data/reentrancy/solidity_contract/39684.sol:85:9: Warning: Invoking events without "emit" prefix is deprecated.
+        AmendmentAdded(newAmendment);
+        ^--------------------------^
+/../data/reentrancy/solidity_contract/39684.sol:95:34: Warning: Using "years" as a unit denomination is deprecated.
+        expiresAt[msg.sender] += 1 years;
+                                 ^-----^
+/../data/reentrancy/solidity_contract/39684.sol:97:9: Warning: Invoking events without "emit" prefix is deprecated.
+        FeePaid(msg.sender);
+        ^-----------------^
+/../data/reentrancy/solidity_contract/39684.sol:107:9: Warning: Invoking events without "emit" prefix is deprecated.
+        ManagerSet(newManger);
+        ^-------------------^
+/../data/reentrancy/solidity_contract/39684.sol:115:9: Warning: Invoking events without "emit" prefix is deprecated.
+        FactorySet(newFactory);
+        ^--------------------^
+/../data/reentrancy/solidity_contract/39684.sol:148:42: Warning: Using "years" as a unit denomination is deprecated.
+        expiresAt[latestAddress] = now + 1 years;
+                                         ^-----^
+/../data/reentrancy/solidity_contract/39684.sol:152:9: Warning: Invoking events without "emit" prefix is deprecated.
+        SeriesCreated(latestAddress, seriesId);
+        ^------------------------------------^
+/../data/reentrancy/solidity_contract/39684.sol:181:17: Warning: Invoking events without "emit" prefix is deprecated.
+                DepositMade(latestSeriesForUser[msg.sender], msg.value);
+                ^-----------------------------------------------------^
+/../data/reentrancy/solidity_contract/39684.sol:39:5: Warning: No visibility specified. Defaulting to "public". 
+    function EtherprisesLLC() {
+    ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/39684.sol:61:5: Warning: No visibility specified. Defaulting to "public". 
+    function withdraw() ifGeneralManager {
+    ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/39684.sol:69:5: Warning: No visibility specified. Defaulting to "public". 
+    function isExpired(address addr) constant returns (bool) {
+    ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/39684.sol:80:5: Warning: No visibility specified. Defaulting to "public". 
+    function addAmendment(string newAmendment) ifGeneralManager {
+    ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/39684.sol:90:5: Warning: No visibility specified. Defaulting to "public". 
+    function payFee() ifSeries payable returns (bool) {
+    ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/39684.sol:104:5: Warning: No visibility specified. Defaulting to "public". 
+    function setManager(address newManger) ifGeneralManager {
+    ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/39684.sol:112:5: Warning: No visibility specified. Defaulting to "public". 
+    function setFactory(address newFactory) ifGeneralManager {
+    ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/39684.sol:134:5: Warning: No visibility specified. Defaulting to "public". 
+    function createSeries(bytes name, uint shares, string industry, string symbol, address extraContract) payable returns (address seriesAddress,uint seriesId) {
+    ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/39684.sol:160:5: Warning: No visibility specified. Defaulting to "public". 
+    function addr(bytes32 _name) constant returns(address o_address) {
+    ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/39684.sol:169:5: Warning: No visibility specified. Defaulting to "public". 
+    function name(address _owner) constant returns(bytes32 o_name){
+    ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/39684.sol:175:5: Warning: No visibility specified. Defaulting to "public". 
+    function () payable {
+    ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/39684.sol:195:5: Warning: No visibility specified. Defaulting to "public". 
+    function createSeries (uint seriesId,bytes name,uint shares,string industry,string symbol,address manager,address extraContract) payable returns (address addr,bytes32 newName) {
+    ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/39684.sol:195:28: Warning: Unused function parameter. Remove or comment out the variable name to silence this warning.
+ ... uint seriesId ... 
+     ^-----------^
+/../data/reentrancy/solidity_contract/39684.sol:195:42: Warning: Unused function parameter. Remove or comment out the variable name to silence this warning.
+ ... bytes name ... 
+     ^--------^
+/../data/reentrancy/solidity_contract/39684.sol:195:53: Warning: Unused function parameter. Remove or comment out the variable name to silence this warning.
+ ... uint shares ... 
+     ^---------^
+/../data/reentrancy/solidity_contract/39684.sol:195:65: Warning: Unused function parameter. Remove or comment out the variable name to silence this warning.
+ ... string industry ... 
+     ^-------------^
+/../data/reentrancy/solidity_contract/39684.sol:195:81: Warning: Unused function parameter. Remove or comment out the variable name to silence this warning.
+ ... string symbol ... 
+     ^-----------^
+/../data/reentrancy/solidity_contract/39684.sol:195:95: Warning: Unused function parameter. Remove or comment out the variable name to silence this warning.
+ ... address manager ... 
+     ^-------------^
+/../data/reentrancy/solidity_contract/39684.sol:195:111: Warning: Unused function parameter. Remove or comment out the variable name to silence this warning.
+ ... address extraContract ... 
+     ^-------------------^
+
+INFO:Detectors:[91m
+Reentrancy in EtherprisesLLC.createSeries (/../data/reentrancy/solidity_contract/39684.sol#134-154):
+	External calls:
+	- (latestAddress,latestName) = SeriesFactory(seriesFactory).createSeries.value(msg.value)(seriesId,name,shares,industry,symbol,msg.sender,extraContract) (/../data/reentrancy/solidity_contract/39684.sol#137)
+	State variables written after the call(s):
+	- series (/../data/reentrancy/solidity_contract/39684.sol#147)
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#reentrancy-vulnerabilities[0m
+INFO:Detectors:[93m
+EtherprisesLLC.ifSeries (/../data/reentrancy/solidity_contract/39684.sol#52-57) uses a dangerous strict equality:
+	- expiresAt[msg.sender] == 0
+	- expiresAt[msg.sender] == 0
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#dangerous-strict-equalities[0m
+INFO:Detectors:[93m
+Contract locking ether found in /../data/reentrancy/solidity_contract/39684.sol:
+	Contract SeriesFactory has payable functions:
+	 - createSeries (/../data/reentrancy/solidity_contract/39684.sol#195-200)
+	But does not have a function to withdraw the ether
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#contracts-that-lock-ether[0m
+INFO:Detectors:[93m
+_newName in SeriesFactory.createSeries (/../data/reentrancy/solidity_contract/39684.sol#197) is a local variable never initialiazed
+newSeries in SeriesFactory.createSeries (/../data/reentrancy/solidity_contract/39684.sol#196) is a local variable never initialiazed
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#uninitialized-local-variables[0m
+INFO:Detectors:[92m
+EtherprisesLLC.isExpired.addr (local variable @ /../data/reentrancy/solidity_contract/39684.sol#69) shadows:
+	- EtherprisesLLC.addr (function @ /../data/reentrancy/solidity_contract/39684.sol#160-162)
+EtherprisesLLC.createSeries.name (local variable @ /../data/reentrancy/solidity_contract/39684.sol#134) shadows:
+	- EtherprisesLLC.name (function @ /../data/reentrancy/solidity_contract/39684.sol#169-171)
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#local-variable-shadowing[0m
+INFO:Detectors:[92m
+Reentrancy in EtherprisesLLC.createSeries (/../data/reentrancy/solidity_contract/39684.sol#134-154):
+	External calls:
+	- (latestAddress,latestName) = SeriesFactory(seriesFactory).createSeries.value(msg.value)(seriesId,name,shares,industry,symbol,msg.sender,extraContract) (/../data/reentrancy/solidity_contract/39684.sol#137)
+	State variables written after the call(s):
+	- expiresAt (/../data/reentrancy/solidity_contract/39684.sol#148)
+	- latestSeriesForUser (/../data/reentrancy/solidity_contract/39684.sol#149)
+	- seriesByAddress (/../data/reentrancy/solidity_contract/39684.sol#150)
+	- seriesByName (/../data/reentrancy/solidity_contract/39684.sol#143)
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#reentrancy-vulnerabilities-2[0m
+INFO:Detectors:[92m
+SeriesFactory.owner should be constant (/../data/reentrancy/solidity_contract/39684.sol#193)
+SeriesFactory.seriesFactory should be constant (/../data/reentrancy/solidity_contract/39684.sol#192)
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#state-variables-that-could-be-declared-constant[0m
+INFO:Detectors:[92m
+Deprecated standard detected @ /../data/reentrancy/solidity_contract/39684.sol#93:
+	- Usage of "throw" should be replaced with "revert()"
+Deprecated standard detected @ /../data/reentrancy/solidity_contract/39684.sol#139:
+	- Usage of "throw" should be replaced with "revert()"
+Deprecated standard detected @ /../data/reentrancy/solidity_contract/39684.sol#145:
+	- Usage of "throw" should be replaced with "revert()"
+Deprecated standard detected @ /../data/reentrancy/solidity_contract/39684.sol#46:
+	- Usage of "throw" should be replaced with "revert()"
+Deprecated standard detected @ /../data/reentrancy/solidity_contract/39684.sol#54:
+	- Usage of "throw" should be replaced with "revert()"
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#deprecated-standards[0m
+INFO:Detectors:[92m
+EtherprisesLLC.withdraw (/../data/reentrancy/solidity_contract/39684.sol#61-63) should be declared external
+EtherprisesLLC.isExpired (/../data/reentrancy/solidity_contract/39684.sol#69-74) should be declared external
+EtherprisesLLC.addAmendment (/../data/reentrancy/solidity_contract/39684.sol#80-86) should be declared external
+EtherprisesLLC.payFee (/../data/reentrancy/solidity_contract/39684.sol#90-99) should be declared external
+EtherprisesLLC.setManager (/../data/reentrancy/solidity_contract/39684.sol#104-108) should be declared external
+EtherprisesLLC.setFactory (/../data/reentrancy/solidity_contract/39684.sol#112-116) should be declared external
+EtherprisesLLC.addr (/../data/reentrancy/solidity_contract/39684.sol#160-162) should be declared external
+EtherprisesLLC.name (/../data/reentrancy/solidity_contract/39684.sol#169-171) should be declared external
+EtherprisesLLC.fallback (/../data/reentrancy/solidity_contract/39684.sol#175-185) should be declared external
+SeriesFactory.createSeries (/../data/reentrancy/solidity_contract/39684.sol#195-200) should be declared external
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#public-function-that-could-be-declared-as-external[0m
+INFO:Detectors:[92m
+Detected issues with version pragma in /../data/reentrancy/solidity_contract/39684.sol:
+	- pragma solidity^0.4.9 (/../data/reentrancy/solidity_contract/39684.sol#8): it allows old versions
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#incorrect-version-of-solidity[0m
+INFO:Detectors:[92m
+Low level call in EtherprisesLLC.fallback (/../data/reentrancy/solidity_contract/39684.sol#175-185):
+	-latestSeriesForUser[msg.sender].call.value(msg.value)() /../data/reentrancy/solidity_contract/39684.sol#180-181
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#low-level-calls[0m
+INFO:Detectors:[92m
+Function 'EtherprisesLLC.EtherprisesLLC' (/../data/reentrancy/solidity_contract/39684.sol#39-41) is not in mixedCase
+Parameter '_name' of EtherprisesLLC.addr (/../data/reentrancy/solidity_contract/39684.sol#160) is not in mixedCase
+Parameter '_owner' of EtherprisesLLC.name (/../data/reentrancy/solidity_contract/39684.sol#169) is not in mixedCase
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#conformance-to-solidity-naming-conventions[0m
+INFO:Slither:/../data/reentrancy/solidity_contract/39684.sol analyzed (2 contracts), 29 result(s) found

@@ -1,0 +1,63 @@
+INFO:Slither:Compilation warnings/errors on /../data/reentrancy/solidity_contract/14758.sol:
+/../data/reentrancy/solidity_contract/14758.sol:5:3: Warning: Defining constructors as functions with the same name as the contract is deprecated. Use "constructor(...) { ... }" instead.
+  function Owned() {
+  ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/14758.sol:9:30: Warning: "suicide" has been deprecated in favour of "selfdestruct"
+    if (msg.sender == owner) suicide(owner);
+                             ^------------^
+/../data/reentrancy/solidity_contract/14758.sol:16:25: Warning: Using contract member "balance" inherited from the address type is deprecated. Convert the contract to "address" type to access the member, for example use "address(contract).balance" instead.
+    uint startBalance = this.balance;
+                        ^----------^
+/../data/reentrancy/solidity_contract/14758.sol:17:5: Warning: Return value of low-level calls not used.
+    target.call.value(msg.value)(bytes4(keccak256("play(uint256)")), a);
+    ^-----------------------------------------------------------------^
+/../data/reentrancy/solidity_contract/14758.sol:18:9: Warning: Using contract member "balance" inherited from the address type is deprecated. Convert the contract to "address" type to access the member, for example use "address(contract).balance" instead.
+    if (this.balance <= startBalance) revert();
+        ^----------^
+/../data/reentrancy/solidity_contract/14758.sol:19:20: Warning: Using contract member "balance" inherited from the address type is deprecated. Convert the contract to "address" type to access the member, for example use "address(contract).balance" instead.
+    owner.transfer(this.balance);
+                   ^----------^
+/../data/reentrancy/solidity_contract/14758.sol:23:13: Warning: Using contract member "balance" inherited from the address type is deprecated. Convert the contract to "address" type to access the member, for example use "address(contract).balance" instead.
+    require(this.balance > 0);
+            ^----------^
+/../data/reentrancy/solidity_contract/14758.sol:24:20: Warning: Using contract member "balance" inherited from the address type is deprecated. Convert the contract to "address" type to access the member, for example use "address(contract).balance" instead.
+    owner.transfer(this.balance);
+                   ^----------^
+/../data/reentrancy/solidity_contract/14758.sol:5:3: Warning: No visibility specified. Defaulting to "public". 
+  function Owned() {
+  ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/14758.sol:8:3: Warning: No visibility specified. Defaulting to "public". 
+  function kill() {
+  ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/14758.sol:14:3: Warning: No visibility specified. Defaulting to "public". 
+  function wcf(address target, uint256 a) payable {
+  ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/14758.sol:21:3: Warning: No visibility specified. Defaulting to "public". 
+  function withdraw() {
+  ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/14758.sol:27:3: Warning: No visibility specified. Defaulting to "public". 
+  function () payable {}
+  ^--------------------^
+
+INFO:Detectors:[92m
+Deprecated standard detected @ /../data/reentrancy/solidity_contract/14758.sol#9:
+	- Usage of "suicide()" should be replaced with "selfdestruct()"
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#deprecated-standards[0m
+INFO:Detectors:[92m
+Owned.kill (/../data/reentrancy/solidity_contract/14758.sol#8-10) should be declared external
+Wforcer.wcf (/../data/reentrancy/solidity_contract/14758.sol#14-20) should be declared external
+Wforcer.withdraw (/../data/reentrancy/solidity_contract/14758.sol#21-25) should be declared external
+Wforcer.fallback (/../data/reentrancy/solidity_contract/14758.sol#27) should be declared external
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#public-function-that-could-be-declared-as-external[0m
+INFO:Detectors:[92m
+Detected issues with version pragma in /../data/reentrancy/solidity_contract/14758.sol:
+	- pragma solidity^0.4.11 (/../data/reentrancy/solidity_contract/14758.sol#1): it allows old versions
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#incorrect-version-of-solidity[0m
+INFO:Detectors:[92m
+Low level call in Wforcer.wcf (/../data/reentrancy/solidity_contract/14758.sol#14-20):
+	-target.call.value(msg.value)(bytes4(keccak256()(play(uint256))),a) /../data/reentrancy/solidity_contract/14758.sol#17
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#low-level-calls[0m
+INFO:Detectors:[92m
+Function 'Owned.Owned' (/../data/reentrancy/solidity_contract/14758.sol#5-7) is not in mixedCase
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#conformance-to-solidity-naming-conventions[0m
+INFO:Slither:/../data/reentrancy/solidity_contract/14758.sol analyzed (2 contracts), 8 result(s) found

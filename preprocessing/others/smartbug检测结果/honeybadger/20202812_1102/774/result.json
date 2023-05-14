@@ -1,0 +1,29 @@
+{
+  "contract": "774",
+  "tool": "honeybadger",
+  "start": 1609143502.486057,
+  "end": 1609143535.771322,
+  "duration": 33.28526496887207,
+  "analysis": [
+    {
+      "errors": [],
+      "file": "/../data/reentrancy/solidity_contract/774.sol",
+      "name": "FDDEvents"
+    },
+    {
+      "errors": [],
+      "file": "/../data/reentrancy/solidity_contract/774.sol",
+      "name": "FDDKeysCalc"
+    },
+    {
+      "errors": [],
+      "file": "/../data/reentrancy/solidity_contract/774.sol",
+      "name": "FDDdatasets"
+    },
+    {
+      "errors": [],
+      "file": "/../data/reentrancy/solidity_contract/774.sol",
+      "name": "FomoDD"
+    }
+  ]
+}

@@ -1,0 +1,51 @@
+{
+  "contract": "23421",
+  "tool": "osiris",
+  "start": 1609191963.94769,
+  "end": 1609192020.955138,
+  "duration": 57.007447957992554,
+  "analysis": [
+    {
+      "errors": [
+        {
+          "line": 171,
+          "column": 13,
+          "message": "concurrency_bug"
+        },
+        {
+          "line": 171,
+          "column": 13,
+          "message": "concurrency_bug"
+        }
+      ],
+      "file": "/../data/reentrancy/solidity_contract/23421.sol",
+      "name": "Escapable"
+    },
+    {
+      "errors": [
+        {
+          "line": 257,
+          "column": 17,
+          "message": "concurrency_bug"
+        },
+        {
+          "line": 252,
+          "column": 9,
+          "message": "concurrency_bug"
+        },
+        {
+          "line": 257,
+          "column": 17,
+          "message": "reentrancy_bug"
+        }
+      ],
+      "file": "/../data/reentrancy/solidity_contract/23421.sol",
+      "name": "Multiplexor"
+    },
+    {
+      "errors": [],
+      "file": "/../data/reentrancy/solidity_contract/23421.sol",
+      "name": "Owned"
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "contract": "39705",
+  "tool": "honeybadger",
+  "start": 1609166197.956991,
+  "end": 1609166223.4853172,
+  "duration": 25.528326272964478,
+  "analysis": [
+    {
+      "errors": [],
+      "file": "/../data/reentrancy/solidity_contract/39705.sol",
+      "name": "FDC"
+    }
+  ]
+}

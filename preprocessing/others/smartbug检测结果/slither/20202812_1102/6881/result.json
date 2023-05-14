@@ -1,0 +1,3489 @@
+{
+  "contract": "6881",
+  "tool": "slither",
+  "start": 1609157223.906276,
+  "end": 1609157226.277178,
+  "duration": 2.3709020614624023,
+  "analysis": [
+    {
+      "check": "reentrancy-eth",
+      "impact": "High",
+      "confidence": "Medium",
+      "description": "Reentrancy in BancorBuyer.buyOne (/../data/reentrancy/solidity_contract/6881.sol#111-117):\n\tExternal calls:\n\t- tokenBalance = token.balanceOf(this) (/../data/reentrancy/solidity_contract/6881.sol#113)\n\t- require(bool)(_exchange.call.value(_value)(_data)) (/../data/reentrancy/solidity_contract/6881.sol#114)\n\tExternal calls sending eth:\n\t- require(bool)(_exchange.call.value(_value)(_data)) (/../data/reentrancy/solidity_contract/6881.sol#114)\n\tState variables written after the call(s):\n\t- balances (/../data/reentrancy/solidity_contract/6881.sol#115)\n",
+      "elements": [
+        {
+          "type": "function",
+          "name": "buyOne",
+          "source_mapping": {
+            "start": 3360,
+            "length": 462,
+            "filename": "/../data/reentrancy/solidity_contract/6881.sol",
+            "lines": [
+              111,
+              112,
+              113,
+              114,
+              115,
+              116,
+              117
+            ]
+          },
+          "contract": {
+            "type": "contract",
+            "name": "BancorBuyer",
+            "source_mapping": {
+              "start": 1576,
+              "length": 3305,
+              "filename": "/../data/reentrancy/solidity_contract/6881.sol",
+              "lines": [
+                66,
+                67,
+                68,
+                69,
+                70,
+                71,
+                72,
+                73,
+                74,
+                75,
+                76,
+                77,
+                78,
+                79,
+                80,
+                81,
+                82,
+                83,
+                84,
+                85,
+                86,
+                87,
+                88,
+                89,
+                90,
+                91,
+                92,
+                93,
+                94,
+                95,
+                96,
+                97,
+                98,
+                99,
+                100,
+                101,
+                102,
+                103,
+                104,
+                105,
+                106,
+                107,
+                108,
+                109,
+                110,
+                111,
+                112,
+                113,
+                114,
+                115,
+                116,
+                117,
+                118,
+                119,
+                120,
+                121,
+                122,
+                123,
+                124,
+                125,
+                126,
+                127,
+                128,
+                129,
+                130,
+                131,
+                132,
+                133,
+                134,
+                135,
+                136
+              ]
+            }
+          }
+        },
+        {
+          "type": "external_calls",
+          "expression": "tokenBalance = token.balanceOf(this)",
+          "source_mapping": {
+            "start": 3530,
+            "length": 44,
+            "filename": "/../data/reentrancy/solidity_contract/6881.sol",
+            "lines": [
+              113
+            ]
+          }
+        },
+        {
+          "type": "external_calls",
+          "expression": "require(bool)(_exchange.call.value(_value)(_data))",
+          "source_mapping": {
+            "start": 3584,
+            "length": 44,
+            "filename": "/../data/reentrancy/solidity_contract/6881.sol",
+            "lines": [
+              114
+            ]
+          }
+        },
+        {
+          "type": "external_calls_sending_eth",
+          "expression": "require(bool)(_exchange.call.value(_value)(_data))",
+          "source_mapping": {
+            "start": 3584,
+            "length": 44,
+            "filename": "/../data/reentrancy/solidity_contract/6881.sol",
+            "lines": [
+              114
+            ]
+          }
+        },
+        {
+          "type": "variables_written",
+          "name": "balances",
+          "expression": "balances[msg.sender] = balances[msg.sender].sub(_value)",
+          "source_mapping": {
+            "start": 3638,
+            "length": 55,
+            "filename": "/../data/reentrancy/solidity_contract/6881.sol",
+            "lines": [
+              115
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "incorrect-equality",
+      "impact": "Medium",
+      "confidence": "High",
+      "description": "BancorBuyer.deposit (/../data/reentrancy/solidity_contract/6881.sol#78-92) uses a dangerous strict equality:\n\t- require(bool)(token.balanceOf(this) == balance.add(tokenValue))\n",
+      "elements": [
+        {
+          "type": "function",
+          "name": "deposit",
+          "source_mapping": {
+            "start": 1997,
+            "length": 667,
+            "filename": "/../data/reentrancy/solidity_contract/6881.sol",
+            "lines": [
+              78,
+              79,
+              80,
+              81,
+              82,
+              83,
+              84,
+              85,
+              86,
+              87,
+              88,
+              89,
+              90,
+              91,
+              92
+            ]
+          },
+          "contract": {
+            "type": "contract",
+            "name": "BancorBuyer",
+            "source_mapping": {
+              "start": 1576,
+              "length": 3305,
+              "filename": "/../data/reentrancy/solidity_contract/6881.sol",
+              "lines": [
+                66,
+                67,
+                68,
+                69,
+                70,
+                71,
+                72,
+                73,
+                74,
+                75,
+                76,
+                77,
+                78,
+                79,
+                80,
+                81,
+                82,
+                83,
+                84,
+                85,
+                86,
+                87,
+                88,
+                89,
+                90,
+                91,
+                92,
+                93,
+                94,
+                95,
+                96,
+                97,
+                98,
+                99,
+                100,
+                101,
+                102,
+                103,
+                104,
+                105,
+                106,
+                107,
+                108,
+                109,
+                110,
+                111,
+                112,
+                113,
+                114,
+                115,
+                116,
+                117,
+                118,
+                119,
+                120,
+                121,
+                122,
+                123,
+                124,
+                125,
+                126,
+                127,
+                128,
+                129,
+                130,
+                131,
+                132,
+                133,
+                134,
+                135,
+                136
+              ]
+            }
+          }
+        },
+        {
+          "type": "expression",
+          "expression": "require(bool)(token.balanceOf(this) == balance.add(tokenValue))",
+          "source_mapping": {
+            "start": 2489,
+            "length": 57,
+            "filename": "/../data/reentrancy/solidity_contract/6881.sol",
+            "lines": [
+              89
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "incorrect-equality",
+      "impact": "Medium",
+      "confidence": "High",
+      "description": "BancorBuyer.deposit (/../data/reentrancy/solidity_contract/6881.sol#78-92) uses a dangerous strict equality:\n\t- require(bool)(token.balanceOf(this) == balance.add(tokenValue))\nBancorBuyer.withdraw (/../data/reentrancy/solidity_contract/6881.sol#94-109) uses a dangerous strict equality:\n\t- require(bool)(token.balanceOf(this) == tokenBalance.sub(tokenValue))\n",
+      "elements": [
+        {
+          "type": "function",
+          "name": "withdraw",
+          "source_mapping": {
+            "start": 2670,
+            "length": 680,
+            "filename": "/../data/reentrancy/solidity_contract/6881.sol",
+            "lines": [
+              94,
+              95,
+              96,
+              97,
+              98,
+              99,
+              100,
+              101,
+              102,
+              103,
+              104,
+              105,
+              106,
+              107,
+              108,
+              109
+            ]
+          },
+          "contract": {
+            "type": "contract",
+            "name": "BancorBuyer",
+            "source_mapping": {
+              "start": 1576,
+              "length": 3305,
+              "filename": "/../data/reentrancy/solidity_contract/6881.sol",
+              "lines": [
+                66,
+                67,
+                68,
+                69,
+                70,
+                71,
+                72,
+                73,
+                74,
+                75,
+                76,
+                77,
+                78,
+                79,
+                80,
+                81,
+                82,
+                83,
+                84,
+                85,
+                86,
+                87,
+                88,
+                89,
+                90,
+                91,
+                92,
+                93,
+                94,
+                95,
+                96,
+                97,
+                98,
+                99,
+                100,
+                101,
+                102,
+                103,
+                104,
+                105,
+                106,
+                107,
+                108,
+                109,
+                110,
+                111,
+                112,
+                113,
+                114,
+                115,
+                116,
+                117,
+                118,
+                119,
+                120,
+                121,
+                122,
+                123,
+                124,
+                125,
+                126,
+                127,
+                128,
+                129,
+                130,
+                131,
+                132,
+                133,
+                134,
+                135,
+                136
+              ]
+            }
+          }
+        },
+        {
+          "type": "expression",
+          "expression": "require(bool)(token.balanceOf(this) == tokenBalance.sub(tokenValue))",
+          "source_mapping": {
+            "start": 3174,
+            "length": 62,
+            "filename": "/../data/reentrancy/solidity_contract/6881.sol",
+            "lines": [
+              106
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "unused-return",
+      "impact": "Medium",
+      "confidence": "Medium",
+      "description": "BancorBuyer.deposit (/../data/reentrancy/solidity_contract/6881.sol#78-92) does not use the value returned by external calls:\n\t-token.transferFrom(msg.sender,this,tokenValue) (/../data/reentrancy/solidity_contract/6881.sol#88)\n",
+      "elements": [
+        {
+          "type": "function",
+          "name": "deposit",
+          "source_mapping": {
+            "start": 1997,
+            "length": 667,
+            "filename": "/../data/reentrancy/solidity_contract/6881.sol",
+            "lines": [
+              78,
+              79,
+              80,
+              81,
+              82,
+              83,
+              84,
+              85,
+              86,
+              87,
+              88,
+              89,
+              90,
+              91,
+              92
+            ]
+          },
+          "contract": {
+            "type": "contract",
+            "name": "BancorBuyer",
+            "source_mapping": {
+              "start": 1576,
+              "length": 3305,
+              "filename": "/../data/reentrancy/solidity_contract/6881.sol",
+              "lines": [
+                66,
+                67,
+                68,
+                69,
+                70,
+                71,
+                72,
+                73,
+                74,
+                75,
+                76,
+                77,
+                78,
+                79,
+                80,
+                81,
+                82,
+                83,
+                84,
+                85,
+                86,
+                87,
+                88,
+                89,
+                90,
+                91,
+                92,
+                93,
+                94,
+                95,
+                96,
+                97,
+                98,
+                99,
+                100,
+                101,
+                102,
+                103,
+                104,
+                105,
+                106,
+                107,
+                108,
+                109,
+                110,
+                111,
+                112,
+                113,
+                114,
+                115,
+                116,
+                117,
+                118,
+                119,
+                120,
+                121,
+                122,
+                123,
+                124,
+                125,
+                126,
+                127,
+                128,
+                129,
+                130,
+                131,
+                132,
+                133,
+                134,
+                135,
+                136
+              ]
+            }
+          }
+        },
+        {
+          "type": "expression",
+          "expression": "token.transferFrom(msg.sender,this,tokenValue)",
+          "source_mapping": {
+            "start": 2427,
+            "length": 48,
+            "filename": "/../data/reentrancy/solidity_contract/6881.sol",
+            "lines": [
+              88
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "unused-return",
+      "impact": "Medium",
+      "confidence": "Medium",
+      "description": "BancorBuyer.withdraw (/../data/reentrancy/solidity_contract/6881.sol#94-109) does not use the value returned by external calls:\n\t-token.transfer(_to,tokenValue) (/../data/reentrancy/solidity_contract/6881.sol#105)\n",
+      "elements": [
+        {
+          "type": "function",
+          "name": "withdraw",
+          "source_mapping": {
+            "start": 2670,
+            "length": 680,
+            "filename": "/../data/reentrancy/solidity_contract/6881.sol",
+            "lines": [
+              94,
+              95,
+              96,
+              97,
+              98,
+              99,
+              100,
+              101,
+              102,
+              103,
+              104,
+              105,
+              106,
+              107,
+              108,
+              109
+            ]
+          },
+          "contract": {
+            "type": "contract",
+            "name": "BancorBuyer",
+            "source_mapping": {
+              "start": 1576,
+              "length": 3305,
+              "filename": "/../data/reentrancy/solidity_contract/6881.sol",
+              "lines": [
+                66,
+                67,
+                68,
+                69,
+                70,
+                71,
+                72,
+                73,
+                74,
+                75,
+                76,
+                77,
+                78,
+                79,
+                80,
+                81,
+                82,
+                83,
+                84,
+                85,
+                86,
+                87,
+                88,
+                89,
+                90,
+                91,
+                92,
+                93,
+                94,
+                95,
+                96,
+                97,
+                98,
+                99,
+                100,
+                101,
+                102,
+                103,
+                104,
+                105,
+                106,
+                107,
+                108,
+                109,
+                110,
+                111,
+                112,
+                113,
+                114,
+                115,
+                116,
+                117,
+                118,
+                119,
+                120,
+                121,
+                122,
+                123,
+                124,
+                125,
+                126,
+                127,
+                128,
+                129,
+                130,
+                131,
+                132,
+                133,
+                134,
+                135,
+                136
+              ]
+            }
+          }
+        },
+        {
+          "type": "expression",
+          "expression": "token.transfer(_to,tokenValue)",
+          "source_mapping": {
+            "start": 3129,
+            "length": 31,
+            "filename": "/../data/reentrancy/solidity_contract/6881.sol",
+            "lines": [
+              105
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "calls-loop",
+      "impact": "Low",
+      "confidence": "Medium",
+      "description": "BancorBuyer.sumWeightOfMultiToken has external calls inside a loop:\n\t- sumWeight += mtkn.weights(mtkn.tokens(i - 1)) (/../data/reentrancy/solidity_contract/6881.sol#74)\n",
+      "elements": [
+        {
+          "type": "function",
+          "name": "sumWeightOfMultiToken",
+          "source_mapping": {
+            "start": 1762,
+            "length": 229,
+            "filename": "/../data/reentrancy/solidity_contract/6881.sol",
+            "lines": [
+              72,
+              73,
+              74,
+              75,
+              76
+            ]
+          },
+          "contract": {
+            "type": "contract",
+            "name": "BancorBuyer",
+            "source_mapping": {
+              "start": 1576,
+              "length": 3305,
+              "filename": "/../data/reentrancy/solidity_contract/6881.sol",
+              "lines": [
+                66,
+                67,
+                68,
+                69,
+                70,
+                71,
+                72,
+                73,
+                74,
+                75,
+                76,
+                77,
+                78,
+                79,
+                80,
+                81,
+                82,
+                83,
+                84,
+                85,
+                86,
+                87,
+                88,
+                89,
+                90,
+                91,
+                92,
+                93,
+                94,
+                95,
+                96,
+                97,
+                98,
+                99,
+                100,
+                101,
+                102,
+                103,
+                104,
+                105,
+                106,
+                107,
+                108,
+                109,
+                110,
+                111,
+                112,
+                113,
+                114,
+                115,
+                116,
+                117,
+                118,
+                119,
+                120,
+                121,
+                122,
+                123,
+                124,
+                125,
+                126,
+                127,
+                128,
+                129,
+                130,
+                131,
+                132,
+                133,
+                134,
+                135,
+                136
+              ]
+            }
+          }
+        },
+        {
+          "type": "expression",
+          "expression": "sumWeight += mtkn.weights(mtkn.tokens(i - 1))",
+          "source_mapping": {
+            "start": 1929,
+            "length": 45,
+            "filename": "/../data/reentrancy/solidity_contract/6881.sol",
+            "lines": [
+              74
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "calls-loop",
+      "impact": "Low",
+      "confidence": "Medium",
+      "description": "BancorBuyer.deposit has external calls inside a loop:\n\t- balance = token.balanceOf(this) (/../data/reentrancy/solidity_contract/6881.sol#87)\n",
+      "elements": [
+        {
+          "type": "function",
+          "name": "deposit",
+          "source_mapping": {
+            "start": 1997,
+            "length": 667,
+            "filename": "/../data/reentrancy/solidity_contract/6881.sol",
+            "lines": [
+              78,
+              79,
+              80,
+              81,
+              82,
+              83,
+              84,
+              85,
+              86,
+              87,
+              88,
+              89,
+              90,
+              91,
+              92
+            ]
+          },
+          "contract": {
+            "type": "contract",
+            "name": "BancorBuyer",
+            "source_mapping": {
+              "start": 1576,
+              "length": 3305,
+              "filename": "/../data/reentrancy/solidity_contract/6881.sol",
+              "lines": [
+                66,
+                67,
+                68,
+                69,
+                70,
+                71,
+                72,
+                73,
+                74,
+                75,
+                76,
+                77,
+                78,
+                79,
+                80,
+                81,
+                82,
+                83,
+                84,
+                85,
+                86,
+                87,
+                88,
+                89,
+                90,
+                91,
+                92,
+                93,
+                94,
+                95,
+                96,
+                97,
+                98,
+                99,
+                100,
+                101,
+                102,
+                103,
+                104,
+                105,
+                106,
+                107,
+                108,
+                109,
+                110,
+                111,
+                112,
+                113,
+                114,
+                115,
+                116,
+                117,
+                118,
+                119,
+                120,
+                121,
+                122,
+                123,
+                124,
+                125,
+                126,
+                127,
+                128,
+                129,
+                130,
+                131,
+                132,
+                133,
+                134,
+                135,
+                136
+              ]
+            }
+          }
+        },
+        {
+          "type": "expression",
+          "expression": "balance = token.balanceOf(this)",
+          "source_mapping": {
+            "start": 2374,
+            "length": 39,
+            "filename": "/../data/reentrancy/solidity_contract/6881.sol",
+            "lines": [
+              87
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "calls-loop",
+      "impact": "Low",
+      "confidence": "Medium",
+      "description": "BancorBuyer.deposit has external calls inside a loop:\n\t- token.transferFrom(msg.sender,this,tokenValue) (/../data/reentrancy/solidity_contract/6881.sol#88)\n",
+      "elements": [
+        {
+          "type": "function",
+          "name": "deposit",
+          "source_mapping": {
+            "start": 1997,
+            "length": 667,
+            "filename": "/../data/reentrancy/solidity_contract/6881.sol",
+            "lines": [
+              78,
+              79,
+              80,
+              81,
+              82,
+              83,
+              84,
+              85,
+              86,
+              87,
+              88,
+              89,
+              90,
+              91,
+              92
+            ]
+          },
+          "contract": {
+            "type": "contract",
+            "name": "BancorBuyer",
+            "source_mapping": {
+              "start": 1576,
+              "length": 3305,
+              "filename": "/../data/reentrancy/solidity_contract/6881.sol",
+              "lines": [
+                66,
+                67,
+                68,
+                69,
+                70,
+                71,
+                72,
+                73,
+                74,
+                75,
+                76,
+                77,
+                78,
+                79,
+                80,
+                81,
+                82,
+                83,
+                84,
+                85,
+                86,
+                87,
+                88,
+                89,
+                90,
+                91,
+                92,
+                93,
+                94,
+                95,
+                96,
+                97,
+                98,
+                99,
+                100,
+                101,
+                102,
+                103,
+                104,
+                105,
+                106,
+                107,
+                108,
+                109,
+                110,
+                111,
+                112,
+                113,
+                114,
+                115,
+                116,
+                117,
+                118,
+                119,
+                120,
+                121,
+                122,
+                123,
+                124,
+                125,
+                126,
+                127,
+                128,
+                129,
+                130,
+                131,
+                132,
+                133,
+                134,
+                135,
+                136
+              ]
+            }
+          }
+        },
+        {
+          "type": "expression",
+          "expression": "token.transferFrom(msg.sender,this,tokenValue)",
+          "source_mapping": {
+            "start": 2427,
+            "length": 48,
+            "filename": "/../data/reentrancy/solidity_contract/6881.sol",
+            "lines": [
+              88
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "calls-loop",
+      "impact": "Low",
+      "confidence": "Medium",
+      "description": "BancorBuyer.deposit has external calls inside a loop:\n\t- require(bool)(token.balanceOf(this) == balance.add(tokenValue)) (/../data/reentrancy/solidity_contract/6881.sol#89)\n",
+      "elements": [
+        {
+          "type": "function",
+          "name": "deposit",
+          "source_mapping": {
+            "start": 1997,
+            "length": 667,
+            "filename": "/../data/reentrancy/solidity_contract/6881.sol",
+            "lines": [
+              78,
+              79,
+              80,
+              81,
+              82,
+              83,
+              84,
+              85,
+              86,
+              87,
+              88,
+              89,
+              90,
+              91,
+              92
+            ]
+          },
+          "contract": {
+            "type": "contract",
+            "name": "BancorBuyer",
+            "source_mapping": {
+              "start": 1576,
+              "length": 3305,
+              "filename": "/../data/reentrancy/solidity_contract/6881.sol",
+              "lines": [
+                66,
+                67,
+                68,
+                69,
+                70,
+                71,
+                72,
+                73,
+                74,
+                75,
+                76,
+                77,
+                78,
+                79,
+                80,
+                81,
+                82,
+                83,
+                84,
+                85,
+                86,
+                87,
+                88,
+                89,
+                90,
+                91,
+                92,
+                93,
+                94,
+                95,
+                96,
+                97,
+                98,
+                99,
+                100,
+                101,
+                102,
+                103,
+                104,
+                105,
+                106,
+                107,
+                108,
+                109,
+                110,
+                111,
+                112,
+                113,
+                114,
+                115,
+                116,
+                117,
+                118,
+                119,
+                120,
+                121,
+                122,
+                123,
+                124,
+                125,
+                126,
+                127,
+                128,
+                129,
+                130,
+                131,
+                132,
+                133,
+                134,
+                135,
+                136
+              ]
+            }
+          }
+        },
+        {
+          "type": "expression",
+          "expression": "require(bool)(token.balanceOf(this) == balance.add(tokenValue))",
+          "source_mapping": {
+            "start": 2489,
+            "length": 57,
+            "filename": "/../data/reentrancy/solidity_contract/6881.sol",
+            "lines": [
+              89
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "calls-loop",
+      "impact": "Low",
+      "confidence": "Medium",
+      "description": "BancorBuyer.withdraw has external calls inside a loop:\n\t- tokenBalance = token.balanceOf(this) (/../data/reentrancy/solidity_contract/6881.sol#104)\n",
+      "elements": [
+        {
+          "type": "function",
+          "name": "withdraw",
+          "source_mapping": {
+            "start": 2670,
+            "length": 680,
+            "filename": "/../data/reentrancy/solidity_contract/6881.sol",
+            "lines": [
+              94,
+              95,
+              96,
+              97,
+              98,
+              99,
+              100,
+              101,
+              102,
+              103,
+              104,
+              105,
+              106,
+              107,
+              108,
+              109
+            ]
+          },
+          "contract": {
+            "type": "contract",
+            "name": "BancorBuyer",
+            "source_mapping": {
+              "start": 1576,
+              "length": 3305,
+              "filename": "/../data/reentrancy/solidity_contract/6881.sol",
+              "lines": [
+                66,
+                67,
+                68,
+                69,
+                70,
+                71,
+                72,
+                73,
+                74,
+                75,
+                76,
+                77,
+                78,
+                79,
+                80,
+                81,
+                82,
+                83,
+                84,
+                85,
+                86,
+                87,
+                88,
+                89,
+                90,
+                91,
+                92,
+                93,
+                94,
+                95,
+                96,
+                97,
+                98,
+                99,
+                100,
+                101,
+                102,
+                103,
+                104,
+                105,
+                106,
+                107,
+                108,
+                109,
+                110,
+                111,
+                112,
+                113,
+                114,
+                115,
+                116,
+                117,
+                118,
+                119,
+                120,
+                121,
+                122,
+                123,
+                124,
+                125,
+                126,
+                127,
+                128,
+                129,
+                130,
+                131,
+                132,
+                133,
+                134,
+                135,
+                136
+              ]
+            }
+          }
+        },
+        {
+          "type": "expression",
+          "expression": "tokenBalance = token.balanceOf(this)",
+          "source_mapping": {
+            "start": 3071,
+            "length": 44,
+            "filename": "/../data/reentrancy/solidity_contract/6881.sol",
+            "lines": [
+              104
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "calls-loop",
+      "impact": "Low",
+      "confidence": "Medium",
+      "description": "BancorBuyer.withdraw has external calls inside a loop:\n\t- token.transfer(_to,tokenValue) (/../data/reentrancy/solidity_contract/6881.sol#105)\n",
+      "elements": [
+        {
+          "type": "function",
+          "name": "withdraw",
+          "source_mapping": {
+            "start": 2670,
+            "length": 680,
+            "filename": "/../data/reentrancy/solidity_contract/6881.sol",
+            "lines": [
+              94,
+              95,
+              96,
+              97,
+              98,
+              99,
+              100,
+              101,
+              102,
+              103,
+              104,
+              105,
+              106,
+              107,
+              108,
+              109
+            ]
+          },
+          "contract": {
+            "type": "contract",
+            "name": "BancorBuyer",
+            "source_mapping": {
+              "start": 1576,
+              "length": 3305,
+              "filename": "/../data/reentrancy/solidity_contract/6881.sol",
+              "lines": [
+                66,
+                67,
+                68,
+                69,
+                70,
+                71,
+                72,
+                73,
+                74,
+                75,
+                76,
+                77,
+                78,
+                79,
+                80,
+                81,
+                82,
+                83,
+                84,
+                85,
+                86,
+                87,
+                88,
+                89,
+                90,
+                91,
+                92,
+                93,
+                94,
+                95,
+                96,
+                97,
+                98,
+                99,
+                100,
+                101,
+                102,
+                103,
+                104,
+                105,
+                106,
+                107,
+                108,
+                109,
+                110,
+                111,
+                112,
+                113,
+                114,
+                115,
+                116,
+                117,
+                118,
+                119,
+                120,
+                121,
+                122,
+                123,
+                124,
+                125,
+                126,
+                127,
+                128,
+                129,
+                130,
+                131,
+                132,
+                133,
+                134,
+                135,
+                136
+              ]
+            }
+          }
+        },
+        {
+          "type": "expression",
+          "expression": "token.transfer(_to,tokenValue)",
+          "source_mapping": {
+            "start": 3129,
+            "length": 31,
+            "filename": "/../data/reentrancy/solidity_contract/6881.sol",
+            "lines": [
+              105
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "calls-loop",
+      "impact": "Low",
+      "confidence": "Medium",
+      "description": "BancorBuyer.withdraw has external calls inside a loop:\n\t- require(bool)(token.balanceOf(this) == tokenBalance.sub(tokenValue)) (/../data/reentrancy/solidity_contract/6881.sol#106)\n",
+      "elements": [
+        {
+          "type": "function",
+          "name": "withdraw",
+          "source_mapping": {
+            "start": 2670,
+            "length": 680,
+            "filename": "/../data/reentrancy/solidity_contract/6881.sol",
+            "lines": [
+              94,
+              95,
+              96,
+              97,
+              98,
+              99,
+              100,
+              101,
+              102,
+              103,
+              104,
+              105,
+              106,
+              107,
+              108,
+              109
+            ]
+          },
+          "contract": {
+            "type": "contract",
+            "name": "BancorBuyer",
+            "source_mapping": {
+              "start": 1576,
+              "length": 3305,
+              "filename": "/../data/reentrancy/solidity_contract/6881.sol",
+              "lines": [
+                66,
+                67,
+                68,
+                69,
+                70,
+                71,
+                72,
+                73,
+                74,
+                75,
+                76,
+                77,
+                78,
+                79,
+                80,
+                81,
+                82,
+                83,
+                84,
+                85,
+                86,
+                87,
+                88,
+                89,
+                90,
+                91,
+                92,
+                93,
+                94,
+                95,
+                96,
+                97,
+                98,
+                99,
+                100,
+                101,
+                102,
+                103,
+                104,
+                105,
+                106,
+                107,
+                108,
+                109,
+                110,
+                111,
+                112,
+                113,
+                114,
+                115,
+                116,
+                117,
+                118,
+                119,
+                120,
+                121,
+                122,
+                123,
+                124,
+                125,
+                126,
+                127,
+                128,
+                129,
+                130,
+                131,
+                132,
+                133,
+                134,
+                135,
+                136
+              ]
+            }
+          }
+        },
+        {
+          "type": "expression",
+          "expression": "require(bool)(token.balanceOf(this) == tokenBalance.sub(tokenValue))",
+          "source_mapping": {
+            "start": 3174,
+            "length": 62,
+            "filename": "/../data/reentrancy/solidity_contract/6881.sol",
+            "lines": [
+              106
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "reentrancy-benign",
+      "impact": "Low",
+      "confidence": "Medium",
+      "description": "Reentrancy in BancorBuyer.deposit (/../data/reentrancy/solidity_contract/6881.sol#78-92):\n\tExternal calls:\n\t- balance = token.balanceOf(this) (/../data/reentrancy/solidity_contract/6881.sol#87)\n\t- token.transferFrom(msg.sender,this,tokenValue) (/../data/reentrancy/solidity_contract/6881.sol#88)\n\t- require(bool)(token.balanceOf(this) == balance.add(tokenValue)) (/../data/reentrancy/solidity_contract/6881.sol#89)\n\tState variables written after the call(s):\n\t- tokenBalances (/../data/reentrancy/solidity_contract/6881.sol#90)\n",
+      "elements": [
+        {
+          "type": "function",
+          "name": "deposit",
+          "source_mapping": {
+            "start": 1997,
+            "length": 667,
+            "filename": "/../data/reentrancy/solidity_contract/6881.sol",
+            "lines": [
+              78,
+              79,
+              80,
+              81,
+              82,
+              83,
+              84,
+              85,
+              86,
+              87,
+              88,
+              89,
+              90,
+              91,
+              92
+            ]
+          },
+          "contract": {
+            "type": "contract",
+            "name": "BancorBuyer",
+            "source_mapping": {
+              "start": 1576,
+              "length": 3305,
+              "filename": "/../data/reentrancy/solidity_contract/6881.sol",
+              "lines": [
+                66,
+                67,
+                68,
+                69,
+                70,
+                71,
+                72,
+                73,
+                74,
+                75,
+                76,
+                77,
+                78,
+                79,
+                80,
+                81,
+                82,
+                83,
+                84,
+                85,
+                86,
+                87,
+                88,
+                89,
+                90,
+                91,
+                92,
+                93,
+                94,
+                95,
+                96,
+                97,
+                98,
+                99,
+                100,
+                101,
+                102,
+                103,
+                104,
+                105,
+                106,
+                107,
+                108,
+                109,
+                110,
+                111,
+                112,
+                113,
+                114,
+                115,
+                116,
+                117,
+                118,
+                119,
+                120,
+                121,
+                122,
+                123,
+                124,
+                125,
+                126,
+                127,
+                128,
+                129,
+                130,
+                131,
+                132,
+                133,
+                134,
+                135,
+                136
+              ]
+            }
+          }
+        },
+        {
+          "type": "external_calls",
+          "expression": "balance = token.balanceOf(this)",
+          "source_mapping": {
+            "start": 2374,
+            "length": 39,
+            "filename": "/../data/reentrancy/solidity_contract/6881.sol",
+            "lines": [
+              87
+            ]
+          }
+        },
+        {
+          "type": "external_calls",
+          "expression": "token.transferFrom(msg.sender,this,tokenValue)",
+          "source_mapping": {
+            "start": 2427,
+            "length": 48,
+            "filename": "/../data/reentrancy/solidity_contract/6881.sol",
+            "lines": [
+              88
+            ]
+          }
+        },
+        {
+          "type": "external_calls",
+          "expression": "require(bool)(token.balanceOf(this) == balance.add(tokenValue))",
+          "source_mapping": {
+            "start": 2489,
+            "length": 57,
+            "filename": "/../data/reentrancy/solidity_contract/6881.sol",
+            "lines": [
+              89
+            ]
+          }
+        },
+        {
+          "type": "variables_written",
+          "name": "tokenBalances",
+          "expression": "tokenBalances[_beneficiary][token] = tokenBalances[_beneficiary][token].add(tokenValue)",
+          "source_mapping": {
+            "start": 2560,
+            "length": 87,
+            "filename": "/../data/reentrancy/solidity_contract/6881.sol",
+            "lines": [
+              90
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "reentrancy-benign",
+      "impact": "Low",
+      "confidence": "Medium",
+      "description": "Reentrancy in BancorBuyer.withdraw (/../data/reentrancy/solidity_contract/6881.sol#94-109):\n\tExternal calls:\n\t- tokenBalance = token.balanceOf(this) (/../data/reentrancy/solidity_contract/6881.sol#104)\n\t- token.transfer(_to,tokenValue) (/../data/reentrancy/solidity_contract/6881.sol#105)\n\t- require(bool)(token.balanceOf(this) == tokenBalance.sub(tokenValue)) (/../data/reentrancy/solidity_contract/6881.sol#106)\n\tExternal calls sending eth:\n\t- _to.transfer(_value) (/../data/reentrancy/solidity_contract/6881.sol#96)\n\tState variables written after the call(s):\n\t- tokenBalances (/../data/reentrancy/solidity_contract/6881.sol#107)\n",
+      "elements": [
+        {
+          "type": "function",
+          "name": "withdraw",
+          "source_mapping": {
+            "start": 2670,
+            "length": 680,
+            "filename": "/../data/reentrancy/solidity_contract/6881.sol",
+            "lines": [
+              94,
+              95,
+              96,
+              97,
+              98,
+              99,
+              100,
+              101,
+              102,
+              103,
+              104,
+              105,
+              106,
+              107,
+              108,
+              109
+            ]
+          },
+          "contract": {
+            "type": "contract",
+            "name": "BancorBuyer",
+            "source_mapping": {
+              "start": 1576,
+              "length": 3305,
+              "filename": "/../data/reentrancy/solidity_contract/6881.sol",
+              "lines": [
+                66,
+                67,
+                68,
+                69,
+                70,
+                71,
+                72,
+                73,
+                74,
+                75,
+                76,
+                77,
+                78,
+                79,
+                80,
+                81,
+                82,
+                83,
+                84,
+                85,
+                86,
+                87,
+                88,
+                89,
+                90,
+                91,
+                92,
+                93,
+                94,
+                95,
+                96,
+                97,
+                98,
+                99,
+                100,
+                101,
+                102,
+                103,
+                104,
+                105,
+                106,
+                107,
+                108,
+                109,
+                110,
+                111,
+                112,
+                113,
+                114,
+                115,
+                116,
+                117,
+                118,
+                119,
+                120,
+                121,
+                122,
+                123,
+                124,
+                125,
+                126,
+                127,
+                128,
+                129,
+                130,
+                131,
+                132,
+                133,
+                134,
+                135,
+                136
+              ]
+            }
+          }
+        },
+        {
+          "type": "external_calls",
+          "expression": "tokenBalance = token.balanceOf(this)",
+          "source_mapping": {
+            "start": 3071,
+            "length": 44,
+            "filename": "/../data/reentrancy/solidity_contract/6881.sol",
+            "lines": [
+              104
+            ]
+          }
+        },
+        {
+          "type": "external_calls",
+          "expression": "token.transfer(_to,tokenValue)",
+          "source_mapping": {
+            "start": 3129,
+            "length": 31,
+            "filename": "/../data/reentrancy/solidity_contract/6881.sol",
+            "lines": [
+              105
+            ]
+          }
+        },
+        {
+          "type": "external_calls",
+          "expression": "require(bool)(token.balanceOf(this) == tokenBalance.sub(tokenValue))",
+          "source_mapping": {
+            "start": 3174,
+            "length": 62,
+            "filename": "/../data/reentrancy/solidity_contract/6881.sol",
+            "lines": [
+              106
+            ]
+          }
+        },
+        {
+          "type": "external_calls_sending_eth",
+          "expression": "_to.transfer(_value)",
+          "source_mapping": {
+            "start": 2809,
+            "length": 20,
+            "filename": "/../data/reentrancy/solidity_contract/6881.sol",
+            "lines": [
+              96
+            ]
+          }
+        },
+        {
+          "type": "variables_written",
+          "name": "tokenBalances",
+          "expression": "tokenBalances[msg.sender][token] = tokenBalances[msg.sender][token].sub(tokenValue)",
+          "source_mapping": {
+            "start": 3250,
+            "length": 83,
+            "filename": "/../data/reentrancy/solidity_contract/6881.sol",
+            "lines": [
+              107
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "external-function",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "ERC20Basic.totalSupply (/../data/reentrancy/solidity_contract/6881.sol#36) should be declared external\n",
+      "elements": [
+        {
+          "type": "function",
+          "name": "totalSupply",
+          "source_mapping": {
+            "start": 588,
+            "length": 53,
+            "filename": "/../data/reentrancy/solidity_contract/6881.sol",
+            "lines": [
+              36
+            ]
+          },
+          "contract": {
+            "type": "contract",
+            "name": "ERC20Basic",
+            "source_mapping": {
+              "start": 564,
+              "length": 289,
+              "filename": "/../data/reentrancy/solidity_contract/6881.sol",
+              "lines": [
+                35,
+                36,
+                37,
+                38,
+                39,
+                40
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "check": "external-function",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "ERC20Basic.balanceOf (/../data/reentrancy/solidity_contract/6881.sol#37) should be declared external\n",
+      "elements": [
+        {
+          "type": "function",
+          "name": "balanceOf",
+          "source_mapping": {
+            "start": 644,
+            "length": 62,
+            "filename": "/../data/reentrancy/solidity_contract/6881.sol",
+            "lines": [
+              37
+            ]
+          },
+          "contract": {
+            "type": "contract",
+            "name": "ERC20Basic",
+            "source_mapping": {
+              "start": 564,
+              "length": 289,
+              "filename": "/../data/reentrancy/solidity_contract/6881.sol",
+              "lines": [
+                35,
+                36,
+                37,
+                38,
+                39,
+                40
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "check": "external-function",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "ERC20Basic.transfer (/../data/reentrancy/solidity_contract/6881.sol#38) should be declared external\n",
+      "elements": [
+        {
+          "type": "function",
+          "name": "transfer",
+          "source_mapping": {
+            "start": 709,
+            "length": 67,
+            "filename": "/../data/reentrancy/solidity_contract/6881.sol",
+            "lines": [
+              38
+            ]
+          },
+          "contract": {
+            "type": "contract",
+            "name": "ERC20Basic",
+            "source_mapping": {
+              "start": 564,
+              "length": 289,
+              "filename": "/../data/reentrancy/solidity_contract/6881.sol",
+              "lines": [
+                35,
+                36,
+                37,
+                38,
+                39,
+                40
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "check": "external-function",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "ERC20.allowance (/../data/reentrancy/solidity_contract/6881.sol#43-44) should be declared external\n",
+      "elements": [
+        {
+          "type": "function",
+          "name": "allowance",
+          "source_mapping": {
+            "start": 888,
+            "length": 85,
+            "filename": "/../data/reentrancy/solidity_contract/6881.sol",
+            "lines": [
+              43,
+              44
+            ]
+          },
+          "contract": {
+            "type": "contract",
+            "name": "ERC20",
+            "source_mapping": {
+              "start": 855,
+              "length": 385,
+              "filename": "/../data/reentrancy/solidity_contract/6881.sol",
+              "lines": [
+                42,
+                43,
+                44,
+                45,
+                46,
+                47,
+                48,
+                49,
+                50,
+                51,
+                52,
+                53,
+                54,
+                55
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "check": "external-function",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "ERC20.transferFrom (/../data/reentrancy/solidity_contract/6881.sol#46-47) should be declared external\n",
+      "elements": [
+        {
+          "type": "function",
+          "name": "transferFrom",
+          "source_mapping": {
+            "start": 977,
+            "length": 89,
+            "filename": "/../data/reentrancy/solidity_contract/6881.sol",
+            "lines": [
+              46,
+              47
+            ]
+          },
+          "contract": {
+            "type": "contract",
+            "name": "ERC20",
+            "source_mapping": {
+              "start": 855,
+              "length": 385,
+              "filename": "/../data/reentrancy/solidity_contract/6881.sol",
+              "lines": [
+                42,
+                43,
+                44,
+                45,
+                46,
+                47,
+                48,
+                49,
+                50,
+                51,
+                52,
+                53,
+                54,
+                55
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "check": "external-function",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "ERC20.approve (/../data/reentrancy/solidity_contract/6881.sol#49) should be declared external\n",
+      "elements": [
+        {
+          "type": "function",
+          "name": "approve",
+          "source_mapping": {
+            "start": 1070,
+            "length": 71,
+            "filename": "/../data/reentrancy/solidity_contract/6881.sol",
+            "lines": [
+              49
+            ]
+          },
+          "contract": {
+            "type": "contract",
+            "name": "ERC20",
+            "source_mapping": {
+              "start": 855,
+              "length": 385,
+              "filename": "/../data/reentrancy/solidity_contract/6881.sol",
+              "lines": [
+                42,
+                43,
+                44,
+                45,
+                46,
+                47,
+                48,
+                49,
+                50,
+                51,
+                52,
+                53,
+                54,
+                55
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "check": "external-function",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "IMultiToken.tokens (/../data/reentrancy/solidity_contract/6881.sol#59) should be declared external\n",
+      "elements": [
+        {
+          "type": "function",
+          "name": "tokens",
+          "source_mapping": {
+            "start": 1342,
+            "length": 54,
+            "filename": "/../data/reentrancy/solidity_contract/6881.sol",
+            "lines": [
+              59
+            ]
+          },
+          "contract": {
+            "type": "contract",
+            "name": "IMultiToken",
+            "source_mapping": {
+              "start": 1242,
+              "length": 331,
+              "filename": "/../data/reentrancy/solidity_contract/6881.sol",
+              "lines": [
+                57,
+                58,
+                59,
+                60,
+                61,
+                62,
+                63
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "check": "external-function",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "IMultiToken.weights (/../data/reentrancy/solidity_contract/6881.sol#60) should be declared external\n",
+      "elements": [
+        {
+          "type": "function",
+          "name": "weights",
+          "source_mapping": {
+            "start": 1401,
+            "length": 57,
+            "filename": "/../data/reentrancy/solidity_contract/6881.sol",
+            "lines": [
+              60
+            ]
+          },
+          "contract": {
+            "type": "contract",
+            "name": "IMultiToken",
+            "source_mapping": {
+              "start": 1242,
+              "length": 331,
+              "filename": "/../data/reentrancy/solidity_contract/6881.sol",
+              "lines": [
+                57,
+                58,
+                59,
+                60,
+                61,
+                62,
+                63
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "check": "external-function",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "IMultiToken.totalSupply (/../data/reentrancy/solidity_contract/6881.sol#61) should be declared external\n",
+      "elements": [
+        {
+          "type": "function",
+          "name": "totalSupply",
+          "source_mapping": {
+            "start": 1463,
+            "length": 52,
+            "filename": "/../data/reentrancy/solidity_contract/6881.sol",
+            "lines": [
+              61
+            ]
+          },
+          "contract": {
+            "type": "contract",
+            "name": "IMultiToken",
+            "source_mapping": {
+              "start": 1242,
+              "length": 331,
+              "filename": "/../data/reentrancy/solidity_contract/6881.sol",
+              "lines": [
+                57,
+                58,
+                59,
+                60,
+                61,
+                62,
+                63
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "check": "external-function",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "IMultiToken.mint (/../data/reentrancy/solidity_contract/6881.sol#62) should be declared external\n",
+      "elements": [
+        {
+          "type": "function",
+          "name": "mint",
+          "source_mapping": {
+            "start": 1520,
+            "length": 51,
+            "filename": "/../data/reentrancy/solidity_contract/6881.sol",
+            "lines": [
+              62
+            ]
+          },
+          "contract": {
+            "type": "contract",
+            "name": "IMultiToken",
+            "source_mapping": {
+              "start": 1242,
+              "length": 331,
+              "filename": "/../data/reentrancy/solidity_contract/6881.sol",
+              "lines": [
+                57,
+                58,
+                59,
+                60,
+                61,
+                62,
+                63
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "check": "external-function",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "BancorBuyer.sumWeightOfMultiToken (/../data/reentrancy/solidity_contract/6881.sol#72-76) should be declared external\n",
+      "elements": [
+        {
+          "type": "function",
+          "name": "sumWeightOfMultiToken",
+          "source_mapping": {
+            "start": 1762,
+            "length": 229,
+            "filename": "/../data/reentrancy/solidity_contract/6881.sol",
+            "lines": [
+              72,
+              73,
+              74,
+              75,
+              76
+            ]
+          },
+          "contract": {
+            "type": "contract",
+            "name": "BancorBuyer",
+            "source_mapping": {
+              "start": 1576,
+              "length": 3305,
+              "filename": "/../data/reentrancy/solidity_contract/6881.sol",
+              "lines": [
+                66,
+                67,
+                68,
+                69,
+                70,
+                71,
+                72,
+                73,
+                74,
+                75,
+                76,
+                77,
+                78,
+                79,
+                80,
+                81,
+                82,
+                83,
+                84,
+                85,
+                86,
+                87,
+                88,
+                89,
+                90,
+                91,
+                92,
+                93,
+                94,
+                95,
+                96,
+                97,
+                98,
+                99,
+                100,
+                101,
+                102,
+                103,
+                104,
+                105,
+                106,
+                107,
+                108,
+                109,
+                110,
+                111,
+                112,
+                113,
+                114,
+                115,
+                116,
+                117,
+                118,
+                119,
+                120,
+                121,
+                122,
+                123,
+                124,
+                125,
+                126,
+                127,
+                128,
+                129,
+                130,
+                131,
+                132,
+                133,
+                134,
+                135,
+                136
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "check": "external-function",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "BancorBuyer.buyOne (/../data/reentrancy/solidity_contract/6881.sol#111-117) should be declared external\n",
+      "elements": [
+        {
+          "type": "function",
+          "name": "buyOne",
+          "source_mapping": {
+            "start": 3360,
+            "length": 462,
+            "filename": "/../data/reentrancy/solidity_contract/6881.sol",
+            "lines": [
+              111,
+              112,
+              113,
+              114,
+              115,
+              116,
+              117
+            ]
+          },
+          "contract": {
+            "type": "contract",
+            "name": "BancorBuyer",
+            "source_mapping": {
+              "start": 1576,
+              "length": 3305,
+              "filename": "/../data/reentrancy/solidity_contract/6881.sol",
+              "lines": [
+                66,
+                67,
+                68,
+                69,
+                70,
+                71,
+                72,
+                73,
+                74,
+                75,
+                76,
+                77,
+                78,
+                79,
+                80,
+                81,
+                82,
+                83,
+                84,
+                85,
+                86,
+                87,
+                88,
+                89,
+                90,
+                91,
+                92,
+                93,
+                94,
+                95,
+                96,
+                97,
+                98,
+                99,
+                100,
+                101,
+                102,
+                103,
+                104,
+                105,
+                106,
+                107,
+                108,
+                109,
+                110,
+                111,
+                112,
+                113,
+                114,
+                115,
+                116,
+                117,
+                118,
+                119,
+                120,
+                121,
+                122,
+                123,
+                124,
+                125,
+                126,
+                127,
+                128,
+                129,
+                130,
+                131,
+                132,
+                133,
+                134,
+                135,
+                136
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "check": "external-function",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "BancorBuyer.buy1 (/../data/reentrancy/solidity_contract/6881.sol#119-122) should be declared external\n",
+      "elements": [
+        {
+          "type": "function",
+          "name": "buy1",
+          "source_mapping": {
+            "start": 3832,
+            "length": 254,
+            "filename": "/../data/reentrancy/solidity_contract/6881.sol",
+            "lines": [
+              119,
+              120,
+              121,
+              122
+            ]
+          },
+          "contract": {
+            "type": "contract",
+            "name": "BancorBuyer",
+            "source_mapping": {
+              "start": 1576,
+              "length": 3305,
+              "filename": "/../data/reentrancy/solidity_contract/6881.sol",
+              "lines": [
+                66,
+                67,
+                68,
+                69,
+                70,
+                71,
+                72,
+                73,
+                74,
+                75,
+                76,
+                77,
+                78,
+                79,
+                80,
+                81,
+                82,
+                83,
+                84,
+                85,
+                86,
+                87,
+                88,
+                89,
+                90,
+                91,
+                92,
+                93,
+                94,
+                95,
+                96,
+                97,
+                98,
+                99,
+                100,
+                101,
+                102,
+                103,
+                104,
+                105,
+                106,
+                107,
+                108,
+                109,
+                110,
+                111,
+                112,
+                113,
+                114,
+                115,
+                116,
+                117,
+                118,
+                119,
+                120,
+                121,
+                122,
+                123,
+                124,
+                125,
+                126,
+                127,
+                128,
+                129,
+                130,
+                131,
+                132,
+                133,
+                134,
+                135,
+                136
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "check": "external-function",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "BancorBuyer.buy2 (/../data/reentrancy/solidity_contract/6881.sol#124-128) should be declared external\n",
+      "elements": [
+        {
+          "type": "function",
+          "name": "buy2",
+          "source_mapping": {
+            "start": 4096,
+            "length": 342,
+            "filename": "/../data/reentrancy/solidity_contract/6881.sol",
+            "lines": [
+              124,
+              125,
+              126,
+              127,
+              128
+            ]
+          },
+          "contract": {
+            "type": "contract",
+            "name": "BancorBuyer",
+            "source_mapping": {
+              "start": 1576,
+              "length": 3305,
+              "filename": "/../data/reentrancy/solidity_contract/6881.sol",
+              "lines": [
+                66,
+                67,
+                68,
+                69,
+                70,
+                71,
+                72,
+                73,
+                74,
+                75,
+                76,
+                77,
+                78,
+                79,
+                80,
+                81,
+                82,
+                83,
+                84,
+                85,
+                86,
+                87,
+                88,
+                89,
+                90,
+                91,
+                92,
+                93,
+                94,
+                95,
+                96,
+                97,
+                98,
+                99,
+                100,
+                101,
+                102,
+                103,
+                104,
+                105,
+                106,
+                107,
+                108,
+                109,
+                110,
+                111,
+                112,
+                113,
+                114,
+                115,
+                116,
+                117,
+                118,
+                119,
+                120,
+                121,
+                122,
+                123,
+                124,
+                125,
+                126,
+                127,
+                128,
+                129,
+                130,
+                131,
+                132,
+                133,
+                134,
+                135,
+                136
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "check": "external-function",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "BancorBuyer.buy3 (/../data/reentrancy/solidity_contract/6881.sol#130-135) should be declared external\n",
+      "elements": [
+        {
+          "type": "function",
+          "name": "buy3",
+          "source_mapping": {
+            "start": 4448,
+            "length": 431,
+            "filename": "/../data/reentrancy/solidity_contract/6881.sol",
+            "lines": [
+              130,
+              131,
+              132,
+              133,
+              134,
+              135
+            ]
+          },
+          "contract": {
+            "type": "contract",
+            "name": "BancorBuyer",
+            "source_mapping": {
+              "start": 1576,
+              "length": 3305,
+              "filename": "/../data/reentrancy/solidity_contract/6881.sol",
+              "lines": [
+                66,
+                67,
+                68,
+                69,
+                70,
+                71,
+                72,
+                73,
+                74,
+                75,
+                76,
+                77,
+                78,
+                79,
+                80,
+                81,
+                82,
+                83,
+                84,
+                85,
+                86,
+                87,
+                88,
+                89,
+                90,
+                91,
+                92,
+                93,
+                94,
+                95,
+                96,
+                97,
+                98,
+                99,
+                100,
+                101,
+                102,
+                103,
+                104,
+                105,
+                106,
+                107,
+                108,
+                109,
+                110,
+                111,
+                112,
+                113,
+                114,
+                115,
+                116,
+                117,
+                118,
+                119,
+                120,
+                121,
+                122,
+                123,
+                124,
+                125,
+                126,
+                127,
+                128,
+                129,
+                130,
+                131,
+                132,
+                133,
+                134,
+                135,
+                136
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "check": "low-level-calls",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Low level call in BancorBuyer.buyOne (/../data/reentrancy/solidity_contract/6881.sol#111-117):\n\t-require(bool)(_exchange.call.value(_value)(_data)) /../data/reentrancy/solidity_contract/6881.sol#114\n",
+      "elements": [
+        {
+          "type": "function",
+          "name": "buyOne",
+          "source_mapping": {
+            "start": 3360,
+            "length": 462,
+            "filename": "/../data/reentrancy/solidity_contract/6881.sol",
+            "lines": [
+              111,
+              112,
+              113,
+              114,
+              115,
+              116,
+              117
+            ]
+          },
+          "contract": {
+            "type": "contract",
+            "name": "BancorBuyer",
+            "source_mapping": {
+              "start": 1576,
+              "length": 3305,
+              "filename": "/../data/reentrancy/solidity_contract/6881.sol",
+              "lines": [
+                66,
+                67,
+                68,
+                69,
+                70,
+                71,
+                72,
+                73,
+                74,
+                75,
+                76,
+                77,
+                78,
+                79,
+                80,
+                81,
+                82,
+                83,
+                84,
+                85,
+                86,
+                87,
+                88,
+                89,
+                90,
+                91,
+                92,
+                93,
+                94,
+                95,
+                96,
+                97,
+                98,
+                99,
+                100,
+                101,
+                102,
+                103,
+                104,
+                105,
+                106,
+                107,
+                108,
+                109,
+                110,
+                111,
+                112,
+                113,
+                114,
+                115,
+                116,
+                117,
+                118,
+                119,
+                120,
+                121,
+                122,
+                123,
+                124,
+                125,
+                126,
+                127,
+                128,
+                129,
+                130,
+                131,
+                132,
+                133,
+                134,
+                135,
+                136
+              ]
+            }
+          }
+        },
+        {
+          "type": "expression",
+          "expression": "require(bool)(_exchange.call.value(_value)(_data))",
+          "source_mapping": {
+            "start": 3584,
+            "length": 44,
+            "filename": "/../data/reentrancy/solidity_contract/6881.sol",
+            "lines": [
+              114
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "naming-convention",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Parameter '_beneficiary' of BancorBuyer.deposit (/../data/reentrancy/solidity_contract/6881.sol#78) is not in mixedCase\n",
+      "elements": [
+        {
+          "target": "parameter",
+          "convention": "mixedCase",
+          "name": "_beneficiary",
+          "source_mapping": {
+            "start": 2014,
+            "length": 20,
+            "filename": "/../data/reentrancy/solidity_contract/6881.sol",
+            "lines": [
+              78
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "naming-convention",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Parameter '_tokens' of BancorBuyer.deposit (/../data/reentrancy/solidity_contract/6881.sol#78) is not in mixedCase\n",
+      "elements": [
+        {
+          "target": "parameter",
+          "convention": "mixedCase",
+          "name": "_tokens",
+          "source_mapping": {
+            "start": 2036,
+            "length": 17,
+            "filename": "/../data/reentrancy/solidity_contract/6881.sol",
+            "lines": [
+              78
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "naming-convention",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Parameter '_tokenValues' of BancorBuyer.deposit (/../data/reentrancy/solidity_contract/6881.sol#78) is not in mixedCase\n",
+      "elements": [
+        {
+          "target": "parameter",
+          "convention": "mixedCase",
+          "name": "_tokenValues",
+          "source_mapping": {
+            "start": 2055,
+            "length": 22,
+            "filename": "/../data/reentrancy/solidity_contract/6881.sol",
+            "lines": [
+              78
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "naming-convention",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Parameter '_to' of BancorBuyer.withdraw (/../data/reentrancy/solidity_contract/6881.sol#94) is not in mixedCase\n",
+      "elements": [
+        {
+          "target": "parameter",
+          "convention": "mixedCase",
+          "name": "_to",
+          "source_mapping": {
+            "start": 2688,
+            "length": 11,
+            "filename": "/../data/reentrancy/solidity_contract/6881.sol",
+            "lines": [
+              94
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "naming-convention",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Parameter '_value' of BancorBuyer.withdraw (/../data/reentrancy/solidity_contract/6881.sol#94) is not in mixedCase\n",
+      "elements": [
+        {
+          "target": "parameter",
+          "convention": "mixedCase",
+          "name": "_value",
+          "source_mapping": {
+            "start": 2701,
+            "length": 14,
+            "filename": "/../data/reentrancy/solidity_contract/6881.sol",
+            "lines": [
+              94
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "naming-convention",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Parameter '_tokens' of BancorBuyer.withdraw (/../data/reentrancy/solidity_contract/6881.sol#94) is not in mixedCase\n",
+      "elements": [
+        {
+          "target": "parameter",
+          "convention": "mixedCase",
+          "name": "_tokens",
+          "source_mapping": {
+            "start": 2717,
+            "length": 17,
+            "filename": "/../data/reentrancy/solidity_contract/6881.sol",
+            "lines": [
+              94
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "naming-convention",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Parameter '_tokenValues' of BancorBuyer.withdraw (/../data/reentrancy/solidity_contract/6881.sol#94) is not in mixedCase\n",
+      "elements": [
+        {
+          "target": "parameter",
+          "convention": "mixedCase",
+          "name": "_tokenValues",
+          "source_mapping": {
+            "start": 2736,
+            "length": 22,
+            "filename": "/../data/reentrancy/solidity_contract/6881.sol",
+            "lines": [
+              94
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "naming-convention",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Parameter '_exchange' of BancorBuyer.buyOne (/../data/reentrancy/solidity_contract/6881.sol#111) is not in mixedCase\n",
+      "elements": [
+        {
+          "target": "parameter",
+          "convention": "mixedCase",
+          "name": "_exchange",
+          "source_mapping": {
+            "start": 3389,
+            "length": 17,
+            "filename": "/../data/reentrancy/solidity_contract/6881.sol",
+            "lines": [
+              111
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "naming-convention",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Parameter '_value' of BancorBuyer.buyOne (/../data/reentrancy/solidity_contract/6881.sol#111) is not in mixedCase\n",
+      "elements": [
+        {
+          "target": "parameter",
+          "convention": "mixedCase",
+          "name": "_value",
+          "source_mapping": {
+            "start": 3408,
+            "length": 14,
+            "filename": "/../data/reentrancy/solidity_contract/6881.sol",
+            "lines": [
+              111
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "naming-convention",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Parameter '_data' of BancorBuyer.buyOne (/../data/reentrancy/solidity_contract/6881.sol#111) is not in mixedCase\n",
+      "elements": [
+        {
+          "target": "parameter",
+          "convention": "mixedCase",
+          "name": "_data",
+          "source_mapping": {
+            "start": 3424,
+            "length": 11,
+            "filename": "/../data/reentrancy/solidity_contract/6881.sol",
+            "lines": [
+              111
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "naming-convention",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Parameter '_tokens' of BancorBuyer.buy1 (/../data/reentrancy/solidity_contract/6881.sol#119) is not in mixedCase\n",
+      "elements": [
+        {
+          "target": "parameter",
+          "convention": "mixedCase",
+          "name": "_tokens",
+          "source_mapping": {
+            "start": 3846,
+            "length": 17,
+            "filename": "/../data/reentrancy/solidity_contract/6881.sol",
+            "lines": [
+              119
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "naming-convention",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Parameter '_exchanges' of BancorBuyer.buy1 (/../data/reentrancy/solidity_contract/6881.sol#119) is not in mixedCase\n",
+      "elements": [
+        {
+          "target": "parameter",
+          "convention": "mixedCase",
+          "name": "_exchanges",
+          "source_mapping": {
+            "start": 3866,
+            "length": 20,
+            "filename": "/../data/reentrancy/solidity_contract/6881.sol",
+            "lines": [
+              119
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "naming-convention",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Parameter '_values' of BancorBuyer.buy1 (/../data/reentrancy/solidity_contract/6881.sol#119) is not in mixedCase\n",
+      "elements": [
+        {
+          "target": "parameter",
+          "convention": "mixedCase",
+          "name": "_values",
+          "source_mapping": {
+            "start": 3888,
+            "length": 17,
+            "filename": "/../data/reentrancy/solidity_contract/6881.sol",
+            "lines": [
+              119
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "naming-convention",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Parameter '_data1' of BancorBuyer.buy1 (/../data/reentrancy/solidity_contract/6881.sol#119) is not in mixedCase\n",
+      "elements": [
+        {
+          "target": "parameter",
+          "convention": "mixedCase",
+          "name": "_data1",
+          "source_mapping": {
+            "start": 3907,
+            "length": 12,
+            "filename": "/../data/reentrancy/solidity_contract/6881.sol",
+            "lines": [
+              119
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "naming-convention",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Parameter '_tokens' of BancorBuyer.buy2 (/../data/reentrancy/solidity_contract/6881.sol#124) is not in mixedCase\n",
+      "elements": [
+        {
+          "target": "parameter",
+          "convention": "mixedCase",
+          "name": "_tokens",
+          "source_mapping": {
+            "start": 4110,
+            "length": 17,
+            "filename": "/../data/reentrancy/solidity_contract/6881.sol",
+            "lines": [
+              124
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "naming-convention",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Parameter '_exchanges' of BancorBuyer.buy2 (/../data/reentrancy/solidity_contract/6881.sol#124) is not in mixedCase\n",
+      "elements": [
+        {
+          "target": "parameter",
+          "convention": "mixedCase",
+          "name": "_exchanges",
+          "source_mapping": {
+            "start": 4129,
+            "length": 20,
+            "filename": "/../data/reentrancy/solidity_contract/6881.sol",
+            "lines": [
+              124
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "naming-convention",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Parameter '_values' of BancorBuyer.buy2 (/../data/reentrancy/solidity_contract/6881.sol#124) is not in mixedCase\n",
+      "elements": [
+        {
+          "target": "parameter",
+          "convention": "mixedCase",
+          "name": "_values",
+          "source_mapping": {
+            "start": 4151,
+            "length": 17,
+            "filename": "/../data/reentrancy/solidity_contract/6881.sol",
+            "lines": [
+              124
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "naming-convention",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Parameter '_data1' of BancorBuyer.buy2 (/../data/reentrancy/solidity_contract/6881.sol#124) is not in mixedCase\n",
+      "elements": [
+        {
+          "target": "parameter",
+          "convention": "mixedCase",
+          "name": "_data1",
+          "source_mapping": {
+            "start": 4170,
+            "length": 12,
+            "filename": "/../data/reentrancy/solidity_contract/6881.sol",
+            "lines": [
+              124
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "naming-convention",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Parameter '_data2' of BancorBuyer.buy2 (/../data/reentrancy/solidity_contract/6881.sol#124) is not in mixedCase\n",
+      "elements": [
+        {
+          "target": "parameter",
+          "convention": "mixedCase",
+          "name": "_data2",
+          "source_mapping": {
+            "start": 4184,
+            "length": 12,
+            "filename": "/../data/reentrancy/solidity_contract/6881.sol",
+            "lines": [
+              124
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "naming-convention",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Parameter '_tokens' of BancorBuyer.buy3 (/../data/reentrancy/solidity_contract/6881.sol#130) is not in mixedCase\n",
+      "elements": [
+        {
+          "target": "parameter",
+          "convention": "mixedCase",
+          "name": "_tokens",
+          "source_mapping": {
+            "start": 4462,
+            "length": 17,
+            "filename": "/../data/reentrancy/solidity_contract/6881.sol",
+            "lines": [
+              130
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "naming-convention",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Parameter '_exchanges' of BancorBuyer.buy3 (/../data/reentrancy/solidity_contract/6881.sol#130) is not in mixedCase\n",
+      "elements": [
+        {
+          "target": "parameter",
+          "convention": "mixedCase",
+          "name": "_exchanges",
+          "source_mapping": {
+            "start": 4481,
+            "length": 20,
+            "filename": "/../data/reentrancy/solidity_contract/6881.sol",
+            "lines": [
+              130
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "naming-convention",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Parameter '_values' of BancorBuyer.buy3 (/../data/reentrancy/solidity_contract/6881.sol#130) is not in mixedCase\n",
+      "elements": [
+        {
+          "target": "parameter",
+          "convention": "mixedCase",
+          "name": "_values",
+          "source_mapping": {
+            "start": 4503,
+            "length": 17,
+            "filename": "/../data/reentrancy/solidity_contract/6881.sol",
+            "lines": [
+              130
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "naming-convention",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Parameter '_data1' of BancorBuyer.buy3 (/../data/reentrancy/solidity_contract/6881.sol#130) is not in mixedCase\n",
+      "elements": [
+        {
+          "target": "parameter",
+          "convention": "mixedCase",
+          "name": "_data1",
+          "source_mapping": {
+            "start": 4522,
+            "length": 12,
+            "filename": "/../data/reentrancy/solidity_contract/6881.sol",
+            "lines": [
+              130
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "naming-convention",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Parameter '_data2' of BancorBuyer.buy3 (/../data/reentrancy/solidity_contract/6881.sol#130) is not in mixedCase\n",
+      "elements": [
+        {
+          "target": "parameter",
+          "convention": "mixedCase",
+          "name": "_data2",
+          "source_mapping": {
+            "start": 4536,
+            "length": 12,
+            "filename": "/../data/reentrancy/solidity_contract/6881.sol",
+            "lines": [
+              130
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "naming-convention",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Parameter '_data3' of BancorBuyer.buy3 (/../data/reentrancy/solidity_contract/6881.sol#130) is not in mixedCase\n",
+      "elements": [
+        {
+          "target": "parameter",
+          "convention": "mixedCase",
+          "name": "_data3",
+          "source_mapping": {
+            "start": 4550,
+            "length": 12,
+            "filename": "/../data/reentrancy/solidity_contract/6881.sol",
+            "lines": [
+              130
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

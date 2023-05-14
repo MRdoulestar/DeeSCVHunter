@@ -1,0 +1,30 @@
+{
+  "contract": "30460",
+  "tool": "osiris",
+  "start": 1609183930.876985,
+  "end": 1609184015.351457,
+  "duration": 84.47447204589844,
+  "analysis": [
+    {
+      "errors": [],
+      "file": "/../data/reentrancy/solidity_contract/30460.sol",
+      "name": "BasicToken"
+    },
+    {
+      "errors": [
+        {
+          "line": 286,
+          "column": 7,
+          "message": "overflow_bugs"
+        }
+      ],
+      "file": "/../data/reentrancy/solidity_contract/30460.sol",
+      "name": "BullToken"
+    },
+    {
+      "errors": [],
+      "file": "/../data/reentrancy/solidity_contract/30460.sol",
+      "name": "BullTokenCrowdsale"
+    }
+  ]
+}

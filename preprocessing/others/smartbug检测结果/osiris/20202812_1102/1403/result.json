@@ -1,0 +1,19 @@
+{
+  "contract": "1403",
+  "tool": "osiris",
+  "start": 1609212673.7660742,
+  "end": 1609212726.131926,
+  "duration": 52.36585187911987,
+  "analysis": [
+    {
+      "errors": [],
+      "file": "/../data/reentrancy/solidity_contract/1403.sol",
+      "name": "RUNEToken"
+    },
+    {
+      "errors": [],
+      "file": "/../data/reentrancy/solidity_contract/1403.sol",
+      "name": "SafeMath"
+    }
+  ]
+}

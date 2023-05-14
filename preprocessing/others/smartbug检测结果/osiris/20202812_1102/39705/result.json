@@ -1,0 +1,60 @@
+{
+  "contract": "39705",
+  "tool": "osiris",
+  "start": 1609166112.973919,
+  "end": 1609166175.803066,
+  "duration": 62.82914710044861,
+  "analysis": [
+    {
+      "errors": [
+        {
+          "line": 249,
+          "column": 7,
+          "message": "overflow_bugs"
+        },
+        {
+          "line": 732,
+          "column": 23,
+          "message": "underflow_bugs"
+        },
+        {
+          "line": 63,
+          "column": 22,
+          "message": "underflow_bugs"
+        },
+        {
+          "line": 730,
+          "column": 23,
+          "message": "underflow_bugs"
+        },
+        {
+          "line": 798,
+          "column": 12,
+          "message": "callstack_bug"
+        },
+        {
+          "line": 595,
+          "column": 12,
+          "message": "callstack_bug"
+        }
+      ],
+      "file": "/../data/reentrancy/solidity_contract/39705.sol",
+      "name": "FDC"
+    },
+    {
+      "errors": [],
+      "file": "/../data/reentrancy/solidity_contract/39705.sol",
+      "name": "Parameters"
+    },
+    {
+      "errors": [],
+      "file": "/../data/reentrancy/solidity_contract/39705.sol",
+      "name": "Phased"
+    },
+    {
+      "errors": [],
+      "file": "/../data/reentrancy/solidity_contract/39705.sol",
+      "name": "StepFunction"
+    }
+  ]
+}

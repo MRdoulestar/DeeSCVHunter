@@ -1,0 +1,14 @@
+{
+  "contract": "21390",
+  "tool": "osiris",
+  "start": 1609178137.768922,
+  "end": 1609178143.0421078,
+  "duration": 5.273185729980469,
+  "analysis": [
+    {
+      "errors": [],
+      "file": "/../data/reentrancy/solidity_contract/21390.sol",
+      "name": "Accrual_account"
+    }
+  ]
+}

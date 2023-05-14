@@ -1,0 +1,56 @@
+{
+  "contract": "28687",
+  "tool": "osiris",
+  "start": 1609133322.926456,
+  "end": 1609133376.036431,
+  "duration": 53.1099750995636,
+  "analysis": [
+    {
+      "errors": [
+        {
+          "line": 62,
+          "column": 9,
+          "message": "overflow_bugs"
+        },
+        {
+          "line": 62,
+          "column": 9,
+          "message": "overflow_bugs"
+        },
+        {
+          "line": 40,
+          "column": 1,
+          "message": "overflow_bugs"
+        }
+      ],
+      "file": "/../data/reentrancy/solidity_contract/28687.sol",
+      "name": "Log"
+    },
+    {
+      "errors": [
+        {
+          "line": 22,
+          "column": 13,
+          "message": "overflow_bugs"
+        },
+        {
+          "line": 30,
+          "column": 17,
+          "message": "underflow_bugs"
+        },
+        {
+          "line": 31,
+          "column": 17,
+          "message": "reentrancy_bug"
+        },
+        {
+          "line": 29,
+          "column": 16,
+          "message": "reentrancy_bug"
+        }
+      ],
+      "file": "/../data/reentrancy/solidity_contract/28687.sol",
+      "name": "PrivateBank"
+    }
+  ]
+}

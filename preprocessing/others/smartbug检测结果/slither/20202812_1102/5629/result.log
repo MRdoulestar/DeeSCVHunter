@@ -1,0 +1,26 @@
+INFO:Detectors:[92m
+Different versions of Solidity is used in /../data/reentrancy/solidity_contract/5629.sol:
+	- Version used: ['^0.4.24', '^0.4.6']
+	- /../data/reentrancy/solidity_contract/5629.sol#1 declares pragma solidity^0.4.6
+	- /../data/reentrancy/solidity_contract/5629.sol#2 declares pragma solidity^0.4.24
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#different-pragma-directives-are-used[0m
+INFO:Detectors:[92m
+fomo3d.getPlayerInfoByAddress (/../data/reentrancy/solidity_contract/5629.sol#5) should be declared external
+fomo3d.withdraw (/../data/reentrancy/solidity_contract/5629.sol#7-8) should be declared external
+giveAirdrop.fallback (/../data/reentrancy/solidity_contract/5629.sol#22) should be declared external
+AirdropTryer.tryAirdrop (/../data/reentrancy/solidity_contract/5629.sol#35-37) should be declared external
+AirdropTryer.empty (/../data/reentrancy/solidity_contract/5629.sol#39-42) should be declared external
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#public-function-that-could-be-declared-as-external[0m
+INFO:Detectors:[92m
+Detected issues with version pragma in /../data/reentrancy/solidity_contract/5629.sol:
+	- pragma solidity^0.4.6 (/../data/reentrancy/solidity_contract/5629.sol#1): it allows old versions
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#incorrect-version-of-solidity[0m
+INFO:Detectors:[92m
+Low level call in giveAirdrop.constructor (/../data/reentrancy/solidity_contract/5629.sol#13-20):
+	-require(bool)(address(0xA62142888ABa8370742bE823c1782D17A0389Da1).call.value(msg.value)()) /../data/reentrancy/solidity_contract/5629.sol#15
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#low-level-calls[0m
+INFO:Detectors:[92m
+Contract 'fomo3d' (/../data/reentrancy/solidity_contract/5629.sol#4-10) is not in CapWords
+Contract 'giveAirdrop' (/../data/reentrancy/solidity_contract/5629.sol#12-23) is not in CapWords
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#conformance-to-solidity-naming-conventions[0m
+INFO:Slither:/../data/reentrancy/solidity_contract/5629.sol analyzed (3 contracts), 10 result(s) found

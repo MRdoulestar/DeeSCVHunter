@@ -1,0 +1,340 @@
+INFO:Slither:Compilation warnings/errors on /../data/reentrancy/solidity_contract/2301.sol:
+/../data/reentrancy/solidity_contract/2301.sol:25:5: Warning: Defining constructors as functions with the same name as the contract is deprecated. Use "constructor(...) { ... }" instead.
+    function Controlled() public { controller = msg.sender;}
+    ^------------------------------------------------------^
+/../data/reentrancy/solidity_contract/2301.sol:68:3: Warning: Defining constructors as functions with the same name as the contract is deprecated. Use "constructor(...) { ... }" instead.
+  function Pinakion(
+  ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/2301.sol:147:12: Warning: Use of the "var" keyword is deprecated.
+           var previousBalanceFrom = balanceOfAt(_from, block.number);
+           ^---------------------^
+/../data/reentrancy/solidity_contract/2301.sol:162:12: Warning: Use of the "var" keyword is deprecated.
+           var previousBalanceTo = balanceOfAt(_to, block.number);
+           ^-------------------^
+/../data/reentrancy/solidity_contract/2301.sol:136:16: Warning: Invoking events without "emit" prefix is deprecated.
+               Transfer(_from, _to, _amount);     
+               ^---------------------------^
+/../data/reentrancy/solidity_contract/2301.sol:167:12: Warning: Invoking events without "emit" prefix is deprecated.
+           Transfer(_from, _to, _amount);
+           ^---------------------------^
+/../data/reentrancy/solidity_contract/2301.sol:191:9: Warning: Invoking events without "emit" prefix is deprecated.
+        Approval(msg.sender, _spender, _amount);
+        ^-------------------------------------^
+/../data/reentrancy/solidity_contract/2301.sol:322:9: Warning: Invoking events without "emit" prefix is deprecated.
+        NewCloneToken(address(cloneToken), _snapshotBlock);
+        ^------------------------------------------------^
+/../data/reentrancy/solidity_contract/2301.sol:342:9: Warning: Invoking events without "emit" prefix is deprecated.
+        Transfer(0, _owner, _amount);
+        ^--------------------------^
+/../data/reentrancy/solidity_contract/2301.sol:359:9: Warning: Invoking events without "emit" prefix is deprecated.
+        Transfer(_owner, 0, _amount);
+        ^--------------------------^
+/../data/reentrancy/solidity_contract/2301.sol:457:33: Warning: Using contract member "balance" inherited from the address type is deprecated. Convert the contract to "address" type to access the member, for example use "address(contract).balance" instead.
+            controller.transfer(this.balance);
+                                ^----------^
+/../data/reentrancy/solidity_contract/2301.sol:464:9: Warning: Invoking events without "emit" prefix is deprecated.
+        ClaimedTokens(_token, controller, balance);
+        ^----------------------------------------^
+/../data/reentrancy/solidity_contract/2301.sol:543:25: Warning: This function only accepts a single "bytes" argument. Please use "abi.encodePacked(...)" or a similar function to encode the data.
+            return uint(keccak256(msg.sender,baseRN));
+                        ^--------------------------^
+/../data/reentrancy/solidity_contract/2301.sol:578:13: Warning: Failure condition of 'send' ignored. Consider using 'transfer' instead.
+            msg.sender.send(rewardToSend);  
+            ^---------------------------^
+/../data/reentrancy/solidity_contract/2301.sol:599:13: Warning: Failure condition of 'send' ignored. Consider using 'transfer' instead.
+            msg.sender.send(rewardToSend);  
+            ^---------------------------^
+/../data/reentrancy/solidity_contract/2301.sol:869:9: Warning: Invoking events without "emit" prefix is deprecated.
+        NewPeriod(period, session);
+        ^------------------------^
+/../data/reentrancy/solidity_contract/2301.sol:915:9: Warning: Invoking events without "emit" prefix is deprecated.
+        ArbitrationReward(msg.sender, _disputeID, feeToPay);
+        ^-------------------------------------------------^
+/../data/reentrancy/solidity_contract/2301.sol:929:9: Warning: Invoking events without "emit" prefix is deprecated.
+        TokenShift(_jurorAddress, _disputeID, -int(penality));
+        ^---------------------------------------------------^
+/../data/reentrancy/solidity_contract/2301.sol:931:9: Warning: Invoking events without "emit" prefix is deprecated.
+        TokenShift(msg.sender, _disputeID, int(penality / 2));
+        ^---------------------------------------------------^
+/../data/reentrancy/solidity_contract/2301.sol:933:9: Warning: Invoking events without "emit" prefix is deprecated.
+        TokenShift(governor, _disputeID, int(penality / 2));
+        ^-------------------------------------------------^
+/../data/reentrancy/solidity_contract/2301.sol:959:25: Warning: Invoking events without "emit" prefix is deprecated.
+                        TokenShift(vote.account, _disputeID, int(-penalty));
+                        ^-------------------------------------------------^
+/../data/reentrancy/solidity_contract/2301.sol:967:21: Warning: Invoking events without "emit" prefix is deprecated.
+                    TokenShift(governor, _disputeID, int(totalToRedistribute));
+                    ^--------------------------------------------------------^
+/../data/reentrancy/solidity_contract/2301.sol:976:29: Warning: Invoking events without "emit" prefix is deprecated.
+                            TokenShift(vote.account, _disputeID, int(toRedistribute));
+                            ^-------------------------------------------------------^
+/../data/reentrancy/solidity_contract/2301.sol:1024:25: Warning: Invoking events without "emit" prefix is deprecated.
+                        TokenShift(vote.account, _disputeID, int(-penalty));
+                        ^-------------------------------------------------^
+/../data/reentrancy/solidity_contract/2301.sol:1041:21: Warning: Invoking events without "emit" prefix is deprecated.
+                    TokenShift(governor, _disputeID, int(dispute.appealsRepartitioned[i].totalToRedistribute));
+                    ^----------------------------------------------------------------------------------------^
+/../data/reentrancy/solidity_contract/2301.sol:1054:29: Warning: Invoking events without "emit" prefix is deprecated.
+                            TokenShift(vote.account, _disputeID, int(toRedistribute));
+                            ^-------------------------------------------------------^
+/../data/reentrancy/solidity_contract/2301.sol:1115:34: Warning: This function only accepts a single "bytes" argument. Please use "abi.encodePacked(...)" or a similar function to encode the data.
+            uint position = uint(keccak256(randomNumber, _disputeID, draw)) % segmentSize;  
+                                 ^---------------------------------------^
+/../data/reentrancy/solidity_contract/2301.sol:1146:9: Warning: Invoking events without "emit" prefix is deprecated.
+        DisputeCreation(disputeID, Arbitrable(msg.sender));
+        ^------------------------------------------------^
+/../data/reentrancy/solidity_contract/2301.sol:1252:34: Warning: This function only accepts a single "bytes" argument. Please use "abi.encodePacked(...)" or a similar function to encode the data.
+            uint position = uint(keccak256(randomNumber,_disputeID,_draw)) % segmentSize;
+                                 ^--------------------------------------^
+/../data/reentrancy/solidity_contract/2301.sol:1282:9: Warning: Return value of low-level calls not used.
+        _target.call.value(_value)(_data);
+        ^-------------------------------^
+/../data/reentrancy/solidity_contract/2301.sol:660:28: Warning: Unused function parameter. Remove or comment out the variable name to silence this warning.
+    function createDispute(uint _choices, bytes _extraData) public requireArbitrationFee(_extraData) payable returns(uint disputeID)  {}
+                           ^-----------^
+/../data/reentrancy/solidity_contract/2301.sol:660:118: Warning: Unused function parameter. Remove or comment out the variable name to silence this warning.
+    function createDispute(uint _choices, bytes _extraData) public requireArbitrationFee(_extraData) payable returns(uint disputeID)  {}
+                                                                                                                     ^------------^
+/../data/reentrancy/solidity_contract/2301.sol:1183:42: Warning: Unused function parameter. Remove or comment out the variable name to silence this warning.
+    function appealCost(uint _disputeID, bytes _extraData) public view returns (uint fee) {
+                                         ^--------------^
+
+INFO:Detectors:[91m
+Pinakion.balances (/../data/reentrancy/solidity_contract/2301.sol#57) is never initialized. It is used in:
+	- doTransfer (/../data/reentrancy/solidity_contract/2301.sol#132-169)
+	- balanceOfAt (/../data/reentrancy/solidity_contract/2301.sol#241-262)
+	- generateTokens (/../data/reentrancy/solidity_contract/2301.sol#334-344)
+	- destroyTokens (/../data/reentrancy/solidity_contract/2301.sol#351-361)
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#uninitialized-state-variables[0m
+INFO:Detectors:[93m
+Pinakion.isContract (/../data/reentrancy/solidity_contract/2301.sol#425-432) is declared view but contains assembly code
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#constant-functions-changing-the-state[0m
+INFO:Detectors:[93m
+BlockHashRNGFallback.saveRN (/../data/reentrancy/solidity_contract/2301.sol#589-601) uses a dangerous strict equality:
+	- _block < block.number && randomNumber[_block] == 0
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#dangerous-strict-equalities[0m
+INFO:Detectors:[93m
+Reentrancy in Kleros.passPeriod (/../data/reentrancy/solidity_contract/2301.sol#844-870):
+	External calls:
+	- rng.requestRN(rnBlock) (/../data/reentrancy/solidity_contract/2301.sol#849)
+	State variables written after the call(s):
+	- period (/../data/reentrancy/solidity_contract/2301.sol#850)
+Reentrancy in Kleros.passPeriod (/../data/reentrancy/solidity_contract/2301.sol#844-870):
+	External calls:
+	- randomNumber = rng.getUncorrelatedRN(rnBlock) (/../data/reentrancy/solidity_contract/2301.sol#852)
+	State variables written after the call(s):
+	- period (/../data/reentrancy/solidity_contract/2301.sol#854)
+Reentrancy in Kleros.passPeriod (/../data/reentrancy/solidity_contract/2301.sol#844-870):
+	External calls:
+	- rng.requestRN(rnBlock) (/../data/reentrancy/solidity_contract/2301.sol#849)
+	- randomNumber = rng.getUncorrelatedRN(rnBlock) (/../data/reentrancy/solidity_contract/2301.sol#852)
+	State variables written after the call(s):
+	- lastPeriodChange (/../data/reentrancy/solidity_contract/2301.sol#868)
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#reentrancy-vulnerabilities-1[0m
+INFO:Detectors:[93m
+Pinakion.claimTokens (/../data/reentrancy/solidity_contract/2301.sol#455-465) does not use the value returned by external calls:
+	-token.transfer(controller,balance) (/../data/reentrancy/solidity_contract/2301.sol#463)
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#unused-return[0m
+INFO:Detectors:[92m
+Pinakion.getValueAt.min (local variable @ /../data/reentrancy/solidity_contract/2301.sol#392) shadows:
+	- Pinakion.min (function @ /../data/reentrancy/solidity_contract/2301.sol#435-437)
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#local-variable-shadowing[0m
+INFO:Detectors:[92m
+Reentrancy in Pinakion.approve (/../data/reentrancy/solidity_contract/2301.sol#182-193):
+	External calls:
+	- require(bool)(TokenController(controller).onApprove(msg.sender,_spender,_amount)) (/../data/reentrancy/solidity_contract/2301.sol#187)
+	State variables written after the call(s):
+	- allowed (/../data/reentrancy/solidity_contract/2301.sol#190)
+Reentrancy in Kleros.receiveApproval (/../data/reentrancy/solidity_contract/2301.sol#821-825):
+	External calls:
+	- require(bool)(pinakion.transferFrom(_from,this,_amount)) (/../data/reentrancy/solidity_contract/2301.sol#822)
+	State variables written after the call(s):
+	- jurors (/../data/reentrancy/solidity_contract/2301.sol#824)
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#reentrancy-vulnerabilities-2[0m
+INFO:Detectors:[92m
+Pinakion.isContract uses assembly (/../data/reentrancy/solidity_contract/2301.sol#425-432)
+	- /../data/reentrancy/solidity_contract/2301.sol#428-431
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#assembly-usage[0m
+INFO:Detectors:[92m
+Pinakion.version should be constant (/../data/reentrancy/solidity_contract/2301.sol#42)
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#state-variables-that-could-be-declared-constant[0m
+INFO:Detectors:[92m
+ApproveAndCallFallBack.receiveApproval (/../data/reentrancy/solidity_contract/2301.sol#5) should be declared external
+Kleros.receiveApproval (/../data/reentrancy/solidity_contract/2301.sol#821-825) should be declared external
+TokenController.proxyPayment (/../data/reentrancy/solidity_contract/2301.sol#10) should be declared external
+TokenController.onTransfer (/../data/reentrancy/solidity_contract/2301.sol#12) should be declared external
+TokenController.onApprove (/../data/reentrancy/solidity_contract/2301.sol#14-15) should be declared external
+Controlled.changeController (/../data/reentrancy/solidity_contract/2301.sol#29-31) should be declared external
+Pinakion.transfer (/../data/reentrancy/solidity_contract/2301.sol#96-100) should be declared external
+Pinakion.transferFrom (/../data/reentrancy/solidity_contract/2301.sol#108-124) should be declared external
+Pinakion.allowance (/../data/reentrancy/solidity_contract/2301.sol#200-203) should be declared external
+Pinakion.approveAndCall (/../data/reentrancy/solidity_contract/2301.sol#212-224) should be declared external
+Pinakion.createCloneToken (/../data/reentrancy/solidity_contract/2301.sol#302-324) should be declared external
+Pinakion.generateTokens (/../data/reentrancy/solidity_contract/2301.sol#334-344) should be declared external
+Pinakion.destroyTokens (/../data/reentrancy/solidity_contract/2301.sol#351-361) should be declared external
+Pinakion.enableTransfers (/../data/reentrancy/solidity_contract/2301.sol#370-372) should be declared external
+Pinakion.fallback (/../data/reentrancy/solidity_contract/2301.sol#442-445) should be declared external
+Pinakion.claimTokens (/../data/reentrancy/solidity_contract/2301.sol#455-465) should be declared external
+MiniMeTokenFactory.createCloneToken (/../data/reentrancy/solidity_contract/2301.sol#501-521) should be declared external
+RNG.requestRN (/../data/reentrancy/solidity_contract/2301.sol#530-532) should be declared external
+RNG.getUncorrelatedRN (/../data/reentrancy/solidity_contract/2301.sol#538-544) should be declared external
+Arbitrable.rule (/../data/reentrancy/solidity_contract/2301.sol#631-635) should be declared external
+Kleros.createDispute (/../data/reentrancy/solidity_contract/2301.sol#1129-1148) should be declared external
+Arbitrator.createDispute (/../data/reentrancy/solidity_contract/2301.sol#660) should be declared external
+Arbitrator.disputeStatus (/../data/reentrancy/solidity_contract/2301.sol#674) should be declared external
+Kleros.disputeStatus (/../data/reentrancy/solidity_contract/2301.sol#1265-1278) should be declared external
+Kleros.currentRuling (/../data/reentrancy/solidity_contract/2301.sol#1259-1262) should be declared external
+Arbitrator.currentRuling (/../data/reentrancy/solidity_contract/2301.sol#677) should be declared external
+Kleros.withdraw (/../data/reentrancy/solidity_contract/2301.sol#828-836) should be declared external
+Kleros.passPeriod (/../data/reentrancy/solidity_contract/2301.sol#844-870) should be declared external
+Kleros.activateTokens (/../data/reentrancy/solidity_contract/2301.sol#874-885) should be declared external
+Kleros.voteRuling (/../data/reentrancy/solidity_contract/2301.sol#888-916) should be declared external
+Kleros.penalizeInactiveJuror (/../data/reentrancy/solidity_contract/2301.sol#919-935) should be declared external
+Kleros.oneShotTokenRepartition (/../data/reentrancy/solidity_contract/2301.sol#938-989) should be declared external
+Kleros.multipleShotTokenRepartition (/../data/reentrancy/solidity_contract/2301.sol#992-1088) should be declared external
+Kleros.executeRuling (/../data/reentrancy/solidity_contract/2301.sol#1164-1170) should be declared external
+Kleros.getVoteAccount (/../data/reentrancy/solidity_contract/2301.sol#1210-1212) should be declared external
+Kleros.getVoteRuling (/../data/reentrancy/solidity_contract/2301.sol#1215-1217) should be declared external
+Kleros.getWinningChoice (/../data/reentrancy/solidity_contract/2301.sol#1220-1222) should be declared external
+Kleros.getWinningCount (/../data/reentrancy/solidity_contract/2301.sol#1225-1227) should be declared external
+Kleros.getVoteCount (/../data/reentrancy/solidity_contract/2301.sol#1230-1232) should be declared external
+Kleros.getLastSessionVote (/../data/reentrancy/solidity_contract/2301.sol#1235-1237) should be declared external
+Kleros.isDrawn (/../data/reentrancy/solidity_contract/2301.sol#1240-1256) should be declared external
+Kleros.executeOrder (/../data/reentrancy/solidity_contract/2301.sol#1281-1283) should be declared external
+Kleros.setRng (/../data/reentrancy/solidity_contract/2301.sol#1286-1288) should be declared external
+Kleros.setArbitrationFeePerJuror (/../data/reentrancy/solidity_contract/2301.sol#1291-1293) should be declared external
+Kleros.setDefaultNumberJuror (/../data/reentrancy/solidity_contract/2301.sol#1296-1298) should be declared external
+Kleros.setMinActivatedToken (/../data/reentrancy/solidity_contract/2301.sol#1301-1303) should be declared external
+Kleros.setTimePerPeriod (/../data/reentrancy/solidity_contract/2301.sol#1306-1308) should be declared external
+Kleros.setAlpha (/../data/reentrancy/solidity_contract/2301.sol#1311-1313) should be declared external
+Kleros.setMaxAppeals (/../data/reentrancy/solidity_contract/2301.sol#1316-1318) should be declared external
+Kleros.setGovernor (/../data/reentrancy/solidity_contract/2301.sol#1321-1323) should be declared external
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#public-function-that-could-be-declared-as-external[0m
+INFO:Detectors:[92m
+Low level call in Kleros.executeOrder (/../data/reentrancy/solidity_contract/2301.sol#1281-1283):
+	-_target.call.value(_value)(_data) /../data/reentrancy/solidity_contract/2301.sol#1282
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#low-level-calls[0m
+INFO:Detectors:[92m
+Function 'Controlled.Controlled' (/../data/reentrancy/solidity_contract/2301.sol#25) is not in mixedCase
+Parameter '_newController' of Controlled.changeController (/../data/reentrancy/solidity_contract/2301.sol#29) is not in mixedCase
+Function 'Pinakion.Pinakion' (/../data/reentrancy/solidity_contract/2301.sol#68-85) is not in mixedCase
+Parameter '_tokenFactory' of Pinakion.Pinakion (/../data/reentrancy/solidity_contract/2301.sol#69) is not in mixedCase
+Parameter '_parentToken' of Pinakion.Pinakion (/../data/reentrancy/solidity_contract/2301.sol#70) is not in mixedCase
+Parameter '_parentSnapShotBlock' of Pinakion.Pinakion (/../data/reentrancy/solidity_contract/2301.sol#71) is not in mixedCase
+Parameter '_tokenName' of Pinakion.Pinakion (/../data/reentrancy/solidity_contract/2301.sol#72) is not in mixedCase
+Parameter '_decimalUnits' of Pinakion.Pinakion (/../data/reentrancy/solidity_contract/2301.sol#73) is not in mixedCase
+Parameter '_tokenSymbol' of Pinakion.Pinakion (/../data/reentrancy/solidity_contract/2301.sol#74) is not in mixedCase
+Parameter '_transfersEnabled' of Pinakion.Pinakion (/../data/reentrancy/solidity_contract/2301.sol#75) is not in mixedCase
+Parameter '_to' of Pinakion.transfer (/../data/reentrancy/solidity_contract/2301.sol#96) is not in mixedCase
+Parameter '_amount' of Pinakion.transfer (/../data/reentrancy/solidity_contract/2301.sol#96) is not in mixedCase
+Parameter '_from' of Pinakion.transferFrom (/../data/reentrancy/solidity_contract/2301.sol#108) is not in mixedCase
+Parameter '_to' of Pinakion.transferFrom (/../data/reentrancy/solidity_contract/2301.sol#108) is not in mixedCase
+Parameter '_amount' of Pinakion.transferFrom (/../data/reentrancy/solidity_contract/2301.sol#108) is not in mixedCase
+Parameter '_from' of Pinakion.doTransfer (/../data/reentrancy/solidity_contract/2301.sol#132) is not in mixedCase
+Parameter '_to' of Pinakion.doTransfer (/../data/reentrancy/solidity_contract/2301.sol#132) is not in mixedCase
+Parameter '_amount' of Pinakion.doTransfer (/../data/reentrancy/solidity_contract/2301.sol#132) is not in mixedCase
+Parameter '_owner' of Pinakion.balanceOf (/../data/reentrancy/solidity_contract/2301.sol#173) is not in mixedCase
+Parameter '_spender' of Pinakion.approve (/../data/reentrancy/solidity_contract/2301.sol#182) is not in mixedCase
+Parameter '_amount' of Pinakion.approve (/../data/reentrancy/solidity_contract/2301.sol#182) is not in mixedCase
+Parameter '_owner' of Pinakion.allowance (/../data/reentrancy/solidity_contract/2301.sol#200) is not in mixedCase
+Parameter '_spender' of Pinakion.allowance (/../data/reentrancy/solidity_contract/2301.sol#200) is not in mixedCase
+Parameter '_spender' of Pinakion.approveAndCall (/../data/reentrancy/solidity_contract/2301.sol#212) is not in mixedCase
+Parameter '_amount' of Pinakion.approveAndCall (/../data/reentrancy/solidity_contract/2301.sol#212) is not in mixedCase
+Parameter '_extraData' of Pinakion.approveAndCall (/../data/reentrancy/solidity_contract/2301.sol#212) is not in mixedCase
+Parameter '_owner' of Pinakion.balanceOfAt (/../data/reentrancy/solidity_contract/2301.sol#241) is not in mixedCase
+Parameter '_blockNumber' of Pinakion.balanceOfAt (/../data/reentrancy/solidity_contract/2301.sol#241) is not in mixedCase
+Parameter '_blockNumber' of Pinakion.totalSupplyAt (/../data/reentrancy/solidity_contract/2301.sol#267) is not in mixedCase
+Parameter '_cloneTokenName' of Pinakion.createCloneToken (/../data/reentrancy/solidity_contract/2301.sol#303) is not in mixedCase
+Parameter '_cloneDecimalUnits' of Pinakion.createCloneToken (/../data/reentrancy/solidity_contract/2301.sol#304) is not in mixedCase
+Parameter '_cloneTokenSymbol' of Pinakion.createCloneToken (/../data/reentrancy/solidity_contract/2301.sol#305) is not in mixedCase
+Parameter '_snapshotBlock' of Pinakion.createCloneToken (/../data/reentrancy/solidity_contract/2301.sol#306) is not in mixedCase
+Parameter '_transfersEnabled' of Pinakion.createCloneToken (/../data/reentrancy/solidity_contract/2301.sol#307) is not in mixedCase
+Parameter '_owner' of Pinakion.generateTokens (/../data/reentrancy/solidity_contract/2301.sol#334) is not in mixedCase
+Parameter '_amount' of Pinakion.generateTokens (/../data/reentrancy/solidity_contract/2301.sol#334) is not in mixedCase
+Parameter '_owner' of Pinakion.destroyTokens (/../data/reentrancy/solidity_contract/2301.sol#351) is not in mixedCase
+Parameter '_amount' of Pinakion.destroyTokens (/../data/reentrancy/solidity_contract/2301.sol#351) is not in mixedCase
+Parameter '_transfersEnabled' of Pinakion.enableTransfers (/../data/reentrancy/solidity_contract/2301.sol#370) is not in mixedCase
+Parameter '_block' of Pinakion.getValueAt (/../data/reentrancy/solidity_contract/2301.sol#382) is not in mixedCase
+Parameter '_value' of Pinakion.updateValueAtNow (/../data/reentrancy/solidity_contract/2301.sol#409) is not in mixedCase
+Parameter '_addr' of Pinakion.isContract (/../data/reentrancy/solidity_contract/2301.sol#425) is not in mixedCase
+Parameter '_token' of Pinakion.claimTokens (/../data/reentrancy/solidity_contract/2301.sol#455) is not in mixedCase
+Parameter '_parentToken' of MiniMeTokenFactory.createCloneToken (/../data/reentrancy/solidity_contract/2301.sol#502) is not in mixedCase
+Parameter '_snapshotBlock' of MiniMeTokenFactory.createCloneToken (/../data/reentrancy/solidity_contract/2301.sol#503) is not in mixedCase
+Parameter '_tokenName' of MiniMeTokenFactory.createCloneToken (/../data/reentrancy/solidity_contract/2301.sol#504) is not in mixedCase
+Parameter '_decimalUnits' of MiniMeTokenFactory.createCloneToken (/../data/reentrancy/solidity_contract/2301.sol#505) is not in mixedCase
+Parameter '_tokenSymbol' of MiniMeTokenFactory.createCloneToken (/../data/reentrancy/solidity_contract/2301.sol#506) is not in mixedCase
+Parameter '_transfersEnabled' of MiniMeTokenFactory.createCloneToken (/../data/reentrancy/solidity_contract/2301.sol#507) is not in mixedCase
+Parameter '_block' of RNG.requestRN (/../data/reentrancy/solidity_contract/2301.sol#530) is not in mixedCase
+Parameter '_block' of RNG.getUncorrelatedRN (/../data/reentrancy/solidity_contract/2301.sol#538) is not in mixedCase
+Parameter '_block' of BlockHashRNG.contribute (/../data/reentrancy/solidity_contract/2301.sol#557) is not in mixedCase
+Parameter '_block' of BlockHashRNG.getRN (/../data/reentrancy/solidity_contract/2301.sol#561) is not in mixedCase
+Parameter '_block' of BlockHashRNG.saveRN (/../data/reentrancy/solidity_contract/2301.sol#572) is not in mixedCase
+Parameter '_block' of BlockHashRNGFallback.saveRN (/../data/reentrancy/solidity_contract/2301.sol#589) is not in mixedCase
+Parameter '_arbitrator' of Arbitrable. (/../data/reentrancy/solidity_contract/2301.sol#625) is not in mixedCase
+Parameter '_arbitratorExtraData' of Arbitrable. (/../data/reentrancy/solidity_contract/2301.sol#625) is not in mixedCase
+Parameter '_disputeID' of Arbitrable.rule (/../data/reentrancy/solidity_contract/2301.sol#631) is not in mixedCase
+Parameter '_ruling' of Arbitrable.rule (/../data/reentrancy/solidity_contract/2301.sol#631) is not in mixedCase
+Parameter '_disputeID' of Arbitrator.appeal (/../data/reentrancy/solidity_contract/2301.sol#666) is not in mixedCase
+Parameter '_choices' of Kleros.createDispute (/../data/reentrancy/solidity_contract/2301.sol#1129) is not in mixedCase
+Parameter '_extraData' of Kleros.createDispute (/../data/reentrancy/solidity_contract/2301.sol#1129) is not in mixedCase
+Parameter '_extraData' of Kleros.arbitrationCost (/../data/reentrancy/solidity_contract/2301.sol#1178) is not in mixedCase
+Parameter '_disputeID' of Kleros.appeal (/../data/reentrancy/solidity_contract/2301.sol#1151) is not in mixedCase
+Parameter '_extraData' of Kleros.appeal (/../data/reentrancy/solidity_contract/2301.sol#1151) is not in mixedCase
+Parameter '_disputeID' of Kleros.appealCost (/../data/reentrancy/solidity_contract/2301.sol#1183) is not in mixedCase
+Parameter '_disputeID' of Kleros.disputeStatus (/../data/reentrancy/solidity_contract/2301.sol#1265) is not in mixedCase
+Parameter '_disputeID' of Kleros.currentRuling (/../data/reentrancy/solidity_contract/2301.sol#1259) is not in mixedCase
+Parameter '_from' of Kleros.receiveApproval (/../data/reentrancy/solidity_contract/2301.sol#821) is not in mixedCase
+Parameter '_amount' of Kleros.receiveApproval (/../data/reentrancy/solidity_contract/2301.sol#821) is not in mixedCase
+Parameter '' of Kleros.receiveApproval (/../data/reentrancy/solidity_contract/2301.sol#821) is not in mixedCase
+Parameter '_scope_0' of Kleros.receiveApproval (/../data/reentrancy/solidity_contract/2301.sol#821) is not in mixedCase
+Parameter '_pinakion' of Kleros. (/../data/reentrancy/solidity_contract/2301.sol#807) is not in mixedCase
+Parameter '_rng' of Kleros. (/../data/reentrancy/solidity_contract/2301.sol#807) is not in mixedCase
+Parameter '_timePerPeriod' of Kleros. (/../data/reentrancy/solidity_contract/2301.sol#807) is not in mixedCase
+Parameter '_governor' of Kleros. (/../data/reentrancy/solidity_contract/2301.sol#807) is not in mixedCase
+Parameter '_value' of Kleros.withdraw (/../data/reentrancy/solidity_contract/2301.sol#828) is not in mixedCase
+Parameter '_value' of Kleros.activateTokens (/../data/reentrancy/solidity_contract/2301.sol#874) is not in mixedCase
+Parameter '_disputeID' of Kleros.voteRuling (/../data/reentrancy/solidity_contract/2301.sol#888) is not in mixedCase
+Parameter '_ruling' of Kleros.voteRuling (/../data/reentrancy/solidity_contract/2301.sol#888) is not in mixedCase
+Parameter '_draws' of Kleros.voteRuling (/../data/reentrancy/solidity_contract/2301.sol#888) is not in mixedCase
+Parameter '_jurorAddress' of Kleros.penalizeInactiveJuror (/../data/reentrancy/solidity_contract/2301.sol#919) is not in mixedCase
+Parameter '_disputeID' of Kleros.penalizeInactiveJuror (/../data/reentrancy/solidity_contract/2301.sol#919) is not in mixedCase
+Parameter '_draws' of Kleros.penalizeInactiveJuror (/../data/reentrancy/solidity_contract/2301.sol#919) is not in mixedCase
+Parameter '_disputeID' of Kleros.oneShotTokenRepartition (/../data/reentrancy/solidity_contract/2301.sol#938) is not in mixedCase
+Parameter '_disputeID' of Kleros.multipleShotTokenRepartition (/../data/reentrancy/solidity_contract/2301.sol#992) is not in mixedCase
+Parameter '_maxIterations' of Kleros.multipleShotTokenRepartition (/../data/reentrancy/solidity_contract/2301.sol#992) is not in mixedCase
+Parameter '_disputeID' of Kleros.amountJurors (/../data/reentrancy/solidity_contract/2301.sol#1096) is not in mixedCase
+Parameter '_jurorAddress' of Kleros.validDraws (/../data/reentrancy/solidity_contract/2301.sol#1102) is not in mixedCase
+Parameter '_disputeID' of Kleros.validDraws (/../data/reentrancy/solidity_contract/2301.sol#1102) is not in mixedCase
+Parameter '_draws' of Kleros.validDraws (/../data/reentrancy/solidity_contract/2301.sol#1102) is not in mixedCase
+Parameter '_extraData' of Kleros.extraDataToNbJurors (/../data/reentrancy/solidity_contract/2301.sol#1192) is not in mixedCase
+Parameter '_disputeID' of Kleros.getVoteAccount (/../data/reentrancy/solidity_contract/2301.sol#1210) is not in mixedCase
+Parameter '_appeals' of Kleros.getVoteAccount (/../data/reentrancy/solidity_contract/2301.sol#1210) is not in mixedCase
+Parameter '_voteID' of Kleros.getVoteAccount (/../data/reentrancy/solidity_contract/2301.sol#1210) is not in mixedCase
+Parameter '_disputeID' of Kleros.getVoteRuling (/../data/reentrancy/solidity_contract/2301.sol#1215) is not in mixedCase
+Parameter '_appeals' of Kleros.getVoteRuling (/../data/reentrancy/solidity_contract/2301.sol#1215) is not in mixedCase
+Parameter '_voteID' of Kleros.getVoteRuling (/../data/reentrancy/solidity_contract/2301.sol#1215) is not in mixedCase
+Parameter '_disputeID' of Kleros.getWinningChoice (/../data/reentrancy/solidity_contract/2301.sol#1220) is not in mixedCase
+Parameter '_appeals' of Kleros.getWinningChoice (/../data/reentrancy/solidity_contract/2301.sol#1220) is not in mixedCase
+Parameter '_disputeID' of Kleros.getWinningCount (/../data/reentrancy/solidity_contract/2301.sol#1225) is not in mixedCase
+Parameter '_appeals' of Kleros.getWinningCount (/../data/reentrancy/solidity_contract/2301.sol#1225) is not in mixedCase
+Parameter '_disputeID' of Kleros.getVoteCount (/../data/reentrancy/solidity_contract/2301.sol#1230) is not in mixedCase
+Parameter '_appeals' of Kleros.getVoteCount (/../data/reentrancy/solidity_contract/2301.sol#1230) is not in mixedCase
+Parameter '_choice' of Kleros.getVoteCount (/../data/reentrancy/solidity_contract/2301.sol#1230) is not in mixedCase
+Parameter '_disputeID' of Kleros.getLastSessionVote (/../data/reentrancy/solidity_contract/2301.sol#1235) is not in mixedCase
+Parameter '_juror' of Kleros.getLastSessionVote (/../data/reentrancy/solidity_contract/2301.sol#1235) is not in mixedCase
+Parameter '_disputeID' of Kleros.isDrawn (/../data/reentrancy/solidity_contract/2301.sol#1240) is not in mixedCase
+Parameter '_juror' of Kleros.isDrawn (/../data/reentrancy/solidity_contract/2301.sol#1240) is not in mixedCase
+Parameter '_draw' of Kleros.isDrawn (/../data/reentrancy/solidity_contract/2301.sol#1240) is not in mixedCase
+Parameter '_data' of Kleros.executeOrder (/../data/reentrancy/solidity_contract/2301.sol#1281) is not in mixedCase
+Parameter '_value' of Kleros.executeOrder (/../data/reentrancy/solidity_contract/2301.sol#1281) is not in mixedCase
+Parameter '_target' of Kleros.executeOrder (/../data/reentrancy/solidity_contract/2301.sol#1281) is not in mixedCase
+Parameter '_rng' of Kleros.setRng (/../data/reentrancy/solidity_contract/2301.sol#1286) is not in mixedCase
+Parameter '_arbitrationFeePerJuror' of Kleros.setArbitrationFeePerJuror (/../data/reentrancy/solidity_contract/2301.sol#1291) is not in mixedCase
+Parameter '_defaultNumberJuror' of Kleros.setDefaultNumberJuror (/../data/reentrancy/solidity_contract/2301.sol#1296) is not in mixedCase
+Parameter '_minActivatedToken' of Kleros.setMinActivatedToken (/../data/reentrancy/solidity_contract/2301.sol#1301) is not in mixedCase
+Parameter '_timePerPeriod' of Kleros.setTimePerPeriod (/../data/reentrancy/solidity_contract/2301.sol#1306) is not in mixedCase
+Parameter '_alpha' of Kleros.setAlpha (/../data/reentrancy/solidity_contract/2301.sol#1311) is not in mixedCase
+Parameter '_maxAppeals' of Kleros.setMaxAppeals (/../data/reentrancy/solidity_contract/2301.sol#1316) is not in mixedCase
+Parameter '_governor' of Kleros.setGovernor (/../data/reentrancy/solidity_contract/2301.sol#1321) is not in mixedCase
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#conformance-to-solidity-naming-conventions[0m
+INFO:Slither:/../data/reentrancy/solidity_contract/2301.sol analyzed (11 contracts), 184 result(s) found

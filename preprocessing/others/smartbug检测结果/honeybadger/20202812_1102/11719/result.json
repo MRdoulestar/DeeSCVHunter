@@ -1,0 +1,25 @@
+{
+  "contract": "11719",
+  "tool": "honeybadger",
+  "start": 1609188779.443997,
+  "end": 1609189064.98809,
+  "duration": 285.54409313201904,
+  "analysis": [
+    {
+      "errors": [
+        {
+          "line": 36,
+          "column": 17,
+          "message": "straw_man_contract"
+        }
+      ],
+      "file": "/../data/reentrancy/solidity_contract/11719.sol",
+      "name": "DEP_BANK"
+    },
+    {
+      "errors": [],
+      "file": "/../data/reentrancy/solidity_contract/11719.sol",
+      "name": "LogFile"
+    }
+  ]
+}

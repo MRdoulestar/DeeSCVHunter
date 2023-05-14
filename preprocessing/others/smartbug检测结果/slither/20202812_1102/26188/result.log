@@ -1,0 +1,38 @@
+INFO:Slither:Compilation warnings/errors on /../data/reentrancy/solidity_contract/26188.sol:
+/../data/reentrancy/solidity_contract/26188.sol:45:9: Warning: Return value of low-level calls not used.
+        msg.sender.call.value(prizeAmount)();
+        ^----------------------------------^
+/../data/reentrancy/solidity_contract/26188.sol:53:9: Warning: Return value of low-level calls not used.
+        msg.sender.call.value(toTransfer)();
+        ^---------------------------------^
+
+INFO:Detectors:[92m
+EXPERIMENTAL_ETH_AUCTION.fallback (/../data/reentrancy/solidity_contract/26188.sol#20-25) should be declared external
+EXPERIMENTAL_ETH_AUCTION.SendBid (/../data/reentrancy/solidity_contract/26188.sol#27-35) should be declared external
+EXPERIMENTAL_ETH_AUCTION.GetPrizeFund (/../data/reentrancy/solidity_contract/26188.sol#37-46) should be declared external
+EXPERIMENTAL_ETH_AUCTION.RevokeBid (/../data/reentrancy/solidity_contract/26188.sol#48-54) should be declared external
+EXPERIMENTAL_ETH_AUCTION.kill (/../data/reentrancy/solidity_contract/26188.sol#56-61) should be declared external
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#public-function-that-could-be-declared-as-external[0m
+INFO:Detectors:[92m
+Detected issues with version pragma in /../data/reentrancy/solidity_contract/26188.sol:
+	- pragma solidity^0.4.19 (/../data/reentrancy/solidity_contract/26188.sol#1): it allows old versions
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#incorrect-version-of-solidity[0m
+INFO:Detectors:[92m
+Low level call in EXPERIMENTAL_ETH_AUCTION.GetPrizeFund (/../data/reentrancy/solidity_contract/26188.sol#37-46):
+	-msg.sender.call.value(prizeAmount)() /../data/reentrancy/solidity_contract/26188.sol#45
+Low level call in EXPERIMENTAL_ETH_AUCTION.RevokeBid (/../data/reentrancy/solidity_contract/26188.sol#48-54):
+	-msg.sender.call.value(toTransfer)() /../data/reentrancy/solidity_contract/26188.sol#53
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#low-level-calls[0m
+INFO:Detectors:[92m
+Contract 'EXPERIMENTAL_ETH_AUCTION' (/../data/reentrancy/solidity_contract/26188.sol#3-63) is not in CapWords
+Function 'EXPERIMENTAL_ETH_AUCTION.ContributionToPrizeFund' (/../data/reentrancy/solidity_contract/26188.sol#16-18) is not in mixedCase
+Function 'EXPERIMENTAL_ETH_AUCTION.SendBid' (/../data/reentrancy/solidity_contract/26188.sol#27-35) is not in mixedCase
+Function 'EXPERIMENTAL_ETH_AUCTION.GetPrizeFund' (/../data/reentrancy/solidity_contract/26188.sol#37-46) is not in mixedCase
+Function 'EXPERIMENTAL_ETH_AUCTION.RevokeBid' (/../data/reentrancy/solidity_contract/26188.sol#48-54) is not in mixedCase
+Variable 'EXPERIMENTAL_ETH_AUCTION.PrizeFund' (/../data/reentrancy/solidity_contract/26188.sol#4) is not in mixedCase
+Variable 'EXPERIMENTAL_ETH_AUCTION.MaxOffer' (/../data/reentrancy/solidity_contract/26188.sol#6) is not in mixedCase
+Variable 'EXPERIMENTAL_ETH_AUCTION.EndTime' (/../data/reentrancy/solidity_contract/26188.sol#8) is not in mixedCase
+Variable 'EXPERIMENTAL_ETH_AUCTION.SelfDestructTime' (/../data/reentrancy/solidity_contract/26188.sol#10) is not in mixedCase
+Variable 'EXPERIMENTAL_ETH_AUCTION.Bids' (/../data/reentrancy/solidity_contract/26188.sol#12) is not in mixedCase
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#conformance-to-solidity-naming-conventions[0m
+INFO:Slither:/../data/reentrancy/solidity_contract/26188.sol analyzed (1 contracts), 18 result(s) found

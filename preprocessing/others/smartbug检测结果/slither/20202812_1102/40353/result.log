@@ -1,0 +1,62 @@
+INFO:Slither:Compilation warnings/errors on /../data/reentrancy/solidity_contract/40353.sol:
+/../data/reentrancy/solidity_contract/40353.sol:15:41: Warning: "throw" is deprecated in favour of "revert()", "require()" and "assert()".
+	modifier noEther() {if (msg.value > 0) throw; _;}
+	                                       ^---^
+/../data/reentrancy/solidity_contract/40353.sol:17:49: Warning: "throw" is deprecated in favour of "revert()", "require()" and "assert()".
+	modifier onlyOwner() {if (owner != msg.sender) throw; _;}
+	                                               ^---^
+/../data/reentrancy/solidity_contract/40353.sol:19:63: Warning: "throw" is deprecated in favour of "revert()", "require()" and "assert()".
+	modifier onlyDaoChallenge() {if (daoChallenge != msg.sender) throw; _;}
+	                                                             ^---^
+/../data/reentrancy/solidity_contract/40353.sol:21:67: Warning: "throw" is deprecated in favour of "revert()", "require()" and "assert()".
+	modifier onlyChallengeOwner() {if (challengeOwner != msg.sender) throw; _;}
+	                                                                 ^---^
+/../data/reentrancy/solidity_contract/40353.sol:24:3: Warning: Defining constructors as functions with the same name as the contract is deprecated. Use "constructor(...) { ... }" instead.
+  function DaoAccount (address _owner, uint256 _tokenPrice, address _challengeOwner) noEther {
+  ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/40353.sol:35:3: Warning: "throw" is deprecated in favour of "revert()", "require()" and "assert()".
+		throw;
+		^---^
+/../data/reentrancy/solidity_contract/40353.sol:50:20: Warning: "throw" is deprecated in favour of "revert()", "require()" and "assert()".
+		if (amount == 0) throw;
+		                 ^---^
+/../data/reentrancy/solidity_contract/40353.sol:53:33: Warning: "throw" is deprecated in favour of "revert()", "require()" and "assert()".
+		if (amount % tokenPrice != 0) throw;
+		                              ^---^
+/../data/reentrancy/solidity_contract/40353.sol:63:66: Warning: "throw" is deprecated in favour of "revert()", "require()" and "assert()".
+		if (tokens == 0 || tokenBalance == 0 || tokenBalance < tokens) throw;
+		                                                               ^---^
+/../data/reentrancy/solidity_contract/40353.sol:65:48: Warning: "throw" is deprecated in favour of "revert()", "require()" and "assert()".
+		if(!owner.call.value(tokens * tokenPrice)()) throw;
+		                                             ^---^
+/../data/reentrancy/solidity_contract/40353.sol:99:41: Warning: "throw" is deprecated in favour of "revert()", "require()" and "assert()".
+	modifier noEther() {if (msg.value > 0) throw; _;}
+	                                       ^---^
+/../data/reentrancy/solidity_contract/40353.sol:101:67: Warning: "throw" is deprecated in favour of "revert()", "require()" and "assert()".
+	modifier onlyChallengeOwner() {if (challengeOwner != msg.sender) throw; _;}
+	                                                                 ^---^
+/../data/reentrancy/solidity_contract/40353.sol:105:2: Warning: Defining constructors as functions with the same name as the contract is deprecated. Use "constructor(...) { ... }" instead.
+	function DaoChallenge () {
+ ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/40353.sol:144:36: Warning: "throw" is deprecated in favour of "revert()", "require()" and "assert()".
+		if (account == DaoAccount(0x00)) throw;
+		                                 ^---^
+/../data/reentrancy/solidity_contract/40353.sol:1:1: Warning: Source file does not specify required compiler version!Consider adding "pragma solidity ^0.4.25;"
+contract DaoAccount
+^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/40353.sol:24:86: Warning: Modifier-style base constructor call without arguments.
+  function DaoAccount (address _owner, uint256 _tokenPrice, address _challengeOwner) noEther {
+                                                                                     ^-----^
+/../data/reentrancy/solidity_contract/40353.sol:70:3: Warning: "suicide" has been deprecated in favour of "selfdestruct"
+		suicide(challengeOwner);
+		^---------------------^
+/../data/reentrancy/solidity_contract/40353.sol:120:4: Warning: Invoking events without "emit" prefix is deprecated.
+			notifyNewAccount(accountOwner, address(account));
+			^----------------------------------------------^
+[91m/../data/reentrancy/solidity_contract/40353.sol:136:12: Error: Member "value" not found or not visible after argument-dependent lookup in function () external returns (uint256) - did you forget the "payable" modifier?[0m
+		tokens = account.buyTokens.value(msg.value)();
+		         ^---------------------^
+
+INFO:SlitherSolcParsing:No contract were found in /../data/reentrancy/solidity_contract/40353.sol, check the correct compilation
+WARNING:Slither:[91mNo contract was analyzed[0m
+INFO:Slither:/../data/reentrancy/solidity_contract/40353.sol analyzed (0 contracts), 0 result(s) found

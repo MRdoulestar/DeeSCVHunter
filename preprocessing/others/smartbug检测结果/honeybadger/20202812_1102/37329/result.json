@@ -1,0 +1,24 @@
+{
+  "contract": "37329",
+  "tool": "honeybadger",
+  "start": 1609160398.982552,
+  "end": 1609160408.862726,
+  "duration": 9.880173921585083,
+  "analysis": [
+    {
+      "errors": [],
+      "file": "/../data/reentrancy/solidity_contract/37329.sol",
+      "name": "ICOBuyer"
+    },
+    {
+      "errors": [],
+      "file": "/../data/reentrancy/solidity_contract/37329.sol",
+      "name": "Math"
+    },
+    {
+      "errors": [],
+      "file": "/../data/reentrancy/solidity_contract/37329.sol",
+      "name": "Ownable"
+    }
+  ]
+}

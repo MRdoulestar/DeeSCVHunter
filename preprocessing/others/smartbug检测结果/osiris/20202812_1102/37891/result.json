@@ -1,0 +1,25 @@
+{
+  "contract": "37891",
+  "tool": "osiris",
+  "start": 1609168750.885194,
+  "end": 1609168752.600102,
+  "duration": 1.7149078845977783,
+  "analysis": [
+    {
+      "errors": [
+        {
+          "line": 8,
+          "column": 9,
+          "message": "overflow_bugs"
+        },
+        {
+          "line": 16,
+          "column": 24,
+          "message": "reentrancy_bug"
+        }
+      ],
+      "file": "/../data/reentrancy/solidity_contract/37891.sol",
+      "name": "Escrow"
+    }
+  ]
+}

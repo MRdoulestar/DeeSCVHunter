@@ -1,0 +1,12 @@
+{
+  "contract": "cross-function-reentrancy-fixed",
+  "tool": "maian",
+  "start": 1609172792.8577979,
+  "end": 1609172843.0926158,
+  "duration": 50.23481798171997,
+  "analysis": {
+    "is_lock_vulnerable": false,
+    "is_prodigal_vulnerable": false,
+    "is_suicidal_vulnerable": false
+  }
+}

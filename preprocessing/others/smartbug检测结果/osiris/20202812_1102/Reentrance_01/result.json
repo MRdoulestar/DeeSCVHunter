@@ -1,0 +1,25 @@
+{
+  "contract": "Reentrance_01",
+  "tool": "osiris",
+  "start": 1609124561.031438,
+  "end": 1609124564.0454788,
+  "duration": 3.01404070854187,
+  "analysis": [
+    {
+      "errors": [
+        {
+          "line": 11,
+          "column": 9,
+          "message": "overflow_bugs"
+        },
+        {
+          "line": 17,
+          "column": 14,
+          "message": "reentrancy_bug"
+        }
+      ],
+      "file": "/../data/reentrancy/solidity_contract/Reentrance_01.sol",
+      "name": "Reentrance"
+    }
+  ]
+}

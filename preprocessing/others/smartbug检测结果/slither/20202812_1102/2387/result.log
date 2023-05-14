@@ -1,0 +1,125 @@
+INFO:Slither:Compilation warnings/errors on /../data/reentrancy/solidity_contract/2387.sol:
+/../data/reentrancy/solidity_contract/2387.sol:3:1: Warning: Experimental features are turned on. Do not use experimental features on live deployments.
+pragma experimental ABIEncoderV2;
+^-------------------------------^
+
+INFO:Detectors:[93m
+AddressExtension.isAccount (/../data/reentrancy/solidity_contract/2387.sol#11-15) is declared view but contains assembly code
+AddressExtension.toBytes (/../data/reentrancy/solidity_contract/2387.sol#17-24) is declared view but contains assembly code
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#constant-functions-changing-the-state[0m
+INFO:Detectors:[93m
+newValue in ERC20Like.decreaseAllowance (/../data/reentrancy/solidity_contract/2387.sol#318) is a local variable never initialiazed
+relayer in ServiceVoucher.delegateConsume (/../data/reentrancy/solidity_contract/2387.sol#597) is a local variable never initialiazed
+total in ERC20Like.withdrawDirectDebit (/../data/reentrancy/solidity_contract/2387.sol#507) is a local variable never initialiazed
+signer in ServiceVoucher.delegateConsume (/../data/reentrancy/solidity_contract/2387.sol#596) is a local variable never initialiazed
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#uninitialized-local-variables[0m
+INFO:Detectors:[93m
+ServiceVoucher.transferToken (/../data/reentrancy/solidity_contract/2387.sol#675-677) does not use the value returned by external calls:
+	-erc20.transfer(to,value) (/../data/reentrancy/solidity_contract/2387.sol#676)
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#unused-return[0m
+INFO:Detectors:[92m
+ERC20Like.setDirectDebit.directDebit (local variable @ /../data/reentrancy/solidity_contract/2387.sol#345) shadows:
+	- ERC20Like.directDebit (function @ /../data/reentrancy/solidity_contract/2387.sol#463-465)
+	- FsTKToken.directDebit (function @ /../data/reentrancy/solidity_contract/2387.sol#208)
+ServiceVoucher.setDirectDebit.directDebit (local variable @ /../data/reentrancy/solidity_contract/2387.sol#671) shadows:
+	- ERC20Like.directDebit (function @ /../data/reentrancy/solidity_contract/2387.sol#463-465)
+	- FsTKToken.directDebit (function @ /../data/reentrancy/solidity_contract/2387.sol#208)
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#local-variable-shadowing[0m
+INFO:Detectors:[92m
+Reentrancy in Authorizable.setFsTKAuthority (/../data/reentrancy/solidity_contract/2387.sol#138-141):
+	External calls:
+	- require(bool)(_fstkAuthority.validate() == _fstkAuthority.validate.selector) (/../data/reentrancy/solidity_contract/2387.sol#139)
+	State variables written after the call(s):
+	- fstkAuthority (/../data/reentrancy/solidity_contract/2387.sol#140)
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#reentrancy-vulnerabilities-2[0m
+INFO:Detectors:[92m
+ERC20Like.withdrawDirectDebit (/../data/reentrancy/solidity_contract/2387.sol#490-502) uses timestamp for comparisons
+	Dangerous comparisons:
+	- require(bool)(amount > 0) (/../data/reentrancy/solidity_contract/2387.sol#495)
+ERC20Like.withdrawDirectDebit (/../data/reentrancy/solidity_contract/2387.sol#504-534) uses timestamp for comparisons
+	Dangerous comparisons:
+	- amount > debtorBalance (/../data/reentrancy/solidity_contract/2387.sol#518-530)
+	- require(bool)(amount > 0) (/../data/reentrancy/solidity_contract/2387.sol#515)
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#block-timestamp[0m
+INFO:Detectors:[92m
+AddressExtension.isAccount uses assembly (/../data/reentrancy/solidity_contract/2387.sol#11-15)
+	- /../data/reentrancy/solidity_contract/2387.sol#12-15
+AddressExtension.toBytes uses assembly (/../data/reentrancy/solidity_contract/2387.sol#17-24)
+	- /../data/reentrancy/solidity_contract/2387.sol#18-24
+ERC20Like.transferAndCall uses assembly (/../data/reentrancy/solidity_contract/2387.sol#376-384)
+	- /../data/reentrancy/solidity_contract/2387.sol#378-382
+ERC20Like.delegateTransferAndCall uses assembly (/../data/reentrancy/solidity_contract/2387.sol#394-461)
+	- /../data/reentrancy/solidity_contract/2387.sol#446-450
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#assembly-usage[0m
+INFO:Detectors:[92m
+Different versions of Solidity is used in /../data/reentrancy/solidity_contract/2387.sol:
+	- Version used: ['ABIEncoderV2', '^0.4.24', 'v0.5.0']
+	- /../data/reentrancy/solidity_contract/2387.sol#1 declares pragma solidity^0.4.24
+	- /../data/reentrancy/solidity_contract/2387.sol#2 declares pragma experimentalv0.5.0
+	- /../data/reentrancy/solidity_contract/2387.sol#3 declares pragma experimentalABIEncoderV2
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#different-pragma-directives-are-used[0m
+INFO:Detectors:[92m
+FsTKAuthority.isAuthorized (/../data/reentrancy/solidity_contract/2387.sol#114) should be declared external
+FsTKAuthority.isApproved (/../data/reentrancy/solidity_contract/2387.sol#115) should be declared external
+FsTKAuthority.validate (/../data/reentrancy/solidity_contract/2387.sol#116) should be declared external
+Authorizable.setFsTKAuthority (/../data/reentrancy/solidity_contract/2387.sol#138-141) should be declared external
+ERC20Like.balanceOf (/../data/reentrancy/solidity_contract/2387.sol#243-245) should be declared external
+ERC20.balanceOf (/../data/reentrancy/solidity_contract/2387.sol#149) should be declared external
+ERC20Like.allowance (/../data/reentrancy/solidity_contract/2387.sol#247-249) should be declared external
+ERC20.allowance (/../data/reentrancy/solidity_contract/2387.sol#150) should be declared external
+ERC20Like.transferFrom (/../data/reentrancy/solidity_contract/2387.sol#261-271) should be declared external
+ERC20.transferFrom (/../data/reentrancy/solidity_contract/2387.sol#152) should be declared external
+ERC20Like.approve (/../data/reentrancy/solidity_contract/2387.sol#273-285) should be declared external
+ERC20.approve (/../data/reentrancy/solidity_contract/2387.sol#153) should be declared external
+SecureERC20.approve (/../data/reentrancy/solidity_contract/2387.sol#160) should be declared external
+ERC20Like.approve (/../data/reentrancy/solidity_contract/2387.sol#291-301) should be declared external
+SecureERC20.increaseAllowance (/../data/reentrancy/solidity_contract/2387.sol#161) should be declared external
+ERC20Like.increaseAllowance (/../data/reentrancy/solidity_contract/2387.sol#303-312) should be declared external
+SecureERC20.decreaseAllowance (/../data/reentrancy/solidity_contract/2387.sol#162) should be declared external
+ERC20Like.decreaseAllowance (/../data/reentrancy/solidity_contract/2387.sol#314-331) should be declared external
+ERC20Like.spendableAllowance (/../data/reentrancy/solidity_contract/2387.sol#349-355) should be declared external
+FsTKToken.spendableAllowance (/../data/reentrancy/solidity_contract/2387.sol#200) should be declared external
+ERC20Like.transfer (/../data/reentrancy/solidity_contract/2387.sol#357-374) should be declared external
+FsTKToken.transfer (/../data/reentrancy/solidity_contract/2387.sol#201) should be declared external
+FsTKToken.transferAndCall (/../data/reentrancy/solidity_contract/2387.sol#202) should be declared external
+ERC20Like.transferAndCall (/../data/reentrancy/solidity_contract/2387.sol#376-384) should be declared external
+ERC20Like.nonceOf (/../data/reentrancy/solidity_contract/2387.sol#386-388) should be declared external
+FsTKToken.nonceOf (/../data/reentrancy/solidity_contract/2387.sol#204) should be declared external
+ERC20Like.increaseNonce (/../data/reentrancy/solidity_contract/2387.sol#390-392) should be declared external
+FsTKToken.increaseNonce (/../data/reentrancy/solidity_contract/2387.sol#205) should be declared external
+ERC20Like.delegateTransferAndCall (/../data/reentrancy/solidity_contract/2387.sol#394-461) should be declared external
+FsTKToken.delegateTransferAndCall (/../data/reentrancy/solidity_contract/2387.sol#206) should be declared external
+ERC20Like.directDebit (/../data/reentrancy/solidity_contract/2387.sol#463-465) should be declared external
+FsTKToken.directDebit (/../data/reentrancy/solidity_contract/2387.sol#208) should be declared external
+FsTKToken.setupDirectDebit (/../data/reentrancy/solidity_contract/2387.sol#209) should be declared external
+ERC20Like.setupDirectDebit (/../data/reentrancy/solidity_contract/2387.sol#467-481) should be declared external
+ERC20Like.terminateDirectDebit (/../data/reentrancy/solidity_contract/2387.sol#483-488) should be declared external
+FsTKToken.terminateDirectDebit (/../data/reentrancy/solidity_contract/2387.sol#210) should be declared external
+FsTKToken.withdrawDirectDebit (/../data/reentrancy/solidity_contract/2387.sol#211) should be declared external
+ERC20Like.withdrawDirectDebit (/../data/reentrancy/solidity_contract/2387.sol#490-502) should be declared external
+FsTKToken.withdrawDirectDebit (/../data/reentrancy/solidity_contract/2387.sol#212) should be declared external
+ERC20Like.withdrawDirectDebit (/../data/reentrancy/solidity_contract/2387.sol#504-534) should be declared external
+ServiceVoucher.mint (/../data/reentrancy/solidity_contract/2387.sol#559-565) should be declared external
+ServiceVoucher.consume (/../data/reentrancy/solidity_contract/2387.sol#567-577) should be declared external
+ServiceVoucher.delegateConsume (/../data/reentrancy/solidity_contract/2387.sol#579-653) should be declared external
+ServiceVoucher.setMetadata (/../data/reentrancy/solidity_contract/2387.sol#655-657) should be declared external
+ServiceVoucher.setLiquid (/../data/reentrancy/solidity_contract/2387.sol#659-661) should be declared external
+ServiceVoucher.transferToken (/../data/reentrancy/solidity_contract/2387.sol#675-677) should be declared external
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#public-function-that-could-be-declared-as-external[0m
+INFO:Detectors:[92m
+Low level call in ERC20Like.transferAndCall (/../data/reentrancy/solidity_contract/2387.sol#376-384):
+	-require(bool)(to.call.value(msg.value)(data)) /../data/reentrancy/solidity_contract/2387.sol#382
+Low level call in ERC20Like.delegateTransferAndCall (/../data/reentrancy/solidity_contract/2387.sol#394-461):
+	-to.call.gas(gasAmount)(data) /../data/reentrancy/solidity_contract/2387.sol#450-455
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#low-level-calls[0m
+INFO:Detectors:[92m
+Parameter '_address' of AddressExtension.isValid (/../data/reentrancy/solidity_contract/2387.sol#7) is not in mixedCase
+Parameter '_fstkAuthority' of Authorizable. (/../data/reentrancy/solidity_contract/2387.sol#134) is not in mixedCase
+Parameter '_fstkAuthority' of Authorizable.setFsTKAuthority (/../data/reentrancy/solidity_contract/2387.sol#138) is not in mixedCase
+Parameter '_metadata' of ERC20Like. (/../data/reentrancy/solidity_contract/2387.sol#239) is not in mixedCase
+Parameter '_metadata' of ERC20Like.setMetadata0 (/../data/reentrancy/solidity_contract/2387.sol#333) is not in mixedCase
+Parameter '_name' of ServiceVoucher. (/../data/reentrancy/solidity_contract/2387.sol#547) is not in mixedCase
+Parameter '_symbol' of ServiceVoucher. (/../data/reentrancy/solidity_contract/2387.sol#548) is not in mixedCase
+Constant 'ServiceVoucher.isConsumable' (/../data/reentrancy/solidity_contract/2387.sol#543) is not in UPPER_CASE_WITH_UNDERSCORES
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#conformance-to-solidity-naming-conventions[0m
+INFO:Slither:/../data/reentrancy/solidity_contract/2387.sol analyzed (9 contracts), 73 result(s) found

@@ -1,0 +1,25 @@
+{
+  "contract": "23803",
+  "tool": "solhint",
+  "start": 1609172920.6961129,
+  "end": 1609172926.574242,
+  "duration": 5.878129243850708,
+  "analysis": [
+    {
+      "file": "/data/reentrancy/solidity_contract/23803.sol",
+      "line": "26",
+      "column": "7",
+      "message": "Expected indentation of 8 spaces but found 6",
+      "level": "Error",
+      "type": "indent"
+    },
+    {
+      "file": "/data/reentrancy/solidity_contract/23803.sol",
+      "line": "93",
+      "column": "2",
+      "message": "Line length must be no more than 120 but current length is 122.",
+      "level": "Error",
+      "type": "max-line-length"
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+INFO:root:Contract /../data/reentrancy/solidity_contract/2387.sol:AddressExtension:
+incomplete push instruction at 79
+INFO:symExec:Running, please wait...
+INFO:symExec:	============ Results ===========
+INFO:symExec:	 EVM code coverage: 	 35.7%
+INFO:symExec:	 Money flow:    	 False
+INFO:symExec:	 Balance disorder: 	 False
+INFO:symExec:	 Hidden transfer: 	 False
+INFO:symExec:	 Inheritance disorder: 	 False
+INFO:symExec:	 Uninitialised struct: 	 False
+INFO:symExec:	 Type overflow: 	 False
+INFO:symExec:	 Skip empty string: 	 False
+INFO:symExec:	 Hidden state update: 	 False
+INFO:symExec:	 Straw man contract: 	 False
+INFO:symExec:	 --- 0.0333249568939 seconds ---
+INFO:symExec:	====== Analysis Completed ======
+INFO:root:Contract /../data/reentrancy/solidity_contract/2387.sol:ERC20Like:
+INFO:symExec:Running, please wait...

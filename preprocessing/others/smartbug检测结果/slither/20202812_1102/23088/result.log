@@ -1,0 +1,17 @@
+INFO:Detectors:[91m
+WyvernAtomicizer.atomicize (/../data/reentrancy/solidity_contract/23088.sol#5-17) sends eth to arbitrary user
+	Dangerous calls:
+	- require(bool)(addrs[i].call.value(values[i])(calldata)) (/../data/reentrancy/solidity_contract/23088.sol#15)
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#functions-that-send-ether-to-arbitrary-destinations[0m
+INFO:Detectors:[92m
+WyvernAtomicizer.atomicize (/../data/reentrancy/solidity_contract/23088.sol#5-17) should be declared external
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#public-function-that-could-be-declared-as-external[0m
+INFO:Detectors:[92m
+Detected issues with version pragma in /../data/reentrancy/solidity_contract/23088.sol:
+	- pragma solidity^0.4.13 (/../data/reentrancy/solidity_contract/23088.sol#1): it allows old versions
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#incorrect-version-of-solidity[0m
+INFO:Detectors:[92m
+Low level call in WyvernAtomicizer.atomicize (/../data/reentrancy/solidity_contract/23088.sol#5-17):
+	-require(bool)(addrs[i].call.value(values[i])(calldata)) /../data/reentrancy/solidity_contract/23088.sol#15
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#low-level-calls[0m
+INFO:Slither:/../data/reentrancy/solidity_contract/23088.sol analyzed (1 contracts), 4 result(s) found

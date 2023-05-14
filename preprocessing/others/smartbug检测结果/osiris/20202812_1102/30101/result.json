@@ -1,0 +1,35 @@
+{
+  "contract": "30101",
+  "tool": "osiris",
+  "start": 1609185549.397229,
+  "end": 1609185559.644491,
+  "duration": 10.247262001037598,
+  "analysis": [
+    {
+      "errors": [],
+      "file": "/../data/reentrancy/solidity_contract/30101.sol",
+      "name": "SafeMath"
+    },
+    {
+      "errors": [
+        {
+          "line": 90,
+          "column": 9,
+          "message": "concurrency_bug"
+        },
+        {
+          "line": 139,
+          "column": 17,
+          "message": "concurrency_bug"
+        },
+        {
+          "line": 139,
+          "column": 17,
+          "message": "reentrancy_bug"
+        }
+      ],
+      "file": "/../data/reentrancy/solidity_contract/30101.sol",
+      "name": "TelcoinSaleCapEscrow"
+    }
+  ]
+}

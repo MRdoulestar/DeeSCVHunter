@@ -1,0 +1,293 @@
+INFO:Slither:Compilation warnings/errors on /../data/reentrancy/solidity_contract/17573.sol:
+/../data/reentrancy/solidity_contract/17573.sol:18:5: Warning: Defining constructors as functions with the same name as the contract is deprecated. Use "constructor(...) { ... }" instead.
+    function DSAuth() public {
+    ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/17573.sol:185:5: Warning: Defining constructors as functions with the same name as the contract is deprecated. Use "constructor(...) { ... }" instead.
+    function DSTokenBase(uint supply) public {
+    ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/17573.sol:236:5: Warning: Defining constructors as functions with the same name as the contract is deprecated. Use "constructor(...) { ... }" instead.
+    function DSToken(bytes32 symbol_) public {
+    ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/17573.sol:355:61: Warning: "throw" is deprecated in favour of "revert()", "require()" and "assert()".
+    modifier onlyController { if (msg.sender != controller) throw; _; }
+                                                            ^---^
+/../data/reentrancy/solidity_contract/17573.sol:359:5: Warning: Defining constructors as functions with the same name as the contract is deprecated. Use "constructor(...) { ... }" instead.
+    function Controlled() { controller = msg.sender;}
+    ^-----------------------------------------------^
+/../data/reentrancy/solidity_contract/17573.sol:388:5: Warning: Defining constructors as functions with the same name as the contract is deprecated. Use "constructor(...) { ... }" instead.
+    function OMT() {
+    ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/17573.sol:403:16: Warning: "throw" is deprecated in favour of "revert()", "require()" and "assert()".
+               throw;
+               ^---^
+/../data/reentrancy/solidity_contract/17573.sol:431:16: Warning: "throw" is deprecated in favour of "revert()", "require()" and "assert()".
+               throw;
+               ^---^
+/../data/reentrancy/solidity_contract/17573.sol:463:16: Warning: "throw" is deprecated in favour of "revert()", "require()" and "assert()".
+               throw;
+               ^---^
+/../data/reentrancy/solidity_contract/17573.sol:493:17: Warning: "throw" is deprecated in favour of "revert()", "require()" and "assert()".
+                throw;
+                ^---^
+/../data/reentrancy/solidity_contract/17573.sol:519:42: Warning: "throw" is deprecated in favour of "revert()", "require()" and "assert()".
+        if (!approve(_spender, _amount)) throw;
+                                         ^---^
+/../data/reentrancy/solidity_contract/17573.sol:549:17: Warning: "throw" is deprecated in favour of "revert()", "require()" and "assert()".
+                throw;
+                ^---^
+/../data/reentrancy/solidity_contract/17573.sol:551:13: Warning: "throw" is deprecated in favour of "revert()", "require()" and "assert()".
+            throw;
+            ^---^
+/../data/reentrancy/solidity_contract/17573.sol:113:5: Warning: Variable is shadowed in inline assembly by an instruction of the same name
+    function add(uint x, uint y) internal pure returns (uint z) {
+    ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/17573.sol:119:5: Warning: Variable is shadowed in inline assembly by an instruction of the same name
+    function mul(uint x, uint y) internal pure returns (uint z) {
+    ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/17573.sol:90:5: Warning: Variable is shadowed in inline assembly by an instruction of the same name
+    function stop() public auth note {
+    ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/17573.sol:116:5: Warning: Variable is shadowed in inline assembly by an instruction of the same name
+    function sub(uint x, uint y) internal pure returns (uint z) {
+    ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/17573.sol:20:9: Warning: Invoking events without "emit" prefix is deprecated.
+        LogSetOwner(msg.sender);
+        ^---------------------^
+/../data/reentrancy/solidity_contract/17573.sol:28:9: Warning: Invoking events without "emit" prefix is deprecated.
+        LogSetOwner(owner);
+        ^----------------^
+/../data/reentrancy/solidity_contract/17573.sol:36:9: Warning: Invoking events without "emit" prefix is deprecated.
+        LogSetAuthority(authority);
+        ^------------------------^
+/../data/reentrancy/solidity_contract/17573.sol:76:9: Warning: Invoking events without "emit" prefix is deprecated.
+        LogNote(msg.sig, msg.sender, foo, bar, msg.value, msg.data);
+        ^---------------------------------------------------------^
+/../data/reentrancy/solidity_contract/17573.sol:215:9: Warning: Invoking events without "emit" prefix is deprecated.
+        Transfer(src, dst, wad);
+        ^---------------------^
+/../data/reentrancy/solidity_contract/17573.sol:223:9: Warning: Invoking events without "emit" prefix is deprecated.
+        Approval(msg.sender, guy, wad);
+        ^----------------------------^
+/../data/reentrancy/solidity_contract/17573.sol:249:9: Warning: Invoking events without "emit" prefix is deprecated.
+        Trust(msg.sender, guy, wat);
+        ^-------------------------^
+/../data/reentrancy/solidity_contract/17573.sol:267:9: Warning: Invoking events without "emit" prefix is deprecated.
+        Transfer(src, dst, wad);
+        ^---------------------^
+/../data/reentrancy/solidity_contract/17573.sol:291:9: Warning: Invoking events without "emit" prefix is deprecated.
+        Mint(guy, wad);
+        ^------------^
+/../data/reentrancy/solidity_contract/17573.sol:300:9: Warning: Invoking events without "emit" prefix is deprecated.
+        Burn(guy, wad);
+        ^------------^
+/../data/reentrancy/solidity_contract/17573.sol:416:17: Warning: Invoking events without "emit" prefix is deprecated.
+                ReceivingContractTokenFallbackFailed(_from, _to, _amount);
+                ^-------------------------------------------------------^
+/../data/reentrancy/solidity_contract/17573.sol:441:9: Warning: Invoking events without "emit" prefix is deprecated.
+        ERC223Transfer(_from, _to, _amount, _data);
+        ^----------------------------------------^
+/../data/reentrancy/solidity_contract/17573.sol:470:43: Warning: This function only accepts a single "bytes" argument. Please use "abi.encodePacked(...)" or a similar function to encode the data.
+            receiver.call.value(0)(bytes4(keccak256(_custom_fallback)), _from, _amount, _data);
+                                          ^-------------------------^
+/../data/reentrancy/solidity_contract/17573.sol:470:43: Warning: The provided argument of type string memory is not implicitly convertible to expected type bytes memory.
+            receiver.call.value(0)(bytes4(keccak256(_custom_fallback)), _from, _amount, _data);
+                                          ^-------------------------^
+/../data/reentrancy/solidity_contract/17573.sol:470:13: Warning: Using contract member "call" inherited from the address type is deprecated. Convert the contract to "address" type to access the member, for example use "address(contract).call" instead.
+            receiver.call.value(0)(bytes4(keccak256(_custom_fallback)), _from, _amount, _data);
+            ^-----------^
+/../data/reentrancy/solidity_contract/17573.sol:470:13: Warning: Return value of low-level calls not used.
+            receiver.call.value(0)(bytes4(keccak256(_custom_fallback)), _from, _amount, _data);
+            ^--------------------------------------------------------------------------------^
+/../data/reentrancy/solidity_contract/17573.sol:473:9: Warning: Invoking events without "emit" prefix is deprecated.
+        ERC223Transfer(_from, _to, _amount, _data);
+        ^----------------------------------------^
+/../data/reentrancy/solidity_contract/17573.sol:502:9: Warning: Invoking events without "emit" prefix is deprecated.
+        Transfer(0, _guy, _wad);
+        ^---------------------^
+/../data/reentrancy/solidity_contract/17573.sol:507:9: Warning: Invoking events without "emit" prefix is deprecated.
+        Transfer(_guy, 0, _wad);
+        ^---------------------^
+/../data/reentrancy/solidity_contract/17573.sol:565:33: Warning: Using contract member "balance" inherited from the address type is deprecated. Convert the contract to "address" type to access the member, for example use "address(contract).balance" instead.
+            controller.transfer(this.balance);
+                                ^----------^
+/../data/reentrancy/solidity_contract/17573.sol:572:9: Warning: Invoking events without "emit" prefix is deprecated.
+        ClaimedTokens(_token, controller, balance);
+        ^----------------------------------------^
+/../data/reentrancy/solidity_contract/17573.sol:359:5: Warning: No visibility specified. Defaulting to "public". 
+    function Controlled() { controller = msg.sender;}
+    ^-----------------------------------------------^
+/../data/reentrancy/solidity_contract/17573.sol:363:5: Warning: No visibility specified. Defaulting to "public". 
+    function changeController(address _newController) onlyController {
+    ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/17573.sol:369:5: Warning: No visibility specified. Defaulting to "public". 
+    function receiveApproval(address from, uint256 _amount, address _token, bytes _data);
+    ^-----------------------------------------------------------------------------------^
+/../data/reentrancy/solidity_contract/17573.sol:388:5: Warning: No visibility specified. Defaulting to "public". 
+    function OMT() {
+    ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/17573.sol:489:5: Warning: No visibility specified. Defaulting to "public". 
+    function approve(address _spender, uint256 _amount) returns (bool success) {
+    ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/17573.sol:499:5: Warning: No visibility specified. Defaulting to "public". 
+    function mint(address _guy, uint _wad) auth stoppable {
+    ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/17573.sol:504:5: Warning: No visibility specified. Defaulting to "public". 
+    function burn(address _guy, uint _wad) auth stoppable {
+    ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/17573.sol:517:5: Warning: No visibility specified. Defaulting to "public". 
+    function approveAndCall(address _spender, uint256 _amount, bytes _extraData
+    ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/17573.sol:546:5: Warning: No visibility specified. Defaulting to "public". 
+    function ()  payable {
+    ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/17573.sol:563:5: Warning: No visibility specified. Defaulting to "public". 
+    function claimTokens(address _token) onlyController {
+    ^ (Relevant source part starts here and spans across multiple lines).
+
+INFO:Detectors:[93m
+OMT.isContract (/../data/reentrancy/solidity_contract/17573.sol#534-541) is declared view but contains assembly code
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#constant-functions-changing-the-state[0m
+INFO:Detectors:[93m
+OMT.claimTokens (/../data/reentrancy/solidity_contract/17573.sol#563-573) does not use the value returned by external calls:
+	-token.transfer(controller,balance) (/../data/reentrancy/solidity_contract/17573.sol#571)
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#unused-return[0m
+INFO:Detectors:[92m
+Reentrancy in OMT.approve (/../data/reentrancy/solidity_contract/17573.sol#489-497):
+	External calls:
+	- ! TokenController(controller).onApprove(msg.sender,_spender,_amount) (/../data/reentrancy/solidity_contract/17573.sol#492-493)
+	State variables written after the call(s):
+	- _approvals (/../data/reentrancy/solidity_contract/17573.sol#496)
+Reentrancy in OMT.transferFrom (/../data/reentrancy/solidity_contract/17573.sol#398-421):
+	External calls:
+	- ! TokenController(controller).onTransfer(_from,_to,_amount) (/../data/reentrancy/solidity_contract/17573.sol#402-403)
+	State variables written after the call(s):
+	- _approvals (/../data/reentrancy/solidity_contract/17573.sol#406)
+	- _balances (/../data/reentrancy/solidity_contract/17573.sol#406)
+Reentrancy in OMT.transferFrom (/../data/reentrancy/solidity_contract/17573.sol#424-444):
+	External calls:
+	- ! TokenController(controller).onTransfer(_from,_to,_amount) (/../data/reentrancy/solidity_contract/17573.sol#430-431)
+	State variables written after the call(s):
+	- _approvals (/../data/reentrancy/solidity_contract/17573.sol#434)
+	- _balances (/../data/reentrancy/solidity_contract/17573.sol#434)
+Reentrancy in OMT.transferFrom (/../data/reentrancy/solidity_contract/17573.sol#459-476):
+	External calls:
+	- ! TokenController(controller).onTransfer(_from,_to,_amount) (/../data/reentrancy/solidity_contract/17573.sol#462-463)
+	State variables written after the call(s):
+	- _approvals (/../data/reentrancy/solidity_contract/17573.sol#466)
+	- _balances (/../data/reentrancy/solidity_contract/17573.sol#466)
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#reentrancy-vulnerabilities-2[0m
+INFO:Detectors:[92m
+OMT.isContract uses assembly (/../data/reentrancy/solidity_contract/17573.sol#534-541)
+	- /../data/reentrancy/solidity_contract/17573.sol#537-540
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#assembly-usage[0m
+INFO:Detectors:[92m
+DSToken.decimals should be constant (/../data/reentrancy/solidity_contract/17573.sol#234)
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#state-variables-that-could-be-declared-constant[0m
+INFO:Detectors:[92m
+Deprecated standard detected @ /../data/reentrancy/solidity_contract/17573.sol#355:
+	- Usage of "throw" should be replaced with "revert()"
+Deprecated standard detected @ /../data/reentrancy/solidity_contract/17573.sol#403:
+	- Usage of "throw" should be replaced with "revert()"
+Deprecated standard detected @ /../data/reentrancy/solidity_contract/17573.sol#493:
+	- Usage of "throw" should be replaced with "revert()"
+Deprecated standard detected @ /../data/reentrancy/solidity_contract/17573.sol#431:
+	- Usage of "throw" should be replaced with "revert()"
+Deprecated standard detected @ /../data/reentrancy/solidity_contract/17573.sol#463:
+	- Usage of "throw" should be replaced with "revert()"
+Deprecated standard detected @ /../data/reentrancy/solidity_contract/17573.sol#519:
+	- Usage of "throw" should be replaced with "revert()"
+Deprecated standard detected @ /../data/reentrancy/solidity_contract/17573.sol#549:
+	- Usage of "throw" should be replaced with "revert()"
+Deprecated standard detected @ /../data/reentrancy/solidity_contract/17573.sol#551:
+	- Usage of "throw" should be replaced with "revert()"
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#deprecated-standards[0m
+INFO:Detectors:[92m
+DSAuthority.canCall (/../data/reentrancy/solidity_contract/17573.sol#4-6) should be declared external
+DSAuth.setOwner (/../data/reentrancy/solidity_contract/17573.sol#23-29) should be declared external
+DSAuth.setAuthority (/../data/reentrancy/solidity_contract/17573.sol#31-37) should be declared external
+DSStop.stop (/../data/reentrancy/solidity_contract/17573.sol#90-92) should be declared external
+DSStop.start (/../data/reentrancy/solidity_contract/17573.sol#93-95) should be declared external
+DSTokenBase.totalSupply (/../data/reentrancy/solidity_contract/17573.sol#190-192) should be declared external
+ERC20.totalSupply (/../data/reentrancy/solidity_contract/17573.sol#100) should be declared external
+DSTokenBase.balanceOf (/../data/reentrancy/solidity_contract/17573.sol#193-195) should be declared external
+ERC20.balanceOf (/../data/reentrancy/solidity_contract/17573.sol#101) should be declared external
+DSTokenBase.allowance (/../data/reentrancy/solidity_contract/17573.sol#196-198) should be declared external
+ERC20.allowance (/../data/reentrancy/solidity_contract/17573.sol#102) should be declared external
+DSTokenBase.transfer (/../data/reentrancy/solidity_contract/17573.sol#200-202) should be declared external
+ERC20.transfer (/../data/reentrancy/solidity_contract/17573.sol#104) should be declared external
+DSToken.trusted (/../data/reentrancy/solidity_contract/17573.sol#244-246) should be declared external
+DSToken.trust (/../data/reentrancy/solidity_contract/17573.sol#247-250) should be declared external
+DSToken.push (/../data/reentrancy/solidity_contract/17573.sol#272-274) should be declared external
+DSToken.pull (/../data/reentrancy/solidity_contract/17573.sol#275-277) should be declared external
+DSToken.move (/../data/reentrancy/solidity_contract/17573.sol#278-280) should be declared external
+DSToken.mint (/../data/reentrancy/solidity_contract/17573.sol#282-284) should be declared external
+DSToken.burn (/../data/reentrancy/solidity_contract/17573.sol#285-287) should be declared external
+ERC223ReceivingContract.tokenFallback (/../data/reentrancy/solidity_contract/17573.sol#318) should be declared external
+TokenController.proxyPayment (/../data/reentrancy/solidity_contract/17573.sol#333) should be declared external
+TokenController.onTransfer (/../data/reentrancy/solidity_contract/17573.sol#341) should be declared external
+TokenController.onApprove (/../data/reentrancy/solidity_contract/17573.sol#349) should be declared external
+Controlled.changeController (/../data/reentrancy/solidity_contract/17573.sol#363-365) should be declared external
+ApproveAndCallFallBack.receiveApproval (/../data/reentrancy/solidity_contract/17573.sol#369) should be declared external
+OMT.transfer (/../data/reentrancy/solidity_contract/17573.sol#454-456) should be declared external
+ERC223.transfer (/../data/reentrancy/solidity_contract/17573.sol#373) should be declared external
+ERC223.transfer (/../data/reentrancy/solidity_contract/17573.sol#377) should be declared external
+OMT.transfer (/../data/reentrancy/solidity_contract/17573.sol#479-481) should be declared external
+OMT.approveAndCall (/../data/reentrancy/solidity_contract/17573.sol#517-529) should be declared external
+OMT.fallback (/../data/reentrancy/solidity_contract/17573.sol#546-553) should be declared external
+OMT.claimTokens (/../data/reentrancy/solidity_contract/17573.sol#563-573) should be declared external
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#public-function-that-could-be-declared-as-external[0m
+INFO:Detectors:[92m
+Detected issues with version pragma in /../data/reentrancy/solidity_contract/17573.sol:
+	- pragma solidity^0.4.17 (/../data/reentrancy/solidity_contract/17573.sol#1): it allows old versions
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#incorrect-version-of-solidity[0m
+INFO:Detectors:[92m
+Low level call in OMT.transferFrom (/../data/reentrancy/solidity_contract/17573.sol#398-421):
+	-! _to.call(bytes4(keccak256()(tokenFallback(address,uint256))),_from,_amount) /../data/reentrancy/solidity_contract/17573.sol#411-419
+Low level call in OMT.transferFrom (/../data/reentrancy/solidity_contract/17573.sol#459-476):
+	-receiver.call.value(0)(bytes4(keccak256()(_custom_fallback)),_from,_amount,_data) /../data/reentrancy/solidity_contract/17573.sol#470
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#low-level-calls[0m
+INFO:Detectors:[92m
+Function 'DSAuth.DSAuth' (/../data/reentrancy/solidity_contract/17573.sol#18-21) is not in mixedCase
+Function 'DSTokenBase.DSTokenBase' (/../data/reentrancy/solidity_contract/17573.sol#185-188) is not in mixedCase
+Variable 'DSTokenBase._supply' (/../data/reentrancy/solidity_contract/17573.sol#181) is not in mixedCase
+Variable 'DSTokenBase._balances' (/../data/reentrancy/solidity_contract/17573.sol#182) is not in mixedCase
+Variable 'DSTokenBase._approvals' (/../data/reentrancy/solidity_contract/17573.sol#183) is not in mixedCase
+Function 'DSToken.DSToken' (/../data/reentrancy/solidity_contract/17573.sol#236-238) is not in mixedCase
+Variable 'DSToken._trusted' (/../data/reentrancy/solidity_contract/17573.sol#231) is not in mixedCase
+Function 'Controlled.Controlled' (/../data/reentrancy/solidity_contract/17573.sol#359) is not in mixedCase
+Parameter '_newController' of Controlled.changeController (/../data/reentrancy/solidity_contract/17573.sol#363) is not in mixedCase
+Parameter 'custom_fallback' of ERC223.transfer (/../data/reentrancy/solidity_contract/17573.sol#377) is not in mixedCase
+Parameter 'custom_fallback' of ERC223.transferFrom (/../data/reentrancy/solidity_contract/17573.sol#379) is not in mixedCase
+Parameter '_from' of OMT.transferFrom (/../data/reentrancy/solidity_contract/17573.sol#398) is not in mixedCase
+Parameter '_to' of OMT.transferFrom (/../data/reentrancy/solidity_contract/17573.sol#398) is not in mixedCase
+Parameter '_amount' of OMT.transferFrom (/../data/reentrancy/solidity_contract/17573.sol#398) is not in mixedCase
+Parameter '_spender' of OMT.approve (/../data/reentrancy/solidity_contract/17573.sol#489) is not in mixedCase
+Parameter '_amount' of OMT.approve (/../data/reentrancy/solidity_contract/17573.sol#489) is not in mixedCase
+Parameter '_guy' of OMT.mint (/../data/reentrancy/solidity_contract/17573.sol#499) is not in mixedCase
+Parameter '_wad' of OMT.mint (/../data/reentrancy/solidity_contract/17573.sol#499) is not in mixedCase
+Parameter '_guy' of OMT.burn (/../data/reentrancy/solidity_contract/17573.sol#504) is not in mixedCase
+Parameter '_wad' of OMT.burn (/../data/reentrancy/solidity_contract/17573.sol#504) is not in mixedCase
+Parameter '_to' of OMT.transfer (/../data/reentrancy/solidity_contract/17573.sol#454) is not in mixedCase
+Parameter '_amount' of OMT.transfer (/../data/reentrancy/solidity_contract/17573.sol#454) is not in mixedCase
+Parameter '_data' of OMT.transfer (/../data/reentrancy/solidity_contract/17573.sol#454) is not in mixedCase
+Parameter '_from' of OMT.transferFrom (/../data/reentrancy/solidity_contract/17573.sol#424) is not in mixedCase
+Parameter '_to' of OMT.transferFrom (/../data/reentrancy/solidity_contract/17573.sol#424) is not in mixedCase
+Parameter '_amount' of OMT.transferFrom (/../data/reentrancy/solidity_contract/17573.sol#424) is not in mixedCase
+Parameter '_data' of OMT.transferFrom (/../data/reentrancy/solidity_contract/17573.sol#424) is not in mixedCase
+Parameter '_to' of OMT.transfer (/../data/reentrancy/solidity_contract/17573.sol#479) is not in mixedCase
+Parameter '_amount' of OMT.transfer (/../data/reentrancy/solidity_contract/17573.sol#479) is not in mixedCase
+Parameter '_data' of OMT.transfer (/../data/reentrancy/solidity_contract/17573.sol#479) is not in mixedCase
+Parameter '_custom_fallback' of OMT.transfer (/../data/reentrancy/solidity_contract/17573.sol#479) is not in mixedCase
+Parameter '_from' of OMT.transferFrom (/../data/reentrancy/solidity_contract/17573.sol#459) is not in mixedCase
+Parameter '_to' of OMT.transferFrom (/../data/reentrancy/solidity_contract/17573.sol#459) is not in mixedCase
+Parameter '_amount' of OMT.transferFrom (/../data/reentrancy/solidity_contract/17573.sol#459) is not in mixedCase
+Parameter '_data' of OMT.transferFrom (/../data/reentrancy/solidity_contract/17573.sol#459) is not in mixedCase
+Parameter '_custom_fallback' of OMT.transferFrom (/../data/reentrancy/solidity_contract/17573.sol#459) is not in mixedCase
+Function 'OMT.OMT' (/../data/reentrancy/solidity_contract/17573.sol#388-390) is not in mixedCase
+Parameter '_spender' of OMT.approveAndCall (/../data/reentrancy/solidity_contract/17573.sol#517) is not in mixedCase
+Parameter '_amount' of OMT.approveAndCall (/../data/reentrancy/solidity_contract/17573.sol#517) is not in mixedCase
+Parameter '_extraData' of OMT.approveAndCall (/../data/reentrancy/solidity_contract/17573.sol#517) is not in mixedCase
+Parameter '_addr' of OMT.isContract (/../data/reentrancy/solidity_contract/17573.sol#534) is not in mixedCase
+Parameter '_token' of OMT.claimTokens (/../data/reentrancy/solidity_contract/17573.sol#563) is not in mixedCase
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#conformance-to-solidity-naming-conventions[0m
+INFO:Slither:/../data/reentrancy/solidity_contract/17573.sol analyzed (15 contracts), 94 result(s) found

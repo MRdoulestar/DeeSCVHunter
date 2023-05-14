@@ -1,0 +1,29 @@
+{
+  "contract": "1879",
+  "tool": "honeybadger",
+  "start": 1609186949.781924,
+  "end": 1609187020.188277,
+  "duration": 70.40635299682617,
+  "analysis": [
+    {
+      "errors": [],
+      "file": "/../data/reentrancy/solidity_contract/1879.sol",
+      "name": "AddressUtils"
+    },
+    {
+      "errors": [],
+      "file": "/../data/reentrancy/solidity_contract/1879.sol",
+      "name": "AdminUpgradeabilityProxy"
+    },
+    {
+      "errors": [],
+      "file": "/../data/reentrancy/solidity_contract/1879.sol",
+      "name": "FiatTokenProxy"
+    },
+    {
+      "errors": [],
+      "file": "/../data/reentrancy/solidity_contract/1879.sol",
+      "name": "UpgradeabilityProxy"
+    }
+  ]
+}

@@ -1,0 +1,39 @@
+{
+  "contract": "39127",
+  "tool": "honeybadger",
+  "start": 1609184439.7707279,
+  "end": 1609184876.6719549,
+  "duration": 436.9012269973755,
+  "analysis": [
+    {
+      "errors": [],
+      "file": "/../data/reentrancy/solidity_contract/39127.sol",
+      "name": "ABCToken"
+    },
+    {
+      "errors": [],
+      "file": "/../data/reentrancy/solidity_contract/39127.sol",
+      "name": "DAS"
+    },
+    {
+      "errors": [],
+      "file": "/../data/reentrancy/solidity_contract/39127.sol",
+      "name": "DASToken"
+    },
+    {
+      "errors": [],
+      "file": "/../data/reentrancy/solidity_contract/39127.sol",
+      "name": "ERC223ContractInterface"
+    },
+    {
+      "errors": [],
+      "file": "/../data/reentrancy/solidity_contract/39127.sol",
+      "name": "ERC223Token"
+    },
+    {
+      "errors": [],
+      "file": "/../data/reentrancy/solidity_contract/39127.sol",
+      "name": "SafeMath"
+    }
+  ]
+}

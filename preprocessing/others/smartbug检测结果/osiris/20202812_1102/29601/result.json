@@ -1,0 +1,19 @@
+{
+  "contract": "29601",
+  "tool": "osiris",
+  "start": 1609139871.516861,
+  "end": 1609139948.507255,
+  "duration": 76.990394115448,
+  "analysis": [
+    {
+      "errors": [],
+      "file": "/../data/reentrancy/solidity_contract/29601.sol",
+      "name": "CLC"
+    },
+    {
+      "errors": [],
+      "file": "/../data/reentrancy/solidity_contract/29601.sol",
+      "name": "Clout"
+    }
+  ]
+}

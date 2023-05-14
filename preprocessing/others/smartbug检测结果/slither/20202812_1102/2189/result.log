@@ -1,0 +1,92 @@
+INFO:Detectors:[93m
+Salvageable.emergencyERC20Drain (/../data/reentrancy/solidity_contract/2189.sol#285-291) does not use the value returned by external calls:
+	-oddToken.transfer(launcher,amount) (/../data/reentrancy/solidity_contract/2189.sol#290)
+GOeurekaSale.mintAllocations (/../data/reentrancy/solidity_contract/2189.sol#549-554) does not use the value returned by external calls:
+	-token.mint(VESTING_WALLET,VESTING_AMOUNT) (/../data/reentrancy/solidity_contract/2189.sol#552)
+	-token.mint(RESERVE_WALLET,RESERVE_AMOUNT) (/../data/reentrancy/solidity_contract/2189.sol#553)
+GOeurekaSale.buyTokens (/../data/reentrancy/solidity_contract/2189.sol#614-632) does not use the value returned by external calls:
+	-token.mint(beneficiary,newTokens) (/../data/reentrancy/solidity_contract/2189.sol#629)
+GOeurekaSale.placeTokens (/../data/reentrancy/solidity_contract/2189.sol#634-641) does not use the value returned by external calls:
+	-token.mint(beneficiary,tokens) (/../data/reentrancy/solidity_contract/2189.sol#640)
+GOeurekaSale.finishSale (/../data/reentrancy/solidity_contract/2189.sol#645-649) does not use the value returned by external calls:
+	-token.finishMinting() (/../data/reentrancy/solidity_contract/2189.sol#647)
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#unused-return[0m
+INFO:Detectors:[92m
+GOeureka.decimals should be constant (/../data/reentrancy/solidity_contract/2189.sol#435)
+GOeureka.name should be constant (/../data/reentrancy/solidity_contract/2189.sol#433)
+GOeureka.symbol should be constant (/../data/reentrancy/solidity_contract/2189.sol#434)
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#state-variables-that-could-be-declared-constant[0m
+INFO:Detectors:[92m
+Ownable.transferOwnership (/../data/reentrancy/solidity_contract/2189.sol#37-41) should be declared external
+Claimable.transferOwnership (/../data/reentrancy/solidity_contract/2189.sol#191-193) should be declared external
+Ownable.renounceOwnership (/../data/reentrancy/solidity_contract/2189.sol#44-47) should be declared external
+ERC20Basic.totalSupply (/../data/reentrancy/solidity_contract/2189.sol#90) should be declared external
+BasicToken.totalSupply (/../data/reentrancy/solidity_contract/2189.sol#159-161) should be declared external
+BasicToken.balanceOf (/../data/reentrancy/solidity_contract/2189.sol#175-177) should be declared external
+ERC20Basic.balanceOf (/../data/reentrancy/solidity_contract/2189.sol#91) should be declared external
+Pausable.pause (/../data/reentrancy/solidity_contract/2189.sol#139-142) should be declared external
+Pausable.unpause (/../data/reentrancy/solidity_contract/2189.sol#145-148) should be declared external
+Claimable.claimOwnership (/../data/reentrancy/solidity_contract/2189.sol#196-200) should be declared external
+ERC20.allowance (/../data/reentrancy/solidity_contract/2189.sol#248-249) should be declared external
+StandardToken.allowance (/../data/reentrancy/solidity_contract/2189.sol#326-335) should be declared external
+BurnableToken.burn (/../data/reentrancy/solidity_contract/2189.sol#267-269) should be declared external
+Salvageable.emergencyERC20Drain (/../data/reentrancy/solidity_contract/2189.sol#285-291) should be declared external
+GOeureka.mint (/../data/reentrancy/solidity_contract/2189.sol#450-457) should be declared external
+GOeureka.finishMinting (/../data/reentrancy/solidity_contract/2189.sol#459-463) should be declared external
+GOeureka.transferAndCall (/../data/reentrancy/solidity_contract/2189.sol#480-485) should be declared external
+GOeurekaSale.setWallet (/../data/reentrancy/solidity_contract/2189.sol#556-558) should be declared external
+GOeurekaSale.setNewRate (/../data/reentrancy/solidity_contract/2189.sol#584-589) should be declared external
+GOeurekaSale.placeTokens (/../data/reentrancy/solidity_contract/2189.sol#634-641) should be declared external
+GOeurekaSale.finishSale (/../data/reentrancy/solidity_contract/2189.sol#645-649) should be declared external
+GOeurekaSale.fallback (/../data/reentrancy/solidity_contract/2189.sol#652-654) should be declared external
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#public-function-that-could-be-declared-as-external[0m
+INFO:Detectors:[92m
+Detected issues with version pragma in /../data/reentrancy/solidity_contract/2189.sol:
+	- pragma solidity^0.4.23 (/../data/reentrancy/solidity_contract/2189.sol#1): it allows old versions
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#incorrect-version-of-solidity[0m
+INFO:Detectors:[92m
+Low level call in GOeureka.transferAndCall (/../data/reentrancy/solidity_contract/2189.sol#480-485):
+	-require(bool)(_to.call.value(msg.value)(_data)) /../data/reentrancy/solidity_contract/2189.sol#483
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#low-level-calls[0m
+INFO:Detectors:[92m
+Contract 'gotTokenSaleConfig' (/../data/reentrancy/solidity_contract/2189.sol#100-118) is not in CapWords
+Parameter '_owner' of BasicToken.balanceOf (/../data/reentrancy/solidity_contract/2189.sol#175) is not in mixedCase
+Parameter '_to' of BasicToken.transfer (/../data/reentrancy/solidity_contract/2189.sol#164) is not in mixedCase
+Parameter '_value' of BasicToken.transfer (/../data/reentrancy/solidity_contract/2189.sol#164) is not in mixedCase
+Parameter '_value' of BurnableToken.burn (/../data/reentrancy/solidity_contract/2189.sol#267) is not in mixedCase
+Function 'BurnableToken._burn' (/../data/reentrancy/solidity_contract/2189.sol#271-280) is not in mixedCase
+Parameter '_who' of BurnableToken._burn (/../data/reentrancy/solidity_contract/2189.sol#271) is not in mixedCase
+Parameter '_value' of BurnableToken._burn (/../data/reentrancy/solidity_contract/2189.sol#271) is not in mixedCase
+Parameter '_owner' of StandardToken.allowance (/../data/reentrancy/solidity_contract/2189.sol#327) is not in mixedCase
+Parameter '_spender' of StandardToken.allowance (/../data/reentrancy/solidity_contract/2189.sol#328) is not in mixedCase
+Parameter '_from' of StandardToken.transferFrom (/../data/reentrancy/solidity_contract/2189.sol#300) is not in mixedCase
+Parameter '_to' of StandardToken.transferFrom (/../data/reentrancy/solidity_contract/2189.sol#301) is not in mixedCase
+Parameter '_value' of StandardToken.transferFrom (/../data/reentrancy/solidity_contract/2189.sol#302) is not in mixedCase
+Parameter '_spender' of StandardToken.approve (/../data/reentrancy/solidity_contract/2189.sol#319) is not in mixedCase
+Parameter '_value' of StandardToken.approve (/../data/reentrancy/solidity_contract/2189.sol#319) is not in mixedCase
+Parameter '_spender' of StandardToken.increaseApproval (/../data/reentrancy/solidity_contract/2189.sol#339) is not in mixedCase
+Parameter '_addedValue' of StandardToken.increaseApproval (/../data/reentrancy/solidity_contract/2189.sol#340) is not in mixedCase
+Parameter '_spender' of StandardToken.decreaseApproval (/../data/reentrancy/solidity_contract/2189.sol#353) is not in mixedCase
+Parameter '_subtractedValue' of StandardToken.decreaseApproval (/../data/reentrancy/solidity_contract/2189.sol#354) is not in mixedCase
+Parameter '_to' of PausableToken.transfer (/../data/reentrancy/solidity_contract/2189.sol#374) is not in mixedCase
+Parameter '_value' of PausableToken.transfer (/../data/reentrancy/solidity_contract/2189.sol#375) is not in mixedCase
+Parameter '_from' of PausableToken.transferFrom (/../data/reentrancy/solidity_contract/2189.sol#385) is not in mixedCase
+Parameter '_to' of PausableToken.transferFrom (/../data/reentrancy/solidity_contract/2189.sol#386) is not in mixedCase
+Parameter '_value' of PausableToken.transferFrom (/../data/reentrancy/solidity_contract/2189.sol#387) is not in mixedCase
+Parameter '_spender' of PausableToken.approve (/../data/reentrancy/solidity_contract/2189.sol#397) is not in mixedCase
+Parameter '_value' of PausableToken.approve (/../data/reentrancy/solidity_contract/2189.sol#398) is not in mixedCase
+Parameter '_spender' of PausableToken.increaseApproval (/../data/reentrancy/solidity_contract/2189.sol#408) is not in mixedCase
+Parameter '_addedValue' of PausableToken.increaseApproval (/../data/reentrancy/solidity_contract/2189.sol#409) is not in mixedCase
+Parameter '_spender' of PausableToken.decreaseApproval (/../data/reentrancy/solidity_contract/2189.sol#419) is not in mixedCase
+Parameter '_subtractedValue' of PausableToken.decreaseApproval (/../data/reentrancy/solidity_contract/2189.sol#420) is not in mixedCase
+Parameter '_to' of GOeureka.mint (/../data/reentrancy/solidity_contract/2189.sol#450) is not in mixedCase
+Parameter '_amount' of GOeureka.mint (/../data/reentrancy/solidity_contract/2189.sol#450) is not in mixedCase
+Parameter '_recipients' of GOeureka.sendBatchCS (/../data/reentrancy/solidity_contract/2189.sol#465) is not in mixedCase
+Parameter '_values' of GOeureka.sendBatchCS (/../data/reentrancy/solidity_contract/2189.sol#465) is not in mixedCase
+Parameter '_to' of GOeureka.transferAndCall (/../data/reentrancy/solidity_contract/2189.sol#480) is not in mixedCase
+Parameter '_value' of GOeureka.transferAndCall (/../data/reentrancy/solidity_contract/2189.sol#480) is not in mixedCase
+Parameter '_data' of GOeureka.transferAndCall (/../data/reentrancy/solidity_contract/2189.sol#480) is not in mixedCase
+Parameter '_whiteListed' of GOeurekaSale. (/../data/reentrancy/solidity_contract/2189.sol#530) is not in mixedCase
+Parameter '_newWallet' of GOeurekaSale.setWallet (/../data/reentrancy/solidity_contract/2189.sol#556) is not in mixedCase
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#conformance-to-solidity-naming-conventions[0m
+INFO:Slither:/../data/reentrancy/solidity_contract/2189.sol analyzed (18 contracts), 69 result(s) found

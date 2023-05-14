@@ -1,0 +1,14 @@
+{
+  "contract": "8342",
+  "tool": "honeybadger",
+  "start": 1609209597.853259,
+  "end": 1609209650.397894,
+  "duration": 52.54463481903076,
+  "analysis": [
+    {
+      "errors": [],
+      "file": "/../data/reentrancy/solidity_contract/8342.sol",
+      "name": "CHAltar"
+    }
+  ]
+}

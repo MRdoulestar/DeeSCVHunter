@@ -1,0 +1,8 @@
+INFO:Slither:Compilation warnings/errors on /../data/reentrancy/solidity_contract/SendBalance.sol:
+[91m/../data/reentrancy/solidity_contract/SendBalance.sol:8:21: Error: Expected ';' but got '.'[0m
+    userBalances msg.sender] += msg.value ;
+                    ^
+
+INFO:SlitherSolcParsing:No contract were found in /../data/reentrancy/solidity_contract/SendBalance.sol, check the correct compilation
+WARNING:Slither:[91mNo contract was analyzed[0m
+INFO:Slither:/../data/reentrancy/solidity_contract/SendBalance.sol analyzed (0 contracts), 0 result(s) found

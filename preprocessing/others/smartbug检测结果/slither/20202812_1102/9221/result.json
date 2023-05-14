@@ -1,0 +1,746 @@
+{
+  "contract": "9221",
+  "tool": "slither",
+  "start": 1609163609.3092852,
+  "end": 1609163610.481863,
+  "duration": 1.1725778579711914,
+  "analysis": [
+    {
+      "check": "arbitrary-send",
+      "impact": "High",
+      "confidence": "Medium",
+      "description": "EtherBet.bet (/../data/reentrancy/solidity_contract/9221.sol#8-13) sends eth to arbitrary user\n\tDangerous calls:\n\t- ! msg.sender.call.value(2000000000000000000)() (/../data/reentrancy/solidity_contract/9221.sol#10-11)\n",
+      "elements": [
+        {
+          "type": "function",
+          "name": "bet",
+          "source_mapping": {
+            "start": 103,
+            "length": 149,
+            "filename": "/../data/reentrancy/solidity_contract/9221.sol",
+            "lines": [
+              8,
+              9,
+              10,
+              11,
+              12,
+              13
+            ]
+          },
+          "contract": {
+            "type": "contract",
+            "name": "EtherBet",
+            "source_mapping": {
+              "start": 25,
+              "length": 825,
+              "filename": "/../data/reentrancy/solidity_contract/9221.sol",
+              "lines": [
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10,
+                11,
+                12,
+                13,
+                14,
+                15,
+                16,
+                17,
+                18,
+                19,
+                20,
+                21,
+                22,
+                23,
+                24,
+                25,
+                26,
+                27,
+                28,
+                29,
+                30,
+                31,
+                32,
+                33,
+                34,
+                35,
+                36,
+                37,
+                38,
+                39,
+                40,
+                41,
+                42,
+                43,
+                44,
+                45,
+                46,
+                47,
+                48
+              ]
+            }
+          }
+        },
+        {
+          "type": "expression",
+          "expression": "! msg.sender.call.value(2000000000000000000)()",
+          "source_mapping": {
+            "start": 196,
+            "length": 48,
+            "filename": "/../data/reentrancy/solidity_contract/9221.sol",
+            "lines": [
+              10,
+              11
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "deprecated-standards",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Deprecated standard detected @ /../data/reentrancy/solidity_contract/9221.sol#11:\n\t- Usage of \"throw\" should be replaced with \"revert()\"\n",
+      "elements": [
+        {
+          "type": "expression",
+          "expression": "None",
+          "source_mapping": {
+            "start": 239,
+            "length": 5,
+            "filename": "/../data/reentrancy/solidity_contract/9221.sol",
+            "lines": [
+              11
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "deprecated-standards",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Deprecated standard detected @ /../data/reentrancy/solidity_contract/9221.sol#36:\n\t- Usage of \"throw\" should be replaced with \"revert()\"\n",
+      "elements": [
+        {
+          "type": "expression",
+          "expression": "None",
+          "source_mapping": {
+            "start": 663,
+            "length": 5,
+            "filename": "/../data/reentrancy/solidity_contract/9221.sol",
+            "lines": [
+              36
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "external-function",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "EtherBet.lock (/../data/reentrancy/solidity_contract/9221.sol#15-19) should be declared external\n",
+      "elements": [
+        {
+          "type": "function",
+          "name": "lock",
+          "source_mapping": {
+            "start": 255,
+            "length": 73,
+            "filename": "/../data/reentrancy/solidity_contract/9221.sol",
+            "lines": [
+              15,
+              16,
+              17,
+              18,
+              19
+            ]
+          },
+          "contract": {
+            "type": "contract",
+            "name": "EtherBet",
+            "source_mapping": {
+              "start": 25,
+              "length": 825,
+              "filename": "/../data/reentrancy/solidity_contract/9221.sol",
+              "lines": [
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10,
+                11,
+                12,
+                13,
+                14,
+                15,
+                16,
+                17,
+                18,
+                19,
+                20,
+                21,
+                22,
+                23,
+                24,
+                25,
+                26,
+                27,
+                28,
+                29,
+                30,
+                31,
+                32,
+                33,
+                34,
+                35,
+                36,
+                37,
+                38,
+                39,
+                40,
+                41,
+                42,
+                43,
+                44,
+                45,
+                46,
+                47,
+                48
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "check": "external-function",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "EtherBet.unlock (/../data/reentrancy/solidity_contract/9221.sol#21-25) should be declared external\n",
+      "elements": [
+        {
+          "type": "function",
+          "name": "unlock",
+          "source_mapping": {
+            "start": 331,
+            "length": 77,
+            "filename": "/../data/reentrancy/solidity_contract/9221.sol",
+            "lines": [
+              21,
+              22,
+              23,
+              24,
+              25
+            ]
+          },
+          "contract": {
+            "type": "contract",
+            "name": "EtherBet",
+            "source_mapping": {
+              "start": 25,
+              "length": 825,
+              "filename": "/../data/reentrancy/solidity_contract/9221.sol",
+              "lines": [
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10,
+                11,
+                12,
+                13,
+                14,
+                15,
+                16,
+                17,
+                18,
+                19,
+                20,
+                21,
+                22,
+                23,
+                24,
+                25,
+                26,
+                27,
+                28,
+                29,
+                30,
+                31,
+                32,
+                33,
+                34,
+                35,
+                36,
+                37,
+                38,
+                39,
+                40,
+                41,
+                42,
+                43,
+                44,
+                45,
+                46,
+                47,
+                48
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "check": "external-function",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "EtherBet.own (/../data/reentrancy/solidity_contract/9221.sol#27-31) should be declared external\n",
+      "elements": [
+        {
+          "type": "function",
+          "name": "own",
+          "source_mapping": {
+            "start": 411,
+            "length": 122,
+            "filename": "/../data/reentrancy/solidity_contract/9221.sol",
+            "lines": [
+              27,
+              28,
+              29,
+              30,
+              31
+            ]
+          },
+          "contract": {
+            "type": "contract",
+            "name": "EtherBet",
+            "source_mapping": {
+              "start": 25,
+              "length": 825,
+              "filename": "/../data/reentrancy/solidity_contract/9221.sol",
+              "lines": [
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10,
+                11,
+                12,
+                13,
+                14,
+                15,
+                16,
+                17,
+                18,
+                19,
+                20,
+                21,
+                22,
+                23,
+                24,
+                25,
+                26,
+                27,
+                28,
+                29,
+                30,
+                31,
+                32,
+                33,
+                34,
+                35,
+                36,
+                37,
+                38,
+                39,
+                40,
+                41,
+                42,
+                43,
+                44,
+                45,
+                46,
+                47,
+                48
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "check": "external-function",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "EtherBet.releaseFunds (/../data/reentrancy/solidity_contract/9221.sol#33-38) should be declared external\n",
+      "elements": [
+        {
+          "type": "function",
+          "name": "releaseFunds",
+          "source_mapping": {
+            "start": 536,
+            "length": 140,
+            "filename": "/../data/reentrancy/solidity_contract/9221.sol",
+            "lines": [
+              33,
+              34,
+              35,
+              36,
+              37,
+              38
+            ]
+          },
+          "contract": {
+            "type": "contract",
+            "name": "EtherBet",
+            "source_mapping": {
+              "start": 25,
+              "length": 825,
+              "filename": "/../data/reentrancy/solidity_contract/9221.sol",
+              "lines": [
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10,
+                11,
+                12,
+                13,
+                14,
+                15,
+                16,
+                17,
+                18,
+                19,
+                20,
+                21,
+                22,
+                23,
+                24,
+                25,
+                26,
+                27,
+                28,
+                29,
+                30,
+                31,
+                32,
+                33,
+                34,
+                35,
+                36,
+                37,
+                38,
+                39,
+                40,
+                41,
+                42,
+                43,
+                44,
+                45,
+                46,
+                47,
+                48
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "check": "external-function",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "EtherBet.fallback (/../data/reentrancy/solidity_contract/9221.sol#45-47) should be declared external\n",
+      "elements": [
+        {
+          "type": "function",
+          "name": "fallback",
+          "source_mapping": {
+            "start": 807,
+            "length": 41,
+            "filename": "/../data/reentrancy/solidity_contract/9221.sol",
+            "lines": [
+              45,
+              46,
+              47
+            ]
+          },
+          "contract": {
+            "type": "contract",
+            "name": "EtherBet",
+            "source_mapping": {
+              "start": 25,
+              "length": 825,
+              "filename": "/../data/reentrancy/solidity_contract/9221.sol",
+              "lines": [
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10,
+                11,
+                12,
+                13,
+                14,
+                15,
+                16,
+                17,
+                18,
+                19,
+                20,
+                21,
+                22,
+                23,
+                24,
+                25,
+                26,
+                27,
+                28,
+                29,
+                30,
+                31,
+                32,
+                33,
+                34,
+                35,
+                36,
+                37,
+                38,
+                39,
+                40,
+                41,
+                42,
+                43,
+                44,
+                45,
+                46,
+                47,
+                48
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "check": "low-level-calls",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Low level call in EtherBet.bet (/../data/reentrancy/solidity_contract/9221.sol#8-13):\n\t-! msg.sender.call.value(2000000000000000000)() /../data/reentrancy/solidity_contract/9221.sol#10-11\n",
+      "elements": [
+        {
+          "type": "function",
+          "name": "bet",
+          "source_mapping": {
+            "start": 103,
+            "length": 149,
+            "filename": "/../data/reentrancy/solidity_contract/9221.sol",
+            "lines": [
+              8,
+              9,
+              10,
+              11,
+              12,
+              13
+            ]
+          },
+          "contract": {
+            "type": "contract",
+            "name": "EtherBet",
+            "source_mapping": {
+              "start": 25,
+              "length": 825,
+              "filename": "/../data/reentrancy/solidity_contract/9221.sol",
+              "lines": [
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10,
+                11,
+                12,
+                13,
+                14,
+                15,
+                16,
+                17,
+                18,
+                19,
+                20,
+                21,
+                22,
+                23,
+                24,
+                25,
+                26,
+                27,
+                28,
+                29,
+                30,
+                31,
+                32,
+                33,
+                34,
+                35,
+                36,
+                37,
+                38,
+                39,
+                40,
+                41,
+                42,
+                43,
+                44,
+                45,
+                46,
+                47,
+                48
+              ]
+            }
+          }
+        },
+        {
+          "type": "expression",
+          "expression": "! msg.sender.call.value(2000000000000000000)()",
+          "source_mapping": {
+            "start": 196,
+            "length": 48,
+            "filename": "/../data/reentrancy/solidity_contract/9221.sol",
+            "lines": [
+              10,
+              11
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "low-level-calls",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Low level call in EtherBet.releaseFunds (/../data/reentrancy/solidity_contract/9221.sol#33-38):\n\t-! msg.sender.call.value(amount * (1000000000000000000))() /../data/reentrancy/solidity_contract/9221.sol#35-36\n",
+      "elements": [
+        {
+          "type": "function",
+          "name": "releaseFunds",
+          "source_mapping": {
+            "start": 536,
+            "length": 140,
+            "filename": "/../data/reentrancy/solidity_contract/9221.sol",
+            "lines": [
+              33,
+              34,
+              35,
+              36,
+              37,
+              38
+            ]
+          },
+          "contract": {
+            "type": "contract",
+            "name": "EtherBet",
+            "source_mapping": {
+              "start": 25,
+              "length": 825,
+              "filename": "/../data/reentrancy/solidity_contract/9221.sol",
+              "lines": [
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10,
+                11,
+                12,
+                13,
+                14,
+                15,
+                16,
+                17,
+                18,
+                19,
+                20,
+                21,
+                22,
+                23,
+                24,
+                25,
+                26,
+                27,
+                28,
+                29,
+                30,
+                31,
+                32,
+                33,
+                34,
+                35,
+                36,
+                37,
+                38,
+                39,
+                40,
+                41,
+                42,
+                43,
+                44,
+                45,
+                46,
+                47,
+                48
+              ]
+            }
+          }
+        },
+        {
+          "type": "expression",
+          "expression": "! msg.sender.call.value(amount * (1000000000000000000))()",
+          "source_mapping": {
+            "start": 608,
+            "length": 60,
+            "filename": "/../data/reentrancy/solidity_contract/9221.sol",
+            "lines": [
+              35,
+              36
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "contract": "5629",
+  "tool": "honeybadger",
+  "start": 1609180783.8063061,
+  "end": 1609180785.287233,
+  "duration": 1.4809269905090332,
+  "analysis": [
+    {
+      "errors": [],
+      "file": "/../data/reentrancy/solidity_contract/5629.sol",
+      "name": "AirdropTryer"
+    },
+    {
+      "errors": [],
+      "file": "/../data/reentrancy/solidity_contract/5629.sol",
+      "name": "giveAirdrop"
+    }
+  ]
+}

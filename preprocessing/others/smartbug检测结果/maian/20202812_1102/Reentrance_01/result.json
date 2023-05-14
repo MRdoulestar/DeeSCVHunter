@@ -1,0 +1,12 @@
+{
+  "contract": "Reentrance_01",
+  "tool": "maian",
+  "start": 1609124666.4913669,
+  "end": 1609124814.9574468,
+  "duration": 148.46607995033264,
+  "analysis": {
+    "is_lock_vulnerable": false,
+    "is_prodigal_vulnerable": false,
+    "is_suicidal_vulnerable": false
+  }
+}

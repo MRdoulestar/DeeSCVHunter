@@ -1,0 +1,14 @@
+{
+  "contract": "40340",
+  "tool": "osiris",
+  "start": 1609174878.918624,
+  "end": 1609174925.806721,
+  "duration": 46.888097047805786,
+  "analysis": [
+    {
+      "errors": [],
+      "file": "/../data/reentrancy/solidity_contract/40340.sol",
+      "name": "Etheropt"
+    }
+  ]
+}

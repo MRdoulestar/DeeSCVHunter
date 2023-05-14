@@ -1,0 +1,19 @@
+{
+  "contract": "28974",
+  "tool": "honeybadger",
+  "start": 1609167145.968448,
+  "end": 1609167162.628484,
+  "duration": 16.660036087036133,
+  "analysis": [
+    {
+      "errors": [],
+      "file": "/../data/reentrancy/solidity_contract/28974.sol",
+      "name": "Payee"
+    },
+    {
+      "errors": [],
+      "file": "/../data/reentrancy/solidity_contract/28974.sol",
+      "name": "Storage"
+    }
+  ]
+}

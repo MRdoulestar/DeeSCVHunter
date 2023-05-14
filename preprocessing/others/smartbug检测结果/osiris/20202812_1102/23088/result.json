@@ -1,0 +1,20 @@
+{
+  "contract": "23088",
+  "tool": "osiris",
+  "start": 1609133154.5096772,
+  "end": 1609133206.630992,
+  "duration": 52.12131476402283,
+  "analysis": [
+    {
+      "errors": [
+        {
+          "line": 15,
+          "column": 21,
+          "message": "reentrancy_bug"
+        }
+      ],
+      "file": "/../data/reentrancy/solidity_contract/23088.sol",
+      "name": "WyvernAtomicizer"
+    }
+  ]
+}

@@ -1,0 +1,3063 @@
+{
+  "contract": "40416",
+  "tool": "slither",
+  "start": 1609162549.103337,
+  "end": 1609162550.8836339,
+  "duration": 1.780296802520752,
+  "analysis": [
+    {
+      "check": "reentrancy-benign",
+      "impact": "Low",
+      "confidence": "Medium",
+      "description": "Reentrancy in EtherDelta.depositToken (/../data/reentrancy/solidity_contract/40416.sol#137-143):\n\tExternal calls:\n\t- ! Token(token).transferFrom(msg.sender,this,amount) (/../data/reentrancy/solidity_contract/40416.sol#140)\n\tState variables written after the call(s):\n\t- tokens (/../data/reentrancy/solidity_contract/40416.sol#141)\n",
+      "elements": [
+        {
+          "type": "function",
+          "name": "depositToken",
+          "source_mapping": {
+            "start": 4727,
+            "length": 278,
+            "filename": "/../data/reentrancy/solidity_contract/40416.sol",
+            "lines": [
+              137,
+              138,
+              139,
+              140,
+              141,
+              142,
+              143
+            ]
+          },
+          "contract": {
+            "type": "contract",
+            "name": "EtherDelta",
+            "source_mapping": {
+              "start": 3523,
+              "length": 4313,
+              "filename": "/../data/reentrancy/solidity_contract/40416.sol",
+              "lines": [
+                100,
+                101,
+                102,
+                103,
+                104,
+                105,
+                106,
+                107,
+                108,
+                109,
+                110,
+                111,
+                112,
+                113,
+                114,
+                115,
+                116,
+                117,
+                118,
+                119,
+                120,
+                121,
+                122,
+                123,
+                124,
+                125,
+                126,
+                127,
+                128,
+                129,
+                130,
+                131,
+                132,
+                133,
+                134,
+                135,
+                136,
+                137,
+                138,
+                139,
+                140,
+                141,
+                142,
+                143,
+                144,
+                145,
+                146,
+                147,
+                148,
+                149,
+                150,
+                151,
+                152,
+                153,
+                154,
+                155,
+                156,
+                157,
+                158,
+                159,
+                160,
+                161,
+                162,
+                163,
+                164,
+                165,
+                166,
+                167,
+                168,
+                169,
+                170,
+                171,
+                172,
+                173,
+                174,
+                175,
+                176,
+                177,
+                178,
+                179,
+                180,
+                181,
+                182,
+                183,
+                184,
+                185,
+                186,
+                187,
+                188,
+                189,
+                190,
+                191,
+                192,
+                193,
+                194,
+                195,
+                196,
+                197,
+                198,
+                199,
+                200,
+                201,
+                202
+              ]
+            }
+          }
+        },
+        {
+          "type": "external_calls",
+          "expression": "! Token(token).transferFrom(msg.sender,this,amount)",
+          "source_mapping": {
+            "start": 4829,
+            "length": 63,
+            "filename": "/../data/reentrancy/solidity_contract/40416.sol",
+            "lines": [
+              140
+            ]
+          }
+        },
+        {
+          "type": "variables_written",
+          "name": "tokens",
+          "expression": "tokens[token][msg.sender] += amount",
+          "source_mapping": {
+            "start": 4898,
+            "length": 35,
+            "filename": "/../data/reentrancy/solidity_contract/40416.sol",
+            "lines": [
+              141
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "deprecated-standards",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Deprecated standard detected @ /../data/reentrancy/solidity_contract/40416.sol#90:\n\t- Usage of \"throw\" should be replaced with \"revert()\"\n",
+      "elements": [
+        {
+          "type": "expression",
+          "expression": "None",
+          "source_mapping": {
+            "start": 3329,
+            "length": 5,
+            "filename": "/../data/reentrancy/solidity_contract/40416.sol",
+            "lines": [
+              90
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "deprecated-standards",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Deprecated standard detected @ /../data/reentrancy/solidity_contract/40416.sol#121:\n\t- Usage of \"throw\" should be replaced with \"revert()\"\n",
+      "elements": [
+        {
+          "type": "expression",
+          "expression": "None",
+          "source_mapping": {
+            "start": 4322,
+            "length": 5,
+            "filename": "/../data/reentrancy/solidity_contract/40416.sol",
+            "lines": [
+              121
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "deprecated-standards",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Deprecated standard detected @ /../data/reentrancy/solidity_contract/40416.sol#130:\n\t- Usage of \"throw\" should be replaced with \"revert()\"\n",
+      "elements": [
+        {
+          "type": "expression",
+          "expression": "None",
+          "source_mapping": {
+            "start": 4520,
+            "length": 5,
+            "filename": "/../data/reentrancy/solidity_contract/40416.sol",
+            "lines": [
+              130
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "deprecated-standards",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Deprecated standard detected @ /../data/reentrancy/solidity_contract/40416.sol#131:\n\t- Usage of \"throw\" should be replaced with \"revert()\"\n",
+      "elements": [
+        {
+          "type": "expression",
+          "expression": "None",
+          "source_mapping": {
+            "start": 4567,
+            "length": 5,
+            "filename": "/../data/reentrancy/solidity_contract/40416.sol",
+            "lines": [
+              131
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "deprecated-standards",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Deprecated standard detected @ /../data/reentrancy/solidity_contract/40416.sol#133:\n\t- Usage of \"throw\" should be replaced with \"revert()\"\n",
+      "elements": [
+        {
+          "type": "expression",
+          "expression": "None",
+          "source_mapping": {
+            "start": 4653,
+            "length": 5,
+            "filename": "/../data/reentrancy/solidity_contract/40416.sol",
+            "lines": [
+              133
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "deprecated-standards",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Deprecated standard detected @ /../data/reentrancy/solidity_contract/40416.sol#139:\n\t- Usage of \"throw\" should be replaced with \"revert()\"\n",
+      "elements": [
+        {
+          "type": "expression",
+          "expression": "None",
+          "source_mapping": {
+            "start": 4818,
+            "length": 5,
+            "filename": "/../data/reentrancy/solidity_contract/40416.sol",
+            "lines": [
+              139
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "deprecated-standards",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Deprecated standard detected @ /../data/reentrancy/solidity_contract/40416.sol#140:\n\t- Usage of \"throw\" should be replaced with \"revert()\"\n",
+      "elements": [
+        {
+          "type": "expression",
+          "expression": "None",
+          "source_mapping": {
+            "start": 4887,
+            "length": 5,
+            "filename": "/../data/reentrancy/solidity_contract/40416.sol",
+            "lines": [
+              140
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "deprecated-standards",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Deprecated standard detected @ /../data/reentrancy/solidity_contract/40416.sol#146:\n\t- Usage of \"throw\" should be replaced with \"revert()\"\n",
+      "elements": [
+        {
+          "type": "expression",
+          "expression": "None",
+          "source_mapping": {
+            "start": 5095,
+            "length": 5,
+            "filename": "/../data/reentrancy/solidity_contract/40416.sol",
+            "lines": [
+              146
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "deprecated-standards",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Deprecated standard detected @ /../data/reentrancy/solidity_contract/40416.sol#147:\n\t- Usage of \"throw\" should be replaced with \"revert()\"\n",
+      "elements": [
+        {
+          "type": "expression",
+          "expression": "None",
+          "source_mapping": {
+            "start": 5146,
+            "length": 5,
+            "filename": "/../data/reentrancy/solidity_contract/40416.sol",
+            "lines": [
+              147
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "deprecated-standards",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Deprecated standard detected @ /../data/reentrancy/solidity_contract/40416.sol#149:\n\t- Usage of \"throw\" should be replaced with \"revert()\"\n",
+      "elements": [
+        {
+          "type": "expression",
+          "expression": "None",
+          "source_mapping": {
+            "start": 5246,
+            "length": 5,
+            "filename": "/../data/reentrancy/solidity_contract/40416.sol",
+            "lines": [
+              149
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "deprecated-standards",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Deprecated standard detected @ /../data/reentrancy/solidity_contract/40416.sol#158:\n\t- Usage of \"throw\" should be replaced with \"revert()\"\n",
+      "elements": [
+        {
+          "type": "expression",
+          "expression": "None",
+          "source_mapping": {
+            "start": 5606,
+            "length": 5,
+            "filename": "/../data/reentrancy/solidity_contract/40416.sol",
+            "lines": [
+              158
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "deprecated-standards",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Deprecated standard detected @ /../data/reentrancy/solidity_contract/40416.sol#164:\n\t- Usage of \"throw\" should be replaced with \"revert()\"\n",
+      "elements": [
+        {
+          "type": "expression",
+          "expression": "None",
+          "source_mapping": {
+            "start": 5910,
+            "length": 5,
+            "filename": "/../data/reentrancy/solidity_contract/40416.sol",
+            "lines": [
+              164
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "deprecated-standards",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Deprecated standard detected @ /../data/reentrancy/solidity_contract/40416.sol#172:\n\t- Usage of \"throw\" should be replaced with \"revert()\"\n",
+      "elements": [
+        {
+          "type": "expression",
+          "expression": "None",
+          "source_mapping": {
+            "start": 6255,
+            "length": 5,
+            "filename": "/../data/reentrancy/solidity_contract/40416.sol",
+            "lines": [
+              172
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "external-function",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Token.totalSupply (/../data/reentrancy/solidity_contract/40416.sol#4) should be declared external\n",
+      "elements": [
+        {
+          "type": "function",
+          "name": "totalSupply",
+          "source_mapping": {
+            "start": 28,
+            "length": 59,
+            "filename": "/../data/reentrancy/solidity_contract/40416.sol",
+            "lines": [
+              4
+            ]
+          },
+          "contract": {
+            "type": "contract",
+            "name": "Token",
+            "source_mapping": {
+              "start": 0,
+              "length": 690,
+              "filename": "/../data/reentrancy/solidity_contract/40416.sol",
+              "lines": [
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10,
+                11,
+                12,
+                13,
+                14,
+                15,
+                16,
+                17,
+                18,
+                19
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "check": "external-function",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Token.balanceOf (/../data/reentrancy/solidity_contract/40416.sol#6) should be declared external\n",
+      "elements": [
+        {
+          "type": "function",
+          "name": "balanceOf",
+          "source_mapping": {
+            "start": 93,
+            "length": 72,
+            "filename": "/../data/reentrancy/solidity_contract/40416.sol",
+            "lines": [
+              6
+            ]
+          },
+          "contract": {
+            "type": "contract",
+            "name": "Token",
+            "source_mapping": {
+              "start": 0,
+              "length": 690,
+              "filename": "/../data/reentrancy/solidity_contract/40416.sol",
+              "lines": [
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10,
+                11,
+                12,
+                13,
+                14,
+                15,
+                16,
+                17,
+                18,
+                19
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "check": "external-function",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "StandardToken.balanceOf (/../data/reentrancy/solidity_contract/40416.sol#46-48) should be declared external\n",
+      "elements": [
+        {
+          "type": "function",
+          "name": "balanceOf",
+          "source_mapping": {
+            "start": 1880,
+            "length": 136,
+            "filename": "/../data/reentrancy/solidity_contract/40416.sol",
+            "lines": [
+              46,
+              47,
+              48
+            ]
+          },
+          "contract": {
+            "type": "contract",
+            "name": "StandardToken",
+            "source_mapping": {
+              "start": 692,
+              "length": 2075,
+              "filename": "/../data/reentrancy/solidity_contract/40416.sol",
+              "lines": [
+                21,
+                22,
+                23,
+                24,
+                25,
+                26,
+                27,
+                28,
+                29,
+                30,
+                31,
+                32,
+                33,
+                34,
+                35,
+                36,
+                37,
+                38,
+                39,
+                40,
+                41,
+                42,
+                43,
+                44,
+                45,
+                46,
+                47,
+                48,
+                49,
+                50,
+                51,
+                52,
+                53,
+                54,
+                55,
+                56,
+                57,
+                58,
+                59,
+                60,
+                61,
+                62,
+                63,
+                64,
+                65,
+                66,
+                67,
+                68,
+                69,
+                70,
+                71,
+                72,
+                73,
+                74,
+                75
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "check": "external-function",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Token.transfer (/../data/reentrancy/solidity_contract/40416.sol#8) should be declared external\n",
+      "elements": [
+        {
+          "type": "function",
+          "name": "transfer",
+          "source_mapping": {
+            "start": 171,
+            "length": 72,
+            "filename": "/../data/reentrancy/solidity_contract/40416.sol",
+            "lines": [
+              8
+            ]
+          },
+          "contract": {
+            "type": "contract",
+            "name": "Token",
+            "source_mapping": {
+              "start": 0,
+              "length": 690,
+              "filename": "/../data/reentrancy/solidity_contract/40416.sol",
+              "lines": [
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10,
+                11,
+                12,
+                13,
+                14,
+                15,
+                16,
+                17,
+                18,
+                19
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "check": "external-function",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "StandardToken.transfer (/../data/reentrancy/solidity_contract/40416.sol#23-32) should be declared external\n",
+      "elements": [
+        {
+          "type": "function",
+          "name": "transfer",
+          "source_mapping": {
+            "start": 731,
+            "length": 492,
+            "filename": "/../data/reentrancy/solidity_contract/40416.sol",
+            "lines": [
+              23,
+              24,
+              25,
+              26,
+              27,
+              28,
+              29,
+              30,
+              31,
+              32
+            ]
+          },
+          "contract": {
+            "type": "contract",
+            "name": "StandardToken",
+            "source_mapping": {
+              "start": 692,
+              "length": 2075,
+              "filename": "/../data/reentrancy/solidity_contract/40416.sol",
+              "lines": [
+                21,
+                22,
+                23,
+                24,
+                25,
+                26,
+                27,
+                28,
+                29,
+                30,
+                31,
+                32,
+                33,
+                34,
+                35,
+                36,
+                37,
+                38,
+                39,
+                40,
+                41,
+                42,
+                43,
+                44,
+                45,
+                46,
+                47,
+                48,
+                49,
+                50,
+                51,
+                52,
+                53,
+                54,
+                55,
+                56,
+                57,
+                58,
+                59,
+                60,
+                61,
+                62,
+                63,
+                64,
+                65,
+                66,
+                67,
+                68,
+                69,
+                70,
+                71,
+                72,
+                73,
+                74,
+                75
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "check": "external-function",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "StandardToken.transferFrom (/../data/reentrancy/solidity_contract/40416.sol#34-44) should be declared external\n",
+      "elements": [
+        {
+          "type": "function",
+          "name": "transferFrom",
+          "source_mapping": {
+            "start": 1229,
+            "length": 645,
+            "filename": "/../data/reentrancy/solidity_contract/40416.sol",
+            "lines": [
+              34,
+              35,
+              36,
+              37,
+              38,
+              39,
+              40,
+              41,
+              42,
+              43,
+              44
+            ]
+          },
+          "contract": {
+            "type": "contract",
+            "name": "StandardToken",
+            "source_mapping": {
+              "start": 692,
+              "length": 2075,
+              "filename": "/../data/reentrancy/solidity_contract/40416.sol",
+              "lines": [
+                21,
+                22,
+                23,
+                24,
+                25,
+                26,
+                27,
+                28,
+                29,
+                30,
+                31,
+                32,
+                33,
+                34,
+                35,
+                36,
+                37,
+                38,
+                39,
+                40,
+                41,
+                42,
+                43,
+                44,
+                45,
+                46,
+                47,
+                48,
+                49,
+                50,
+                51,
+                52,
+                53,
+                54,
+                55,
+                56,
+                57,
+                58,
+                59,
+                60,
+                61,
+                62,
+                63,
+                64,
+                65,
+                66,
+                67,
+                68,
+                69,
+                70,
+                71,
+                72,
+                73,
+                74,
+                75
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "check": "external-function",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Token.transferFrom (/../data/reentrancy/solidity_contract/40416.sol#10) should be declared external\n",
+      "elements": [
+        {
+          "type": "function",
+          "name": "transferFrom",
+          "source_mapping": {
+            "start": 249,
+            "length": 91,
+            "filename": "/../data/reentrancy/solidity_contract/40416.sol",
+            "lines": [
+              10
+            ]
+          },
+          "contract": {
+            "type": "contract",
+            "name": "Token",
+            "source_mapping": {
+              "start": 0,
+              "length": 690,
+              "filename": "/../data/reentrancy/solidity_contract/40416.sol",
+              "lines": [
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10,
+                11,
+                12,
+                13,
+                14,
+                15,
+                16,
+                17,
+                18,
+                19
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "check": "external-function",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "StandardToken.approve (/../data/reentrancy/solidity_contract/40416.sol#50-54) should be declared external\n",
+      "elements": [
+        {
+          "type": "function",
+          "name": "approve",
+          "source_mapping": {
+            "start": 2022,
+            "length": 223,
+            "filename": "/../data/reentrancy/solidity_contract/40416.sol",
+            "lines": [
+              50,
+              51,
+              52,
+              53,
+              54
+            ]
+          },
+          "contract": {
+            "type": "contract",
+            "name": "StandardToken",
+            "source_mapping": {
+              "start": 692,
+              "length": 2075,
+              "filename": "/../data/reentrancy/solidity_contract/40416.sol",
+              "lines": [
+                21,
+                22,
+                23,
+                24,
+                25,
+                26,
+                27,
+                28,
+                29,
+                30,
+                31,
+                32,
+                33,
+                34,
+                35,
+                36,
+                37,
+                38,
+                39,
+                40,
+                41,
+                42,
+                43,
+                44,
+                45,
+                46,
+                47,
+                48,
+                49,
+                50,
+                51,
+                52,
+                53,
+                54,
+                55,
+                56,
+                57,
+                58,
+                59,
+                60,
+                61,
+                62,
+                63,
+                64,
+                65,
+                66,
+                67,
+                68,
+                69,
+                70,
+                71,
+                72,
+                73,
+                74,
+                75
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "check": "external-function",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Token.approve (/../data/reentrancy/solidity_contract/40416.sol#12) should be declared external\n",
+      "elements": [
+        {
+          "type": "function",
+          "name": "approve",
+          "source_mapping": {
+            "start": 346,
+            "length": 76,
+            "filename": "/../data/reentrancy/solidity_contract/40416.sol",
+            "lines": [
+              12
+            ]
+          },
+          "contract": {
+            "type": "contract",
+            "name": "Token",
+            "source_mapping": {
+              "start": 0,
+              "length": 690,
+              "filename": "/../data/reentrancy/solidity_contract/40416.sol",
+              "lines": [
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10,
+                11,
+                12,
+                13,
+                14,
+                15,
+                16,
+                17,
+                18,
+                19
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "check": "external-function",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "StandardToken.allowance (/../data/reentrancy/solidity_contract/40416.sol#56-58) should be declared external\n",
+      "elements": [
+        {
+          "type": "function",
+          "name": "allowance",
+          "source_mapping": {
+            "start": 2251,
+            "length": 162,
+            "filename": "/../data/reentrancy/solidity_contract/40416.sol",
+            "lines": [
+              56,
+              57,
+              58
+            ]
+          },
+          "contract": {
+            "type": "contract",
+            "name": "StandardToken",
+            "source_mapping": {
+              "start": 692,
+              "length": 2075,
+              "filename": "/../data/reentrancy/solidity_contract/40416.sol",
+              "lines": [
+                21,
+                22,
+                23,
+                24,
+                25,
+                26,
+                27,
+                28,
+                29,
+                30,
+                31,
+                32,
+                33,
+                34,
+                35,
+                36,
+                37,
+                38,
+                39,
+                40,
+                41,
+                42,
+                43,
+                44,
+                45,
+                46,
+                47,
+                48,
+                49,
+                50,
+                51,
+                52,
+                53,
+                54,
+                55,
+                56,
+                57,
+                58,
+                59,
+                60,
+                61,
+                62,
+                63,
+                64,
+                65,
+                66,
+                67,
+                68,
+                69,
+                70,
+                71,
+                72,
+                73,
+                74,
+                75
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "check": "external-function",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Token.allowance (/../data/reentrancy/solidity_contract/40416.sol#14) should be declared external\n",
+      "elements": [
+        {
+          "type": "function",
+          "name": "allowance",
+          "source_mapping": {
+            "start": 428,
+            "length": 92,
+            "filename": "/../data/reentrancy/solidity_contract/40416.sol",
+            "lines": [
+              14
+            ]
+          },
+          "contract": {
+            "type": "contract",
+            "name": "Token",
+            "source_mapping": {
+              "start": 0,
+              "length": 690,
+              "filename": "/../data/reentrancy/solidity_contract/40416.sol",
+              "lines": [
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10,
+                11,
+                12,
+                13,
+                14,
+                15,
+                16,
+                17,
+                18,
+                19
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "check": "external-function",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "ReserveToken.setMinter (/../data/reentrancy/solidity_contract/40416.sol#79-83) should be declared external\n",
+      "elements": [
+        {
+          "type": "function",
+          "name": "setMinter",
+          "source_mapping": {
+            "start": 2841,
+            "length": 137,
+            "filename": "/../data/reentrancy/solidity_contract/40416.sol",
+            "lines": [
+              79,
+              80,
+              81,
+              82,
+              83
+            ]
+          },
+          "contract": {
+            "type": "contract",
+            "name": "ReserveToken",
+            "source_mapping": {
+              "start": 2769,
+              "length": 752,
+              "filename": "/../data/reentrancy/solidity_contract/40416.sol",
+              "lines": [
+                77,
+                78,
+                79,
+                80,
+                81,
+                82,
+                83,
+                84,
+                85,
+                86,
+                87,
+                88,
+                89,
+                90,
+                91,
+                92,
+                93,
+                94,
+                95,
+                96,
+                97,
+                98
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "check": "external-function",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "ReserveToken.create (/../data/reentrancy/solidity_contract/40416.sol#85-88) should be declared external\n",
+      "elements": [
+        {
+          "type": "function",
+          "name": "create",
+          "source_mapping": {
+            "start": 3040,
+            "length": 158,
+            "filename": "/../data/reentrancy/solidity_contract/40416.sol",
+            "lines": [
+              85,
+              86,
+              87,
+              88
+            ]
+          },
+          "contract": {
+            "type": "contract",
+            "name": "ReserveToken",
+            "source_mapping": {
+              "start": 2769,
+              "length": 752,
+              "filename": "/../data/reentrancy/solidity_contract/40416.sol",
+              "lines": [
+                77,
+                78,
+                79,
+                80,
+                81,
+                82,
+                83,
+                84,
+                85,
+                86,
+                87,
+                88,
+                89,
+                90,
+                91,
+                92,
+                93,
+                94,
+                95,
+                96,
+                97,
+                98
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "check": "external-function",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "ReserveToken.destroy (/../data/reentrancy/solidity_contract/40416.sol#89-93) should be declared external\n",
+      "elements": [
+        {
+          "type": "function",
+          "name": "destroy",
+          "source_mapping": {
+            "start": 3203,
+            "length": 232,
+            "filename": "/../data/reentrancy/solidity_contract/40416.sol",
+            "lines": [
+              89,
+              90,
+              91,
+              92,
+              93
+            ]
+          },
+          "contract": {
+            "type": "contract",
+            "name": "ReserveToken",
+            "source_mapping": {
+              "start": 2769,
+              "length": 752,
+              "filename": "/../data/reentrancy/solidity_contract/40416.sol",
+              "lines": [
+                77,
+                78,
+                79,
+                80,
+                81,
+                82,
+                83,
+                84,
+                85,
+                86,
+                87,
+                88,
+                89,
+                90,
+                91,
+                92,
+                93,
+                94,
+                95,
+                96,
+                97,
+                98
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "check": "external-function",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "ReserveToken.reset (/../data/reentrancy/solidity_contract/40416.sol#94-97) should be declared external\n",
+      "elements": [
+        {
+          "type": "function",
+          "name": "reset",
+          "source_mapping": {
+            "start": 3440,
+            "length": 79,
+            "filename": "/../data/reentrancy/solidity_contract/40416.sol",
+            "lines": [
+              94,
+              95,
+              96,
+              97
+            ]
+          },
+          "contract": {
+            "type": "contract",
+            "name": "ReserveToken",
+            "source_mapping": {
+              "start": 2769,
+              "length": 752,
+              "filename": "/../data/reentrancy/solidity_contract/40416.sol",
+              "lines": [
+                77,
+                78,
+                79,
+                80,
+                81,
+                82,
+                83,
+                84,
+                85,
+                86,
+                87,
+                88,
+                89,
+                90,
+                91,
+                92,
+                93,
+                94,
+                95,
+                96,
+                97,
+                98
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "check": "external-function",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "EtherDelta.fallback (/../data/reentrancy/solidity_contract/40416.sol#120-122) should be declared external\n",
+      "elements": [
+        {
+          "type": "function",
+          "name": "fallback",
+          "source_mapping": {
+            "start": 4305,
+            "length": 27,
+            "filename": "/../data/reentrancy/solidity_contract/40416.sol",
+            "lines": [
+              120,
+              121,
+              122
+            ]
+          },
+          "contract": {
+            "type": "contract",
+            "name": "EtherDelta",
+            "source_mapping": {
+              "start": 3523,
+              "length": 4313,
+              "filename": "/../data/reentrancy/solidity_contract/40416.sol",
+              "lines": [
+                100,
+                101,
+                102,
+                103,
+                104,
+                105,
+                106,
+                107,
+                108,
+                109,
+                110,
+                111,
+                112,
+                113,
+                114,
+                115,
+                116,
+                117,
+                118,
+                119,
+                120,
+                121,
+                122,
+                123,
+                124,
+                125,
+                126,
+                127,
+                128,
+                129,
+                130,
+                131,
+                132,
+                133,
+                134,
+                135,
+                136,
+                137,
+                138,
+                139,
+                140,
+                141,
+                142,
+                143,
+                144,
+                145,
+                146,
+                147,
+                148,
+                149,
+                150,
+                151,
+                152,
+                153,
+                154,
+                155,
+                156,
+                157,
+                158,
+                159,
+                160,
+                161,
+                162,
+                163,
+                164,
+                165,
+                166,
+                167,
+                168,
+                169,
+                170,
+                171,
+                172,
+                173,
+                174,
+                175,
+                176,
+                177,
+                178,
+                179,
+                180,
+                181,
+                182,
+                183,
+                184,
+                185,
+                186,
+                187,
+                188,
+                189,
+                190,
+                191,
+                192,
+                193,
+                194,
+                195,
+                196,
+                197,
+                198,
+                199,
+                200,
+                201,
+                202
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "check": "external-function",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "EtherDelta.deposit (/../data/reentrancy/solidity_contract/40416.sol#124-127) should be declared external\n",
+      "elements": [
+        {
+          "type": "function",
+          "name": "deposit",
+          "source_mapping": {
+            "start": 4336,
+            "length": 126,
+            "filename": "/../data/reentrancy/solidity_contract/40416.sol",
+            "lines": [
+              124,
+              125,
+              126,
+              127
+            ]
+          },
+          "contract": {
+            "type": "contract",
+            "name": "EtherDelta",
+            "source_mapping": {
+              "start": 3523,
+              "length": 4313,
+              "filename": "/../data/reentrancy/solidity_contract/40416.sol",
+              "lines": [
+                100,
+                101,
+                102,
+                103,
+                104,
+                105,
+                106,
+                107,
+                108,
+                109,
+                110,
+                111,
+                112,
+                113,
+                114,
+                115,
+                116,
+                117,
+                118,
+                119,
+                120,
+                121,
+                122,
+                123,
+                124,
+                125,
+                126,
+                127,
+                128,
+                129,
+                130,
+                131,
+                132,
+                133,
+                134,
+                135,
+                136,
+                137,
+                138,
+                139,
+                140,
+                141,
+                142,
+                143,
+                144,
+                145,
+                146,
+                147,
+                148,
+                149,
+                150,
+                151,
+                152,
+                153,
+                154,
+                155,
+                156,
+                157,
+                158,
+                159,
+                160,
+                161,
+                162,
+                163,
+                164,
+                165,
+                166,
+                167,
+                168,
+                169,
+                170,
+                171,
+                172,
+                173,
+                174,
+                175,
+                176,
+                177,
+                178,
+                179,
+                180,
+                181,
+                182,
+                183,
+                184,
+                185,
+                186,
+                187,
+                188,
+                189,
+                190,
+                191,
+                192,
+                193,
+                194,
+                195,
+                196,
+                197,
+                198,
+                199,
+                200,
+                201,
+                202
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "check": "external-function",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "EtherDelta.withdraw (/../data/reentrancy/solidity_contract/40416.sol#129-135) should be declared external\n",
+      "elements": [
+        {
+          "type": "function",
+          "name": "withdraw",
+          "source_mapping": {
+            "start": 4466,
+            "length": 257,
+            "filename": "/../data/reentrancy/solidity_contract/40416.sol",
+            "lines": [
+              129,
+              130,
+              131,
+              132,
+              133,
+              134,
+              135
+            ]
+          },
+          "contract": {
+            "type": "contract",
+            "name": "EtherDelta",
+            "source_mapping": {
+              "start": 3523,
+              "length": 4313,
+              "filename": "/../data/reentrancy/solidity_contract/40416.sol",
+              "lines": [
+                100,
+                101,
+                102,
+                103,
+                104,
+                105,
+                106,
+                107,
+                108,
+                109,
+                110,
+                111,
+                112,
+                113,
+                114,
+                115,
+                116,
+                117,
+                118,
+                119,
+                120,
+                121,
+                122,
+                123,
+                124,
+                125,
+                126,
+                127,
+                128,
+                129,
+                130,
+                131,
+                132,
+                133,
+                134,
+                135,
+                136,
+                137,
+                138,
+                139,
+                140,
+                141,
+                142,
+                143,
+                144,
+                145,
+                146,
+                147,
+                148,
+                149,
+                150,
+                151,
+                152,
+                153,
+                154,
+                155,
+                156,
+                157,
+                158,
+                159,
+                160,
+                161,
+                162,
+                163,
+                164,
+                165,
+                166,
+                167,
+                168,
+                169,
+                170,
+                171,
+                172,
+                173,
+                174,
+                175,
+                176,
+                177,
+                178,
+                179,
+                180,
+                181,
+                182,
+                183,
+                184,
+                185,
+                186,
+                187,
+                188,
+                189,
+                190,
+                191,
+                192,
+                193,
+                194,
+                195,
+                196,
+                197,
+                198,
+                199,
+                200,
+                201,
+                202
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "check": "external-function",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "EtherDelta.depositToken (/../data/reentrancy/solidity_contract/40416.sol#137-143) should be declared external\n",
+      "elements": [
+        {
+          "type": "function",
+          "name": "depositToken",
+          "source_mapping": {
+            "start": 4727,
+            "length": 278,
+            "filename": "/../data/reentrancy/solidity_contract/40416.sol",
+            "lines": [
+              137,
+              138,
+              139,
+              140,
+              141,
+              142,
+              143
+            ]
+          },
+          "contract": {
+            "type": "contract",
+            "name": "EtherDelta",
+            "source_mapping": {
+              "start": 3523,
+              "length": 4313,
+              "filename": "/../data/reentrancy/solidity_contract/40416.sol",
+              "lines": [
+                100,
+                101,
+                102,
+                103,
+                104,
+                105,
+                106,
+                107,
+                108,
+                109,
+                110,
+                111,
+                112,
+                113,
+                114,
+                115,
+                116,
+                117,
+                118,
+                119,
+                120,
+                121,
+                122,
+                123,
+                124,
+                125,
+                126,
+                127,
+                128,
+                129,
+                130,
+                131,
+                132,
+                133,
+                134,
+                135,
+                136,
+                137,
+                138,
+                139,
+                140,
+                141,
+                142,
+                143,
+                144,
+                145,
+                146,
+                147,
+                148,
+                149,
+                150,
+                151,
+                152,
+                153,
+                154,
+                155,
+                156,
+                157,
+                158,
+                159,
+                160,
+                161,
+                162,
+                163,
+                164,
+                165,
+                166,
+                167,
+                168,
+                169,
+                170,
+                171,
+                172,
+                173,
+                174,
+                175,
+                176,
+                177,
+                178,
+                179,
+                180,
+                181,
+                182,
+                183,
+                184,
+                185,
+                186,
+                187,
+                188,
+                189,
+                190,
+                191,
+                192,
+                193,
+                194,
+                195,
+                196,
+                197,
+                198,
+                199,
+                200,
+                201,
+                202
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "check": "external-function",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "EtherDelta.withdrawToken (/../data/reentrancy/solidity_contract/40416.sol#145-151) should be declared external\n",
+      "elements": [
+        {
+          "type": "function",
+          "name": "withdrawToken",
+          "source_mapping": {
+            "start": 5009,
+            "length": 315,
+            "filename": "/../data/reentrancy/solidity_contract/40416.sol",
+            "lines": [
+              145,
+              146,
+              147,
+              148,
+              149,
+              150,
+              151
+            ]
+          },
+          "contract": {
+            "type": "contract",
+            "name": "EtherDelta",
+            "source_mapping": {
+              "start": 3523,
+              "length": 4313,
+              "filename": "/../data/reentrancy/solidity_contract/40416.sol",
+              "lines": [
+                100,
+                101,
+                102,
+                103,
+                104,
+                105,
+                106,
+                107,
+                108,
+                109,
+                110,
+                111,
+                112,
+                113,
+                114,
+                115,
+                116,
+                117,
+                118,
+                119,
+                120,
+                121,
+                122,
+                123,
+                124,
+                125,
+                126,
+                127,
+                128,
+                129,
+                130,
+                131,
+                132,
+                133,
+                134,
+                135,
+                136,
+                137,
+                138,
+                139,
+                140,
+                141,
+                142,
+                143,
+                144,
+                145,
+                146,
+                147,
+                148,
+                149,
+                150,
+                151,
+                152,
+                153,
+                154,
+                155,
+                156,
+                157,
+                158,
+                159,
+                160,
+                161,
+                162,
+                163,
+                164,
+                165,
+                166,
+                167,
+                168,
+                169,
+                170,
+                171,
+                172,
+                173,
+                174,
+                175,
+                176,
+                177,
+                178,
+                179,
+                180,
+                181,
+                182,
+                183,
+                184,
+                185,
+                186,
+                187,
+                188,
+                189,
+                190,
+                191,
+                192,
+                193,
+                194,
+                195,
+                196,
+                197,
+                198,
+                199,
+                200,
+                201,
+                202
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "check": "external-function",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "EtherDelta.balanceOf (/../data/reentrancy/solidity_contract/40416.sol#153-155) should be declared external\n",
+      "elements": [
+        {
+          "type": "function",
+          "name": "balanceOf",
+          "source_mapping": {
+            "start": 5328,
+            "length": 109,
+            "filename": "/../data/reentrancy/solidity_contract/40416.sol",
+            "lines": [
+              153,
+              154,
+              155
+            ]
+          },
+          "contract": {
+            "type": "contract",
+            "name": "EtherDelta",
+            "source_mapping": {
+              "start": 3523,
+              "length": 4313,
+              "filename": "/../data/reentrancy/solidity_contract/40416.sol",
+              "lines": [
+                100,
+                101,
+                102,
+                103,
+                104,
+                105,
+                106,
+                107,
+                108,
+                109,
+                110,
+                111,
+                112,
+                113,
+                114,
+                115,
+                116,
+                117,
+                118,
+                119,
+                120,
+                121,
+                122,
+                123,
+                124,
+                125,
+                126,
+                127,
+                128,
+                129,
+                130,
+                131,
+                132,
+                133,
+                134,
+                135,
+                136,
+                137,
+                138,
+                139,
+                140,
+                141,
+                142,
+                143,
+                144,
+                145,
+                146,
+                147,
+                148,
+                149,
+                150,
+                151,
+                152,
+                153,
+                154,
+                155,
+                156,
+                157,
+                158,
+                159,
+                160,
+                161,
+                162,
+                163,
+                164,
+                165,
+                166,
+                167,
+                168,
+                169,
+                170,
+                171,
+                172,
+                173,
+                174,
+                175,
+                176,
+                177,
+                178,
+                179,
+                180,
+                181,
+                182,
+                183,
+                184,
+                185,
+                186,
+                187,
+                188,
+                189,
+                190,
+                191,
+                192,
+                193,
+                194,
+                195,
+                196,
+                197,
+                198,
+                199,
+                200,
+                201,
+                202
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "check": "external-function",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "EtherDelta.order (/../data/reentrancy/solidity_contract/40416.sol#157-160) should be declared external\n",
+      "elements": [
+        {
+          "type": "function",
+          "name": "order",
+          "source_mapping": {
+            "start": 5441,
+            "length": 267,
+            "filename": "/../data/reentrancy/solidity_contract/40416.sol",
+            "lines": [
+              157,
+              158,
+              159,
+              160
+            ]
+          },
+          "contract": {
+            "type": "contract",
+            "name": "EtherDelta",
+            "source_mapping": {
+              "start": 3523,
+              "length": 4313,
+              "filename": "/../data/reentrancy/solidity_contract/40416.sol",
+              "lines": [
+                100,
+                101,
+                102,
+                103,
+                104,
+                105,
+                106,
+                107,
+                108,
+                109,
+                110,
+                111,
+                112,
+                113,
+                114,
+                115,
+                116,
+                117,
+                118,
+                119,
+                120,
+                121,
+                122,
+                123,
+                124,
+                125,
+                126,
+                127,
+                128,
+                129,
+                130,
+                131,
+                132,
+                133,
+                134,
+                135,
+                136,
+                137,
+                138,
+                139,
+                140,
+                141,
+                142,
+                143,
+                144,
+                145,
+                146,
+                147,
+                148,
+                149,
+                150,
+                151,
+                152,
+                153,
+                154,
+                155,
+                156,
+                157,
+                158,
+                159,
+                160,
+                161,
+                162,
+                163,
+                164,
+                165,
+                166,
+                167,
+                168,
+                169,
+                170,
+                171,
+                172,
+                173,
+                174,
+                175,
+                176,
+                177,
+                178,
+                179,
+                180,
+                181,
+                182,
+                183,
+                184,
+                185,
+                186,
+                187,
+                188,
+                189,
+                190,
+                191,
+                192,
+                193,
+                194,
+                195,
+                196,
+                197,
+                198,
+                199,
+                200,
+                201,
+                202
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "check": "external-function",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "EtherDelta.trade (/../data/reentrancy/solidity_contract/40416.sol#162-181) should be declared external\n",
+      "elements": [
+        {
+          "type": "function",
+          "name": "trade",
+          "source_mapping": {
+            "start": 5712,
+            "length": 1122,
+            "filename": "/../data/reentrancy/solidity_contract/40416.sol",
+            "lines": [
+              162,
+              163,
+              164,
+              165,
+              166,
+              167,
+              168,
+              169,
+              170,
+              171,
+              172,
+              173,
+              174,
+              175,
+              176,
+              177,
+              178,
+              179,
+              180,
+              181
+            ]
+          },
+          "contract": {
+            "type": "contract",
+            "name": "EtherDelta",
+            "source_mapping": {
+              "start": 3523,
+              "length": 4313,
+              "filename": "/../data/reentrancy/solidity_contract/40416.sol",
+              "lines": [
+                100,
+                101,
+                102,
+                103,
+                104,
+                105,
+                106,
+                107,
+                108,
+                109,
+                110,
+                111,
+                112,
+                113,
+                114,
+                115,
+                116,
+                117,
+                118,
+                119,
+                120,
+                121,
+                122,
+                123,
+                124,
+                125,
+                126,
+                127,
+                128,
+                129,
+                130,
+                131,
+                132,
+                133,
+                134,
+                135,
+                136,
+                137,
+                138,
+                139,
+                140,
+                141,
+                142,
+                143,
+                144,
+                145,
+                146,
+                147,
+                148,
+                149,
+                150,
+                151,
+                152,
+                153,
+                154,
+                155,
+                156,
+                157,
+                158,
+                159,
+                160,
+                161,
+                162,
+                163,
+                164,
+                165,
+                166,
+                167,
+                168,
+                169,
+                170,
+                171,
+                172,
+                173,
+                174,
+                175,
+                176,
+                177,
+                178,
+                179,
+                180,
+                181,
+                182,
+                183,
+                184,
+                185,
+                186,
+                187,
+                188,
+                189,
+                190,
+                191,
+                192,
+                193,
+                194,
+                195,
+                196,
+                197,
+                198,
+                199,
+                200,
+                201,
+                202
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "check": "external-function",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "EtherDelta.testTrade (/../data/reentrancy/solidity_contract/40416.sol#183-189) should be declared external\n",
+      "elements": [
+        {
+          "type": "function",
+          "name": "testTrade",
+          "source_mapping": {
+            "start": 6838,
+            "length": 417,
+            "filename": "/../data/reentrancy/solidity_contract/40416.sol",
+            "lines": [
+              183,
+              184,
+              185,
+              186,
+              187,
+              188,
+              189
+            ]
+          },
+          "contract": {
+            "type": "contract",
+            "name": "EtherDelta",
+            "source_mapping": {
+              "start": 3523,
+              "length": 4313,
+              "filename": "/../data/reentrancy/solidity_contract/40416.sol",
+              "lines": [
+                100,
+                101,
+                102,
+                103,
+                104,
+                105,
+                106,
+                107,
+                108,
+                109,
+                110,
+                111,
+                112,
+                113,
+                114,
+                115,
+                116,
+                117,
+                118,
+                119,
+                120,
+                121,
+                122,
+                123,
+                124,
+                125,
+                126,
+                127,
+                128,
+                129,
+                130,
+                131,
+                132,
+                133,
+                134,
+                135,
+                136,
+                137,
+                138,
+                139,
+                140,
+                141,
+                142,
+                143,
+                144,
+                145,
+                146,
+                147,
+                148,
+                149,
+                150,
+                151,
+                152,
+                153,
+                154,
+                155,
+                156,
+                157,
+                158,
+                159,
+                160,
+                161,
+                162,
+                163,
+                164,
+                165,
+                166,
+                167,
+                168,
+                169,
+                170,
+                171,
+                172,
+                173,
+                174,
+                175,
+                176,
+                177,
+                178,
+                179,
+                180,
+                181,
+                182,
+                183,
+                184,
+                185,
+                186,
+                187,
+                188,
+                189,
+                190,
+                191,
+                192,
+                193,
+                194,
+                195,
+                196,
+                197,
+                198,
+                199,
+                200,
+                201,
+                202
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "check": "low-level-calls",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Low level call in EtherDelta.withdraw (/../data/reentrancy/solidity_contract/40416.sol#129-135):\n\t-! msg.sender.call.value(amount)() /../data/reentrancy/solidity_contract/40416.sol#133\n",
+      "elements": [
+        {
+          "type": "function",
+          "name": "withdraw",
+          "source_mapping": {
+            "start": 4466,
+            "length": 257,
+            "filename": "/../data/reentrancy/solidity_contract/40416.sol",
+            "lines": [
+              129,
+              130,
+              131,
+              132,
+              133,
+              134,
+              135
+            ]
+          },
+          "contract": {
+            "type": "contract",
+            "name": "EtherDelta",
+            "source_mapping": {
+              "start": 3523,
+              "length": 4313,
+              "filename": "/../data/reentrancy/solidity_contract/40416.sol",
+              "lines": [
+                100,
+                101,
+                102,
+                103,
+                104,
+                105,
+                106,
+                107,
+                108,
+                109,
+                110,
+                111,
+                112,
+                113,
+                114,
+                115,
+                116,
+                117,
+                118,
+                119,
+                120,
+                121,
+                122,
+                123,
+                124,
+                125,
+                126,
+                127,
+                128,
+                129,
+                130,
+                131,
+                132,
+                133,
+                134,
+                135,
+                136,
+                137,
+                138,
+                139,
+                140,
+                141,
+                142,
+                143,
+                144,
+                145,
+                146,
+                147,
+                148,
+                149,
+                150,
+                151,
+                152,
+                153,
+                154,
+                155,
+                156,
+                157,
+                158,
+                159,
+                160,
+                161,
+                162,
+                163,
+                164,
+                165,
+                166,
+                167,
+                168,
+                169,
+                170,
+                171,
+                172,
+                173,
+                174,
+                175,
+                176,
+                177,
+                178,
+                179,
+                180,
+                181,
+                182,
+                183,
+                184,
+                185,
+                186,
+                187,
+                188,
+                189,
+                190,
+                191,
+                192,
+                193,
+                194,
+                195,
+                196,
+                197,
+                198,
+                199,
+                200,
+                201,
+                202
+              ]
+            }
+          }
+        },
+        {
+          "type": "expression",
+          "expression": "! msg.sender.call.value(amount)()",
+          "source_mapping": {
+            "start": 4615,
+            "length": 43,
+            "filename": "/../data/reentrancy/solidity_contract/40416.sol",
+            "lines": [
+              133
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "naming-convention",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Parameter '_owner' of StandardToken.balanceOf (/../data/reentrancy/solidity_contract/40416.sol#46) is not in mixedCase\n",
+      "elements": [
+        {
+          "target": "parameter",
+          "convention": "mixedCase",
+          "name": "_owner",
+          "source_mapping": {
+            "start": 1899,
+            "length": 14,
+            "filename": "/../data/reentrancy/solidity_contract/40416.sol",
+            "lines": [
+              46
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "naming-convention",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Parameter '_to' of StandardToken.transfer (/../data/reentrancy/solidity_contract/40416.sol#23) is not in mixedCase\n",
+      "elements": [
+        {
+          "target": "parameter",
+          "convention": "mixedCase",
+          "name": "_to",
+          "source_mapping": {
+            "start": 749,
+            "length": 11,
+            "filename": "/../data/reentrancy/solidity_contract/40416.sol",
+            "lines": [
+              23
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "naming-convention",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Parameter '_value' of StandardToken.transfer (/../data/reentrancy/solidity_contract/40416.sol#23) is not in mixedCase\n",
+      "elements": [
+        {
+          "target": "parameter",
+          "convention": "mixedCase",
+          "name": "_value",
+          "source_mapping": {
+            "start": 762,
+            "length": 14,
+            "filename": "/../data/reentrancy/solidity_contract/40416.sol",
+            "lines": [
+              23
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "naming-convention",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Parameter '_from' of StandardToken.transferFrom (/../data/reentrancy/solidity_contract/40416.sol#34) is not in mixedCase\n",
+      "elements": [
+        {
+          "target": "parameter",
+          "convention": "mixedCase",
+          "name": "_from",
+          "source_mapping": {
+            "start": 1251,
+            "length": 13,
+            "filename": "/../data/reentrancy/solidity_contract/40416.sol",
+            "lines": [
+              34
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "naming-convention",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Parameter '_to' of StandardToken.transferFrom (/../data/reentrancy/solidity_contract/40416.sol#34) is not in mixedCase\n",
+      "elements": [
+        {
+          "target": "parameter",
+          "convention": "mixedCase",
+          "name": "_to",
+          "source_mapping": {
+            "start": 1266,
+            "length": 11,
+            "filename": "/../data/reentrancy/solidity_contract/40416.sol",
+            "lines": [
+              34
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "naming-convention",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Parameter '_value' of StandardToken.transferFrom (/../data/reentrancy/solidity_contract/40416.sol#34) is not in mixedCase\n",
+      "elements": [
+        {
+          "target": "parameter",
+          "convention": "mixedCase",
+          "name": "_value",
+          "source_mapping": {
+            "start": 1279,
+            "length": 14,
+            "filename": "/../data/reentrancy/solidity_contract/40416.sol",
+            "lines": [
+              34
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "naming-convention",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Parameter '_spender' of StandardToken.approve (/../data/reentrancy/solidity_contract/40416.sol#50) is not in mixedCase\n",
+      "elements": [
+        {
+          "target": "parameter",
+          "convention": "mixedCase",
+          "name": "_spender",
+          "source_mapping": {
+            "start": 2039,
+            "length": 16,
+            "filename": "/../data/reentrancy/solidity_contract/40416.sol",
+            "lines": [
+              50
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "naming-convention",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Parameter '_value' of StandardToken.approve (/../data/reentrancy/solidity_contract/40416.sol#50) is not in mixedCase\n",
+      "elements": [
+        {
+          "target": "parameter",
+          "convention": "mixedCase",
+          "name": "_value",
+          "source_mapping": {
+            "start": 2057,
+            "length": 14,
+            "filename": "/../data/reentrancy/solidity_contract/40416.sol",
+            "lines": [
+              50
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "naming-convention",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Parameter '_owner' of StandardToken.allowance (/../data/reentrancy/solidity_contract/40416.sol#56) is not in mixedCase\n",
+      "elements": [
+        {
+          "target": "parameter",
+          "convention": "mixedCase",
+          "name": "_owner",
+          "source_mapping": {
+            "start": 2270,
+            "length": 14,
+            "filename": "/../data/reentrancy/solidity_contract/40416.sol",
+            "lines": [
+              56
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "naming-convention",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Parameter '_spender' of StandardToken.allowance (/../data/reentrancy/solidity_contract/40416.sol#56) is not in mixedCase\n",
+      "elements": [
+        {
+          "target": "parameter",
+          "convention": "mixedCase",
+          "name": "_spender",
+          "source_mapping": {
+            "start": 2286,
+            "length": 16,
+            "filename": "/../data/reentrancy/solidity_contract/40416.sol",
+            "lines": [
+              56
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "naming-convention",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Function 'EtherDelta.EtherDelta' (/../data/reentrancy/solidity_contract/40416.sol#114-118) is not in mixedCase\n",
+      "elements": [
+        {
+          "target": "function",
+          "convention": "mixedCase",
+          "name": "EtherDelta",
+          "source_mapping": {
+            "start": 4147,
+            "length": 154,
+            "filename": "/../data/reentrancy/solidity_contract/40416.sol",
+            "lines": [
+              114,
+              115,
+              116,
+              117,
+              118
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

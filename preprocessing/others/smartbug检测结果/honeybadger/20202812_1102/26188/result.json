@@ -1,0 +1,14 @@
+{
+  "contract": "26188",
+  "tool": "honeybadger",
+  "start": 1609184009.747905,
+  "end": 1609184019.2902248,
+  "duration": 9.542319774627686,
+  "analysis": [
+    {
+      "errors": [],
+      "file": "/../data/reentrancy/solidity_contract/26188.sol",
+      "name": "EXPERIMENTAL_ETH_AUCTION"
+    }
+  ]
+}

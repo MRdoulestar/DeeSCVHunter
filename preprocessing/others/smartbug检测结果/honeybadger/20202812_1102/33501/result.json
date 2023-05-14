@@ -1,0 +1,14 @@
+{
+  "contract": "33501",
+  "tool": "honeybadger",
+  "start": 1609125011.44618,
+  "end": 1609125050.0456371,
+  "duration": 38.599457025527954,
+  "analysis": [
+    {
+      "errors": [],
+      "file": "/../data/reentrancy/solidity_contract/33501.sol",
+      "name": "Gifto"
+    }
+  ]
+}

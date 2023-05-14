@@ -1,0 +1,30 @@
+{
+  "contract": "Victim",
+  "tool": "osiris",
+  "start": 1609130028.436018,
+  "end": 1609130031.044228,
+  "duration": 2.6082100868225098,
+  "analysis": [
+    {
+      "errors": [
+        {
+          "line": 11,
+          "column": 9,
+          "message": "underflow_bugs"
+        },
+        {
+          "line": 8,
+          "column": 12,
+          "message": "callstack_bug"
+        },
+        {
+          "line": 8,
+          "column": 12,
+          "message": "reentrancy_bug"
+        }
+      ],
+      "file": "/../data/reentrancy/solidity_contract/Victim.sol",
+      "name": "Victim"
+    }
+  ]
+}

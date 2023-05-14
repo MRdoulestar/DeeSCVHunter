@@ -1,0 +1,29 @@
+{
+  "contract": "19402",
+  "tool": "honeybadger",
+  "start": 1609170280.057503,
+  "end": 1609170366.732285,
+  "duration": 86.67478203773499,
+  "analysis": [
+    {
+      "errors": [],
+      "file": "/../data/reentrancy/solidity_contract/19402.sol",
+      "name": "SafeMath"
+    },
+    {
+      "errors": [],
+      "file": "/../data/reentrancy/solidity_contract/19402.sol",
+      "name": "StandardToken"
+    },
+    {
+      "errors": [],
+      "file": "/../data/reentrancy/solidity_contract/19402.sol",
+      "name": "Token"
+    },
+    {
+      "errors": [],
+      "file": "/../data/reentrancy/solidity_contract/19402.sol",
+      "name": "monechainToken"
+    }
+  ]
+}

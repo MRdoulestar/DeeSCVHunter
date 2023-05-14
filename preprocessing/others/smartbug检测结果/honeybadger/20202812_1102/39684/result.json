@@ -1,0 +1,19 @@
+{
+  "contract": "39684",
+  "tool": "honeybadger",
+  "start": 1609189177.854399,
+  "end": 1609189461.4912739,
+  "duration": 283.6368749141693,
+  "analysis": [
+    {
+      "errors": [],
+      "file": "/../data/reentrancy/solidity_contract/39684.sol",
+      "name": "EtherprisesLLC"
+    },
+    {
+      "errors": [],
+      "file": "/../data/reentrancy/solidity_contract/39684.sol",
+      "name": "SeriesFactory"
+    }
+  ]
+}

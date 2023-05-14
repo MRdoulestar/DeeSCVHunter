@@ -1,0 +1,3123 @@
+{
+  "contract": "11705",
+  "tool": "slither",
+  "start": 1609171877.085212,
+  "end": 1609171881.679683,
+  "duration": 4.594470977783203,
+  "analysis": [
+    {
+      "check": "calls-loop",
+      "impact": "Low",
+      "confidence": "Medium",
+      "description": "ERC20Vault.getLockedValue has external calls inside a loop:\n\t- i < investmentRecordList.getInvestmentRecordListLength() (/../data/reentrancy/solidity_contract/11705.sol#345-355)\n",
+      "elements": [
+        {
+          "type": "function",
+          "name": "getLockedValue",
+          "source_mapping": {
+            "start": 8423,
+            "length": 726,
+            "filename": "/../data/reentrancy/solidity_contract/11705.sol",
+            "lines": [
+              339,
+              340,
+              341,
+              342,
+              343,
+              344,
+              345,
+              346,
+              347,
+              348,
+              349,
+              350,
+              351,
+              352,
+              353,
+              354,
+              355,
+              356,
+              357
+            ]
+          },
+          "contract": {
+            "type": "contract",
+            "name": "ERC20Vault",
+            "source_mapping": {
+              "start": 8209,
+              "length": 1820,
+              "filename": "/../data/reentrancy/solidity_contract/11705.sol",
+              "lines": [
+                331,
+                332,
+                333,
+                334,
+                335,
+                336,
+                337,
+                338,
+                339,
+                340,
+                341,
+                342,
+                343,
+                344,
+                345,
+                346,
+                347,
+                348,
+                349,
+                350,
+                351,
+                352,
+                353,
+                354,
+                355,
+                356,
+                357,
+                358,
+                359,
+                360,
+                361,
+                362,
+                363,
+                364,
+                365,
+                366,
+                367,
+                368,
+                369,
+                370,
+                371,
+                372,
+                373,
+                374,
+                375,
+                376,
+                377,
+                378,
+                379,
+                380,
+                381
+              ]
+            }
+          }
+        },
+        {
+          "type": "expression",
+          "expression": "i < investmentRecordList.getInvestmentRecordListLength()",
+          "source_mapping": {
+            "start": 8659,
+            "length": 462,
+            "filename": "/../data/reentrancy/solidity_contract/11705.sol",
+            "lines": [
+              345,
+              346,
+              347,
+              348,
+              349,
+              350,
+              351,
+              352,
+              353,
+              354,
+              355
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "calls-loop",
+      "impact": "Low",
+      "confidence": "Medium",
+      "description": "ERC20Vault.getLockedValue has external calls inside a loop:\n\t- investmentRecord = investmentRecordList.getInvestmentRecord(i) (/../data/reentrancy/solidity_contract/11705.sol#346)\n",
+      "elements": [
+        {
+          "type": "function",
+          "name": "getLockedValue",
+          "source_mapping": {
+            "start": 8423,
+            "length": 726,
+            "filename": "/../data/reentrancy/solidity_contract/11705.sol",
+            "lines": [
+              339,
+              340,
+              341,
+              342,
+              343,
+              344,
+              345,
+              346,
+              347,
+              348,
+              349,
+              350,
+              351,
+              352,
+              353,
+              354,
+              355,
+              356,
+              357
+            ]
+          },
+          "contract": {
+            "type": "contract",
+            "name": "ERC20Vault",
+            "source_mapping": {
+              "start": 8209,
+              "length": 1820,
+              "filename": "/../data/reentrancy/solidity_contract/11705.sol",
+              "lines": [
+                331,
+                332,
+                333,
+                334,
+                335,
+                336,
+                337,
+                338,
+                339,
+                340,
+                341,
+                342,
+                343,
+                344,
+                345,
+                346,
+                347,
+                348,
+                349,
+                350,
+                351,
+                352,
+                353,
+                354,
+                355,
+                356,
+                357,
+                358,
+                359,
+                360,
+                361,
+                362,
+                363,
+                364,
+                365,
+                366,
+                367,
+                368,
+                369,
+                370,
+                371,
+                372,
+                373,
+                374,
+                375,
+                376,
+                377,
+                378,
+                379,
+                380,
+                381
+              ]
+            }
+          }
+        },
+        {
+          "type": "expression",
+          "expression": "investmentRecord = investmentRecordList.getInvestmentRecord(i)",
+          "source_mapping": {
+            "start": 8746,
+            "length": 79,
+            "filename": "/../data/reentrancy/solidity_contract/11705.sol",
+            "lines": [
+              346
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "calls-loop",
+      "impact": "Low",
+      "confidence": "Medium",
+      "description": "ERC20Vault.getLockedValue has external calls inside a loop:\n\t- investmentRecord.getToken() == token (/../data/reentrancy/solidity_contract/11705.sol#347-354)\n",
+      "elements": [
+        {
+          "type": "function",
+          "name": "getLockedValue",
+          "source_mapping": {
+            "start": 8423,
+            "length": 726,
+            "filename": "/../data/reentrancy/solidity_contract/11705.sol",
+            "lines": [
+              339,
+              340,
+              341,
+              342,
+              343,
+              344,
+              345,
+              346,
+              347,
+              348,
+              349,
+              350,
+              351,
+              352,
+              353,
+              354,
+              355,
+              356,
+              357
+            ]
+          },
+          "contract": {
+            "type": "contract",
+            "name": "ERC20Vault",
+            "source_mapping": {
+              "start": 8209,
+              "length": 1820,
+              "filename": "/../data/reentrancy/solidity_contract/11705.sol",
+              "lines": [
+                331,
+                332,
+                333,
+                334,
+                335,
+                336,
+                337,
+                338,
+                339,
+                340,
+                341,
+                342,
+                343,
+                344,
+                345,
+                346,
+                347,
+                348,
+                349,
+                350,
+                351,
+                352,
+                353,
+                354,
+                355,
+                356,
+                357,
+                358,
+                359,
+                360,
+                361,
+                362,
+                363,
+                364,
+                365,
+                366,
+                367,
+                368,
+                369,
+                370,
+                371,
+                372,
+                373,
+                374,
+                375,
+                376,
+                377,
+                378,
+                379,
+                380,
+                381
+              ]
+            }
+          }
+        },
+        {
+          "type": "expression",
+          "expression": "investmentRecord.getToken() == token",
+          "source_mapping": {
+            "start": 8833,
+            "length": 282,
+            "filename": "/../data/reentrancy/solidity_contract/11705.sol",
+            "lines": [
+              347,
+              348,
+              349,
+              350,
+              351,
+              352,
+              353,
+              354
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "calls-loop",
+      "impact": "Low",
+      "confidence": "Medium",
+      "description": "ERC20Vault.getLockedValue has external calls inside a loop:\n\t- investmentRecord.expiredLockPeriod() (/../data/reentrancy/solidity_contract/11705.sol#348-353)\n",
+      "elements": [
+        {
+          "type": "function",
+          "name": "getLockedValue",
+          "source_mapping": {
+            "start": 8423,
+            "length": 726,
+            "filename": "/../data/reentrancy/solidity_contract/11705.sol",
+            "lines": [
+              339,
+              340,
+              341,
+              342,
+              343,
+              344,
+              345,
+              346,
+              347,
+              348,
+              349,
+              350,
+              351,
+              352,
+              353,
+              354,
+              355,
+              356,
+              357
+            ]
+          },
+          "contract": {
+            "type": "contract",
+            "name": "ERC20Vault",
+            "source_mapping": {
+              "start": 8209,
+              "length": 1820,
+              "filename": "/../data/reentrancy/solidity_contract/11705.sol",
+              "lines": [
+                331,
+                332,
+                333,
+                334,
+                335,
+                336,
+                337,
+                338,
+                339,
+                340,
+                341,
+                342,
+                343,
+                344,
+                345,
+                346,
+                347,
+                348,
+                349,
+                350,
+                351,
+                352,
+                353,
+                354,
+                355,
+                356,
+                357,
+                358,
+                359,
+                360,
+                361,
+                362,
+                363,
+                364,
+                365,
+                366,
+                367,
+                368,
+                369,
+                370,
+                371,
+                372,
+                373,
+                374,
+                375,
+                376,
+                377,
+                378,
+                379,
+                380,
+                381
+              ]
+            }
+          }
+        },
+        {
+          "type": "expression",
+          "expression": "investmentRecord.expiredLockPeriod()",
+          "source_mapping": {
+            "start": 8884,
+            "length": 223,
+            "filename": "/../data/reentrancy/solidity_contract/11705.sol",
+            "lines": [
+              348,
+              349,
+              350,
+              351,
+              352,
+              353
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "calls-loop",
+      "impact": "Low",
+      "confidence": "Medium",
+      "description": "ERC20Vault.getLockedValue has external calls inside a loop:\n\t- investmentRecordList.popRecord(investmentRecord) (/../data/reentrancy/solidity_contract/11705.sol#349)\n",
+      "elements": [
+        {
+          "type": "function",
+          "name": "getLockedValue",
+          "source_mapping": {
+            "start": 8423,
+            "length": 726,
+            "filename": "/../data/reentrancy/solidity_contract/11705.sol",
+            "lines": [
+              339,
+              340,
+              341,
+              342,
+              343,
+              344,
+              345,
+              346,
+              347,
+              348,
+              349,
+              350,
+              351,
+              352,
+              353,
+              354,
+              355,
+              356,
+              357
+            ]
+          },
+          "contract": {
+            "type": "contract",
+            "name": "ERC20Vault",
+            "source_mapping": {
+              "start": 8209,
+              "length": 1820,
+              "filename": "/../data/reentrancy/solidity_contract/11705.sol",
+              "lines": [
+                331,
+                332,
+                333,
+                334,
+                335,
+                336,
+                337,
+                338,
+                339,
+                340,
+                341,
+                342,
+                343,
+                344,
+                345,
+                346,
+                347,
+                348,
+                349,
+                350,
+                351,
+                352,
+                353,
+                354,
+                355,
+                356,
+                357,
+                358,
+                359,
+                360,
+                361,
+                362,
+                363,
+                364,
+                365,
+                366,
+                367,
+                368,
+                369,
+                370,
+                371,
+                372,
+                373,
+                374,
+                375,
+                376,
+                377,
+                378,
+                379,
+                380,
+                381
+              ]
+            }
+          }
+        },
+        {
+          "type": "expression",
+          "expression": "investmentRecordList.popRecord(investmentRecord)",
+          "source_mapping": {
+            "start": 8939,
+            "length": 48,
+            "filename": "/../data/reentrancy/solidity_contract/11705.sol",
+            "lines": [
+              349
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "calls-loop",
+      "impact": "Low",
+      "confidence": "Medium",
+      "description": "ERC20Vault.getLockedValue has external calls inside a loop:\n\t- valueToAdd = investmentRecord.getValue() (/../data/reentrancy/solidity_contract/11705.sol#351)\n",
+      "elements": [
+        {
+          "type": "function",
+          "name": "getLockedValue",
+          "source_mapping": {
+            "start": 8423,
+            "length": 726,
+            "filename": "/../data/reentrancy/solidity_contract/11705.sol",
+            "lines": [
+              339,
+              340,
+              341,
+              342,
+              343,
+              344,
+              345,
+              346,
+              347,
+              348,
+              349,
+              350,
+              351,
+              352,
+              353,
+              354,
+              355,
+              356,
+              357
+            ]
+          },
+          "contract": {
+            "type": "contract",
+            "name": "ERC20Vault",
+            "source_mapping": {
+              "start": 8209,
+              "length": 1820,
+              "filename": "/../data/reentrancy/solidity_contract/11705.sol",
+              "lines": [
+                331,
+                332,
+                333,
+                334,
+                335,
+                336,
+                337,
+                338,
+                339,
+                340,
+                341,
+                342,
+                343,
+                344,
+                345,
+                346,
+                347,
+                348,
+                349,
+                350,
+                351,
+                352,
+                353,
+                354,
+                355,
+                356,
+                357,
+                358,
+                359,
+                360,
+                361,
+                362,
+                363,
+                364,
+                365,
+                366,
+                367,
+                368,
+                369,
+                370,
+                371,
+                372,
+                373,
+                374,
+                375,
+                376,
+                377,
+                378,
+                379,
+                380,
+                381
+              ]
+            }
+          }
+        },
+        {
+          "type": "expression",
+          "expression": "valueToAdd = investmentRecord.getValue()",
+          "source_mapping": {
+            "start": 9014,
+            "length": 45,
+            "filename": "/../data/reentrancy/solidity_contract/11705.sol",
+            "lines": [
+              351
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "reentrancy-benign",
+      "impact": "Low",
+      "confidence": "Medium",
+      "description": "Reentrancy in Erc20Wallet.depositToken (/../data/reentrancy/solidity_contract/11705.sol#117-121):\n\tExternal calls:\n\t- require(bool)(ERC20(token).transferFrom(msg.sender,this,amount)) (/../data/reentrancy/solidity_contract/11705.sol#119)\n\tState variables written after the call(s):\n\t- tokens (/../data/reentrancy/solidity_contract/11705.sol#120)\n\t- totalDeposited (/../data/reentrancy/solidity_contract/11705.sol#120)\n",
+      "elements": [
+        {
+          "type": "function",
+          "name": "depositToken",
+          "source_mapping": {
+            "start": 2506,
+            "length": 185,
+            "filename": "/../data/reentrancy/solidity_contract/11705.sol",
+            "lines": [
+              117,
+              118,
+              119,
+              120,
+              121
+            ]
+          },
+          "contract": {
+            "type": "contract",
+            "name": "Erc20Wallet",
+            "source_mapping": {
+              "start": 1293,
+              "length": 1621,
+              "filename": "/../data/reentrancy/solidity_contract/11705.sol",
+              "lines": [
+                68,
+                69,
+                70,
+                71,
+                72,
+                73,
+                74,
+                75,
+                76,
+                77,
+                78,
+                79,
+                80,
+                81,
+                82,
+                83,
+                84,
+                85,
+                86,
+                87,
+                88,
+                89,
+                90,
+                91,
+                92,
+                93,
+                94,
+                95,
+                96,
+                97,
+                98,
+                99,
+                100,
+                101,
+                102,
+                103,
+                104,
+                105,
+                106,
+                107,
+                108,
+                109,
+                110,
+                111,
+                112,
+                113,
+                114,
+                115,
+                116,
+                117,
+                118,
+                119,
+                120,
+                121,
+                122,
+                123,
+                124,
+                125,
+                126,
+                127,
+                128,
+                129
+              ]
+            }
+          }
+        },
+        {
+          "type": "external_calls",
+          "expression": "require(bool)(ERC20(token).transferFrom(msg.sender,this,amount))",
+          "source_mapping": {
+            "start": 2591,
+            "length": 61,
+            "filename": "/../data/reentrancy/solidity_contract/11705.sol",
+            "lines": [
+              119
+            ]
+          }
+        },
+        {
+          "type": "variables_written",
+          "name": "tokens",
+          "expression": "commonDeposit(token,amount)",
+          "source_mapping": {
+            "start": 2658,
+            "length": 28,
+            "filename": "/../data/reentrancy/solidity_contract/11705.sol",
+            "lines": [
+              120
+            ]
+          }
+        },
+        {
+          "type": "variables_written",
+          "name": "totalDeposited",
+          "expression": "commonDeposit(token,amount)",
+          "source_mapping": {
+            "start": 2658,
+            "length": 28,
+            "filename": "/../data/reentrancy/solidity_contract/11705.sol",
+            "lines": [
+              120
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "reentrancy-benign",
+      "impact": "Low",
+      "confidence": "Medium",
+      "description": "Reentrancy in SplitErc20Payment.depositToken (/../data/reentrancy/solidity_contract/11705.sol#162-165):\n\tExternal calls:\n\t- super.depositToken(token,amount) (/../data/reentrancy/solidity_contract/11705.sol#163)\n\tState variables written after the call(s):\n\t- payees (/../data/reentrancy/solidity_contract/11705.sol#164)\n\t- shares (/../data/reentrancy/solidity_contract/11705.sol#164)\n\t- totalShares (/../data/reentrancy/solidity_contract/11705.sol#164)\n",
+      "elements": [
+        {
+          "type": "function",
+          "name": "depositToken",
+          "source_mapping": {
+            "start": 3707,
+            "length": 154,
+            "filename": "/../data/reentrancy/solidity_contract/11705.sol",
+            "lines": [
+              162,
+              163,
+              164,
+              165
+            ]
+          },
+          "contract": {
+            "type": "contract",
+            "name": "SplitErc20Payment",
+            "source_mapping": {
+              "start": 2919,
+              "length": 2446,
+              "filename": "/../data/reentrancy/solidity_contract/11705.sol",
+              "lines": [
+                133,
+                134,
+                135,
+                136,
+                137,
+                138,
+                139,
+                140,
+                141,
+                142,
+                143,
+                144,
+                145,
+                146,
+                147,
+                148,
+                149,
+                150,
+                151,
+                152,
+                153,
+                154,
+                155,
+                156,
+                157,
+                158,
+                159,
+                160,
+                161,
+                162,
+                163,
+                164,
+                165,
+                166,
+                167,
+                168,
+                169,
+                170,
+                171,
+                172,
+                173,
+                174,
+                175,
+                176,
+                177,
+                178,
+                179,
+                180,
+                181,
+                182,
+                183,
+                184,
+                185,
+                186,
+                187,
+                188,
+                189,
+                190,
+                191,
+                192,
+                193,
+                194,
+                195,
+                196,
+                197,
+                198,
+                199,
+                200,
+                201,
+                202,
+                203,
+                204,
+                205,
+                206,
+                207,
+                208,
+                209,
+                210,
+                211,
+                212,
+                213,
+                214,
+                215,
+                216
+              ]
+            }
+          }
+        },
+        {
+          "type": "external_calls",
+          "expression": "super.depositToken(token,amount)",
+          "source_mapping": {
+            "start": 3770,
+            "length": 33,
+            "filename": "/../data/reentrancy/solidity_contract/11705.sol",
+            "lines": [
+              163
+            ]
+          }
+        },
+        {
+          "type": "variables_written",
+          "name": "shares",
+          "expression": "computePayeeBalance(token,msg.sender,amount)",
+          "source_mapping": {
+            "start": 3810,
+            "length": 46,
+            "filename": "/../data/reentrancy/solidity_contract/11705.sol",
+            "lines": [
+              164
+            ]
+          }
+        },
+        {
+          "type": "variables_written",
+          "name": "payees",
+          "expression": "computePayeeBalance(token,msg.sender,amount)",
+          "source_mapping": {
+            "start": 3810,
+            "length": 46,
+            "filename": "/../data/reentrancy/solidity_contract/11705.sol",
+            "lines": [
+              164
+            ]
+          }
+        },
+        {
+          "type": "variables_written",
+          "name": "totalShares",
+          "expression": "computePayeeBalance(token,msg.sender,amount)",
+          "source_mapping": {
+            "start": 3810,
+            "length": 46,
+            "filename": "/../data/reentrancy/solidity_contract/11705.sol",
+            "lines": [
+              164
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "external-function",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "ERC20Basic.totalSupply (/../data/reentrancy/solidity_contract/11705.sol#45) should be declared external\n",
+      "elements": [
+        {
+          "type": "function",
+          "name": "totalSupply",
+          "source_mapping": {
+            "start": 636,
+            "length": 53,
+            "filename": "/../data/reentrancy/solidity_contract/11705.sol",
+            "lines": [
+              45
+            ]
+          },
+          "contract": {
+            "type": "contract",
+            "name": "ERC20Basic",
+            "source_mapping": {
+              "start": 612,
+              "length": 289,
+              "filename": "/../data/reentrancy/solidity_contract/11705.sol",
+              "lines": [
+                44,
+                45,
+                46,
+                47,
+                48,
+                49
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "check": "external-function",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "ERC20Basic.balanceOf (/../data/reentrancy/solidity_contract/11705.sol#46) should be declared external\n",
+      "elements": [
+        {
+          "type": "function",
+          "name": "balanceOf",
+          "source_mapping": {
+            "start": 692,
+            "length": 62,
+            "filename": "/../data/reentrancy/solidity_contract/11705.sol",
+            "lines": [
+              46
+            ]
+          },
+          "contract": {
+            "type": "contract",
+            "name": "ERC20Basic",
+            "source_mapping": {
+              "start": 612,
+              "length": 289,
+              "filename": "/../data/reentrancy/solidity_contract/11705.sol",
+              "lines": [
+                44,
+                45,
+                46,
+                47,
+                48,
+                49
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "check": "external-function",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "ERC20Basic.transfer (/../data/reentrancy/solidity_contract/11705.sol#47) should be declared external\n",
+      "elements": [
+        {
+          "type": "function",
+          "name": "transfer",
+          "source_mapping": {
+            "start": 757,
+            "length": 67,
+            "filename": "/../data/reentrancy/solidity_contract/11705.sol",
+            "lines": [
+              47
+            ]
+          },
+          "contract": {
+            "type": "contract",
+            "name": "ERC20Basic",
+            "source_mapping": {
+              "start": 612,
+              "length": 289,
+              "filename": "/../data/reentrancy/solidity_contract/11705.sol",
+              "lines": [
+                44,
+                45,
+                46,
+                47,
+                48,
+                49
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "check": "external-function",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "ERC20.allowance (/../data/reentrancy/solidity_contract/11705.sol#54-55) should be declared external\n",
+      "elements": [
+        {
+          "type": "function",
+          "name": "allowance",
+          "source_mapping": {
+            "start": 939,
+            "length": 85,
+            "filename": "/../data/reentrancy/solidity_contract/11705.sol",
+            "lines": [
+              54,
+              55
+            ]
+          },
+          "contract": {
+            "type": "contract",
+            "name": "ERC20",
+            "source_mapping": {
+              "start": 906,
+              "length": 385,
+              "filename": "/../data/reentrancy/solidity_contract/11705.sol",
+              "lines": [
+                53,
+                54,
+                55,
+                56,
+                57,
+                58,
+                59,
+                60,
+                61,
+                62,
+                63,
+                64,
+                65,
+                66
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "check": "external-function",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "ERC20.transferFrom (/../data/reentrancy/solidity_contract/11705.sol#57-58) should be declared external\n",
+      "elements": [
+        {
+          "type": "function",
+          "name": "transferFrom",
+          "source_mapping": {
+            "start": 1028,
+            "length": 89,
+            "filename": "/../data/reentrancy/solidity_contract/11705.sol",
+            "lines": [
+              57,
+              58
+            ]
+          },
+          "contract": {
+            "type": "contract",
+            "name": "ERC20",
+            "source_mapping": {
+              "start": 906,
+              "length": 385,
+              "filename": "/../data/reentrancy/solidity_contract/11705.sol",
+              "lines": [
+                53,
+                54,
+                55,
+                56,
+                57,
+                58,
+                59,
+                60,
+                61,
+                62,
+                63,
+                64,
+                65,
+                66
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "check": "external-function",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "ERC20.approve (/../data/reentrancy/solidity_contract/11705.sol#60) should be declared external\n",
+      "elements": [
+        {
+          "type": "function",
+          "name": "approve",
+          "source_mapping": {
+            "start": 1121,
+            "length": 71,
+            "filename": "/../data/reentrancy/solidity_contract/11705.sol",
+            "lines": [
+              60
+            ]
+          },
+          "contract": {
+            "type": "contract",
+            "name": "ERC20",
+            "source_mapping": {
+              "start": 906,
+              "length": 385,
+              "filename": "/../data/reentrancy/solidity_contract/11705.sol",
+              "lines": [
+                53,
+                54,
+                55,
+                56,
+                57,
+                58,
+                59,
+                60,
+                61,
+                62,
+                63,
+                64,
+                65,
+                66
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "check": "external-function",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Erc20Wallet.fallback (/../data/reentrancy/solidity_contract/11705.sol#76-78) should be declared external\n",
+      "elements": [
+        {
+          "type": "function",
+          "name": "fallback",
+          "source_mapping": {
+            "start": 1585,
+            "length": 37,
+            "filename": "/../data/reentrancy/solidity_contract/11705.sol",
+            "lines": [
+              76,
+              77,
+              78
+            ]
+          },
+          "contract": {
+            "type": "contract",
+            "name": "Erc20Wallet",
+            "source_mapping": {
+              "start": 1293,
+              "length": 1621,
+              "filename": "/../data/reentrancy/solidity_contract/11705.sol",
+              "lines": [
+                68,
+                69,
+                70,
+                71,
+                72,
+                73,
+                74,
+                75,
+                76,
+                77,
+                78,
+                79,
+                80,
+                81,
+                82,
+                83,
+                84,
+                85,
+                86,
+                87,
+                88,
+                89,
+                90,
+                91,
+                92,
+                93,
+                94,
+                95,
+                96,
+                97,
+                98,
+                99,
+                100,
+                101,
+                102,
+                103,
+                104,
+                105,
+                106,
+                107,
+                108,
+                109,
+                110,
+                111,
+                112,
+                113,
+                114,
+                115,
+                116,
+                117,
+                118,
+                119,
+                120,
+                121,
+                122,
+                123,
+                124,
+                125,
+                126,
+                127,
+                128,
+                129
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "check": "external-function",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Erc20Wallet.withdraw (/../data/reentrancy/solidity_contract/11705.sol#112-114) should be declared external\n",
+      "elements": [
+        {
+          "type": "function",
+          "name": "withdraw",
+          "source_mapping": {
+            "start": 2427,
+            "length": 74,
+            "filename": "/../data/reentrancy/solidity_contract/11705.sol",
+            "lines": [
+              112,
+              113,
+              114
+            ]
+          },
+          "contract": {
+            "type": "contract",
+            "name": "Erc20Wallet",
+            "source_mapping": {
+              "start": 1293,
+              "length": 1621,
+              "filename": "/../data/reentrancy/solidity_contract/11705.sol",
+              "lines": [
+                68,
+                69,
+                70,
+                71,
+                72,
+                73,
+                74,
+                75,
+                76,
+                77,
+                78,
+                79,
+                80,
+                81,
+                82,
+                83,
+                84,
+                85,
+                86,
+                87,
+                88,
+                89,
+                90,
+                91,
+                92,
+                93,
+                94,
+                95,
+                96,
+                97,
+                98,
+                99,
+                100,
+                101,
+                102,
+                103,
+                104,
+                105,
+                106,
+                107,
+                108,
+                109,
+                110,
+                111,
+                112,
+                113,
+                114,
+                115,
+                116,
+                117,
+                118,
+                119,
+                120,
+                121,
+                122,
+                123,
+                124,
+                125,
+                126,
+                127,
+                128,
+                129
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "check": "external-function",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "SplitErc20Payment.withdraw (/../data/reentrancy/solidity_contract/11705.sol#146-148) should be declared external\n",
+      "elements": [
+        {
+          "type": "function",
+          "name": "withdraw",
+          "source_mapping": {
+            "start": 3322,
+            "length": 50,
+            "filename": "/../data/reentrancy/solidity_contract/11705.sol",
+            "lines": [
+              146,
+              147,
+              148
+            ]
+          },
+          "contract": {
+            "type": "contract",
+            "name": "SplitErc20Payment",
+            "source_mapping": {
+              "start": 2919,
+              "length": 2446,
+              "filename": "/../data/reentrancy/solidity_contract/11705.sol",
+              "lines": [
+                133,
+                134,
+                135,
+                136,
+                137,
+                138,
+                139,
+                140,
+                141,
+                142,
+                143,
+                144,
+                145,
+                146,
+                147,
+                148,
+                149,
+                150,
+                151,
+                152,
+                153,
+                154,
+                155,
+                156,
+                157,
+                158,
+                159,
+                160,
+                161,
+                162,
+                163,
+                164,
+                165,
+                166,
+                167,
+                168,
+                169,
+                170,
+                171,
+                172,
+                173,
+                174,
+                175,
+                176,
+                177,
+                178,
+                179,
+                180,
+                181,
+                182,
+                183,
+                184,
+                185,
+                186,
+                187,
+                188,
+                189,
+                190,
+                191,
+                192,
+                193,
+                194,
+                195,
+                196,
+                197,
+                198,
+                199,
+                200,
+                201,
+                202,
+                203,
+                204,
+                205,
+                206,
+                207,
+                208,
+                209,
+                210,
+                211,
+                212,
+                213,
+                214,
+                215,
+                216
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "check": "external-function",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Erc20Wallet.balanceOf (/../data/reentrancy/solidity_contract/11705.sol#126-128) should be declared external\n",
+      "elements": [
+        {
+          "type": "function",
+          "name": "balanceOf",
+          "source_mapping": {
+            "start": 2796,
+            "length": 116,
+            "filename": "/../data/reentrancy/solidity_contract/11705.sol",
+            "lines": [
+              126,
+              127,
+              128
+            ]
+          },
+          "contract": {
+            "type": "contract",
+            "name": "Erc20Wallet",
+            "source_mapping": {
+              "start": 1293,
+              "length": 1621,
+              "filename": "/../data/reentrancy/solidity_contract/11705.sol",
+              "lines": [
+                68,
+                69,
+                70,
+                71,
+                72,
+                73,
+                74,
+                75,
+                76,
+                77,
+                78,
+                79,
+                80,
+                81,
+                82,
+                83,
+                84,
+                85,
+                86,
+                87,
+                88,
+                89,
+                90,
+                91,
+                92,
+                93,
+                94,
+                95,
+                96,
+                97,
+                98,
+                99,
+                100,
+                101,
+                102,
+                103,
+                104,
+                105,
+                106,
+                107,
+                108,
+                109,
+                110,
+                111,
+                112,
+                113,
+                114,
+                115,
+                116,
+                117,
+                118,
+                119,
+                120,
+                121,
+                122,
+                123,
+                124,
+                125,
+                126,
+                127,
+                128,
+                129
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "check": "external-function",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "ERC20Vault.claim (/../data/reentrancy/solidity_contract/11705.sol#358-364) should be declared external\n",
+      "elements": [
+        {
+          "type": "function",
+          "name": "claim",
+          "source_mapping": {
+            "start": 9152,
+            "length": 250,
+            "filename": "/../data/reentrancy/solidity_contract/11705.sol",
+            "lines": [
+              358,
+              359,
+              360,
+              361,
+              362,
+              363,
+              364
+            ]
+          },
+          "contract": {
+            "type": "contract",
+            "name": "ERC20Vault",
+            "source_mapping": {
+              "start": 8209,
+              "length": 1820,
+              "filename": "/../data/reentrancy/solidity_contract/11705.sol",
+              "lines": [
+                331,
+                332,
+                333,
+                334,
+                335,
+                336,
+                337,
+                338,
+                339,
+                340,
+                341,
+                342,
+                343,
+                344,
+                345,
+                346,
+                347,
+                348,
+                349,
+                350,
+                351,
+                352,
+                353,
+                354,
+                355,
+                356,
+                357,
+                358,
+                359,
+                360,
+                361,
+                362,
+                363,
+                364,
+                365,
+                366,
+                367,
+                368,
+                369,
+                370,
+                371,
+                372,
+                373,
+                374,
+                375,
+                376,
+                377,
+                378,
+                379,
+                380,
+                381
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "check": "external-function",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "SplitErc20Payment.claim (/../data/reentrancy/solidity_contract/11705.sol#184-186) should be declared external\n",
+      "elements": [
+        {
+          "type": "function",
+          "name": "claim",
+          "source_mapping": {
+            "start": 4451,
+            "length": 123,
+            "filename": "/../data/reentrancy/solidity_contract/11705.sol",
+            "lines": [
+              184,
+              185,
+              186
+            ]
+          },
+          "contract": {
+            "type": "contract",
+            "name": "SplitErc20Payment",
+            "source_mapping": {
+              "start": 2919,
+              "length": 2446,
+              "filename": "/../data/reentrancy/solidity_contract/11705.sol",
+              "lines": [
+                133,
+                134,
+                135,
+                136,
+                137,
+                138,
+                139,
+                140,
+                141,
+                142,
+                143,
+                144,
+                145,
+                146,
+                147,
+                148,
+                149,
+                150,
+                151,
+                152,
+                153,
+                154,
+                155,
+                156,
+                157,
+                158,
+                159,
+                160,
+                161,
+                162,
+                163,
+                164,
+                165,
+                166,
+                167,
+                168,
+                169,
+                170,
+                171,
+                172,
+                173,
+                174,
+                175,
+                176,
+                177,
+                178,
+                179,
+                180,
+                181,
+                182,
+                183,
+                184,
+                185,
+                186,
+                187,
+                188,
+                189,
+                190,
+                191,
+                192,
+                193,
+                194,
+                195,
+                196,
+                197,
+                198,
+                199,
+                200,
+                201,
+                202,
+                203,
+                204,
+                205,
+                206,
+                207,
+                208,
+                209,
+                210,
+                211,
+                212,
+                213,
+                214,
+                215,
+                216
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "check": "external-function",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Ownable.renounceOwnership (/../data/reentrancy/solidity_contract/11705.sol#242-245) should be declared external\n",
+      "elements": [
+        {
+          "type": "function",
+          "name": "renounceOwnership",
+          "source_mapping": {
+            "start": 5713,
+            "length": 111,
+            "filename": "/../data/reentrancy/solidity_contract/11705.sol",
+            "lines": [
+              242,
+              243,
+              244,
+              245
+            ]
+          },
+          "contract": {
+            "type": "contract",
+            "name": "Ownable",
+            "source_mapping": {
+              "start": 5369,
+              "length": 747,
+              "filename": "/../data/reentrancy/solidity_contract/11705.sol",
+              "lines": [
+                219,
+                220,
+                221,
+                222,
+                223,
+                224,
+                225,
+                226,
+                227,
+                228,
+                229,
+                230,
+                231,
+                232,
+                233,
+                234,
+                235,
+                236,
+                237,
+                238,
+                239,
+                240,
+                241,
+                242,
+                243,
+                244,
+                245,
+                246,
+                247,
+                248,
+                249,
+                250,
+                251,
+                252,
+                253,
+                254,
+                255,
+                256,
+                257,
+                258
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "check": "external-function",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Ownable.transferOwnership (/../data/reentrancy/solidity_contract/11705.sol#248-250) should be declared external\n",
+      "elements": [
+        {
+          "type": "function",
+          "name": "transferOwnership",
+          "source_mapping": {
+            "start": 5832,
+            "length": 103,
+            "filename": "/../data/reentrancy/solidity_contract/11705.sol",
+            "lines": [
+              248,
+              249,
+              250
+            ]
+          },
+          "contract": {
+            "type": "contract",
+            "name": "Ownable",
+            "source_mapping": {
+              "start": 5369,
+              "length": 747,
+              "filename": "/../data/reentrancy/solidity_contract/11705.sol",
+              "lines": [
+                219,
+                220,
+                221,
+                222,
+                223,
+                224,
+                225,
+                226,
+                227,
+                228,
+                229,
+                230,
+                231,
+                232,
+                233,
+                234,
+                235,
+                236,
+                237,
+                238,
+                239,
+                240,
+                241,
+                242,
+                243,
+                244,
+                245,
+                246,
+                247,
+                248,
+                249,
+                250,
+                251,
+                252,
+                253,
+                254,
+                255,
+                256,
+                257,
+                258
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "check": "external-function",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "InvestmentRecordList.getInvestmentRecord (/../data/reentrancy/solidity_contract/11705.sol#266-268) should be declared external\n",
+      "elements": [
+        {
+          "type": "function",
+          "name": "getInvestmentRecord",
+          "source_mapping": {
+            "start": 6279,
+            "length": 128,
+            "filename": "/../data/reentrancy/solidity_contract/11705.sol",
+            "lines": [
+              266,
+              267,
+              268
+            ]
+          },
+          "contract": {
+            "type": "contract",
+            "name": "InvestmentRecordList",
+            "source_mapping": {
+              "start": 6119,
+              "length": 1419,
+              "filename": "/../data/reentrancy/solidity_contract/11705.sol",
+              "lines": [
+                261,
+                262,
+                263,
+                264,
+                265,
+                266,
+                267,
+                268,
+                269,
+                270,
+                271,
+                272,
+                273,
+                274,
+                275,
+                276,
+                277,
+                278,
+                279,
+                280,
+                281,
+                282,
+                283,
+                284,
+                285,
+                286,
+                287,
+                288,
+                289,
+                290,
+                291,
+                292,
+                293,
+                294,
+                295,
+                296,
+                297,
+                298,
+                299,
+                300
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "check": "external-function",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "InvestmentRecordList.getInvestmentRecordListLength (/../data/reentrancy/solidity_contract/11705.sol#269-271) should be declared external\n",
+      "elements": [
+        {
+          "type": "function",
+          "name": "getInvestmentRecordListLength",
+          "source_mapping": {
+            "start": 6412,
+            "length": 116,
+            "filename": "/../data/reentrancy/solidity_contract/11705.sol",
+            "lines": [
+              269,
+              270,
+              271
+            ]
+          },
+          "contract": {
+            "type": "contract",
+            "name": "InvestmentRecordList",
+            "source_mapping": {
+              "start": 6119,
+              "length": 1419,
+              "filename": "/../data/reentrancy/solidity_contract/11705.sol",
+              "lines": [
+                261,
+                262,
+                263,
+                264,
+                265,
+                266,
+                267,
+                268,
+                269,
+                270,
+                271,
+                272,
+                273,
+                274,
+                275,
+                276,
+                277,
+                278,
+                279,
+                280,
+                281,
+                282,
+                283,
+                284,
+                285,
+                286,
+                287,
+                288,
+                289,
+                290,
+                291,
+                292,
+                293,
+                294,
+                295,
+                296,
+                297,
+                298,
+                299,
+                300
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "check": "external-function",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "InvestmentRecordList.pushRecord (/../data/reentrancy/solidity_contract/11705.sol#273-275) should be declared external\n",
+      "elements": [
+        {
+          "type": "function",
+          "name": "pushRecord",
+          "source_mapping": {
+            "start": 6534,
+            "length": 131,
+            "filename": "/../data/reentrancy/solidity_contract/11705.sol",
+            "lines": [
+              273,
+              274,
+              275
+            ]
+          },
+          "contract": {
+            "type": "contract",
+            "name": "InvestmentRecordList",
+            "source_mapping": {
+              "start": 6119,
+              "length": 1419,
+              "filename": "/../data/reentrancy/solidity_contract/11705.sol",
+              "lines": [
+                261,
+                262,
+                263,
+                264,
+                265,
+                266,
+                267,
+                268,
+                269,
+                270,
+                271,
+                272,
+                273,
+                274,
+                275,
+                276,
+                277,
+                278,
+                279,
+                280,
+                281,
+                282,
+                283,
+                284,
+                285,
+                286,
+                287,
+                288,
+                289,
+                290,
+                291,
+                292,
+                293,
+                294,
+                295,
+                296,
+                297,
+                298,
+                299,
+                300
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "check": "external-function",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "InvestmentRecordList.popRecord (/../data/reentrancy/solidity_contract/11705.sol#277-289) should be declared external\n",
+      "elements": [
+        {
+          "type": "function",
+          "name": "popRecord",
+          "source_mapping": {
+            "start": 6671,
+            "length": 503,
+            "filename": "/../data/reentrancy/solidity_contract/11705.sol",
+            "lines": [
+              277,
+              278,
+              279,
+              280,
+              281,
+              282,
+              283,
+              284,
+              285,
+              286,
+              287,
+              288,
+              289
+            ]
+          },
+          "contract": {
+            "type": "contract",
+            "name": "InvestmentRecordList",
+            "source_mapping": {
+              "start": 6119,
+              "length": 1419,
+              "filename": "/../data/reentrancy/solidity_contract/11705.sol",
+              "lines": [
+                261,
+                262,
+                263,
+                264,
+                265,
+                266,
+                267,
+                268,
+                269,
+                270,
+                271,
+                272,
+                273,
+                274,
+                275,
+                276,
+                277,
+                278,
+                279,
+                280,
+                281,
+                282,
+                283,
+                284,
+                285,
+                286,
+                287,
+                288,
+                289,
+                290,
+                291,
+                292,
+                293,
+                294,
+                295,
+                296,
+                297,
+                298,
+                299,
+                300
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "check": "external-function",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "InvestmentRecord.expiredLockPeriod (/../data/reentrancy/solidity_contract/11705.sol#317-319) should be declared external\n",
+      "elements": [
+        {
+          "type": "function",
+          "name": "expiredLockPeriod",
+          "source_mapping": {
+            "start": 7920,
+            "length": 109,
+            "filename": "/../data/reentrancy/solidity_contract/11705.sol",
+            "lines": [
+              317,
+              318,
+              319
+            ]
+          },
+          "contract": {
+            "type": "contract",
+            "name": "InvestmentRecord",
+            "source_mapping": {
+              "start": 7540,
+              "length": 666,
+              "filename": "/../data/reentrancy/solidity_contract/11705.sol",
+              "lines": [
+                302,
+                303,
+                304,
+                305,
+                306,
+                307,
+                308,
+                309,
+                310,
+                311,
+                312,
+                313,
+                314,
+                315,
+                316,
+                317,
+                318,
+                319,
+                320,
+                321,
+                322,
+                323,
+                324,
+                325,
+                326,
+                327,
+                328
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "check": "external-function",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "InvestmentRecord.getValue (/../data/reentrancy/solidity_contract/11705.sol#321-323) should be declared external\n",
+      "elements": [
+        {
+          "type": "function",
+          "name": "getValue",
+          "source_mapping": {
+            "start": 8035,
+            "length": 76,
+            "filename": "/../data/reentrancy/solidity_contract/11705.sol",
+            "lines": [
+              321,
+              322,
+              323
+            ]
+          },
+          "contract": {
+            "type": "contract",
+            "name": "InvestmentRecord",
+            "source_mapping": {
+              "start": 7540,
+              "length": 666,
+              "filename": "/../data/reentrancy/solidity_contract/11705.sol",
+              "lines": [
+                302,
+                303,
+                304,
+                305,
+                306,
+                307,
+                308,
+                309,
+                310,
+                311,
+                312,
+                313,
+                314,
+                315,
+                316,
+                317,
+                318,
+                319,
+                320,
+                321,
+                322,
+                323,
+                324,
+                325,
+                326,
+                327,
+                328
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "check": "external-function",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "InvestmentRecord.getToken (/../data/reentrancy/solidity_contract/11705.sol#325-327) should be declared external\n",
+      "elements": [
+        {
+          "type": "function",
+          "name": "getToken",
+          "source_mapping": {
+            "start": 8121,
+            "length": 79,
+            "filename": "/../data/reentrancy/solidity_contract/11705.sol",
+            "lines": [
+              325,
+              326,
+              327
+            ]
+          },
+          "contract": {
+            "type": "contract",
+            "name": "InvestmentRecord",
+            "source_mapping": {
+              "start": 7540,
+              "length": 666,
+              "filename": "/../data/reentrancy/solidity_contract/11705.sol",
+              "lines": [
+                302,
+                303,
+                304,
+                305,
+                306,
+                307,
+                308,
+                309,
+                310,
+                311,
+                312,
+                313,
+                314,
+                315,
+                316,
+                317,
+                318,
+                319,
+                320,
+                321,
+                322,
+                323,
+                324,
+                325,
+                326,
+                327,
+                328
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "check": "external-function",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "ERC20Vault.depositTokenToVault (/../data/reentrancy/solidity_contract/11705.sol#374-380) should be declared external\n",
+      "elements": [
+        {
+          "type": "function",
+          "name": "depositTokenToVault",
+          "source_mapping": {
+            "start": 9672,
+            "length": 355,
+            "filename": "/../data/reentrancy/solidity_contract/11705.sol",
+            "lines": [
+              374,
+              375,
+              376,
+              377,
+              378,
+              379,
+              380
+            ]
+          },
+          "contract": {
+            "type": "contract",
+            "name": "ERC20Vault",
+            "source_mapping": {
+              "start": 8209,
+              "length": 1820,
+              "filename": "/../data/reentrancy/solidity_contract/11705.sol",
+              "lines": [
+                331,
+                332,
+                333,
+                334,
+                335,
+                336,
+                337,
+                338,
+                339,
+                340,
+                341,
+                342,
+                343,
+                344,
+                345,
+                346,
+                347,
+                348,
+                349,
+                350,
+                351,
+                352,
+                353,
+                354,
+                355,
+                356,
+                357,
+                358,
+                359,
+                360,
+                361,
+                362,
+                363,
+                364,
+                365,
+                366,
+                367,
+                368,
+                369,
+                370,
+                371,
+                372,
+                373,
+                374,
+                375,
+                376,
+                377,
+                378,
+                379,
+                380,
+                381
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "check": "solc-version",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Detected issues with version pragma in /../data/reentrancy/solidity_contract/11705.sol:\n\t- pragma solidity^0.4.23 (/../data/reentrancy/solidity_contract/11705.sol#1): it allows old versions\n",
+      "elements": [
+        {
+          "type": "expression",
+          "expression": "^0.4.23",
+          "source_mapping": {
+            "start": 0,
+            "length": 24,
+            "filename": "/../data/reentrancy/solidity_contract/11705.sol",
+            "lines": [
+              1
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "low-level-calls",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Low level call in Erc20Wallet.commonWithdraw (/../data/reentrancy/solidity_contract/11705.sol#94-107):\n\t-require(bool)(msg.sender.call.value(value)()) /../data/reentrancy/solidity_contract/11705.sol#98-101\n",
+      "elements": [
+        {
+          "type": "function",
+          "name": "commonWithdraw",
+          "source_mapping": {
+            "start": 1942,
+            "length": 406,
+            "filename": "/../data/reentrancy/solidity_contract/11705.sol",
+            "lines": [
+              94,
+              95,
+              96,
+              97,
+              98,
+              99,
+              100,
+              101,
+              102,
+              103,
+              104,
+              105,
+              106,
+              107
+            ]
+          },
+          "contract": {
+            "type": "contract",
+            "name": "Erc20Wallet",
+            "source_mapping": {
+              "start": 1293,
+              "length": 1621,
+              "filename": "/../data/reentrancy/solidity_contract/11705.sol",
+              "lines": [
+                68,
+                69,
+                70,
+                71,
+                72,
+                73,
+                74,
+                75,
+                76,
+                77,
+                78,
+                79,
+                80,
+                81,
+                82,
+                83,
+                84,
+                85,
+                86,
+                87,
+                88,
+                89,
+                90,
+                91,
+                92,
+                93,
+                94,
+                95,
+                96,
+                97,
+                98,
+                99,
+                100,
+                101,
+                102,
+                103,
+                104,
+                105,
+                106,
+                107,
+                108,
+                109,
+                110,
+                111,
+                112,
+                113,
+                114,
+                115,
+                116,
+                117,
+                118,
+                119,
+                120,
+                121,
+                122,
+                123,
+                124,
+                125,
+                126,
+                127,
+                128,
+                129
+              ]
+            }
+          }
+        },
+        {
+          "type": "expression",
+          "expression": "require(bool)(msg.sender.call.value(value)())",
+          "source_mapping": {
+            "start": 2134,
+            "length": 112,
+            "filename": "/../data/reentrancy/solidity_contract/11705.sol",
+            "lines": [
+              98,
+              99,
+              100,
+              101
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "naming-convention",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Parameter '' of SplitErc20Payment.withdraw (/../data/reentrancy/solidity_contract/11705.sol#146) is not in mixedCase\n",
+      "elements": [
+        {
+          "target": "parameter",
+          "convention": "mixedCase",
+          "name": "",
+          "source_mapping": {
+            "start": 3340,
+            "length": 4,
+            "filename": "/../data/reentrancy/solidity_contract/11705.sol",
+            "lines": [
+              146
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "naming-convention",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Parameter '' of SplitErc20Payment.withdrawToken (/../data/reentrancy/solidity_contract/11705.sol#143) is not in mixedCase\n",
+      "elements": [
+        {
+          "target": "parameter",
+          "convention": "mixedCase",
+          "name": "",
+          "source_mapping": {
+            "start": 3279,
+            "length": 7,
+            "filename": "/../data/reentrancy/solidity_contract/11705.sol",
+            "lines": [
+              143
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "naming-convention",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Parameter '_scope_0' of SplitErc20Payment.withdrawToken (/../data/reentrancy/solidity_contract/11705.sol#143) is not in mixedCase\n",
+      "elements": [
+        {
+          "target": "parameter",
+          "convention": "mixedCase",
+          "name": "_scope_0",
+          "source_mapping": {
+            "start": 3288,
+            "length": 4,
+            "filename": "/../data/reentrancy/solidity_contract/11705.sol",
+            "lines": [
+              143
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "naming-convention",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Parameter '_payee' of SplitErc20Payment.addPayee (/../data/reentrancy/solidity_contract/11705.sol#198) is not in mixedCase\n",
+      "elements": [
+        {
+          "target": "parameter",
+          "convention": "mixedCase",
+          "name": "_payee",
+          "source_mapping": {
+            "start": 4845,
+            "length": 14,
+            "filename": "/../data/reentrancy/solidity_contract/11705.sol",
+            "lines": [
+              198
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "naming-convention",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Parameter '_shares' of SplitErc20Payment.addPayee (/../data/reentrancy/solidity_contract/11705.sol#198) is not in mixedCase\n",
+      "elements": [
+        {
+          "target": "parameter",
+          "convention": "mixedCase",
+          "name": "_shares",
+          "source_mapping": {
+            "start": 4861,
+            "length": 15,
+            "filename": "/../data/reentrancy/solidity_contract/11705.sol",
+            "lines": [
+              198
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "naming-convention",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Parameter '_payee' of SplitErc20Payment.addToPayeeBalance (/../data/reentrancy/solidity_contract/11705.sol#208) is not in mixedCase\n",
+      "elements": [
+        {
+          "target": "parameter",
+          "convention": "mixedCase",
+          "name": "_payee",
+          "source_mapping": {
+            "start": 5141,
+            "length": 14,
+            "filename": "/../data/reentrancy/solidity_contract/11705.sol",
+            "lines": [
+              208
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "naming-convention",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Parameter '_shares' of SplitErc20Payment.addToPayeeBalance (/../data/reentrancy/solidity_contract/11705.sol#208) is not in mixedCase\n",
+      "elements": [
+        {
+          "target": "parameter",
+          "convention": "mixedCase",
+          "name": "_shares",
+          "source_mapping": {
+            "start": 5157,
+            "length": 15,
+            "filename": "/../data/reentrancy/solidity_contract/11705.sol",
+            "lines": [
+              208
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "naming-convention",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Parameter '_newOwner' of Ownable.transferOwnership (/../data/reentrancy/solidity_contract/11705.sol#248) is not in mixedCase\n",
+      "elements": [
+        {
+          "target": "parameter",
+          "convention": "mixedCase",
+          "name": "_newOwner",
+          "source_mapping": {
+            "start": 5859,
+            "length": 17,
+            "filename": "/../data/reentrancy/solidity_contract/11705.sol",
+            "lines": [
+              248
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "naming-convention",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Function 'Ownable._transferOwnership' (/../data/reentrancy/solidity_contract/11705.sol#253-257) is not in mixedCase\n",
+      "elements": [
+        {
+          "target": "function",
+          "convention": "mixedCase",
+          "name": "_transferOwnership",
+          "source_mapping": {
+            "start": 5943,
+            "length": 171,
+            "filename": "/../data/reentrancy/solidity_contract/11705.sol",
+            "lines": [
+              253,
+              254,
+              255,
+              256,
+              257
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "naming-convention",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Parameter '_newOwner' of Ownable._transferOwnership (/../data/reentrancy/solidity_contract/11705.sol#253) is not in mixedCase\n",
+      "elements": [
+        {
+          "target": "parameter",
+          "convention": "mixedCase",
+          "name": "_newOwner",
+          "source_mapping": {
+            "start": 5971,
+            "length": 17,
+            "filename": "/../data/reentrancy/solidity_contract/11705.sol",
+            "lines": [
+              253
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "naming-convention",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Parameter '_investmentRecord' of InvestmentRecordList.pushRecord (/../data/reentrancy/solidity_contract/11705.sol#273) is not in mixedCase\n",
+      "elements": [
+        {
+          "target": "parameter",
+          "convention": "mixedCase",
+          "name": "_investmentRecord",
+          "source_mapping": {
+            "start": 6555,
+            "length": 34,
+            "filename": "/../data/reentrancy/solidity_contract/11705.sol",
+            "lines": [
+              273
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "naming-convention",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Parameter '_investmentRecord' of InvestmentRecordList.popRecord (/../data/reentrancy/solidity_contract/11705.sol#277) is not in mixedCase\n",
+      "elements": [
+        {
+          "target": "parameter",
+          "convention": "mixedCase",
+          "name": "_investmentRecord",
+          "source_mapping": {
+            "start": 6691,
+            "length": 34,
+            "filename": "/../data/reentrancy/solidity_contract/11705.sol",
+            "lines": [
+              277
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "naming-convention",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Parameter '_investmentRecord' of InvestmentRecordList.getIndex (/../data/reentrancy/solidity_contract/11705.sol#291) is not in mixedCase\n",
+      "elements": [
+        {
+          "target": "parameter",
+          "convention": "mixedCase",
+          "name": "_investmentRecord",
+          "source_mapping": {
+            "start": 7199,
+            "length": 34,
+            "filename": "/../data/reentrancy/solidity_contract/11705.sol",
+            "lines": [
+              291
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "naming-convention",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Parameter '_token' of InvestmentRecord. (/../data/reentrancy/solidity_contract/11705.sol#310) is not in mixedCase\n",
+      "elements": [
+        {
+          "target": "parameter",
+          "convention": "mixedCase",
+          "name": "_token",
+          "source_mapping": {
+            "start": 7723,
+            "length": 14,
+            "filename": "/../data/reentrancy/solidity_contract/11705.sol",
+            "lines": [
+              310
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "naming-convention",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Parameter '_timeStamp' of InvestmentRecord. (/../data/reentrancy/solidity_contract/11705.sol#310) is not in mixedCase\n",
+      "elements": [
+        {
+          "target": "parameter",
+          "convention": "mixedCase",
+          "name": "_timeStamp",
+          "source_mapping": {
+            "start": 7739,
+            "length": 15,
+            "filename": "/../data/reentrancy/solidity_contract/11705.sol",
+            "lines": [
+              310
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "naming-convention",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Parameter '_lockPeriod' of InvestmentRecord. (/../data/reentrancy/solidity_contract/11705.sol#310) is not in mixedCase\n",
+      "elements": [
+        {
+          "target": "parameter",
+          "convention": "mixedCase",
+          "name": "_lockPeriod",
+          "source_mapping": {
+            "start": 7756,
+            "length": 16,
+            "filename": "/../data/reentrancy/solidity_contract/11705.sol",
+            "lines": [
+              310
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "naming-convention",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Parameter '_value' of InvestmentRecord. (/../data/reentrancy/solidity_contract/11705.sol#310) is not in mixedCase\n",
+      "elements": [
+        {
+          "target": "parameter",
+          "convention": "mixedCase",
+          "name": "_value",
+          "source_mapping": {
+            "start": 7774,
+            "length": 11,
+            "filename": "/../data/reentrancy/solidity_contract/11705.sol",
+            "lines": [
+              310
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "naming-convention",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Parameter '' of ERC20Vault.withdrawToken (/../data/reentrancy/solidity_contract/11705.sol#335) is not in mixedCase\n",
+      "elements": [
+        {
+          "target": "parameter",
+          "convention": "mixedCase",
+          "name": "",
+          "source_mapping": {
+            "start": 8378,
+            "length": 7,
+            "filename": "/../data/reentrancy/solidity_contract/11705.sol",
+            "lines": [
+              335
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "naming-convention",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Parameter '_scope_0' of ERC20Vault.withdrawToken (/../data/reentrancy/solidity_contract/11705.sol#335) is not in mixedCase\n",
+      "elements": [
+        {
+          "target": "parameter",
+          "convention": "mixedCase",
+          "name": "_scope_0",
+          "source_mapping": {
+            "start": 8387,
+            "length": 4,
+            "filename": "/../data/reentrancy/solidity_contract/11705.sol",
+            "lines": [
+              335
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "contract": "28869",
+  "tool": "honeybadger",
+  "start": 1609191689.3395789,
+  "end": 1609191959.294061,
+  "duration": 269.95448207855225,
+  "analysis": [
+    {
+      "errors": [],
+      "file": "/../data/reentrancy/solidity_contract/28869.sol",
+      "name": "MultiSigWallet"
+    }
+  ]
+}

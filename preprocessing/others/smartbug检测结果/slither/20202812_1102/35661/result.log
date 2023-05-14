@@ -1,0 +1,624 @@
+INFO:Slither:Compilation warnings/errors on /../data/reentrancy/solidity_contract/35661.sol:
+/../data/reentrancy/solidity_contract/35661.sol:94:3: Warning: Defining constructors as functions with the same name as the contract is deprecated. Use "constructor(...) { ... }" instead.
+  function Ownable() {
+  ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/35661.sol:121:17: Warning: "throw" is deprecated in favour of "revert()", "require()" and "assert()".
+    if (halted) throw;
+                ^---^
+/../data/reentrancy/solidity_contract/35661.sol:126:40: Warning: "throw" is deprecated in favour of "revert()", "require()" and "assert()".
+    if (halted && msg.sender != owner) throw;
+                                       ^---^
+/../data/reentrancy/solidity_contract/35661.sol:131:18: Warning: "throw" is deprecated in favour of "revert()", "require()" and "assert()".
+    if (!halted) throw;
+                 ^---^
+/../data/reentrancy/solidity_contract/35661.sol:314:3: Warning: Defining constructors as functions with the same name as the contract is deprecated. Use "constructor(...) { ... }" instead.
+  function Crowdsale(address _token, PricingStrategy _pricingStrategy, address _multisigWallet, uint _start, uint _end, uint _minimumFundingGoal) {
+  ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/35661.sol:324:9: Warning: "throw" is deprecated in favour of "revert()", "require()" and "assert()".
+        throw;
+        ^---^
+/../data/reentrancy/solidity_contract/35661.sol:328:9: Warning: "throw" is deprecated in favour of "revert()", "require()" and "assert()".
+        throw;
+        ^---^
+/../data/reentrancy/solidity_contract/35661.sol:334:9: Warning: "throw" is deprecated in favour of "revert()", "require()" and "assert()".
+        throw;
+        ^---^
+/../data/reentrancy/solidity_contract/35661.sol:341:9: Warning: "throw" is deprecated in favour of "revert()", "require()" and "assert()".
+        throw;
+        ^---^
+/../data/reentrancy/solidity_contract/35661.sol:350:5: Warning: "throw" is deprecated in favour of "revert()", "require()" and "assert()".
+    throw;
+    ^---^
+/../data/reentrancy/solidity_contract/35661.sol:360:9: Warning: "throw" is deprecated in favour of "revert()", "require()" and "assert()".
+        throw;
+        ^---^
+/../data/reentrancy/solidity_contract/35661.sol:367:7: Warning: "throw" is deprecated in favour of "revert()", "require()" and "assert()".
+      throw;
+      ^---^
+/../data/reentrancy/solidity_contract/35661.sol:377:7: Warning: "throw" is deprecated in favour of "revert()", "require()" and "assert()".
+      throw;
+      ^---^
+/../data/reentrancy/solidity_contract/35661.sol:399:7: Warning: "throw" is deprecated in favour of "revert()", "require()" and "assert()".
+      throw;
+      ^---^
+/../data/reentrancy/solidity_contract/35661.sol:405:41: Warning: "throw" is deprecated in favour of "revert()", "require()" and "assert()".
+    if(!multisigWallet.send(weiAmount)) throw;
+                                        ^---^
+/../data/reentrancy/solidity_contract/35661.sol:432:53: Warning: "throw" is deprecated in favour of "revert()", "require()" and "assert()".
+     if (ecrecover(hash, v, r, s) != signerAddress) throw;
+                                                    ^---^
+/../data/reentrancy/solidity_contract/35661.sol:433:26: Warning: "throw" is deprecated in favour of "revert()", "require()" and "assert()".
+     if(customerId == 0) throw;   
+                         ^---^
+/../data/reentrancy/solidity_contract/35661.sol:439:31: Warning: "throw" is deprecated in favour of "revert()", "require()" and "assert()".
+    if(requiredSignedAddress) throw;  
+                              ^---^
+/../data/reentrancy/solidity_contract/35661.sol:440:25: Warning: "throw" is deprecated in favour of "revert()", "require()" and "assert()".
+    if(customerId == 0) throw;   
+                        ^---^
+/../data/reentrancy/solidity_contract/35661.sol:446:27: Warning: "throw" is deprecated in favour of "revert()", "require()" and "assert()".
+    if(requireCustomerId) throw;  
+                          ^---^
+/../data/reentrancy/solidity_contract/35661.sol:447:31: Warning: "throw" is deprecated in favour of "revert()", "require()" and "assert()".
+    if(requiredSignedAddress) throw;  
+                              ^---^
+/../data/reentrancy/solidity_contract/35661.sol:471:7: Warning: "throw" is deprecated in favour of "revert()", "require()" and "assert()".
+      throw;
+      ^---^
+/../data/reentrancy/solidity_contract/35661.sol:488:7: Warning: "throw" is deprecated in favour of "revert()", "require()" and "assert()".
+      throw;
+      ^---^
+/../data/reentrancy/solidity_contract/35661.sol:515:7: Warning: "throw" is deprecated in favour of "revert()", "require()" and "assert()".
+      throw;  
+      ^---^
+/../data/reentrancy/solidity_contract/35661.sol:528:7: Warning: "throw" is deprecated in favour of "revert()", "require()" and "assert()".
+      throw;
+      ^---^
+/../data/reentrancy/solidity_contract/35661.sol:537:7: Warning: "throw" is deprecated in favour of "revert()", "require()" and "assert()".
+      throw;
+      ^---^
+/../data/reentrancy/solidity_contract/35661.sol:545:24: Warning: "throw" is deprecated in favour of "revert()", "require()" and "assert()".
+    if(msg.value == 0) throw;
+                       ^---^
+/../data/reentrancy/solidity_contract/35661.sol:552:24: Warning: "throw" is deprecated in favour of "revert()", "require()" and "assert()".
+    if (weiValue == 0) throw;
+                       ^---^
+/../data/reentrancy/solidity_contract/35661.sol:556:37: Warning: "throw" is deprecated in favour of "revert()", "require()" and "assert()".
+    if (!msg.sender.send(weiValue)) throw;
+                                    ^---^
+/../data/reentrancy/solidity_contract/35661.sol:603:29: Warning: "throw" is deprecated in favour of "revert()", "require()" and "assert()".
+    if(getState() != state) throw;
+                            ^---^
+/../data/reentrancy/solidity_contract/35661.sol:674:64: Warning: "throw" is deprecated in favour of "revert()", "require()" and "assert()".
+    if ((_value != 0) && (allowed[msg.sender][_spender] != 0)) throw;
+                                                               ^---^
+/../data/reentrancy/solidity_contract/35661.sol:749:3: Warning: Defining constructors as functions with the same name as the contract is deprecated. Use "constructor(...) { ... }" instead.
+  function PreICOProxyBuyer(address _owner, uint _freezeEndsAt, uint _weiMinimumLimit, uint _weiMaximumLimit, uint _weiCap) {
+  ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/35661.sol:755:7: Warning: "throw" is deprecated in favour of "revert()", "require()" and "assert()".
+      throw;
+      ^---^
+/../data/reentrancy/solidity_contract/35661.sol:760:7: Warning: "throw" is deprecated in favour of "revert()", "require()" and "assert()".
+      throw;
+      ^---^
+/../data/reentrancy/solidity_contract/35661.sol:764:7: Warning: "throw" is deprecated in favour of "revert()", "require()" and "assert()".
+      throw;
+      ^---^
+/../data/reentrancy/solidity_contract/35661.sol:776:7: Warning: "throw" is deprecated in favour of "revert()", "require()" and "assert()".
+      throw;
+      ^---^
+/../data/reentrancy/solidity_contract/35661.sol:786:37: Warning: "throw" is deprecated in favour of "revert()", "require()" and "assert()".
+    if(getState() != State.Funding) throw;
+                                    ^---^
+/../data/reentrancy/solidity_contract/35661.sol:788:24: Warning: "throw" is deprecated in favour of "revert()", "require()" and "assert()".
+    if(msg.value == 0) throw;  
+                       ^---^
+/../data/reentrancy/solidity_contract/35661.sol:798:7: Warning: "throw" is deprecated in favour of "revert()", "require()" and "assert()".
+      throw;
+      ^---^
+/../data/reentrancy/solidity_contract/35661.sol:809:7: Warning: "throw" is deprecated in favour of "revert()", "require()" and "assert()".
+      throw;
+      ^---^
+/../data/reentrancy/solidity_contract/35661.sol:831:7: Warning: "throw" is deprecated in favour of "revert()", "require()" and "assert()".
+      throw;
+      ^---^
+/../data/reentrancy/solidity_contract/35661.sol:835:33: Warning: "throw" is deprecated in favour of "revert()", "require()" and "assert()".
+    if(address(crowdsale) == 0) throw;
+                                ^---^
+/../data/reentrancy/solidity_contract/35661.sol:845:7: Warning: "throw" is deprecated in favour of "revert()", "require()" and "assert()".
+      throw;
+      ^---^
+/../data/reentrancy/solidity_contract/35661.sol:856:7: Warning: "throw" is deprecated in favour of "revert()", "require()" and "assert()".
+      throw;
+      ^---^
+/../data/reentrancy/solidity_contract/35661.sol:876:7: Warning: "throw" is deprecated in favour of "revert()", "require()" and "assert()".
+      throw;
+      ^---^
+/../data/reentrancy/solidity_contract/35661.sol:881:7: Warning: "throw" is deprecated in favour of "revert()", "require()" and "assert()".
+      throw;
+      ^---^
+/../data/reentrancy/solidity_contract/35661.sol:898:39: Warning: "throw" is deprecated in favour of "revert()", "require()" and "assert()".
+    if(getState() != State.Refunding) throw;
+                                      ^---^
+/../data/reentrancy/solidity_contract/35661.sol:901:33: Warning: "throw" is deprecated in favour of "revert()", "require()" and "assert()".
+    if(balances[investor] == 0) throw;
+                                ^---^
+/../data/reentrancy/solidity_contract/35661.sol:904:42: Warning: "throw" is deprecated in favour of "revert()", "require()" and "assert()".
+    if(!(investor.call.value(amount)())) throw;
+                                         ^---^
+/../data/reentrancy/solidity_contract/35661.sol:926:39: Warning: "throw" is deprecated in favour of "revert()", "require()" and "assert()".
+    if(getState() != State.Refunding) throw;
+                                      ^---^
+/../data/reentrancy/solidity_contract/35661.sol:952:5: Warning: "throw" is deprecated in favour of "revert()", "require()" and "assert()".
+    throw;
+    ^---^
+/../data/reentrancy/solidity_contract/35661.sol:9:1: Warning: Source file does not specify required compiler version!Consider adding "pragma solidity ^0.4.25;"
+contract SafeMath {
+^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/35661.sol:109:5: Warning: Invoking events without "emit" prefix is deprecated.
+    OwnershipTransferred(owner, newOwner);
+    ^-----------------------------------^
+/../data/reentrancy/solidity_contract/35661.sol:408:5: Warning: Invoking events without "emit" prefix is deprecated.
+    Invested(receiver, weiAmount, tokenAmount, customerId);
+    ^----------------------------------------------------^
+/../data/reentrancy/solidity_contract/35661.sol:426:5: Warning: Invoking events without "emit" prefix is deprecated.
+    Invested(receiver, weiAmount, tokenAmount, 0);
+    ^-------------------------------------------^
+/../data/reentrancy/solidity_contract/35661.sol:431:21: Warning: This function only accepts a single "bytes" argument. Please use "abi.encodePacked(...)" or a similar function to encode the data.
+     bytes32 hash = sha256(addr);
+                    ^----------^
+/../data/reentrancy/solidity_contract/35661.sol:431:21: Warning: The provided argument of type address is not implicitly convertible to expected type bytes memory.
+     bytes32 hash = sha256(addr);
+                    ^----------^
+/../data/reentrancy/solidity_contract/35661.sol:495:5: Warning: Invoking events without "emit" prefix is deprecated.
+    InvestmentPolicyChanged(requireCustomerId, requiredSignedAddress, signerAddress);
+    ^------------------------------------------------------------------------------^
+/../data/reentrancy/solidity_contract/35661.sol:502:5: Warning: Invoking events without "emit" prefix is deprecated.
+    InvestmentPolicyChanged(requireCustomerId, requiredSignedAddress, signerAddress);
+    ^------------------------------------------------------------------------------^
+/../data/reentrancy/solidity_contract/35661.sol:508:5: Warning: Invoking events without "emit" prefix is deprecated.
+    Whitelisted(addr, status);
+    ^-----------------------^
+/../data/reentrancy/solidity_contract/35661.sol:519:5: Warning: Invoking events without "emit" prefix is deprecated.
+    EndsAtChanged(endsAt);
+    ^-------------------^
+/../data/reentrancy/solidity_contract/35661.sol:555:5: Warning: Invoking events without "emit" prefix is deprecated.
+    Refund(msg.sender, weiValue);
+    ^--------------------------^
+/../data/reentrancy/solidity_contract/35661.sol:650:5: Warning: Invoking events without "emit" prefix is deprecated.
+    Transfer(msg.sender, _to, _value);
+    ^-------------------------------^
+/../data/reentrancy/solidity_contract/35661.sol:660:5: Warning: Invoking events without "emit" prefix is deprecated.
+    Transfer(_from, _to, _value);
+    ^--------------------------^
+/../data/reentrancy/solidity_contract/35661.sol:677:5: Warning: Invoking events without "emit" prefix is deprecated.
+    Approval(msg.sender, _spender, _value);
+    ^------------------------------------^
+/../data/reentrancy/solidity_contract/35661.sol:814:5: Warning: Invoking events without "emit" prefix is deprecated.
+    Invested(investor, msg.value, 0, customerId);
+    ^------------------------------------------^
+/../data/reentrancy/solidity_contract/35661.sol:848:5: Warning: Invoking events without "emit" prefix is deprecated.
+    TokensBoughts(tokensBought);
+    ^-------------------------^
+/../data/reentrancy/solidity_contract/35661.sol:893:5: Warning: Invoking events without "emit" prefix is deprecated.
+    Distributed(investor, amount);
+    ^---------------------------^
+/../data/reentrancy/solidity_contract/35661.sol:905:5: Warning: Invoking events without "emit" prefix is deprecated.
+    Refunded(investor, amount);
+    ^------------------------^
+/../data/reentrancy/solidity_contract/35661.sol:61:3: Warning: No visibility specified. Defaulting to "public". 
+  function times(uint a, uint b) returns (uint) {
+  ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/35661.sol:67:3: Warning: No visibility specified. Defaulting to "public". 
+  function minus(uint a, uint b) returns (uint) {
+  ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/35661.sol:72:3: Warning: No visibility specified. Defaulting to "public". 
+  function plus(uint a, uint b) returns (uint) {
+  ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/35661.sol:94:3: Warning: No visibility specified. Defaulting to "public". 
+  function Ownable() {
+  ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/35661.sol:159:19: Warning: Unused function parameter. Remove or comment out the variable name to silence this warning.
+  function isSane(address crowdsale) public constant returns (bool) {
+                  ^---------------^
+/../data/reentrancy/solidity_contract/35661.sol:164:30: Warning: Unused function parameter. Remove or comment out the variable name to silence this warning.
+  function isPresalePurchase(address purchaser) public constant returns (bool) {
+                             ^---------------^
+/../data/reentrancy/solidity_contract/35661.sol:186:3: Warning: No visibility specified. Defaulting to "public". 
+  function finalizeCrowdsale();
+  ^---------------------------^
+/../data/reentrancy/solidity_contract/35661.sol:314:3: Warning: No visibility specified. Defaulting to "public". 
+  function Crowdsale(address _token, PricingStrategy _pricingStrategy, address _multisigWallet, uint _start, uint _end, uint _minimumFundingGoal) {
+  ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/35661.sol:349:3: Warning: No visibility specified. Defaulting to "public". 
+  function() payable {
+  ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/35661.sol:483:3: Warning: No visibility specified. Defaulting to "public". 
+  function setFinalizeAgent(FinalizeAgent addr) onlyOwner {
+  ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/35661.sol:493:3: Warning: No visibility specified. Defaulting to "public". 
+  function setRequireCustomerId(bool value) onlyOwner {
+  ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/35661.sol:499:3: Warning: No visibility specified. Defaulting to "public". 
+  function setRequireSignedAddress(bool value, address _signerAddress) onlyOwner {
+  ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/35661.sol:506:3: Warning: No visibility specified. Defaulting to "public". 
+  function setEarlyParicipantWhitelist(address addr, bool status) onlyOwner {
+  ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/35661.sol:512:3: Warning: No visibility specified. Defaulting to "public". 
+  function setEndsAt(uint time) onlyOwner {
+  ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/35661.sol:523:3: Warning: No visibility specified. Defaulting to "public". 
+  function setPricingStrategy(PricingStrategy _pricingStrategy) onlyOwner {
+  ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/35661.sol:588:3: Warning: No visibility specified. Defaulting to "public". 
+  function setOwnerTestValue(uint val) onlyOwner {
+  ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/35661.sol:613:3: Warning: No visibility specified. Defaulting to "public". 
+  function isBreakingCap(uint weiAmount, uint tokenAmount, uint weiRaisedTotal, uint tokensSoldTotal) constant returns (bool limitBroken);
+  ^--------------------------------------------------------------------------------------------------------------------------------------^
+/../data/reentrancy/solidity_contract/35661.sol:647:3: Warning: No visibility specified. Defaulting to "public". 
+  function transfer(address _to, uint _value) returns (bool success) {
+  ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/35661.sol:654:3: Warning: No visibility specified. Defaulting to "public". 
+  function transferFrom(address _from, address _to, uint _value) returns (bool success) {
+  ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/35661.sol:664:3: Warning: No visibility specified. Defaulting to "public". 
+  function balanceOf(address _owner) constant returns (uint balance) {
+  ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/35661.sol:668:3: Warning: No visibility specified. Defaulting to "public". 
+  function approve(address _spender, uint _value) returns (bool success) {
+  ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/35661.sol:681:3: Warning: No visibility specified. Defaulting to "public". 
+  function allowance(address _owner, address _spender) constant returns (uint remaining) {
+  ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/35661.sol:749:3: Warning: No visibility specified. Defaulting to "public". 
+  function PreICOProxyBuyer(address _owner, uint _freezeEndsAt, uint _weiMinimumLimit, uint _weiMaximumLimit, uint _weiCap) {
+  ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/35661.sol:867:3: Warning: No visibility specified. Defaulting to "public". 
+  function claimAll() {
+  ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/35661.sol:872:3: Warning: No visibility specified. Defaulting to "public". 
+  function claim(uint amount) stopInEmergency {
+  ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/35661.sol:897:3: Warning: No visibility specified. Defaulting to "public". 
+  function refund() stopInEmergency {
+  ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/35661.sol:913:34: Warning: Statement has no effect.
+    if(!crowdsale.isCrowdsale()) true;
+                                 ^--^
+/../data/reentrancy/solidity_contract/35661.sol:951:3: Warning: No visibility specified. Defaulting to "public". 
+  function() payable {
+  ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/35661.sol:10:3: Warning: Function state mutability can be restricted to pure
+  function safeMul(uint a, uint b) internal returns (uint) {
+  ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/35661.sol:16:3: Warning: Function state mutability can be restricted to pure
+  function safeDiv(uint a, uint b) internal returns (uint) {
+  ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/35661.sol:23:3: Warning: Function state mutability can be restricted to pure
+  function safeSub(uint a, uint b) internal returns (uint) {
+  ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/35661.sol:28:3: Warning: Function state mutability can be restricted to pure
+  function safeAdd(uint a, uint b) internal returns (uint) {
+  ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/35661.sol:34:3: Warning: Function state mutability can be restricted to pure
+  function max64(uint64 a, uint64 b) internal constant returns (uint64) {
+  ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/35661.sol:38:3: Warning: Function state mutability can be restricted to pure
+  function min64(uint64 a, uint64 b) internal constant returns (uint64) {
+  ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/35661.sol:42:3: Warning: Function state mutability can be restricted to pure
+  function max256(uint256 a, uint256 b) internal constant returns (uint256) {
+  ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/35661.sol:46:3: Warning: Function state mutability can be restricted to pure
+  function min256(uint256 a, uint256 b) internal constant returns (uint256) {
+  ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/35661.sol:61:3: Warning: Function state mutability can be restricted to pure
+  function times(uint a, uint b) returns (uint) {
+  ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/35661.sol:67:3: Warning: Function state mutability can be restricted to pure
+  function minus(uint a, uint b) returns (uint) {
+  ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/35661.sol:72:3: Warning: Function state mutability can be restricted to pure
+  function plus(uint a, uint b) returns (uint) {
+  ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/35661.sol:154:3: Warning: Function state mutability can be restricted to pure
+  function isPricingStrategy() public constant returns (bool) {
+  ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/35661.sol:159:3: Warning: Function state mutability can be restricted to pure
+  function isSane(address crowdsale) public constant returns (bool) {
+  ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/35661.sol:164:3: Warning: Function state mutability can be restricted to pure
+  function isPresalePurchase(address purchaser) public constant returns (bool) {
+  ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/35661.sol:178:3: Warning: Function state mutability can be restricted to pure
+  function isFinalizeAgent() public constant returns(bool) {
+  ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/35661.sol:593:3: Warning: Function state mutability can be restricted to pure
+  function isCrowdsale() public constant returns (bool) {
+  ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/35661.sol:643:3: Warning: Function state mutability can be restricted to pure
+  function isToken() public constant returns (bool weAre) {
+  ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/35661.sol:855:8: Warning: Function declared as view, but this expression (potentially) modifies the state and thus requires non-payable (the default) or payable.
+    if(getState() != State.Distributing) {
+       ^--------^
+/../data/reentrancy/solidity_contract/35661.sol:858:12: Warning: Function declared as view, but this expression (potentially) modifies the state and thus requires non-payable (the default) or payable.
+    return safeMul(balances[investor], tokensBought) / weiRaised;
+           ^---------------------------------------^
+/../data/reentrancy/solidity_contract/35661.sol:863:12: Warning: Function declared as view, but this expression (potentially) modifies the state and thus requires non-payable (the default) or payable.
+    return safeSub(getClaimAmount(investor), claimed[investor]);
+           ^--------------------------------------------------^
+/../data/reentrancy/solidity_contract/35661.sol:930:3: Warning: Function state mutability can be restricted to view
+  function getState() public returns(State) {
+  ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/35661.sol:946:3: Warning: Function state mutability can be restricted to pure
+  function isPresale() public constant returns (bool) {
+  ^ (Relevant source part starts here and spans across multiple lines).
+
+INFO:Detectors:[91m
+Reentrancy in PreICOProxyBuyer.buyForEverybody (/../data/reentrancy/solidity_contract/35661.sol#827-849):
+	External calls:
+	- crowdsale.invest.value(weiRaised)(address(this)) (/../data/reentrancy/solidity_contract/35661.sol#838)
+	- tokensBought = getToken().balanceOf(address(this)) (/../data/reentrancy/solidity_contract/35661.sol#841)
+	External calls sending eth:
+	- crowdsale.invest.value(weiRaised)(address(this)) (/../data/reentrancy/solidity_contract/35661.sol#838)
+	State variables written after the call(s):
+	- tokensBought (/../data/reentrancy/solidity_contract/35661.sol#841)
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#reentrancy-vulnerabilities[0m
+INFO:Detectors:[93m
+PreICOProxyBuyer.buyForEverybody (/../data/reentrancy/solidity_contract/35661.sol#827-849) uses a dangerous strict equality:
+	- tokensBought == 0
+PreICOProxyBuyer.buyForEverybody (/../data/reentrancy/solidity_contract/35661.sol#827-849) uses a dangerous strict equality:
+	- tokensBought == 0
+PreICOProxyBuyer.getState (/../data/reentrancy/solidity_contract/35661.sol#930-943) uses a dangerous strict equality:
+	- tokensBought == 0
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#dangerous-strict-equalities[0m
+INFO:Detectors:[93m
+Reentrancy in Crowdsale.finalize (/../data/reentrancy/solidity_contract/35661.sol#467-480):
+	External calls:
+	- finalizeAgent.finalizeCrowdsale() (/../data/reentrancy/solidity_contract/35661.sol#476)
+	State variables written after the call(s):
+	- finalized (/../data/reentrancy/solidity_contract/35661.sol#479)
+Reentrancy in Crowdsale.investInternal (/../data/reentrancy/solidity_contract/35661.sol#354-409):
+	External calls:
+	- getState() == State.PreFunding (/../data/reentrancy/solidity_contract/35661.sol#357-368)
+	- tokenAmount = pricingStrategy.calculatePrice(weiAmount,weiRaised - presaleWeiRaised,tokensSold,msg.sender,token.decimals()) (/../data/reentrancy/solidity_contract/35661.sol#373)
+	State variables written after the call(s):
+	- tokensSold (/../data/reentrancy/solidity_contract/35661.sol#391)
+	- weiRaised (/../data/reentrancy/solidity_contract/35661.sol#390)
+Reentrancy in Crowdsale.investInternal (/../data/reentrancy/solidity_contract/35661.sol#354-409):
+	External calls:
+	- getState() == State.PreFunding (/../data/reentrancy/solidity_contract/35661.sol#357-368)
+	- tokenAmount = pricingStrategy.calculatePrice(weiAmount,weiRaised - presaleWeiRaised,tokensSold,msg.sender,token.decimals()) (/../data/reentrancy/solidity_contract/35661.sol#373)
+	- pricingStrategy.isPresalePurchase(receiver) (/../data/reentrancy/solidity_contract/35661.sol#393-395)
+	State variables written after the call(s):
+	- presaleWeiRaised (/../data/reentrancy/solidity_contract/35661.sol#394)
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#reentrancy-vulnerabilities-1[0m
+INFO:Detectors:[93m
+PreICOProxyBuyer.claim (/../data/reentrancy/solidity_contract/35661.sol#872-894) does not use the value returned by external calls:
+	-getToken().transfer(investor,amount) (/../data/reentrancy/solidity_contract/35661.sol#891)
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#unused-return[0m
+INFO:Detectors:[92m
+Reentrancy in Crowdsale.Crowdsale (/../data/reentrancy/solidity_contract/35661.sol#314-346):
+	External calls:
+	- setPricingStrategy(_pricingStrategy) (/../data/reentrancy/solidity_contract/35661.sol#320)
+	State variables written after the call(s):
+	- endsAt (/../data/reentrancy/solidity_contract/35661.sol#337)
+	- minimumFundingGoal (/../data/reentrancy/solidity_contract/35661.sol#345)
+	- multisigWallet (/../data/reentrancy/solidity_contract/35661.sol#322)
+	- startsAt (/../data/reentrancy/solidity_contract/35661.sol#331)
+Reentrancy in Crowdsale.investInternal (/../data/reentrancy/solidity_contract/35661.sol#354-409):
+	External calls:
+	- getState() == State.PreFunding (/../data/reentrancy/solidity_contract/35661.sol#357-368)
+	- tokenAmount = pricingStrategy.calculatePrice(weiAmount,weiRaised - presaleWeiRaised,tokensSold,msg.sender,token.decimals()) (/../data/reentrancy/solidity_contract/35661.sol#373)
+	State variables written after the call(s):
+	- investedAmountOf (/../data/reentrancy/solidity_contract/35661.sol#386)
+	- investorCount (/../data/reentrancy/solidity_contract/35661.sol#382)
+	- tokenAmountOf (/../data/reentrancy/solidity_contract/35661.sol#387)
+Reentrancy in Crowdsale.preallocate (/../data/reentrancy/solidity_contract/35661.sol#412-427):
+	External calls:
+	- tokenAmount = fullTokens * 10 ** token.decimals() (/../data/reentrancy/solidity_contract/35661.sol#414)
+	State variables written after the call(s):
+	- investedAmountOf (/../data/reentrancy/solidity_contract/35661.sol#420)
+	- tokenAmountOf (/../data/reentrancy/solidity_contract/35661.sol#421)
+	- tokensSold (/../data/reentrancy/solidity_contract/35661.sol#418)
+	- weiRaised (/../data/reentrancy/solidity_contract/35661.sol#417)
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#reentrancy-vulnerabilities-2[0m
+INFO:Detectors:[92m
+Crowdsale.getState (/../data/reentrancy/solidity_contract/35661.sol#575-585) uses timestamp for comparisons
+	Dangerous comparisons:
+	- block.timestamp < startsAt (/../data/reentrancy/solidity_contract/35661.sol#580-584)
+	- block.timestamp <= endsAt && ! isCrowdsaleFull() (/../data/reentrancy/solidity_contract/35661.sol#581-584)
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#block-timestamp[0m
+INFO:Detectors:[92m
+Crowdsale.MAX_INVESTMENTS_BEFORE_MULTISIG_CHANGE should be constant (/../data/reentrancy/solidity_contract/35661.sol#229)
+ERC20Basic.totalSupply should be constant (/../data/reentrancy/solidity_contract/35661.sol#199)
+FractionalERC20.decimals should be constant (/../data/reentrancy/solidity_contract/35661.sol#219)
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#state-variables-that-could-be-declared-constant[0m
+INFO:Detectors:[92m
+Deprecated standard detected @ /../data/reentrancy/solidity_contract/35661.sol#121:
+	- Usage of "throw" should be replaced with "revert()"
+Deprecated standard detected @ /../data/reentrancy/solidity_contract/35661.sol#126:
+	- Usage of "throw" should be replaced with "revert()"
+Deprecated standard detected @ /../data/reentrancy/solidity_contract/35661.sol#131:
+	- Usage of "throw" should be replaced with "revert()"
+Deprecated standard detected @ /../data/reentrancy/solidity_contract/35661.sol#324:
+	- Usage of "throw" should be replaced with "revert()"
+Deprecated standard detected @ /../data/reentrancy/solidity_contract/35661.sol#328:
+	- Usage of "throw" should be replaced with "revert()"
+Deprecated standard detected @ /../data/reentrancy/solidity_contract/35661.sol#334:
+	- Usage of "throw" should be replaced with "revert()"
+Deprecated standard detected @ /../data/reentrancy/solidity_contract/35661.sol#341:
+	- Usage of "throw" should be replaced with "revert()"
+Deprecated standard detected @ /../data/reentrancy/solidity_contract/35661.sol#350:
+	- Usage of "throw" should be replaced with "revert()"
+Deprecated standard detected @ /../data/reentrancy/solidity_contract/35661.sol#360:
+	- Usage of "throw" should be replaced with "revert()"
+Deprecated standard detected @ /../data/reentrancy/solidity_contract/35661.sol#367:
+	- Usage of "throw" should be replaced with "revert()"
+Deprecated standard detected @ /../data/reentrancy/solidity_contract/35661.sol#377:
+	- Usage of "throw" should be replaced with "revert()"
+Deprecated standard detected @ /../data/reentrancy/solidity_contract/35661.sol#399:
+	- Usage of "throw" should be replaced with "revert()"
+Deprecated standard detected @ /../data/reentrancy/solidity_contract/35661.sol#405:
+	- Usage of "throw" should be replaced with "revert()"
+Deprecated standard detected @ /../data/reentrancy/solidity_contract/35661.sol#432:
+	- Usage of "throw" should be replaced with "revert()"
+Deprecated standard detected @ /../data/reentrancy/solidity_contract/35661.sol#433:
+	- Usage of "throw" should be replaced with "revert()"
+Deprecated standard detected @ /../data/reentrancy/solidity_contract/35661.sol#439:
+	- Usage of "throw" should be replaced with "revert()"
+Deprecated standard detected @ /../data/reentrancy/solidity_contract/35661.sol#440:
+	- Usage of "throw" should be replaced with "revert()"
+Deprecated standard detected @ /../data/reentrancy/solidity_contract/35661.sol#446:
+	- Usage of "throw" should be replaced with "revert()"
+Deprecated standard detected @ /../data/reentrancy/solidity_contract/35661.sol#447:
+	- Usage of "throw" should be replaced with "revert()"
+Deprecated standard detected @ /../data/reentrancy/solidity_contract/35661.sol#471:
+	- Usage of "throw" should be replaced with "revert()"
+Deprecated standard detected @ /../data/reentrancy/solidity_contract/35661.sol#488:
+	- Usage of "throw" should be replaced with "revert()"
+Deprecated standard detected @ /../data/reentrancy/solidity_contract/35661.sol#515:
+	- Usage of "throw" should be replaced with "revert()"
+Deprecated standard detected @ /../data/reentrancy/solidity_contract/35661.sol#528:
+	- Usage of "throw" should be replaced with "revert()"
+Deprecated standard detected @ /../data/reentrancy/solidity_contract/35661.sol#537:
+	- Usage of "throw" should be replaced with "revert()"
+Deprecated standard detected @ /../data/reentrancy/solidity_contract/35661.sol#545:
+	- Usage of "throw" should be replaced with "revert()"
+Deprecated standard detected @ /../data/reentrancy/solidity_contract/35661.sol#552:
+	- Usage of "throw" should be replaced with "revert()"
+Deprecated standard detected @ /../data/reentrancy/solidity_contract/35661.sol#556:
+	- Usage of "throw" should be replaced with "revert()"
+Deprecated standard detected @ /../data/reentrancy/solidity_contract/35661.sol#603:
+	- Usage of "throw" should be replaced with "revert()"
+Deprecated standard detected @ /../data/reentrancy/solidity_contract/35661.sol#674:
+	- Usage of "throw" should be replaced with "revert()"
+Deprecated standard detected @ /../data/reentrancy/solidity_contract/35661.sol#755:
+	- Usage of "throw" should be replaced with "revert()"
+Deprecated standard detected @ /../data/reentrancy/solidity_contract/35661.sol#760:
+	- Usage of "throw" should be replaced with "revert()"
+Deprecated standard detected @ /../data/reentrancy/solidity_contract/35661.sol#764:
+	- Usage of "throw" should be replaced with "revert()"
+Deprecated standard detected @ /../data/reentrancy/solidity_contract/35661.sol#776:
+	- Usage of "throw" should be replaced with "revert()"
+Deprecated standard detected @ /../data/reentrancy/solidity_contract/35661.sol#786:
+	- Usage of "throw" should be replaced with "revert()"
+Deprecated standard detected @ /../data/reentrancy/solidity_contract/35661.sol#788:
+	- Usage of "throw" should be replaced with "revert()"
+Deprecated standard detected @ /../data/reentrancy/solidity_contract/35661.sol#798:
+	- Usage of "throw" should be replaced with "revert()"
+Deprecated standard detected @ /../data/reentrancy/solidity_contract/35661.sol#809:
+	- Usage of "throw" should be replaced with "revert()"
+Deprecated standard detected @ /../data/reentrancy/solidity_contract/35661.sol#831:
+	- Usage of "throw" should be replaced with "revert()"
+Deprecated standard detected @ /../data/reentrancy/solidity_contract/35661.sol#835:
+	- Usage of "throw" should be replaced with "revert()"
+Deprecated standard detected @ /../data/reentrancy/solidity_contract/35661.sol#845:
+	- Usage of "throw" should be replaced with "revert()"
+Deprecated standard detected @ /../data/reentrancy/solidity_contract/35661.sol#856:
+	- Usage of "throw" should be replaced with "revert()"
+Deprecated standard detected @ /../data/reentrancy/solidity_contract/35661.sol#876:
+	- Usage of "throw" should be replaced with "revert()"
+Deprecated standard detected @ /../data/reentrancy/solidity_contract/35661.sol#881:
+	- Usage of "throw" should be replaced with "revert()"
+Deprecated standard detected @ /../data/reentrancy/solidity_contract/35661.sol#898:
+	- Usage of "throw" should be replaced with "revert()"
+Deprecated standard detected @ /../data/reentrancy/solidity_contract/35661.sol#901:
+	- Usage of "throw" should be replaced with "revert()"
+Deprecated standard detected @ /../data/reentrancy/solidity_contract/35661.sol#904:
+	- Usage of "throw" should be replaced with "revert()"
+Deprecated standard detected @ /../data/reentrancy/solidity_contract/35661.sol#926:
+	- Usage of "throw" should be replaced with "revert()"
+Deprecated standard detected @ /../data/reentrancy/solidity_contract/35661.sol#952:
+	- Usage of "throw" should be replaced with "revert()"
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#deprecated-standards[0m
+INFO:Detectors:[92m
+SafeMathLib.times (/../data/reentrancy/solidity_contract/35661.sol#61-65) should be declared external
+SafeMathLib.minus (/../data/reentrancy/solidity_contract/35661.sol#67-70) should be declared external
+SafeMathLib.plus (/../data/reentrancy/solidity_contract/35661.sol#72-76) should be declared external
+Ownable.transferOwnership (/../data/reentrancy/solidity_contract/35661.sol#107-111) should be declared external
+PricingStrategy.isPricingStrategy (/../data/reentrancy/solidity_contract/35661.sol#154-156) should be declared external
+PricingStrategy.isSane (/../data/reentrancy/solidity_contract/35661.sol#159-161) should be declared external
+PricingStrategy.isPresalePurchase (/../data/reentrancy/solidity_contract/35661.sol#164-166) should be declared external
+PricingStrategy.calculatePrice (/../data/reentrancy/solidity_contract/35661.sol#169) should be declared external
+FinalizeAgent.isFinalizeAgent (/../data/reentrancy/solidity_contract/35661.sol#178-180) should be declared external
+FinalizeAgent.isSane (/../data/reentrancy/solidity_contract/35661.sol#183) should be declared external
+FinalizeAgent.finalizeCrowdsale (/../data/reentrancy/solidity_contract/35661.sol#186) should be declared external
+StandardToken.balanceOf (/../data/reentrancy/solidity_contract/35661.sol#664-666) should be declared external
+ERC20Basic.balanceOf (/../data/reentrancy/solidity_contract/35661.sol#200) should be declared external
+StandardToken.transfer (/../data/reentrancy/solidity_contract/35661.sol#647-652) should be declared external
+ERC20Basic.transfer (/../data/reentrancy/solidity_contract/35661.sol#201) should be declared external
+StandardToken.allowance (/../data/reentrancy/solidity_contract/35661.sol#681-683) should be declared external
+ERC20.allowance (/../data/reentrancy/solidity_contract/35661.sol#209) should be declared external
+ERC20.transferFrom (/../data/reentrancy/solidity_contract/35661.sol#210) should be declared external
+StandardToken.transferFrom (/../data/reentrancy/solidity_contract/35661.sol#654-662) should be declared external
+StandardToken.approve (/../data/reentrancy/solidity_contract/35661.sol#668-679) should be declared external
+ERC20.approve (/../data/reentrancy/solidity_contract/35661.sol#211) should be declared external
+Crowdsale.fallback (/../data/reentrancy/solidity_contract/35661.sol#349-351) should be declared external
+Crowdsale.preallocate (/../data/reentrancy/solidity_contract/35661.sol#412-427) should be declared external
+Crowdsale.buyWithSignedAddress (/../data/reentrancy/solidity_contract/35661.sol#452-454) should be declared external
+Crowdsale.buyWithCustomerId (/../data/reentrancy/solidity_contract/35661.sol#457-459) should be declared external
+Crowdsale.buy (/../data/reentrancy/solidity_contract/35661.sol#462-464) should be declared external
+Crowdsale.finalize (/../data/reentrancy/solidity_contract/35661.sol#467-480) should be declared external
+Crowdsale.setFinalizeAgent (/../data/reentrancy/solidity_contract/35661.sol#483-490) should be declared external
+Crowdsale.setRequireCustomerId (/../data/reentrancy/solidity_contract/35661.sol#493-496) should be declared external
+Crowdsale.setRequireSignedAddress (/../data/reentrancy/solidity_contract/35661.sol#499-503) should be declared external
+Crowdsale.setEarlyParicipantWhitelist (/../data/reentrancy/solidity_contract/35661.sol#506-509) should be declared external
+Crowdsale.setEndsAt (/../data/reentrancy/solidity_contract/35661.sol#512-520) should be declared external
+Crowdsale.setMultisig (/../data/reentrancy/solidity_contract/35661.sol#533-541) should be declared external
+Crowdsale.loadRefund (/../data/reentrancy/solidity_contract/35661.sol#544-547) should be declared external
+Crowdsale.refund (/../data/reentrancy/solidity_contract/35661.sol#550-557) should be declared external
+Crowdsale.isFinalizerSane (/../data/reentrancy/solidity_contract/35661.sol#565-567) should be declared external
+Crowdsale.isPricingSane (/../data/reentrancy/solidity_contract/35661.sol#570-572) should be declared external
+Crowdsale.setOwnerTestValue (/../data/reentrancy/solidity_contract/35661.sol#588-590) should be declared external
+Crowdsale.isCrowdsale (/../data/reentrancy/solidity_contract/35661.sol#593-595) should be declared external
+StandardToken.isToken (/../data/reentrancy/solidity_contract/35661.sol#643-645) should be declared external
+PreICOProxyBuyer.buyWithCustomerId (/../data/reentrancy/solidity_contract/35661.sol#817-819) should be declared external
+PreICOProxyBuyer.buy (/../data/reentrancy/solidity_contract/35661.sol#821-823) should be declared external
+PreICOProxyBuyer.buyForEverybody (/../data/reentrancy/solidity_contract/35661.sol#827-849) should be declared external
+PreICOProxyBuyer.claimAll (/../data/reentrancy/solidity_contract/35661.sol#867-869) should be declared external
+PreICOProxyBuyer.refund (/../data/reentrancy/solidity_contract/35661.sol#897-906) should be declared external
+PreICOProxyBuyer.setCrowdsale (/../data/reentrancy/solidity_contract/35661.sol#909-914) should be declared external
+PreICOProxyBuyer.forceRefund (/../data/reentrancy/solidity_contract/35661.sol#918-920) should be declared external
+PreICOProxyBuyer.loadRefund (/../data/reentrancy/solidity_contract/35661.sol#925-927) should be declared external
+PreICOProxyBuyer.isPresale (/../data/reentrancy/solidity_contract/35661.sol#946-948) should be declared external
+PreICOProxyBuyer.fallback (/../data/reentrancy/solidity_contract/35661.sol#951-953) should be declared external
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#public-function-that-could-be-declared-as-external[0m
+INFO:Detectors:[92m
+Low level call in PreICOProxyBuyer.refund (/../data/reentrancy/solidity_contract/35661.sol#897-906):
+	-! (investor.call.value(amount)()) /../data/reentrancy/solidity_contract/35661.sol#904
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#low-level-calls[0m
+INFO:Detectors:[92m
+Function 'Ownable.Ownable' (/../data/reentrancy/solidity_contract/35661.sol#94-96) is not in mixedCase
+Function 'Crowdsale.Crowdsale' (/../data/reentrancy/solidity_contract/35661.sol#314-346) is not in mixedCase
+Parameter '_token' of Crowdsale.Crowdsale (/../data/reentrancy/solidity_contract/35661.sol#314) is not in mixedCase
+Parameter '_pricingStrategy' of Crowdsale.Crowdsale (/../data/reentrancy/solidity_contract/35661.sol#314) is not in mixedCase
+Parameter '_multisigWallet' of Crowdsale.Crowdsale (/../data/reentrancy/solidity_contract/35661.sol#314) is not in mixedCase
+Parameter '_start' of Crowdsale.Crowdsale (/../data/reentrancy/solidity_contract/35661.sol#314) is not in mixedCase
+Parameter '_end' of Crowdsale.Crowdsale (/../data/reentrancy/solidity_contract/35661.sol#314) is not in mixedCase
+Parameter '_minimumFundingGoal' of Crowdsale.Crowdsale (/../data/reentrancy/solidity_contract/35661.sol#314) is not in mixedCase
+Parameter '_signerAddress' of Crowdsale.setRequireSignedAddress (/../data/reentrancy/solidity_contract/35661.sol#499) is not in mixedCase
+Parameter '_pricingStrategy' of Crowdsale.setPricingStrategy (/../data/reentrancy/solidity_contract/35661.sol#523) is not in mixedCase
+Variable 'Crowdsale.MAX_INVESTMENTS_BEFORE_MULTISIG_CHANGE' (/../data/reentrancy/solidity_contract/35661.sol#229) is not in mixedCase
+Parameter '_owner' of StandardToken.balanceOf (/../data/reentrancy/solidity_contract/35661.sol#664) is not in mixedCase
+Parameter '_to' of StandardToken.transfer (/../data/reentrancy/solidity_contract/35661.sol#647) is not in mixedCase
+Parameter '_value' of StandardToken.transfer (/../data/reentrancy/solidity_contract/35661.sol#647) is not in mixedCase
+Parameter '_owner' of StandardToken.allowance (/../data/reentrancy/solidity_contract/35661.sol#681) is not in mixedCase
+Parameter '_spender' of StandardToken.allowance (/../data/reentrancy/solidity_contract/35661.sol#681) is not in mixedCase
+Parameter '_from' of StandardToken.transferFrom (/../data/reentrancy/solidity_contract/35661.sol#654) is not in mixedCase
+Parameter '_to' of StandardToken.transferFrom (/../data/reentrancy/solidity_contract/35661.sol#654) is not in mixedCase
+Parameter '_value' of StandardToken.transferFrom (/../data/reentrancy/solidity_contract/35661.sol#654) is not in mixedCase
+Parameter '_spender' of StandardToken.approve (/../data/reentrancy/solidity_contract/35661.sol#668) is not in mixedCase
+Parameter '_value' of StandardToken.approve (/../data/reentrancy/solidity_contract/35661.sol#668) is not in mixedCase
+Function 'PreICOProxyBuyer.PreICOProxyBuyer' (/../data/reentrancy/solidity_contract/35661.sol#749-771) is not in mixedCase
+Parameter '_owner' of PreICOProxyBuyer.PreICOProxyBuyer (/../data/reentrancy/solidity_contract/35661.sol#749) is not in mixedCase
+Parameter '_freezeEndsAt' of PreICOProxyBuyer.PreICOProxyBuyer (/../data/reentrancy/solidity_contract/35661.sol#749) is not in mixedCase
+Parameter '_weiMinimumLimit' of PreICOProxyBuyer.PreICOProxyBuyer (/../data/reentrancy/solidity_contract/35661.sol#749) is not in mixedCase
+Parameter '_weiMaximumLimit' of PreICOProxyBuyer.PreICOProxyBuyer (/../data/reentrancy/solidity_contract/35661.sol#749) is not in mixedCase
+Parameter '_weiCap' of PreICOProxyBuyer.PreICOProxyBuyer (/../data/reentrancy/solidity_contract/35661.sol#749) is not in mixedCase
+Parameter '_crowdsale' of PreICOProxyBuyer.setCrowdsale (/../data/reentrancy/solidity_contract/35661.sol#909) is not in mixedCase
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#conformance-to-solidity-naming-conventions[0m
+INFO:Slither:/../data/reentrancy/solidity_contract/35661.sol analyzed (12 contracts), 139 result(s) found

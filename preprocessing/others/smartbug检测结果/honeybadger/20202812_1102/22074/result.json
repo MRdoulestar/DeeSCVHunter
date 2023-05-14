@@ -1,0 +1,14 @@
+{
+  "contract": "22074",
+  "tool": "honeybadger",
+  "start": 1609188403.0566242,
+  "end": 1609188408.6973052,
+  "duration": 5.640681028366089,
+  "analysis": [
+    {
+      "errors": [],
+      "file": "/../data/reentrancy/solidity_contract/22074.sol",
+      "name": "SIMPLE_PIGGY_BANK"
+    }
+  ]
+}

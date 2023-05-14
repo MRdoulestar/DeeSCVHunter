@@ -1,0 +1,19 @@
+{
+  "contract": "14458",
+  "tool": "osiris",
+  "start": 1609175418.342278,
+  "end": 1609175487.1967921,
+  "duration": 68.85451412200928,
+  "analysis": [
+    {
+      "errors": [],
+      "file": "/../data/reentrancy/solidity_contract/14458.sol",
+      "name": "BankeraToken"
+    },
+    {
+      "errors": [],
+      "file": "/../data/reentrancy/solidity_contract/14458.sol",
+      "name": "SafeMath"
+    }
+  ]
+}

@@ -1,0 +1,627 @@
+INFO:Slither:Compilation warnings/errors on /../data/reentrancy/solidity_contract/33410.sol:
+/../data/reentrancy/solidity_contract/33410.sol:63:7: Warning: "throw" is deprecated in favour of "revert()", "require()" and "assert()".
+      throw;
+      ^---^
+/../data/reentrancy/solidity_contract/33410.sol:102:42: Warning: "throw" is deprecated in favour of "revert()", "require()" and "assert()".
+        if (msg.sender != address(this)) throw;
+                                         ^---^
+/../data/reentrancy/solidity_contract/33410.sol:107:29: Warning: "throw" is deprecated in favour of "revert()", "require()" and "assert()".
+        if (isOwner[owner]) throw;
+                            ^---^
+/../data/reentrancy/solidity_contract/33410.sol:112:30: Warning: "throw" is deprecated in favour of "revert()", "require()" and "assert()".
+        if (!isOwner[owner]) throw;
+                             ^---^
+/../data/reentrancy/solidity_contract/33410.sol:117:59: Warning: "throw" is deprecated in favour of "revert()", "require()" and "assert()".
+        if (transactions[transactionId].destination == 0) throw;
+                                                          ^---^
+/../data/reentrancy/solidity_contract/33410.sol:122:51: Warning: "throw" is deprecated in favour of "revert()", "require()" and "assert()".
+        if (!confirmations[transactionId][owner]) throw;
+                                                  ^---^
+/../data/reentrancy/solidity_contract/33410.sol:127:50: Warning: "throw" is deprecated in favour of "revert()", "require()" and "assert()".
+        if (confirmations[transactionId][owner]) throw;
+                                                 ^---^
+/../data/reentrancy/solidity_contract/33410.sol:132:51: Warning: "throw" is deprecated in favour of "revert()", "require()" and "assert()".
+        if (transactions[transactionId].executed) throw;
+                                                  ^---^
+/../data/reentrancy/solidity_contract/33410.sol:137:28: Warning: "throw" is deprecated in favour of "revert()", "require()" and "assert()".
+        if (_address == 0) throw;
+                           ^---^
+/../data/reentrancy/solidity_contract/33410.sol:142:43: Warning: "throw" is deprecated in favour of "revert()", "require()" and "assert()".
+        if (ownerCount > MAX_OWNER_COUNT) throw;
+                                          ^---^
+/../data/reentrancy/solidity_contract/33410.sol:143:37: Warning: "throw" is deprecated in favour of "revert()", "require()" and "assert()".
+        if (_required > ownerCount) throw;
+                                    ^---^
+/../data/reentrancy/solidity_contract/33410.sol:144:29: Warning: "throw" is deprecated in favour of "revert()", "require()" and "assert()".
+        if (_required == 0) throw;
+                            ^---^
+/../data/reentrancy/solidity_contract/33410.sol:145:30: Warning: "throw" is deprecated in favour of "revert()", "require()" and "assert()".
+        if (ownerCount == 0) throw;
+                             ^---^
+/../data/reentrancy/solidity_contract/33410.sol:161:5: Warning: Defining constructors as functions with the same name as the contract is deprecated. Use "constructor(...) { ... }" instead.
+    function MultiSigWallet(address[] _owners, uint _required)
+    ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/33410.sol:166:57: Warning: "throw" is deprecated in favour of "revert()", "require()" and "assert()".
+            if (isOwner[_owners[i]] || _owners[i] == 0) throw;
+                                                        ^---^
+/../data/reentrancy/solidity_contract/33410.sol:445:5: Warning: Defining constructors as functions with the same name as the contract is deprecated. Use "constructor(...) { ... }" instead.
+    function BCDCVault(address _bcdcMultisig,uint256 _numBlocksLockedForDev,uint256 _numBlocksLockedForFounders) {
+    ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/33410.sol:447:35: Warning: "throw" is deprecated in favour of "revert()", "require()" and "assert()".
+        if (_bcdcMultisig == 0x0) throw;
+                                  ^---^
+/../data/reentrancy/solidity_contract/33410.sol:468:49: Warning: "throw" is deprecated in favour of "revert()", "require()" and "assert()".
+        if (block.number < unlockedBlockForDev) throw;
+                                                ^---^
+/../data/reentrancy/solidity_contract/33410.sol:470:38: Warning: "throw" is deprecated in favour of "revert()", "require()" and "assert()".
+        if (unlockedAllTokensForDev) throw;
+                                     ^---^
+/../data/reentrancy/solidity_contract/33410.sol:477:67: Warning: "throw" is deprecated in favour of "revert()", "require()" and "assert()".
+        if (!bcdcToken.transfer(bcdcMultisig, developmentTokens)) throw;
+                                                                  ^---^
+/../data/reentrancy/solidity_contract/33410.sol:483:54: Warning: "throw" is deprecated in favour of "revert()", "require()" and "assert()".
+        if (block.number < unlockedBlockForFounders) throw;
+                                                     ^---^
+/../data/reentrancy/solidity_contract/33410.sol:485:43: Warning: "throw" is deprecated in favour of "revert()", "require()" and "assert()".
+        if (unlockedAllTokensForFounders) throw;
+                                          ^---^
+/../data/reentrancy/solidity_contract/33410.sol:489:75: Warning: "throw" is deprecated in favour of "revert()", "require()" and "assert()".
+        if (!bcdcToken.transfer(bcdcMultisig, bcdcToken.balanceOf(this))) throw;
+                                                                          ^---^
+/../data/reentrancy/solidity_contract/33410.sol:491:47: Warning: "throw" is deprecated in favour of "revert()", "require()" and "assert()".
+        if (!bcdcMultisig.send(this.balance)) throw;
+                                              ^---^
+/../data/reentrancy/solidity_contract/33410.sol:496:55: Warning: "throw" is deprecated in favour of "revert()", "require()" and "assert()".
+        if (block.number >= unlockedBlockForFounders) throw;
+                                                      ^---^
+/../data/reentrancy/solidity_contract/33410.sol:577:5: Warning: Defining constructors as functions with the same name as the contract is deprecated. Use "constructor(...) { ... }" instead.
+    function BCDCToken(address _bcdcMultiSig,
+    ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/33410.sol:587:33: Warning: "throw" is deprecated in favour of "revert()", "require()" and "assert()".
+        if (_bcdcMultiSig == 0) throw;
+                                ^---^
+/../data/reentrancy/solidity_contract/33410.sol:589:34: Warning: "throw" is deprecated in favour of "revert()", "require()" and "assert()".
+        if (_upgradeMaster == 0) throw;
+                                 ^---^
+/../data/reentrancy/solidity_contract/33410.sol:591:49: Warning: "throw" is deprecated in favour of "revert()", "require()" and "assert()".
+        if (_fundingStartBlock <= block.number) throw;
+                                                ^---^
+/../data/reentrancy/solidity_contract/33410.sol:593:55: Warning: "throw" is deprecated in favour of "revert()", "require()" and "assert()".
+        if (_fundingEndBlock   <= _fundingStartBlock) throw;
+                                                      ^---^
+/../data/reentrancy/solidity_contract/33410.sol:595:45: Warning: "throw" is deprecated in favour of "revert()", "require()" and "assert()".
+        if (_tokenSaleMax <= _tokenSaleMin) throw;
+                                            ^---^
+/../data/reentrancy/solidity_contract/33410.sol:597:35: Warning: "throw" is deprecated in favour of "revert()", "require()" and "assert()".
+        if (_tokensPerEther == 0) throw;
+                                  ^---^
+/../data/reentrancy/solidity_contract/33410.sol:610:39: Warning: "throw" is deprecated in favour of "revert()", "require()" and "assert()".
+        if (!timeVault.isBCDCVault()) throw;
+                                      ^---^
+/../data/reentrancy/solidity_contract/33410.sol:616:63: Warning: "throw" is deprecated in favour of "revert()", "require()" and "assert()".
+        if (!MultiSigWallet(bcdcMultisig).isMultiSigWallet()) throw;
+                                                              ^---^
+/../data/reentrancy/solidity_contract/33410.sol:622:9: Warning: "throw" is deprecated in favour of "revert()", "require()" and "assert()".
+        throw;
+        ^---^
+/../data/reentrancy/solidity_contract/33410.sol:639:45: Warning: "throw" is deprecated in favour of "revert()", "require()" and "assert()".
+        if (getState() != State.PreFunding) throw;
+                                            ^---^
+/../data/reentrancy/solidity_contract/33410.sol:640:27: Warning: "throw" is deprecated in favour of "revert()", "require()" and "assert()".
+        if (preallocated) throw;  
+                          ^---^
+/../data/reentrancy/solidity_contract/33410.sol:641:38: Warning: "throw" is deprecated in favour of "revert()", "require()" and "assert()".
+        if (_bcdcReserveFund == 0x0) throw;
+                                     ^---^
+/../data/reentrancy/solidity_contract/33410.sol:673:42: Warning: "throw" is deprecated in favour of "revert()", "require()" and "assert()".
+        if (getState() != State.Success) throw;  
+                                         ^---^
+/../data/reentrancy/solidity_contract/33410.sol:693:42: Warning: "throw" is deprecated in favour of "revert()", "require()" and "assert()".
+        if (getState() != State.Success) throw;  
+                                         ^---^
+/../data/reentrancy/solidity_contract/33410.sol:711:42: Warning: "throw" is deprecated in favour of "revert()", "require()" and "assert()".
+        if (getState() != State.Success) throw;  
+                                         ^---^
+/../data/reentrancy/solidity_contract/33410.sol:721:42: Warning: "throw" is deprecated in favour of "revert()", "require()" and "assert()".
+        if (getState() != State.Funding) throw;
+                                         ^---^
+/../data/reentrancy/solidity_contract/33410.sol:724:29: Warning: "throw" is deprecated in favour of "revert()", "require()" and "assert()".
+        if (msg.value == 0) throw;
+                            ^---^
+/../data/reentrancy/solidity_contract/33410.sol:730:65: Warning: "throw" is deprecated in favour of "revert()", "require()" and "assert()".
+        if (safeAdd(createdTokens, totalSupply) > tokenSaleMax) throw;
+                                                                ^---^
+/../data/reentrancy/solidity_contract/33410.sol:743:45: Warning: "throw" is deprecated in favour of "revert()", "require()" and "assert()".
+        if (getState() != State.PreFunding) throw;
+                                            ^---^
+/../data/reentrancy/solidity_contract/33410.sol:745:37: Warning: "throw" is deprecated in favour of "revert()", "require()" and "assert()".
+        if (bcdcReserveFund == 0x0) throw;
+                                    ^---^
+/../data/reentrancy/solidity_contract/33410.sol:747:27: Warning: "throw" is deprecated in favour of "revert()", "require()" and "assert()".
+        if (preallocated) throw;
+                          ^---^
+/../data/reentrancy/solidity_contract/33410.sol:762:76: Warning: "throw" is deprecated in favour of "revert()", "require()" and "assert()".
+        if (getState() != State.PreFunding && getState() != State.Funding) throw;
+                                                                           ^---^
+/../data/reentrancy/solidity_contract/33410.sol:764:35: Warning: "throw" is deprecated in favour of "revert()", "require()" and "assert()".
+        if (earlyInvestor == 0x0) throw;
+                                  ^---^
+/../data/reentrancy/solidity_contract/33410.sol:766:35: Warning: "throw" is deprecated in favour of "revert()", "require()" and "assert()".
+        if (assignedTokens == 0 ) throw;
+                                  ^---^
+/../data/reentrancy/solidity_contract/33410.sol:793:42: Warning: "throw" is deprecated in favour of "revert()", "require()" and "assert()".
+        if (getState() != State.Success) throw;  
+                                         ^---^
+/../data/reentrancy/solidity_contract/33410.sol:794:36: Warning: "throw" is deprecated in favour of "revert()", "require()" and "assert()".
+        if (finalizedCrowdfunding) throw;  
+                                   ^---^
+/../data/reentrancy/solidity_contract/33410.sol:828:43: Warning: "throw" is deprecated in favour of "revert()", "require()" and "assert()".
+        if (totalSupply > maxTokenSupply) throw;
+                                          ^---^
+/../data/reentrancy/solidity_contract/33410.sol:830:47: Warning: "throw" is deprecated in favour of "revert()", "require()" and "assert()".
+        if (!bcdcMultisig.send(this.balance)) throw;
+                                              ^---^
+/../data/reentrancy/solidity_contract/33410.sol:837:42: Warning: "throw" is deprecated in favour of "revert()", "require()" and "assert()".
+        if (getState() != State.Failure) throw;
+                                         ^---^
+/../data/reentrancy/solidity_contract/33410.sol:840:29: Warning: "throw" is deprecated in favour of "revert()", "require()" and "assert()".
+        if (bcdcValue == 0) throw;
+                            ^---^
+/../data/reentrancy/solidity_contract/33410.sol:847:41: Warning: "throw" is deprecated in favour of "revert()", "require()" and "assert()".
+        if (!msg.sender.send(ethValue)) throw;
+                                        ^---^
+/../data/reentrancy/solidity_contract/33410.sol:865:34: Warning: "throw" is deprecated in favour of "revert()", "require()" and "assert()".
+        if (!upgradeAgentStatus) throw;
+                                 ^---^
+/../data/reentrancy/solidity_contract/33410.sol:866:42: Warning: "throw" is deprecated in favour of "revert()", "require()" and "assert()".
+        if (upgradeAgent.owner() == 0x0) throw;
+                                         ^---^
+/../data/reentrancy/solidity_contract/33410.sol:867:31: Warning: "throw" is deprecated in favour of "revert()", "require()" and "assert()".
+        if (finalizedUpgrade) throw;  
+                              ^---^
+/../data/reentrancy/solidity_contract/33410.sol:870:25: Warning: "throw" is deprecated in favour of "revert()", "require()" and "assert()".
+        if (value == 0) throw;
+                        ^---^
+/../data/reentrancy/solidity_contract/33410.sol:871:43: Warning: "throw" is deprecated in favour of "revert()", "require()" and "assert()".
+        if (value > balances[msg.sender]) throw;
+                                          ^---^
+/../data/reentrancy/solidity_contract/33410.sol:886:42: Warning: "throw" is deprecated in favour of "revert()", "require()" and "assert()".
+        if (getState() != State.Success) throw;  
+                                         ^---^
+/../data/reentrancy/solidity_contract/33410.sol:887:27: Warning: "throw" is deprecated in favour of "revert()", "require()" and "assert()".
+        if (agent == 0x0) throw;  
+                          ^---^
+/../data/reentrancy/solidity_contract/33410.sol:888:42: Warning: "throw" is deprecated in favour of "revert()", "require()" and "assert()".
+        if (msg.sender != upgradeMaster) throw;  
+                                         ^---^
+/../data/reentrancy/solidity_contract/33410.sol:890:45: Warning: "throw" is deprecated in favour of "revert()", "require()" and "assert()".
+        if (!upgradeAgent.isUpgradeAgent()) throw;
+                                            ^---^
+/../data/reentrancy/solidity_contract/33410.sol:902:42: Warning: "throw" is deprecated in favour of "revert()", "require()" and "assert()".
+        if (getState() != State.Success) throw;  
+                                         ^---^
+/../data/reentrancy/solidity_contract/33410.sol:903:28: Warning: "throw" is deprecated in favour of "revert()", "require()" and "assert()".
+        if (master == 0x0) throw;
+                           ^---^
+/../data/reentrancy/solidity_contract/33410.sol:904:42: Warning: "throw" is deprecated in favour of "revert()", "require()" and "assert()".
+        if (msg.sender != upgradeMaster) throw;  
+                                         ^---^
+/../data/reentrancy/solidity_contract/33410.sol:912:18: Warning: "throw" is deprecated in favour of "revert()", "require()" and "assert()".
+      if(halted) throw;
+                 ^---^
+/../data/reentrancy/solidity_contract/33410.sol:918:19: Warning: "throw" is deprecated in favour of "revert()", "require()" and "assert()".
+      if(!halted) throw;
+                  ^---^
+/../data/reentrancy/solidity_contract/33410.sol:939:36: Warning: "throw" is deprecated in favour of "revert()", "require()" and "assert()".
+      if ( bcdcReserveFund == 0x0) throw;
+                                   ^---^
+/../data/reentrancy/solidity_contract/33410.sol:955:54: Warning: "throw" is deprecated in favour of "revert()", "require()" and "assert()".
+  		if(balances[msg.sender] < tokens && tokens <= 0) throw;
+  		                                                 ^---^
+/../data/reentrancy/solidity_contract/33410.sol:969:9: Warning: "throw" is deprecated in favour of "revert()", "require()" and "assert()".
+        throw;
+        ^---^
+/../data/reentrancy/solidity_contract/33410.sol:61:3: Warning: This declaration shadows a builtin symbol.
+  function assert(bool assertion) internal {
+  ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/33410.sol:291:13: Warning: This declaration shadows a builtin symbol.
+            Transaction tx = transactions[transactionId];
+            ^------------^
+/../data/reentrancy/solidity_contract/33410.sol:662:24: Warning: This declaration shadows an existing declaration.
+    function allowance(address owner, address spender) constant returns (uint) {
+                       ^-----------^
+/../data/reentrancy/solidity_contract/33410.sol:508:5: The shadowed declaration is here:
+    address public owner;
+    ^------------------^
+
+/../data/reentrancy/solidity_contract/33410.sol:291:13: Warning: Variable is declared as a storage pointer. Use an explicit "storage" keyword to silence this warning.
+            Transaction tx = transactions[transactionId];
+            ^------------^
+/../data/reentrancy/solidity_contract/33410.sol:154:13: Warning: Invoking events without "emit" prefix is deprecated.
+            Deposit(msg.sender, msg.value);
+            ^----------------------------^
+/../data/reentrancy/solidity_contract/33410.sol:185:9: Warning: Invoking events without "emit" prefix is deprecated.
+        OwnerAddition(owner);
+        ^------------------^
+/../data/reentrancy/solidity_contract/33410.sol:204:9: Warning: Invoking events without "emit" prefix is deprecated.
+        OwnerRemoval(owner);
+        ^-----------------^
+/../data/reentrancy/solidity_contract/33410.sol:223:9: Warning: Invoking events without "emit" prefix is deprecated.
+        OwnerRemoval(owner);
+        ^-----------------^
+/../data/reentrancy/solidity_contract/33410.sol:224:9: Warning: Invoking events without "emit" prefix is deprecated.
+        OwnerAddition(newOwner);
+        ^---------------------^
+/../data/reentrancy/solidity_contract/33410.sol:235:9: Warning: Invoking events without "emit" prefix is deprecated.
+        RequirementChange(_required);
+        ^--------------------------^
+/../data/reentrancy/solidity_contract/33410.sol:252:9: Warning: Invoking events without "emit" prefix is deprecated.
+        Confirmation(msg.sender, transactionId);
+        ^-------------------------------------^
+/../data/reentrancy/solidity_contract/33410.sol:265:9: Warning: Invoking events without "emit" prefix is deprecated.
+        Revocation(msg.sender, transactionId);
+        ^-----------------------------------^
+/../data/reentrancy/solidity_contract/33410.sol:294:17: Warning: Invoking events without "emit" prefix is deprecated.
+                Execution(transactionId);
+                ^----------------------^
+/../data/reentrancy/solidity_contract/33410.sol:296:17: Warning: Invoking events without "emit" prefix is deprecated.
+                ExecutionFailure(transactionId);
+                ^-----------------------------^
+/../data/reentrancy/solidity_contract/33410.sol:320:9: Warning: Invoking events without "emit" prefix is deprecated.
+        Submission(transactionId);
+        ^-----------------------^
+/../data/reentrancy/solidity_contract/33410.sol:491:32: Warning: Using contract member "balance" inherited from the address type is deprecated. Convert the contract to "address" type to access the member, for example use "address(contract).balance" instead.
+        if (!bcdcMultisig.send(this.balance)) throw;
+                               ^----------^
+/../data/reentrancy/solidity_contract/33410.sol:679:13: Warning: Invoking events without "emit" prefix is deprecated.
+            Transfer(msg.sender, to, value);
+            ^-----------------------------^
+/../data/reentrancy/solidity_contract/33410.sol:701:13: Warning: Invoking events without "emit" prefix is deprecated.
+            Transfer(from, to, value);
+            ^-----------------------^
+/../data/reentrancy/solidity_contract/33410.sol:713:9: Warning: Invoking events without "emit" prefix is deprecated.
+        Approval(msg.sender, spender, value);
+        ^----------------------------------^
+/../data/reentrancy/solidity_contract/33410.sol:755:9: Warning: Invoking events without "emit" prefix is deprecated.
+        Transfer(0, bcdcReserveFund, projectTokens);
+        ^-----------------------------------------^
+/../data/reentrancy/solidity_contract/33410.sol:786:9: Warning: Invoking events without "emit" prefix is deprecated.
+        Transfer(0, investor, tokens);
+        ^---------------------------^
+/../data/reentrancy/solidity_contract/33410.sol:807:9: Warning: Invoking events without "emit" prefix is deprecated.
+        Transfer(0, timeVault, vaultTokens);
+        ^---------------------------------^
+/../data/reentrancy/solidity_contract/33410.sol:814:13: Warning: Invoking events without "emit" prefix is deprecated.
+            Transfer(0, bcdcMultisig, unsoldTokens);
+            ^-------------------------------------^
+/../data/reentrancy/solidity_contract/33410.sol:830:32: Warning: Using contract member "balance" inherited from the address type is deprecated. Convert the contract to "address" type to access the member, for example use "address(contract).balance" instead.
+        if (!bcdcMultisig.send(this.balance)) throw;
+                               ^----------^
+/../data/reentrancy/solidity_contract/33410.sol:846:9: Warning: Invoking events without "emit" prefix is deprecated.
+        Refund(msg.sender, ethValue);
+        ^--------------------------^
+/../data/reentrancy/solidity_contract/33410.sol:878:9: Warning: Invoking events without "emit" prefix is deprecated.
+        Upgrade(msg.sender, upgradeAgent, value);
+        ^--------------------------------------^
+/../data/reentrancy/solidity_contract/33410.sol:894:9: Warning: Invoking events without "emit" prefix is deprecated.
+        UpgradeAgentSet(upgradeAgent);
+        ^---------------------------^
+/../data/reentrancy/solidity_contract/33410.sol:945:9: Warning: Invoking events without "emit" prefix is deprecated.
+        Transfer(msg.sender, claimAddress, token);
+        ^---------------------------------------^
+/../data/reentrancy/solidity_contract/33410.sol:962:5: Warning: Invoking events without "emit" prefix is deprecated.
+  		Transfer(msg.sender, bcdcReserveFund, tokens);
+  		^-------------------------------------------^
+/../data/reentrancy/solidity_contract/33410.sol:7:3: Warning: No visibility specified. Defaulting to "public". 
+  function balanceOf(address who) constant returns (uint);
+  ^------------------------------------------------------^
+/../data/reentrancy/solidity_contract/33410.sol:8:3: Warning: No visibility specified. Defaulting to "public". 
+  function allowance(address owner, address spender) constant returns (uint);
+  ^-------------------------------------------------------------------------^
+/../data/reentrancy/solidity_contract/33410.sol:10:3: Warning: No visibility specified. Defaulting to "public". 
+  function transfer(address to, uint value) returns (bool ok);
+  ^----------------------------------------------------------^
+/../data/reentrancy/solidity_contract/33410.sol:11:3: Warning: No visibility specified. Defaulting to "public". 
+  function transferFrom(address from, address to, uint value) returns (bool ok);
+  ^----------------------------------------------------------------------------^
+/../data/reentrancy/solidity_contract/33410.sol:12:3: Warning: No visibility specified. Defaulting to "public". 
+  function approve(address spender, uint value) returns (bool ok);
+  ^--------------------------------------------------------------^
+/../data/reentrancy/solidity_contract/33410.sol:150:5: Warning: No visibility specified. Defaulting to "public". 
+    function()
+    ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/33410.sol:445:5: Warning: No visibility specified. Defaulting to "public". 
+    function BCDCVault(address _bcdcMultisig,uint256 _numBlocksLockedForDev,uint256 _numBlocksLockedForFounders) {
+    ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/33410.sol:495:5: Warning: No visibility specified. Defaulting to "public". 
+    function () payable {
+    ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/33410.sol:577:5: Warning: No visibility specified. Defaulting to "public". 
+    function BCDCToken(address _bcdcMultiSig,
+    ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/33410.sol:629:5: Warning: No visibility specified. Defaulting to "public". 
+    function transferOwnership(address newOwner) onlyOwner {
+    ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/33410.sol:638:5: Warning: No visibility specified. Defaulting to "public". 
+    function setBcdcReserveFund(address _bcdcReserveFund) onlyOwner{
+    ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/33410.sol:647:5: Warning: No visibility specified. Defaulting to "public". 
+    function balanceOf(address who) constant returns (uint) {
+    ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/33410.sol:655:5: Warning: No visibility specified. Defaulting to "public". 
+    function checkInvestment(address who) constant returns (uint) {
+    ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/33410.sol:662:5: Warning: No visibility specified. Defaulting to "public". 
+    function allowance(address owner, address spender) constant returns (uint) {
+    ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/33410.sol:672:5: Warning: No visibility specified. Defaulting to "public". 
+    function transfer(address to, uint value) returns (bool ok) {
+    ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/33410.sol:692:5: Warning: No visibility specified. Defaulting to "public". 
+    function transferFrom(address from, address to, uint value) returns (bool ok) {
+    ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/33410.sol:710:5: Warning: No visibility specified. Defaulting to "public". 
+    function approve(address spender, uint value) returns (bool ok) {
+    ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/33410.sol:937:5: Warning: No visibility specified. Defaulting to "public". 
+    function reserveTokenClaim(address claimAddress,uint256 token) onlyBcdcReserve returns (bool ok){
+    ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/33410.sol:45:3: Warning: Function state mutability can be restricted to pure
+  function max64(uint64 a, uint64 b) internal constant returns (uint64) {
+  ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/33410.sol:49:3: Warning: Function state mutability can be restricted to pure
+  function min64(uint64 a, uint64 b) internal constant returns (uint64) {
+  ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/33410.sol:53:3: Warning: Function state mutability can be restricted to pure
+  function max256(uint256 a, uint256 b) internal constant returns (uint256) {
+  ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/33410.sol:57:3: Warning: Function state mutability can be restricted to pure
+  function min256(uint256 a, uint256 b) internal constant returns (uint256) {
+  ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/33410.sol:61:3: Warning: Function state mutability can be restricted to pure
+  function assert(bool assertion) internal {
+  ^ (Relevant source part starts here and spans across multiple lines).
+
+INFO:Detectors:[91m
+BCDCVault.unlockForFounders (/../data/reentrancy/solidity_contract/33410.sol#481-492) sends eth to arbitrary user
+	Dangerous calls:
+	- ! bcdcMultisig.send(this.balance) (/../data/reentrancy/solidity_contract/33410.sol#491)
+BCDCToken.finalizeCrowdfunding (/../data/reentrancy/solidity_contract/33410.sol#791-831) sends eth to arbitrary user
+	Dangerous calls:
+	- ! bcdcMultisig.send(this.balance) (/../data/reentrancy/solidity_contract/33410.sol#830)
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#functions-that-send-ether-to-arbitrary-destinations[0m
+INFO:Detectors:[93m
+Reentrancy in BCDCToken.setUpgradeAgent (/../data/reentrancy/solidity_contract/33410.sol#885-895):
+	External calls:
+	- ! upgradeAgent.isUpgradeAgent() (/../data/reentrancy/solidity_contract/33410.sol#890)
+	State variables written after the call(s):
+	- upgradeAgentStatus (/../data/reentrancy/solidity_contract/33410.sol#892)
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#reentrancy-vulnerabilities-1[0m
+INFO:Detectors:[92m
+SafeMath.assert (function @ /../data/reentrancy/solidity_contract/33410.sol#61-65) shadows built-in symbol "assert"
+MultiSigWallet.executeTransaction.tx (local variable @ /../data/reentrancy/solidity_contract/33410.sol#291) shadows built-in symbol "tx"
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#builtin-symbol-shadowing[0m
+INFO:Detectors:[92m
+BCDCToken.allowance.owner (local variable @ /../data/reentrancy/solidity_contract/33410.sol#662) shadows:
+	- BCDCToken.owner (state variable @ /../data/reentrancy/solidity_contract/33410.sol#508)
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#local-variable-shadowing[0m
+INFO:Detectors:[92m
+Reentrancy in BCDCToken.BCDCToken (/../data/reentrancy/solidity_contract/33410.sol#577-617):
+	External calls:
+	- ! timeVault.isBCDCVault() (/../data/reentrancy/solidity_contract/33410.sol#610)
+	State variables written after the call(s):
+	- bcdcMultisig (/../data/reentrancy/solidity_contract/33410.sol#612)
+	- owner (/../data/reentrancy/solidity_contract/33410.sol#614)
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#reentrancy-vulnerabilities-2[0m
+INFO:Detectors:[92m
+BCDCToken.finalizedUpgrade should be constant (/../data/reentrancy/solidity_contract/33410.sol#564)
+UpgradeAgent.isUpgradeAgent should be constant (/../data/reentrancy/solidity_contract/33410.sol#412)
+UpgradeAgent.owner should be constant (/../data/reentrancy/solidity_contract/33410.sol#411)
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#state-variables-that-could-be-declared-constant[0m
+INFO:Detectors:[92m
+Deprecated standard detected @ /../data/reentrancy/solidity_contract/33410.sol#63:
+	- Usage of "throw" should be replaced with "revert()"
+Deprecated standard detected @ /../data/reentrancy/solidity_contract/33410.sol#166:
+	- Usage of "throw" should be replaced with "revert()"
+Deprecated standard detected @ /../data/reentrancy/solidity_contract/33410.sol#102:
+	- Usage of "throw" should be replaced with "revert()"
+Deprecated standard detected @ /../data/reentrancy/solidity_contract/33410.sol#107:
+	- Usage of "throw" should be replaced with "revert()"
+Deprecated standard detected @ /../data/reentrancy/solidity_contract/33410.sol#112:
+	- Usage of "throw" should be replaced with "revert()"
+Deprecated standard detected @ /../data/reentrancy/solidity_contract/33410.sol#117:
+	- Usage of "throw" should be replaced with "revert()"
+Deprecated standard detected @ /../data/reentrancy/solidity_contract/33410.sol#122:
+	- Usage of "throw" should be replaced with "revert()"
+Deprecated standard detected @ /../data/reentrancy/solidity_contract/33410.sol#127:
+	- Usage of "throw" should be replaced with "revert()"
+Deprecated standard detected @ /../data/reentrancy/solidity_contract/33410.sol#132:
+	- Usage of "throw" should be replaced with "revert()"
+Deprecated standard detected @ /../data/reentrancy/solidity_contract/33410.sol#137:
+	- Usage of "throw" should be replaced with "revert()"
+Deprecated standard detected @ /../data/reentrancy/solidity_contract/33410.sol#142:
+	- Usage of "throw" should be replaced with "revert()"
+Deprecated standard detected @ /../data/reentrancy/solidity_contract/33410.sol#143:
+	- Usage of "throw" should be replaced with "revert()"
+Deprecated standard detected @ /../data/reentrancy/solidity_contract/33410.sol#144:
+	- Usage of "throw" should be replaced with "revert()"
+Deprecated standard detected @ /../data/reentrancy/solidity_contract/33410.sol#145:
+	- Usage of "throw" should be replaced with "revert()"
+Deprecated standard detected @ /../data/reentrancy/solidity_contract/33410.sol#447:
+	- Usage of "throw" should be replaced with "revert()"
+Deprecated standard detected @ /../data/reentrancy/solidity_contract/33410.sol#468:
+	- Usage of "throw" should be replaced with "revert()"
+Deprecated standard detected @ /../data/reentrancy/solidity_contract/33410.sol#470:
+	- Usage of "throw" should be replaced with "revert()"
+Deprecated standard detected @ /../data/reentrancy/solidity_contract/33410.sol#477:
+	- Usage of "throw" should be replaced with "revert()"
+Deprecated standard detected @ /../data/reentrancy/solidity_contract/33410.sol#483:
+	- Usage of "throw" should be replaced with "revert()"
+Deprecated standard detected @ /../data/reentrancy/solidity_contract/33410.sol#485:
+	- Usage of "throw" should be replaced with "revert()"
+Deprecated standard detected @ /../data/reentrancy/solidity_contract/33410.sol#489:
+	- Usage of "throw" should be replaced with "revert()"
+Deprecated standard detected @ /../data/reentrancy/solidity_contract/33410.sol#491:
+	- Usage of "throw" should be replaced with "revert()"
+Deprecated standard detected @ /../data/reentrancy/solidity_contract/33410.sol#496:
+	- Usage of "throw" should be replaced with "revert()"
+Deprecated standard detected @ /../data/reentrancy/solidity_contract/33410.sol#673:
+	- Usage of "throw" should be replaced with "revert()"
+Deprecated standard detected @ /../data/reentrancy/solidity_contract/33410.sol#693:
+	- Usage of "throw" should be replaced with "revert()"
+Deprecated standard detected @ /../data/reentrancy/solidity_contract/33410.sol#711:
+	- Usage of "throw" should be replaced with "revert()"
+Deprecated standard detected @ /../data/reentrancy/solidity_contract/33410.sol#587:
+	- Usage of "throw" should be replaced with "revert()"
+Deprecated standard detected @ /../data/reentrancy/solidity_contract/33410.sol#589:
+	- Usage of "throw" should be replaced with "revert()"
+Deprecated standard detected @ /../data/reentrancy/solidity_contract/33410.sol#591:
+	- Usage of "throw" should be replaced with "revert()"
+Deprecated standard detected @ /../data/reentrancy/solidity_contract/33410.sol#593:
+	- Usage of "throw" should be replaced with "revert()"
+Deprecated standard detected @ /../data/reentrancy/solidity_contract/33410.sol#595:
+	- Usage of "throw" should be replaced with "revert()"
+Deprecated standard detected @ /../data/reentrancy/solidity_contract/33410.sol#597:
+	- Usage of "throw" should be replaced with "revert()"
+Deprecated standard detected @ /../data/reentrancy/solidity_contract/33410.sol#610:
+	- Usage of "throw" should be replaced with "revert()"
+Deprecated standard detected @ /../data/reentrancy/solidity_contract/33410.sol#616:
+	- Usage of "throw" should be replaced with "revert()"
+Deprecated standard detected @ /../data/reentrancy/solidity_contract/33410.sol#639:
+	- Usage of "throw" should be replaced with "revert()"
+Deprecated standard detected @ /../data/reentrancy/solidity_contract/33410.sol#640:
+	- Usage of "throw" should be replaced with "revert()"
+Deprecated standard detected @ /../data/reentrancy/solidity_contract/33410.sol#641:
+	- Usage of "throw" should be replaced with "revert()"
+Deprecated standard detected @ /../data/reentrancy/solidity_contract/33410.sol#721:
+	- Usage of "throw" should be replaced with "revert()"
+Deprecated standard detected @ /../data/reentrancy/solidity_contract/33410.sol#724:
+	- Usage of "throw" should be replaced with "revert()"
+Deprecated standard detected @ /../data/reentrancy/solidity_contract/33410.sol#730:
+	- Usage of "throw" should be replaced with "revert()"
+Deprecated standard detected @ /../data/reentrancy/solidity_contract/33410.sol#743:
+	- Usage of "throw" should be replaced with "revert()"
+Deprecated standard detected @ /../data/reentrancy/solidity_contract/33410.sol#745:
+	- Usage of "throw" should be replaced with "revert()"
+Deprecated standard detected @ /../data/reentrancy/solidity_contract/33410.sol#747:
+	- Usage of "throw" should be replaced with "revert()"
+Deprecated standard detected @ /../data/reentrancy/solidity_contract/33410.sol#762:
+	- Usage of "throw" should be replaced with "revert()"
+Deprecated standard detected @ /../data/reentrancy/solidity_contract/33410.sol#764:
+	- Usage of "throw" should be replaced with "revert()"
+Deprecated standard detected @ /../data/reentrancy/solidity_contract/33410.sol#766:
+	- Usage of "throw" should be replaced with "revert()"
+Deprecated standard detected @ /../data/reentrancy/solidity_contract/33410.sol#793:
+	- Usage of "throw" should be replaced with "revert()"
+Deprecated standard detected @ /../data/reentrancy/solidity_contract/33410.sol#794:
+	- Usage of "throw" should be replaced with "revert()"
+Deprecated standard detected @ /../data/reentrancy/solidity_contract/33410.sol#828:
+	- Usage of "throw" should be replaced with "revert()"
+Deprecated standard detected @ /../data/reentrancy/solidity_contract/33410.sol#830:
+	- Usage of "throw" should be replaced with "revert()"
+Deprecated standard detected @ /../data/reentrancy/solidity_contract/33410.sol#837:
+	- Usage of "throw" should be replaced with "revert()"
+Deprecated standard detected @ /../data/reentrancy/solidity_contract/33410.sol#840:
+	- Usage of "throw" should be replaced with "revert()"
+Deprecated standard detected @ /../data/reentrancy/solidity_contract/33410.sol#847:
+	- Usage of "throw" should be replaced with "revert()"
+Deprecated standard detected @ /../data/reentrancy/solidity_contract/33410.sol#865:
+	- Usage of "throw" should be replaced with "revert()"
+Deprecated standard detected @ /../data/reentrancy/solidity_contract/33410.sol#866:
+	- Usage of "throw" should be replaced with "revert()"
+Deprecated standard detected @ /../data/reentrancy/solidity_contract/33410.sol#867:
+	- Usage of "throw" should be replaced with "revert()"
+Deprecated standard detected @ /../data/reentrancy/solidity_contract/33410.sol#870:
+	- Usage of "throw" should be replaced with "revert()"
+Deprecated standard detected @ /../data/reentrancy/solidity_contract/33410.sol#871:
+	- Usage of "throw" should be replaced with "revert()"
+Deprecated standard detected @ /../data/reentrancy/solidity_contract/33410.sol#886:
+	- Usage of "throw" should be replaced with "revert()"
+Deprecated standard detected @ /../data/reentrancy/solidity_contract/33410.sol#887:
+	- Usage of "throw" should be replaced with "revert()"
+Deprecated standard detected @ /../data/reentrancy/solidity_contract/33410.sol#888:
+	- Usage of "throw" should be replaced with "revert()"
+Deprecated standard detected @ /../data/reentrancy/solidity_contract/33410.sol#890:
+	- Usage of "throw" should be replaced with "revert()"
+Deprecated standard detected @ /../data/reentrancy/solidity_contract/33410.sol#902:
+	- Usage of "throw" should be replaced with "revert()"
+Deprecated standard detected @ /../data/reentrancy/solidity_contract/33410.sol#903:
+	- Usage of "throw" should be replaced with "revert()"
+Deprecated standard detected @ /../data/reentrancy/solidity_contract/33410.sol#904:
+	- Usage of "throw" should be replaced with "revert()"
+Deprecated standard detected @ /../data/reentrancy/solidity_contract/33410.sol#939:
+	- Usage of "throw" should be replaced with "revert()"
+Deprecated standard detected @ /../data/reentrancy/solidity_contract/33410.sol#955:
+	- Usage of "throw" should be replaced with "revert()"
+Deprecated standard detected @ /../data/reentrancy/solidity_contract/33410.sol#622:
+	- Usage of "throw" should be replaced with "revert()"
+Deprecated standard detected @ /../data/reentrancy/solidity_contract/33410.sol#912:
+	- Usage of "throw" should be replaced with "revert()"
+Deprecated standard detected @ /../data/reentrancy/solidity_contract/33410.sol#918:
+	- Usage of "throw" should be replaced with "revert()"
+Deprecated standard detected @ /../data/reentrancy/solidity_contract/33410.sol#969:
+	- Usage of "throw" should be replaced with "revert()"
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#deprecated-standards[0m
+INFO:Detectors:[92m
+ERC20.balanceOf (/../data/reentrancy/solidity_contract/33410.sol#7) should be declared external
+BCDCToken.balanceOf (/../data/reentrancy/solidity_contract/33410.sol#647-649) should be declared external
+BCDCToken.allowance (/../data/reentrancy/solidity_contract/33410.sol#662-664) should be declared external
+ERC20.allowance (/../data/reentrancy/solidity_contract/33410.sol#8) should be declared external
+BCDCToken.transfer (/../data/reentrancy/solidity_contract/33410.sol#672-683) should be declared external
+ERC20.transfer (/../data/reentrancy/solidity_contract/33410.sol#10) should be declared external
+ERC20.transferFrom (/../data/reentrancy/solidity_contract/33410.sol#11) should be declared external
+BCDCToken.transferFrom (/../data/reentrancy/solidity_contract/33410.sol#692-704) should be declared external
+BCDCToken.approve (/../data/reentrancy/solidity_contract/33410.sol#710-715) should be declared external
+ERC20.approve (/../data/reentrancy/solidity_contract/33410.sol#12) should be declared external
+MultiSigWallet.fallback (/../data/reentrancy/solidity_contract/33410.sol#150-155) should be declared external
+MultiSigWallet.addOwner (/../data/reentrancy/solidity_contract/33410.sol#176-186) should be declared external
+MultiSigWallet.removeOwner (/../data/reentrancy/solidity_contract/33410.sol#190-205) should be declared external
+MultiSigWallet.replaceOwner (/../data/reentrancy/solidity_contract/33410.sol#210-225) should be declared external
+MultiSigWallet.submitTransaction (/../data/reentrancy/solidity_contract/33410.sol#243-246) should be declared external
+MultiSigWallet.revokeConfirmation (/../data/reentrancy/solidity_contract/33410.sol#258-266) should be declared external
+MultiSigWallet.getConfirmationCount (/../data/reentrancy/solidity_contract/33410.sol#327-335) should be declared external
+MultiSigWallet.getTransactionCount (/../data/reentrancy/solidity_contract/33410.sol#341-350) should be declared external
+MultiSigWallet.getOwners (/../data/reentrancy/solidity_contract/33410.sol#354-360) should be declared external
+MultiSigWallet.getConfirmations (/../data/reentrancy/solidity_contract/33410.sol#365-381) should be declared external
+MultiSigWallet.getTransactionIds (/../data/reentrancy/solidity_contract/33410.sol#389-407) should be declared external
+UpgradeAgent.upgradeFrom (/../data/reentrancy/solidity_contract/33410.sol#413) should be declared external
+UpgradeAgent.setOriginalSupply (/../data/reentrancy/solidity_contract/33410.sol#414) should be declared external
+BCDCVault.fallback (/../data/reentrancy/solidity_contract/33410.sol#495-497) should be declared external
+BCDCToken.transferOwnership (/../data/reentrancy/solidity_contract/33410.sol#629-633) should be declared external
+BCDCToken.setBcdcReserveFund (/../data/reentrancy/solidity_contract/33410.sol#638-643) should be declared external
+BCDCToken.checkInvestment (/../data/reentrancy/solidity_contract/33410.sol#655-657) should be declared external
+BCDCToken.reserveTokenClaim (/../data/reentrancy/solidity_contract/33410.sol#937-949) should be declared external
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#public-function-that-could-be-declared-as-external[0m
+INFO:Detectors:[92m
+Detected issues with version pragma in /../data/reentrancy/solidity_contract/33410.sol:
+	- pragma solidity^0.4.11 (/../data/reentrancy/solidity_contract/33410.sol#1): it allows old versions
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#incorrect-version-of-solidity[0m
+INFO:Detectors:[92m
+Low level call in MultiSigWallet.executeTransaction (/../data/reentrancy/solidity_contract/33410.sol#289-300):
+	-tx.destination.call.value(tx.value)(tx.data) /../data/reentrancy/solidity_contract/33410.sol#293-298
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#low-level-calls[0m
+INFO:Detectors:[92m
+Function 'MultiSigWallet.MultiSigWallet' (/../data/reentrancy/solidity_contract/33410.sol#161-172) is not in mixedCase
+Parameter '_owners' of MultiSigWallet.MultiSigWallet (/../data/reentrancy/solidity_contract/33410.sol#161) is not in mixedCase
+Parameter '_required' of MultiSigWallet.MultiSigWallet (/../data/reentrancy/solidity_contract/33410.sol#161) is not in mixedCase
+Parameter '_required' of MultiSigWallet.changeRequirement (/../data/reentrancy/solidity_contract/33410.sol#229) is not in mixedCase
+Function 'BCDCVault.BCDCVault' (/../data/reentrancy/solidity_contract/33410.sol#445-463) is not in mixedCase
+Parameter '_bcdcMultisig' of BCDCVault.BCDCVault (/../data/reentrancy/solidity_contract/33410.sol#445) is not in mixedCase
+Parameter '_numBlocksLockedForDev' of BCDCVault.BCDCVault (/../data/reentrancy/solidity_contract/33410.sol#445) is not in mixedCase
+Parameter '_numBlocksLockedForFounders' of BCDCVault.BCDCVault (/../data/reentrancy/solidity_contract/33410.sol#445) is not in mixedCase
+Function 'BCDCToken.BCDCToken' (/../data/reentrancy/solidity_contract/33410.sol#577-617) is not in mixedCase
+Parameter '_bcdcMultiSig' of BCDCToken.BCDCToken (/../data/reentrancy/solidity_contract/33410.sol#577) is not in mixedCase
+Parameter '_upgradeMaster' of BCDCToken.BCDCToken (/../data/reentrancy/solidity_contract/33410.sol#578) is not in mixedCase
+Parameter '_fundingStartBlock' of BCDCToken.BCDCToken (/../data/reentrancy/solidity_contract/33410.sol#579) is not in mixedCase
+Parameter '_fundingEndBlock' of BCDCToken.BCDCToken (/../data/reentrancy/solidity_contract/33410.sol#580) is not in mixedCase
+Parameter '_tokenSaleMax' of BCDCToken.BCDCToken (/../data/reentrancy/solidity_contract/33410.sol#581) is not in mixedCase
+Parameter '_tokenSaleMin' of BCDCToken.BCDCToken (/../data/reentrancy/solidity_contract/33410.sol#582) is not in mixedCase
+Parameter '_tokensPerEther' of BCDCToken.BCDCToken (/../data/reentrancy/solidity_contract/33410.sol#583) is not in mixedCase
+Parameter '_numBlocksLockedForDev' of BCDCToken.BCDCToken (/../data/reentrancy/solidity_contract/33410.sol#584) is not in mixedCase
+Parameter '_numBlocksLockedForFounders' of BCDCToken.BCDCToken (/../data/reentrancy/solidity_contract/33410.sol#585) is not in mixedCase
+Parameter '_bcdcReserveFund' of BCDCToken.setBcdcReserveFund (/../data/reentrancy/solidity_contract/33410.sol#638) is not in mixedCase
+Constant 'BCDCToken.maxTokenSupply' (/../data/reentrancy/solidity_contract/33410.sol#540) is not in UPPER_CASE_WITH_UNDERSCORES
+Constant 'BCDCToken.vaultPercentOfTotal' (/../data/reentrancy/solidity_contract/33410.sol#542) is not in UPPER_CASE_WITH_UNDERSCORES
+Constant 'BCDCToken.reservedPercentTotal' (/../data/reentrancy/solidity_contract/33410.sol#544) is not in UPPER_CASE_WITH_UNDERSCORES
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#conformance-to-solidity-naming-conventions[0m
+INFO:Slither:/../data/reentrancy/solidity_contract/33410.sol analyzed (6 contracts), 131 result(s) found

@@ -1,0 +1,14 @@
+{
+  "contract": "11705",
+  "tool": "honeybadger",
+  "start": 1609171989.056332,
+  "end": 1609172212.276018,
+  "duration": 223.21968579292297,
+  "analysis": [
+    {
+      "errors": [],
+      "file": "/../data/reentrancy/solidity_contract/11705.sol",
+      "name": "ERC20Vault"
+    }
+  ]
+}

@@ -1,0 +1,38 @@
+INFO:Detectors:[93m
+mnyminer.futrMiner (/../data/reentrancy/solidity_contract/4598.sol#34-41) does not use the value returned by external calls:
+	-ERC20(futr).approve(mny,mined) (/../data/reentrancy/solidity_contract/4598.sol#37)
+	-ERC20(mny).transfer(msg.sender,amount) (/../data/reentrancy/solidity_contract/4598.sol#40)
+mnyminer.futxMiner (/../data/reentrancy/solidity_contract/4598.sol#43-50) does not use the value returned by external calls:
+	-ERC20(futx).approve(mny,mined) (/../data/reentrancy/solidity_contract/4598.sol#46)
+	-ERC20(mny).transfer(msg.sender,amount) (/../data/reentrancy/solidity_contract/4598.sol#49)
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#unused-return[0m
+INFO:Detectors:[92m
+mnyminer.futr should be constant (/../data/reentrancy/solidity_contract/4598.sol#32)
+mnyminer.futx should be constant (/../data/reentrancy/solidity_contract/4598.sol#31)
+mnyminer.mny should be constant (/../data/reentrancy/solidity_contract/4598.sol#30)
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#state-variables-that-could-be-declared-constant[0m
+INFO:Detectors:[92m
+ERC20.totalSupply (/../data/reentrancy/solidity_contract/4598.sol#4) should be declared external
+ERC20.balanceOf (/../data/reentrancy/solidity_contract/4598.sol#5) should be declared external
+ERC20.transfer (/../data/reentrancy/solidity_contract/4598.sol#6) should be declared external
+ERC20.allowance (/../data/reentrancy/solidity_contract/4598.sol#9-10) should be declared external
+ERC20.transferFrom (/../data/reentrancy/solidity_contract/4598.sol#12-13) should be declared external
+ERC20.approve (/../data/reentrancy/solidity_contract/4598.sol#15) should be declared external
+MNY.mine (/../data/reentrancy/solidity_contract/4598.sol#25) should be declared external
+mnyminer.futrMiner (/../data/reentrancy/solidity_contract/4598.sol#34-41) should be declared external
+mnyminer.futxMiner (/../data/reentrancy/solidity_contract/4598.sol#43-50) should be declared external
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#public-function-that-could-be-declared-as-external[0m
+INFO:Detectors:[92m
+Detected issues with version pragma in /../data/reentrancy/solidity_contract/4598.sol:
+	- pragma solidity^0.4.0 (/../data/reentrancy/solidity_contract/4598.sol#1): it allows old versions
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#incorrect-version-of-solidity[0m
+INFO:Detectors:[92m
+Low level call in mnyminer.futrMiner (/../data/reentrancy/solidity_contract/4598.sol#34-41):
+	-require(bool)(futr.call.value(msg.value)()) /../data/reentrancy/solidity_contract/4598.sol#35
+Low level call in mnyminer.futxMiner (/../data/reentrancy/solidity_contract/4598.sol#43-50):
+	-require(bool)(futx.call.value(msg.value)()) /../data/reentrancy/solidity_contract/4598.sol#44
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#low-level-calls[0m
+INFO:Detectors:[92m
+Contract 'mnyminer' (/../data/reentrancy/solidity_contract/4598.sol#28-51) is not in CapWords
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#conformance-to-solidity-naming-conventions[0m
+INFO:Slither:/../data/reentrancy/solidity_contract/4598.sol analyzed (3 contracts), 16 result(s) found

@@ -1,0 +1,14 @@
+{
+  "contract": "39269",
+  "tool": "honeybadger",
+  "start": 1609185044.197837,
+  "end": 1609185052.141909,
+  "duration": 7.9440717697143555,
+  "analysis": [
+    {
+      "errors": [],
+      "file": "/../data/reentrancy/solidity_contract/39269.sol",
+      "name": "Bakt"
+    }
+  ]
+}

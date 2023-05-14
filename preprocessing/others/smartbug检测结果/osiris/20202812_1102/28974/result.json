@@ -1,0 +1,60 @@
+{
+  "contract": "28974",
+  "tool": "osiris",
+  "start": 1609167122.678771,
+  "end": 1609167133.37637,
+  "duration": 10.697598934173584,
+  "analysis": [
+    {
+      "errors": [
+        {
+          "line": 119,
+          "column": 29,
+          "message": "overflow_bugs"
+        },
+        {
+          "line": 120,
+          "column": 73,
+          "message": "underflow_bugs"
+        },
+        {
+          "line": 120,
+          "column": 13,
+          "message": "concurrency_bug"
+        },
+        {
+          "line": 120,
+          "column": 51,
+          "message": "concurrency_bug"
+        },
+        {
+          "line": 120,
+          "column": 13,
+          "message": "concurrency_bug"
+        },
+        {
+          "line": 120,
+          "column": 51,
+          "message": "reentrancy_bug"
+        },
+        {
+          "line": 123,
+          "column": 9,
+          "message": "reentrancy_bug"
+        },
+        {
+          "line": 120,
+          "column": 13,
+          "message": "reentrancy_bug"
+        }
+      ],
+      "file": "/../data/reentrancy/solidity_contract/28974.sol",
+      "name": "Payee"
+    },
+    {
+      "errors": [],
+      "file": "/../data/reentrancy/solidity_contract/28974.sol",
+      "name": "Storage"
+    }
+  ]
+}

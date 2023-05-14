@@ -1,0 +1,24 @@
+{
+  "contract": "22902",
+  "tool": "honeybadger",
+  "start": 1609151199.23412,
+  "end": 1609151613.3123908,
+  "duration": 414.0782709121704,
+  "analysis": [
+    {
+      "errors": [],
+      "file": "/../data/reentrancy/solidity_contract/22902.sol",
+      "name": "BuildingStatus"
+    },
+    {
+      "errors": [],
+      "file": "/../data/reentrancy/solidity_contract/22902.sol",
+      "name": "ConvertQuote"
+    },
+    {
+      "errors": [],
+      "file": "/../data/reentrancy/solidity_contract/22902.sol",
+      "name": "Crowdsale"
+    }
+  ]
+}

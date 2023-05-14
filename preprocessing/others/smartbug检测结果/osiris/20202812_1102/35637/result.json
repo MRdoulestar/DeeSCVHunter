@@ -1,0 +1,19 @@
+{
+  "contract": "35637",
+  "tool": "osiris",
+  "start": 1609192419.948423,
+  "end": 1609192491.682891,
+  "duration": 71.73446798324585,
+  "analysis": [
+    {
+      "errors": [],
+      "file": "/../data/reentrancy/solidity_contract/35637.sol",
+      "name": "ContractReceiver"
+    },
+    {
+      "errors": [],
+      "file": "/../data/reentrancy/solidity_contract/35637.sol",
+      "name": "ERC223Token"
+    }
+  ]
+}

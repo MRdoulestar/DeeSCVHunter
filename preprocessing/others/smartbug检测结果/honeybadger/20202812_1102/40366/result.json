@@ -1,0 +1,24 @@
+{
+  "contract": "40366",
+  "tool": "honeybadger",
+  "start": 1609159815.0162828,
+  "end": 1609159844.318357,
+  "duration": 29.302074193954468,
+  "analysis": [
+    {
+      "errors": [],
+      "file": "/../data/reentrancy/solidity_contract/40366.sol",
+      "name": "BranchSender"
+    },
+    {
+      "errors": [],
+      "file": "/../data/reentrancy/solidity_contract/40366.sol",
+      "name": "BranchWallet"
+    },
+    {
+      "errors": [],
+      "file": "/../data/reentrancy/solidity_contract/40366.sol",
+      "name": "TriWallet"
+    }
+  ]
+}

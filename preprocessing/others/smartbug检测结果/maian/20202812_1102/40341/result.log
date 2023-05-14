@@ -1,0 +1,1232 @@
+====================================================================================================
+[1m[ ] Compiling Solidity contract from the file /../data/reentrancy/solidity_contract/40341.sol ... [0m/../data/reentrancy/solidity_contract/40341.sol:52:40: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function fundsOf(address _address) constant returns (uint valueWei) {
+                                       ^------^
+/../data/reentrancy/solidity_contract/40341.sol:114:54: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function roundMoneyDownNicely(uint _rawValueWei) constant internal
+                                                     ^------^
+/../data/reentrancy/solidity_contract/40341.sol:141:56: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function roundMoneyUpToWholeFinney(uint _valueWei) constant internal
+                                                       ^------^
+/../data/reentrancy/solidity_contract/40341.sol:172:49: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function validateNameInternal(string _name) constant internal
+                                                ^------^
+/../data/reentrancy/solidity_contract/40341.sol:235:47: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function extractNameFromData(bytes _data) constant internal
+                                              ^------^
+/../data/reentrancy/solidity_contract/40341.sol:283:49: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function computeNameFuzzyHash(string _name) constant internal
+                                                ^------^
+/../data/reentrancy/solidity_contract/40341.sol:423:33: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function numberOfMonarchs() constant returns (uint totalCount) {
+                                ^------^
+/../data/reentrancy/solidity_contract/40341.sol:430:32: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function isLivingMonarch() constant returns (bool alive) {
+                               ^------^
+/../data/reentrancy/solidity_contract/40341.sol:450:37: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function currentClaimPriceWei() constant returns (uint priceInWei) {
+                                    ^------^
+/../data/reentrancy/solidity_contract/40341.sol:470:42: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function currentClaimPriceInFinney() constant
+                                         ^------^
+/../data/reentrancy/solidity_contract/40341.sol:484:63: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function validateProposedMonarchName(string _monarchName) constant
+                                                              ^------^
+/../data/reentrancy/solidity_contract/40341.sol:496:38: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function latestMonarchInternal() constant internal
+                                     ^------^
+/../data/reentrancy/solidity_contract/40341.sol:705:7: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    ) constant returns (bool allowed) {
+      ^------^
+/../data/reentrancy/solidity_contract/40341.sol:863:33: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function numberOfKingdoms() constant returns (uint totalCount) {
+                                ^------^
+/../data/reentrancy/solidity_contract/40341.sol:868:53: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function findKingdomCalled(string _kingdomName) constant
+
+[91m[-] Cannot compile the contract [0m
+
+====================================================================================================
+[1m[ ] Compiling Solidity contract from the file /../data/reentrancy/solidity_contract/40341.sol ... [0m/../data/reentrancy/solidity_contract/40341.sol:52:40: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function fundsOf(address _address) constant returns (uint valueWei) {
+                                       ^------^
+/../data/reentrancy/solidity_contract/40341.sol:114:54: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function roundMoneyDownNicely(uint _rawValueWei) constant internal
+                                                     ^------^
+/../data/reentrancy/solidity_contract/40341.sol:141:56: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function roundMoneyUpToWholeFinney(uint _valueWei) constant internal
+                                                       ^------^
+/../data/reentrancy/solidity_contract/40341.sol:172:49: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function validateNameInternal(string _name) constant internal
+                                                ^------^
+/../data/reentrancy/solidity_contract/40341.sol:235:47: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function extractNameFromData(bytes _data) constant internal
+                                              ^------^
+/../data/reentrancy/solidity_contract/40341.sol:283:49: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function computeNameFuzzyHash(string _name) constant internal
+                                                ^------^
+/../data/reentrancy/solidity_contract/40341.sol:423:33: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function numberOfMonarchs() constant returns (uint totalCount) {
+                                ^------^
+/../data/reentrancy/solidity_contract/40341.sol:430:32: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function isLivingMonarch() constant returns (bool alive) {
+                               ^------^
+/../data/reentrancy/solidity_contract/40341.sol:450:37: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function currentClaimPriceWei() constant returns (uint priceInWei) {
+                                    ^------^
+/../data/reentrancy/solidity_contract/40341.sol:470:42: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function currentClaimPriceInFinney() constant
+                                         ^------^
+/../data/reentrancy/solidity_contract/40341.sol:484:63: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function validateProposedMonarchName(string _monarchName) constant
+                                                              ^------^
+/../data/reentrancy/solidity_contract/40341.sol:496:38: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function latestMonarchInternal() constant internal
+                                     ^------^
+/../data/reentrancy/solidity_contract/40341.sol:705:7: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    ) constant returns (bool allowed) {
+
+[91m[-] Cannot compile the contract [0m
+
+====================================================================================================
+[1m[ ] Compiling Solidity contract from the file /../data/reentrancy/solidity_contract/40341.sol ... [0m/../data/reentrancy/solidity_contract/40341.sol:52:40: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function fundsOf(address _address) constant returns (uint valueWei) {
+                                       ^------^
+/../data/reentrancy/solidity_contract/40341.sol:114:54: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function roundMoneyDownNicely(uint _rawValueWei) constant internal
+                                                     ^------^
+/../data/reentrancy/solidity_contract/40341.sol:141:56: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function roundMoneyUpToWholeFinney(uint _valueWei) constant internal
+                                                       ^------^
+/../data/reentrancy/solidity_contract/40341.sol:172:49: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function validateNameInternal(string _name) constant internal
+                                                ^------^
+/../data/reentrancy/solidity_contract/40341.sol:235:47: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function extractNameFromData(bytes _data) constant internal
+                                              ^------^
+/../data/reentrancy/solidity_contract/40341.sol:283:49: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function computeNameFuzzyHash(string _name) constant internal
+                                                ^------^
+/../data/reentrancy/solidity_contract/40341.sol:423:33: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function numberOfMonarchs() constant returns (uint totalCount) {
+                                ^------^
+/../data/reentrancy/solidity_contract/40341.sol:430:32: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function isLivingMonarch() constant returns (bool alive) {
+                               ^------^
+/../data/reentrancy/solidity_contract/40341.sol:450:37: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function currentClaimPriceWei() constant returns (uint priceInWei) {
+                                    ^------^
+/../data/reentrancy/solidity_contract/40341.sol:470:42: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function currentClaimPriceInFinney() constant
+                                         ^------^
+/../data/reentrancy/solidity_contract/40341.sol:484:63: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function validateProposedMonarchName(string _monarchName) constant
+                                                              ^------^
+/../data/reentrancy/solidity_contract/40341.sol:496:38: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function latestMonarchInternal() constant internal
+                                     ^------^
+/../data/reentrancy/solidity_contract/40341.sol:705:7: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    ) constant returns (bool allowed) {
+
+[91m[-] Cannot compile the contract [0m
+
+====================================================================================================
+[1m[ ] Compiling Solidity contract from the file /../data/reentrancy/solidity_contract/40341.sol ... [0m/../data/reentrancy/solidity_contract/40341.sol:52:40: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function fundsOf(address _address) constant returns (uint valueWei) {
+                                       ^------^
+/../data/reentrancy/solidity_contract/40341.sol:114:54: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function roundMoneyDownNicely(uint _rawValueWei) constant internal
+                                                     ^------^
+/../data/reentrancy/solidity_contract/40341.sol:141:56: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function roundMoneyUpToWholeFinney(uint _valueWei) constant internal
+                                                       ^------^
+/../data/reentrancy/solidity_contract/40341.sol:172:49: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function validateNameInternal(string _name) constant internal
+                                                ^------^
+/../data/reentrancy/solidity_contract/40341.sol:235:47: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function extractNameFromData(bytes _data) constant internal
+                                              ^------^
+/../data/reentrancy/solidity_contract/40341.sol:283:49: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function computeNameFuzzyHash(string _name) constant internal
+                                                ^------^
+/../data/reentrancy/solidity_contract/40341.sol:423:33: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function numberOfMonarchs() constant returns (uint totalCount) {
+                                ^------^
+/../data/reentrancy/solidity_contract/40341.sol:430:32: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function isLivingMonarch() constant returns (bool alive) {
+                               ^------^
+/../data/reentrancy/solidity_contract/40341.sol:450:37: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function currentClaimPriceWei() constant returns (uint priceInWei) {
+                                    ^------^
+/../data/reentrancy/solidity_contract/40341.sol:470:42: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function currentClaimPriceInFinney() constant
+                                         ^------^
+/../data/reentrancy/solidity_contract/40341.sol:484:63: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function validateProposedMonarchName(string _monarchName) constant
+                                                              ^------^
+/../data/reentrancy/solidity_contract/40341.sol:496:38: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function latestMonarchInternal() constant internal
+                                     ^------^
+/../data/reentrancy/solidity_contract/40341.sol:705:7: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+
+[91m[-] Cannot compile the contract [0m
+
+====================================================================================================
+[1m[ ] Compiling Solidity contract from the file /../data/reentrancy/solidity_contract/40341.sol ... [0m/../data/reentrancy/solidity_contract/40341.sol:52:40: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function fundsOf(address _address) constant returns (uint valueWei) {
+                                       ^------^
+/../data/reentrancy/solidity_contract/40341.sol:114:54: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function roundMoneyDownNicely(uint _rawValueWei) constant internal
+                                                     ^------^
+/../data/reentrancy/solidity_contract/40341.sol:141:56: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function roundMoneyUpToWholeFinney(uint _valueWei) constant internal
+                                                       ^------^
+/../data/reentrancy/solidity_contract/40341.sol:172:49: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function validateNameInternal(string _name) constant internal
+                                                ^------^
+/../data/reentrancy/solidity_contract/40341.sol:235:47: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function extractNameFromData(bytes _data) constant internal
+                                              ^------^
+/../data/reentrancy/solidity_contract/40341.sol:283:49: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function computeNameFuzzyHash(string _name) constant internal
+                                                ^------^
+/../data/reentrancy/solidity_contract/40341.sol:423:33: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function numberOfMonarchs() constant returns (uint totalCount) {
+                                ^------^
+/../data/reentrancy/solidity_contract/40341.sol:430:32: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function isLivingMonarch() constant returns (bool alive) {
+                               ^------^
+/../data/reentrancy/solidity_contract/40341.sol:450:37: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function currentClaimPriceWei() constant returns (uint priceInWei) {
+                                    ^------^
+/../data/reentrancy/solidity_contract/40341.sol:470:42: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function currentClaimPriceInFinney() constant
+                                         ^------^
+/../data/reentrancy/solidity_contract/40341.sol:484:63: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function validateProposedMonarchName(string _monarchName) constant
+                                                              ^------^
+/../data/reentrancy/solidity_contract/40341.sol:496:38: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function latestMonarchInternal() constant internal
+                                     ^------^
+/../data/reentrancy/solidity_contract/40341.sol:705:7: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+
+[91m[-] Cannot compile the contract [0m
+
+====================================================================================================
+[1m[ ] Compiling Solidity contract from the file /../data/reentrancy/solidity_contract/40341.sol ... [0m/../data/reentrancy/solidity_contract/40341.sol:52:40: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function fundsOf(address _address) constant returns (uint valueWei) {
+                                       ^------^
+/../data/reentrancy/solidity_contract/40341.sol:114:54: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function roundMoneyDownNicely(uint _rawValueWei) constant internal
+                                                     ^------^
+/../data/reentrancy/solidity_contract/40341.sol:141:56: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function roundMoneyUpToWholeFinney(uint _valueWei) constant internal
+                                                       ^------^
+/../data/reentrancy/solidity_contract/40341.sol:172:49: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function validateNameInternal(string _name) constant internal
+                                                ^------^
+/../data/reentrancy/solidity_contract/40341.sol:235:47: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function extractNameFromData(bytes _data) constant internal
+                                              ^------^
+/../data/reentrancy/solidity_contract/40341.sol:283:49: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function computeNameFuzzyHash(string _name) constant internal
+                                                ^------^
+/../data/reentrancy/solidity_contract/40341.sol:423:33: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function numberOfMonarchs() constant returns (uint totalCount) {
+                                ^------^
+/../data/reentrancy/solidity_contract/40341.sol:430:32: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function isLivingMonarch() constant returns (bool alive) {
+                               ^------^
+/../data/reentrancy/solidity_contract/40341.sol:450:37: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function currentClaimPriceWei() constant returns (uint priceInWei) {
+                                    ^------^
+/../data/reentrancy/solidity_contract/40341.sol:470:42: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function currentClaimPriceInFinney() constant
+                                         ^------^
+/../data/reentrancy/solidity_contract/40341.sol:484:63: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function validateProposedMonarchName(string _monarchName) constant
+                                                              ^------^
+/../data/reentrancy/solidity_contract/40341.sol:496:38: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+
+[91m[-] Cannot compile the contract [0m
+
+====================================================================================================
+[1m[ ] Compiling Solidity contract from the file /../data/reentrancy/solidity_contract/40341.sol ... [0m/../data/reentrancy/solidity_contract/40341.sol:52:40: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function fundsOf(address _address) constant returns (uint valueWei) {
+                                       ^------^
+/../data/reentrancy/solidity_contract/40341.sol:114:54: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function roundMoneyDownNicely(uint _rawValueWei) constant internal
+                                                     ^------^
+/../data/reentrancy/solidity_contract/40341.sol:141:56: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function roundMoneyUpToWholeFinney(uint _valueWei) constant internal
+                                                       ^------^
+/../data/reentrancy/solidity_contract/40341.sol:172:49: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function validateNameInternal(string _name) constant internal
+                                                ^------^
+/../data/reentrancy/solidity_contract/40341.sol:235:47: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function extractNameFromData(bytes _data) constant internal
+                                              ^------^
+/../data/reentrancy/solidity_contract/40341.sol:283:49: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function computeNameFuzzyHash(string _name) constant internal
+                                                ^------^
+/../data/reentrancy/solidity_contract/40341.sol:423:33: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function numberOfMonarchs() constant returns (uint totalCount) {
+                                ^------^
+/../data/reentrancy/solidity_contract/40341.sol:430:32: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function isLivingMonarch() constant returns (bool alive) {
+                               ^------^
+/../data/reentrancy/solidity_contract/40341.sol:450:37: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function currentClaimPriceWei() constant returns (uint priceInWei) {
+                                    ^------^
+/../data/reentrancy/solidity_contract/40341.sol:470:42: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function currentClaimPriceInFinney() constant
+                                         ^------^
+/../data/reentrancy/solidity_contract/40341.sol:484:63: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function validateProposedMonarchName(string _monarchName) constant
+                                                              ^------^
+/../data/reentrancy/solidity_contract/40341.sol:496:38: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function latestMonarchInternal() constant internal
+                                     ^------^
+/../data/reentrancy/solidity_contract/40341.sol:705:7: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+
+[91m[-] Cannot compile the contract [0m
+
+====================================================================================================
+[1m[ ] Compiling Solidity contract from the file /../data/reentrancy/solidity_contract/40341.sol ... [0m/../data/reentrancy/solidity_contract/40341.sol:52:40: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function fundsOf(address _address) constant returns (uint valueWei) {
+                                       ^------^
+/../data/reentrancy/solidity_contract/40341.sol:114:54: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function roundMoneyDownNicely(uint _rawValueWei) constant internal
+                                                     ^------^
+/../data/reentrancy/solidity_contract/40341.sol:141:56: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function roundMoneyUpToWholeFinney(uint _valueWei) constant internal
+                                                       ^------^
+/../data/reentrancy/solidity_contract/40341.sol:172:49: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function validateNameInternal(string _name) constant internal
+                                                ^------^
+/../data/reentrancy/solidity_contract/40341.sol:235:47: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function extractNameFromData(bytes _data) constant internal
+                                              ^------^
+/../data/reentrancy/solidity_contract/40341.sol:283:49: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function computeNameFuzzyHash(string _name) constant internal
+                                                ^------^
+/../data/reentrancy/solidity_contract/40341.sol:423:33: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function numberOfMonarchs() constant returns (uint totalCount) {
+                                ^------^
+/../data/reentrancy/solidity_contract/40341.sol:430:32: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function isLivingMonarch() constant returns (bool alive) {
+                               ^------^
+/../data/reentrancy/solidity_contract/40341.sol:450:37: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function currentClaimPriceWei() constant returns (uint priceInWei) {
+                                    ^------^
+/../data/reentrancy/solidity_contract/40341.sol:470:42: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function currentClaimPriceInFinney() constant
+                                         ^------^
+/../data/reentrancy/solidity_contract/40341.sol:484:63: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function validateProposedMonarchName(string _monarchName) constant
+                                                              ^------^
+/../data/reentrancy/solidity_contract/40341.sol:496:38: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function latestMonarchInternal() constant internal
+                                     ^------^
+/../data/reentrancy/solidity_contract/40341.sol:705:7: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    ) constant returns (bool allowed) {
+
+[91m[-] Cannot compile the contract [0m
+
+====================================================================================================
+[1m[ ] Compiling Solidity contract from the file /../data/reentrancy/solidity_contract/40341.sol ... [0m/../data/reentrancy/solidity_contract/40341.sol:52:40: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function fundsOf(address _address) constant returns (uint valueWei) {
+                                       ^------^
+/../data/reentrancy/solidity_contract/40341.sol:114:54: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function roundMoneyDownNicely(uint _rawValueWei) constant internal
+                                                     ^------^
+/../data/reentrancy/solidity_contract/40341.sol:141:56: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function roundMoneyUpToWholeFinney(uint _valueWei) constant internal
+                                                       ^------^
+/../data/reentrancy/solidity_contract/40341.sol:172:49: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function validateNameInternal(string _name) constant internal
+                                                ^------^
+/../data/reentrancy/solidity_contract/40341.sol:235:47: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function extractNameFromData(bytes _data) constant internal
+                                              ^------^
+/../data/reentrancy/solidity_contract/40341.sol:283:49: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function computeNameFuzzyHash(string _name) constant internal
+                                                ^------^
+/../data/reentrancy/solidity_contract/40341.sol:423:33: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function numberOfMonarchs() constant returns (uint totalCount) {
+                                ^------^
+/../data/reentrancy/solidity_contract/40341.sol:430:32: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function isLivingMonarch() constant returns (bool alive) {
+                               ^------^
+/../data/reentrancy/solidity_contract/40341.sol:450:37: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function currentClaimPriceWei() constant returns (uint priceInWei) {
+                                    ^------^
+/../data/reentrancy/solidity_contract/40341.sol:470:42: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function currentClaimPriceInFinney() constant
+                                         ^------^
+/../data/reentrancy/solidity_contract/40341.sol:484:63: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function validateProposedMonarchName(string _monarchName) constant
+                                                              ^------^
+/../data/reentrancy/solidity_contract/40341.sol:496:38: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function latestMonarchInternal() constant internal
+                                     ^------^
+
+[91m[-] Cannot compile the contract [0m
+
+====================================================================================================
+[1m[ ] Compiling Solidity contract from the file /../data/reentrancy/solidity_contract/40341.sol ... [0m/../data/reentrancy/solidity_contract/40341.sol:52:40: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function fundsOf(address _address) constant returns (uint valueWei) {
+                                       ^------^
+/../data/reentrancy/solidity_contract/40341.sol:114:54: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function roundMoneyDownNicely(uint _rawValueWei) constant internal
+                                                     ^------^
+/../data/reentrancy/solidity_contract/40341.sol:141:56: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function roundMoneyUpToWholeFinney(uint _valueWei) constant internal
+                                                       ^------^
+/../data/reentrancy/solidity_contract/40341.sol:172:49: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function validateNameInternal(string _name) constant internal
+                                                ^------^
+/../data/reentrancy/solidity_contract/40341.sol:235:47: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function extractNameFromData(bytes _data) constant internal
+                                              ^------^
+/../data/reentrancy/solidity_contract/40341.sol:283:49: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function computeNameFuzzyHash(string _name) constant internal
+                                                ^------^
+/../data/reentrancy/solidity_contract/40341.sol:423:33: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function numberOfMonarchs() constant returns (uint totalCount) {
+                                ^------^
+/../data/reentrancy/solidity_contract/40341.sol:430:32: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function isLivingMonarch() constant returns (bool alive) {
+                               ^------^
+/../data/reentrancy/solidity_contract/40341.sol:450:37: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function currentClaimPriceWei() constant returns (uint priceInWei) {
+                                    ^------^
+/../data/reentrancy/solidity_contract/40341.sol:470:42: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function currentClaimPriceInFinney() constant
+                                         ^------^
+/../data/reentrancy/solidity_contract/40341.sol:484:63: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function validateProposedMonarchName(string _monarchName) constant
+                                                              ^------^
+/../data/reentrancy/solidity_contract/40341.sol:496:38: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function latestMonarchInternal() constant internal
+                                     ^------^
+/../data/reentrancy/solidity_contract/40341.sol:705:7: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+
+[91m[-] Cannot compile the contract [0m
+
+====================================================================================================
+[1m[ ] Compiling Solidity contract from the file /../data/reentrancy/solidity_contract/40341.sol ... [0m/../data/reentrancy/solidity_contract/40341.sol:52:40: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function fundsOf(address _address) constant returns (uint valueWei) {
+                                       ^------^
+/../data/reentrancy/solidity_contract/40341.sol:114:54: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function roundMoneyDownNicely(uint _rawValueWei) constant internal
+                                                     ^------^
+/../data/reentrancy/solidity_contract/40341.sol:141:56: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function roundMoneyUpToWholeFinney(uint _valueWei) constant internal
+                                                       ^------^
+/../data/reentrancy/solidity_contract/40341.sol:172:49: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function validateNameInternal(string _name) constant internal
+                                                ^------^
+/../data/reentrancy/solidity_contract/40341.sol:235:47: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function extractNameFromData(bytes _data) constant internal
+                                              ^------^
+/../data/reentrancy/solidity_contract/40341.sol:283:49: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function computeNameFuzzyHash(string _name) constant internal
+                                                ^------^
+/../data/reentrancy/solidity_contract/40341.sol:423:33: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function numberOfMonarchs() constant returns (uint totalCount) {
+                                ^------^
+/../data/reentrancy/solidity_contract/40341.sol:430:32: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function isLivingMonarch() constant returns (bool alive) {
+                               ^------^
+/../data/reentrancy/solidity_contract/40341.sol:450:37: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function currentClaimPriceWei() constant returns (uint priceInWei) {
+                                    ^------^
+/../data/reentrancy/solidity_contract/40341.sol:470:42: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function currentClaimPriceInFinney() constant
+                                         ^------^
+/../data/reentrancy/solidity_contract/40341.sol:484:63: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function validateProposedMonarchName(string _monarchName) constant
+                                                              ^------^
+/../data/reentrancy/solidity_contract/40341.sol:496:38: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function latestMonarchInternal() constant internal
+                                     ^------^
+/../data/reentrancy/solidity_contract/40341.sol:705:7: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+
+[91m[-] Cannot compile the contract [0m
+
+====================================================================================================
+[1m[ ] Compiling Solidity contract from the file /../data/reentrancy/solidity_contract/40341.sol ... [0m/../data/reentrancy/solidity_contract/40341.sol:52:40: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function fundsOf(address _address) constant returns (uint valueWei) {
+                                       ^------^
+/../data/reentrancy/solidity_contract/40341.sol:114:54: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function roundMoneyDownNicely(uint _rawValueWei) constant internal
+                                                     ^------^
+/../data/reentrancy/solidity_contract/40341.sol:141:56: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function roundMoneyUpToWholeFinney(uint _valueWei) constant internal
+                                                       ^------^
+/../data/reentrancy/solidity_contract/40341.sol:172:49: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function validateNameInternal(string _name) constant internal
+                                                ^------^
+/../data/reentrancy/solidity_contract/40341.sol:235:47: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function extractNameFromData(bytes _data) constant internal
+                                              ^------^
+/../data/reentrancy/solidity_contract/40341.sol:283:49: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function computeNameFuzzyHash(string _name) constant internal
+                                                ^------^
+/../data/reentrancy/solidity_contract/40341.sol:423:33: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function numberOfMonarchs() constant returns (uint totalCount) {
+                                ^------^
+/../data/reentrancy/solidity_contract/40341.sol:430:32: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function isLivingMonarch() constant returns (bool alive) {
+                               ^------^
+/../data/reentrancy/solidity_contract/40341.sol:450:37: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function currentClaimPriceWei() constant returns (uint priceInWei) {
+                                    ^------^
+/../data/reentrancy/solidity_contract/40341.sol:470:42: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function currentClaimPriceInFinney() constant
+                                         ^------^
+/../data/reentrancy/solidity_contract/40341.sol:484:63: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function validateProposedMonarchName(string _monarchName) constant
+                                                              ^------^
+/../data/reentrancy/solidity_contract/40341.sol:496:38: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function latestMonarchInternal() constant internal
+                                     ^------^
+/../data/reentrancy/solidity_contract/40341.sol:705:7: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    ) constant returns (bool allowed) {
+
+[91m[-] Cannot compile the contract [0m
+
+====================================================================================================
+[1m[ ] Compiling Solidity contract from the file /../data/reentrancy/solidity_contract/40341.sol ... [0m/../data/reentrancy/solidity_contract/40341.sol:52:40: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function fundsOf(address _address) constant returns (uint valueWei) {
+                                       ^------^
+/../data/reentrancy/solidity_contract/40341.sol:114:54: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function roundMoneyDownNicely(uint _rawValueWei) constant internal
+                                                     ^------^
+/../data/reentrancy/solidity_contract/40341.sol:141:56: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function roundMoneyUpToWholeFinney(uint _valueWei) constant internal
+                                                       ^------^
+/../data/reentrancy/solidity_contract/40341.sol:172:49: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function validateNameInternal(string _name) constant internal
+                                                ^------^
+/../data/reentrancy/solidity_contract/40341.sol:235:47: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function extractNameFromData(bytes _data) constant internal
+                                              ^------^
+/../data/reentrancy/solidity_contract/40341.sol:283:49: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function computeNameFuzzyHash(string _name) constant internal
+                                                ^------^
+/../data/reentrancy/solidity_contract/40341.sol:423:33: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function numberOfMonarchs() constant returns (uint totalCount) {
+                                ^------^
+/../data/reentrancy/solidity_contract/40341.sol:430:32: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function isLivingMonarch() constant returns (bool alive) {
+                               ^------^
+/../data/reentrancy/solidity_contract/40341.sol:450:37: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function currentClaimPriceWei() constant returns (uint priceInWei) {
+                                    ^------^
+/../data/reentrancy/solidity_contract/40341.sol:470:42: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function currentClaimPriceInFinney() constant
+                                         ^------^
+/../data/reentrancy/solidity_contract/40341.sol:484:63: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function validateProposedMonarchName(string _monarchName) constant
+                                                              ^------^
+/../data/reentrancy/solidity_contract/40341.sol:496:38: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function latestMonarchInternal() constant internal
+                                     ^------^
+/../data/reentrancy/solidity_contract/40341.sol:705:7: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    ) constant returns (bool allowed) {
+      ^------^
+
+[91m[-] Cannot compile the contract [0m
+
+====================================================================================================
+[1m[ ] Compiling Solidity contract from the file /../data/reentrancy/solidity_contract/40341.sol ... [0m/../data/reentrancy/solidity_contract/40341.sol:52:40: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function fundsOf(address _address) constant returns (uint valueWei) {
+                                       ^------^
+/../data/reentrancy/solidity_contract/40341.sol:114:54: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function roundMoneyDownNicely(uint _rawValueWei) constant internal
+                                                     ^------^
+/../data/reentrancy/solidity_contract/40341.sol:141:56: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function roundMoneyUpToWholeFinney(uint _valueWei) constant internal
+                                                       ^------^
+/../data/reentrancy/solidity_contract/40341.sol:172:49: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function validateNameInternal(string _name) constant internal
+                                                ^------^
+/../data/reentrancy/solidity_contract/40341.sol:235:47: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function extractNameFromData(bytes _data) constant internal
+                                              ^------^
+/../data/reentrancy/solidity_contract/40341.sol:283:49: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function computeNameFuzzyHash(string _name) constant internal
+                                                ^------^
+/../data/reentrancy/solidity_contract/40341.sol:423:33: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function numberOfMonarchs() constant returns (uint totalCount) {
+                                ^------^
+/../data/reentrancy/solidity_contract/40341.sol:430:32: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function isLivingMonarch() constant returns (bool alive) {
+                               ^------^
+/../data/reentrancy/solidity_contract/40341.sol:450:37: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function currentClaimPriceWei() constant returns (uint priceInWei) {
+                                    ^------^
+/../data/reentrancy/solidity_contract/40341.sol:470:42: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function currentClaimPriceInFinney() constant
+                                         ^------^
+/../data/reentrancy/solidity_contract/40341.sol:484:63: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function validateProposedMonarchName(string _monarchName) constant
+                                                              ^------^
+/../data/reentrancy/solidity_contract/40341.sol:496:38: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function latestMonarchInternal() constant internal
+                                     ^------^
+/../data/reentrancy/solidity_contract/40341.sol:705:7: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    ) constant returns (bool allowed) {
+
+[91m[-] Cannot compile the contract [0m
+
+====================================================================================================
+[1m[ ] Compiling Solidity contract from the file /../data/reentrancy/solidity_contract/40341.sol ... [0m/../data/reentrancy/solidity_contract/40341.sol:52:40: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function fundsOf(address _address) constant returns (uint valueWei) {
+                                       ^------^
+/../data/reentrancy/solidity_contract/40341.sol:114:54: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function roundMoneyDownNicely(uint _rawValueWei) constant internal
+                                                     ^------^
+/../data/reentrancy/solidity_contract/40341.sol:141:56: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function roundMoneyUpToWholeFinney(uint _valueWei) constant internal
+                                                       ^------^
+/../data/reentrancy/solidity_contract/40341.sol:172:49: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function validateNameInternal(string _name) constant internal
+                                                ^------^
+/../data/reentrancy/solidity_contract/40341.sol:235:47: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function extractNameFromData(bytes _data) constant internal
+                                              ^------^
+/../data/reentrancy/solidity_contract/40341.sol:283:49: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function computeNameFuzzyHash(string _name) constant internal
+                                                ^------^
+/../data/reentrancy/solidity_contract/40341.sol:423:33: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function numberOfMonarchs() constant returns (uint totalCount) {
+                                ^------^
+/../data/reentrancy/solidity_contract/40341.sol:430:32: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function isLivingMonarch() constant returns (bool alive) {
+                               ^------^
+/../data/reentrancy/solidity_contract/40341.sol:450:37: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function currentClaimPriceWei() constant returns (uint priceInWei) {
+                                    ^------^
+/../data/reentrancy/solidity_contract/40341.sol:470:42: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function currentClaimPriceInFinney() constant
+                                         ^------^
+/../data/reentrancy/solidity_contract/40341.sol:484:63: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function validateProposedMonarchName(string _monarchName) constant
+                                                              ^------^
+/../data/reentrancy/solidity_contract/40341.sol:496:38: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+
+[91m[-] Cannot compile the contract [0m
+
+====================================================================================================
+[1m[ ] Compiling Solidity contract from the file /../data/reentrancy/solidity_contract/40341.sol ... [0m/../data/reentrancy/solidity_contract/40341.sol:52:40: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function fundsOf(address _address) constant returns (uint valueWei) {
+                                       ^------^
+/../data/reentrancy/solidity_contract/40341.sol:114:54: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function roundMoneyDownNicely(uint _rawValueWei) constant internal
+                                                     ^------^
+/../data/reentrancy/solidity_contract/40341.sol:141:56: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function roundMoneyUpToWholeFinney(uint _valueWei) constant internal
+                                                       ^------^
+/../data/reentrancy/solidity_contract/40341.sol:172:49: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function validateNameInternal(string _name) constant internal
+                                                ^------^
+/../data/reentrancy/solidity_contract/40341.sol:235:47: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function extractNameFromData(bytes _data) constant internal
+                                              ^------^
+/../data/reentrancy/solidity_contract/40341.sol:283:49: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function computeNameFuzzyHash(string _name) constant internal
+                                                ^------^
+/../data/reentrancy/solidity_contract/40341.sol:423:33: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function numberOfMonarchs() constant returns (uint totalCount) {
+                                ^------^
+/../data/reentrancy/solidity_contract/40341.sol:430:32: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function isLivingMonarch() constant returns (bool alive) {
+                               ^------^
+/../data/reentrancy/solidity_contract/40341.sol:450:37: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function currentClaimPriceWei() constant returns (uint priceInWei) {
+                                    ^------^
+/../data/reentrancy/solidity_contract/40341.sol:470:42: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function currentClaimPriceInFinney() constant
+                                         ^------^
+/../data/reentrancy/solidity_contract/40341.sol:484:63: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function validateProposedMonarchName(string _monarchName) constant
+                                                              ^------^
+/../data/reentrancy/solidity_contract/40341.sol:496:38: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function latestMonarchInternal() constant internal
+                                     ^------^
+/../data/reentrancy/solidity_contract/40341.sol:705:7: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+
+[91m[-] Cannot compile the contract [0m
+
+====================================================================================================
+[1m[ ] Compiling Solidity contract from the file /../data/reentrancy/solidity_contract/40341.sol ... [0m/../data/reentrancy/solidity_contract/40341.sol:52:40: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function fundsOf(address _address) constant returns (uint valueWei) {
+                                       ^------^
+/../data/reentrancy/solidity_contract/40341.sol:114:54: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function roundMoneyDownNicely(uint _rawValueWei) constant internal
+                                                     ^------^
+/../data/reentrancy/solidity_contract/40341.sol:141:56: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function roundMoneyUpToWholeFinney(uint _valueWei) constant internal
+                                                       ^------^
+/../data/reentrancy/solidity_contract/40341.sol:172:49: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function validateNameInternal(string _name) constant internal
+                                                ^------^
+/../data/reentrancy/solidity_contract/40341.sol:235:47: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function extractNameFromData(bytes _data) constant internal
+                                              ^------^
+/../data/reentrancy/solidity_contract/40341.sol:283:49: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function computeNameFuzzyHash(string _name) constant internal
+                                                ^------^
+/../data/reentrancy/solidity_contract/40341.sol:423:33: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function numberOfMonarchs() constant returns (uint totalCount) {
+                                ^------^
+/../data/reentrancy/solidity_contract/40341.sol:430:32: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function isLivingMonarch() constant returns (bool alive) {
+                               ^------^
+/../data/reentrancy/solidity_contract/40341.sol:450:37: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function currentClaimPriceWei() constant returns (uint priceInWei) {
+                                    ^------^
+/../data/reentrancy/solidity_contract/40341.sol:470:42: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function currentClaimPriceInFinney() constant
+                                         ^------^
+/../data/reentrancy/solidity_contract/40341.sol:484:63: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function validateProposedMonarchName(string _monarchName) constant
+                                                              ^------^
+
+[91m[-] Cannot compile the contract [0m
+
+====================================================================================================
+[1m[ ] Compiling Solidity contract from the file /../data/reentrancy/solidity_contract/40341.sol ... [0m/../data/reentrancy/solidity_contract/40341.sol:52:40: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function fundsOf(address _address) constant returns (uint valueWei) {
+                                       ^------^
+/../data/reentrancy/solidity_contract/40341.sol:114:54: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function roundMoneyDownNicely(uint _rawValueWei) constant internal
+                                                     ^------^
+/../data/reentrancy/solidity_contract/40341.sol:141:56: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function roundMoneyUpToWholeFinney(uint _valueWei) constant internal
+                                                       ^------^
+/../data/reentrancy/solidity_contract/40341.sol:172:49: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function validateNameInternal(string _name) constant internal
+                                                ^------^
+/../data/reentrancy/solidity_contract/40341.sol:235:47: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function extractNameFromData(bytes _data) constant internal
+                                              ^------^
+/../data/reentrancy/solidity_contract/40341.sol:283:49: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function computeNameFuzzyHash(string _name) constant internal
+                                                ^------^
+/../data/reentrancy/solidity_contract/40341.sol:423:33: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function numberOfMonarchs() constant returns (uint totalCount) {
+                                ^------^
+/../data/reentrancy/solidity_contract/40341.sol:430:32: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function isLivingMonarch() constant returns (bool alive) {
+                               ^------^
+/../data/reentrancy/solidity_contract/40341.sol:450:37: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function currentClaimPriceWei() constant returns (uint priceInWei) {
+                                    ^------^
+/../data/reentrancy/solidity_contract/40341.sol:470:42: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function currentClaimPriceInFinney() constant
+                                         ^------^
+/../data/reentrancy/solidity_contract/40341.sol:484:63: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function validateProposedMonarchName(string _monarchName) constant
+                                                              ^------^
+/../data/reentrancy/solidity_contract/40341.sol:496:38: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function latestMonarchInternal() constant internal
+                                     ^------^
+/../data/reentrancy/solidity_contract/40341.sol:705:7: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+
+[91m[-] Cannot compile the contract [0m
+
+====================================================================================================
+[1m[ ] Compiling Solidity contract from the file /../data/reentrancy/solidity_contract/40341.sol ... [0m/../data/reentrancy/solidity_contract/40341.sol:52:40: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function fundsOf(address _address) constant returns (uint valueWei) {
+                                       ^------^
+/../data/reentrancy/solidity_contract/40341.sol:114:54: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function roundMoneyDownNicely(uint _rawValueWei) constant internal
+                                                     ^------^
+/../data/reentrancy/solidity_contract/40341.sol:141:56: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function roundMoneyUpToWholeFinney(uint _valueWei) constant internal
+                                                       ^------^
+/../data/reentrancy/solidity_contract/40341.sol:172:49: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function validateNameInternal(string _name) constant internal
+                                                ^------^
+/../data/reentrancy/solidity_contract/40341.sol:235:47: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function extractNameFromData(bytes _data) constant internal
+                                              ^------^
+/../data/reentrancy/solidity_contract/40341.sol:283:49: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function computeNameFuzzyHash(string _name) constant internal
+                                                ^------^
+/../data/reentrancy/solidity_contract/40341.sol:423:33: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function numberOfMonarchs() constant returns (uint totalCount) {
+                                ^------^
+/../data/reentrancy/solidity_contract/40341.sol:430:32: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function isLivingMonarch() constant returns (bool alive) {
+                               ^------^
+/../data/reentrancy/solidity_contract/40341.sol:450:37: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function currentClaimPriceWei() constant returns (uint priceInWei) {
+                                    ^------^
+/../data/reentrancy/solidity_contract/40341.sol:470:42: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function currentClaimPriceInFinney() constant
+                                         ^------^
+/../data/reentrancy/solidity_contract/40341.sol:484:63: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function validateProposedMonarchName(string _monarchName) constant
+                                                              ^------^
+/../data/reentrancy/solidity_contract/40341.sol:496:38: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function latestMonarchInternal() constant internal
+                                     ^------^
+/../data/reentrancy/solidity_contract/40341.sol:705:7: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+
+[91m[-] Cannot compile the contract [0m
+
+====================================================================================================
+[1m[ ] Compiling Solidity contract from the file /../data/reentrancy/solidity_contract/40341.sol ... [0m/../data/reentrancy/solidity_contract/40341.sol:52:40: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function fundsOf(address _address) constant returns (uint valueWei) {
+                                       ^------^
+/../data/reentrancy/solidity_contract/40341.sol:114:54: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function roundMoneyDownNicely(uint _rawValueWei) constant internal
+                                                     ^------^
+/../data/reentrancy/solidity_contract/40341.sol:141:56: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function roundMoneyUpToWholeFinney(uint _valueWei) constant internal
+                                                       ^------^
+/../data/reentrancy/solidity_contract/40341.sol:172:49: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function validateNameInternal(string _name) constant internal
+                                                ^------^
+/../data/reentrancy/solidity_contract/40341.sol:235:47: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function extractNameFromData(bytes _data) constant internal
+                                              ^------^
+/../data/reentrancy/solidity_contract/40341.sol:283:49: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function computeNameFuzzyHash(string _name) constant internal
+                                                ^------^
+/../data/reentrancy/solidity_contract/40341.sol:423:33: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function numberOfMonarchs() constant returns (uint totalCount) {
+                                ^------^
+/../data/reentrancy/solidity_contract/40341.sol:430:32: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function isLivingMonarch() constant returns (bool alive) {
+                               ^------^
+/../data/reentrancy/solidity_contract/40341.sol:450:37: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function currentClaimPriceWei() constant returns (uint priceInWei) {
+                                    ^------^
+/../data/reentrancy/solidity_contract/40341.sol:470:42: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function currentClaimPriceInFinney() constant
+                                         ^------^
+/../data/reentrancy/solidity_contract/40341.sol:484:63: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function validateProposedMonarchName(string _monarchName) constant
+                                                              ^------^
+/../data/reentrancy/solidity_contract/40341.sol:496:38: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function latestMonarchInternal() constant internal
+                                     ^------^
+
+[91m[-] Cannot compile the contract [0m
+
+====================================================================================================
+[1m[ ] Compiling Solidity contract from the file /../data/reentrancy/solidity_contract/40341.sol ... [0m/../data/reentrancy/solidity_contract/40341.sol:52:40: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function fundsOf(address _address) constant returns (uint valueWei) {
+                                       ^------^
+/../data/reentrancy/solidity_contract/40341.sol:114:54: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function roundMoneyDownNicely(uint _rawValueWei) constant internal
+                                                     ^------^
+/../data/reentrancy/solidity_contract/40341.sol:141:56: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function roundMoneyUpToWholeFinney(uint _valueWei) constant internal
+                                                       ^------^
+/../data/reentrancy/solidity_contract/40341.sol:172:49: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function validateNameInternal(string _name) constant internal
+                                                ^------^
+/../data/reentrancy/solidity_contract/40341.sol:235:47: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function extractNameFromData(bytes _data) constant internal
+                                              ^------^
+/../data/reentrancy/solidity_contract/40341.sol:283:49: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function computeNameFuzzyHash(string _name) constant internal
+                                                ^------^
+/../data/reentrancy/solidity_contract/40341.sol:423:33: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function numberOfMonarchs() constant returns (uint totalCount) {
+                                ^------^
+/../data/reentrancy/solidity_contract/40341.sol:430:32: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function isLivingMonarch() constant returns (bool alive) {
+                               ^------^
+/../data/reentrancy/solidity_contract/40341.sol:450:37: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function currentClaimPriceWei() constant returns (uint priceInWei) {
+                                    ^------^
+/../data/reentrancy/solidity_contract/40341.sol:470:42: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function currentClaimPriceInFinney() constant
+                                         ^------^
+/../data/reentrancy/solidity_contract/40341.sol:484:63: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function validateProposedMonarchName(string _monarchName) constant
+                                                              ^------^
+/../data/reentrancy/solidity_contract/40341.sol:496:38: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function latestMonarchInternal() constant internal
+                                     ^------^
+/../data/reentrancy/solidity_contract/40341.sol:705:7: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    ) constant returns (bool allowed) {
+      ^------^
+/../data/reentrancy/solidity_contract/40341.sol:863:33: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+
+[91m[-] Cannot compile the contract [0m
+
+====================================================================================================
+[1m[ ] Compiling Solidity contract from the file /../data/reentrancy/solidity_contract/40341.sol ... [0m/../data/reentrancy/solidity_contract/40341.sol:52:40: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function fundsOf(address _address) constant returns (uint valueWei) {
+                                       ^------^
+/../data/reentrancy/solidity_contract/40341.sol:114:54: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function roundMoneyDownNicely(uint _rawValueWei) constant internal
+                                                     ^------^
+/../data/reentrancy/solidity_contract/40341.sol:141:56: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function roundMoneyUpToWholeFinney(uint _valueWei) constant internal
+                                                       ^------^
+/../data/reentrancy/solidity_contract/40341.sol:172:49: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function validateNameInternal(string _name) constant internal
+                                                ^------^
+/../data/reentrancy/solidity_contract/40341.sol:235:47: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function extractNameFromData(bytes _data) constant internal
+                                              ^------^
+/../data/reentrancy/solidity_contract/40341.sol:283:49: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function computeNameFuzzyHash(string _name) constant internal
+                                                ^------^
+/../data/reentrancy/solidity_contract/40341.sol:423:33: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function numberOfMonarchs() constant returns (uint totalCount) {
+                                ^------^
+/../data/reentrancy/solidity_contract/40341.sol:430:32: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function isLivingMonarch() constant returns (bool alive) {
+                               ^------^
+/../data/reentrancy/solidity_contract/40341.sol:450:37: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function currentClaimPriceWei() constant returns (uint priceInWei) {
+                                    ^------^
+/../data/reentrancy/solidity_contract/40341.sol:470:42: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function currentClaimPriceInFinney() constant
+                                         ^------^
+/../data/reentrancy/solidity_contract/40341.sol:484:63: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function validateProposedMonarchName(string _monarchName) constant
+                                                              ^------^
+/../data/reentrancy/solidity_contract/40341.sol:496:38: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function latestMonarchInternal() constant internal
+                                     ^------^
+/../data/reentrancy/solidity_contract/40341.sol:705:7: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+
+[91m[-] Cannot compile the contract [0m
+
+====================================================================================================
+[1m[ ] Compiling Solidity contract from the file /../data/reentrancy/solidity_contract/40341.sol ... [0m/../data/reentrancy/solidity_contract/40341.sol:52:40: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function fundsOf(address _address) constant returns (uint valueWei) {
+                                       ^------^
+/../data/reentrancy/solidity_contract/40341.sol:114:54: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function roundMoneyDownNicely(uint _rawValueWei) constant internal
+                                                     ^------^
+/../data/reentrancy/solidity_contract/40341.sol:141:56: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function roundMoneyUpToWholeFinney(uint _valueWei) constant internal
+                                                       ^------^
+/../data/reentrancy/solidity_contract/40341.sol:172:49: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function validateNameInternal(string _name) constant internal
+                                                ^------^
+/../data/reentrancy/solidity_contract/40341.sol:235:47: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function extractNameFromData(bytes _data) constant internal
+                                              ^------^
+/../data/reentrancy/solidity_contract/40341.sol:283:49: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function computeNameFuzzyHash(string _name) constant internal
+                                                ^------^
+/../data/reentrancy/solidity_contract/40341.sol:423:33: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function numberOfMonarchs() constant returns (uint totalCount) {
+                                ^------^
+/../data/reentrancy/solidity_contract/40341.sol:430:32: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function isLivingMonarch() constant returns (bool alive) {
+                               ^------^
+/../data/reentrancy/solidity_contract/40341.sol:450:37: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function currentClaimPriceWei() constant returns (uint priceInWei) {
+                                    ^------^
+/../data/reentrancy/solidity_contract/40341.sol:470:42: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function currentClaimPriceInFinney() constant
+                                         ^------^
+/../data/reentrancy/solidity_contract/40341.sol:484:63: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function validateProposedMonarchName(string _monarchName) constant
+                                                              ^------^
+
+[91m[-] Cannot compile the contract [0m
+
+====================================================================================================
+[1m[ ] Compiling Solidity contract from the file /../data/reentrancy/solidity_contract/40341.sol ... [0m/../data/reentrancy/solidity_contract/40341.sol:52:40: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function fundsOf(address _address) constant returns (uint valueWei) {
+                                       ^------^
+/../data/reentrancy/solidity_contract/40341.sol:114:54: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function roundMoneyDownNicely(uint _rawValueWei) constant internal
+                                                     ^------^
+/../data/reentrancy/solidity_contract/40341.sol:141:56: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function roundMoneyUpToWholeFinney(uint _valueWei) constant internal
+                                                       ^------^
+/../data/reentrancy/solidity_contract/40341.sol:172:49: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function validateNameInternal(string _name) constant internal
+                                                ^------^
+/../data/reentrancy/solidity_contract/40341.sol:235:47: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function extractNameFromData(bytes _data) constant internal
+                                              ^------^
+/../data/reentrancy/solidity_contract/40341.sol:283:49: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function computeNameFuzzyHash(string _name) constant internal
+                                                ^------^
+/../data/reentrancy/solidity_contract/40341.sol:423:33: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function numberOfMonarchs() constant returns (uint totalCount) {
+                                ^------^
+/../data/reentrancy/solidity_contract/40341.sol:430:32: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function isLivingMonarch() constant returns (bool alive) {
+                               ^------^
+/../data/reentrancy/solidity_contract/40341.sol:450:37: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function currentClaimPriceWei() constant returns (uint priceInWei) {
+                                    ^------^
+/../data/reentrancy/solidity_contract/40341.sol:470:42: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function currentClaimPriceInFinney() constant
+                                         ^------^
+/../data/reentrancy/solidity_contract/40341.sol:484:63: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function validateProposedMonarchName(string _monarchName) constant
+                                                              ^------^
+/../data/reentrancy/solidity_contract/40341.sol:496:38: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function latestMonarchInternal() constant internal
+                                     ^------^
+/../data/reentrancy/solidity_contract/40341.sol:705:7: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+
+[91m[-] Cannot compile the contract [0m
+
+====================================================================================================
+[1m[ ] Compiling Solidity contract from the file /../data/reentrancy/solidity_contract/40341.sol ... [0m/../data/reentrancy/solidity_contract/40341.sol:52:40: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function fundsOf(address _address) constant returns (uint valueWei) {
+                                       ^------^
+/../data/reentrancy/solidity_contract/40341.sol:114:54: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function roundMoneyDownNicely(uint _rawValueWei) constant internal
+                                                     ^------^
+/../data/reentrancy/solidity_contract/40341.sol:141:56: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function roundMoneyUpToWholeFinney(uint _valueWei) constant internal
+                                                       ^------^
+/../data/reentrancy/solidity_contract/40341.sol:172:49: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function validateNameInternal(string _name) constant internal
+                                                ^------^
+/../data/reentrancy/solidity_contract/40341.sol:235:47: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function extractNameFromData(bytes _data) constant internal
+                                              ^------^
+/../data/reentrancy/solidity_contract/40341.sol:283:49: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function computeNameFuzzyHash(string _name) constant internal
+                                                ^------^
+/../data/reentrancy/solidity_contract/40341.sol:423:33: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function numberOfMonarchs() constant returns (uint totalCount) {
+                                ^------^
+/../data/reentrancy/solidity_contract/40341.sol:430:32: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function isLivingMonarch() constant returns (bool alive) {
+                               ^------^
+/../data/reentrancy/solidity_contract/40341.sol:450:37: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function currentClaimPriceWei() constant returns (uint priceInWei) {
+                                    ^------^
+/../data/reentrancy/solidity_contract/40341.sol:470:42: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function currentClaimPriceInFinney() constant
+                                         ^------^
+/../data/reentrancy/solidity_contract/40341.sol:484:63: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function validateProposedMonarchName(string _monarchName) constant
+                                                              ^------^
+/../data/reentrancy/solidity_contract/40341.sol:496:38: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function latestMonarchInternal() constant internal
+                                     ^------^
+
+[91m[-] Cannot compile the contract [0m
+
+====================================================================================================
+[1m[ ] Compiling Solidity contract from the file /../data/reentrancy/solidity_contract/40341.sol ... [0m/../data/reentrancy/solidity_contract/40341.sol:52:40: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function fundsOf(address _address) constant returns (uint valueWei) {
+                                       ^------^
+/../data/reentrancy/solidity_contract/40341.sol:114:54: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function roundMoneyDownNicely(uint _rawValueWei) constant internal
+                                                     ^------^
+/../data/reentrancy/solidity_contract/40341.sol:141:56: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function roundMoneyUpToWholeFinney(uint _valueWei) constant internal
+                                                       ^------^
+/../data/reentrancy/solidity_contract/40341.sol:172:49: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function validateNameInternal(string _name) constant internal
+                                                ^------^
+/../data/reentrancy/solidity_contract/40341.sol:235:47: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function extractNameFromData(bytes _data) constant internal
+                                              ^------^
+/../data/reentrancy/solidity_contract/40341.sol:283:49: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function computeNameFuzzyHash(string _name) constant internal
+                                                ^------^
+/../data/reentrancy/solidity_contract/40341.sol:423:33: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function numberOfMonarchs() constant returns (uint totalCount) {
+                                ^------^
+/../data/reentrancy/solidity_contract/40341.sol:430:32: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function isLivingMonarch() constant returns (bool alive) {
+                               ^------^
+/../data/reentrancy/solidity_contract/40341.sol:450:37: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function currentClaimPriceWei() constant returns (uint priceInWei) {
+                                    ^------^
+/../data/reentrancy/solidity_contract/40341.sol:470:42: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function currentClaimPriceInFinney() constant
+                                         ^------^
+/../data/reentrancy/solidity_contract/40341.sol:484:63: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function validateProposedMonarchName(string _monarchName) constant
+                                                              ^------^
+/../data/reentrancy/solidity_contract/40341.sol:496:38: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function latestMonarchInternal() constant internal
+                                     ^------^
+
+[91m[-] Cannot compile the contract [0m
+
+====================================================================================================
+[1m[ ] Compiling Solidity contract from the file /../data/reentrancy/solidity_contract/40341.sol ... [0m/../data/reentrancy/solidity_contract/40341.sol:52:40: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function fundsOf(address _address) constant returns (uint valueWei) {
+                                       ^------^
+/../data/reentrancy/solidity_contract/40341.sol:114:54: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function roundMoneyDownNicely(uint _rawValueWei) constant internal
+                                                     ^------^
+/../data/reentrancy/solidity_contract/40341.sol:141:56: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function roundMoneyUpToWholeFinney(uint _valueWei) constant internal
+                                                       ^------^
+/../data/reentrancy/solidity_contract/40341.sol:172:49: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function validateNameInternal(string _name) constant internal
+                                                ^------^
+/../data/reentrancy/solidity_contract/40341.sol:235:47: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function extractNameFromData(bytes _data) constant internal
+                                              ^------^
+/../data/reentrancy/solidity_contract/40341.sol:283:49: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function computeNameFuzzyHash(string _name) constant internal
+                                                ^------^
+/../data/reentrancy/solidity_contract/40341.sol:423:33: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function numberOfMonarchs() constant returns (uint totalCount) {
+                                ^------^
+/../data/reentrancy/solidity_contract/40341.sol:430:32: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function isLivingMonarch() constant returns (bool alive) {
+                               ^------^
+/../data/reentrancy/solidity_contract/40341.sol:450:37: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function currentClaimPriceWei() constant returns (uint priceInWei) {
+                                    ^------^
+/../data/reentrancy/solidity_contract/40341.sol:470:42: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function currentClaimPriceInFinney() constant
+                                         ^------^
+/../data/reentrancy/solidity_contract/40341.sol:484:63: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function validateProposedMonarchName(string _monarchName) constant
+                                                              ^------^
+/../data/reentrancy/solidity_contract/40341.sol:496:38: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function latestMonarchInternal() constant internal
+                                     ^------^
+/../data/reentrancy/solidity_contract/40341.sol:705:7: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    ) constant returns (bool allowed) {
+      ^------^
+/../data/reentrancy/solidity_contract/40341.sol:863:33: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+
+[91m[-] Cannot compile the contract [0m
+
+====================================================================================================
+[1m[ ] Compiling Solidity contract from the file /../data/reentrancy/solidity_contract/40341.sol ... [0m/../data/reentrancy/solidity_contract/40341.sol:52:40: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function fundsOf(address _address) constant returns (uint valueWei) {
+                                       ^------^
+/../data/reentrancy/solidity_contract/40341.sol:114:54: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function roundMoneyDownNicely(uint _rawValueWei) constant internal
+                                                     ^------^
+/../data/reentrancy/solidity_contract/40341.sol:141:56: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function roundMoneyUpToWholeFinney(uint _valueWei) constant internal
+                                                       ^------^
+/../data/reentrancy/solidity_contract/40341.sol:172:49: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function validateNameInternal(string _name) constant internal
+                                                ^------^
+/../data/reentrancy/solidity_contract/40341.sol:235:47: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function extractNameFromData(bytes _data) constant internal
+                                              ^------^
+/../data/reentrancy/solidity_contract/40341.sol:283:49: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function computeNameFuzzyHash(string _name) constant internal
+                                                ^------^
+/../data/reentrancy/solidity_contract/40341.sol:423:33: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function numberOfMonarchs() constant returns (uint totalCount) {
+                                ^------^
+/../data/reentrancy/solidity_contract/40341.sol:430:32: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function isLivingMonarch() constant returns (bool alive) {
+                               ^------^
+/../data/reentrancy/solidity_contract/40341.sol:450:37: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function currentClaimPriceWei() constant returns (uint priceInWei) {
+                                    ^------^
+/../data/reentrancy/solidity_contract/40341.sol:470:42: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function currentClaimPriceInFinney() constant
+                                         ^------^
+/../data/reentrancy/solidity_contract/40341.sol:484:63: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function validateProposedMonarchName(string _monarchName) constant
+                                                              ^------^
+/../data/reentrancy/solidity_contract/40341.sol:496:38: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function latestMonarchInternal() constant internal
+                                     ^------^
+/../data/reentrancy/solidity_contract/40341.sol:705:7: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+
+[91m[-] Cannot compile the contract [0m
+
+====================================================================================================
+[1m[ ] Compiling Solidity contract from the file /../data/reentrancy/solidity_contract/40341.sol ... [0m/../data/reentrancy/solidity_contract/40341.sol:52:40: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function fundsOf(address _address) constant returns (uint valueWei) {
+                                       ^------^
+/../data/reentrancy/solidity_contract/40341.sol:114:54: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function roundMoneyDownNicely(uint _rawValueWei) constant internal
+                                                     ^------^
+/../data/reentrancy/solidity_contract/40341.sol:141:56: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function roundMoneyUpToWholeFinney(uint _valueWei) constant internal
+                                                       ^------^
+/../data/reentrancy/solidity_contract/40341.sol:172:49: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function validateNameInternal(string _name) constant internal
+                                                ^------^
+/../data/reentrancy/solidity_contract/40341.sol:235:47: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function extractNameFromData(bytes _data) constant internal
+                                              ^------^
+/../data/reentrancy/solidity_contract/40341.sol:283:49: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function computeNameFuzzyHash(string _name) constant internal
+                                                ^------^
+/../data/reentrancy/solidity_contract/40341.sol:423:33: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function numberOfMonarchs() constant returns (uint totalCount) {
+                                ^------^
+/../data/reentrancy/solidity_contract/40341.sol:430:32: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function isLivingMonarch() constant returns (bool alive) {
+                               ^------^
+/../data/reentrancy/solidity_contract/40341.sol:450:37: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function currentClaimPriceWei() constant returns (uint priceInWei) {
+                                    ^------^
+/../data/reentrancy/solidity_contract/40341.sol:470:42: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function currentClaimPriceInFinney() constant
+                                         ^------^
+/../data/reentrancy/solidity_contract/40341.sol:484:63: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function validateProposedMonarchName(string _monarchName) constant
+                                                              ^------^
+/../data/reentrancy/solidity_contract/40341.sol:496:38: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function latestMonarchInternal() constant internal
+                                     ^------^
+/../data/reentrancy/solidity_contract/40341.sol:705:7: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    ) constant returns (bool allowed) {
+
+[91m[-] Cannot compile the contract [0m
+
+====================================================================================================
+[1m[ ] Compiling Solidity contract from the file /../data/reentrancy/solidity_contract/40341.sol ... [0m/../data/reentrancy/solidity_contract/40341.sol:52:40: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function fundsOf(address _address) constant returns (uint valueWei) {
+                                       ^------^
+/../data/reentrancy/solidity_contract/40341.sol:114:54: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function roundMoneyDownNicely(uint _rawValueWei) constant internal
+                                                     ^------^
+/../data/reentrancy/solidity_contract/40341.sol:141:56: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function roundMoneyUpToWholeFinney(uint _valueWei) constant internal
+                                                       ^------^
+/../data/reentrancy/solidity_contract/40341.sol:172:49: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function validateNameInternal(string _name) constant internal
+                                                ^------^
+/../data/reentrancy/solidity_contract/40341.sol:235:47: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function extractNameFromData(bytes _data) constant internal
+                                              ^------^
+/../data/reentrancy/solidity_contract/40341.sol:283:49: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function computeNameFuzzyHash(string _name) constant internal
+                                                ^------^
+/../data/reentrancy/solidity_contract/40341.sol:423:33: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function numberOfMonarchs() constant returns (uint totalCount) {
+                                ^------^
+/../data/reentrancy/solidity_contract/40341.sol:430:32: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function isLivingMonarch() constant returns (bool alive) {
+                               ^------^
+/../data/reentrancy/solidity_contract/40341.sol:450:37: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function currentClaimPriceWei() constant returns (uint priceInWei) {
+                                    ^------^
+/../data/reentrancy/solidity_contract/40341.sol:470:42: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function currentClaimPriceInFinney() constant
+                                         ^------^
+/../data/reentrancy/solidity_contract/40341.sol:484:63: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function validateProposedMonarchName(string _monarchName) constant
+                                                              ^------^
+/../data/reentrancy/solidity_contract/40341.sol:496:38: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+    function latestMonarchInternal() constant internal
+                                     ^------^
+/../data/reentrancy/solidity_contract/40341.sol:705:7: Error: The state mutability modifier "constant" was removed in version 0.5.0. Use "view" or "pure" instead.
+
+[91m[-] Cannot compile the contract [0m

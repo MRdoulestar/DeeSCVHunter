@@ -1,0 +1,3592 @@
+{
+  "contract": "14620",
+  "tool": "slither",
+  "start": 1609127041.7752151,
+  "end": 1609127043.9288619,
+  "duration": 2.15364670753479,
+  "analysis": [
+    {
+      "check": "unused-return",
+      "impact": "Medium",
+      "confidence": "Medium",
+      "description": "TokensGate.transferTokens (/../data/reentrancy/solidity_contract/14620.sol#316-319) does not use the value returned by external calls:\n\t-erc20.transfer(walletToTransfer,tokenAmount) (/../data/reentrancy/solidity_contract/14620.sol#318)\n",
+      "elements": [
+        {
+          "type": "function",
+          "name": "transferTokens",
+          "source_mapping": {
+            "start": 7614,
+            "length": 213,
+            "filename": "/../data/reentrancy/solidity_contract/14620.sol",
+            "lines": [
+              316,
+              317,
+              318,
+              319
+            ]
+          },
+          "contract": {
+            "type": "contract",
+            "name": "TokensGate",
+            "source_mapping": {
+              "start": 4484,
+              "length": 3645,
+              "filename": "/../data/reentrancy/solidity_contract/14620.sol",
+              "lines": [
+                203,
+                204,
+                205,
+                206,
+                207,
+                208,
+                209,
+                210,
+                211,
+                212,
+                213,
+                214,
+                215,
+                216,
+                217,
+                218,
+                219,
+                220,
+                221,
+                222,
+                223,
+                224,
+                225,
+                226,
+                227,
+                228,
+                229,
+                230,
+                231,
+                232,
+                233,
+                234,
+                235,
+                236,
+                237,
+                238,
+                239,
+                240,
+                241,
+                242,
+                243,
+                244,
+                245,
+                246,
+                247,
+                248,
+                249,
+                250,
+                251,
+                252,
+                253,
+                254,
+                255,
+                256,
+                257,
+                258,
+                259,
+                260,
+                261,
+                262,
+                263,
+                264,
+                265,
+                266,
+                267,
+                268,
+                269,
+                270,
+                271,
+                272,
+                273,
+                274,
+                275,
+                276,
+                277,
+                278,
+                279,
+                280,
+                281,
+                282,
+                283,
+                284,
+                285,
+                286,
+                287,
+                288,
+                289,
+                290,
+                291,
+                292,
+                293,
+                294,
+                295,
+                296,
+                297,
+                298,
+                299,
+                300,
+                301,
+                302,
+                303,
+                304,
+                305,
+                306,
+                307,
+                308,
+                309,
+                310,
+                311,
+                312,
+                313,
+                314,
+                315,
+                316,
+                317,
+                318,
+                319,
+                320,
+                321,
+                322,
+                323,
+                324,
+                325,
+                326,
+                327,
+                328
+              ]
+            }
+          }
+        },
+        {
+          "type": "expression",
+          "expression": "erc20.transfer(walletToTransfer,tokenAmount)",
+          "source_mapping": {
+            "start": 7777,
+            "length": 45,
+            "filename": "/../data/reentrancy/solidity_contract/14620.sol",
+            "lines": [
+              318
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "external-function",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Ownable.transferOwnership (/../data/reentrancy/solidity_contract/14620.sol#61-65) should be declared external\n",
+      "elements": [
+        {
+          "type": "function",
+          "name": "transferOwnership",
+          "source_mapping": {
+            "start": 889,
+            "length": 169,
+            "filename": "/../data/reentrancy/solidity_contract/14620.sol",
+            "lines": [
+              61,
+              62,
+              63,
+              64,
+              65
+            ]
+          },
+          "contract": {
+            "type": "contract",
+            "name": "Ownable",
+            "source_mapping": {
+              "start": 609,
+              "length": 452,
+              "filename": "/../data/reentrancy/solidity_contract/14620.sol",
+              "lines": [
+                40,
+                41,
+                42,
+                43,
+                44,
+                45,
+                46,
+                47,
+                48,
+                49,
+                50,
+                51,
+                52,
+                53,
+                54,
+                55,
+                56,
+                57,
+                58,
+                59,
+                60,
+                61,
+                62,
+                63,
+                64,
+                65,
+                66,
+                67
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "check": "external-function",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "BasicToken.balanceOf (/../data/reentrancy/solidity_contract/14620.sol#100-102) should be declared external\n",
+      "elements": [
+        {
+          "type": "function",
+          "name": "balanceOf",
+          "source_mapping": {
+            "start": 1782,
+            "length": 107,
+            "filename": "/../data/reentrancy/solidity_contract/14620.sol",
+            "lines": [
+              100,
+              101,
+              102
+            ]
+          },
+          "contract": {
+            "type": "contract",
+            "name": "BasicToken",
+            "source_mapping": {
+              "start": 1338,
+              "length": 554,
+              "filename": "/../data/reentrancy/solidity_contract/14620.sol",
+              "lines": [
+                82,
+                83,
+                84,
+                85,
+                86,
+                87,
+                88,
+                89,
+                90,
+                91,
+                92,
+                93,
+                94,
+                95,
+                96,
+                97,
+                98,
+                99,
+                100,
+                101,
+                102,
+                103,
+                104
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "check": "external-function",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "ERC20Basic.balanceOf (/../data/reentrancy/solidity_contract/14620.sol#74) should be declared external\n",
+      "elements": [
+        {
+          "type": "function",
+          "name": "balanceOf",
+          "source_mapping": {
+            "start": 1122,
+            "length": 62,
+            "filename": "/../data/reentrancy/solidity_contract/14620.sol",
+            "lines": [
+              74
+            ]
+          },
+          "contract": {
+            "type": "contract",
+            "name": "ERC20Basic",
+            "source_mapping": {
+              "start": 1068,
+              "length": 263,
+              "filename": "/../data/reentrancy/solidity_contract/14620.sol",
+              "lines": [
+                72,
+                73,
+                74,
+                75,
+                76,
+                77
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "check": "external-function",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "StandardToken.allowance (/../data/reentrancy/solidity_contract/14620.sol#145-147) should be declared external\n",
+      "elements": [
+        {
+          "type": "function",
+          "name": "allowance",
+          "source_mapping": {
+            "start": 3028,
+            "length": 126,
+            "filename": "/../data/reentrancy/solidity_contract/14620.sol",
+            "lines": [
+              145,
+              146,
+              147
+            ]
+          },
+          "contract": {
+            "type": "contract",
+            "name": "StandardToken",
+            "source_mapping": {
+              "start": 2265,
+              "length": 1563,
+              "filename": "/../data/reentrancy/solidity_contract/14620.sol",
+              "lines": [
+                119,
+                120,
+                121,
+                122,
+                123,
+                124,
+                125,
+                126,
+                127,
+                128,
+                129,
+                130,
+                131,
+                132,
+                133,
+                134,
+                135,
+                136,
+                137,
+                138,
+                139,
+                140,
+                141,
+                142,
+                143,
+                144,
+                145,
+                146,
+                147,
+                148,
+                149,
+                150,
+                151,
+                152,
+                153,
+                154,
+                155,
+                156,
+                157,
+                158,
+                159,
+                160,
+                161,
+                162,
+                163,
+                164,
+                165,
+                166,
+                167,
+                168
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "check": "external-function",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "ERC20.allowance (/../data/reentrancy/solidity_contract/14620.sol#110) should be declared external\n",
+      "elements": [
+        {
+          "type": "function",
+          "name": "allowance",
+          "source_mapping": {
+            "start": 1932,
+            "length": 81,
+            "filename": "/../data/reentrancy/solidity_contract/14620.sol",
+            "lines": [
+              110
+            ]
+          },
+          "contract": {
+            "type": "contract",
+            "name": "ERC20",
+            "source_mapping": {
+              "start": 1899,
+              "length": 359,
+              "filename": "/../data/reentrancy/solidity_contract/14620.sol",
+              "lines": [
+                109,
+                110,
+                111,
+                112,
+                113,
+                114
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "check": "external-function",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "ERC20.approve (/../data/reentrancy/solidity_contract/14620.sol#112) should be declared external\n",
+      "elements": [
+        {
+          "type": "function",
+          "name": "approve",
+          "source_mapping": {
+            "start": 2104,
+            "length": 71,
+            "filename": "/../data/reentrancy/solidity_contract/14620.sol",
+            "lines": [
+              112
+            ]
+          },
+          "contract": {
+            "type": "contract",
+            "name": "ERC20",
+            "source_mapping": {
+              "start": 1899,
+              "length": 359,
+              "filename": "/../data/reentrancy/solidity_contract/14620.sol",
+              "lines": [
+                109,
+                110,
+                111,
+                112,
+                113,
+                114
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "check": "external-function",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "StandardToken.approve (/../data/reentrancy/solidity_contract/14620.sol#138-142) should be declared external\n",
+      "elements": [
+        {
+          "type": "function",
+          "name": "approve",
+          "source_mapping": {
+            "start": 2837,
+            "length": 183,
+            "filename": "/../data/reentrancy/solidity_contract/14620.sol",
+            "lines": [
+              138,
+              139,
+              140,
+              141,
+              142
+            ]
+          },
+          "contract": {
+            "type": "contract",
+            "name": "StandardToken",
+            "source_mapping": {
+              "start": 2265,
+              "length": 1563,
+              "filename": "/../data/reentrancy/solidity_contract/14620.sol",
+              "lines": [
+                119,
+                120,
+                121,
+                122,
+                123,
+                124,
+                125,
+                126,
+                127,
+                128,
+                129,
+                130,
+                131,
+                132,
+                133,
+                134,
+                135,
+                136,
+                137,
+                138,
+                139,
+                140,
+                141,
+                142,
+                143,
+                144,
+                145,
+                146,
+                147,
+                148,
+                149,
+                150,
+                151,
+                152,
+                153,
+                154,
+                155,
+                156,
+                157,
+                158,
+                159,
+                160,
+                161,
+                162,
+                163,
+                164,
+                165,
+                166,
+                167,
+                168
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "check": "external-function",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "StandardToken.increaseApproval (/../data/reentrancy/solidity_contract/14620.sol#150-154) should be declared external\n",
+      "elements": [
+        {
+          "type": "function",
+          "name": "increaseApproval",
+          "source_mapping": {
+            "start": 3162,
+            "length": 257,
+            "filename": "/../data/reentrancy/solidity_contract/14620.sol",
+            "lines": [
+              150,
+              151,
+              152,
+              153,
+              154
+            ]
+          },
+          "contract": {
+            "type": "contract",
+            "name": "StandardToken",
+            "source_mapping": {
+              "start": 2265,
+              "length": 1563,
+              "filename": "/../data/reentrancy/solidity_contract/14620.sol",
+              "lines": [
+                119,
+                120,
+                121,
+                122,
+                123,
+                124,
+                125,
+                126,
+                127,
+                128,
+                129,
+                130,
+                131,
+                132,
+                133,
+                134,
+                135,
+                136,
+                137,
+                138,
+                139,
+                140,
+                141,
+                142,
+                143,
+                144,
+                145,
+                146,
+                147,
+                148,
+                149,
+                150,
+                151,
+                152,
+                153,
+                154,
+                155,
+                156,
+                157,
+                158,
+                159,
+                160,
+                161,
+                162,
+                163,
+                164,
+                165,
+                166,
+                167,
+                168
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "check": "external-function",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "StandardToken.decreaseApproval (/../data/reentrancy/solidity_contract/14620.sol#157-166) should be declared external\n",
+      "elements": [
+        {
+          "type": "function",
+          "name": "decreaseApproval",
+          "source_mapping": {
+            "start": 3427,
+            "length": 398,
+            "filename": "/../data/reentrancy/solidity_contract/14620.sol",
+            "lines": [
+              157,
+              158,
+              159,
+              160,
+              161,
+              162,
+              163,
+              164,
+              165,
+              166
+            ]
+          },
+          "contract": {
+            "type": "contract",
+            "name": "StandardToken",
+            "source_mapping": {
+              "start": 2265,
+              "length": 1563,
+              "filename": "/../data/reentrancy/solidity_contract/14620.sol",
+              "lines": [
+                119,
+                120,
+                121,
+                122,
+                123,
+                124,
+                125,
+                126,
+                127,
+                128,
+                129,
+                130,
+                131,
+                132,
+                133,
+                134,
+                135,
+                136,
+                137,
+                138,
+                139,
+                140,
+                141,
+                142,
+                143,
+                144,
+                145,
+                146,
+                147,
+                148,
+                149,
+                150,
+                151,
+                152,
+                153,
+                154,
+                155,
+                156,
+                157,
+                158,
+                159,
+                160,
+                161,
+                162,
+                163,
+                164,
+                165,
+                166,
+                167,
+                168
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "check": "external-function",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "MintableToken.finishMinting (/../data/reentrancy/solidity_contract/14620.sol#196-200) should be declared external\n",
+      "elements": [
+        {
+          "type": "function",
+          "name": "finishMinting",
+          "source_mapping": {
+            "start": 4345,
+            "length": 135,
+            "filename": "/../data/reentrancy/solidity_contract/14620.sol",
+            "lines": [
+              196,
+              197,
+              198,
+              199,
+              200
+            ]
+          },
+          "contract": {
+            "type": "contract",
+            "name": "MintableToken",
+            "source_mapping": {
+              "start": 3836,
+              "length": 646,
+              "filename": "/../data/reentrancy/solidity_contract/14620.sol",
+              "lines": [
+                174,
+                175,
+                176,
+                177,
+                178,
+                179,
+                180,
+                181,
+                182,
+                183,
+                184,
+                185,
+                186,
+                187,
+                188,
+                189,
+                190,
+                191,
+                192,
+                193,
+                194,
+                195,
+                196,
+                197,
+                198,
+                199,
+                200,
+                201
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "check": "external-function",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "TokensGate.burn (/../data/reentrancy/solidity_contract/14620.sol#267-274) should be declared external\n",
+      "elements": [
+        {
+          "type": "function",
+          "name": "burn",
+          "source_mapping": {
+            "start": 6378,
+            "length": 280,
+            "filename": "/../data/reentrancy/solidity_contract/14620.sol",
+            "lines": [
+              267,
+              268,
+              269,
+              270,
+              271,
+              272,
+              273,
+              274
+            ]
+          },
+          "contract": {
+            "type": "contract",
+            "name": "TokensGate",
+            "source_mapping": {
+              "start": 4484,
+              "length": 3645,
+              "filename": "/../data/reentrancy/solidity_contract/14620.sol",
+              "lines": [
+                203,
+                204,
+                205,
+                206,
+                207,
+                208,
+                209,
+                210,
+                211,
+                212,
+                213,
+                214,
+                215,
+                216,
+                217,
+                218,
+                219,
+                220,
+                221,
+                222,
+                223,
+                224,
+                225,
+                226,
+                227,
+                228,
+                229,
+                230,
+                231,
+                232,
+                233,
+                234,
+                235,
+                236,
+                237,
+                238,
+                239,
+                240,
+                241,
+                242,
+                243,
+                244,
+                245,
+                246,
+                247,
+                248,
+                249,
+                250,
+                251,
+                252,
+                253,
+                254,
+                255,
+                256,
+                257,
+                258,
+                259,
+                260,
+                261,
+                262,
+                263,
+                264,
+                265,
+                266,
+                267,
+                268,
+                269,
+                270,
+                271,
+                272,
+                273,
+                274,
+                275,
+                276,
+                277,
+                278,
+                279,
+                280,
+                281,
+                282,
+                283,
+                284,
+                285,
+                286,
+                287,
+                288,
+                289,
+                290,
+                291,
+                292,
+                293,
+                294,
+                295,
+                296,
+                297,
+                298,
+                299,
+                300,
+                301,
+                302,
+                303,
+                304,
+                305,
+                306,
+                307,
+                308,
+                309,
+                310,
+                311,
+                312,
+                313,
+                314,
+                315,
+                316,
+                317,
+                318,
+                319,
+                320,
+                321,
+                322,
+                323,
+                324,
+                325,
+                326,
+                327,
+                328
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "check": "external-function",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "TokensGate.setManager (/../data/reentrancy/solidity_contract/14620.sol#276-278) should be declared external\n",
+      "elements": [
+        {
+          "type": "function",
+          "name": "setManager",
+          "source_mapping": {
+            "start": 6664,
+            "length": 108,
+            "filename": "/../data/reentrancy/solidity_contract/14620.sol",
+            "lines": [
+              276,
+              277,
+              278
+            ]
+          },
+          "contract": {
+            "type": "contract",
+            "name": "TokensGate",
+            "source_mapping": {
+              "start": 4484,
+              "length": 3645,
+              "filename": "/../data/reentrancy/solidity_contract/14620.sol",
+              "lines": [
+                203,
+                204,
+                205,
+                206,
+                207,
+                208,
+                209,
+                210,
+                211,
+                212,
+                213,
+                214,
+                215,
+                216,
+                217,
+                218,
+                219,
+                220,
+                221,
+                222,
+                223,
+                224,
+                225,
+                226,
+                227,
+                228,
+                229,
+                230,
+                231,
+                232,
+                233,
+                234,
+                235,
+                236,
+                237,
+                238,
+                239,
+                240,
+                241,
+                242,
+                243,
+                244,
+                245,
+                246,
+                247,
+                248,
+                249,
+                250,
+                251,
+                252,
+                253,
+                254,
+                255,
+                256,
+                257,
+                258,
+                259,
+                260,
+                261,
+                262,
+                263,
+                264,
+                265,
+                266,
+                267,
+                268,
+                269,
+                270,
+                271,
+                272,
+                273,
+                274,
+                275,
+                276,
+                277,
+                278,
+                279,
+                280,
+                281,
+                282,
+                283,
+                284,
+                285,
+                286,
+                287,
+                288,
+                289,
+                290,
+                291,
+                292,
+                293,
+                294,
+                295,
+                296,
+                297,
+                298,
+                299,
+                300,
+                301,
+                302,
+                303,
+                304,
+                305,
+                306,
+                307,
+                308,
+                309,
+                310,
+                311,
+                312,
+                313,
+                314,
+                315,
+                316,
+                317,
+                318,
+                319,
+                320,
+                321,
+                322,
+                323,
+                324,
+                325,
+                326,
+                327,
+                328
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "check": "external-function",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "TokensGate.setAllowTransferGlobal (/../data/reentrancy/solidity_contract/14620.sol#280-284) should be declared external\n",
+      "elements": [
+        {
+          "type": "function",
+          "name": "setAllowTransferGlobal",
+          "source_mapping": {
+            "start": 6778,
+            "length": 129,
+            "filename": "/../data/reentrancy/solidity_contract/14620.sol",
+            "lines": [
+              280,
+              281,
+              282,
+              283,
+              284
+            ]
+          },
+          "contract": {
+            "type": "contract",
+            "name": "TokensGate",
+            "source_mapping": {
+              "start": 4484,
+              "length": 3645,
+              "filename": "/../data/reentrancy/solidity_contract/14620.sol",
+              "lines": [
+                203,
+                204,
+                205,
+                206,
+                207,
+                208,
+                209,
+                210,
+                211,
+                212,
+                213,
+                214,
+                215,
+                216,
+                217,
+                218,
+                219,
+                220,
+                221,
+                222,
+                223,
+                224,
+                225,
+                226,
+                227,
+                228,
+                229,
+                230,
+                231,
+                232,
+                233,
+                234,
+                235,
+                236,
+                237,
+                238,
+                239,
+                240,
+                241,
+                242,
+                243,
+                244,
+                245,
+                246,
+                247,
+                248,
+                249,
+                250,
+                251,
+                252,
+                253,
+                254,
+                255,
+                256,
+                257,
+                258,
+                259,
+                260,
+                261,
+                262,
+                263,
+                264,
+                265,
+                266,
+                267,
+                268,
+                269,
+                270,
+                271,
+                272,
+                273,
+                274,
+                275,
+                276,
+                277,
+                278,
+                279,
+                280,
+                281,
+                282,
+                283,
+                284,
+                285,
+                286,
+                287,
+                288,
+                289,
+                290,
+                291,
+                292,
+                293,
+                294,
+                295,
+                296,
+                297,
+                298,
+                299,
+                300,
+                301,
+                302,
+                303,
+                304,
+                305,
+                306,
+                307,
+                308,
+                309,
+                310,
+                311,
+                312,
+                313,
+                314,
+                315,
+                316,
+                317,
+                318,
+                319,
+                320,
+                321,
+                322,
+                323,
+                324,
+                325,
+                326,
+                327,
+                328
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "check": "external-function",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "TokensGate.setAllowTransferLocal (/../data/reentrancy/solidity_contract/14620.sol#286-290) should be declared external\n",
+      "elements": [
+        {
+          "type": "function",
+          "name": "setAllowTransferLocal",
+          "source_mapping": {
+            "start": 6913,
+            "length": 125,
+            "filename": "/../data/reentrancy/solidity_contract/14620.sol",
+            "lines": [
+              286,
+              287,
+              288,
+              289,
+              290
+            ]
+          },
+          "contract": {
+            "type": "contract",
+            "name": "TokensGate",
+            "source_mapping": {
+              "start": 4484,
+              "length": 3645,
+              "filename": "/../data/reentrancy/solidity_contract/14620.sol",
+              "lines": [
+                203,
+                204,
+                205,
+                206,
+                207,
+                208,
+                209,
+                210,
+                211,
+                212,
+                213,
+                214,
+                215,
+                216,
+                217,
+                218,
+                219,
+                220,
+                221,
+                222,
+                223,
+                224,
+                225,
+                226,
+                227,
+                228,
+                229,
+                230,
+                231,
+                232,
+                233,
+                234,
+                235,
+                236,
+                237,
+                238,
+                239,
+                240,
+                241,
+                242,
+                243,
+                244,
+                245,
+                246,
+                247,
+                248,
+                249,
+                250,
+                251,
+                252,
+                253,
+                254,
+                255,
+                256,
+                257,
+                258,
+                259,
+                260,
+                261,
+                262,
+                263,
+                264,
+                265,
+                266,
+                267,
+                268,
+                269,
+                270,
+                271,
+                272,
+                273,
+                274,
+                275,
+                276,
+                277,
+                278,
+                279,
+                280,
+                281,
+                282,
+                283,
+                284,
+                285,
+                286,
+                287,
+                288,
+                289,
+                290,
+                291,
+                292,
+                293,
+                294,
+                295,
+                296,
+                297,
+                298,
+                299,
+                300,
+                301,
+                302,
+                303,
+                304,
+                305,
+                306,
+                307,
+                308,
+                309,
+                310,
+                311,
+                312,
+                313,
+                314,
+                315,
+                316,
+                317,
+                318,
+                319,
+                320,
+                321,
+                322,
+                323,
+                324,
+                325,
+                326,
+                327,
+                328
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "check": "external-function",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "TokensGate.setAllowTransferExternal (/../data/reentrancy/solidity_contract/14620.sol#292-296) should be declared external\n",
+      "elements": [
+        {
+          "type": "function",
+          "name": "setAllowTransferExternal",
+          "source_mapping": {
+            "start": 7044,
+            "length": 131,
+            "filename": "/../data/reentrancy/solidity_contract/14620.sol",
+            "lines": [
+              292,
+              293,
+              294,
+              295,
+              296
+            ]
+          },
+          "contract": {
+            "type": "contract",
+            "name": "TokensGate",
+            "source_mapping": {
+              "start": 4484,
+              "length": 3645,
+              "filename": "/../data/reentrancy/solidity_contract/14620.sol",
+              "lines": [
+                203,
+                204,
+                205,
+                206,
+                207,
+                208,
+                209,
+                210,
+                211,
+                212,
+                213,
+                214,
+                215,
+                216,
+                217,
+                218,
+                219,
+                220,
+                221,
+                222,
+                223,
+                224,
+                225,
+                226,
+                227,
+                228,
+                229,
+                230,
+                231,
+                232,
+                233,
+                234,
+                235,
+                236,
+                237,
+                238,
+                239,
+                240,
+                241,
+                242,
+                243,
+                244,
+                245,
+                246,
+                247,
+                248,
+                249,
+                250,
+                251,
+                252,
+                253,
+                254,
+                255,
+                256,
+                257,
+                258,
+                259,
+                260,
+                261,
+                262,
+                263,
+                264,
+                265,
+                266,
+                267,
+                268,
+                269,
+                270,
+                271,
+                272,
+                273,
+                274,
+                275,
+                276,
+                277,
+                278,
+                279,
+                280,
+                281,
+                282,
+                283,
+                284,
+                285,
+                286,
+                287,
+                288,
+                289,
+                290,
+                291,
+                292,
+                293,
+                294,
+                295,
+                296,
+                297,
+                298,
+                299,
+                300,
+                301,
+                302,
+                303,
+                304,
+                305,
+                306,
+                307,
+                308,
+                309,
+                310,
+                311,
+                312,
+                313,
+                314,
+                315,
+                316,
+                317,
+                318,
+                319,
+                320,
+                321,
+                322,
+                323,
+                324,
+                325,
+                326,
+                327,
+                328
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "check": "external-function",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "TokensGate.setWhitelist (/../data/reentrancy/solidity_contract/14620.sol#298-302) should be declared external\n",
+      "elements": [
+        {
+          "type": "function",
+          "name": "setWhitelist",
+          "source_mapping": {
+            "start": 7183,
+            "length": 134,
+            "filename": "/../data/reentrancy/solidity_contract/14620.sol",
+            "lines": [
+              298,
+              299,
+              300,
+              301,
+              302
+            ]
+          },
+          "contract": {
+            "type": "contract",
+            "name": "TokensGate",
+            "source_mapping": {
+              "start": 4484,
+              "length": 3645,
+              "filename": "/../data/reentrancy/solidity_contract/14620.sol",
+              "lines": [
+                203,
+                204,
+                205,
+                206,
+                207,
+                208,
+                209,
+                210,
+                211,
+                212,
+                213,
+                214,
+                215,
+                216,
+                217,
+                218,
+                219,
+                220,
+                221,
+                222,
+                223,
+                224,
+                225,
+                226,
+                227,
+                228,
+                229,
+                230,
+                231,
+                232,
+                233,
+                234,
+                235,
+                236,
+                237,
+                238,
+                239,
+                240,
+                241,
+                242,
+                243,
+                244,
+                245,
+                246,
+                247,
+                248,
+                249,
+                250,
+                251,
+                252,
+                253,
+                254,
+                255,
+                256,
+                257,
+                258,
+                259,
+                260,
+                261,
+                262,
+                263,
+                264,
+                265,
+                266,
+                267,
+                268,
+                269,
+                270,
+                271,
+                272,
+                273,
+                274,
+                275,
+                276,
+                277,
+                278,
+                279,
+                280,
+                281,
+                282,
+                283,
+                284,
+                285,
+                286,
+                287,
+                288,
+                289,
+                290,
+                291,
+                292,
+                293,
+                294,
+                295,
+                296,
+                297,
+                298,
+                299,
+                300,
+                301,
+                302,
+                303,
+                304,
+                305,
+                306,
+                307,
+                308,
+                309,
+                310,
+                311,
+                312,
+                313,
+                314,
+                315,
+                316,
+                317,
+                318,
+                319,
+                320,
+                321,
+                322,
+                323,
+                324,
+                325,
+                326,
+                327,
+                328
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "check": "external-function",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "TokensGate.setLockupList (/../data/reentrancy/solidity_contract/14620.sol#304-308) should be declared external\n",
+      "elements": [
+        {
+          "type": "function",
+          "name": "setLockupList",
+          "source_mapping": {
+            "start": 7323,
+            "length": 136,
+            "filename": "/../data/reentrancy/solidity_contract/14620.sol",
+            "lines": [
+              304,
+              305,
+              306,
+              307,
+              308
+            ]
+          },
+          "contract": {
+            "type": "contract",
+            "name": "TokensGate",
+            "source_mapping": {
+              "start": 4484,
+              "length": 3645,
+              "filename": "/../data/reentrancy/solidity_contract/14620.sol",
+              "lines": [
+                203,
+                204,
+                205,
+                206,
+                207,
+                208,
+                209,
+                210,
+                211,
+                212,
+                213,
+                214,
+                215,
+                216,
+                217,
+                218,
+                219,
+                220,
+                221,
+                222,
+                223,
+                224,
+                225,
+                226,
+                227,
+                228,
+                229,
+                230,
+                231,
+                232,
+                233,
+                234,
+                235,
+                236,
+                237,
+                238,
+                239,
+                240,
+                241,
+                242,
+                243,
+                244,
+                245,
+                246,
+                247,
+                248,
+                249,
+                250,
+                251,
+                252,
+                253,
+                254,
+                255,
+                256,
+                257,
+                258,
+                259,
+                260,
+                261,
+                262,
+                263,
+                264,
+                265,
+                266,
+                267,
+                268,
+                269,
+                270,
+                271,
+                272,
+                273,
+                274,
+                275,
+                276,
+                277,
+                278,
+                279,
+                280,
+                281,
+                282,
+                283,
+                284,
+                285,
+                286,
+                287,
+                288,
+                289,
+                290,
+                291,
+                292,
+                293,
+                294,
+                295,
+                296,
+                297,
+                298,
+                299,
+                300,
+                301,
+                302,
+                303,
+                304,
+                305,
+                306,
+                307,
+                308,
+                309,
+                310,
+                311,
+                312,
+                313,
+                314,
+                315,
+                316,
+                317,
+                318,
+                319,
+                320,
+                321,
+                322,
+                323,
+                324,
+                325,
+                326,
+                327,
+                328
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "check": "external-function",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "TokensGate.setWildcardList (/../data/reentrancy/solidity_contract/14620.sol#310-314) should be declared external\n",
+      "elements": [
+        {
+          "type": "function",
+          "name": "setWildcardList",
+          "source_mapping": {
+            "start": 7465,
+            "length": 143,
+            "filename": "/../data/reentrancy/solidity_contract/14620.sol",
+            "lines": [
+              310,
+              311,
+              312,
+              313,
+              314
+            ]
+          },
+          "contract": {
+            "type": "contract",
+            "name": "TokensGate",
+            "source_mapping": {
+              "start": 4484,
+              "length": 3645,
+              "filename": "/../data/reentrancy/solidity_contract/14620.sol",
+              "lines": [
+                203,
+                204,
+                205,
+                206,
+                207,
+                208,
+                209,
+                210,
+                211,
+                212,
+                213,
+                214,
+                215,
+                216,
+                217,
+                218,
+                219,
+                220,
+                221,
+                222,
+                223,
+                224,
+                225,
+                226,
+                227,
+                228,
+                229,
+                230,
+                231,
+                232,
+                233,
+                234,
+                235,
+                236,
+                237,
+                238,
+                239,
+                240,
+                241,
+                242,
+                243,
+                244,
+                245,
+                246,
+                247,
+                248,
+                249,
+                250,
+                251,
+                252,
+                253,
+                254,
+                255,
+                256,
+                257,
+                258,
+                259,
+                260,
+                261,
+                262,
+                263,
+                264,
+                265,
+                266,
+                267,
+                268,
+                269,
+                270,
+                271,
+                272,
+                273,
+                274,
+                275,
+                276,
+                277,
+                278,
+                279,
+                280,
+                281,
+                282,
+                283,
+                284,
+                285,
+                286,
+                287,
+                288,
+                289,
+                290,
+                291,
+                292,
+                293,
+                294,
+                295,
+                296,
+                297,
+                298,
+                299,
+                300,
+                301,
+                302,
+                303,
+                304,
+                305,
+                306,
+                307,
+                308,
+                309,
+                310,
+                311,
+                312,
+                313,
+                314,
+                315,
+                316,
+                317,
+                318,
+                319,
+                320,
+                321,
+                322,
+                323,
+                324,
+                325,
+                326,
+                327,
+                328
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "check": "external-function",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "TokensGate.transferTokens (/../data/reentrancy/solidity_contract/14620.sol#316-319) should be declared external\n",
+      "elements": [
+        {
+          "type": "function",
+          "name": "transferTokens",
+          "source_mapping": {
+            "start": 7614,
+            "length": 213,
+            "filename": "/../data/reentrancy/solidity_contract/14620.sol",
+            "lines": [
+              316,
+              317,
+              318,
+              319
+            ]
+          },
+          "contract": {
+            "type": "contract",
+            "name": "TokensGate",
+            "source_mapping": {
+              "start": 4484,
+              "length": 3645,
+              "filename": "/../data/reentrancy/solidity_contract/14620.sol",
+              "lines": [
+                203,
+                204,
+                205,
+                206,
+                207,
+                208,
+                209,
+                210,
+                211,
+                212,
+                213,
+                214,
+                215,
+                216,
+                217,
+                218,
+                219,
+                220,
+                221,
+                222,
+                223,
+                224,
+                225,
+                226,
+                227,
+                228,
+                229,
+                230,
+                231,
+                232,
+                233,
+                234,
+                235,
+                236,
+                237,
+                238,
+                239,
+                240,
+                241,
+                242,
+                243,
+                244,
+                245,
+                246,
+                247,
+                248,
+                249,
+                250,
+                251,
+                252,
+                253,
+                254,
+                255,
+                256,
+                257,
+                258,
+                259,
+                260,
+                261,
+                262,
+                263,
+                264,
+                265,
+                266,
+                267,
+                268,
+                269,
+                270,
+                271,
+                272,
+                273,
+                274,
+                275,
+                276,
+                277,
+                278,
+                279,
+                280,
+                281,
+                282,
+                283,
+                284,
+                285,
+                286,
+                287,
+                288,
+                289,
+                290,
+                291,
+                292,
+                293,
+                294,
+                295,
+                296,
+                297,
+                298,
+                299,
+                300,
+                301,
+                302,
+                303,
+                304,
+                305,
+                306,
+                307,
+                308,
+                309,
+                310,
+                311,
+                312,
+                313,
+                314,
+                315,
+                316,
+                317,
+                318,
+                319,
+                320,
+                321,
+                322,
+                323,
+                324,
+                325,
+                326,
+                327,
+                328
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "check": "external-function",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "TokensGate.transferEth (/../data/reentrancy/solidity_contract/14620.sol#321-327) should be declared external\n",
+      "elements": [
+        {
+          "type": "function",
+          "name": "transferEth",
+          "source_mapping": {
+            "start": 7833,
+            "length": 294,
+            "filename": "/../data/reentrancy/solidity_contract/14620.sol",
+            "lines": [
+              321,
+              322,
+              323,
+              324,
+              325,
+              326,
+              327
+            ]
+          },
+          "contract": {
+            "type": "contract",
+            "name": "TokensGate",
+            "source_mapping": {
+              "start": 4484,
+              "length": 3645,
+              "filename": "/../data/reentrancy/solidity_contract/14620.sol",
+              "lines": [
+                203,
+                204,
+                205,
+                206,
+                207,
+                208,
+                209,
+                210,
+                211,
+                212,
+                213,
+                214,
+                215,
+                216,
+                217,
+                218,
+                219,
+                220,
+                221,
+                222,
+                223,
+                224,
+                225,
+                226,
+                227,
+                228,
+                229,
+                230,
+                231,
+                232,
+                233,
+                234,
+                235,
+                236,
+                237,
+                238,
+                239,
+                240,
+                241,
+                242,
+                243,
+                244,
+                245,
+                246,
+                247,
+                248,
+                249,
+                250,
+                251,
+                252,
+                253,
+                254,
+                255,
+                256,
+                257,
+                258,
+                259,
+                260,
+                261,
+                262,
+                263,
+                264,
+                265,
+                266,
+                267,
+                268,
+                269,
+                270,
+                271,
+                272,
+                273,
+                274,
+                275,
+                276,
+                277,
+                278,
+                279,
+                280,
+                281,
+                282,
+                283,
+                284,
+                285,
+                286,
+                287,
+                288,
+                289,
+                290,
+                291,
+                292,
+                293,
+                294,
+                295,
+                296,
+                297,
+                298,
+                299,
+                300,
+                301,
+                302,
+                303,
+                304,
+                305,
+                306,
+                307,
+                308,
+                309,
+                310,
+                311,
+                312,
+                313,
+                314,
+                315,
+                316,
+                317,
+                318,
+                319,
+                320,
+                321,
+                322,
+                323,
+                324,
+                325,
+                326,
+                327,
+                328
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "check": "solc-version",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Detected issues with version pragma in /../data/reentrancy/solidity_contract/14620.sol:\n\t- pragma solidity^0.4.19 (/../data/reentrancy/solidity_contract/14620.sol#1): it allows old versions\n",
+      "elements": [
+        {
+          "type": "expression",
+          "expression": "^0.4.19",
+          "source_mapping": {
+            "start": 0,
+            "length": 24,
+            "filename": "/../data/reentrancy/solidity_contract/14620.sol",
+            "lines": [
+              1
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "low-level-calls",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Low level call in TokensGate.transferEth (/../data/reentrancy/solidity_contract/14620.sol#321-327):\n\t-require(bool)(walletToTransfer.call.value(weiAmount)()) /../data/reentrancy/solidity_contract/14620.sol#326\n",
+      "elements": [
+        {
+          "type": "function",
+          "name": "transferEth",
+          "source_mapping": {
+            "start": 7833,
+            "length": 294,
+            "filename": "/../data/reentrancy/solidity_contract/14620.sol",
+            "lines": [
+              321,
+              322,
+              323,
+              324,
+              325,
+              326,
+              327
+            ]
+          },
+          "contract": {
+            "type": "contract",
+            "name": "TokensGate",
+            "source_mapping": {
+              "start": 4484,
+              "length": 3645,
+              "filename": "/../data/reentrancy/solidity_contract/14620.sol",
+              "lines": [
+                203,
+                204,
+                205,
+                206,
+                207,
+                208,
+                209,
+                210,
+                211,
+                212,
+                213,
+                214,
+                215,
+                216,
+                217,
+                218,
+                219,
+                220,
+                221,
+                222,
+                223,
+                224,
+                225,
+                226,
+                227,
+                228,
+                229,
+                230,
+                231,
+                232,
+                233,
+                234,
+                235,
+                236,
+                237,
+                238,
+                239,
+                240,
+                241,
+                242,
+                243,
+                244,
+                245,
+                246,
+                247,
+                248,
+                249,
+                250,
+                251,
+                252,
+                253,
+                254,
+                255,
+                256,
+                257,
+                258,
+                259,
+                260,
+                261,
+                262,
+                263,
+                264,
+                265,
+                266,
+                267,
+                268,
+                269,
+                270,
+                271,
+                272,
+                273,
+                274,
+                275,
+                276,
+                277,
+                278,
+                279,
+                280,
+                281,
+                282,
+                283,
+                284,
+                285,
+                286,
+                287,
+                288,
+                289,
+                290,
+                291,
+                292,
+                293,
+                294,
+                295,
+                296,
+                297,
+                298,
+                299,
+                300,
+                301,
+                302,
+                303,
+                304,
+                305,
+                306,
+                307,
+                308,
+                309,
+                310,
+                311,
+                312,
+                313,
+                314,
+                315,
+                316,
+                317,
+                318,
+                319,
+                320,
+                321,
+                322,
+                323,
+                324,
+                325,
+                326,
+                327,
+                328
+              ]
+            }
+          }
+        },
+        {
+          "type": "expression",
+          "expression": "require(bool)(walletToTransfer.call.value(weiAmount)())",
+          "source_mapping": {
+            "start": 8073,
+            "length": 49,
+            "filename": "/../data/reentrancy/solidity_contract/14620.sol",
+            "lines": [
+              326
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "naming-convention",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Function 'Ownable.Ownable' (/../data/reentrancy/solidity_contract/14620.sol#48-50) is not in mixedCase\n",
+      "elements": [
+        {
+          "target": "function",
+          "convention": "mixedCase",
+          "name": "Ownable",
+          "source_mapping": {
+            "start": 749,
+            "length": 55,
+            "filename": "/../data/reentrancy/solidity_contract/14620.sol",
+            "lines": [
+              48,
+              49,
+              50
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "naming-convention",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Parameter '_owner' of BasicToken.balanceOf (/../data/reentrancy/solidity_contract/14620.sol#100) is not in mixedCase\n",
+      "elements": [
+        {
+          "target": "parameter",
+          "convention": "mixedCase",
+          "name": "_owner",
+          "source_mapping": {
+            "start": 1801,
+            "length": 14,
+            "filename": "/../data/reentrancy/solidity_contract/14620.sol",
+            "lines": [
+              100
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "naming-convention",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Parameter '_to' of BasicToken.transfer (/../data/reentrancy/solidity_contract/14620.sol#88) is not in mixedCase\n",
+      "elements": [
+        {
+          "target": "parameter",
+          "convention": "mixedCase",
+          "name": "_to",
+          "source_mapping": {
+            "start": 1470,
+            "length": 11,
+            "filename": "/../data/reentrancy/solidity_contract/14620.sol",
+            "lines": [
+              88
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "naming-convention",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Parameter '_value' of BasicToken.transfer (/../data/reentrancy/solidity_contract/14620.sol#88) is not in mixedCase\n",
+      "elements": [
+        {
+          "target": "parameter",
+          "convention": "mixedCase",
+          "name": "_value",
+          "source_mapping": {
+            "start": 1483,
+            "length": 14,
+            "filename": "/../data/reentrancy/solidity_contract/14620.sol",
+            "lines": [
+              88
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "naming-convention",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Parameter '_owner' of StandardToken.allowance (/../data/reentrancy/solidity_contract/14620.sol#145) is not in mixedCase\n",
+      "elements": [
+        {
+          "target": "parameter",
+          "convention": "mixedCase",
+          "name": "_owner",
+          "source_mapping": {
+            "start": 3047,
+            "length": 14,
+            "filename": "/../data/reentrancy/solidity_contract/14620.sol",
+            "lines": [
+              145
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "naming-convention",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Parameter '_spender' of StandardToken.allowance (/../data/reentrancy/solidity_contract/14620.sol#145) is not in mixedCase\n",
+      "elements": [
+        {
+          "target": "parameter",
+          "convention": "mixedCase",
+          "name": "_spender",
+          "source_mapping": {
+            "start": 3063,
+            "length": 16,
+            "filename": "/../data/reentrancy/solidity_contract/14620.sol",
+            "lines": [
+              145
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "naming-convention",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Parameter '_from' of StandardToken.transferFrom (/../data/reentrancy/solidity_contract/14620.sol#125) is not in mixedCase\n",
+      "elements": [
+        {
+          "target": "parameter",
+          "convention": "mixedCase",
+          "name": "_from",
+          "source_mapping": {
+            "start": 2412,
+            "length": 13,
+            "filename": "/../data/reentrancy/solidity_contract/14620.sol",
+            "lines": [
+              125
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "naming-convention",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Parameter '_to' of StandardToken.transferFrom (/../data/reentrancy/solidity_contract/14620.sol#125) is not in mixedCase\n",
+      "elements": [
+        {
+          "target": "parameter",
+          "convention": "mixedCase",
+          "name": "_to",
+          "source_mapping": {
+            "start": 2427,
+            "length": 11,
+            "filename": "/../data/reentrancy/solidity_contract/14620.sol",
+            "lines": [
+              125
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "naming-convention",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Parameter '_value' of StandardToken.transferFrom (/../data/reentrancy/solidity_contract/14620.sol#125) is not in mixedCase\n",
+      "elements": [
+        {
+          "target": "parameter",
+          "convention": "mixedCase",
+          "name": "_value",
+          "source_mapping": {
+            "start": 2440,
+            "length": 14,
+            "filename": "/../data/reentrancy/solidity_contract/14620.sol",
+            "lines": [
+              125
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "naming-convention",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Parameter '_spender' of StandardToken.approve (/../data/reentrancy/solidity_contract/14620.sol#138) is not in mixedCase\n",
+      "elements": [
+        {
+          "target": "parameter",
+          "convention": "mixedCase",
+          "name": "_spender",
+          "source_mapping": {
+            "start": 2854,
+            "length": 16,
+            "filename": "/../data/reentrancy/solidity_contract/14620.sol",
+            "lines": [
+              138
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "naming-convention",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Parameter '_value' of StandardToken.approve (/../data/reentrancy/solidity_contract/14620.sol#138) is not in mixedCase\n",
+      "elements": [
+        {
+          "target": "parameter",
+          "convention": "mixedCase",
+          "name": "_value",
+          "source_mapping": {
+            "start": 2872,
+            "length": 14,
+            "filename": "/../data/reentrancy/solidity_contract/14620.sol",
+            "lines": [
+              138
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "naming-convention",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Parameter '_spender' of StandardToken.increaseApproval (/../data/reentrancy/solidity_contract/14620.sol#150) is not in mixedCase\n",
+      "elements": [
+        {
+          "target": "parameter",
+          "convention": "mixedCase",
+          "name": "_spender",
+          "source_mapping": {
+            "start": 3188,
+            "length": 16,
+            "filename": "/../data/reentrancy/solidity_contract/14620.sol",
+            "lines": [
+              150
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "naming-convention",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Parameter '_addedValue' of StandardToken.increaseApproval (/../data/reentrancy/solidity_contract/14620.sol#150) is not in mixedCase\n",
+      "elements": [
+        {
+          "target": "parameter",
+          "convention": "mixedCase",
+          "name": "_addedValue",
+          "source_mapping": {
+            "start": 3206,
+            "length": 16,
+            "filename": "/../data/reentrancy/solidity_contract/14620.sol",
+            "lines": [
+              150
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "naming-convention",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Parameter '_spender' of StandardToken.decreaseApproval (/../data/reentrancy/solidity_contract/14620.sol#157) is not in mixedCase\n",
+      "elements": [
+        {
+          "target": "parameter",
+          "convention": "mixedCase",
+          "name": "_spender",
+          "source_mapping": {
+            "start": 3453,
+            "length": 16,
+            "filename": "/../data/reentrancy/solidity_contract/14620.sol",
+            "lines": [
+              157
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "naming-convention",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Parameter '_subtractedValue' of StandardToken.decreaseApproval (/../data/reentrancy/solidity_contract/14620.sol#157) is not in mixedCase\n",
+      "elements": [
+        {
+          "target": "parameter",
+          "convention": "mixedCase",
+          "name": "_subtractedValue",
+          "source_mapping": {
+            "start": 3471,
+            "length": 21,
+            "filename": "/../data/reentrancy/solidity_contract/14620.sol",
+            "lines": [
+              157
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "naming-convention",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Parameter '_to' of MintableToken.mint (/../data/reentrancy/solidity_contract/14620.sol#187) is not in mixedCase\n",
+      "elements": [
+        {
+          "target": "parameter",
+          "convention": "mixedCase",
+          "name": "_to",
+          "source_mapping": {
+            "start": 4089,
+            "length": 11,
+            "filename": "/../data/reentrancy/solidity_contract/14620.sol",
+            "lines": [
+              187
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "naming-convention",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Parameter '_amount' of MintableToken.mint (/../data/reentrancy/solidity_contract/14620.sol#187) is not in mixedCase\n",
+      "elements": [
+        {
+          "target": "parameter",
+          "convention": "mixedCase",
+          "name": "_amount",
+          "source_mapping": {
+            "start": 4102,
+            "length": 15,
+            "filename": "/../data/reentrancy/solidity_contract/14620.sol",
+            "lines": [
+              187
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "naming-convention",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Parameter '_to' of TokensGate.transfer (/../data/reentrancy/solidity_contract/14620.sol#249) is not in mixedCase\n",
+      "elements": [
+        {
+          "target": "parameter",
+          "convention": "mixedCase",
+          "name": "_to",
+          "source_mapping": {
+            "start": 5820,
+            "length": 11,
+            "filename": "/../data/reentrancy/solidity_contract/14620.sol",
+            "lines": [
+              249
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "naming-convention",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Parameter '_value' of TokensGate.transfer (/../data/reentrancy/solidity_contract/14620.sol#249) is not in mixedCase\n",
+      "elements": [
+        {
+          "target": "parameter",
+          "convention": "mixedCase",
+          "name": "_value",
+          "source_mapping": {
+            "start": 5833,
+            "length": 14,
+            "filename": "/../data/reentrancy/solidity_contract/14620.sol",
+            "lines": [
+              249
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "naming-convention",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Parameter '_from' of TokensGate.transferFrom (/../data/reentrancy/solidity_contract/14620.sol#255) is not in mixedCase\n",
+      "elements": [
+        {
+          "target": "parameter",
+          "convention": "mixedCase",
+          "name": "_from",
+          "source_mapping": {
+            "start": 5996,
+            "length": 13,
+            "filename": "/../data/reentrancy/solidity_contract/14620.sol",
+            "lines": [
+              255
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "naming-convention",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Parameter '_to' of TokensGate.transferFrom (/../data/reentrancy/solidity_contract/14620.sol#255) is not in mixedCase\n",
+      "elements": [
+        {
+          "target": "parameter",
+          "convention": "mixedCase",
+          "name": "_to",
+          "source_mapping": {
+            "start": 6011,
+            "length": 11,
+            "filename": "/../data/reentrancy/solidity_contract/14620.sol",
+            "lines": [
+              255
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "naming-convention",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Parameter '_value' of TokensGate.transferFrom (/../data/reentrancy/solidity_contract/14620.sol#255) is not in mixedCase\n",
+      "elements": [
+        {
+          "target": "parameter",
+          "convention": "mixedCase",
+          "name": "_value",
+          "source_mapping": {
+            "start": 6024,
+            "length": 14,
+            "filename": "/../data/reentrancy/solidity_contract/14620.sol",
+            "lines": [
+              255
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "naming-convention",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Parameter '_to' of TokensGate.mint (/../data/reentrancy/solidity_contract/14620.sol#261) is not in mixedCase\n",
+      "elements": [
+        {
+          "target": "parameter",
+          "convention": "mixedCase",
+          "name": "_to",
+          "source_mapping": {
+            "start": 6187,
+            "length": 11,
+            "filename": "/../data/reentrancy/solidity_contract/14620.sol",
+            "lines": [
+              261
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "naming-convention",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Parameter '_amount' of TokensGate.mint (/../data/reentrancy/solidity_contract/14620.sol#261) is not in mixedCase\n",
+      "elements": [
+        {
+          "target": "parameter",
+          "convention": "mixedCase",
+          "name": "_amount",
+          "source_mapping": {
+            "start": 6200,
+            "length": 15,
+            "filename": "/../data/reentrancy/solidity_contract/14620.sol",
+            "lines": [
+              261
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "naming-convention",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Parameter '_from' of TokensGate.allowTransfer (/../data/reentrancy/solidity_contract/14620.sol#219) is not in mixedCase\n",
+      "elements": [
+        {
+          "target": "parameter",
+          "convention": "mixedCase",
+          "name": "_from",
+          "source_mapping": {
+            "start": 5058,
+            "length": 13,
+            "filename": "/../data/reentrancy/solidity_contract/14620.sol",
+            "lines": [
+              219
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "naming-convention",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Parameter '_to' of TokensGate.allowTransfer (/../data/reentrancy/solidity_contract/14620.sol#219) is not in mixedCase\n",
+      "elements": [
+        {
+          "target": "parameter",
+          "convention": "mixedCase",
+          "name": "_to",
+          "source_mapping": {
+            "start": 5073,
+            "length": 11,
+            "filename": "/../data/reentrancy/solidity_contract/14620.sol",
+            "lines": [
+              219
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "naming-convention",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Parameter '_burner' of TokensGate.burn (/../data/reentrancy/solidity_contract/14620.sol#267) is not in mixedCase\n",
+      "elements": [
+        {
+          "target": "parameter",
+          "convention": "mixedCase",
+          "name": "_burner",
+          "source_mapping": {
+            "start": 6392,
+            "length": 15,
+            "filename": "/../data/reentrancy/solidity_contract/14620.sol",
+            "lines": [
+              267
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "naming-convention",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Parameter '_value' of TokensGate.burn (/../data/reentrancy/solidity_contract/14620.sol#267) is not in mixedCase\n",
+      "elements": [
+        {
+          "target": "parameter",
+          "convention": "mixedCase",
+          "name": "_value",
+          "source_mapping": {
+            "start": 6409,
+            "length": 14,
+            "filename": "/../data/reentrancy/solidity_contract/14620.sol",
+            "lines": [
+              267
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "naming-convention",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Parameter '_manager' of TokensGate.setManager (/../data/reentrancy/solidity_contract/14620.sol#276) is not in mixedCase\n",
+      "elements": [
+        {
+          "target": "parameter",
+          "convention": "mixedCase",
+          "name": "_manager",
+          "source_mapping": {
+            "start": 6684,
+            "length": 16,
+            "filename": "/../data/reentrancy/solidity_contract/14620.sol",
+            "lines": [
+              276
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "naming-convention",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Parameter '_status' of TokensGate.setManager (/../data/reentrancy/solidity_contract/14620.sol#276) is not in mixedCase\n",
+      "elements": [
+        {
+          "target": "parameter",
+          "convention": "mixedCase",
+          "name": "_status",
+          "source_mapping": {
+            "start": 6702,
+            "length": 12,
+            "filename": "/../data/reentrancy/solidity_contract/14620.sol",
+            "lines": [
+              276
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "naming-convention",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Parameter '_status' of TokensGate.setAllowTransferGlobal (/../data/reentrancy/solidity_contract/14620.sol#280) is not in mixedCase\n",
+      "elements": [
+        {
+          "target": "parameter",
+          "convention": "mixedCase",
+          "name": "_status",
+          "source_mapping": {
+            "start": 6810,
+            "length": 12,
+            "filename": "/../data/reentrancy/solidity_contract/14620.sol",
+            "lines": [
+              280
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "naming-convention",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Parameter '_status' of TokensGate.setAllowTransferLocal (/../data/reentrancy/solidity_contract/14620.sol#286) is not in mixedCase\n",
+      "elements": [
+        {
+          "target": "parameter",
+          "convention": "mixedCase",
+          "name": "_status",
+          "source_mapping": {
+            "start": 6944,
+            "length": 12,
+            "filename": "/../data/reentrancy/solidity_contract/14620.sol",
+            "lines": [
+              286
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "naming-convention",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Parameter '_status' of TokensGate.setAllowTransferExternal (/../data/reentrancy/solidity_contract/14620.sol#292) is not in mixedCase\n",
+      "elements": [
+        {
+          "target": "parameter",
+          "convention": "mixedCase",
+          "name": "_status",
+          "source_mapping": {
+            "start": 7078,
+            "length": 12,
+            "filename": "/../data/reentrancy/solidity_contract/14620.sol",
+            "lines": [
+              292
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "naming-convention",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Parameter '_address' of TokensGate.setWhitelist (/../data/reentrancy/solidity_contract/14620.sol#298) is not in mixedCase\n",
+      "elements": [
+        {
+          "target": "parameter",
+          "convention": "mixedCase",
+          "name": "_address",
+          "source_mapping": {
+            "start": 7205,
+            "length": 16,
+            "filename": "/../data/reentrancy/solidity_contract/14620.sol",
+            "lines": [
+              298
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "naming-convention",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Parameter '_date' of TokensGate.setWhitelist (/../data/reentrancy/solidity_contract/14620.sol#298) is not in mixedCase\n",
+      "elements": [
+        {
+          "target": "parameter",
+          "convention": "mixedCase",
+          "name": "_date",
+          "source_mapping": {
+            "start": 7223,
+            "length": 13,
+            "filename": "/../data/reentrancy/solidity_contract/14620.sol",
+            "lines": [
+              298
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "naming-convention",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Parameter '_address' of TokensGate.setLockupList (/../data/reentrancy/solidity_contract/14620.sol#304) is not in mixedCase\n",
+      "elements": [
+        {
+          "target": "parameter",
+          "convention": "mixedCase",
+          "name": "_address",
+          "source_mapping": {
+            "start": 7346,
+            "length": 16,
+            "filename": "/../data/reentrancy/solidity_contract/14620.sol",
+            "lines": [
+              304
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "naming-convention",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Parameter '_date' of TokensGate.setLockupList (/../data/reentrancy/solidity_contract/14620.sol#304) is not in mixedCase\n",
+      "elements": [
+        {
+          "target": "parameter",
+          "convention": "mixedCase",
+          "name": "_date",
+          "source_mapping": {
+            "start": 7364,
+            "length": 13,
+            "filename": "/../data/reentrancy/solidity_contract/14620.sol",
+            "lines": [
+              304
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "naming-convention",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Parameter '_address' of TokensGate.setWildcardList (/../data/reentrancy/solidity_contract/14620.sol#310) is not in mixedCase\n",
+      "elements": [
+        {
+          "target": "parameter",
+          "convention": "mixedCase",
+          "name": "_address",
+          "source_mapping": {
+            "start": 7490,
+            "length": 16,
+            "filename": "/../data/reentrancy/solidity_contract/14620.sol",
+            "lines": [
+              310
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "naming-convention",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Parameter '_status' of TokensGate.setWildcardList (/../data/reentrancy/solidity_contract/14620.sol#310) is not in mixedCase\n",
+      "elements": [
+        {
+          "target": "parameter",
+          "convention": "mixedCase",
+          "name": "_status",
+          "source_mapping": {
+            "start": 7508,
+            "length": 12,
+            "filename": "/../data/reentrancy/solidity_contract/14620.sol",
+            "lines": [
+              310
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "naming-convention",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Variable 'TokensGate.AllowTransferGlobal' (/../data/reentrancy/solidity_contract/14620.sol#210) is not in mixedCase\n",
+      "elements": [
+        {
+          "target": "variable",
+          "convention": "mixedCase",
+          "name": "AllowTransferGlobal",
+          "source_mapping": {
+            "start": 4708,
+            "length": 39,
+            "filename": "/../data/reentrancy/solidity_contract/14620.sol",
+            "lines": [
+              210
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "naming-convention",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Variable 'TokensGate.AllowTransferLocal' (/../data/reentrancy/solidity_contract/14620.sol#211) is not in mixedCase\n",
+      "elements": [
+        {
+          "target": "variable",
+          "convention": "mixedCase",
+          "name": "AllowTransferLocal",
+          "source_mapping": {
+            "start": 4751,
+            "length": 38,
+            "filename": "/../data/reentrancy/solidity_contract/14620.sol",
+            "lines": [
+              211
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "naming-convention",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Variable 'TokensGate.AllowTransferExternal' (/../data/reentrancy/solidity_contract/14620.sol#212) is not in mixedCase\n",
+      "elements": [
+        {
+          "target": "variable",
+          "convention": "mixedCase",
+          "name": "AllowTransferExternal",
+          "source_mapping": {
+            "start": 4793,
+            "length": 41,
+            "filename": "/../data/reentrancy/solidity_contract/14620.sol",
+            "lines": [
+              212
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "naming-convention",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Variable 'TokensGate.Whitelist' (/../data/reentrancy/solidity_contract/14620.sol#214) is not in mixedCase\n",
+      "elements": [
+        {
+          "target": "variable",
+          "convention": "mixedCase",
+          "name": "Whitelist",
+          "source_mapping": {
+            "start": 4841,
+            "length": 44,
+            "filename": "/../data/reentrancy/solidity_contract/14620.sol",
+            "lines": [
+              214
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "naming-convention",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Variable 'TokensGate.LockupList' (/../data/reentrancy/solidity_contract/14620.sol#215) is not in mixedCase\n",
+      "elements": [
+        {
+          "target": "variable",
+          "convention": "mixedCase",
+          "name": "LockupList",
+          "source_mapping": {
+            "start": 4889,
+            "length": 45,
+            "filename": "/../data/reentrancy/solidity_contract/14620.sol",
+            "lines": [
+              215
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "naming-convention",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Variable 'TokensGate.WildcardList' (/../data/reentrancy/solidity_contract/14620.sol#216) is not in mixedCase\n",
+      "elements": [
+        {
+          "target": "variable",
+          "convention": "mixedCase",
+          "name": "WildcardList",
+          "source_mapping": {
+            "start": 4938,
+            "length": 44,
+            "filename": "/../data/reentrancy/solidity_contract/14620.sol",
+            "lines": [
+              216
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "naming-convention",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Variable 'TokensGate.Managers' (/../data/reentrancy/solidity_contract/14620.sol#217) is not in mixedCase\n",
+      "elements": [
+        {
+          "target": "variable",
+          "convention": "mixedCase",
+          "name": "Managers",
+          "source_mapping": {
+            "start": 4986,
+            "length": 40,
+            "filename": "/../data/reentrancy/solidity_contract/14620.sol",
+            "lines": [
+              217
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,254 @@
+INFO:Detectors:[91m
+Reentrancy in FoMo3DFast.core (/../data/reentrancy/solidity_contract/1123.sol#1160-1233):
+	External calls:
+	- _eventData_ = distributeExternal(_rID,_pID,_eth,_affID,_team,_eventData_) (/../data/reentrancy/solidity_contract/1123.sol#1227)
+	State variables written after the call(s):
+	- airDropPot_ (/../data/reentrancy/solidity_contract/1123.sol#1228)
+	- plyrRnds_ (/../data/reentrancy/solidity_contract/1123.sol#1228)
+	- round_ (/../data/reentrancy/solidity_contract/1123.sol#1228)
+Reentrancy in FoMo3DFast.coreQR (/../data/reentrancy/solidity_contract/1123.sol#1236-1312):
+	External calls:
+	- _eventData_ = distributeExternal(_rID,_pID,_eth,_affID,_team,_eventData_) (/../data/reentrancy/solidity_contract/1123.sol#1308)
+	State variables written after the call(s):
+	- airDropPot_ (/../data/reentrancy/solidity_contract/1123.sol#1309)
+	- plyrRnds_ (/../data/reentrancy/solidity_contract/1123.sol#1309)
+	- round_ (/../data/reentrancy/solidity_contract/1123.sol#1309)
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#reentrancy-vulnerabilities[0m
+INFO:Detectors:[93m
+NameFilter.nameFilter (/../data/reentrancy/solidity_contract/1123.sol#65-123) is declared view but contains assembly code
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#constant-functions-changing-the-state[0m
+INFO:Detectors:[93m
+Reentrancy in FoMo3DFast.buyXaddr (/../data/reentrancy/solidity_contract/1123.sol#451-490):
+	External calls:
+	- _eventData_ = determinePID(_eventData_) (/../data/reentrancy/solidity_contract/1123.sol#459)
+	State variables written after the call(s):
+	- plyr_ (/../data/reentrancy/solidity_contract/1123.sol#481)
+Reentrancy in FoMo3DFast.buyXid (/../data/reentrancy/solidity_contract/1123.sol#418-449):
+	External calls:
+	- _eventData_ = determinePID(_eventData_) (/../data/reentrancy/solidity_contract/1123.sol#426)
+	State variables written after the call(s):
+	- plyr_ (/../data/reentrancy/solidity_contract/1123.sol#441)
+Reentrancy in FoMo3DFast.buyXname (/../data/reentrancy/solidity_contract/1123.sol#492-531):
+	External calls:
+	- _eventData_ = determinePID(_eventData_) (/../data/reentrancy/solidity_contract/1123.sol#500)
+	State variables written after the call(s):
+	- plyr_ (/../data/reentrancy/solidity_contract/1123.sol#522)
+Reentrancy in FoMo3DFast.buyXnameQR (/../data/reentrancy/solidity_contract/1123.sol#533-553):
+	External calls:
+	- _eventData_ = determinePIDQR(_realSender,_eventData_) (/../data/reentrancy/solidity_contract/1123.sol#535)
+	State variables written after the call(s):
+	- plyr_ (/../data/reentrancy/solidity_contract/1123.sol#548)
+Reentrancy in FoMo3DFast.determinePID (/../data/reentrancy/solidity_contract/1123.sol#1394-1425):
+	External calls:
+	- _pID = PlayerBook.getPlayerID(msg.sender) (/../data/reentrancy/solidity_contract/1123.sol#1403)
+	- _name = PlayerBook.getPlayerName(_pID) (/../data/reentrancy/solidity_contract/1123.sol#1404)
+	- _laff = PlayerBook.getPlayerLAff(_pID) (/../data/reentrancy/solidity_contract/1123.sol#1405)
+	State variables written after the call(s):
+	- pIDxAddr_ (/../data/reentrancy/solidity_contract/1123.sol#1408)
+Reentrancy in FoMo3DFast.determinePIDQR (/../data/reentrancy/solidity_contract/1123.sol#1429-1460):
+	External calls:
+	- _pID = PlayerBook.getPlayerID(_realSender) (/../data/reentrancy/solidity_contract/1123.sol#1438)
+	- _name = PlayerBook.getPlayerName(_pID) (/../data/reentrancy/solidity_contract/1123.sol#1439)
+	- _laff = PlayerBook.getPlayerLAff(_pID) (/../data/reentrancy/solidity_contract/1123.sol#1440)
+	State variables written after the call(s):
+	- pIDxAddr_ (/../data/reentrancy/solidity_contract/1123.sol#1443)
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#reentrancy-vulnerabilities-1[0m
+INFO:Detectors:[93m
+_eventData_ in FoMo3DFast.reLoadXname (/../data/reentrancy/solidity_contract/1123.sol#635) is a local variable never initialiazed
+_prize in FoMo3DFast.coreQR (/../data/reentrancy/solidity_contract/1123.sol#1265) is a local variable never initialiazed
+_eventData_ in FoMo3DFast.withdrawQR (/../data/reentrancy/solidity_contract/1123.sol#760) is a local variable never initialiazed
+_p3d in FoMo3DFast.distributeExternal (/../data/reentrancy/solidity_contract/1123.sol#1625) is a local variable never initialiazed
+_eventData_ in FoMo3DFast.reLoadXid (/../data/reentrancy/solidity_contract/1123.sol#563) is a local variable never initialiazed
+_prize in FoMo3DFast.core (/../data/reentrancy/solidity_contract/1123.sol#1188) is a local variable never initialiazed
+_eventData_ in FoMo3DFast.reLoadXaddr (/../data/reentrancy/solidity_contract/1123.sol#595) is a local variable never initialiazed
+_eventData_ in FoMo3DFast.withdraw (/../data/reentrancy/solidity_contract/1123.sol#690) is a local variable never initialiazed
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#uninitialized-local-variables[0m
+INFO:Detectors:[92m
+Reentrancy in FoMo3DFast.determinePID (/../data/reentrancy/solidity_contract/1123.sol#1394-1425):
+	External calls:
+	- _pID = PlayerBook.getPlayerID(msg.sender) (/../data/reentrancy/solidity_contract/1123.sol#1403)
+	- _name = PlayerBook.getPlayerName(_pID) (/../data/reentrancy/solidity_contract/1123.sol#1404)
+	- _laff = PlayerBook.getPlayerLAff(_pID) (/../data/reentrancy/solidity_contract/1123.sol#1405)
+	State variables written after the call(s):
+	- pIDxName_ (/../data/reentrancy/solidity_contract/1123.sol#1413)
+	- plyrNames_ (/../data/reentrancy/solidity_contract/1123.sol#1415)
+	- plyr_ (/../data/reentrancy/solidity_contract/1123.sol#1409)
+	- plyr_ (/../data/reentrancy/solidity_contract/1123.sol#1414)
+	- plyr_ (/../data/reentrancy/solidity_contract/1123.sol#1419)
+Reentrancy in FoMo3DFast.determinePIDQR (/../data/reentrancy/solidity_contract/1123.sol#1429-1460):
+	External calls:
+	- _pID = PlayerBook.getPlayerID(_realSender) (/../data/reentrancy/solidity_contract/1123.sol#1438)
+	- _name = PlayerBook.getPlayerName(_pID) (/../data/reentrancy/solidity_contract/1123.sol#1439)
+	- _laff = PlayerBook.getPlayerLAff(_pID) (/../data/reentrancy/solidity_contract/1123.sol#1440)
+	State variables written after the call(s):
+	- pIDxName_ (/../data/reentrancy/solidity_contract/1123.sol#1448)
+	- plyrNames_ (/../data/reentrancy/solidity_contract/1123.sol#1450)
+	- plyr_ (/../data/reentrancy/solidity_contract/1123.sol#1444)
+	- plyr_ (/../data/reentrancy/solidity_contract/1123.sol#1449)
+	- plyr_ (/../data/reentrancy/solidity_contract/1123.sol#1454)
+Reentrancy in FoMo3DFast.distributeExternal (/../data/reentrancy/solidity_contract/1123.sol#1620-1645):
+	External calls:
+	- ! address(admin).call.value(_com)() (/../data/reentrancy/solidity_contract/1123.sol#1626-1629)
+	State variables written after the call(s):
+	- plyr_ (/../data/reentrancy/solidity_contract/1123.sol#1633)
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#reentrancy-vulnerabilities-2[0m
+INFO:Detectors:[92m
+FoMo3DFast.airdrop (/../data/reentrancy/solidity_contract/1123.sol#1598-1617) uses timestamp for comparisons
+	Dangerous comparisons:
+	- (seed - ((seed / 1000) * 1000)) < airDropTracker_ (/../data/reentrancy/solidity_contract/1123.sol#1613-1616)
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#block-timestamp[0m
+INFO:Detectors:[92m
+NameFilter.nameFilter uses assembly (/../data/reentrancy/solidity_contract/1123.sol#65-123)
+	- /../data/reentrancy/solidity_contract/1123.sol#119-122
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#assembly-usage[0m
+INFO:Detectors:[92m
+FoMo3DFast.rndExtra_ should be constant (/../data/reentrancy/solidity_contract/1123.sol#342)
+FoMo3DFast.rndGap_ should be constant (/../data/reentrancy/solidity_contract/1123.sol#343)
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#state-variables-that-could-be-declared-constant[0m
+INFO:Detectors:[92m
+FoMo3DFast.fallback (/../data/reentrancy/solidity_contract/1123.sol#406-415) should be declared external
+FoMo3DFast.buyXid (/../data/reentrancy/solidity_contract/1123.sol#418-449) should be declared external
+FoMo3DFast.buyXaddr (/../data/reentrancy/solidity_contract/1123.sol#451-490) should be declared external
+FoMo3DFast.buyXname (/../data/reentrancy/solidity_contract/1123.sol#492-531) should be declared external
+FoMo3DFast.buyXnameQR (/../data/reentrancy/solidity_contract/1123.sol#533-553) should be declared external
+FoMo3DFast.reLoadXid (/../data/reentrancy/solidity_contract/1123.sol#556-586) should be declared external
+FoMo3DFast.reLoadXaddr (/../data/reentrancy/solidity_contract/1123.sol#588-626) should be declared external
+FoMo3DFast.reLoadXname (/../data/reentrancy/solidity_contract/1123.sol#628-666) should be declared external
+FoMo3DFast.withdraw (/../data/reentrancy/solidity_contract/1123.sol#669-735) should be declared external
+FoMo3DFast.withdrawQR (/../data/reentrancy/solidity_contract/1123.sol#739-805) should be declared external
+FoMo3DFast.getBuyPrice (/../data/reentrancy/solidity_contract/1123.sol#864-880) should be declared external
+FoMo3DFast.getTimeLeft (/../data/reentrancy/solidity_contract/1123.sol#883-901) should be declared external
+FoMo3DFast.getPlayerVaults (/../data/reentrancy/solidity_contract/1123.sol#904-943) should be declared external
+FoMo3DFast.getCurrentRoundInfo (/../data/reentrancy/solidity_contract/1123.sol#955-980) should be declared external
+FoMo3DFast.getPlayerInfoByAddress (/../data/reentrancy/solidity_contract/1123.sol#983-1007) should be declared external
+FoMo3DFast.calcKeysReceived (/../data/reentrancy/solidity_contract/1123.sol#1328-1341) should be declared external
+FoMo3DFast.iWantXKeys (/../data/reentrancy/solidity_contract/1123.sol#1344-1360) should be declared external
+FoMo3DFast.activate (/../data/reentrancy/solidity_contract/1123.sol#1788-1803) should be declared external
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#public-function-that-could-be-declared-as-external[0m
+INFO:Detectors:[92m
+Low level call in FoMo3DFast.distributeExternal (/../data/reentrancy/solidity_contract/1123.sol#1620-1645):
+	-! address(admin).call.value(_com)() /../data/reentrancy/solidity_contract/1123.sol#1626-1629
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#low-level-calls[0m
+INFO:Detectors:[92m
+Parameter '_input' of NameFilter.nameFilter (/../data/reentrancy/solidity_contract/1123.sol#65) is not in mixedCase
+Parameter '_curEth' of F3DKeysCalcShort.keysRec (/../data/reentrancy/solidity_contract/1123.sol#182) is not in mixedCase
+Parameter '_newEth' of F3DKeysCalcShort.keysRec (/../data/reentrancy/solidity_contract/1123.sol#182) is not in mixedCase
+Parameter '_curKeys' of F3DKeysCalcShort.ethRec (/../data/reentrancy/solidity_contract/1123.sol#187) is not in mixedCase
+Parameter '_sellKeys' of F3DKeysCalcShort.ethRec (/../data/reentrancy/solidity_contract/1123.sol#187) is not in mixedCase
+Parameter '_eth' of F3DKeysCalcShort.keys (/../data/reentrancy/solidity_contract/1123.sol#192) is not in mixedCase
+Parameter '_keys' of F3DKeysCalcShort.eth (/../data/reentrancy/solidity_contract/1123.sol#197) is not in mixedCase
+Event 'F3Devents.onNewName' (/../data/reentrancy/solidity_contract/1123.sol#205-216) is not in CapWords
+Event 'F3Devents.onEndTx' (/../data/reentrancy/solidity_contract/1123.sol#219-235) is not in CapWords
+Event 'F3Devents.onWithdraw' (/../data/reentrancy/solidity_contract/1123.sol#238-245) is not in CapWords
+Event 'F3Devents.onWithdrawAndDistribute' (/../data/reentrancy/solidity_contract/1123.sol#248-261) is not in CapWords
+Event 'F3Devents.onBuyAndDistribute' (/../data/reentrancy/solidity_contract/1123.sol#265-278) is not in CapWords
+Event 'F3Devents.onReLoadAndDistribute' (/../data/reentrancy/solidity_contract/1123.sol#282-294) is not in CapWords
+Event 'F3Devents.onAffiliatePayout' (/../data/reentrancy/solidity_contract/1123.sol#297-306) is not in CapWords
+Event 'F3Devents.onPotSwapDeposit' (/../data/reentrancy/solidity_contract/1123.sol#309-313) is not in CapWords
+Contract 'modularFast' (/../data/reentrancy/solidity_contract/1123.sol#329) is not in CapWords
+Parameter '_affCode' of FoMo3DFast.buyXid (/../data/reentrancy/solidity_contract/1123.sol#418) is not in mixedCase
+Parameter '_team' of FoMo3DFast.buyXid (/../data/reentrancy/solidity_contract/1123.sol#418) is not in mixedCase
+Parameter '_affCode' of FoMo3DFast.buyXaddr (/../data/reentrancy/solidity_contract/1123.sol#451) is not in mixedCase
+Parameter '_team' of FoMo3DFast.buyXaddr (/../data/reentrancy/solidity_contract/1123.sol#451) is not in mixedCase
+Parameter '_affCode' of FoMo3DFast.buyXname (/../data/reentrancy/solidity_contract/1123.sol#492) is not in mixedCase
+Parameter '_team' of FoMo3DFast.buyXname (/../data/reentrancy/solidity_contract/1123.sol#492) is not in mixedCase
+Parameter '_realSender' of FoMo3DFast.buyXnameQR (/../data/reentrancy/solidity_contract/1123.sol#533) is not in mixedCase
+Parameter '_affCode' of FoMo3DFast.buyXnameQR (/../data/reentrancy/solidity_contract/1123.sol#533) is not in mixedCase
+Parameter '_team' of FoMo3DFast.buyXnameQR (/../data/reentrancy/solidity_contract/1123.sol#533) is not in mixedCase
+Parameter '_affCode' of FoMo3DFast.reLoadXid (/../data/reentrancy/solidity_contract/1123.sol#556) is not in mixedCase
+Parameter '_team' of FoMo3DFast.reLoadXid (/../data/reentrancy/solidity_contract/1123.sol#556) is not in mixedCase
+Parameter '_eth' of FoMo3DFast.reLoadXid (/../data/reentrancy/solidity_contract/1123.sol#556) is not in mixedCase
+Parameter '_affCode' of FoMo3DFast.reLoadXaddr (/../data/reentrancy/solidity_contract/1123.sol#588) is not in mixedCase
+Parameter '_team' of FoMo3DFast.reLoadXaddr (/../data/reentrancy/solidity_contract/1123.sol#588) is not in mixedCase
+Parameter '_eth' of FoMo3DFast.reLoadXaddr (/../data/reentrancy/solidity_contract/1123.sol#588) is not in mixedCase
+Parameter '_affCode' of FoMo3DFast.reLoadXname (/../data/reentrancy/solidity_contract/1123.sol#628) is not in mixedCase
+Parameter '_team' of FoMo3DFast.reLoadXname (/../data/reentrancy/solidity_contract/1123.sol#628) is not in mixedCase
+Parameter '_eth' of FoMo3DFast.reLoadXname (/../data/reentrancy/solidity_contract/1123.sol#628) is not in mixedCase
+Parameter '_realSender' of FoMo3DFast.withdrawQR (/../data/reentrancy/solidity_contract/1123.sol#739) is not in mixedCase
+Parameter '_pID' of FoMo3DFast.getPlayerVaults (/../data/reentrancy/solidity_contract/1123.sol#904) is not in mixedCase
+Parameter '_pID' of FoMo3DFast.getPlayerVaultsHelper (/../data/reentrancy/solidity_contract/1123.sol#946) is not in mixedCase
+Parameter '_rID' of FoMo3DFast.getPlayerVaultsHelper (/../data/reentrancy/solidity_contract/1123.sol#946) is not in mixedCase
+Parameter '_addr' of FoMo3DFast.getPlayerInfoByAddress (/../data/reentrancy/solidity_contract/1123.sol#983) is not in mixedCase
+Parameter '_pID' of FoMo3DFast.buyCore (/../data/reentrancy/solidity_contract/1123.sol#1014) is not in mixedCase
+Parameter '_affID' of FoMo3DFast.buyCore (/../data/reentrancy/solidity_contract/1123.sol#1014) is not in mixedCase
+Parameter '_team' of FoMo3DFast.buyCore (/../data/reentrancy/solidity_contract/1123.sol#1014) is not in mixedCase
+Parameter '_eventData_' of FoMo3DFast.buyCore (/../data/reentrancy/solidity_contract/1123.sol#1014) is not in mixedCase
+Parameter '_realSender' of FoMo3DFast.buyCoreQR (/../data/reentrancy/solidity_contract/1123.sol#1066) is not in mixedCase
+Parameter '_pID' of FoMo3DFast.buyCoreQR (/../data/reentrancy/solidity_contract/1123.sol#1066) is not in mixedCase
+Parameter '_affID' of FoMo3DFast.buyCoreQR (/../data/reentrancy/solidity_contract/1123.sol#1066) is not in mixedCase
+Parameter '_team' of FoMo3DFast.buyCoreQR (/../data/reentrancy/solidity_contract/1123.sol#1066) is not in mixedCase
+Parameter '_eventData_' of FoMo3DFast.buyCoreQR (/../data/reentrancy/solidity_contract/1123.sol#1066) is not in mixedCase
+Parameter '_pID' of FoMo3DFast.reLoadCore (/../data/reentrancy/solidity_contract/1123.sol#1112) is not in mixedCase
+Parameter '_affID' of FoMo3DFast.reLoadCore (/../data/reentrancy/solidity_contract/1123.sol#1112) is not in mixedCase
+Parameter '_team' of FoMo3DFast.reLoadCore (/../data/reentrancy/solidity_contract/1123.sol#1112) is not in mixedCase
+Parameter '_eth' of FoMo3DFast.reLoadCore (/../data/reentrancy/solidity_contract/1123.sol#1112) is not in mixedCase
+Parameter '_eventData_' of FoMo3DFast.reLoadCore (/../data/reentrancy/solidity_contract/1123.sol#1112) is not in mixedCase
+Parameter '_rID' of FoMo3DFast.core (/../data/reentrancy/solidity_contract/1123.sol#1160) is not in mixedCase
+Parameter '_pID' of FoMo3DFast.core (/../data/reentrancy/solidity_contract/1123.sol#1160) is not in mixedCase
+Parameter '_eth' of FoMo3DFast.core (/../data/reentrancy/solidity_contract/1123.sol#1160) is not in mixedCase
+Parameter '_affID' of FoMo3DFast.core (/../data/reentrancy/solidity_contract/1123.sol#1160) is not in mixedCase
+Parameter '_team' of FoMo3DFast.core (/../data/reentrancy/solidity_contract/1123.sol#1160) is not in mixedCase
+Parameter '_eventData_' of FoMo3DFast.core (/../data/reentrancy/solidity_contract/1123.sol#1160) is not in mixedCase
+Parameter '_realSender' of FoMo3DFast.coreQR (/../data/reentrancy/solidity_contract/1123.sol#1236) is not in mixedCase
+Parameter '_rID' of FoMo3DFast.coreQR (/../data/reentrancy/solidity_contract/1123.sol#1236) is not in mixedCase
+Parameter '_pID' of FoMo3DFast.coreQR (/../data/reentrancy/solidity_contract/1123.sol#1236) is not in mixedCase
+Parameter '_eth' of FoMo3DFast.coreQR (/../data/reentrancy/solidity_contract/1123.sol#1236) is not in mixedCase
+Parameter '_affID' of FoMo3DFast.coreQR (/../data/reentrancy/solidity_contract/1123.sol#1236) is not in mixedCase
+Parameter '_team' of FoMo3DFast.coreQR (/../data/reentrancy/solidity_contract/1123.sol#1236) is not in mixedCase
+Parameter '_eventData_' of FoMo3DFast.coreQR (/../data/reentrancy/solidity_contract/1123.sol#1236) is not in mixedCase
+Parameter '_pID' of FoMo3DFast.calcUnMaskedEarnings (/../data/reentrancy/solidity_contract/1123.sol#1319) is not in mixedCase
+Parameter '_rIDlast' of FoMo3DFast.calcUnMaskedEarnings (/../data/reentrancy/solidity_contract/1123.sol#1319) is not in mixedCase
+Parameter '_rID' of FoMo3DFast.calcKeysReceived (/../data/reentrancy/solidity_contract/1123.sol#1328) is not in mixedCase
+Parameter '_eth' of FoMo3DFast.calcKeysReceived (/../data/reentrancy/solidity_contract/1123.sol#1328) is not in mixedCase
+Parameter '_keys' of FoMo3DFast.iWantXKeys (/../data/reentrancy/solidity_contract/1123.sol#1344) is not in mixedCase
+Parameter '_pID' of FoMo3DFast.receivePlayerInfo (/../data/reentrancy/solidity_contract/1123.sol#1366) is not in mixedCase
+Parameter '_addr' of FoMo3DFast.receivePlayerInfo (/../data/reentrancy/solidity_contract/1123.sol#1366) is not in mixedCase
+Parameter '_name' of FoMo3DFast.receivePlayerInfo (/../data/reentrancy/solidity_contract/1123.sol#1366) is not in mixedCase
+Parameter '_laff' of FoMo3DFast.receivePlayerInfo (/../data/reentrancy/solidity_contract/1123.sol#1366) is not in mixedCase
+Parameter '_pID' of FoMo3DFast.receivePlayerNameList (/../data/reentrancy/solidity_contract/1123.sol#1385) is not in mixedCase
+Parameter '_name' of FoMo3DFast.receivePlayerNameList (/../data/reentrancy/solidity_contract/1123.sol#1385) is not in mixedCase
+Parameter '_eventData_' of FoMo3DFast.determinePID (/../data/reentrancy/solidity_contract/1123.sol#1394) is not in mixedCase
+Parameter '_realSender' of FoMo3DFast.determinePIDQR (/../data/reentrancy/solidity_contract/1123.sol#1429) is not in mixedCase
+Parameter '_eventData_' of FoMo3DFast.determinePIDQR (/../data/reentrancy/solidity_contract/1123.sol#1429) is not in mixedCase
+Parameter '_team' of FoMo3DFast.verifyTeam (/../data/reentrancy/solidity_contract/1123.sol#1465) is not in mixedCase
+Parameter '_pID' of FoMo3DFast.managePlayer (/../data/reentrancy/solidity_contract/1123.sol#1477) is not in mixedCase
+Parameter '_eventData_' of FoMo3DFast.managePlayer (/../data/reentrancy/solidity_contract/1123.sol#1477) is not in mixedCase
+Parameter '_eventData_' of FoMo3DFast.endRound (/../data/reentrancy/solidity_contract/1123.sol#1496) is not in mixedCase
+Parameter '_pID' of FoMo3DFast.updateGenVault (/../data/reentrancy/solidity_contract/1123.sol#1563) is not in mixedCase
+Parameter '_rIDlast' of FoMo3DFast.updateGenVault (/../data/reentrancy/solidity_contract/1123.sol#1563) is not in mixedCase
+Parameter '_keys' of FoMo3DFast.updateTimer (/../data/reentrancy/solidity_contract/1123.sol#1577) is not in mixedCase
+Parameter '_rID' of FoMo3DFast.updateTimer (/../data/reentrancy/solidity_contract/1123.sol#1577) is not in mixedCase
+Parameter '_rID' of FoMo3DFast.distributeExternal (/../data/reentrancy/solidity_contract/1123.sol#1620) is not in mixedCase
+Parameter '_pID' of FoMo3DFast.distributeExternal (/../data/reentrancy/solidity_contract/1123.sol#1620) is not in mixedCase
+Parameter '_eth' of FoMo3DFast.distributeExternal (/../data/reentrancy/solidity_contract/1123.sol#1620) is not in mixedCase
+Parameter '_affID' of FoMo3DFast.distributeExternal (/../data/reentrancy/solidity_contract/1123.sol#1620) is not in mixedCase
+Parameter '_team' of FoMo3DFast.distributeExternal (/../data/reentrancy/solidity_contract/1123.sol#1620) is not in mixedCase
+Parameter '_eventData_' of FoMo3DFast.distributeExternal (/../data/reentrancy/solidity_contract/1123.sol#1620) is not in mixedCase
+Parameter '_rID' of FoMo3DFast.distributeInternal (/../data/reentrancy/solidity_contract/1123.sol#1659) is not in mixedCase
+Parameter '_pID' of FoMo3DFast.distributeInternal (/../data/reentrancy/solidity_contract/1123.sol#1659) is not in mixedCase
+Parameter '_eth' of FoMo3DFast.distributeInternal (/../data/reentrancy/solidity_contract/1123.sol#1659) is not in mixedCase
+Parameter '_team' of FoMo3DFast.distributeInternal (/../data/reentrancy/solidity_contract/1123.sol#1659) is not in mixedCase
+Parameter '_keys' of FoMo3DFast.distributeInternal (/../data/reentrancy/solidity_contract/1123.sol#1659) is not in mixedCase
+Parameter '_eventData_' of FoMo3DFast.distributeInternal (/../data/reentrancy/solidity_contract/1123.sol#1659) is not in mixedCase
+Parameter '_rID' of FoMo3DFast.updateMasks (/../data/reentrancy/solidity_contract/1123.sol#1693) is not in mixedCase
+Parameter '_pID' of FoMo3DFast.updateMasks (/../data/reentrancy/solidity_contract/1123.sol#1693) is not in mixedCase
+Parameter '_gen' of FoMo3DFast.updateMasks (/../data/reentrancy/solidity_contract/1123.sol#1693) is not in mixedCase
+Parameter '_keys' of FoMo3DFast.updateMasks (/../data/reentrancy/solidity_contract/1123.sol#1693) is not in mixedCase
+Parameter '_pID' of FoMo3DFast.withdrawEarnings (/../data/reentrancy/solidity_contract/1123.sol#1713) is not in mixedCase
+Parameter '_pID' of FoMo3DFast.endTx (/../data/reentrancy/solidity_contract/1123.sol#1733) is not in mixedCase
+Parameter '_team' of FoMo3DFast.endTx (/../data/reentrancy/solidity_contract/1123.sol#1733) is not in mixedCase
+Parameter '_eth' of FoMo3DFast.endTx (/../data/reentrancy/solidity_contract/1123.sol#1733) is not in mixedCase
+Parameter '_keys' of FoMo3DFast.endTx (/../data/reentrancy/solidity_contract/1123.sol#1733) is not in mixedCase
+Parameter '_eventData_' of FoMo3DFast.endTx (/../data/reentrancy/solidity_contract/1123.sol#1733) is not in mixedCase
+Parameter '_realSender' of FoMo3DFast.endTxQR (/../data/reentrancy/solidity_contract/1123.sol#1759) is not in mixedCase
+Parameter '_pID' of FoMo3DFast.endTxQR (/../data/reentrancy/solidity_contract/1123.sol#1759) is not in mixedCase
+Parameter '_team' of FoMo3DFast.endTxQR (/../data/reentrancy/solidity_contract/1123.sol#1759) is not in mixedCase
+Parameter '_eth' of FoMo3DFast.endTxQR (/../data/reentrancy/solidity_contract/1123.sol#1759) is not in mixedCase
+Parameter '_keys' of FoMo3DFast.endTxQR (/../data/reentrancy/solidity_contract/1123.sol#1759) is not in mixedCase
+Parameter '_eventData_' of FoMo3DFast.endTxQR (/../data/reentrancy/solidity_contract/1123.sol#1759) is not in mixedCase
+Constant 'FoMo3DFast.PlayerBook' (/../data/reentrancy/solidity_contract/1123.sol#336) is not in UPPER_CASE_WITH_UNDERSCORES
+Constant 'FoMo3DFast.rndInit_' (/../data/reentrancy/solidity_contract/1123.sol#344) is not in UPPER_CASE_WITH_UNDERSCORES
+Constant 'FoMo3DFast.rndInc_' (/../data/reentrancy/solidity_contract/1123.sol#345) is not in UPPER_CASE_WITH_UNDERSCORES
+Constant 'FoMo3DFast.rndMax_' (/../data/reentrancy/solidity_contract/1123.sol#346) is not in UPPER_CASE_WITH_UNDERSCORES
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#conformance-to-solidity-naming-conventions[0m
+INFO:Slither:/../data/reentrancy/solidity_contract/1123.sol analyzed (8 contracts), 162 result(s) found

@@ -1,0 +1,108 @@
+INFO:Slither:Compilation warnings/errors on /../data/reentrancy/solidity_contract/21277.sol:
+/../data/reentrancy/solidity_contract/21277.sol:12:3: Warning: Defining constructors as functions with the same name as the contract is deprecated. Use "constructor(...) { ... }" instead.
+  function Managed() public {
+  ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/21277.sol:298:3: Warning: Defining constructors as functions with the same name as the contract is deprecated. Use "constructor(...) { ... }" instead.
+  function Ethername() public {
+  ^ (Relevant source part starts here and spans across multiple lines).
+
+INFO:Detectors:[91m
+Managed.withdrawBalance (/../data/reentrancy/solidity_contract/21277.sol#27-29) sends eth to arbitrary user
+	Dangerous calls:
+	- manager.transfer(address(this).balance) (/../data/reentrancy/solidity_contract/21277.sol#28)
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#functions-that-send-ether-to-arbitrary-destinations[0m
+INFO:Detectors:[93m
+EthernameRaw._stringToBytes32 (/../data/reentrancy/solidity_contract/21277.sol#254-263) is declared view but contains assembly code
+EthernameRaw._bytes32ToString (/../data/reentrancy/solidity_contract/21277.sol#265-277) is declared view but contains assembly code
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#constant-functions-changing-the-state[0m
+INFO:Detectors:[92m
+EthernameRaw._stringToBytes32 uses assembly (/../data/reentrancy/solidity_contract/21277.sol#254-263)
+	- /../data/reentrancy/solidity_contract/21277.sol#260-263
+EthernameRaw._bytes32ToString uses assembly (/../data/reentrancy/solidity_contract/21277.sol#265-277)
+	- /../data/reentrancy/solidity_contract/21277.sol#270-277
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#assembly-usage[0m
+INFO:Detectors:[92m
+Managed.fallback (/../data/reentrancy/solidity_contract/21277.sol#16) should be declared external
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#public-function-that-could-be-declared-as-external[0m
+INFO:Detectors:[92m
+Detected issues with version pragma in /../data/reentrancy/solidity_contract/21277.sol:
+	- pragma solidity^0.4.21 (/../data/reentrancy/solidity_contract/21277.sol#1): it allows old versions
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#incorrect-version-of-solidity[0m
+INFO:Detectors:[92m
+Low level call in Managed.callFor (/../data/reentrancy/solidity_contract/21277.sol#35-37):
+	-_to.call.value(_value).gas(_gas)(_code) /../data/reentrancy/solidity_contract/21277.sol#36
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#low-level-calls[0m
+INFO:Detectors:[92m
+Function 'Managed.Managed' (/../data/reentrancy/solidity_contract/21277.sol#12-14) is not in mixedCase
+Parameter '_commission' of Managed.setCommission (/../data/reentrancy/solidity_contract/21277.sol#20) is not in mixedCase
+Parameter '_newManager' of Managed.transferPower (/../data/reentrancy/solidity_contract/21277.sol#31) is not in mixedCase
+Parameter '_to' of Managed.callFor (/../data/reentrancy/solidity_contract/21277.sol#35) is not in mixedCase
+Parameter '_value' of Managed.callFor (/../data/reentrancy/solidity_contract/21277.sol#35) is not in mixedCase
+Parameter '_gas' of Managed.callFor (/../data/reentrancy/solidity_contract/21277.sol#35) is not in mixedCase
+Parameter '_code' of Managed.callFor (/../data/reentrancy/solidity_contract/21277.sol#35) is not in mixedCase
+Parameter '_name' of EthernameRaw.rawRegister (/../data/reentrancy/solidity_contract/21277.sol#96) is not in mixedCase
+Parameter '_to' of EthernameRaw.rawTransfer (/../data/reentrancy/solidity_contract/21277.sol#100) is not in mixedCase
+Parameter '_name' of EthernameRaw.rawTransfer (/../data/reentrancy/solidity_contract/21277.sol#100) is not in mixedCase
+Parameter '_to' of EthernameRaw.rawApprove (/../data/reentrancy/solidity_contract/21277.sol#107) is not in mixedCase
+Parameter '_name' of EthernameRaw.rawApprove (/../data/reentrancy/solidity_contract/21277.sol#107) is not in mixedCase
+Parameter '_from' of EthernameRaw.rawTransferFrom (/../data/reentrancy/solidity_contract/21277.sol#114) is not in mixedCase
+Parameter '_to' of EthernameRaw.rawTransferFrom (/../data/reentrancy/solidity_contract/21277.sol#114) is not in mixedCase
+Parameter '_name' of EthernameRaw.rawTransferFrom (/../data/reentrancy/solidity_contract/21277.sol#114) is not in mixedCase
+Parameter '_name' of EthernameRaw.rawSetPrice (/../data/reentrancy/solidity_contract/21277.sol#122) is not in mixedCase
+Parameter '_price' of EthernameRaw.rawSetPrice (/../data/reentrancy/solidity_contract/21277.sol#122) is not in mixedCase
+Parameter '_name' of EthernameRaw.rawBuy (/../data/reentrancy/solidity_contract/21277.sol#132) is not in mixedCase
+Parameter '_name' of EthernameRaw.rawUseName (/../data/reentrancy/solidity_contract/21277.sol#145) is not in mixedCase
+Parameter '_name' of EthernameRaw.rawSetAttribute (/../data/reentrancy/solidity_contract/21277.sol#149) is not in mixedCase
+Parameter '_key' of EthernameRaw.rawSetAttribute (/../data/reentrancy/solidity_contract/21277.sol#149) is not in mixedCase
+Parameter '_value' of EthernameRaw.rawSetAttribute (/../data/reentrancy/solidity_contract/21277.sol#149) is not in mixedCase
+Parameter '_name' of EthernameRaw.rawWipeAttributes (/../data/reentrancy/solidity_contract/21277.sol#158) is not in mixedCase
+Parameter '_keys' of EthernameRaw.rawWipeAttributes (/../data/reentrancy/solidity_contract/21277.sol#158) is not in mixedCase
+Parameter '_name' of EthernameRaw.rawSendEther (/../data/reentrancy/solidity_contract/21277.sol#170) is not in mixedCase
+Parameter '_address' of EthernameRaw.rawNameOf (/../data/reentrancy/solidity_contract/21277.sol#188) is not in mixedCase
+Parameter '_name' of EthernameRaw.rawOwnerOf (/../data/reentrancy/solidity_contract/21277.sol#192) is not in mixedCase
+Parameter '_name' of EthernameRaw.rawDetailsOf (/../data/reentrancy/solidity_contract/21277.sol#196) is not in mixedCase
+Parameter '_key' of EthernameRaw.rawDetailsOf (/../data/reentrancy/solidity_contract/21277.sol#196) is not in mixedCase
+Function 'EthernameRaw._register' (/../data/reentrancy/solidity_contract/21277.sol#208-217) is not in mixedCase
+Parameter '_name' of EthernameRaw._register (/../data/reentrancy/solidity_contract/21277.sol#208) is not in mixedCase
+Parameter '_to' of EthernameRaw._register (/../data/reentrancy/solidity_contract/21277.sol#208) is not in mixedCase
+Function 'EthernameRaw._transfer' (/../data/reentrancy/solidity_contract/21277.sol#220-238) is not in mixedCase
+Parameter '_from' of EthernameRaw._transfer (/../data/reentrancy/solidity_contract/21277.sol#220) is not in mixedCase
+Parameter '_to' of EthernameRaw._transfer (/../data/reentrancy/solidity_contract/21277.sol#220) is not in mixedCase
+Parameter '_name' of EthernameRaw._transfer (/../data/reentrancy/solidity_contract/21277.sol#220) is not in mixedCase
+Function 'EthernameRaw._approve' (/../data/reentrancy/solidity_contract/21277.sol#240-243) is not in mixedCase
+Parameter '_owner' of EthernameRaw._approve (/../data/reentrancy/solidity_contract/21277.sol#240) is not in mixedCase
+Parameter '_to' of EthernameRaw._approve (/../data/reentrancy/solidity_contract/21277.sol#240) is not in mixedCase
+Parameter '_name' of EthernameRaw._approve (/../data/reentrancy/solidity_contract/21277.sol#240) is not in mixedCase
+Function 'EthernameRaw._useName' (/../data/reentrancy/solidity_contract/21277.sol#245-248) is not in mixedCase
+Parameter '_owner' of EthernameRaw._useName (/../data/reentrancy/solidity_contract/21277.sol#245) is not in mixedCase
+Parameter '_name' of EthernameRaw._useName (/../data/reentrancy/solidity_contract/21277.sol#245) is not in mixedCase
+Function 'EthernameRaw._computePrice' (/../data/reentrancy/solidity_contract/21277.sol#250-252) is not in mixedCase
+Parameter '_price' of EthernameRaw._computePrice (/../data/reentrancy/solidity_contract/21277.sol#250) is not in mixedCase
+Function 'EthernameRaw._stringToBytes32' (/../data/reentrancy/solidity_contract/21277.sol#254-263) is not in mixedCase
+Parameter '_string' of EthernameRaw._stringToBytes32 (/../data/reentrancy/solidity_contract/21277.sol#254) is not in mixedCase
+Function 'EthernameRaw._bytes32ToString' (/../data/reentrancy/solidity_contract/21277.sol#265-277) is not in mixedCase
+Function 'Ethername.Ethername' (/../data/reentrancy/solidity_contract/21277.sol#298-307) is not in mixedCase
+Parameter '_name' of Ethername.register (/../data/reentrancy/solidity_contract/21277.sol#312) is not in mixedCase
+Parameter '_to' of Ethername.transfer (/../data/reentrancy/solidity_contract/21277.sol#316) is not in mixedCase
+Parameter '_name' of Ethername.transfer (/../data/reentrancy/solidity_contract/21277.sol#316) is not in mixedCase
+Parameter '_to' of Ethername.approve (/../data/reentrancy/solidity_contract/21277.sol#320) is not in mixedCase
+Parameter '_name' of Ethername.approve (/../data/reentrancy/solidity_contract/21277.sol#320) is not in mixedCase
+Parameter '_from' of Ethername.transferFrom (/../data/reentrancy/solidity_contract/21277.sol#324) is not in mixedCase
+Parameter '_to' of Ethername.transferFrom (/../data/reentrancy/solidity_contract/21277.sol#324) is not in mixedCase
+Parameter '_name' of Ethername.transferFrom (/../data/reentrancy/solidity_contract/21277.sol#324) is not in mixedCase
+Parameter '_name' of Ethername.setPrice (/../data/reentrancy/solidity_contract/21277.sol#328) is not in mixedCase
+Parameter '_price' of Ethername.setPrice (/../data/reentrancy/solidity_contract/21277.sol#328) is not in mixedCase
+Parameter '_name' of Ethername.buy (/../data/reentrancy/solidity_contract/21277.sol#332) is not in mixedCase
+Parameter '_name' of Ethername.useName (/../data/reentrancy/solidity_contract/21277.sol#336) is not in mixedCase
+Parameter '_name' of Ethername.setAttribute (/../data/reentrancy/solidity_contract/21277.sol#340) is not in mixedCase
+Parameter '_key' of Ethername.setAttribute (/../data/reentrancy/solidity_contract/21277.sol#340) is not in mixedCase
+Parameter '_value' of Ethername.setAttribute (/../data/reentrancy/solidity_contract/21277.sol#340) is not in mixedCase
+Parameter '_name' of Ethername.wipeAttributes (/../data/reentrancy/solidity_contract/21277.sol#344) is not in mixedCase
+Parameter '_keys' of Ethername.wipeAttributes (/../data/reentrancy/solidity_contract/21277.sol#344) is not in mixedCase
+Parameter '_name' of Ethername.sendEther (/../data/reentrancy/solidity_contract/21277.sol#348) is not in mixedCase
+Parameter '_address' of Ethername.nameOf (/../data/reentrancy/solidity_contract/21277.sol#354) is not in mixedCase
+Parameter '_name' of Ethername.ownerOf (/../data/reentrancy/solidity_contract/21277.sol#358) is not in mixedCase
+Parameter '_name' of Ethername.detailsOf (/../data/reentrancy/solidity_contract/21277.sol#362) is not in mixedCase
+Parameter '_key' of Ethername.detailsOf (/../data/reentrancy/solidity_contract/21277.sol#362) is not in mixedCase
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#conformance-to-solidity-naming-conventions[0m
+INFO:Slither:/../data/reentrancy/solidity_contract/21277.sol analyzed (3 contracts), 79 result(s) found

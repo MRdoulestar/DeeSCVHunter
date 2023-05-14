@@ -1,0 +1,29 @@
+{
+  "contract": "3255",
+  "tool": "honeybadger",
+  "start": 1609162083.462401,
+  "end": 1609162100.738403,
+  "duration": 17.276002168655396,
+  "analysis": [
+    {
+      "errors": [],
+      "file": "/../data/reentrancy/solidity_contract/3255.sol",
+      "name": "LOLKeysCalcLong"
+    },
+    {
+      "errors": [],
+      "file": "/../data/reentrancy/solidity_contract/3255.sol",
+      "name": "LOLdatasets"
+    },
+    {
+      "errors": [],
+      "file": "/../data/reentrancy/solidity_contract/3255.sol",
+      "name": "LOLevents"
+    },
+    {
+      "errors": [],
+      "file": "/../data/reentrancy/solidity_contract/3255.sol",
+      "name": "LOLlong"
+    }
+  ]
+}

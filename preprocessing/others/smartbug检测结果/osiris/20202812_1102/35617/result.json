@@ -1,0 +1,81 @@
+{
+  "contract": "35617",
+  "tool": "osiris",
+  "start": 1609126922.047125,
+  "end": 1609126986.5221848,
+  "duration": 64.47505974769592,
+  "analysis": [
+    {
+      "errors": [
+        {
+          "line": 92,
+          "column": 13,
+          "message": "overflow_bugs"
+        },
+        {
+          "line": 182,
+          "column": 9,
+          "message": "time_dependency_bug"
+        },
+        {
+          "line": 180,
+          "column": 9,
+          "message": "time_dependency_bug"
+        },
+        {
+          "line": 162,
+          "column": 9,
+          "message": "time_dependency_bug"
+        },
+        {
+          "line": 183,
+          "column": 9,
+          "message": "time_dependency_bug"
+        },
+        {
+          "line": 181,
+          "column": 9,
+          "message": "time_dependency_bug"
+        },
+        {
+          "line": 162,
+          "column": 17,
+          "message": "time_dependency_bug"
+        },
+        {
+          "line": 209,
+          "column": 14,
+          "message": "reentrancy_bug"
+        }
+      ],
+      "file": "/../data/reentrancy/solidity_contract/35617.sol",
+      "name": "MoldCoin"
+    },
+    {
+      "errors": [],
+      "file": "/../data/reentrancy/solidity_contract/35617.sol",
+      "name": "MoldCoinBonus"
+    },
+    {
+      "errors": [],
+      "file": "/../data/reentrancy/solidity_contract/35617.sol",
+      "name": "SafeMath"
+    },
+    {
+      "errors": [
+        {
+          "line": 82,
+          "column": 13,
+          "message": "overflow_bugs"
+        },
+        {
+          "line": 92,
+          "column": 13,
+          "message": "overflow_bugs"
+        }
+      ],
+      "file": "/../data/reentrancy/solidity_contract/35617.sol",
+      "name": "StandardToken"
+    }
+  ]
+}

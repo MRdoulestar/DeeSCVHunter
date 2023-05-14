@@ -1,0 +1,746 @@
+{
+  "contract": "17009",
+  "tool": "slither",
+  "start": 1609180281.708643,
+  "end": 1609180288.053762,
+  "duration": 6.345118999481201,
+  "analysis": [
+    {
+      "check": "external-function",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Ownable.transferOwnership (/../data/reentrancy/solidity_contract/17009.sol#55-59) should be declared external\n",
+      "elements": [
+        {
+          "type": "function",
+          "name": "transferOwnership",
+          "source_mapping": {
+            "start": 990,
+            "length": 183,
+            "filename": "/../data/reentrancy/solidity_contract/17009.sol",
+            "lines": [
+              55,
+              56,
+              57,
+              58,
+              59
+            ]
+          },
+          "contract": {
+            "type": "contract",
+            "name": "Ownable",
+            "source_mapping": {
+              "start": 679,
+              "length": 496,
+              "filename": "/../data/reentrancy/solidity_contract/17009.sol",
+              "lines": [
+                35,
+                36,
+                37,
+                38,
+                39,
+                40,
+                41,
+                42,
+                43,
+                44,
+                45,
+                46,
+                47,
+                48,
+                49,
+                50,
+                51,
+                52,
+                53,
+                54,
+                55,
+                56,
+                57,
+                58,
+                59,
+                60
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "check": "external-function",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "BitmarkPaymentGateway.SetMasterWallet (/../data/reentrancy/solidity_contract/17009.sol#77-79) should be declared external\n",
+      "elements": [
+        {
+          "type": "function",
+          "name": "SetMasterWallet",
+          "source_mapping": {
+            "start": 1523,
+            "length": 104,
+            "filename": "/../data/reentrancy/solidity_contract/17009.sol",
+            "lines": [
+              77,
+              78,
+              79
+            ]
+          },
+          "contract": {
+            "type": "contract",
+            "name": "BitmarkPaymentGateway",
+            "source_mapping": {
+              "start": 1178,
+              "length": 948,
+              "filename": "/../data/reentrancy/solidity_contract/17009.sol",
+              "lines": [
+                63,
+                64,
+                65,
+                66,
+                67,
+                68,
+                69,
+                70,
+                71,
+                72,
+                73,
+                74,
+                75,
+                76,
+                77,
+                78,
+                79,
+                80,
+                81,
+                82,
+                83,
+                84,
+                85,
+                86,
+                87,
+                88,
+                89,
+                90,
+                91,
+                92,
+                93,
+                94,
+                95,
+                96,
+                97,
+                98,
+                99,
+                100
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "check": "external-function",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "BitmarkPaymentGateway.PausePayment (/../data/reentrancy/solidity_contract/17009.sol#81-83) should be declared external\n",
+      "elements": [
+        {
+          "type": "function",
+          "name": "PausePayment",
+          "source_mapping": {
+            "start": 1633,
+            "length": 71,
+            "filename": "/../data/reentrancy/solidity_contract/17009.sol",
+            "lines": [
+              81,
+              82,
+              83
+            ]
+          },
+          "contract": {
+            "type": "contract",
+            "name": "BitmarkPaymentGateway",
+            "source_mapping": {
+              "start": 1178,
+              "length": 948,
+              "filename": "/../data/reentrancy/solidity_contract/17009.sol",
+              "lines": [
+                63,
+                64,
+                65,
+                66,
+                67,
+                68,
+                69,
+                70,
+                71,
+                72,
+                73,
+                74,
+                75,
+                76,
+                77,
+                78,
+                79,
+                80,
+                81,
+                82,
+                83,
+                84,
+                85,
+                86,
+                87,
+                88,
+                89,
+                90,
+                91,
+                92,
+                93,
+                94,
+                95,
+                96,
+                97,
+                98,
+                99,
+                100
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "check": "external-function",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "BitmarkPaymentGateway.ResumePayment (/../data/reentrancy/solidity_contract/17009.sol#85-87) should be declared external\n",
+      "elements": [
+        {
+          "type": "function",
+          "name": "ResumePayment",
+          "source_mapping": {
+            "start": 1710,
+            "length": 73,
+            "filename": "/../data/reentrancy/solidity_contract/17009.sol",
+            "lines": [
+              85,
+              86,
+              87
+            ]
+          },
+          "contract": {
+            "type": "contract",
+            "name": "BitmarkPaymentGateway",
+            "source_mapping": {
+              "start": 1178,
+              "length": 948,
+              "filename": "/../data/reentrancy/solidity_contract/17009.sol",
+              "lines": [
+                63,
+                64,
+                65,
+                66,
+                67,
+                68,
+                69,
+                70,
+                71,
+                72,
+                73,
+                74,
+                75,
+                76,
+                77,
+                78,
+                79,
+                80,
+                81,
+                82,
+                83,
+                84,
+                85,
+                86,
+                87,
+                88,
+                89,
+                90,
+                91,
+                92,
+                93,
+                94,
+                95,
+                96,
+                97,
+                98,
+                99,
+                100
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "check": "external-function",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "BitmarkPaymentGateway.Pay (/../data/reentrancy/solidity_contract/17009.sol#89-97) should be declared external\n",
+      "elements": [
+        {
+          "type": "function",
+          "name": "Pay",
+          "source_mapping": {
+            "start": 1789,
+            "length": 308,
+            "filename": "/../data/reentrancy/solidity_contract/17009.sol",
+            "lines": [
+              89,
+              90,
+              91,
+              92,
+              93,
+              94,
+              95,
+              96,
+              97
+            ]
+          },
+          "contract": {
+            "type": "contract",
+            "name": "BitmarkPaymentGateway",
+            "source_mapping": {
+              "start": 1178,
+              "length": 948,
+              "filename": "/../data/reentrancy/solidity_contract/17009.sol",
+              "lines": [
+                63,
+                64,
+                65,
+                66,
+                67,
+                68,
+                69,
+                70,
+                71,
+                72,
+                73,
+                74,
+                75,
+                76,
+                77,
+                78,
+                79,
+                80,
+                81,
+                82,
+                83,
+                84,
+                85,
+                86,
+                87,
+                88,
+                89,
+                90,
+                91,
+                92,
+                93,
+                94,
+                95,
+                96,
+                97,
+                98,
+                99,
+                100
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "check": "external-function",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "BitmarkPaymentGateway.fallback (/../data/reentrancy/solidity_contract/17009.sol#99) should be declared external\n",
+      "elements": [
+        {
+          "type": "function",
+          "name": "fallback",
+          "source_mapping": {
+            "start": 2103,
+            "length": 21,
+            "filename": "/../data/reentrancy/solidity_contract/17009.sol",
+            "lines": [
+              99
+            ]
+          },
+          "contract": {
+            "type": "contract",
+            "name": "BitmarkPaymentGateway",
+            "source_mapping": {
+              "start": 1178,
+              "length": 948,
+              "filename": "/../data/reentrancy/solidity_contract/17009.sol",
+              "lines": [
+                63,
+                64,
+                65,
+                66,
+                67,
+                68,
+                69,
+                70,
+                71,
+                72,
+                73,
+                74,
+                75,
+                76,
+                77,
+                78,
+                79,
+                80,
+                81,
+                82,
+                83,
+                84,
+                85,
+                86,
+                87,
+                88,
+                89,
+                90,
+                91,
+                92,
+                93,
+                94,
+                95,
+                96,
+                97,
+                98,
+                99,
+                100
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "check": "solc-version",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Detected issues with version pragma in /../data/reentrancy/solidity_contract/17009.sol:\n\t- pragma solidity^0.4.19 (/../data/reentrancy/solidity_contract/17009.sol#1): it allows old versions\n",
+      "elements": [
+        {
+          "type": "expression",
+          "expression": "^0.4.19",
+          "source_mapping": {
+            "start": 0,
+            "length": 24,
+            "filename": "/../data/reentrancy/solidity_contract/17009.sol",
+            "lines": [
+              1
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "low-level-calls",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Low level call in BitmarkPaymentGateway.Pay (/../data/reentrancy/solidity_contract/17009.sol#89-97):\n\t-_destination.call.value(msg.value.div(9).mul(8))() /../data/reentrancy/solidity_contract/17009.sol#94\n",
+      "elements": [
+        {
+          "type": "function",
+          "name": "Pay",
+          "source_mapping": {
+            "start": 1789,
+            "length": 308,
+            "filename": "/../data/reentrancy/solidity_contract/17009.sol",
+            "lines": [
+              89,
+              90,
+              91,
+              92,
+              93,
+              94,
+              95,
+              96,
+              97
+            ]
+          },
+          "contract": {
+            "type": "contract",
+            "name": "BitmarkPaymentGateway",
+            "source_mapping": {
+              "start": 1178,
+              "length": 948,
+              "filename": "/../data/reentrancy/solidity_contract/17009.sol",
+              "lines": [
+                63,
+                64,
+                65,
+                66,
+                67,
+                68,
+                69,
+                70,
+                71,
+                72,
+                73,
+                74,
+                75,
+                76,
+                77,
+                78,
+                79,
+                80,
+                81,
+                82,
+                83,
+                84,
+                85,
+                86,
+                87,
+                88,
+                89,
+                90,
+                91,
+                92,
+                93,
+                94,
+                95,
+                96,
+                97,
+                98,
+                99,
+                100
+              ]
+            }
+          }
+        },
+        {
+          "type": "expression",
+          "expression": "_destination.call.value(msg.value.div(9).mul(8))()",
+          "source_mapping": {
+            "start": 1994,
+            "length": 50,
+            "filename": "/../data/reentrancy/solidity_contract/17009.sol",
+            "lines": [
+              94
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "naming-convention",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Function 'Ownable.Ownable' (/../data/reentrancy/solidity_contract/17009.sol#43-45) is not in mixedCase\n",
+      "elements": [
+        {
+          "target": "function",
+          "convention": "mixedCase",
+          "name": "Ownable",
+          "source_mapping": {
+            "start": 827,
+            "length": 61,
+            "filename": "/../data/reentrancy/solidity_contract/17009.sol",
+            "lines": [
+              43,
+              44,
+              45
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "naming-convention",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Function 'BitmarkPaymentGateway.BitmarkPaymentGateway' (/../data/reentrancy/solidity_contract/17009.sol#72-75) is not in mixedCase\n",
+      "elements": [
+        {
+          "target": "function",
+          "convention": "mixedCase",
+          "name": "BitmarkPaymentGateway",
+          "source_mapping": {
+            "start": 1387,
+            "length": 130,
+            "filename": "/../data/reentrancy/solidity_contract/17009.sol",
+            "lines": [
+              72,
+              73,
+              74,
+              75
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "naming-convention",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Parameter '_masterWallet' of BitmarkPaymentGateway.BitmarkPaymentGateway (/../data/reentrancy/solidity_contract/17009.sol#72) is not in mixedCase\n",
+      "elements": [
+        {
+          "target": "parameter",
+          "convention": "mixedCase",
+          "name": "_masterWallet",
+          "source_mapping": {
+            "start": 1418,
+            "length": 21,
+            "filename": "/../data/reentrancy/solidity_contract/17009.sol",
+            "lines": [
+              72
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "naming-convention",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Function 'BitmarkPaymentGateway.SetMasterWallet' (/../data/reentrancy/solidity_contract/17009.sol#77-79) is not in mixedCase\n",
+      "elements": [
+        {
+          "target": "function",
+          "convention": "mixedCase",
+          "name": "SetMasterWallet",
+          "source_mapping": {
+            "start": 1523,
+            "length": 104,
+            "filename": "/../data/reentrancy/solidity_contract/17009.sol",
+            "lines": [
+              77,
+              78,
+              79
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "naming-convention",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Parameter '_newWallet' of BitmarkPaymentGateway.SetMasterWallet (/../data/reentrancy/solidity_contract/17009.sol#77) is not in mixedCase\n",
+      "elements": [
+        {
+          "target": "parameter",
+          "convention": "mixedCase",
+          "name": "_newWallet",
+          "source_mapping": {
+            "start": 1548,
+            "length": 18,
+            "filename": "/../data/reentrancy/solidity_contract/17009.sol",
+            "lines": [
+              77
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "naming-convention",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Function 'BitmarkPaymentGateway.PausePayment' (/../data/reentrancy/solidity_contract/17009.sol#81-83) is not in mixedCase\n",
+      "elements": [
+        {
+          "target": "function",
+          "convention": "mixedCase",
+          "name": "PausePayment",
+          "source_mapping": {
+            "start": 1633,
+            "length": 71,
+            "filename": "/../data/reentrancy/solidity_contract/17009.sol",
+            "lines": [
+              81,
+              82,
+              83
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "naming-convention",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Function 'BitmarkPaymentGateway.ResumePayment' (/../data/reentrancy/solidity_contract/17009.sol#85-87) is not in mixedCase\n",
+      "elements": [
+        {
+          "target": "function",
+          "convention": "mixedCase",
+          "name": "ResumePayment",
+          "source_mapping": {
+            "start": 1710,
+            "length": 73,
+            "filename": "/../data/reentrancy/solidity_contract/17009.sol",
+            "lines": [
+              85,
+              86,
+              87
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "naming-convention",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Function 'BitmarkPaymentGateway.Pay' (/../data/reentrancy/solidity_contract/17009.sol#89-97) is not in mixedCase\n",
+      "elements": [
+        {
+          "target": "function",
+          "convention": "mixedCase",
+          "name": "Pay",
+          "source_mapping": {
+            "start": 1789,
+            "length": 308,
+            "filename": "/../data/reentrancy/solidity_contract/17009.sol",
+            "lines": [
+              89,
+              90,
+              91,
+              92,
+              93,
+              94,
+              95,
+              96,
+              97
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "naming-convention",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Parameter '_destination' of BitmarkPaymentGateway.Pay (/../data/reentrancy/solidity_contract/17009.sol#89) is not in mixedCase\n",
+      "elements": [
+        {
+          "target": "parameter",
+          "convention": "mixedCase",
+          "name": "_destination",
+          "source_mapping": {
+            "start": 1802,
+            "length": 20,
+            "filename": "/../data/reentrancy/solidity_contract/17009.sol",
+            "lines": [
+              89
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

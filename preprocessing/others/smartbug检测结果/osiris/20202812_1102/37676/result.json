@@ -1,0 +1,25 @@
+{
+  "contract": "37676",
+  "tool": "osiris",
+  "start": 1609151025.0314932,
+  "end": 1609151081.942707,
+  "duration": 56.911213874816895,
+  "analysis": [
+    {
+      "errors": [
+        {
+          "line": 33,
+          "column": 13,
+          "message": "overflow_bugs"
+        },
+        {
+          "line": 51,
+          "column": 8,
+          "message": "reentrancy_bug"
+        }
+      ],
+      "file": "/../data/reentrancy/solidity_contract/37676.sol",
+      "name": "DeadMansSwitch"
+    }
+  ]
+}

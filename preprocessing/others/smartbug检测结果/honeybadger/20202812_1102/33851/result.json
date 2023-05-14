@@ -1,0 +1,14 @@
+{
+  "contract": "33851",
+  "tool": "honeybadger",
+  "start": 1609124557.790679,
+  "end": 1609124617.302449,
+  "duration": 59.51177000999451,
+  "analysis": [
+    {
+      "errors": [],
+      "file": "/../data/reentrancy/solidity_contract/33851.sol",
+      "name": "MoacToken"
+    }
+  ]
+}

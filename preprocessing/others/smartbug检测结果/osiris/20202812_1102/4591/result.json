@@ -1,0 +1,45 @@
+{
+  "contract": "4591",
+  "tool": "osiris",
+  "start": 1609219623.655112,
+  "end": 1609219681.173322,
+  "duration": 57.51820993423462,
+  "analysis": [
+    {
+      "errors": [],
+      "file": "/../data/reentrancy/solidity_contract/4591.sol",
+      "name": "BasicToken"
+    },
+    {
+      "errors": [
+        {
+          "line": 245,
+          "column": 3,
+          "message": "overflow_bugs"
+        },
+        {
+          "line": 240,
+          "column": 9,
+          "message": "concurrency_bug"
+        },
+        {
+          "line": 211,
+          "column": 14,
+          "message": "concurrency_bug"
+        }
+      ],
+      "file": "/../data/reentrancy/solidity_contract/4591.sol",
+      "name": "IChain"
+    },
+    {
+      "errors": [],
+      "file": "/../data/reentrancy/solidity_contract/4591.sol",
+      "name": "SafeMath"
+    },
+    {
+      "errors": [],
+      "file": "/../data/reentrancy/solidity_contract/4591.sol",
+      "name": "StandardToken"
+    }
+  ]
+}

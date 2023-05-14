@@ -1,0 +1,30 @@
+{
+  "contract": "27334",
+  "tool": "honeybadger",
+  "start": 1609193310.133995,
+  "end": 1609193311.9437819,
+  "duration": 1.8097867965698242,
+  "analysis": [
+    {
+      "errors": [
+        {
+          "line": 58,
+          "column": 9,
+          "message": "uninitialised_struct"
+        },
+        {
+          "line": 59,
+          "column": 9,
+          "message": "uninitialised_struct"
+        }
+      ],
+      "file": "/../data/reentrancy/solidity_contract/27334.sol",
+      "name": "AddressLottery"
+    },
+    {
+      "errors": [],
+      "file": "/../data/reentrancy/solidity_contract/27334.sol",
+      "name": "Ownable"
+    }
+  ]
+}

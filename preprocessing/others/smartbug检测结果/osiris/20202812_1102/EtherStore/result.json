@@ -1,0 +1,35 @@
+{
+  "contract": "EtherStore",
+  "tool": "osiris",
+  "start": 1609175980.737281,
+  "end": 1609175982.255117,
+  "duration": 1.5178358554840088,
+  "analysis": [
+    {
+      "errors": [
+        {
+          "line": 14,
+          "column": 24,
+          "message": "overflow_bugs"
+        },
+        {
+          "line": 8,
+          "column": 9,
+          "message": "overflow_bugs"
+        },
+        {
+          "line": 14,
+          "column": 9,
+          "message": "time_dependency_bug"
+        },
+        {
+          "line": 15,
+          "column": 17,
+          "message": "reentrancy_bug"
+        }
+      ],
+      "file": "/../data/reentrancy/solidity_contract/EtherStore.sol",
+      "name": "EtherStore"
+    }
+  ]
+}

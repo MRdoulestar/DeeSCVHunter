@@ -1,0 +1,45 @@
+{
+  "contract": "14620",
+  "tool": "osiris",
+  "start": 1609127017.1497831,
+  "end": 1609127041.7443688,
+  "duration": 24.59458565711975,
+  "analysis": [
+    {
+      "errors": [],
+      "file": "/../data/reentrancy/solidity_contract/14620.sol",
+      "name": "BasicToken"
+    },
+    {
+      "errors": [],
+      "file": "/../data/reentrancy/solidity_contract/14620.sol",
+      "name": "MintableToken"
+    },
+    {
+      "errors": [],
+      "file": "/../data/reentrancy/solidity_contract/14620.sol",
+      "name": "Ownable"
+    },
+    {
+      "errors": [],
+      "file": "/../data/reentrancy/solidity_contract/14620.sol",
+      "name": "SafeMath"
+    },
+    {
+      "errors": [],
+      "file": "/../data/reentrancy/solidity_contract/14620.sol",
+      "name": "StandardToken"
+    },
+    {
+      "errors": [
+        {
+          "line": 326,
+          "column": 13,
+          "message": "reentrancy_bug"
+        }
+      ],
+      "file": "/../data/reentrancy/solidity_contract/14620.sol",
+      "name": "TokensGate"
+    }
+  ]
+}

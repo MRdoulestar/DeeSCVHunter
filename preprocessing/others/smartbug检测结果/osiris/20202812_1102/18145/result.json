@@ -1,0 +1,14 @@
+{
+  "contract": "18145",
+  "tool": "osiris",
+  "start": 1609137172.071875,
+  "end": 1609137175.828119,
+  "duration": 3.756243944168091,
+  "analysis": [
+    {
+      "errors": [],
+      "file": "/../data/reentrancy/solidity_contract/18145.sol",
+      "name": "CrowdsaleProxy"
+    }
+  ]
+}

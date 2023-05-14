@@ -1,0 +1,323 @@
+{
+  "contract": "EtherStore",
+  "tool": "slither",
+  "start": 1609152484.988999,
+  "end": 1609152485.961032,
+  "duration": 0.9720330238342285,
+  "analysis": [
+    {
+      "check": "reentrancy-eth",
+      "impact": "High",
+      "confidence": "Medium",
+      "description": "Reentrancy in EtherStore.withdrawFunds (/../data/reentrancy/solidity_contract/EtherStore.sol#11-18):\n\tExternal calls:\n\t- require(bool)(msg.sender.call.value(_weiToWithdraw)()) (/../data/reentrancy/solidity_contract/EtherStore.sol#15)\n\tState variables written after the call(s):\n\t- balances (/../data/reentrancy/solidity_contract/EtherStore.sol#16)\n\t- lastWithdrawTime (/../data/reentrancy/solidity_contract/EtherStore.sol#17)\n",
+      "elements": [
+        {
+          "type": "function",
+          "name": "withdrawFunds",
+          "source_mapping": {
+            "start": 275,
+            "length": 385,
+            "filename": "/../data/reentrancy/solidity_contract/EtherStore.sol",
+            "lines": [
+              11,
+              12,
+              13,
+              14,
+              15,
+              16,
+              17,
+              18
+            ]
+          },
+          "contract": {
+            "type": "contract",
+            "name": "EtherStore",
+            "source_mapping": {
+              "start": 0,
+              "length": 662,
+              "filename": "/../data/reentrancy/solidity_contract/EtherStore.sol",
+              "lines": [
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10,
+                11,
+                12,
+                13,
+                14,
+                15,
+                16,
+                17,
+                18,
+                19
+              ]
+            }
+          }
+        },
+        {
+          "type": "external_calls",
+          "expression": "require(bool)(msg.sender.call.value(_weiToWithdraw)())",
+          "source_mapping": {
+            "start": 513,
+            "length": 48,
+            "filename": "/../data/reentrancy/solidity_contract/EtherStore.sol",
+            "lines": [
+              15
+            ]
+          }
+        },
+        {
+          "type": "variables_written",
+          "name": "balances",
+          "expression": "balances[msg.sender] -= _weiToWithdraw",
+          "source_mapping": {
+            "start": 571,
+            "length": 38,
+            "filename": "/../data/reentrancy/solidity_contract/EtherStore.sol",
+            "lines": [
+              16
+            ]
+          }
+        },
+        {
+          "type": "variables_written",
+          "name": "lastWithdrawTime",
+          "expression": "lastWithdrawTime[msg.sender] = now",
+          "source_mapping": {
+            "start": 619,
+            "length": 34,
+            "filename": "/../data/reentrancy/solidity_contract/EtherStore.sol",
+            "lines": [
+              17
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "constable-states",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "EtherStore.withdrawalLimit should be constant (/../data/reentrancy/solidity_contract/EtherStore.sol#3)\n",
+      "elements": [
+        {
+          "type": "variable",
+          "name": "withdrawalLimit",
+          "source_mapping": {
+            "start": 27,
+            "length": 40,
+            "filename": "/../data/reentrancy/solidity_contract/EtherStore.sol",
+            "lines": [
+              3
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "external-function",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "EtherStore.depositFunds (/../data/reentrancy/solidity_contract/EtherStore.sol#7-9) should be declared external\n",
+      "elements": [
+        {
+          "type": "function",
+          "name": "depositFunds",
+          "source_mapping": {
+            "start": 180,
+            "length": 89,
+            "filename": "/../data/reentrancy/solidity_contract/EtherStore.sol",
+            "lines": [
+              7,
+              8,
+              9
+            ]
+          },
+          "contract": {
+            "type": "contract",
+            "name": "EtherStore",
+            "source_mapping": {
+              "start": 0,
+              "length": 662,
+              "filename": "/../data/reentrancy/solidity_contract/EtherStore.sol",
+              "lines": [
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10,
+                11,
+                12,
+                13,
+                14,
+                15,
+                16,
+                17,
+                18,
+                19
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "check": "external-function",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "EtherStore.withdrawFunds (/../data/reentrancy/solidity_contract/EtherStore.sol#11-18) should be declared external\n",
+      "elements": [
+        {
+          "type": "function",
+          "name": "withdrawFunds",
+          "source_mapping": {
+            "start": 275,
+            "length": 385,
+            "filename": "/../data/reentrancy/solidity_contract/EtherStore.sol",
+            "lines": [
+              11,
+              12,
+              13,
+              14,
+              15,
+              16,
+              17,
+              18
+            ]
+          },
+          "contract": {
+            "type": "contract",
+            "name": "EtherStore",
+            "source_mapping": {
+              "start": 0,
+              "length": 662,
+              "filename": "/../data/reentrancy/solidity_contract/EtherStore.sol",
+              "lines": [
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10,
+                11,
+                12,
+                13,
+                14,
+                15,
+                16,
+                17,
+                18,
+                19
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "check": "low-level-calls",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Low level call in EtherStore.withdrawFunds (/../data/reentrancy/solidity_contract/EtherStore.sol#11-18):\n\t-require(bool)(msg.sender.call.value(_weiToWithdraw)()) /../data/reentrancy/solidity_contract/EtherStore.sol#15\n",
+      "elements": [
+        {
+          "type": "function",
+          "name": "withdrawFunds",
+          "source_mapping": {
+            "start": 275,
+            "length": 385,
+            "filename": "/../data/reentrancy/solidity_contract/EtherStore.sol",
+            "lines": [
+              11,
+              12,
+              13,
+              14,
+              15,
+              16,
+              17,
+              18
+            ]
+          },
+          "contract": {
+            "type": "contract",
+            "name": "EtherStore",
+            "source_mapping": {
+              "start": 0,
+              "length": 662,
+              "filename": "/../data/reentrancy/solidity_contract/EtherStore.sol",
+              "lines": [
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10,
+                11,
+                12,
+                13,
+                14,
+                15,
+                16,
+                17,
+                18,
+                19
+              ]
+            }
+          }
+        },
+        {
+          "type": "expression",
+          "expression": "require(bool)(msg.sender.call.value(_weiToWithdraw)())",
+          "source_mapping": {
+            "start": 513,
+            "length": 48,
+            "filename": "/../data/reentrancy/solidity_contract/EtherStore.sol",
+            "lines": [
+              15
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "naming-convention",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Parameter '_weiToWithdraw' of EtherStore.withdrawFunds (/../data/reentrancy/solidity_contract/EtherStore.sol#11) is not in mixedCase\n",
+      "elements": [
+        {
+          "target": "parameter",
+          "convention": "mixedCase",
+          "name": "_weiToWithdraw",
+          "source_mapping": {
+            "start": 299,
+            "length": 22,
+            "filename": "/../data/reentrancy/solidity_contract/EtherStore.sol",
+            "lines": [
+              11
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

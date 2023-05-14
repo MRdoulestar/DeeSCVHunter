@@ -1,0 +1,55 @@
+{
+  "contract": "40092",
+  "tool": "osiris",
+  "start": 1609217011.608656,
+  "end": 1609217036.0649002,
+  "duration": 24.456244230270386,
+  "analysis": [
+    {
+      "errors": [
+        {
+          "line": 216,
+          "column": 13,
+          "message": "overflow_bugs"
+        },
+        {
+          "line": 99,
+          "column": 13,
+          "message": "overflow_bugs"
+        },
+        {
+          "line": 65,
+          "column": 13,
+          "message": "overflow_bugs"
+        },
+        {
+          "line": 64,
+          "column": 13,
+          "message": "overflow_bugs"
+        },
+        {
+          "line": 98,
+          "column": 30,
+          "message": "underflow_bugs"
+        },
+        {
+          "line": 86,
+          "column": 9,
+          "message": "underflow_bugs"
+        },
+        {
+          "line": 87,
+          "column": 14,
+          "message": "reentrancy_bug"
+        }
+      ],
+      "file": "/../data/reentrancy/solidity_contract/40092.sol",
+      "name": "CertificationCentre"
+    },
+    {
+      "errors": [],
+      "file": "/../data/reentrancy/solidity_contract/40092.sol",
+      "name": "Owned"
+    }
+  ]
+}

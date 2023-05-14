@@ -1,0 +1,8 @@
+{
+  "contract": "SendBalance",
+  "tool": "slither",
+  "start": 1609189386.013619,
+  "end": 1609189387.817174,
+  "duration": 1.8035550117492676,
+  "analysis": []
+}

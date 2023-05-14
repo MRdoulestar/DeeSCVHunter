@@ -1,0 +1,761 @@
+INFO:Slither:Compilation warnings/errors on /../data/reentrancy/solidity_contract/35421.sol:
+/../data/reentrancy/solidity_contract/35421.sol:8:3: Warning: Defining constructors as functions with the same name as the contract is deprecated. Use "constructor(...) { ... }" instead.
+  function owned() {
+  ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/35421.sol:263:3: Warning: Defining constructors as functions with the same name as the contract is deprecated. Use "constructor(...) { ... }" instead.
+  function oneWrite() {
+  ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/35421.sol:351:2: Warning: Defining constructors as functions with the same name as the contract is deprecated. Use "constructor(...) { ... }" instead.
+	function minter(string _currency, uint128 _Multiplier) {  
+ ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/35421.sol:297:9: Warning: Invoking events without "emit" prefix is deprecated.
+        EventAddressChange(pricer, future, releaseTime);
+        ^---------------------------------------------^
+/../data/reentrancy/solidity_contract/35421.sol:423:60: Warning: Using contract member "balance" inherited from the address type is deprecated. Convert the contract to "address" type to access the member, for example use "address(contract).balance" instead.
+		return StaticEthAvailable(cast(Risk.totalSupply()), cast(this.balance));
+		                                                         ^----------^
+/../data/reentrancy/solidity_contract/35421.sol:460:97: Warning: Using contract member "balance" inherited from the address type is deprecated. Convert the contract to "address" type to access the member, for example use "address(contract).balance" instead.
+        return RiskPrice(_currentPrice,cast(Static.totalSupply()),cast(Risk.totalSupply()),cast(this.balance));
+                                                                                                ^----------^
+/../data/reentrancy/solidity_contract/35421.sol:466:30: Warning: Using contract member "balance" inherited from the address type is deprecated. Convert the contract to "address" type to access the member, for example use "address(contract).balance" instead.
+            return wdiv(cast(this.balance) , cast(Risk.totalSupply()));  
+                             ^----------^
+/../data/reentrancy/solidity_contract/35421.sol:474:12: Warning: Using contract member "balance" inherited from the address type is deprecated. Convert the contract to "address" type to access the member, for example use "address(contract).balance" instead.
+        if(this.balance>0){
+           ^----------^
+/../data/reentrancy/solidity_contract/35421.sol:475:59: Warning: Using contract member "balance" inherited from the address type is deprecated. Convert the contract to "address" type to access the member, for example use "address(contract).balance" instead.
+            return wdiv(cast(Static.totalSupply()) , cast(this.balance));  
+                                                          ^----------^
+/../data/reentrancy/solidity_contract/35421.sol:539:81: Warning: Using contract member "balance" inherited from the address type is deprecated. Convert the contract to "address" type to access the member, for example use "address(contract).balance" instead.
+			uint128 StaticAvail = StaticEthAvailable(cast(Risk.totalSupply()), wsub(cast(this.balance),_details.amount)); 
+			                                                                             ^----------^
+/../data/reentrancy/solidity_contract/35421.sol:565:17: Warning: Invoking events without "emit" prefix is deprecated.
+                EventCreateStatic(_details.holder, wmul(AmountMint , _Price), _TransID, _Price);  
+                ^-----------------------------------------------------------------------------^
+/../data/reentrancy/solidity_contract/35421.sol:579:17: Warning: Using contract member "balance" inherited from the address type is deprecated. Convert the contract to "address" type to access the member, for example use "address(contract).balance" instead.
+		if(wless(cast(this.balance),_details.amount)){
+		              ^----------^
+/../data/reentrancy/solidity_contract/35421.sol:582:96: Warning: Using contract member "balance" inherited from the address type is deprecated. Convert the contract to "address" type to access the member, for example use "address(contract).balance" instead.
+			CurRiskPrice=RiskPrice(_Price,cast(Static.totalSupply()),cast(Risk.totalSupply()),wsub(cast(this.balance),_details.amount));
+			                                                                                            ^----------^
+/../data/reentrancy/solidity_contract/35421.sol:587:13: Warning: Invoking events without "emit" prefix is deprecated.
+            EventCreateRisk(_details.holder, quantity, _TransID, _Price);  
+            ^----------------------------------------------------------^
+/../data/reentrancy/solidity_contract/35421.sol:604:13: Warning: Invoking events without "emit" prefix is deprecated.
+            EventRedeemStatic(_details.holder,_details.amount ,_TransID, _Price);
+            ^------------------------------------------------------------------^
+/../data/reentrancy/solidity_contract/35421.sol:605:28: Warning: Using contract member "balance" inherited from the address type is deprecated. Convert the contract to "address" type to access the member, for example use "address(contract).balance" instead.
+            if (wless(cast(this.balance),_ETHReturned)) {
+                           ^----------^
+/../data/reentrancy/solidity_contract/35421.sol:606:36: Warning: Using contract member "balance" inherited from the address type is deprecated. Convert the contract to "address" type to access the member, for example use "address(contract).balance" instead.
+                 _ETHReturned=cast(this.balance); 
+                                   ^----------^
+/../data/reentrancy/solidity_contract/35421.sol:614:5: Warning: Invoking events without "emit" prefix is deprecated.
+				EventCreateStatic(_details.holder,_details.amount ,_TransID, _Price);   
+				^------------------------------------------------------------------^
+/../data/reentrancy/solidity_contract/35421.sol:616:12: Warning: Using contract member "balance" inherited from the address type is deprecated. Convert the contract to "address" type to access the member, for example use "address(contract).balance" instead.
+			if ( 0==this.balance) {
+			        ^----------^
+/../data/reentrancy/solidity_contract/35421.sol:634:17: Warning: Invoking events without "emit" prefix is deprecated.
+                EventRedeemRisk(_details.holder,_details.amount ,_TransID, _Price);
+                ^----------------------------------------------------------------^
+/../data/reentrancy/solidity_contract/35421.sol:635:33: Warning: Using contract member "balance" inherited from the address type is deprecated. Convert the contract to "address" type to access the member, for example use "address(contract).balance" instead.
+                if ( wless(cast(this.balance),_ETHReturned)) {  
+                                ^----------^
+/../data/reentrancy/solidity_contract/35421.sol:636:40: Warning: Using contract member "balance" inherited from the address type is deprecated. Convert the contract to "address" type to access the member, for example use "address(contract).balance" instead.
+                     _ETHReturned=cast(this.balance);
+                                       ^----------^
+/../data/reentrancy/solidity_contract/35421.sol:644:21: Warning: Invoking events without "emit" prefix is deprecated.
+                    EventCreateRisk(_details.holder,_details.amount ,_TransID, _Price);
+                    ^----------------------------------------------------------------^
+/../data/reentrancy/solidity_contract/35421.sol:693:4: Warning: Invoking events without "emit" prefix is deprecated.
+			EventBankrupt();
+			^-------------^
+/../data/reentrancy/solidity_contract/35421.sol:8:3: Warning: No visibility specified. Defaulting to "public". 
+  function owned() {
+  ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/35421.sol:11:3: Warning: No visibility specified. Defaulting to "public". 
+  function changeOwner(address newOwner) onlyOwner {
+  ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/35421.sol:22:3: Warning: No visibility specified. Defaulting to "public". 
+  function kill() onlyOwner {
+  ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/35421.sol:91:5: Warning: No visibility specified. Defaulting to "public". 
+    function wadd(uint128 x, uint128 y) constant  returns (uint128) {
+    ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/35421.sol:95:5: Warning: No visibility specified. Defaulting to "public". 
+    function wsub(uint128 x, uint128 y) constant   returns (uint128) {
+    ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/35421.sol:99:5: Warning: No visibility specified. Defaulting to "public". 
+    function wmul(uint128 x, uint128 y) constant returns (uint128 z) {
+    ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/35421.sol:129:5: Warning: No visibility specified. Defaulting to "public". 
+    function Leverage() constant returns (uint128)  {}
+    ^------------------------------------------------^
+/../data/reentrancy/solidity_contract/35421.sol:130:5: Warning: No visibility specified. Defaulting to "public". 
+    function RiskPrice(uint128 _currentPrice,uint128 _StaticTotal,uint128 _RiskTotal, uint128 _ETHTotal) constant returns (uint128 price)  {}
+    ^---------------------------------------------------------------------------------------------------------------------------------------^
+/../data/reentrancy/solidity_contract/35421.sol:130:24: Warning: Unused function parameter. Remove or comment out the variable name to silence this warning.
+    function RiskPrice(uint128 _currentPrice,uint128 _StaticTotal,uint128 _RiskTotal, uint128 _ETHTotal) constant returns (uint128 price)  {}
+                       ^-------------------^
+/../data/reentrancy/solidity_contract/35421.sol:130:46: Warning: Unused function parameter. Remove or comment out the variable name to silence this warning.
+    function RiskPrice(uint128 _currentPrice,uint128 _StaticTotal,uint128 _RiskTotal, uint128 _ETHTotal) constant returns (uint128 price)  {}
+                                             ^------------------^
+/../data/reentrancy/solidity_contract/35421.sol:130:67: Warning: Unused function parameter. Remove or comment out the variable name to silence this warning.
+    function RiskPrice(uint128 _currentPrice,uint128 _StaticTotal,uint128 _RiskTotal, uint128 _ETHTotal) constant returns (uint128 price)  {}
+                                                                  ^----------------^
+/../data/reentrancy/solidity_contract/35421.sol:130:87: Warning: Unused function parameter. Remove or comment out the variable name to silence this warning.
+    function RiskPrice(uint128 _currentPrice,uint128 _StaticTotal,uint128 _RiskTotal, uint128 _ETHTotal) constant returns (uint128 price)  {}
+                                                                                      ^---------------^
+/../data/reentrancy/solidity_contract/35421.sol:130:124: Warning: Unused function parameter. Remove or comment out the variable name to silence this warning.
+    function RiskPrice(uint128 _currentPrice,uint128 _StaticTotal,uint128 _RiskTotal, uint128 _ETHTotal) constant returns (uint128 price)  {}
+                                                                                                                           ^-----------^
+/../data/reentrancy/solidity_contract/35421.sol:131:5: Warning: No visibility specified. Defaulting to "public". 
+    function RiskPrice(uint128 _currentPrice) constant returns (uint128 price)  {}     
+    ^----------------------------------------------------------------------------^
+/../data/reentrancy/solidity_contract/35421.sol:131:24: Warning: Unused function parameter. Remove or comment out the variable name to silence this warning.
+    function RiskPrice(uint128 _currentPrice) constant returns (uint128 price)  {}     
+                       ^-------------------^
+/../data/reentrancy/solidity_contract/35421.sol:131:65: Warning: Unused function parameter. Remove or comment out the variable name to silence this warning.
+    function RiskPrice(uint128 _currentPrice) constant returns (uint128 price)  {}     
+                                                                ^-----------^
+/../data/reentrancy/solidity_contract/35421.sol:132:5: Warning: No visibility specified. Defaulting to "public". 
+    function PriceReturn(uint _TransID,uint128 _Price) {}
+    ^---------------------------------------------------^
+/../data/reentrancy/solidity_contract/35421.sol:132:26: Warning: Unused function parameter. Remove or comment out the variable name to silence this warning.
+    function PriceReturn(uint _TransID,uint128 _Price) {}
+                         ^-----------^
+/../data/reentrancy/solidity_contract/35421.sol:132:40: Warning: Unused function parameter. Remove or comment out the variable name to silence this warning.
+    function PriceReturn(uint _TransID,uint128 _Price) {}
+                                       ^------------^
+/../data/reentrancy/solidity_contract/35421.sol:133:52: Warning: Unused function parameter. Remove or comment out the variable name to silence this warning.
+    function NewStatic() external payable returns (uint _TransID)  {}
+                                                   ^-----------^
+/../data/reentrancy/solidity_contract/35421.sol:134:27: Warning: Unused function parameter. Remove or comment out the variable name to silence this warning.
+    function NewStaticAdr(address _Risk) external payable returns (uint _TransID)  {}
+                          ^-----------^
+/../data/reentrancy/solidity_contract/35421.sol:134:68: Warning: Unused function parameter. Remove or comment out the variable name to silence this warning.
+    function NewStaticAdr(address _Risk) external payable returns (uint _TransID)  {}
+                                                                   ^-----------^
+/../data/reentrancy/solidity_contract/35421.sol:135:50: Warning: Unused function parameter. Remove or comment out the variable name to silence this warning.
+    function NewRisk() external payable returns (uint _TransID)  {}
+                                                 ^-----------^
+/../data/reentrancy/solidity_contract/35421.sol:136:25: Warning: Unused function parameter. Remove or comment out the variable name to silence this warning.
+    function NewRiskAdr(address _Risk) external payable returns (uint _TransID)  {}
+                        ^-----------^
+/../data/reentrancy/solidity_contract/35421.sol:136:66: Warning: Unused function parameter. Remove or comment out the variable name to silence this warning.
+    function NewRiskAdr(address _Risk) external payable returns (uint _TransID)  {}
+                                                                 ^-----------^
+/../data/reentrancy/solidity_contract/35421.sol:137:22: Warning: Unused function parameter. Remove or comment out the variable name to silence this warning.
+    function RetRisk(uint128 _Quantity) external payable returns (uint _TransID)  {}
+                     ^---------------^
+/../data/reentrancy/solidity_contract/35421.sol:137:67: Warning: Unused function parameter. Remove or comment out the variable name to silence this warning.
+    function RetRisk(uint128 _Quantity) external payable returns (uint _TransID)  {}
+                                                                  ^-----------^
+/../data/reentrancy/solidity_contract/35421.sol:138:24: Warning: Unused function parameter. Remove or comment out the variable name to silence this warning.
+    function RetStatic(uint128 _Quantity) external payable returns (uint _TransID)  {}
+                       ^---------------^
+/../data/reentrancy/solidity_contract/35421.sol:138:69: Warning: Unused function parameter. Remove or comment out the variable name to silence this warning.
+    function RetStatic(uint128 _Quantity) external payable returns (uint _TransID)  {}
+                                                                    ^-----------^
+/../data/reentrancy/solidity_contract/35421.sol:139:5: Warning: No visibility specified. Defaulting to "public". 
+    function Strike() constant returns (uint128)  {}
+    ^----------------------------------------------^
+/../data/reentrancy/solidity_contract/35421.sol:149:5: Warning: No visibility specified. Defaulting to "public". 
+    function setMinter(address _newAddress) {}
+    ^----------------------------------------^
+/../data/reentrancy/solidity_contract/35421.sol:149:24: Warning: Unused function parameter. Remove or comment out the variable name to silence this warning.
+    function setMinter(address _newAddress) {}
+                       ^-----------------^
+/../data/reentrancy/solidity_contract/35421.sol:150:5: Warning: No visibility specified. Defaulting to "public". 
+    function __callback(bytes32 myid, string result) {}
+    ^-------------------------------------------------^
+/../data/reentrancy/solidity_contract/35421.sol:150:25: Warning: Unused function parameter. Remove or comment out the variable name to silence this warning.
+    function __callback(bytes32 myid, string result) {}
+                        ^----------^
+/../data/reentrancy/solidity_contract/35421.sol:150:39: Warning: Unused function parameter. Remove or comment out the variable name to silence this warning.
+    function __callback(bytes32 myid, string result) {}
+                                      ^-----------^
+/../data/reentrancy/solidity_contract/35421.sol:151:5: Warning: No visibility specified. Defaulting to "public". 
+    function queryCost() constant returns (uint128 _value) {}
+    ^-------------------------------------------------------^
+/../data/reentrancy/solidity_contract/35421.sol:151:44: Warning: Unused function parameter. Remove or comment out the variable name to silence this warning.
+    function queryCost() constant returns (uint128 _value) {}
+                                           ^------------^
+/../data/reentrancy/solidity_contract/35421.sol:152:5: Warning: No visibility specified. Defaulting to "public". 
+    function QuickPrice() payable {}
+    ^------------------------------^
+/../data/reentrancy/solidity_contract/35421.sol:153:5: Warning: No visibility specified. Defaulting to "public". 
+    function requestPrice(uint _actionID) payable returns (uint _TrasID) {}
+    ^---------------------------------------------------------------------^
+/../data/reentrancy/solidity_contract/35421.sol:153:27: Warning: Unused function parameter. Remove or comment out the variable name to silence this warning.
+    function requestPrice(uint _actionID) payable returns (uint _TrasID) {}
+                          ^------------^
+/../data/reentrancy/solidity_contract/35421.sol:153:60: Warning: Unused function parameter. Remove or comment out the variable name to silence this warning.
+    function requestPrice(uint _actionID) payable returns (uint _TrasID) {}
+                                                           ^----------^
+/../data/reentrancy/solidity_contract/35421.sol:154:5: Warning: No visibility specified. Defaulting to "public". 
+    function collectFee() returns(bool) {}
+    ^------------------------------------^
+/../data/reentrancy/solidity_contract/35421.sol:155:5: Warning: No visibility specified. Defaulting to "public". 
+    function () {
+    ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/35421.sol:172:5: Warning: No visibility specified. Defaulting to "public". 
+    function mintCoin(address target, uint256 mintedAmount) returns (bool success) {}
+    ^-------------------------------------------------------------------------------^
+/../data/reentrancy/solidity_contract/35421.sol:172:23: Warning: Unused function parameter. Remove or comment out the variable name to silence this warning.
+    function mintCoin(address target, uint256 mintedAmount) returns (bool success) {}
+                      ^------------^
+/../data/reentrancy/solidity_contract/35421.sol:172:39: Warning: Unused function parameter. Remove or comment out the variable name to silence this warning.
+    function mintCoin(address target, uint256 mintedAmount) returns (bool success) {}
+                                      ^------------------^
+/../data/reentrancy/solidity_contract/35421.sol:172:70: Warning: Unused function parameter. Remove or comment out the variable name to silence this warning.
+    function mintCoin(address target, uint256 mintedAmount) returns (bool success) {}
+                                                                     ^----------^
+/../data/reentrancy/solidity_contract/35421.sol:173:5: Warning: No visibility specified. Defaulting to "public". 
+    function meltCoin(address target, uint256 meltedAmount) returns (bool success) {}
+    ^-------------------------------------------------------------------------------^
+/../data/reentrancy/solidity_contract/35421.sol:173:23: Warning: Unused function parameter. Remove or comment out the variable name to silence this warning.
+    function meltCoin(address target, uint256 meltedAmount) returns (bool success) {}
+                      ^------------^
+/../data/reentrancy/solidity_contract/35421.sol:173:39: Warning: Unused function parameter. Remove or comment out the variable name to silence this warning.
+    function meltCoin(address target, uint256 meltedAmount) returns (bool success) {}
+                                      ^------------------^
+/../data/reentrancy/solidity_contract/35421.sol:173:70: Warning: Unused function parameter. Remove or comment out the variable name to silence this warning.
+    function meltCoin(address target, uint256 meltedAmount) returns (bool success) {}
+                                                                     ^----------^
+/../data/reentrancy/solidity_contract/35421.sol:174:5: Warning: No visibility specified. Defaulting to "public". 
+    function approveAndCall(address _spender, uint256 _value, bytes _extraData){}
+    ^---------------------------------------------------------------------------^
+/../data/reentrancy/solidity_contract/35421.sol:174:29: Warning: Unused function parameter. Remove or comment out the variable name to silence this warning.
+    function approveAndCall(address _spender, uint256 _value, bytes _extraData){}
+                            ^--------------^
+/../data/reentrancy/solidity_contract/35421.sol:174:47: Warning: Unused function parameter. Remove or comment out the variable name to silence this warning.
+    function approveAndCall(address _spender, uint256 _value, bytes _extraData){}
+                                              ^------------^
+/../data/reentrancy/solidity_contract/35421.sol:174:63: Warning: Unused function parameter. Remove or comment out the variable name to silence this warning.
+    function approveAndCall(address _spender, uint256 _value, bytes _extraData){}
+                                                              ^--------------^
+/../data/reentrancy/solidity_contract/35421.sol:176:5: Warning: No visibility specified. Defaulting to "public". 
+    function setMinter(address _minter) {}   
+    ^------------------------------------^
+/../data/reentrancy/solidity_contract/35421.sol:176:24: Warning: Unused function parameter. Remove or comment out the variable name to silence this warning.
+    function setMinter(address _minter) {}   
+                       ^-------------^
+/../data/reentrancy/solidity_contract/35421.sol:177:2: Warning: No visibility specified. Defaulting to "public". 
+	function increaseApproval (address _spender, uint256 _addedValue) returns (bool success) {}    
+	^-----------------------------------------------------------------------------------------^
+/../data/reentrancy/solidity_contract/35421.sol:177:29: Warning: Unused function parameter. Remove or comment out the variable name to silence this warning.
+	function increaseApproval (address _spender, uint256 _addedValue) returns (bool success) {}    
+	                           ^--------------^
+/../data/reentrancy/solidity_contract/35421.sol:177:47: Warning: Unused function parameter. Remove or comment out the variable name to silence this warning.
+	function increaseApproval (address _spender, uint256 _addedValue) returns (bool success) {}    
+	                                             ^-----------------^
+/../data/reentrancy/solidity_contract/35421.sol:177:77: Warning: Unused function parameter. Remove or comment out the variable name to silence this warning.
+	function increaseApproval (address _spender, uint256 _addedValue) returns (bool success) {}    
+	                                                                           ^----------^
+/../data/reentrancy/solidity_contract/35421.sol:178:2: Warning: No visibility specified. Defaulting to "public". 
+	function decreaseApproval (address _spender, uint256 _subtractedValue) 	returns (bool success) {} 
+	^-----------------------------------------------------------------------------------------------^
+/../data/reentrancy/solidity_contract/35421.sol:178:29: Warning: Unused function parameter. Remove or comment out the variable name to silence this warning.
+	function decreaseApproval (address _spender, uint256 _subtractedValue) 	returns (bool success) {} 
+	                           ^--------------^
+/../data/reentrancy/solidity_contract/35421.sol:178:47: Warning: Unused function parameter. Remove or comment out the variable name to silence this warning.
+	function decreaseApproval (address _spender, uint256 _subtractedValue) 	returns (bool success) {} 
+	                                             ^----------------------^
+/../data/reentrancy/solidity_contract/35421.sol:178:83: Warning: Unused function parameter. Remove or comment out the variable name to silence this warning.
+	function decreaseApproval (address _spender, uint256 _subtractedValue) 	returns (bool success) {} 
+	                                                                       	         ^----------^
+/../data/reentrancy/solidity_contract/35421.sol:182:5: Warning: No visibility specified. Defaulting to "public". 
+    function balanceOf(address _owner) constant returns (uint256 balance) {}    
+    ^----------------------------------------------------------------------^
+/../data/reentrancy/solidity_contract/35421.sol:182:24: Warning: Unused function parameter. Remove or comment out the variable name to silence this warning.
+    function balanceOf(address _owner) constant returns (uint256 balance) {}    
+                       ^------------^
+/../data/reentrancy/solidity_contract/35421.sol:182:58: Warning: Unused function parameter. Remove or comment out the variable name to silence this warning.
+    function balanceOf(address _owner) constant returns (uint256 balance) {}    
+                                                         ^-------------^
+/../data/reentrancy/solidity_contract/35421.sol:189:5: Warning: No visibility specified. Defaulting to "public". 
+    function transfer(address _to, uint256 _value) returns (bool success) {}
+    ^----------------------------------------------------------------------^
+/../data/reentrancy/solidity_contract/35421.sol:189:23: Warning: Unused function parameter. Remove or comment out the variable name to silence this warning.
+    function transfer(address _to, uint256 _value) returns (bool success) {}
+                      ^---------^
+/../data/reentrancy/solidity_contract/35421.sol:189:36: Warning: Unused function parameter. Remove or comment out the variable name to silence this warning.
+    function transfer(address _to, uint256 _value) returns (bool success) {}
+                                   ^------------^
+/../data/reentrancy/solidity_contract/35421.sol:189:61: Warning: Unused function parameter. Remove or comment out the variable name to silence this warning.
+    function transfer(address _to, uint256 _value) returns (bool success) {}
+                                                            ^----------^
+/../data/reentrancy/solidity_contract/35421.sol:197:5: Warning: No visibility specified. Defaulting to "public". 
+    function transferFrom(address _from, address _to, uint256 _value) returns (bool success) {}
+    ^-----------------------------------------------------------------------------------------^
+/../data/reentrancy/solidity_contract/35421.sol:197:27: Warning: Unused function parameter. Remove or comment out the variable name to silence this warning.
+    function transferFrom(address _from, address _to, uint256 _value) returns (bool success) {}
+                          ^-----------^
+/../data/reentrancy/solidity_contract/35421.sol:197:42: Warning: Unused function parameter. Remove or comment out the variable name to silence this warning.
+    function transferFrom(address _from, address _to, uint256 _value) returns (bool success) {}
+                                         ^---------^
+/../data/reentrancy/solidity_contract/35421.sol:197:55: Warning: Unused function parameter. Remove or comment out the variable name to silence this warning.
+    function transferFrom(address _from, address _to, uint256 _value) returns (bool success) {}
+                                                      ^------------^
+/../data/reentrancy/solidity_contract/35421.sol:197:80: Warning: Unused function parameter. Remove or comment out the variable name to silence this warning.
+    function transferFrom(address _from, address _to, uint256 _value) returns (bool success) {}
+                                                                               ^----------^
+/../data/reentrancy/solidity_contract/35421.sol:203:5: Warning: No visibility specified. Defaulting to "public". 
+    function approve(address _spender, uint256 _value) returns (bool success) {}
+    ^--------------------------------------------------------------------------^
+/../data/reentrancy/solidity_contract/35421.sol:203:22: Warning: Unused function parameter. Remove or comment out the variable name to silence this warning.
+    function approve(address _spender, uint256 _value) returns (bool success) {}
+                     ^--------------^
+/../data/reentrancy/solidity_contract/35421.sol:203:40: Warning: Unused function parameter. Remove or comment out the variable name to silence this warning.
+    function approve(address _spender, uint256 _value) returns (bool success) {}
+                                       ^------------^
+/../data/reentrancy/solidity_contract/35421.sol:203:65: Warning: Unused function parameter. Remove or comment out the variable name to silence this warning.
+    function approve(address _spender, uint256 _value) returns (bool success) {}
+                                                                ^----------^
+/../data/reentrancy/solidity_contract/35421.sol:211:5: Warning: No visibility specified. Defaulting to "public". 
+    function allowance(address _owner, address _spender) constant returns (uint256 remaining) {}
+    ^------------------------------------------------------------------------------------------^
+/../data/reentrancy/solidity_contract/35421.sol:211:24: Warning: Unused function parameter. Remove or comment out the variable name to silence this warning.
+    function allowance(address _owner, address _spender) constant returns (uint256 remaining) {}
+                       ^------------^
+/../data/reentrancy/solidity_contract/35421.sol:211:40: Warning: Unused function parameter. Remove or comment out the variable name to silence this warning.
+    function allowance(address _owner, address _spender) constant returns (uint256 remaining) {}
+                                       ^--------------^
+/../data/reentrancy/solidity_contract/35421.sol:211:76: Warning: Unused function parameter. Remove or comment out the variable name to silence this warning.
+    function allowance(address _owner, address _spender) constant returns (uint256 remaining) {}
+                                                                           ^---------------^
+/../data/reentrancy/solidity_contract/35421.sol:251:5: Warning: No visibility specified. Defaulting to "public". 
+    function Freeze() onlyOwner {
+    ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/35421.sol:263:3: Warning: No visibility specified. Defaulting to "public". 
+  function oneWrite() {
+  ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/35421.sol:293:5: Warning: No visibility specified. Defaulting to "public". 
+    function setPricer(address newAddress) onlyOwner {
+    ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/35421.sol:351:2: Warning: No visibility specified. Defaulting to "public". 
+	function minter(string _currency, uint128 _Multiplier) {  
+ ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/35421.sol:358:2: Warning: No visibility specified. Defaulting to "public". 
+	function () {
+ ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/35421.sol:421:5: Warning: No visibility specified. Defaulting to "public". 
+    function StaticEthAvailable() 	constant returns (uint128)  {
+    ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/35421.sol:426:2: Warning: No visibility specified. Defaulting to "public". 
+	function StaticEthAvailable(uint128 _RiskTotal, uint128 _TotalETH) 	constant 	returns (uint128)  {
+ ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/35421.sol:437:2: Warning: No visibility specified. Defaulting to "public". 
+	function RiskPrice(uint128 _currentPrice,uint128 _StaticTotal,uint128 _RiskTotal, uint128 _ETHTotal) constant 	returns (uint128 price)  {
+ ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/35421.sol:453:5: Warning: No visibility specified. Defaulting to "public". 
+    function RiskPrice() constant returns (uint128 price)  {
+    ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/35421.sol:458:5: Warning: No visibility specified. Defaulting to "public". 
+    function RiskPrice(uint128 _currentPrice) 	constant 	returns (uint128 price)  {
+    ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/35421.sol:483:5: Warning: No visibility specified. Defaulting to "public". 
+    function setFee(uint128 _newFee) onlyOwner {
+    ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/35421.sol:488:5: Warning: No visibility specified. Defaulting to "public". 
+    function setCoins(address newRisk,address newStatic) updates onlyOwner 	writeOnce {         
+    ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/35421.sol:496:5: Warning: No visibility specified. Defaulting to "public". 
+    function PriceReturn(uint _TransID,uint128 _Price) 	onlyPricer {
+    ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/35421.sol:43:5: Warning: Function state mutability can be restricted to pure
+    function hmore(uint128 x, uint128 y) constant internal returns (bool) {
+    ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/35421.sol:47:5: Warning: Function state mutability can be restricted to pure
+    function hless(uint128 x, uint128 y) constant internal returns (bool) {
+    ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/35421.sol:51:5: Warning: Function state mutability can be restricted to pure
+    function hadd(uint128 x, uint128 y) constant internal returns (uint128 z) {
+    ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/35421.sol:55:5: Warning: Function state mutability can be restricted to pure
+    function hsub(uint128 x, uint128 y) constant internal returns (uint128 z) {
+    ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/35421.sol:59:5: Warning: Function state mutability can be restricted to pure
+    function hmul(uint128 x, uint128 y) constant internal returns (uint128 z) {
+    ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/35421.sol:63:5: Warning: Function state mutability can be restricted to pure
+    function hdiv(uint128 x, uint128 y) constant internal returns (uint128 z) {
+    ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/35421.sol:67:5: Warning: Function state mutability can be restricted to pure
+    function hmin(uint128 x, uint128 y) constant internal returns (uint128 z) {
+    ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/35421.sol:71:5: Warning: Function state mutability can be restricted to pure
+    function hmax(uint128 x, uint128 y) constant internal returns (uint128 z) {
+    ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/35421.sol:115:5: Warning: Function state mutability can be restricted to pure
+    function cast(uint256 x) constant internal returns (uint128 z) {
+    ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/35421.sol:129:5: Warning: Function state mutability can be restricted to pure
+    function Leverage() constant returns (uint128)  {}
+    ^------------------------------------------------^
+/../data/reentrancy/solidity_contract/35421.sol:130:5: Warning: Function state mutability can be restricted to pure
+    function RiskPrice(uint128 _currentPrice,uint128 _StaticTotal,uint128 _RiskTotal, uint128 _ETHTotal) constant returns (uint128 price)  {}
+    ^---------------------------------------------------------------------------------------------------------------------------------------^
+/../data/reentrancy/solidity_contract/35421.sol:131:5: Warning: Function state mutability can be restricted to pure
+    function RiskPrice(uint128 _currentPrice) constant returns (uint128 price)  {}     
+    ^----------------------------------------------------------------------------^
+/../data/reentrancy/solidity_contract/35421.sol:132:5: Warning: Function state mutability can be restricted to pure
+    function PriceReturn(uint _TransID,uint128 _Price) {}
+    ^---------------------------------------------------^
+/../data/reentrancy/solidity_contract/35421.sol:139:5: Warning: Function state mutability can be restricted to pure
+    function Strike() constant returns (uint128)  {}
+    ^----------------------------------------------^
+/../data/reentrancy/solidity_contract/35421.sol:149:5: Warning: Function state mutability can be restricted to pure
+    function setMinter(address _newAddress) {}
+    ^----------------------------------------^
+/../data/reentrancy/solidity_contract/35421.sol:150:5: Warning: Function state mutability can be restricted to pure
+    function __callback(bytes32 myid, string result) {}
+    ^-------------------------------------------------^
+/../data/reentrancy/solidity_contract/35421.sol:151:5: Warning: Function state mutability can be restricted to pure
+    function queryCost() constant returns (uint128 _value) {}
+    ^-------------------------------------------------------^
+/../data/reentrancy/solidity_contract/35421.sol:154:5: Warning: Function state mutability can be restricted to pure
+    function collectFee() returns(bool) {}
+    ^------------------------------------^
+/../data/reentrancy/solidity_contract/35421.sol:172:5: Warning: Function state mutability can be restricted to pure
+    function mintCoin(address target, uint256 mintedAmount) returns (bool success) {}
+    ^-------------------------------------------------------------------------------^
+/../data/reentrancy/solidity_contract/35421.sol:173:5: Warning: Function state mutability can be restricted to pure
+    function meltCoin(address target, uint256 meltedAmount) returns (bool success) {}
+    ^-------------------------------------------------------------------------------^
+/../data/reentrancy/solidity_contract/35421.sol:174:5: Warning: Function state mutability can be restricted to pure
+    function approveAndCall(address _spender, uint256 _value, bytes _extraData){}
+    ^---------------------------------------------------------------------------^
+/../data/reentrancy/solidity_contract/35421.sol:176:5: Warning: Function state mutability can be restricted to pure
+    function setMinter(address _minter) {}   
+    ^------------------------------------^
+/../data/reentrancy/solidity_contract/35421.sol:177:2: Warning: Function state mutability can be restricted to pure
+	function increaseApproval (address _spender, uint256 _addedValue) returns (bool success) {}    
+	^-----------------------------------------------------------------------------------------^
+/../data/reentrancy/solidity_contract/35421.sol:178:2: Warning: Function state mutability can be restricted to pure
+	function decreaseApproval (address _spender, uint256 _subtractedValue) 	returns (bool success) {} 
+	^-----------------------------------------------------------------------------------------------^
+/../data/reentrancy/solidity_contract/35421.sol:182:5: Warning: Function state mutability can be restricted to pure
+    function balanceOf(address _owner) constant returns (uint256 balance) {}    
+    ^----------------------------------------------------------------------^
+/../data/reentrancy/solidity_contract/35421.sol:189:5: Warning: Function state mutability can be restricted to pure
+    function transfer(address _to, uint256 _value) returns (bool success) {}
+    ^----------------------------------------------------------------------^
+/../data/reentrancy/solidity_contract/35421.sol:197:5: Warning: Function state mutability can be restricted to pure
+    function transferFrom(address _from, address _to, uint256 _value) returns (bool success) {}
+    ^-----------------------------------------------------------------------------------------^
+/../data/reentrancy/solidity_contract/35421.sol:203:5: Warning: Function state mutability can be restricted to pure
+    function approve(address _spender, uint256 _value) returns (bool success) {}
+    ^--------------------------------------------------------------------------^
+/../data/reentrancy/solidity_contract/35421.sol:211:5: Warning: Function state mutability can be restricted to pure
+    function allowance(address _owner, address _spender) constant returns (uint256 remaining) {}
+    ^------------------------------------------------------------------------------------------^
+/../data/reentrancy/solidity_contract/35421.sol:652:2: Warning: Function state mutability can be restricted to view
+	function IsWallet(address _address) internal returns(bool){
+ ^ (Relevant source part starts here and spans across multiple lines).
+
+INFO:Detectors:[91m
+minter.RetCoinInternal (/../data/reentrancy/solidity_contract/35421.sol#662-679) sends eth to arbitrary user
+	Dangerous calls:
+	- PricerID = pricer.requestPrice.value(uint256(Fee))(TransID) (/../data/reentrancy/solidity_contract/35421.sol#675)
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#functions-that-send-ether-to-arbitrary-destinations[0m
+INFO:Detectors:[91m
+Reentrancy in minter.PriceReturn (/../data/reentrancy/solidity_contract/35421.sol#496-524):
+	External calls:
+	- Static.totalSupply() > 0 && Risk.totalSupply() > 0 (/../data/reentrancy/solidity_contract/35421.sol#502-504)
+	- ActionNewStatic(details,_TransID,_Price) (/../data/reentrancy/solidity_contract/35421.sol#508)
+	- ActionRetStatic(details,_TransID,_Price) (/../data/reentrancy/solidity_contract/35421.sol#512)
+	External calls sending eth:
+	- ActionNewStatic(details,_TransID,_Price) (/../data/reentrancy/solidity_contract/35421.sol#508)
+	- ActionRetStatic(details,_TransID,_Price) (/../data/reentrancy/solidity_contract/35421.sol#512)
+	State variables written after the call(s):
+	- _ds_mutex (/../data/reentrancy/solidity_contract/35421.sol#512)
+	- frozen (/../data/reentrancy/solidity_contract/35421.sol#512)
+Reentrancy in minter.PriceReturn (/../data/reentrancy/solidity_contract/35421.sol#496-524):
+	External calls:
+	- Static.totalSupply() > 0 && Risk.totalSupply() > 0 (/../data/reentrancy/solidity_contract/35421.sol#502-504)
+	- ActionNewStatic(details,_TransID,_Price) (/../data/reentrancy/solidity_contract/35421.sol#508)
+	- ActionRetStatic(details,_TransID,_Price) (/../data/reentrancy/solidity_contract/35421.sol#512)
+	- ActionNewRisk(details,_TransID,_Price) (/../data/reentrancy/solidity_contract/35421.sol#516)
+	External calls sending eth:
+	- ActionNewStatic(details,_TransID,_Price) (/../data/reentrancy/solidity_contract/35421.sol#508)
+	- ActionRetStatic(details,_TransID,_Price) (/../data/reentrancy/solidity_contract/35421.sol#512)
+	- ActionNewRisk(details,_TransID,_Price) (/../data/reentrancy/solidity_contract/35421.sol#516)
+	State variables written after the call(s):
+	- _ds_mutex (/../data/reentrancy/solidity_contract/35421.sol#516)
+Reentrancy in minter.PriceReturn (/../data/reentrancy/solidity_contract/35421.sol#496-524):
+	External calls:
+	- Static.totalSupply() > 0 && Risk.totalSupply() > 0 (/../data/reentrancy/solidity_contract/35421.sol#502-504)
+	- ActionNewStatic(details,_TransID,_Price) (/../data/reentrancy/solidity_contract/35421.sol#508)
+	- ActionRetStatic(details,_TransID,_Price) (/../data/reentrancy/solidity_contract/35421.sol#512)
+	- ActionNewRisk(details,_TransID,_Price) (/../data/reentrancy/solidity_contract/35421.sol#516)
+	- ActionRetRisk(details,_TransID,_Price) (/../data/reentrancy/solidity_contract/35421.sol#520)
+	External calls sending eth:
+	- ActionNewStatic(details,_TransID,_Price) (/../data/reentrancy/solidity_contract/35421.sol#508)
+	- ActionRetStatic(details,_TransID,_Price) (/../data/reentrancy/solidity_contract/35421.sol#512)
+	- ActionNewRisk(details,_TransID,_Price) (/../data/reentrancy/solidity_contract/35421.sol#516)
+	- ActionRetRisk(details,_TransID,_Price) (/../data/reentrancy/solidity_contract/35421.sol#520)
+	State variables written after the call(s):
+	- _ds_mutex (/../data/reentrancy/solidity_contract/35421.sol#520)
+	- pending (/../data/reentrancy/solidity_contract/35421.sol#523)
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#reentrancy-vulnerabilities[0m
+INFO:Detectors:[93m
+minter.ActionRetStatic (/../data/reentrancy/solidity_contract/35421.sol#595-620) uses a dangerous strict equality:
+	- 0 == this.balance
+minter.ActionRetStatic (/../data/reentrancy/solidity_contract/35421.sol#595-620) uses a dangerous strict equality:
+	- 0 == this.balance
+minter.RiskPrice (/../data/reentrancy/solidity_contract/35421.sol#437-451) uses a dangerous strict equality:
+	- _ETHTotal == 0 || _RiskTotal == 0
+minter.ActionRetStatic (/../data/reentrancy/solidity_contract/35421.sol#595-620) uses a dangerous strict equality:
+	- 0 == this.balance
+minter.RiskPrice (/../data/reentrancy/solidity_contract/35421.sol#437-451) uses a dangerous strict equality:
+	- _ETHTotal == 0 || _RiskTotal == 0
+DSMath.cast (/../data/reentrancy/solidity_contract/35421.sol#115-117) uses a dangerous strict equality:
+	- assert(bool)((z = uint128(x)) == x)
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#dangerous-strict-equalities[0m
+INFO:Detectors:[93m
+Contract locking ether found in /../data/reentrancy/solidity_contract/35421.sol:
+	Contract I_Pricer has payable functions:
+	 - QuickPrice (/../data/reentrancy/solidity_contract/35421.sol#152)
+	 - requestPrice (/../data/reentrancy/solidity_contract/35421.sol#153)
+	But does not have a function to withdraw the ether
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#contracts-that-lock-ether[0m
+INFO:Detectors:[93m
+calldata in minter.ActionNewRisk (/../data/reentrancy/solidity_contract/35421.sol#590) is a local variable never initialiazed
+calldata in minter.ActionRetStatic (/../data/reentrancy/solidity_contract/35421.sol#608) is a local variable never initialiazed
+calldata in minter.ActionNewStatic (/../data/reentrancy/solidity_contract/35421.sol#570) is a local variable never initialiazed
+calldata in minter.ActionRetRisk (/../data/reentrancy/solidity_contract/35421.sol#638) is a local variable never initialiazed
+refund in minter.RetCoinInternal (/../data/reentrancy/solidity_contract/35421.sol#665) is a local variable never initialiazed
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#uninitialized-local-variables[0m
+INFO:Detectors:[93m
+minter.ActionNewStatic (/../data/reentrancy/solidity_contract/35421.sol#528-573) does not use the value returned by external calls:
+	-Static.mintCoin(_details.holder,uint256(wmul(AmountMint,_Price))) (/../data/reentrancy/solidity_contract/35421.sol#564)
+minter.ActionNewRisk (/../data/reentrancy/solidity_contract/35421.sol#575-593) does not use the value returned by external calls:
+	-Risk.mintCoin(_details.holder,uint256(quantity)) (/../data/reentrancy/solidity_contract/35421.sol#586)
+minter.ActionRetStatic (/../data/reentrancy/solidity_contract/35421.sol#595-620) does not use the value returned by external calls:
+	-Static.mintCoin(_details.holder,_details.amount) (/../data/reentrancy/solidity_contract/35421.sol#613)
+minter.ActionRetRisk (/../data/reentrancy/solidity_contract/35421.sol#622-650) does not use the value returned by external calls:
+	-Risk.mintCoin(_details.holder,_details.amount) (/../data/reentrancy/solidity_contract/35421.sol#643)
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#unused-return[0m
+INFO:Detectors:[92m
+Reentrancy in minter.ActionRetStatic (/../data/reentrancy/solidity_contract/35421.sol#595-620):
+	External calls:
+	- 0 == Risk.totalSupply() (/../data/reentrancy/solidity_contract/35421.sol#600)
+	- Static.meltCoin(_details.holder,_details.amount) (/../data/reentrancy/solidity_contract/35421.sol#602-619)
+	- tryExec(_details.holder,calldata,_ETHReturned) (/../data/reentrancy/solidity_contract/35421.sol#609-615)
+	- Static.mintCoin(_details.holder,_details.amount) (/../data/reentrancy/solidity_contract/35421.sol#613)
+	- Bankrupt() (/../data/reentrancy/solidity_contract/35421.sol#617)
+	External calls sending eth:
+	- tryExec(_details.holder,calldata,_ETHReturned) (/../data/reentrancy/solidity_contract/35421.sol#609-615)
+	State variables written after the call(s):
+	- frozen (/../data/reentrancy/solidity_contract/35421.sol#617)
+	- written (/../data/reentrancy/solidity_contract/35421.sol#617)
+Reentrancy in minter.Bankrupt (/../data/reentrancy/solidity_contract/35421.sol#692-700):
+	External calls:
+	- Static.kill() (/../data/reentrancy/solidity_contract/35421.sol#695)
+	- Risk.kill() (/../data/reentrancy/solidity_contract/35421.sol#696)
+	State variables written after the call(s):
+	- frozen (/../data/reentrancy/solidity_contract/35421.sol#698)
+	- written (/../data/reentrancy/solidity_contract/35421.sol#699)
+Reentrancy in minter.NewCoinInternal (/../data/reentrancy/solidity_contract/35421.sol#681-690):
+	External calls:
+	- Fee = wmax(wmul(_amount,mintFee),pricer.queryCost()) (/../data/reentrancy/solidity_contract/35421.sol#684)
+	State variables written after the call(s):
+	- TransID (/../data/reentrancy/solidity_contract/35421.sol#686)
+Reentrancy in minter.NewCoinInternal (/../data/reentrancy/solidity_contract/35421.sol#681-690):
+	External calls:
+	- Fee = wmax(wmul(_amount,mintFee),pricer.queryCost()) (/../data/reentrancy/solidity_contract/35421.sol#684)
+	- PricerID = pricer.requestPrice.value(uint256(Fee))(TransID) (/../data/reentrancy/solidity_contract/35421.sol#687)
+	External calls sending eth:
+	- PricerID = pricer.requestPrice.value(uint256(Fee))(TransID) (/../data/reentrancy/solidity_contract/35421.sol#687)
+	State variables written after the call(s):
+	- pending (/../data/reentrancy/solidity_contract/35421.sol#688)
+Reentrancy in minter.PriceReturn (/../data/reentrancy/solidity_contract/35421.sol#496-524):
+	External calls:
+	- Static.totalSupply() > 0 && Risk.totalSupply() > 0 (/../data/reentrancy/solidity_contract/35421.sol#502-504)
+	State variables written after the call(s):
+	- lastPrice (/../data/reentrancy/solidity_contract/35421.sol#503)
+Reentrancy in minter.PriceReturn (/../data/reentrancy/solidity_contract/35421.sol#496-524):
+	External calls:
+	- Static.totalSupply() > 0 && Risk.totalSupply() > 0 (/../data/reentrancy/solidity_contract/35421.sol#502-504)
+	- ActionNewStatic(details,_TransID,_Price) (/../data/reentrancy/solidity_contract/35421.sol#508)
+	- ActionRetStatic(details,_TransID,_Price) (/../data/reentrancy/solidity_contract/35421.sol#512)
+	External calls sending eth:
+	- ActionNewStatic(details,_TransID,_Price) (/../data/reentrancy/solidity_contract/35421.sol#508)
+	- ActionRetStatic(details,_TransID,_Price) (/../data/reentrancy/solidity_contract/35421.sol#512)
+	State variables written after the call(s):
+	- written (/../data/reentrancy/solidity_contract/35421.sol#512)
+Reentrancy in minter.RetCoinInternal (/../data/reentrancy/solidity_contract/35421.sol#662-679):
+	External calls:
+	- Fee = pricer.queryCost() (/../data/reentrancy/solidity_contract/35421.sol#666)
+	State variables written after the call(s):
+	- TransID (/../data/reentrancy/solidity_contract/35421.sol#673)
+Reentrancy in minter.RetCoinInternal (/../data/reentrancy/solidity_contract/35421.sol#662-679):
+	External calls:
+	- Fee = pricer.queryCost() (/../data/reentrancy/solidity_contract/35421.sol#666)
+	- PricerID = pricer.requestPrice.value(uint256(Fee))(TransID) (/../data/reentrancy/solidity_contract/35421.sol#675)
+	External calls sending eth:
+	- PricerID = pricer.requestPrice.value(uint256(Fee))(TransID) (/../data/reentrancy/solidity_contract/35421.sol#675)
+	State variables written after the call(s):
+	- pending (/../data/reentrancy/solidity_contract/35421.sol#676)
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#reentrancy-vulnerabilities-2[0m
+INFO:Detectors:[92m
+minter.IsWallet uses assembly (/../data/reentrancy/solidity_contract/35421.sol#652-660)
+	- /../data/reentrancy/solidity_contract/35421.sol#655-659
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#assembly-usage[0m
+INFO:Detectors:[92m
+I_Pricer.lastPrice should be constant (/../data/reentrancy/solidity_contract/35421.sol#144)
+I_Pricer.sURL should be constant (/../data/reentrancy/solidity_contract/35421.sol#146)
+I_coin.decimals should be constant (/../data/reentrancy/solidity_contract/35421.sol#168)
+I_coin.name should be constant (/../data/reentrancy/solidity_contract/35421.sol#167)
+I_coin.symbol should be constant (/../data/reentrancy/solidity_contract/35421.sol#169)
+I_coin.totalSupply should be constant (/../data/reentrancy/solidity_contract/35421.sol#217)
+I_coin.version should be constant (/../data/reentrancy/solidity_contract/35421.sol#170)
+minter.levToll should be constant (/../data/reentrancy/solidity_contract/35421.sol#341)
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#state-variables-that-could-be-declared-constant[0m
+INFO:Detectors:[92m
+owned.changeOwner (/../data/reentrancy/solidity_contract/35421.sol#11-13) should be declared external
+mortal.kill (/../data/reentrancy/solidity_contract/35421.sol#22-24) should be declared external
+minter.Leverage (/../data/reentrancy/solidity_contract/35421.sol#463-470) should be declared external
+I_minter.Leverage (/../data/reentrancy/solidity_contract/35421.sol#129) should be declared external
+minter.PriceReturn (/../data/reentrancy/solidity_contract/35421.sol#496-524) should be declared external
+I_minter.PriceReturn (/../data/reentrancy/solidity_contract/35421.sol#132) should be declared external
+minter.Strike (/../data/reentrancy/solidity_contract/35421.sol#472-479) should be declared external
+I_minter.Strike (/../data/reentrancy/solidity_contract/35421.sol#139) should be declared external
+I_Pricer.setMinter (/../data/reentrancy/solidity_contract/35421.sol#149) should be declared external
+I_Pricer.__callback (/../data/reentrancy/solidity_contract/35421.sol#150) should be declared external
+I_Pricer.queryCost (/../data/reentrancy/solidity_contract/35421.sol#151) should be declared external
+I_Pricer.QuickPrice (/../data/reentrancy/solidity_contract/35421.sol#152) should be declared external
+I_Pricer.requestPrice (/../data/reentrancy/solidity_contract/35421.sol#153) should be declared external
+I_Pricer.collectFee (/../data/reentrancy/solidity_contract/35421.sol#154) should be declared external
+I_Pricer.fallback (/../data/reentrancy/solidity_contract/35421.sol#155-158) should be declared external
+I_coin.mintCoin (/../data/reentrancy/solidity_contract/35421.sol#172) should be declared external
+I_coin.meltCoin (/../data/reentrancy/solidity_contract/35421.sol#173) should be declared external
+I_coin.approveAndCall (/../data/reentrancy/solidity_contract/35421.sol#174) should be declared external
+I_coin.setMinter (/../data/reentrancy/solidity_contract/35421.sol#176) should be declared external
+I_coin.increaseApproval (/../data/reentrancy/solidity_contract/35421.sol#177) should be declared external
+I_coin.decreaseApproval (/../data/reentrancy/solidity_contract/35421.sol#178) should be declared external
+I_coin.balanceOf (/../data/reentrancy/solidity_contract/35421.sol#182) should be declared external
+I_coin.transfer (/../data/reentrancy/solidity_contract/35421.sol#189) should be declared external
+I_coin.transferFrom (/../data/reentrancy/solidity_contract/35421.sol#197) should be declared external
+I_coin.approve (/../data/reentrancy/solidity_contract/35421.sol#203) should be declared external
+I_coin.allowance (/../data/reentrancy/solidity_contract/35421.sol#211) should be declared external
+canFreeze.Freeze (/../data/reentrancy/solidity_contract/35421.sol#251-255) should be declared external
+pricerControl.setPricer (/../data/reentrancy/solidity_contract/35421.sol#293-298) should be declared external
+minter.fallback (/../data/reentrancy/solidity_contract/35421.sol#358-361) should be declared external
+minter.StaticEthAvailable (/../data/reentrancy/solidity_contract/35421.sol#421-424) should be declared external
+minter.RiskPrice (/../data/reentrancy/solidity_contract/35421.sol#453-456) should be declared external
+minter.setFee (/../data/reentrancy/solidity_contract/35421.sol#483-486) should be declared external
+minter.setCoins (/../data/reentrancy/solidity_contract/35421.sol#488-492) should be declared external
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#public-function-that-could-be-declared-as-external[0m
+INFO:Detectors:[92m
+Detected issues with version pragma in /../data/reentrancy/solidity_contract/35421.sol:
+	- pragma solidity^0.4.16 (/../data/reentrancy/solidity_contract/35421.sol#1): it allows old versions
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#incorrect-version-of-solidity[0m
+INFO:Detectors:[92m
+Low level call in DSBaseActor.tryExec (/../data/reentrancy/solidity_contract/35421.sol#232-234):
+	-target.call.value(value)(calldata) /../data/reentrancy/solidity_contract/35421.sol#233
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#low-level-calls[0m
+INFO:Detectors:[92m
+Contract 'owned' (/../data/reentrancy/solidity_contract/35421.sol#6-18) is not in CapWords
+Contract 'mortal' (/../data/reentrancy/solidity_contract/35421.sol#21-25) is not in CapWords
+Constant 'DSMath.WAD_Dec' (/../data/reentrancy/solidity_contract/35421.sol#80) is not in UPPER_CASE_WITH_UNDERSCORES
+Contract 'I_minter' (/../data/reentrancy/solidity_contract/35421.sol#122-140) is not in CapWords
+Function 'I_minter.Leverage' (/../data/reentrancy/solidity_contract/35421.sol#129) is not in mixedCase
+Function 'I_minter.RiskPrice' (/../data/reentrancy/solidity_contract/35421.sol#130) is not in mixedCase
+Function 'I_minter.RiskPrice' (/../data/reentrancy/solidity_contract/35421.sol#131) is not in mixedCase
+Function 'I_minter.PriceReturn' (/../data/reentrancy/solidity_contract/35421.sol#132) is not in mixedCase
+Function 'I_minter.NewStatic' (/../data/reentrancy/solidity_contract/35421.sol#133) is not in mixedCase
+Function 'I_minter.NewStaticAdr' (/../data/reentrancy/solidity_contract/35421.sol#134) is not in mixedCase
+Function 'I_minter.NewRisk' (/../data/reentrancy/solidity_contract/35421.sol#135) is not in mixedCase
+Function 'I_minter.NewRiskAdr' (/../data/reentrancy/solidity_contract/35421.sol#136) is not in mixedCase
+Function 'I_minter.RetRisk' (/../data/reentrancy/solidity_contract/35421.sol#137) is not in mixedCase
+Function 'I_minter.RetStatic' (/../data/reentrancy/solidity_contract/35421.sol#138) is not in mixedCase
+Function 'I_minter.Strike' (/../data/reentrancy/solidity_contract/35421.sol#139) is not in mixedCase
+Contract 'I_Pricer' (/../data/reentrancy/solidity_contract/35421.sol#143-159) is not in CapWords
+Function 'I_Pricer.__callback' (/../data/reentrancy/solidity_contract/35421.sol#150) is not in mixedCase
+Function 'I_Pricer.QuickPrice' (/../data/reentrancy/solidity_contract/35421.sol#152) is not in mixedCase
+Variable 'I_Pricer.RevTransaction' (/../data/reentrancy/solidity_contract/35421.sol#147) is not in mixedCase
+Contract 'I_coin' (/../data/reentrancy/solidity_contract/35421.sol#162-218) is not in CapWords
+Variable 'DSBaseActor._ds_mutex' (/../data/reentrancy/solidity_contract/35421.sol#224) is not in mixedCase
+Contract 'canFreeze' (/../data/reentrancy/solidity_contract/35421.sol#242-256) is not in CapWords
+Function 'canFreeze.Freeze' (/../data/reentrancy/solidity_contract/35421.sol#251-255) is not in mixedCase
+Modifier 'canFreeze.LockIfFrozen' (/../data/reentrancy/solidity_contract/35421.sol#246-250) is not in mixedCase
+Contract 'oneWrite' (/../data/reentrancy/solidity_contract/35421.sol#259-278) is not in CapWords
+Modifier 'oneWrite.LockIfUnwritten' (/../data/reentrancy/solidity_contract/35421.sol#267-271) is not in mixedCase
+Contract 'pricerControl' (/../data/reentrancy/solidity_contract/35421.sol#281-317) is not in CapWords
+Variable 'pricerControl.PRICER_DELAY' (/../data/reentrancy/solidity_contract/35421.sol#290) is not in mixedCase
+Contract 'minter' (/../data/reentrancy/solidity_contract/35421.sol#320-701) is not in CapWords
+Function 'minter.Leverage' (/../data/reentrancy/solidity_contract/35421.sol#463-470) is not in mixedCase
+Function 'minter.RiskPrice' (/../data/reentrancy/solidity_contract/35421.sol#437-451) is not in mixedCase
+Parameter '_currentPrice' of minter.RiskPrice (/../data/reentrancy/solidity_contract/35421.sol#437) is not in mixedCase
+Parameter '_StaticTotal' of minter.RiskPrice (/../data/reentrancy/solidity_contract/35421.sol#437) is not in mixedCase
+Parameter '_RiskTotal' of minter.RiskPrice (/../data/reentrancy/solidity_contract/35421.sol#437) is not in mixedCase
+Parameter '_ETHTotal' of minter.RiskPrice (/../data/reentrancy/solidity_contract/35421.sol#437) is not in mixedCase
+Function 'minter.RiskPrice' (/../data/reentrancy/solidity_contract/35421.sol#458-461) is not in mixedCase
+Parameter '_currentPrice' of minter.RiskPrice (/../data/reentrancy/solidity_contract/35421.sol#458) is not in mixedCase
+Function 'minter.PriceReturn' (/../data/reentrancy/solidity_contract/35421.sol#496-524) is not in mixedCase
+Parameter '_TransID' of minter.PriceReturn (/../data/reentrancy/solidity_contract/35421.sol#496) is not in mixedCase
+Parameter '_Price' of minter.PriceReturn (/../data/reentrancy/solidity_contract/35421.sol#496) is not in mixedCase
+Function 'minter.NewStatic' (/../data/reentrancy/solidity_contract/35421.sol#367-371) is not in mixedCase
+Function 'minter.NewStaticAdr' (/../data/reentrancy/solidity_contract/35421.sol#373-377) is not in mixedCase
+Parameter '_user' of minter.NewStaticAdr (/../data/reentrancy/solidity_contract/35421.sol#373) is not in mixedCase
+Function 'minter.NewRisk' (/../data/reentrancy/solidity_contract/35421.sol#379-383) is not in mixedCase
+Function 'minter.NewRiskAdr' (/../data/reentrancy/solidity_contract/35421.sol#385-389) is not in mixedCase
+Parameter '_user' of minter.NewRiskAdr (/../data/reentrancy/solidity_contract/35421.sol#385) is not in mixedCase
+Function 'minter.RetRisk' (/../data/reentrancy/solidity_contract/35421.sol#391-403) is not in mixedCase
+Parameter '_Quantity' of minter.RetRisk (/../data/reentrancy/solidity_contract/35421.sol#391) is not in mixedCase
+Function 'minter.RetStatic' (/../data/reentrancy/solidity_contract/35421.sol#405-417) is not in mixedCase
+Parameter '_Quantity' of minter.RetStatic (/../data/reentrancy/solidity_contract/35421.sol#405) is not in mixedCase
+Function 'minter.Strike' (/../data/reentrancy/solidity_contract/35421.sol#472-479) is not in mixedCase
+Parameter '_currency' of minter.minter (/../data/reentrancy/solidity_contract/35421.sol#351) is not in mixedCase
+Parameter '_Multiplier' of minter.minter (/../data/reentrancy/solidity_contract/35421.sol#351) is not in mixedCase
+Function 'minter.Bailout' (/../data/reentrancy/solidity_contract/35421.sol#363-365) is not in mixedCase
+Function 'minter.StaticEthAvailable' (/../data/reentrancy/solidity_contract/35421.sol#421-424) is not in mixedCase
+Function 'minter.StaticEthAvailable' (/../data/reentrancy/solidity_contract/35421.sol#426-435) is not in mixedCase
+Parameter '_RiskTotal' of minter.StaticEthAvailable (/../data/reentrancy/solidity_contract/35421.sol#426) is not in mixedCase
+Parameter '_TotalETH' of minter.StaticEthAvailable (/../data/reentrancy/solidity_contract/35421.sol#426) is not in mixedCase
+Function 'minter.RiskPrice' (/../data/reentrancy/solidity_contract/35421.sol#453-456) is not in mixedCase
+Parameter '_newFee' of minter.setFee (/../data/reentrancy/solidity_contract/35421.sol#483) is not in mixedCase
+Function 'minter.ActionNewStatic' (/../data/reentrancy/solidity_contract/35421.sol#528-573) is not in mixedCase
+Parameter '_details' of minter.ActionNewStatic (/../data/reentrancy/solidity_contract/35421.sol#528) is not in mixedCase
+Parameter '_TransID' of minter.ActionNewStatic (/../data/reentrancy/solidity_contract/35421.sol#528) is not in mixedCase
+Parameter '_Price' of minter.ActionNewStatic (/../data/reentrancy/solidity_contract/35421.sol#528) is not in mixedCase
+Function 'minter.ActionNewRisk' (/../data/reentrancy/solidity_contract/35421.sol#575-593) is not in mixedCase
+Parameter '_details' of minter.ActionNewRisk (/../data/reentrancy/solidity_contract/35421.sol#575) is not in mixedCase
+Parameter '_TransID' of minter.ActionNewRisk (/../data/reentrancy/solidity_contract/35421.sol#575) is not in mixedCase
+Parameter '_Price' of minter.ActionNewRisk (/../data/reentrancy/solidity_contract/35421.sol#575) is not in mixedCase
+Function 'minter.ActionRetStatic' (/../data/reentrancy/solidity_contract/35421.sol#595-620) is not in mixedCase
+Parameter '_details' of minter.ActionRetStatic (/../data/reentrancy/solidity_contract/35421.sol#595) is not in mixedCase
+Parameter '_TransID' of minter.ActionRetStatic (/../data/reentrancy/solidity_contract/35421.sol#595) is not in mixedCase
+Parameter '_Price' of minter.ActionRetStatic (/../data/reentrancy/solidity_contract/35421.sol#595) is not in mixedCase
+Function 'minter.ActionRetRisk' (/../data/reentrancy/solidity_contract/35421.sol#622-650) is not in mixedCase
+Parameter '_details' of minter.ActionRetRisk (/../data/reentrancy/solidity_contract/35421.sol#622) is not in mixedCase
+Parameter '_TransID' of minter.ActionRetRisk (/../data/reentrancy/solidity_contract/35421.sol#622) is not in mixedCase
+Parameter '_Price' of minter.ActionRetRisk (/../data/reentrancy/solidity_contract/35421.sol#622) is not in mixedCase
+Function 'minter.IsWallet' (/../data/reentrancy/solidity_contract/35421.sol#652-660) is not in mixedCase
+Function 'minter.RetCoinInternal' (/../data/reentrancy/solidity_contract/35421.sol#662-679) is not in mixedCase
+Parameter '_Quantity' of minter.RetCoinInternal (/../data/reentrancy/solidity_contract/35421.sol#662) is not in mixedCase
+Parameter '_AmountETH' of minter.RetCoinInternal (/../data/reentrancy/solidity_contract/35421.sol#662) is not in mixedCase
+Parameter '_user' of minter.RetCoinInternal (/../data/reentrancy/solidity_contract/35421.sol#662) is not in mixedCase
+Parameter '_action' of minter.RetCoinInternal (/../data/reentrancy/solidity_contract/35421.sol#662) is not in mixedCase
+Function 'minter.NewCoinInternal' (/../data/reentrancy/solidity_contract/35421.sol#681-690) is not in mixedCase
+Parameter '_user' of minter.NewCoinInternal (/../data/reentrancy/solidity_contract/35421.sol#681) is not in mixedCase
+Parameter '_amount' of minter.NewCoinInternal (/../data/reentrancy/solidity_contract/35421.sol#681) is not in mixedCase
+Parameter '_action' of minter.NewCoinInternal (/../data/reentrancy/solidity_contract/35421.sol#681) is not in mixedCase
+Function 'minter.Bankrupt' (/../data/reentrancy/solidity_contract/35421.sol#692-700) is not in mixedCase
+Variable 'minter.TransID' (/../data/reentrancy/solidity_contract/35421.sol#336) is not in mixedCase
+Variable 'minter.Currency' (/../data/reentrancy/solidity_contract/35421.sol#337) is not in mixedCase
+Variable 'minter.Static' (/../data/reentrancy/solidity_contract/35421.sol#338) is not in mixedCase
+Variable 'minter.Risk' (/../data/reentrancy/solidity_contract/35421.sol#339) is not in mixedCase
+Variable 'minter.Multiplier' (/../data/reentrancy/solidity_contract/35421.sol#340) is not in mixedCase
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#conformance-to-solidity-naming-conventions[0m
+INFO:Detectors:[92m
+I_Pricer.RevTransaction (/../data/reentrancy/solidity_contract/35421.sol#147) is never used in I_Pricer
+I_coin.balances (/../data/reentrancy/solidity_contract/35421.sol#213) is never used in I_coin
+I_coin.allowed (/../data/reentrancy/solidity_contract/35421.sol#214) is never used in I_coin
+DSMath.WAD_Dec (/../data/reentrancy/solidity_contract/35421.sol#80) is never used in minter
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#unused-state-variables[0m
+INFO:Slither:/../data/reentrancy/solidity_contract/35421.sol analyzed (11 contracts), 157 result(s) found

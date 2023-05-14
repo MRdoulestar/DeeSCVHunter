@@ -1,0 +1,385 @@
+INFO:Slither:Compilation warnings/errors on /../data/reentrancy/solidity_contract/29601.sol:
+/../data/reentrancy/solidity_contract/29601.sol:19:5: Warning: Defining constructors as functions with the same name as the contract is deprecated. Use "constructor(...) { ... }" instead.
+    function Ownable() public {
+    ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/29601.sol:104:5: Warning: Defining constructors as functions with the same name as the contract is deprecated. Use "constructor(...) { ... }" instead.
+    function ERC20(
+    ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/29601.sol:248:5: Warning: Defining constructors as functions with the same name as the contract is deprecated. Use "constructor(...) { ... }" instead.
+    function ERC223Token(
+    ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/29601.sol:357:5: Warning: Defining constructors as functions with the same name as the contract is deprecated. Use "constructor(...) { ... }" instead.
+    function MintingERC20(
+    ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/29601.sol:429:5: Warning: Defining constructors as functions with the same name as the contract is deprecated. Use "constructor(...) { ... }" instead.
+    function GenesisToken(
+    ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/29601.sol:664:5: Warning: Defining constructors as functions with the same name as the contract is deprecated. Use "constructor(...) { ... }" instead.
+    function CLC(uint256 _maxSupply, uint8 decimals, Clout _genesisToken, bool transferAllSupplyToOwner) public
+    ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/29601.sol:700:5: Warning: Defining constructors as functions with the same name as the contract is deprecated. Use "constructor(...) { ... }" instead.
+    function Clout(uint256 emitTokensSince,
+    ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/29601.sol:880:5: Warning: Defining constructors as functions with the same name as the contract is deprecated. Use "constructor(...) { ... }" instead.
+    function Multivest(address multivest) {
+    ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/29601.sol:960:5: Warning: Defining constructors as functions with the same name as the contract is deprecated. Use "constructor(...) { ... }" instead.
+    function ICO(
+    ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/29601.sol:153:9: Warning: Invoking events without "emit" prefix is deprecated.
+        Approval(msg.sender, _spender, _value);
+        ^------------------------------------^
+/../data/reentrancy/solidity_contract/29601.sol:216:13: Warning: Invoking events without "emit" prefix is deprecated.
+            Transfer(_from, _to, _value);
+            ^--------------------------^
+/../data/reentrancy/solidity_contract/29601.sol:228:9: Warning: Invoking events without "emit" prefix is deprecated.
+        Transfer(_from, _to, _value);
+        ^--------------------------^
+/../data/reentrancy/solidity_contract/29601.sol:312:59: Warning: This function only accepts a single "bytes" argument. Please use "abi.encodePacked(...)" or a similar function to encode the data.
+                    require(receiver.call.value(0)(bytes4(keccak256(customFallback)), from, value, data) == true);
+                                                          ^-----------------------^
+/../data/reentrancy/solidity_contract/29601.sol:312:59: Warning: The provided argument of type string memory is not implicitly convertible to expected type bytes memory.
+                    require(receiver.call.value(0)(bytes4(keccak256(customFallback)), from, value, data) == true);
+                                                          ^-----------------------^
+/../data/reentrancy/solidity_contract/29601.sol:312:29: Warning: Using contract member "call" inherited from the address type is deprecated. Convert the contract to "address" type to access the member, for example use "address(contract).call" instead.
+                    require(receiver.call.value(0)(bytes4(keccak256(customFallback)), from, value, data) == true);
+                            ^-----------^
+/../data/reentrancy/solidity_contract/29601.sol:318:13: Warning: Invoking events without "emit" prefix is deprecated.
+            Transfer(from, to, value, data);
+            ^-----------------------------^
+/../data/reentrancy/solidity_contract/29601.sol:395:9: Warning: Invoking events without "emit" prefix is deprecated.
+        Transfer(0, _addr, _amount);
+        ^-------------------------^
+/../data/reentrancy/solidity_contract/29601.sol:551:9: Warning: Invoking events without "emit" prefix is deprecated.
+        ClaimedTokens(_holder, _since, _till, _tokens);
+        ^--------------------------------------------^
+/../data/reentrancy/solidity_contract/29601.sol:859:9: Warning: Invoking events without "emit" prefix is deprecated.
+        ClaimedTokens(_holder, since, till, amount);
+        ^-----------------------------------------^
+/../data/reentrancy/solidity_contract/29601.sol:913:26: Warning: This function only accepts a single "bytes" argument. Please use "abi.encodePacked(...)" or a similar function to encode the data.
+        require(_hash == keccak256(msg.sender));
+                         ^-------------------^
+/../data/reentrancy/solidity_contract/29601.sol:913:26: Warning: The provided argument of type address is not implicitly convertible to expected type bytes memory.
+        require(_hash == keccak256(msg.sender));
+                         ^-------------------^
+/../data/reentrancy/solidity_contract/29601.sol:923:26: Warning: This function only accepts a single "bytes" argument. Please use "abi.encodePacked(...)" or a similar function to encode the data.
+        return ecrecover(keccak256(prefix, hash), v, r, s);
+                         ^---------------------^
+/../data/reentrancy/solidity_contract/29601.sol:1085:17: Warning: Using contract member "balance" inherited from the address type is deprecated. Convert the contract to "address" type to access the member, for example use "address(contract).balance" instead.
+        require(this.balance > 0);
+                ^----------^
+/../data/reentrancy/solidity_contract/29601.sol:1090:13: Warning: Using contract member "balance" inherited from the address type is deprecated. Convert the contract to "address" type to access the member, for example use "address(contract).balance" instead.
+        if (this.balance > 0) {
+            ^----------^
+/../data/reentrancy/solidity_contract/29601.sol:1091:31: Warning: Using contract member "balance" inherited from the address type is deprecated. Convert the contract to "address" type to access the member, for example use "address(contract).balance" instead.
+            uint256 balance = this.balance;
+                              ^----------^
+/../data/reentrancy/solidity_contract/29601.sol:1103:40: Warning: Using contract member "balance" inherited from the address type is deprecated. Convert the contract to "address" type to access the member, for example use "address(contract).balance" instead.
+            etherMasterWallet.transfer(this.balance);
+                                       ^----------^
+/../data/reentrancy/solidity_contract/29601.sol:1140:9: Warning: Invoking events without "emit" prefix is deprecated.
+        Contribution(_address, _value, amount, amount);
+        ^--------------------------------------------^
+/../data/reentrancy/solidity_contract/29601.sol:357:5: Warning: No visibility specified. Defaulting to "public". 
+    function MintingERC20(
+    ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/29601.sol:880:5: Warning: No visibility specified. Defaulting to "public". 
+    function Multivest(address multivest) {
+    ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/29601.sol:994:5: Warning: No visibility specified. Defaulting to "public". 
+    function () payable {
+    ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/29601.sol:40:5: Warning: Function state mutability can be restricted to pure
+    function mul(uint256 a, uint256 b) internal constant returns (uint256) {
+    ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/29601.sol:46:5: Warning: Function state mutability can be restricted to pure
+    function div(uint256 a, uint256 b) internal constant returns (uint256) {
+    ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/29601.sol:53:5: Warning: Function state mutability can be restricted to pure
+    function sub(uint256 a, uint256 b) internal constant returns (uint256) {
+    ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/29601.sol:58:5: Warning: Function state mutability can be restricted to pure
+    function add(uint256 a, uint256 b) internal constant returns (uint256) {
+    ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/29601.sol:333:5: Warning: Function state mutability can be restricted to view
+    function isContract(address _addr) private returns (bool) {
+    ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/29601.sol:506:48: Warning: Function declared as view, but this expression (potentially) modifies the state and thus requires non-payable (the default) or payable.
+                    collectedTokensPerPeriod = getPeriodMinedTokens(
+                                               ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/29601.sol:516:48: Warning: Function declared as view, but this expression (potentially) modifies the state and thus requires non-payable (the default) or payable.
+                    collectedTokensPerPeriod = getPeriodMinedTokens(
+                                               ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/29601.sol:538:5: Warning: Function state mutability can be restricted to view
+    function getPeriodMinedTokens(
+    ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/29601.sol:920:5: Warning: Function state mutability can be restricted to pure
+    function verify(bytes32 hash, uint8 v, bytes32 r, bytes32 s) public constant returns (address) {
+    ^ (Relevant source part starts here and spans across multiple lines).
+
+INFO:Detectors:[91m
+ERC223Token.transferInternal (/../data/reentrancy/solidity_contract/29601.sol#305-322) sends eth to arbitrary user
+	Dangerous calls:
+	- require(bool)(receiver.call.value(0)(bytes4(keccak256()(customFallback)),from,value,data) == true) (/../data/reentrancy/solidity_contract/29601.sol#312)
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#functions-that-send-ether-to-arbitrary-destinations[0m
+INFO:Detectors:[93m
+GenesisToken.calculateEmissionTokens (/../data/reentrancy/solidity_contract/29601.sol#480-535) uses a dangerous strict equality:
+	- remainingSeconds == 0
+ICO.fallback (/../data/reentrancy/solidity_contract/29601.sol#994-998) uses a dangerous strict equality:
+	- require(bool)(status == true)
+ICO.fallback (/../data/reentrancy/solidity_contract/29601.sol#994-998) uses a dangerous strict equality:
+	- require(bool)(status == true)
+Multivest.multivestBuy (/../data/reentrancy/solidity_contract/29601.sol#893-903) uses a dangerous strict equality:
+	- require(bool)(status == true)
+ICO.fallback (/../data/reentrancy/solidity_contract/29601.sol#994-998) uses a dangerous strict equality:
+	- require(bool)(status == true)
+Multivest.multivestBuy (/../data/reentrancy/solidity_contract/29601.sol#893-903) uses a dangerous strict equality:
+	- require(bool)(status == true)
+Multivest.multivestBuy (/../data/reentrancy/solidity_contract/29601.sol#905-918) uses a dangerous strict equality:
+	- require(bool)(status == true)
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#dangerous-strict-equalities[0m
+INFO:Detectors:[93m
+Reentrancy in ICO.buy (/../data/reentrancy/solidity_contract/29601.sol#1107-1143):
+	External calls:
+	- cloutMinted = clout.mint(_address,amount) (/../data/reentrancy/solidity_contract/29601.sol#1130)
+	- clcMinted = clc.mint(_address,amount) (/../data/reentrancy/solidity_contract/29601.sol#1131)
+	State variables written after the call(s):
+	- soldTokens (/../data/reentrancy/solidity_contract/29601.sol#1136)
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#reentrancy-vulnerabilities-1[0m
+INFO:Detectors:[93m
+amount in ICO.getIcoTokensAmount (/../data/reentrancy/solidity_contract/29601.sol#1041) is a local variable never initialiazed
+data in ERC223Token.transferInternal (/../data/reentrancy/solidity_contract/29601.sol#327) is a local variable never initialiazed
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#uninitialized-local-variables[0m
+INFO:Detectors:[92m
+CLC.CLC.decimals (local variable @ /../data/reentrancy/solidity_contract/29601.sol#664) shadows:
+	- ERC20.decimals (state variable @ /../data/reentrancy/solidity_contract/29601.sol#78)
+Clout.Clout.emitTokensSince (local variable @ /../data/reentrancy/solidity_contract/29601.sol#700) shadows:
+	- GenesisToken.emitTokensSince (state variable @ /../data/reentrancy/solidity_contract/29601.sol#411)
+Clout.Clout.initialSupply (local variable @ /../data/reentrancy/solidity_contract/29601.sol#702) shadows:
+	- ERC20.initialSupply (state variable @ /../data/reentrancy/solidity_contract/29601.sol#74)
+Clout.Clout.decimals (local variable @ /../data/reentrancy/solidity_contract/29601.sol#703) shadows:
+	- ERC20.decimals (state variable @ /../data/reentrancy/solidity_contract/29601.sol#78)
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#local-variable-shadowing[0m
+INFO:Detectors:[92m
+Reentrancy in ICO.buy (/../data/reentrancy/solidity_contract/29601.sol#1107-1143):
+	External calls:
+	- cloutMinted = clout.mint(_address,amount) (/../data/reentrancy/solidity_contract/29601.sol#1130)
+	- clcMinted = clc.mint(_address,amount) (/../data/reentrancy/solidity_contract/29601.sol#1131)
+	State variables written after the call(s):
+	- collectedEthers (/../data/reentrancy/solidity_contract/29601.sol#1137)
+	- holderEthers (/../data/reentrancy/solidity_contract/29601.sol#1138)
+Reentrancy in GenesisToken.claimableTransfer (/../data/reentrancy/solidity_contract/29601.sol#598-622):
+	External calls:
+	- status = super.transferInternal(_from,_to,_value,_data,_useCustomFallback,_customFallback) (/../data/reentrancy/solidity_contract/29601.sol#614)
+	State variables written after the call(s):
+	- lastClaims (/../data/reentrancy/solidity_contract/29601.sol#618)
+	- lastClaims (/../data/reentrancy/solidity_contract/29601.sol#619)
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#reentrancy-vulnerabilities-2[0m
+INFO:Detectors:[92m
+GenesisToken.calculateEmissionTokens (/../data/reentrancy/solidity_contract/29601.sol#480-535) uses timestamp for comparisons
+	Dangerous comparisons:
+	- newCurrentTime.add(remainingSeconds) > emission.periodEndsAt (/../data/reentrancy/solidity_contract/29601.sol#503-526)
+	- newCurrentTime < emission.periodEndsAt (/../data/reentrancy/solidity_contract/29601.sol#502-527)
+	- remainingSeconds == 0 (/../data/reentrancy/solidity_contract/29601.sol#529-531)
+GenesisToken.claimInternal (/../data/reentrancy/solidity_contract/29601.sol#554-596) uses timestamp for comparisons
+	Dangerous comparisons:
+	- _time < emitTokensSince (/../data/reentrancy/solidity_contract/29601.sol#562-566)
+	- lastClaimAt >= _time (/../data/reentrancy/solidity_contract/29601.sol#581-583)
+	- tokens > 0 (/../data/reentrancy/solidity_contract/29601.sol#587-593)
+Multivest.multivestBuy (/../data/reentrancy/solidity_contract/29601.sol#893-903) uses timestamp for comparisons
+	Dangerous comparisons:
+	- require(bool)(status == true) (/../data/reentrancy/solidity_contract/29601.sol#902)
+Multivest.multivestBuy (/../data/reentrancy/solidity_contract/29601.sol#905-918) uses timestamp for comparisons
+	Dangerous comparisons:
+	- require(bool)(status == true) (/../data/reentrancy/solidity_contract/29601.sol#917)
+ICO.buy (/../data/reentrancy/solidity_contract/29601.sol#1107-1143) uses timestamp for comparisons
+	Dangerous comparisons:
+	- _time > icoTill (/../data/reentrancy/solidity_contract/29601.sol#1116-1118)
+	- _time < icoSince (/../data/reentrancy/solidity_contract/29601.sol#1112-1114)
+ICO.fallback (/../data/reentrancy/solidity_contract/29601.sol#994-998) uses timestamp for comparisons
+	Dangerous comparisons:
+	- require(bool)(status == true) (/../data/reentrancy/solidity_contract/29601.sol#997)
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#block-timestamp[0m
+INFO:Detectors:[92m
+ERC223Token.isContract uses assembly (/../data/reentrancy/solidity_contract/29601.sol#333-340)
+	- /../data/reentrancy/solidity_contract/29601.sol#335-339
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#assembly-usage[0m
+INFO:Detectors:[92m
+Ownable.transferOwnership (/../data/reentrancy/solidity_contract/29601.sol#24-27) should be declared external
+Ownable.acceptOwnership (/../data/reentrancy/solidity_contract/29601.sol#29-34) should be declared external
+TokenRecipient.receiveApproval (/../data/reentrancy/solidity_contract/29601.sol#66) should be declared external
+ERC20.transfer (/../data/reentrancy/solidity_contract/29601.sol#135-144) should be declared external
+ERC20.approveAndCall (/../data/reentrancy/solidity_contract/29601.sol#158-169) should be declared external
+ERC20.allowance (/../data/reentrancy/solidity_contract/29601.sol#202-204) should be declared external
+ERC223.transfer (/../data/reentrancy/solidity_contract/29601.sol#236) should be declared external
+ERC223Token.transfer (/../data/reentrancy/solidity_contract/29601.sol#262-268) should be declared external
+ERC223.transfer (/../data/reentrancy/solidity_contract/29601.sol#237) should be declared external
+ERC223Token.transfer (/../data/reentrancy/solidity_contract/29601.sol#270-276) should be declared external
+ContractReceiver.tokenFallback (/../data/reentrancy/solidity_contract/29601.sol#242) should be declared external
+MintingERC20.addMinter (/../data/reentrancy/solidity_contract/29601.sol#372-374) should be declared external
+MintingERC20.removeMinter (/../data/reentrancy/solidity_contract/29601.sol#376-378) should be declared external
+MintingERC20.mint (/../data/reentrancy/solidity_contract/29601.sol#380-382) should be declared external
+CLC.claimedTokens (/../data/reentrancy/solidity_contract/29601.sol#672-678) should be declared external
+AbstractClaimableToken.claimedTokens (/../data/reentrancy/solidity_contract/29601.sol#403) should be declared external
+GenesisToken.addTokenEmission (/../data/reentrancy/solidity_contract/29601.sol#446-448) should be declared external
+GenesisToken.removeTokenEmission (/../data/reentrancy/solidity_contract/29601.sol#450-454) should be declared external
+GenesisToken.updateTokenEmission (/../data/reentrancy/solidity_contract/29601.sol#456-465) should be declared external
+GenesisToken.claim (/../data/reentrancy/solidity_contract/29601.sol#467-474) should be declared external
+CLC.setGenesisToken (/../data/reentrancy/solidity_contract/29601.sol#680-682) should be declared external
+CLC.setTransferFrozen (/../data/reentrancy/solidity_contract/29601.sol#684-686) should be declared external
+CLC.setLocked (/../data/reentrancy/solidity_contract/29601.sol#688-690) should be declared external
+Clout.setEmissions (/../data/reentrancy/solidity_contract/29601.sol#832-840) should be declared external
+Clout.setClaimableToken (/../data/reentrancy/solidity_contract/29601.sol#842-844) should be declared external
+Clout.setTransferFrozen (/../data/reentrancy/solidity_contract/29601.sol#846-848) should be declared external
+Clout.setLocked (/../data/reentrancy/solidity_contract/29601.sol#850-852) should be declared external
+Multivest.setAllowedMultivest (/../data/reentrancy/solidity_contract/29601.sol#885-887) should be declared external
+Multivest.unsetAllowedMultivest (/../data/reentrancy/solidity_contract/29601.sol#889-891) should be declared external
+Multivest.multivestBuy (/../data/reentrancy/solidity_contract/29601.sol#893-903) should be declared external
+Multivest.multivestBuy (/../data/reentrancy/solidity_contract/29601.sol#905-918) should be declared external
+ICO.fallback (/../data/reentrancy/solidity_contract/29601.sol#994-998) should be declared external
+ICO.setEtherReceivers (/../data/reentrancy/solidity_contract/29601.sol#1000-1015) should be declared external
+ICO.setPrice (/../data/reentrancy/solidity_contract/29601.sol#1017-1021) should be declared external
+ICO.setPeriod (/../data/reentrancy/solidity_contract/29601.sol#1023-1026) should be declared external
+ICO.setClout (/../data/reentrancy/solidity_contract/29601.sol#1028-1030) should be declared external
+ICO.setCLC (/../data/reentrancy/solidity_contract/29601.sol#1032-1034) should be declared external
+ICO.setLocked (/../data/reentrancy/solidity_contract/29601.sol#1036-1038) should be declared external
+ICO.transferEthers (/../data/reentrancy/solidity_contract/29601.sol#1084-1105) should be declared external
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#public-function-that-could-be-declared-as-external[0m
+INFO:Detectors:[92m
+Detected issues with version pragma in /../data/reentrancy/solidity_contract/29601.sol:
+	- pragma solidity^0.4.15 (/../data/reentrancy/solidity_contract/29601.sol#1): it allows old versions
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#incorrect-version-of-solidity[0m
+INFO:Detectors:[92m
+Low level call in ERC223Token.transferInternal (/../data/reentrancy/solidity_contract/29601.sol#305-322):
+	-require(bool)(receiver.call.value(0)(bytes4(keccak256()(customFallback)),from,value,data) == true) /../data/reentrancy/solidity_contract/29601.sol#312
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#low-level-calls[0m
+INFO:Detectors:[92m
+Function 'Ownable.Ownable' (/../data/reentrancy/solidity_contract/29601.sol#19-21) is not in mixedCase
+Parameter '_newOwner' of Ownable.transferOwnership (/../data/reentrancy/solidity_contract/29601.sol#24) is not in mixedCase
+Function 'ERC20.ERC20' (/../data/reentrancy/solidity_contract/29601.sol#104-132) is not in mixedCase
+Parameter '_initialSupply' of ERC20.ERC20 (/../data/reentrancy/solidity_contract/29601.sol#105) is not in mixedCase
+Parameter '_tokenName' of ERC20.ERC20 (/../data/reentrancy/solidity_contract/29601.sol#106) is not in mixedCase
+Parameter '_decimalUnits' of ERC20.ERC20 (/../data/reentrancy/solidity_contract/29601.sol#107) is not in mixedCase
+Parameter '_tokenSymbol' of ERC20.ERC20 (/../data/reentrancy/solidity_contract/29601.sol#108) is not in mixedCase
+Parameter '_transferAllSupplyToOwner' of ERC20.ERC20 (/../data/reentrancy/solidity_contract/29601.sol#109) is not in mixedCase
+Parameter '_locked' of ERC20.ERC20 (/../data/reentrancy/solidity_contract/29601.sol#110) is not in mixedCase
+Parameter '_to' of ERC20.transfer (/../data/reentrancy/solidity_contract/29601.sol#135) is not in mixedCase
+Parameter '_value' of ERC20.transfer (/../data/reentrancy/solidity_contract/29601.sol#135) is not in mixedCase
+Parameter '_spender' of ERC20.approve (/../data/reentrancy/solidity_contract/29601.sol#146) is not in mixedCase
+Parameter '_value' of ERC20.approve (/../data/reentrancy/solidity_contract/29601.sol#146) is not in mixedCase
+Parameter '_spender' of ERC20.approveAndCall (/../data/reentrancy/solidity_contract/29601.sol#158) is not in mixedCase
+Parameter '_value' of ERC20.approveAndCall (/../data/reentrancy/solidity_contract/29601.sol#158) is not in mixedCase
+Parameter '_extraData' of ERC20.approveAndCall (/../data/reentrancy/solidity_contract/29601.sol#158) is not in mixedCase
+Parameter '_from' of ERC20.transferFrom (/../data/reentrancy/solidity_contract/29601.sol#171) is not in mixedCase
+Parameter '_to' of ERC20.transferFrom (/../data/reentrancy/solidity_contract/29601.sol#171) is not in mixedCase
+Parameter '_value' of ERC20.transferFrom (/../data/reentrancy/solidity_contract/29601.sol#171) is not in mixedCase
+Parameter '_address' of ERC20.balanceOf (/../data/reentrancy/solidity_contract/29601.sol#198) is not in mixedCase
+Parameter '_owner' of ERC20.allowance (/../data/reentrancy/solidity_contract/29601.sol#202) is not in mixedCase
+Parameter '_spender' of ERC20.allowance (/../data/reentrancy/solidity_contract/29601.sol#202) is not in mixedCase
+Parameter '_holder' of ERC20.setBalance (/../data/reentrancy/solidity_contract/29601.sol#207) is not in mixedCase
+Parameter '_amount' of ERC20.setBalance (/../data/reentrancy/solidity_contract/29601.sol#207) is not in mixedCase
+Parameter '_from' of ERC20.transferInternal (/../data/reentrancy/solidity_contract/29601.sol#211) is not in mixedCase
+Parameter '_to' of ERC20.transferInternal (/../data/reentrancy/solidity_contract/29601.sol#211) is not in mixedCase
+Parameter '_value' of ERC20.transferInternal (/../data/reentrancy/solidity_contract/29601.sol#211) is not in mixedCase
+Parameter '_from' of ERC223Token.transferFrom (/../data/reentrancy/solidity_contract/29601.sol#279) is not in mixedCase
+Parameter '_to' of ERC223Token.transferFrom (/../data/reentrancy/solidity_contract/29601.sol#279) is not in mixedCase
+Parameter '_value' of ERC223Token.transferFrom (/../data/reentrancy/solidity_contract/29601.sol#279) is not in mixedCase
+Function 'ERC223Token.ERC223Token' (/../data/reentrancy/solidity_contract/29601.sol#248-260) is not in mixedCase
+Function 'MintingERC20.MintingERC20' (/../data/reentrancy/solidity_contract/29601.sol#357-370) is not in mixedCase
+Parameter '_maxSupply' of MintingERC20.MintingERC20 (/../data/reentrancy/solidity_contract/29601.sol#359) is not in mixedCase
+Parameter '_newMinter' of MintingERC20.addMinter (/../data/reentrancy/solidity_contract/29601.sol#372) is not in mixedCase
+Parameter '_minter' of MintingERC20.removeMinter (/../data/reentrancy/solidity_contract/29601.sol#376) is not in mixedCase
+Parameter '_addr' of MintingERC20.mint (/../data/reentrancy/solidity_contract/29601.sol#380) is not in mixedCase
+Parameter '_amount' of MintingERC20.mint (/../data/reentrancy/solidity_contract/29601.sol#380) is not in mixedCase
+Parameter '_addr' of MintingERC20.internalMint (/../data/reentrancy/solidity_contract/29601.sol#384) is not in mixedCase
+Parameter '_amount' of MintingERC20.internalMint (/../data/reentrancy/solidity_contract/29601.sol#384) is not in mixedCase
+Parameter '_from' of GenesisToken.transferFrom (/../data/reentrancy/solidity_contract/29601.sol#476) is not in mixedCase
+Parameter '_to' of GenesisToken.transferFrom (/../data/reentrancy/solidity_contract/29601.sol#476) is not in mixedCase
+Parameter '_value' of GenesisToken.transferFrom (/../data/reentrancy/solidity_contract/29601.sol#476) is not in mixedCase
+Parameter '_from' of GenesisToken.transferInternal (/../data/reentrancy/solidity_contract/29601.sol#624) is not in mixedCase
+Parameter '_to' of GenesisToken.transferInternal (/../data/reentrancy/solidity_contract/29601.sol#624) is not in mixedCase
+Parameter '_value' of GenesisToken.transferInternal (/../data/reentrancy/solidity_contract/29601.sol#624) is not in mixedCase
+Parameter '_data' of GenesisToken.transferInternal (/../data/reentrancy/solidity_contract/29601.sol#624) is not in mixedCase
+Parameter '_useCustomFallback' of GenesisToken.transferInternal (/../data/reentrancy/solidity_contract/29601.sol#624) is not in mixedCase
+Parameter '_customFallback' of GenesisToken.transferInternal (/../data/reentrancy/solidity_contract/29601.sol#624) is not in mixedCase
+Parameter '_addr' of GenesisToken.internalMint (/../data/reentrancy/solidity_contract/29601.sol#651) is not in mixedCase
+Parameter '_amount' of GenesisToken.internalMint (/../data/reentrancy/solidity_contract/29601.sol#651) is not in mixedCase
+Function 'GenesisToken.GenesisToken' (/../data/reentrancy/solidity_contract/29601.sol#429-444) is not in mixedCase
+Parameter '_emitTokensSince' of GenesisToken.GenesisToken (/../data/reentrancy/solidity_contract/29601.sol#436) is not in mixedCase
+Parameter '_blockDuration' of GenesisToken.addTokenEmission (/../data/reentrancy/solidity_contract/29601.sol#446) is not in mixedCase
+Parameter '_blockTokens' of GenesisToken.addTokenEmission (/../data/reentrancy/solidity_contract/29601.sol#446) is not in mixedCase
+Parameter '_periodEndsAt' of GenesisToken.addTokenEmission (/../data/reentrancy/solidity_contract/29601.sol#446) is not in mixedCase
+Parameter '_i' of GenesisToken.removeTokenEmission (/../data/reentrancy/solidity_contract/29601.sol#450) is not in mixedCase
+Parameter '_i' of GenesisToken.updateTokenEmission (/../data/reentrancy/solidity_contract/29601.sol#456) is not in mixedCase
+Parameter '_blockDuration' of GenesisToken.updateTokenEmission (/../data/reentrancy/solidity_contract/29601.sol#456) is not in mixedCase
+Parameter '_blockTokens' of GenesisToken.updateTokenEmission (/../data/reentrancy/solidity_contract/29601.sol#456) is not in mixedCase
+Parameter '_periodEndsAt' of GenesisToken.updateTokenEmission (/../data/reentrancy/solidity_contract/29601.sol#456) is not in mixedCase
+Parameter '_lastClaimedAt' of GenesisToken.calculateEmissionTokens (/../data/reentrancy/solidity_contract/29601.sol#481) is not in mixedCase
+Parameter '_currentTime' of GenesisToken.calculateEmissionTokens (/../data/reentrancy/solidity_contract/29601.sol#482) is not in mixedCase
+Parameter '_currentBalance' of GenesisToken.calculateEmissionTokens (/../data/reentrancy/solidity_contract/29601.sol#483) is not in mixedCase
+Parameter '_totalSupply' of GenesisToken.calculateEmissionTokens (/../data/reentrancy/solidity_contract/29601.sol#484) is not in mixedCase
+Parameter '_duration' of GenesisToken.getPeriodMinedTokens (/../data/reentrancy/solidity_contract/29601.sol#539) is not in mixedCase
+Parameter '_balance' of GenesisToken.getPeriodMinedTokens (/../data/reentrancy/solidity_contract/29601.sol#539) is not in mixedCase
+Parameter '_blockDuration' of GenesisToken.getPeriodMinedTokens (/../data/reentrancy/solidity_contract/29601.sol#540) is not in mixedCase
+Parameter '_blockTokens' of GenesisToken.getPeriodMinedTokens (/../data/reentrancy/solidity_contract/29601.sol#540) is not in mixedCase
+Parameter '' of GenesisToken.getPeriodMinedTokens (/../data/reentrancy/solidity_contract/29601.sol#541) is not in mixedCase
+Parameter '_holder' of GenesisToken.tokensClaimedHook (/../data/reentrancy/solidity_contract/29601.sol#550) is not in mixedCase
+Parameter '_since' of GenesisToken.tokensClaimedHook (/../data/reentrancy/solidity_contract/29601.sol#550) is not in mixedCase
+Parameter '_till' of GenesisToken.tokensClaimedHook (/../data/reentrancy/solidity_contract/29601.sol#550) is not in mixedCase
+Parameter '_tokens' of GenesisToken.tokensClaimedHook (/../data/reentrancy/solidity_contract/29601.sol#550) is not in mixedCase
+Parameter '_time' of GenesisToken.claimInternal (/../data/reentrancy/solidity_contract/29601.sol#555) is not in mixedCase
+Parameter '_address' of GenesisToken.claimInternal (/../data/reentrancy/solidity_contract/29601.sol#556) is not in mixedCase
+Parameter '_currentBalance' of GenesisToken.claimInternal (/../data/reentrancy/solidity_contract/29601.sol#557) is not in mixedCase
+Parameter '_currentTotalSupply' of GenesisToken.claimInternal (/../data/reentrancy/solidity_contract/29601.sol#558) is not in mixedCase
+Parameter '_time' of GenesisToken.claimableTransfer (/../data/reentrancy/solidity_contract/29601.sol#599) is not in mixedCase
+Parameter '_from' of GenesisToken.claimableTransfer (/../data/reentrancy/solidity_contract/29601.sol#600) is not in mixedCase
+Parameter '_to' of GenesisToken.claimableTransfer (/../data/reentrancy/solidity_contract/29601.sol#601) is not in mixedCase
+Parameter '_value' of GenesisToken.claimableTransfer (/../data/reentrancy/solidity_contract/29601.sol#602) is not in mixedCase
+Parameter '_data' of GenesisToken.claimableTransfer (/../data/reentrancy/solidity_contract/29601.sol#603) is not in mixedCase
+Parameter '_useCustomFallback' of GenesisToken.claimableTransfer (/../data/reentrancy/solidity_contract/29601.sol#604) is not in mixedCase
+Parameter '_customFallback' of GenesisToken.claimableTransfer (/../data/reentrancy/solidity_contract/29601.sol#605) is not in mixedCase
+Parameter '_time' of GenesisToken.claimableTransferFrom (/../data/reentrancy/solidity_contract/29601.sol#629) is not in mixedCase
+Parameter '_from' of GenesisToken.claimableTransferFrom (/../data/reentrancy/solidity_contract/29601.sol#630) is not in mixedCase
+Parameter '_to' of GenesisToken.claimableTransferFrom (/../data/reentrancy/solidity_contract/29601.sol#631) is not in mixedCase
+Parameter '_value' of GenesisToken.claimableTransferFrom (/../data/reentrancy/solidity_contract/29601.sol#632) is not in mixedCase
+Parameter '_holder' of CLC.claimedTokens (/../data/reentrancy/solidity_contract/29601.sol#672) is not in mixedCase
+Parameter '_tokens' of CLC.claimedTokens (/../data/reentrancy/solidity_contract/29601.sol#672) is not in mixedCase
+Function 'CLC.CLC' (/../data/reentrancy/solidity_contract/29601.sol#664-670) is not in mixedCase
+Parameter '_genesisToken' of CLC.CLC (/../data/reentrancy/solidity_contract/29601.sol#664) is not in mixedCase
+Parameter '_genesisToken' of CLC.setGenesisToken (/../data/reentrancy/solidity_contract/29601.sol#680) is not in mixedCase
+Parameter '_frozen' of CLC.setTransferFrozen (/../data/reentrancy/solidity_contract/29601.sol#684) is not in mixedCase
+Parameter '_locked' of CLC.setLocked (/../data/reentrancy/solidity_contract/29601.sol#688) is not in mixedCase
+Parameter '_holder' of Clout.tokensClaimedHook (/../data/reentrancy/solidity_contract/29601.sol#854) is not in mixedCase
+Function 'Clout.Clout' (/../data/reentrancy/solidity_contract/29601.sol#700-830) is not in mixedCase
+Parameter '_token' of Clout.setClaimableToken (/../data/reentrancy/solidity_contract/29601.sol#842) is not in mixedCase
+Parameter '_frozen' of Clout.setTransferFrozen (/../data/reentrancy/solidity_contract/29601.sol#846) is not in mixedCase
+Parameter '_locked' of Clout.setLocked (/../data/reentrancy/solidity_contract/29601.sol#850) is not in mixedCase
+Function 'Multivest.Multivest' (/../data/reentrancy/solidity_contract/29601.sol#880-882) is not in mixedCase
+Parameter '_address' of Multivest.setAllowedMultivest (/../data/reentrancy/solidity_contract/29601.sol#885) is not in mixedCase
+Parameter '_address' of Multivest.unsetAllowedMultivest (/../data/reentrancy/solidity_contract/29601.sol#889) is not in mixedCase
+Parameter '_holder' of Multivest.multivestBuy (/../data/reentrancy/solidity_contract/29601.sol#894) is not in mixedCase
+Parameter '_value' of Multivest.multivestBuy (/../data/reentrancy/solidity_contract/29601.sol#895) is not in mixedCase
+Parameter '_hash' of Multivest.multivestBuy (/../data/reentrancy/solidity_contract/29601.sol#906) is not in mixedCase
+Parameter '_v' of Multivest.multivestBuy (/../data/reentrancy/solidity_contract/29601.sol#907) is not in mixedCase
+Parameter '_r' of Multivest.multivestBuy (/../data/reentrancy/solidity_contract/29601.sol#908) is not in mixedCase
+Parameter '_s' of Multivest.multivestBuy (/../data/reentrancy/solidity_contract/29601.sol#909) is not in mixedCase
+Parameter '_address' of ICO.buy (/../data/reentrancy/solidity_contract/29601.sol#1107) is not in mixedCase
+Parameter '_time' of ICO.buy (/../data/reentrancy/solidity_contract/29601.sol#1107) is not in mixedCase
+Parameter '_value' of ICO.buy (/../data/reentrancy/solidity_contract/29601.sol#1107) is not in mixedCase
+Function 'ICO.ICO' (/../data/reentrancy/solidity_contract/29601.sol#960-992) is not in mixedCase
+Parameter '_icoSince' of ICO.ICO (/../data/reentrancy/solidity_contract/29601.sol#961) is not in mixedCase
+Parameter '_icoTill' of ICO.ICO (/../data/reentrancy/solidity_contract/29601.sol#962) is not in mixedCase
+Parameter '_decimals' of ICO.ICO (/../data/reentrancy/solidity_contract/29601.sol#963) is not in mixedCase
+Parameter '_clout' of ICO.ICO (/../data/reentrancy/solidity_contract/29601.sol#967) is not in mixedCase
+Parameter '_clc' of ICO.ICO (/../data/reentrancy/solidity_contract/29601.sol#968) is not in mixedCase
+Parameter '_minEthToContribute' of ICO.ICO (/../data/reentrancy/solidity_contract/29601.sol#969) is not in mixedCase
+Parameter '_locked' of ICO.ICO (/../data/reentrancy/solidity_contract/29601.sol#970) is not in mixedCase
+Parameter '_masterWallet' of ICO.setEtherReceivers (/../data/reentrancy/solidity_contract/29601.sol#1001) is not in mixedCase
+Parameter '_etherReceivers' of ICO.setEtherReceivers (/../data/reentrancy/solidity_contract/29601.sol#1002) is not in mixedCase
+Parameter '_clout' of ICO.setClout (/../data/reentrancy/solidity_contract/29601.sol#1028) is not in mixedCase
+Parameter '_clc' of ICO.setCLC (/../data/reentrancy/solidity_contract/29601.sol#1032) is not in mixedCase
+Parameter '_locked' of ICO.setLocked (/../data/reentrancy/solidity_contract/29601.sol#1036) is not in mixedCase
+Parameter '_soldTokens' of ICO.getIcoTokensAmount (/../data/reentrancy/solidity_contract/29601.sol#1040) is not in mixedCase
+Parameter '_value' of ICO.getIcoTokensAmount (/../data/reentrancy/solidity_contract/29601.sol#1040) is not in mixedCase
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#conformance-to-solidity-naming-conventions[0m
+INFO:Slither:/../data/reentrancy/solidity_contract/29601.sol analyzed (14 contracts), 189 result(s) found

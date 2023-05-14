@@ -1,0 +1,14 @@
+{
+  "contract": "EtherStore",
+  "tool": "honeybadger",
+  "start": 1609152492.421345,
+  "end": 1609152494.607489,
+  "duration": 2.1861441135406494,
+  "analysis": [
+    {
+      "errors": [],
+      "file": "/../data/reentrancy/solidity_contract/EtherStore.sol",
+      "name": "EtherStore"
+    }
+  ]
+}

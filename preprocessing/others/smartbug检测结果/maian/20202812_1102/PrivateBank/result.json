@@ -1,0 +1,12 @@
+{
+  "contract": "PrivateBank",
+  "tool": "maian",
+  "start": 1609167091.061484,
+  "end": 1609167107.943476,
+  "duration": 16.881991863250732,
+  "analysis": {
+    "is_lock_vulnerable": false,
+    "is_prodigal_vulnerable": false,
+    "is_suicidal_vulnerable": false
+  }
+}

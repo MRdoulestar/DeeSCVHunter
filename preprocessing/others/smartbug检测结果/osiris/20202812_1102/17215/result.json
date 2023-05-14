@@ -1,0 +1,29 @@
+{
+  "contract": "17215",
+  "tool": "osiris",
+  "start": 1609173146.452529,
+  "end": 1609173165.584068,
+  "duration": 19.13153910636902,
+  "analysis": [
+    {
+      "errors": [],
+      "file": "/../data/reentrancy/solidity_contract/17215.sol",
+      "name": "Owned"
+    },
+    {
+      "errors": [],
+      "file": "/../data/reentrancy/solidity_contract/17215.sol",
+      "name": "ReceivingContract"
+    },
+    {
+      "errors": [],
+      "file": "/../data/reentrancy/solidity_contract/17215.sol",
+      "name": "SafeMath"
+    },
+    {
+      "errors": [],
+      "file": "/../data/reentrancy/solidity_contract/17215.sol",
+      "name": "TORUE"
+    }
+  ]
+}

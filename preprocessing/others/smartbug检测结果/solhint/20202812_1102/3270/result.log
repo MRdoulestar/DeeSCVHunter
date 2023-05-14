@@ -1,0 +1,14 @@
+/data/reentrancy/solidity_contract/3270.sol:4:7: Expected indentation of 4 spaces but found 6 [Error/indent]
+/data/reentrancy/solidity_contract/3270.sol:9:3: Expected indentation of 4 spaces but found 2 [Error/indent]
+/data/reentrancy/solidity_contract/3270.sol:14:3: Expected indentation of 4 spaces but found 2 [Error/indent]
+/data/reentrancy/solidity_contract/3270.sol:46:3: Expected indentation of 4 spaces but found 2 [Error/indent]
+/data/reentrancy/solidity_contract/3270.sol:47:6: Expected indentation of 8 spaces but found 5 [Error/indent]
+/data/reentrancy/solidity_contract/3270.sol:48:3: Expected indentation of 4 spaces but found 2 [Error/indent]
+/data/reentrancy/solidity_contract/3270.sol:50:3: Expected indentation of 4 spaces but found 2 [Error/indent]
+/data/reentrancy/solidity_contract/3270.sol:51:5: Expected indentation of 8 spaces but found 4 [Error/indent]
+/data/reentrancy/solidity_contract/3270.sol:52:5: Expected indentation of 8 spaces but found 4 [Error/indent]
+/data/reentrancy/solidity_contract/3270.sol:53:5: Expected indentation of 8 spaces but found 4 [Error/indent]
+/data/reentrancy/solidity_contract/3270.sol:54:3: Expected indentation of 4 spaces but found 2 [Error/indent]
+/data/reentrancy/solidity_contract/3270.sol:56:3: Expected indentation of 4 spaces but found 2 [Error/indent]
+
+12 problems

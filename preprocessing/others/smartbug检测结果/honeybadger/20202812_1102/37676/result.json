@@ -1,0 +1,14 @@
+{
+  "contract": "37676",
+  "tool": "honeybadger",
+  "start": 1609151110.31169,
+  "end": 1609151167.036441,
+  "duration": 56.724750995635986,
+  "analysis": [
+    {
+      "errors": [],
+      "file": "/../data/reentrancy/solidity_contract/37676.sol",
+      "name": "DeadMansSwitch"
+    }
+  ]
+}

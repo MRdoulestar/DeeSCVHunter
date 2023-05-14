@@ -1,0 +1,11 @@
+line 104:39 missing ';' at '('
+line 108:19 missing ')' at '('
+line 108:28 extraneous input 'calldata' expecting {'~', 'from', ',', '(', ')', '[', 'address', 'var', 'bool', 'string', 'byte', '++', '--', 'new', '+', '-', 'after', 'delete', '!', Int, Uint, Byte, Fixed, Ufixed, BooleanLiteral, DecimalNumber, HexNumber, HexLiteral, Identifier, StringLiteral}
+line 108:44 mismatched input ')' expecting ';'
+/data/reentrancy/solidity_contract/9920.sol:104:40: Expected indentation of 8 spaces but found 39 [Error/indent]
+/data/reentrancy/solidity_contract/9920.sol:104:40: Expected indentation of 8 spaces but found 39 [Error/indent]
+/data/reentrancy/solidity_contract/9920.sol:108:47: Expected indentation of 8 spaces but found 46 [Error/indent]
+/data/reentrancy/solidity_contract/9920.sol:120:25: Expected indentation of 8 spaces but found 24 [Error/indent]
+/data/reentrancy/solidity_contract/9920.sol:126:25: Expected indentation of 8 spaces but found 24 [Error/indent]
+
+5 problems

@@ -1,0 +1,8 @@
+{
+  "contract": "Bank",
+  "tool": "osiris",
+  "start": 1609192255.374069,
+  "end": 1609192258.512275,
+  "duration": 3.1382060050964355,
+  "analysis": []
+}

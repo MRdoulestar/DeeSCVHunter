@@ -1,0 +1,28 @@
+INFO:Slither:Compilation warnings/errors on /../data/reentrancy/solidity_contract/Victim.sol:
+/../data/reentrancy/solidity_contract/Victim.sol:14:3: Warning: No visibility specified. Defaulting to "public". 
+  function deposit() payable {}
+  ^---------------------------^
+
+INFO:Detectors:[91m
+Reentrancy in Victim.withdraw (/../data/reentrancy/solidity_contract/Victim.sol#6-13):
+	External calls:
+	- msg.sender.call.value(_amount)() (/../data/reentrancy/solidity_contract/Victim.sol#8-10)
+	State variables written after the call(s):
+	- balances (/../data/reentrancy/solidity_contract/Victim.sol#11)
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#reentrancy-vulnerabilities[0m
+INFO:Detectors:[92m
+Victim.withdraw (/../data/reentrancy/solidity_contract/Victim.sol#6-13) should be declared external
+Victim.deposit (/../data/reentrancy/solidity_contract/Victim.sol#14) should be declared external
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#public-function-that-could-be-declared-as-external[0m
+INFO:Detectors:[92m
+Detected issues with version pragma in /../data/reentrancy/solidity_contract/Victim.sol:
+	- pragma solidity^0.4.8 (/../data/reentrancy/solidity_contract/Victim.sol#1): it allows old versions
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#incorrect-version-of-solidity[0m
+INFO:Detectors:[92m
+Low level call in Victim.withdraw (/../data/reentrancy/solidity_contract/Victim.sol#6-13):
+	-msg.sender.call.value(_amount)() /../data/reentrancy/solidity_contract/Victim.sol#8-10
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#low-level-calls[0m
+INFO:Detectors:[92m
+Parameter '_amount' of Victim.withdraw (/../data/reentrancy/solidity_contract/Victim.sol#6) is not in mixedCase
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#conformance-to-solidity-naming-conventions[0m
+INFO:Slither:/../data/reentrancy/solidity_contract/Victim.sol analyzed (1 contracts), 6 result(s) found

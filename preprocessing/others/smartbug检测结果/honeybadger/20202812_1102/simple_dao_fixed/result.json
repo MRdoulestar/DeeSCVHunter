@@ -1,0 +1,14 @@
+{
+  "contract": "simple_dao_fixed",
+  "tool": "honeybadger",
+  "start": 1609199025.675471,
+  "end": 1609199027.821602,
+  "duration": 2.1461310386657715,
+  "analysis": [
+    {
+      "errors": [],
+      "file": "/../data/reentrancy/solidity_contract/simple_dao_fixed.sol",
+      "name": "SimpleDAO"
+    }
+  ]
+}

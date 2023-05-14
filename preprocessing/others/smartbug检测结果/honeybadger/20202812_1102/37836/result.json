@@ -1,0 +1,14 @@
+{
+  "contract": "37836",
+  "tool": "honeybadger",
+  "start": 1609124596.590076,
+  "end": 1609124727.489714,
+  "duration": 130.89963793754578,
+  "analysis": [
+    {
+      "errors": [],
+      "file": "/../data/reentrancy/solidity_contract/37836.sol",
+      "name": "HUNT"
+    }
+  ]
+}

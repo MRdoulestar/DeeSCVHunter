@@ -1,0 +1,211 @@
+INFO:Slither:Compilation warnings/errors on /../data/reentrancy/solidity_contract/16884.sol:
+/../data/reentrancy/solidity_contract/16884.sol:104:3: Warning: Defining constructors as functions with the same name as the contract is deprecated. Use "constructor(...) { ... }" instead.
+  function Ownable() public {
+  ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/16884.sol:154:3: Warning: Defining constructors as functions with the same name as the contract is deprecated. Use "constructor(...) { ... }" instead.
+  function WithBonusPeriods() public {
+  ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/16884.sol:281:3: Warning: Modifiers of functions without implementation are ignored.
+  function mintETHRewards(address _contract, uint256 _amount) public onlyManager();
+  ^-------------------------------------------------------------------------------^
+/../data/reentrancy/solidity_contract/16884.sol:284:3: Warning: Modifiers of functions without implementation are ignored.
+  function mintTokenRewards(address _contract, uint256 _amount) public onlyManager();
+  ^---------------------------------------------------------------------------------^
+/../data/reentrancy/solidity_contract/16884.sol:287:3: Warning: Modifiers of functions without implementation are ignored.
+  function releaseTokens() public onlyManager() hasntStopped() whenCrowdsaleSuccessful();
+  ^-------------------------------------------------------------------------------------^
+/../data/reentrancy/solidity_contract/16884.sol:291:3: Warning: Modifiers of functions without implementation are ignored.
+  function stop() public onlyManager() hasntStopped();
+  ^--------------------------------------------------^
+/../data/reentrancy/solidity_contract/16884.sol:294:3: Warning: Modifiers of functions without implementation are ignored.
+  function start(uint256 _startTimestamp, uint256 _endTimestamp, address _fundingAddress)
+  ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/16884.sol:360:9: Warning: Defining constructors as functions with the same name as the contract is deprecated. Use "constructor(...) { ... }" instead.
+        function Crowdsaled() public {
+        ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/16884.sol:398:9: Warning: Defining constructors as functions with the same name as the contract is deprecated. Use "constructor(...) { ... }" instead.
+        function LetItPlayToken(
+        ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/16884.sol:485:3: Warning: Defining constructors as functions with the same name as the contract is deprecated. Use "constructor(...) { ... }" instead.
+  function BasicCrowdsale(
+  ^ (Relevant source part starts here and spans across multiple lines).
+/../data/reentrancy/solidity_contract/16884.sol:613:3: Warning: Defining constructors as functions with the same name as the contract is deprecated. Use "constructor(...) { ... }" instead.
+  function Crowdsale(
+  ^ (Relevant source part starts here and spans across multiple lines).
+
+INFO:Detectors:[91m
+Reentrancy in Crowdsale.sellTokens (/../data/reentrancy/solidity_contract/16884.sol#671-699):
+	External calls:
+	- tokensSold = _value * uint256(10) ** token.decimals() / tokenRateWei (/../data/reentrancy/solidity_contract/16884.sol#687)
+	- token.transferByCrowdsale(_recepient,tokensSold) (/../data/reentrancy/solidity_contract/16884.sol#694)
+	External calls sending eth:
+	- _recepient.transfer(refund) (/../data/reentrancy/solidity_contract/16884.sol#683)
+	State variables written after the call(s):
+	- totalCollected (/../data/reentrancy/solidity_contract/16884.sol#697)
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#reentrancy-vulnerabilities[0m
+INFO:Detectors:[91m
+BasicToken.totalSupply_ (/../data/reentrancy/solidity_contract/16884.sol#49) is never initialized. It is used in:
+	- totalSupply (/../data/reentrancy/solidity_contract/16884.sol#52-54)
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#uninitialized-state-variables[0m
+INFO:Detectors:[93m
+Crowdsale.refund (/../data/reentrancy/solidity_contract/16884.sol#712-729) does not use the value returned by external calls:
+	-token.transferFromByCrowdsale(msg.sender,token.forSale(),tokens) (/../data/reentrancy/solidity_contract/16884.sol#728)
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#unused-return[0m
+INFO:Detectors:[92m
+Crowdsale.sellTokens.refund (local variable @ /../data/reentrancy/solidity_contract/16884.sol#681) shadows:
+	- Crowdsale.refund (function @ /../data/reentrancy/solidity_contract/16884.sol#712-729)
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#local-variable-shadowing[0m
+INFO:Detectors:[92m
+Reentrancy in Crowdsale.sellTokens (/../data/reentrancy/solidity_contract/16884.sol#671-699):
+	External calls:
+	- tokensSold = _value * uint256(10) ** token.decimals() / tokenRateWei (/../data/reentrancy/solidity_contract/16884.sol#687)
+	External calls sending eth:
+	- _recepient.transfer(refund) (/../data/reentrancy/solidity_contract/16884.sol#683)
+	State variables written after the call(s):
+	- currentBonusPeriod (/../data/reentrancy/solidity_contract/16884.sol#690)
+Reentrancy in Crowdsale.sellTokens (/../data/reentrancy/solidity_contract/16884.sol#671-699):
+	External calls:
+	- tokensSold = _value * uint256(10) ** token.decimals() / tokenRateWei (/../data/reentrancy/solidity_contract/16884.sol#687)
+	- token.transferByCrowdsale(_recepient,tokensSold) (/../data/reentrancy/solidity_contract/16884.sol#694)
+	External calls sending eth:
+	- _recepient.transfer(refund) (/../data/reentrancy/solidity_contract/16884.sol#683)
+	State variables written after the call(s):
+	- participants (/../data/reentrancy/solidity_contract/16884.sol#695)
+	- participants (/../data/reentrancy/solidity_contract/16884.sol#696)
+	- totalSold (/../data/reentrancy/solidity_contract/16884.sol#698)
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#reentrancy-vulnerabilities-2[0m
+INFO:Detectors:[92m
+WithBonusPeriods.updateCurrentBonusPeriod (/../data/reentrancy/solidity_contract/16884.sol#186-198) uses timestamp for comparisons
+	Dangerous comparisons:
+	- currentBonusPeriod.fromTimestamp <= block.timestamp && currentBonusPeriod.toTimestamp >= block.timestamp (/../data/reentrancy/solidity_contract/16884.sol#187-189)
+	- bonusPeriods[i].fromTimestamp <= block.timestamp && bonusPeriods[i].toTimestamp >= block.timestamp (/../data/reentrancy/solidity_contract/16884.sol#194-197)
+BasicCrowdsale.start (/../data/reentrancy/solidity_contract/16884.sol#515-545) uses timestamp for comparisons
+	Dangerous comparisons:
+	- require(bool)(_startTimestamp >= block.timestamp) (/../data/reentrancy/solidity_contract/16884.sol#528)
+BasicCrowdsale.isFailed (/../data/reentrancy/solidity_contract/16884.sol#548-563) uses timestamp for comparisons
+	Dangerous comparisons:
+	- (started && block.timestamp >= endTimestamp && totalCollected < minimalGoal) (/../data/reentrancy/solidity_contract/16884.sol#553-562)
+BasicCrowdsale.isActive (/../data/reentrancy/solidity_contract/16884.sol#566-582) uses timestamp for comparisons
+	Dangerous comparisons:
+	- (started && totalCollected < hardCap && block.timestamp >= startTimestamp && block.timestamp < endTimestamp) (/../data/reentrancy/solidity_contract/16884.sol#571-581)
+BasicCrowdsale.isSuccessful (/../data/reentrancy/solidity_contract/16884.sol#585-597) uses timestamp for comparisons
+	Dangerous comparisons:
+	- (totalCollected >= hardCap || (block.timestamp >= endTimestamp && totalCollected >= minimalGoal)) (/../data/reentrancy/solidity_contract/16884.sol#590-596)
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#block-timestamp[0m
+INFO:Detectors:[92m
+BasicToken.totalSupply_ should be constant (/../data/reentrancy/solidity_contract/16884.sol#49)
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#state-variables-that-could-be-declared-constant[0m
+INFO:Detectors:[92m
+BasicToken.totalSupply (/../data/reentrancy/solidity_contract/16884.sol#52-54) should be declared external
+ERC20Basic.totalSupply (/../data/reentrancy/solidity_contract/16884.sol#38) should be declared external
+BasicToken.balanceOf (/../data/reentrancy/solidity_contract/16884.sol#69-71) should be declared external
+ERC20Basic.balanceOf (/../data/reentrancy/solidity_contract/16884.sol#39) should be declared external
+StandardToken.allowance (/../data/reentrancy/solidity_contract/16884.sol#333-335) should be declared external
+ERC20.allowance (/../data/reentrancy/solidity_contract/16884.sol#76) should be declared external
+StandardToken.approve (/../data/reentrancy/solidity_contract/16884.sol#326-330) should be declared external
+ERC20.approve (/../data/reentrancy/solidity_contract/16884.sol#78) should be declared external
+HasManager.transferManager (/../data/reentrancy/solidity_contract/16884.sol#90-93) should be declared external
+Ownable.transferOwnership (/../data/reentrancy/solidity_contract/16884.sol#115-119) should be declared external
+Whitelist.AddToWhiteList (/../data/reentrancy/solidity_contract/16884.sol#126-129) should be declared external
+Whitelist.AssignWhitelistManager (/../data/reentrancy/solidity_contract/16884.sol#131-133) should be declared external
+WithBonusPeriods.BonusPeriodsCount (/../data/reentrancy/solidity_contract/16884.sol#158-160) should be declared external
+WithBonusPeriods.BonusPeriodFor (/../data/reentrancy/solidity_contract/16884.sol#163-169) should be declared external
+ICrowdsaleProcessor.deposit (/../data/reentrancy/solidity_contract/16884.sol#275) should be declared external
+Crowdsale.getToken (/../data/reentrancy/solidity_contract/16884.sol#634-639) should be declared external
+ICrowdsaleProcessor.getToken (/../data/reentrancy/solidity_contract/16884.sol#278) should be declared external
+BasicCrowdsale.mintETHRewards (/../data/reentrancy/solidity_contract/16884.sol#499-501) should be declared external
+ICrowdsaleProcessor.mintETHRewards (/../data/reentrancy/solidity_contract/16884.sol#281) should be declared external
+ICrowdsaleProcessor.mintTokenRewards (/../data/reentrancy/solidity_contract/16884.sol#284) should be declared external
+Crowdsale.mintTokenRewards (/../data/reentrancy/solidity_contract/16884.sol#644-653) should be declared external
+Crowdsale.releaseTokens (/../data/reentrancy/solidity_contract/16884.sol#656-664) should be declared external
+ICrowdsaleProcessor.releaseTokens (/../data/reentrancy/solidity_contract/16884.sol#287) should be declared external
+ICrowdsaleProcessor.stop (/../data/reentrancy/solidity_contract/16884.sol#291) should be declared external
+BasicCrowdsale.stop (/../data/reentrancy/solidity_contract/16884.sol#504-511) should be declared external
+ICrowdsaleProcessor.start (/../data/reentrancy/solidity_contract/16884.sol#294-295) should be declared external
+BasicCrowdsale.start (/../data/reentrancy/solidity_contract/16884.sol#515-545) should be declared external
+StandardToken.increaseApproval (/../data/reentrancy/solidity_contract/16884.sol#338-342) should be declared external
+StandardToken.decreaseApproval (/../data/reentrancy/solidity_contract/16884.sol#345-354) should be declared external
+Crowdsaled.setCrowdsale (/../data/reentrancy/solidity_contract/16884.sol#373-375) should be declared external
+LetItPlayToken.transferByOwner (/../data/reentrancy/solidity_contract/16884.sol#432-437) should be declared external
+LetItPlayToken.transferByCrowdsale (/../data/reentrancy/solidity_contract/16884.sol#440-445) should be declared external
+LetItPlayToken.transferFromByCrowdsale (/../data/reentrancy/solidity_contract/16884.sol#448-450) should be declared external
+LetItPlayToken.releaseForTransfer (/../data/reentrancy/solidity_contract/16884.sol#453-456) should be declared external
+LetItPlayToken.burn (/../data/reentrancy/solidity_contract/16884.sol#470-475) should be declared external
+Crowdsale.fallback (/../data/reentrancy/solidity_contract/16884.sol#666-669) should be declared external
+Crowdsale.withdraw (/../data/reentrancy/solidity_contract/16884.sol#702-709) should be declared external
+Crowdsale.refund (/../data/reentrancy/solidity_contract/16884.sol#712-729) should be declared external
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#public-function-that-could-be-declared-as-external[0m
+INFO:Detectors:[92m
+Detected issues with version pragma in /../data/reentrancy/solidity_contract/16884.sol:
+	- pragma solidity^0.4.13 (/../data/reentrancy/solidity_contract/16884.sol#1): it allows old versions
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#incorrect-version-of-solidity[0m
+INFO:Detectors:[92m
+Low level call in BasicCrowdsale.mintETHRewards (/../data/reentrancy/solidity_contract/16884.sol#499-501):
+	-require(bool)(_contract.call.value(_amount)()) /../data/reentrancy/solidity_contract/16884.sol#500
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#low-level-calls[0m
+INFO:Detectors:[92m
+Parameter '_owner' of BasicToken.balanceOf (/../data/reentrancy/solidity_contract/16884.sol#69) is not in mixedCase
+Parameter '_to' of BasicToken.transfer (/../data/reentrancy/solidity_contract/16884.sol#57) is not in mixedCase
+Parameter '_value' of BasicToken.transfer (/../data/reentrancy/solidity_contract/16884.sol#57) is not in mixedCase
+Parameter '_newManager' of HasManager.transferManager (/../data/reentrancy/solidity_contract/16884.sol#90) is not in mixedCase
+Function 'Ownable.Ownable' (/../data/reentrancy/solidity_contract/16884.sol#104-106) is not in mixedCase
+Function 'Whitelist.AddToWhiteList' (/../data/reentrancy/solidity_contract/16884.sol#126-129) is not in mixedCase
+Parameter '_addr' of Whitelist.AddToWhiteList (/../data/reentrancy/solidity_contract/16884.sol#126) is not in mixedCase
+Function 'Whitelist.AssignWhitelistManager' (/../data/reentrancy/solidity_contract/16884.sol#131-133) is not in mixedCase
+Parameter '_addr' of Whitelist.AssignWhitelistManager (/../data/reentrancy/solidity_contract/16884.sol#131) is not in mixedCase
+Function 'WithBonusPeriods.WithBonusPeriods' (/../data/reentrancy/solidity_contract/16884.sol#154-156) is not in mixedCase
+Function 'WithBonusPeriods.BonusPeriodsCount' (/../data/reentrancy/solidity_contract/16884.sol#158-160) is not in mixedCase
+Function 'WithBonusPeriods.BonusPeriodFor' (/../data/reentrancy/solidity_contract/16884.sol#163-169) is not in mixedCase
+Parameter '_owner' of StandardToken.allowance (/../data/reentrancy/solidity_contract/16884.sol#333) is not in mixedCase
+Parameter '_spender' of StandardToken.allowance (/../data/reentrancy/solidity_contract/16884.sol#333) is not in mixedCase
+Parameter '_from' of StandardToken.transferFrom (/../data/reentrancy/solidity_contract/16884.sol#313) is not in mixedCase
+Parameter '_to' of StandardToken.transferFrom (/../data/reentrancy/solidity_contract/16884.sol#313) is not in mixedCase
+Parameter '_value' of StandardToken.transferFrom (/../data/reentrancy/solidity_contract/16884.sol#313) is not in mixedCase
+Parameter '_spender' of StandardToken.approve (/../data/reentrancy/solidity_contract/16884.sol#326) is not in mixedCase
+Parameter '_value' of StandardToken.approve (/../data/reentrancy/solidity_contract/16884.sol#326) is not in mixedCase
+Parameter '_spender' of StandardToken.increaseApproval (/../data/reentrancy/solidity_contract/16884.sol#338) is not in mixedCase
+Parameter '_addedValue' of StandardToken.increaseApproval (/../data/reentrancy/solidity_contract/16884.sol#338) is not in mixedCase
+Parameter '_spender' of StandardToken.decreaseApproval (/../data/reentrancy/solidity_contract/16884.sol#345) is not in mixedCase
+Parameter '_subtractedValue' of StandardToken.decreaseApproval (/../data/reentrancy/solidity_contract/16884.sol#345) is not in mixedCase
+Function 'Crowdsaled.Crowdsaled' (/../data/reentrancy/solidity_contract/16884.sol#360-361) is not in mixedCase
+Parameter '_to' of LetItPlayToken.transfer (/../data/reentrancy/solidity_contract/16884.sol#459) is not in mixedCase
+Parameter '_value' of LetItPlayToken.transfer (/../data/reentrancy/solidity_contract/16884.sol#459) is not in mixedCase
+Parameter '_from' of LetItPlayToken.transferFrom (/../data/reentrancy/solidity_contract/16884.sol#465) is not in mixedCase
+Parameter '_to' of LetItPlayToken.transferFrom (/../data/reentrancy/solidity_contract/16884.sol#465) is not in mixedCase
+Parameter '_value' of LetItPlayToken.transferFrom (/../data/reentrancy/solidity_contract/16884.sol#465) is not in mixedCase
+Function 'LetItPlayToken.LetItPlayToken' (/../data/reentrancy/solidity_contract/16884.sol#398-430) is not in mixedCase
+Parameter '_forSale' of LetItPlayToken.LetItPlayToken (/../data/reentrancy/solidity_contract/16884.sol#399) is not in mixedCase
+Parameter '_ecoSystemFund' of LetItPlayToken.LetItPlayToken (/../data/reentrancy/solidity_contract/16884.sol#400) is not in mixedCase
+Parameter '_founders' of LetItPlayToken.LetItPlayToken (/../data/reentrancy/solidity_contract/16884.sol#401) is not in mixedCase
+Parameter '_team' of LetItPlayToken.LetItPlayToken (/../data/reentrancy/solidity_contract/16884.sol#402) is not in mixedCase
+Parameter '_advisers' of LetItPlayToken.LetItPlayToken (/../data/reentrancy/solidity_contract/16884.sol#403) is not in mixedCase
+Parameter '_bounty' of LetItPlayToken.LetItPlayToken (/../data/reentrancy/solidity_contract/16884.sol#404) is not in mixedCase
+Parameter '_preSale' of LetItPlayToken.LetItPlayToken (/../data/reentrancy/solidity_contract/16884.sol#405) is not in mixedCase
+Parameter '_eosShareDrop' of LetItPlayToken.LetItPlayToken (/../data/reentrancy/solidity_contract/16884.sol#406) is not in mixedCase
+Parameter '_from' of LetItPlayToken.transferFromByCrowdsale (/../data/reentrancy/solidity_contract/16884.sol#448) is not in mixedCase
+Parameter '_to' of LetItPlayToken.transferFromByCrowdsale (/../data/reentrancy/solidity_contract/16884.sol#448) is not in mixedCase
+Parameter '_value' of LetItPlayToken.transferFromByCrowdsale (/../data/reentrancy/solidity_contract/16884.sol#448) is not in mixedCase
+Event 'BasicCrowdsale.CROWDSALE_START' (/../data/reentrancy/solidity_contract/16884.sol#479) is not in CapWords
+Parameter '_contract' of BasicCrowdsale.mintETHRewards (/../data/reentrancy/solidity_contract/16884.sol#499) is not in mixedCase
+Parameter '_amount' of BasicCrowdsale.mintETHRewards (/../data/reentrancy/solidity_contract/16884.sol#499) is not in mixedCase
+Parameter '_startTimestamp' of BasicCrowdsale.start (/../data/reentrancy/solidity_contract/16884.sol#516) is not in mixedCase
+Parameter '_endTimestamp' of BasicCrowdsale.start (/../data/reentrancy/solidity_contract/16884.sol#517) is not in mixedCase
+Parameter '_fundingAddress' of BasicCrowdsale.start (/../data/reentrancy/solidity_contract/16884.sol#518) is not in mixedCase
+Function 'BasicCrowdsale.BasicCrowdsale' (/../data/reentrancy/solidity_contract/16884.sol#485-493) is not in mixedCase
+Parameter '_owner' of BasicCrowdsale.BasicCrowdsale (/../data/reentrancy/solidity_contract/16884.sol#486) is not in mixedCase
+Parameter '_manager' of BasicCrowdsale.BasicCrowdsale (/../data/reentrancy/solidity_contract/16884.sol#487) is not in mixedCase
+Parameter '_contract' of Crowdsale.mintTokenRewards (/../data/reentrancy/solidity_contract/16884.sol#645) is not in mixedCase
+Parameter '_amount' of Crowdsale.mintTokenRewards (/../data/reentrancy/solidity_contract/16884.sol#646) is not in mixedCase
+Function 'Crowdsale.Crowdsale' (/../data/reentrancy/solidity_contract/16884.sol#613-629) is not in mixedCase
+Parameter '_minimalGoal' of Crowdsale.Crowdsale (/../data/reentrancy/solidity_contract/16884.sol#614) is not in mixedCase
+Parameter '_hardCap' of Crowdsale.Crowdsale (/../data/reentrancy/solidity_contract/16884.sol#615) is not in mixedCase
+Parameter '_tokenRateWei' of Crowdsale.Crowdsale (/../data/reentrancy/solidity_contract/16884.sol#616) is not in mixedCase
+Parameter '_token' of Crowdsale.Crowdsale (/../data/reentrancy/solidity_contract/16884.sol#617) is not in mixedCase
+Parameter '_recepient' of Crowdsale.sellTokens (/../data/reentrancy/solidity_contract/16884.sol#671) is not in mixedCase
+Parameter '_value' of Crowdsale.sellTokens (/../data/reentrancy/solidity_contract/16884.sol#671) is not in mixedCase
+Parameter '_amount' of Crowdsale.withdraw (/../data/reentrancy/solidity_contract/16884.sol#702) is not in mixedCase
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#conformance-to-solidity-naming-conventions[0m
+INFO:Detectors:[92m
+WithBonusPeriods.INFINITY_TO_TIMESTAMP (/../data/reentrancy/solidity_contract/16884.sol#143) is never used in Crowdsale
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#unused-state-variables[0m
+INFO:Slither:/../data/reentrancy/solidity_contract/16884.sol analyzed (14 contracts), 113 result(s) found

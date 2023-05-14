@@ -1,0 +1,407 @@
+{
+  "contract": "5629",
+  "tool": "slither",
+  "start": 1609180774.1045382,
+  "end": 1609180775.852523,
+  "duration": 1.7479848861694336,
+  "analysis": [
+    {
+      "check": "pragma",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Different versions of Solidity is used in /../data/reentrancy/solidity_contract/5629.sol:\n\t- Version used: ['^0.4.24', '^0.4.6']\n\t- /../data/reentrancy/solidity_contract/5629.sol#1 declares pragma solidity^0.4.6\n\t- /../data/reentrancy/solidity_contract/5629.sol#2 declares pragma solidity^0.4.24\n",
+      "elements": [
+        {
+          "type": "expression",
+          "expression": "^0.4.6",
+          "source_mapping": {
+            "start": 0,
+            "length": 23,
+            "filename": "/../data/reentrancy/solidity_contract/5629.sol",
+            "lines": [
+              1
+            ]
+          }
+        },
+        {
+          "type": "expression",
+          "expression": "^0.4.24",
+          "source_mapping": {
+            "start": 24,
+            "length": 24,
+            "filename": "/../data/reentrancy/solidity_contract/5629.sol",
+            "lines": [
+              2
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "external-function",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "fomo3d.getPlayerInfoByAddress (/../data/reentrancy/solidity_contract/5629.sol#5) should be declared external\n",
+      "elements": [
+        {
+          "type": "function",
+          "name": "getPlayerInfoByAddress",
+          "source_mapping": {
+            "start": 72,
+            "length": 130,
+            "filename": "/../data/reentrancy/solidity_contract/5629.sol",
+            "lines": [
+              5
+            ]
+          },
+          "contract": {
+            "type": "contract",
+            "name": "fomo3d",
+            "source_mapping": {
+              "start": 50,
+              "length": 212,
+              "filename": "/../data/reentrancy/solidity_contract/5629.sol",
+              "lines": [
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "check": "external-function",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "fomo3d.withdraw (/../data/reentrancy/solidity_contract/5629.sol#7-8) should be declared external\n",
+      "elements": [
+        {
+          "type": "function",
+          "name": "withdraw",
+          "source_mapping": {
+            "start": 216,
+            "length": 35,
+            "filename": "/../data/reentrancy/solidity_contract/5629.sol",
+            "lines": [
+              7,
+              8
+            ]
+          },
+          "contract": {
+            "type": "contract",
+            "name": "fomo3d",
+            "source_mapping": {
+              "start": 50,
+              "length": 212,
+              "filename": "/../data/reentrancy/solidity_contract/5629.sol",
+              "lines": [
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "check": "external-function",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "giveAirdrop.fallback (/../data/reentrancy/solidity_contract/5629.sol#22) should be declared external\n",
+      "elements": [
+        {
+          "type": "function",
+          "name": "fallback",
+          "source_mapping": {
+            "start": 685,
+            "length": 29,
+            "filename": "/../data/reentrancy/solidity_contract/5629.sol",
+            "lines": [
+              22
+            ]
+          },
+          "contract": {
+            "type": "contract",
+            "name": "giveAirdrop",
+            "source_mapping": {
+              "start": 264,
+              "length": 452,
+              "filename": "/../data/reentrancy/solidity_contract/5629.sol",
+              "lines": [
+                12,
+                13,
+                14,
+                15,
+                16,
+                17,
+                18,
+                19,
+                20,
+                21,
+                22,
+                23
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "check": "external-function",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "AirdropTryer.tryAirdrop (/../data/reentrancy/solidity_contract/5629.sol#35-37) should be declared external\n",
+      "elements": [
+        {
+          "type": "function",
+          "name": "tryAirdrop",
+          "source_mapping": {
+            "start": 845,
+            "length": 96,
+            "filename": "/../data/reentrancy/solidity_contract/5629.sol",
+            "lines": [
+              35,
+              36,
+              37
+            ]
+          },
+          "contract": {
+            "type": "contract",
+            "name": "AirdropTryer",
+            "source_mapping": {
+              "start": 718,
+              "length": 323,
+              "filename": "/../data/reentrancy/solidity_contract/5629.sol",
+              "lines": [
+                25,
+                26,
+                27,
+                28,
+                29,
+                30,
+                31,
+                32,
+                33,
+                34,
+                35,
+                36,
+                37,
+                38,
+                39,
+                40,
+                41,
+                42,
+                43
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "check": "external-function",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "AirdropTryer.empty (/../data/reentrancy/solidity_contract/5629.sol#39-42) should be declared external\n",
+      "elements": [
+        {
+          "type": "function",
+          "name": "empty",
+          "source_mapping": {
+            "start": 947,
+            "length": 92,
+            "filename": "/../data/reentrancy/solidity_contract/5629.sol",
+            "lines": [
+              39,
+              40,
+              41,
+              42
+            ]
+          },
+          "contract": {
+            "type": "contract",
+            "name": "AirdropTryer",
+            "source_mapping": {
+              "start": 718,
+              "length": 323,
+              "filename": "/../data/reentrancy/solidity_contract/5629.sol",
+              "lines": [
+                25,
+                26,
+                27,
+                28,
+                29,
+                30,
+                31,
+                32,
+                33,
+                34,
+                35,
+                36,
+                37,
+                38,
+                39,
+                40,
+                41,
+                42,
+                43
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "check": "solc-version",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Detected issues with version pragma in /../data/reentrancy/solidity_contract/5629.sol:\n\t- pragma solidity^0.4.6 (/../data/reentrancy/solidity_contract/5629.sol#1): it allows old versions\n",
+      "elements": [
+        {
+          "type": "expression",
+          "expression": "^0.4.6",
+          "source_mapping": {
+            "start": 0,
+            "length": 23,
+            "filename": "/../data/reentrancy/solidity_contract/5629.sol",
+            "lines": [
+              1
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "low-level-calls",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Low level call in giveAirdrop.constructor (/../data/reentrancy/solidity_contract/5629.sol#13-20):\n\t-require(bool)(address(0xA62142888ABa8370742bE823c1782D17A0389Da1).call.value(msg.value)()) /../data/reentrancy/solidity_contract/5629.sol#15\n",
+      "elements": [
+        {
+          "type": "function",
+          "name": "constructor",
+          "source_mapping": {
+            "start": 291,
+            "length": 388,
+            "filename": "/../data/reentrancy/solidity_contract/5629.sol",
+            "lines": [
+              13,
+              14,
+              15,
+              16,
+              17,
+              18,
+              19,
+              20
+            ]
+          },
+          "contract": {
+            "type": "contract",
+            "name": "giveAirdrop",
+            "source_mapping": {
+              "start": 264,
+              "length": 452,
+              "filename": "/../data/reentrancy/solidity_contract/5629.sol",
+              "lines": [
+                12,
+                13,
+                14,
+                15,
+                16,
+                17,
+                18,
+                19,
+                20,
+                21,
+                22,
+                23
+              ]
+            }
+          }
+        },
+        {
+          "type": "expression",
+          "expression": "require(bool)(address(0xA62142888ABa8370742bE823c1782D17A0389Da1).call.value(msg.value)())",
+          "source_mapping": {
+            "start": 414,
+            "length": 84,
+            "filename": "/../data/reentrancy/solidity_contract/5629.sol",
+            "lines": [
+              15
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "naming-convention",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Contract 'fomo3d' (/../data/reentrancy/solidity_contract/5629.sol#4-10) is not in CapWords\n",
+      "elements": [
+        {
+          "target": "contract",
+          "convention": "CapWords",
+          "name": "fomo3d",
+          "source_mapping": {
+            "start": 50,
+            "length": 212,
+            "filename": "/../data/reentrancy/solidity_contract/5629.sol",
+            "lines": [
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "check": "naming-convention",
+      "impact": "Informational",
+      "confidence": "High",
+      "description": "Contract 'giveAirdrop' (/../data/reentrancy/solidity_contract/5629.sol#12-23) is not in CapWords\n",
+      "elements": [
+        {
+          "target": "contract",
+          "convention": "CapWords",
+          "name": "giveAirdrop",
+          "source_mapping": {
+            "start": 264,
+            "length": 452,
+            "filename": "/../data/reentrancy/solidity_contract/5629.sol",
+            "lines": [
+              12,
+              13,
+              14,
+              15,
+              16,
+              17,
+              18,
+              19,
+              20,
+              21,
+              22,
+              23
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

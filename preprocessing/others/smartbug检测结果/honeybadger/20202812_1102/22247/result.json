@@ -1,0 +1,25 @@
+{
+  "contract": "22247",
+  "tool": "honeybadger",
+  "start": 1609157037.3404741,
+  "end": 1609157280.337085,
+  "duration": 242.99661087989807,
+  "analysis": [
+    {
+      "errors": [],
+      "file": "/../data/reentrancy/solidity_contract/22247.sol",
+      "name": "Log"
+    },
+    {
+      "errors": [
+        {
+          "line": 32,
+          "column": 17,
+          "message": "straw_man_contract"
+        }
+      ],
+      "file": "/../data/reentrancy/solidity_contract/22247.sol",
+      "name": "PIGGY_BANK"
+    }
+  ]
+}

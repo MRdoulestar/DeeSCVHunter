@@ -1,0 +1,225 @@
+INFO:Slither:Compilation warnings/errors on /../data/reentrancy/solidity_contract/2013.sol:
+/../data/reentrancy/solidity_contract/2013.sol:524:9: Warning: Uninitialized storage pointer.
+        BidData storage bid;
+        ^-----------------^
+/../data/reentrancy/solidity_contract/2013.sol:608:9: Warning: Uninitialized storage pointer.
+        BidData storage bid;
+        ^-----------------^
+/../data/reentrancy/solidity_contract/2013.sol:14:23: Warning: Unused function parameter. Remove or comment out the variable name to silence this warning.
+    function setPrice(uint price) public returns (uint _index) {}
+                      ^--------^
+/../data/reentrancy/solidity_contract/2013.sol:14:51: Warning: Unused function parameter. Remove or comment out the variable name to silence this warning.
+    function setPrice(uint price) public returns (uint _index) {}
+                                                  ^---------^
+/../data/reentrancy/solidity_contract/2013.sol:16:46: Warning: Unused function parameter. Remove or comment out the variable name to silence this warning.
+    function getPrice() public view returns (uint price, uint _index, uint blockHeight) {}
+                                             ^--------^
+/../data/reentrancy/solidity_contract/2013.sol:16:58: Warning: Unused function parameter. Remove or comment out the variable name to silence this warning.
+    function getPrice() public view returns (uint price, uint _index, uint blockHeight) {}
+                                                         ^---------^
+/../data/reentrancy/solidity_contract/2013.sol:16:71: Warning: Unused function parameter. Remove or comment out the variable name to silence this warning.
+    function getPrice() public view returns (uint price, uint _index, uint blockHeight) {}
+                                                                      ^--------------^
+/../data/reentrancy/solidity_contract/2013.sol:18:33: Warning: Unused function parameter. Remove or comment out the variable name to silence this warning.
+    function getHistoricalPrice(uint _index) public view returns (uint price, uint blockHeight) {}
+                                ^---------^
+/../data/reentrancy/solidity_contract/2013.sol:18:67: Warning: Unused function parameter. Remove or comment out the variable name to silence this warning.
+    function getHistoricalPrice(uint _index) public view returns (uint price, uint blockHeight) {}
+                                                                  ^--------^
+/../data/reentrancy/solidity_contract/2013.sol:18:79: Warning: Unused function parameter. Remove or comment out the variable name to silence this warning.
+    function getHistoricalPrice(uint _index) public view returns (uint price, uint blockHeight) {}
+                                                                              ^--------------^
+/../data/reentrancy/solidity_contract/2013.sol:572:62: Warning: Unused function parameter. Remove or comment out the variable name to silence this warning.
+ ... uint _share_price ... 
+     ^---------------^
+/../data/reentrancy/solidity_contract/2013.sol:572:81: Warning: Unused function parameter. Remove or comment out the variable name to silence this warning.
+ ... uint _transfer_valuation ... 
+     ^----------------------^
+/../data/reentrancy/solidity_contract/2013.sol:14:5: Warning: Function state mutability can be restricted to pure
+    function setPrice(uint price) public returns (uint _index) {}
+    ^-----------------------------------------------------------^
+/../data/reentrancy/solidity_contract/2013.sol:16:5: Warning: Function state mutability can be restricted to pure
+    function getPrice() public view returns (uint price, uint _index, uint blockHeight) {}
+    ^------------------------------------------------------------------------------------^
+/../data/reentrancy/solidity_contract/2013.sol:18:5: Warning: Function state mutability can be restricted to pure
+    function getHistoricalPrice(uint _index) public view returns (uint price, uint blockHeight) {}
+    ^--------------------------------------------------------------------------------------------^
+/../data/reentrancy/solidity_contract/2013.sol:37:3: Warning: Function state mutability can be restricted to pure
+  function tokenFallback(address from_, uint256 value_, bytes data_) external {
+  ^ (Relevant source part starts here and spans across multiple lines).
+
+INFO:Detectors:[93m
+Reentrancy in DutchAuction.assignShareTokens (/../data/reentrancy/solidity_contract/2013.sol#599-640):
+	External calls:
+	- art_token_contract.transfer(bid.investor_address,_return_amount) (/../data/reentrancy/solidity_contract/2013.sol#629)
+	State variables written after the call(s):
+	- bids_sorted (/../data/reentrancy/solidity_contract/2013.sol#631)
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#reentrancy-vulnerabilities-1[0m
+INFO:Detectors:[93m
+DutchAuction.refundIgnoredBids (/../data/reentrancy/solidity_contract/2013.sol#515-536) does not use the value returned by external calls:
+	-art_token_contract.transfer(bid.investor_address,bid.transfer_token) (/../data/reentrancy/solidity_contract/2013.sol#531)
+DutchAuction.refundLosersBids (/../data/reentrancy/solidity_contract/2013.sol#543-564) does not use the value returned by external calls:
+	-art_token_contract.transfer(bid.investor_address,bid.transfer_token) (/../data/reentrancy/solidity_contract/2013.sol#559)
+DutchAuction.assignShareTokens (/../data/reentrancy/solidity_contract/2013.sol#599-640) does not use the value returned by external calls:
+	-art_token_contract.transfer(bid.investor_address,_return_amount) (/../data/reentrancy/solidity_contract/2013.sol#629)
+DutchAuction.reclaimToken (/../data/reentrancy/solidity_contract/2013.sol#650-654) does not use the value returned by external calls:
+	-token.transfer(owner,balance) (/../data/reentrancy/solidity_contract/2013.sol#653)
+DutchAuction.reclaim_art_token (/../data/reentrancy/solidity_contract/2013.sol#656-661) does not use the value returned by external calls:
+	-art_token_contract.transfer(owner,balance) (/../data/reentrancy/solidity_contract/2013.sol#660)
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#unused-return[0m
+INFO:Detectors:[92m
+DutchAuction.refundIgnoredBids has external calls inside a loop:
+	- art_token_contract.transfer(bid.investor_address,bid.transfer_token) (/../data/reentrancy/solidity_contract/2013.sol#531)
+DutchAuction.refundLosersBids has external calls inside a loop:
+	- art_token_contract.transfer(bid.investor_address,bid.transfer_token) (/../data/reentrancy/solidity_contract/2013.sol#559)
+DutchAuction.assignShareTokens has external calls inside a loop:
+	- art_token_contract.transfer(bid.investor_address,_return_amount) (/../data/reentrancy/solidity_contract/2013.sol#629)
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation/_edit#calls-inside-a-loop[0m
+INFO:Detectors:[92m
+Reentrancy in DutchAuction.appendEncryptedBid (/../data/reentrancy/solidity_contract/2013.sol#265-273):
+	External calls:
+	- (art_price,art_price_blockHeight) = oracle.getHistoricalPrice(price_index) (/../data/reentrancy/solidity_contract/2013.sol#269)
+	State variables written after the call(s):
+	- bids (/../data/reentrancy/solidity_contract/2013.sol#270)
+	- bids_count (/../data/reentrancy/solidity_contract/2013.sol#272)
+Reentrancy in DutchAuction.assignShareTokens (/../data/reentrancy/solidity_contract/2013.sol#599-640):
+	External calls:
+	- art_token_contract.transfer(bid.investor_address,_return_amount) (/../data/reentrancy/solidity_contract/2013.sol#629)
+	State variables written after the call(s):
+	- shares_holders (/../data/reentrancy/solidity_contract/2013.sol#633)
+	- shares_holders_balance (/../data/reentrancy/solidity_contract/2013.sol#636)
+	- shares_holders_count (/../data/reentrancy/solidity_contract/2013.sol#633)
+Reentrancy in DutchAuction.constructor (/../data/reentrancy/solidity_contract/2013.sol#209-230):
+	External calls:
+	- oracle_decimals = uint256(oracle.decimals()) (/../data/reentrancy/solidity_contract/2013.sol#225)
+	State variables written after the call(s):
+	- art_token_contract (/../data/reentrancy/solidity_contract/2013.sol#227)
+	- oracle_price_decimals_factor (/../data/reentrancy/solidity_contract/2013.sol#226)
+Reentrancy in DutchAuction.constructor (/../data/reentrancy/solidity_contract/2013.sol#209-230):
+	External calls:
+	- oracle_decimals = uint256(oracle.decimals()) (/../data/reentrancy/solidity_contract/2013.sol#225)
+	- art_token_decimals = uint256(art_token_contract.decimals()) (/../data/reentrancy/solidity_contract/2013.sol#228)
+	State variables written after the call(s):
+	- decimal_precission_difference_factor (/../data/reentrancy/solidity_contract/2013.sol#229)
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#reentrancy-vulnerabilities-2[0m
+INFO:Detectors:[92m
+ERC20Interface.decimals should be constant (/../data/reentrancy/solidity_contract/2013.sol#31)
+OracleInterface.decimals should be constant (/../data/reentrancy/solidity_contract/2013.sol#12)
+OracleInterface.index should be constant (/../data/reentrancy/solidity_contract/2013.sol#10)
+OracleInterface.owner should be constant (/../data/reentrancy/solidity_contract/2013.sol#11)
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#state-variables-that-could-be-declared-constant[0m
+INFO:Detectors:[92m
+OracleInterface.setPrice (/../data/reentrancy/solidity_contract/2013.sol#14) should be declared external
+OracleInterface.getPrice (/../data/reentrancy/solidity_contract/2013.sol#16) should be declared external
+OracleInterface.getHistoricalPrice (/../data/reentrancy/solidity_contract/2013.sol#18) should be declared external
+ERC20Basic.totalSupply (/../data/reentrancy/solidity_contract/2013.sol#24) should be declared external
+ERC20Basic.balanceOf (/../data/reentrancy/solidity_contract/2013.sol#25) should be declared external
+ERC20Basic.transfer (/../data/reentrancy/solidity_contract/2013.sol#26) should be declared external
+Ownable.renounceOwnership (/../data/reentrancy/solidity_contract/2013.sol#69-72) should be declared external
+Ownable.transferOwnership (/../data/reentrancy/solidity_contract/2013.sol#75-77) should be declared external
+DutchAuction.setFundraiseLimits (/../data/reentrancy/solidity_contract/2013.sol#237-246) should be declared external
+DutchAuction.startAuction (/../data/reentrancy/solidity_contract/2013.sol#249-253) should be declared external
+DutchAuction.endAuction (/../data/reentrancy/solidity_contract/2013.sol#256-260) should be declared external
+DutchAuction.appendEncryptedBid (/../data/reentrancy/solidity_contract/2013.sol#265-273) should be declared external
+DutchAuction.burnBid (/../data/reentrancy/solidity_contract/2013.sol#283-298) should be declared external
+DutchAuction.appendDecryptedBids (/../data/reentrancy/solidity_contract/2013.sol#359-370) should be declared external
+DutchAuction.resetAppendDecryptedBids (/../data/reentrancy/solidity_contract/2013.sol#374-400) should be declared external
+DutchAuction.computeBids (/../data/reentrancy/solidity_contract/2013.sol#411-498) should be declared external
+DutchAuction.refundIgnoredBids (/../data/reentrancy/solidity_contract/2013.sol#515-536) should be declared external
+DutchAuction.refundLosersBids (/../data/reentrancy/solidity_contract/2013.sol#543-564) should be declared external
+DutchAuction.assignShareTokens (/../data/reentrancy/solidity_contract/2013.sol#599-640) should be declared external
+DutchAuction.getShareBalance (/../data/reentrancy/solidity_contract/2013.sol#643-647) should be declared external
+DutchAuction.executeTransaction (/../data/reentrancy/solidity_contract/2013.sol#664-669) should be declared external
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#public-function-that-could-be-declared-as-external[0m
+INFO:Detectors:[92m
+Detected issues with version pragma in /../data/reentrancy/solidity_contract/2013.sol:
+	- pragma solidity^0.4.13 (/../data/reentrancy/solidity_contract/2013.sol#1): it allows old versions
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#incorrect-version-of-solidity[0m
+INFO:Detectors:[92m
+Low level call in DutchAuction.executeTransaction (/../data/reentrancy/solidity_contract/2013.sol#664-669):
+	-destination.call.value(value)(data) /../data/reentrancy/solidity_contract/2013.sol#665-668
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#low-level-calls[0m
+INFO:Detectors:[92m
+Parameter '_newOwner' of Ownable.transferOwnership (/../data/reentrancy/solidity_contract/2013.sol#75) is not in mixedCase
+Function 'Ownable._transferOwnership' (/../data/reentrancy/solidity_contract/2013.sol#80-84) is not in mixedCase
+Parameter '_newOwner' of Ownable._transferOwnership (/../data/reentrancy/solidity_contract/2013.sol#80) is not in mixedCase
+Parameter '_min_shares_to_sell' of DutchAuction. (/../data/reentrancy/solidity_contract/2013.sol#210) is not in mixedCase
+Parameter '_max_shares_to_sell' of DutchAuction. (/../data/reentrancy/solidity_contract/2013.sol#211) is not in mixedCase
+Parameter '_available_shares' of DutchAuction. (/../data/reentrancy/solidity_contract/2013.sol#212) is not in mixedCase
+Parameter '_oracle' of DutchAuction. (/../data/reentrancy/solidity_contract/2013.sol#213) is not in mixedCase
+Parameter '_art_token_contract' of DutchAuction. (/../data/reentrancy/solidity_contract/2013.sol#214) is not in mixedCase
+Parameter '_min_share_price' of DutchAuction.setFundraiseLimits (/../data/reentrancy/solidity_contract/2013.sol#237) is not in mixedCase
+Parameter '_fundraise_max' of DutchAuction.setFundraiseLimits (/../data/reentrancy/solidity_contract/2013.sol#237) is not in mixedCase
+Parameter '_bid_hash' of DutchAuction.appendEncryptedBid (/../data/reentrancy/solidity_contract/2013.sol#265) is not in mixedCase
+Parameter 'price_index' of DutchAuction.appendEncryptedBid (/../data/reentrancy/solidity_contract/2013.sol#265) is not in mixedCase
+Parameter 'bid_id' of DutchAuction.getBidHash (/../data/reentrancy/solidity_contract/2013.sol#276) is not in mixedCase
+Parameter 'investor_address' of DutchAuction.getBidHash (/../data/reentrancy/solidity_contract/2013.sol#276) is not in mixedCase
+Parameter 'share_price' of DutchAuction.getBidHash (/../data/reentrancy/solidity_contract/2013.sol#276) is not in mixedCase
+Parameter 'shares_count' of DutchAuction.getBidHash (/../data/reentrancy/solidity_contract/2013.sol#276) is not in mixedCase
+Parameter '_index' of DutchAuction.burnBid (/../data/reentrancy/solidity_contract/2013.sol#283) is not in mixedCase
+Parameter '_nonce' of DutchAuction.appendDecryptedBid (/../data/reentrancy/solidity_contract/2013.sol#311) is not in mixedCase
+Parameter '_index' of DutchAuction.appendDecryptedBid (/../data/reentrancy/solidity_contract/2013.sol#311) is not in mixedCase
+Parameter '_bid_id' of DutchAuction.appendDecryptedBid (/../data/reentrancy/solidity_contract/2013.sol#311) is not in mixedCase
+Parameter '_investor_address' of DutchAuction.appendDecryptedBid (/../data/reentrancy/solidity_contract/2013.sol#311) is not in mixedCase
+Parameter '_share_price' of DutchAuction.appendDecryptedBid (/../data/reentrancy/solidity_contract/2013.sol#311) is not in mixedCase
+Parameter '_shares_count' of DutchAuction.appendDecryptedBid (/../data/reentrancy/solidity_contract/2013.sol#311) is not in mixedCase
+Parameter '_transfered_token' of DutchAuction.appendDecryptedBid (/../data/reentrancy/solidity_contract/2013.sol#311) is not in mixedCase
+Parameter '_nonce' of DutchAuction.appendDecryptedBids (/../data/reentrancy/solidity_contract/2013.sol#359) is not in mixedCase
+Parameter '_index' of DutchAuction.appendDecryptedBids (/../data/reentrancy/solidity_contract/2013.sol#359) is not in mixedCase
+Parameter '_bid_id' of DutchAuction.appendDecryptedBids (/../data/reentrancy/solidity_contract/2013.sol#359) is not in mixedCase
+Parameter '_investor_address' of DutchAuction.appendDecryptedBids (/../data/reentrancy/solidity_contract/2013.sol#359) is not in mixedCase
+Parameter '_share_price' of DutchAuction.appendDecryptedBids (/../data/reentrancy/solidity_contract/2013.sol#359) is not in mixedCase
+Parameter '_shares_count' of DutchAuction.appendDecryptedBids (/../data/reentrancy/solidity_contract/2013.sol#359) is not in mixedCase
+Parameter '_transfered_token' of DutchAuction.appendDecryptedBids (/../data/reentrancy/solidity_contract/2013.sol#359) is not in mixedCase
+Parameter '_count' of DutchAuction.resetAppendDecryptedBids (/../data/reentrancy/solidity_contract/2013.sol#374) is not in mixedCase
+Parameter '_count' of DutchAuction.computeBids (/../data/reentrancy/solidity_contract/2013.sol#411) is not in mixedCase
+Function 'DutchAuction.convert_valuation_to_art' (/../data/reentrancy/solidity_contract/2013.sol#502-508) is not in mixedCase
+Parameter '_valuation' of DutchAuction.convert_valuation_to_art (/../data/reentrancy/solidity_contract/2013.sol#502) is not in mixedCase
+Parameter '_art_price' of DutchAuction.convert_valuation_to_art (/../data/reentrancy/solidity_contract/2013.sol#502) is not in mixedCase
+Parameter '_count' of DutchAuction.refundIgnoredBids (/../data/reentrancy/solidity_contract/2013.sol#515) is not in mixedCase
+Parameter '_count' of DutchAuction.refundLosersBids (/../data/reentrancy/solidity_contract/2013.sol#543) is not in mixedCase
+Function 'DutchAuction.calculate_shares_and_return' (/../data/reentrancy/solidity_contract/2013.sol#572-591) is not in mixedCase
+Parameter '_shares_count' of DutchAuction.calculate_shares_and_return (/../data/reentrancy/solidity_contract/2013.sol#572) is not in mixedCase
+Parameter '_share_price' of DutchAuction.calculate_shares_and_return (/../data/reentrancy/solidity_contract/2013.sol#572) is not in mixedCase
+Parameter '_transfer_valuation' of DutchAuction.calculate_shares_and_return (/../data/reentrancy/solidity_contract/2013.sol#572) is not in mixedCase
+Parameter '_final_share_price' of DutchAuction.calculate_shares_and_return (/../data/reentrancy/solidity_contract/2013.sol#572) is not in mixedCase
+Parameter '_art_price' of DutchAuction.calculate_shares_and_return (/../data/reentrancy/solidity_contract/2013.sol#572) is not in mixedCase
+Parameter 'transfer_token' of DutchAuction.calculate_shares_and_return (/../data/reentrancy/solidity_contract/2013.sol#572) is not in mixedCase
+Parameter '_count' of DutchAuction.assignShareTokens (/../data/reentrancy/solidity_contract/2013.sol#599) is not in mixedCase
+Function 'DutchAuction.reclaim_art_token' (/../data/reentrancy/solidity_contract/2013.sol#656-661) is not in mixedCase
+Variable 'DutchAuction.min_shares_to_sell' (/../data/reentrancy/solidity_contract/2013.sol#109) is not in mixedCase
+Variable 'DutchAuction.max_shares_to_sell' (/../data/reentrancy/solidity_contract/2013.sol#110) is not in mixedCase
+Variable 'DutchAuction.min_share_price' (/../data/reentrancy/solidity_contract/2013.sol#111) is not in mixedCase
+Variable 'DutchAuction.available_shares' (/../data/reentrancy/solidity_contract/2013.sol#112) is not in mixedCase
+Variable 'DutchAuction.fundraise_defined' (/../data/reentrancy/solidity_contract/2013.sol#114) is not in mixedCase
+Variable 'DutchAuction.fundraise_max' (/../data/reentrancy/solidity_contract/2013.sol#115) is not in mixedCase
+Variable 'DutchAuction.final_share_price' (/../data/reentrancy/solidity_contract/2013.sol#139) is not in mixedCase
+Variable 'DutchAuction.computed_fundraise' (/../data/reentrancy/solidity_contract/2013.sol#140) is not in mixedCase
+Variable 'DutchAuction.final_fundraise' (/../data/reentrancy/solidity_contract/2013.sol#141) is not in mixedCase
+Variable 'DutchAuction.computed_shares_sold' (/../data/reentrancy/solidity_contract/2013.sol#142) is not in mixedCase
+Variable 'DutchAuction.final_shares_sold' (/../data/reentrancy/solidity_contract/2013.sol#143) is not in mixedCase
+Variable 'DutchAuction.winner_bids' (/../data/reentrancy/solidity_contract/2013.sol#144) is not in mixedCase
+Variable 'DutchAuction.assigned_bids' (/../data/reentrancy/solidity_contract/2013.sol#145) is not in mixedCase
+Variable 'DutchAuction.assigned_shares' (/../data/reentrancy/solidity_contract/2013.sol#146) is not in mixedCase
+Variable 'DutchAuction.bids_sorted_count' (/../data/reentrancy/solidity_contract/2013.sol#161) is not in mixedCase
+Variable 'DutchAuction.bids_sorted_refunded' (/../data/reentrancy/solidity_contract/2013.sol#162) is not in mixedCase
+Variable 'DutchAuction.bids_sorted' (/../data/reentrancy/solidity_contract/2013.sol#163) is not in mixedCase
+Variable 'DutchAuction.bids_burned_count' (/../data/reentrancy/solidity_contract/2013.sol#165) is not in mixedCase
+Variable 'DutchAuction.bids_burned' (/../data/reentrancy/solidity_contract/2013.sol#166) is not in mixedCase
+Variable 'DutchAuction.bids_ignored_count' (/../data/reentrancy/solidity_contract/2013.sol#168) is not in mixedCase
+Variable 'DutchAuction.bids_ignored_refunded' (/../data/reentrancy/solidity_contract/2013.sol#169) is not in mixedCase
+Variable 'DutchAuction.bids_ignored' (/../data/reentrancy/solidity_contract/2013.sol#170) is not in mixedCase
+Variable 'DutchAuction.bids_decrypted_count' (/../data/reentrancy/solidity_contract/2013.sol#173) is not in mixedCase
+Variable 'DutchAuction.bids_decrypted' (/../data/reentrancy/solidity_contract/2013.sol#174) is not in mixedCase
+Variable 'DutchAuction.bids_reset_count' (/../data/reentrancy/solidity_contract/2013.sol#175) is not in mixedCase
+Variable 'DutchAuction.bids_count' (/../data/reentrancy/solidity_contract/2013.sol#187) is not in mixedCase
+Variable 'DutchAuction.bids_computed_cursor' (/../data/reentrancy/solidity_contract/2013.sol#190) is not in mixedCase
+Variable 'DutchAuction.shares_holders_count' (/../data/reentrancy/solidity_contract/2013.sol#192) is not in mixedCase
+Variable 'DutchAuction.shares_holders' (/../data/reentrancy/solidity_contract/2013.sol#193) is not in mixedCase
+Variable 'DutchAuction.shares_holders_balance' (/../data/reentrancy/solidity_contract/2013.sol#194) is not in mixedCase
+Variable 'DutchAuction.oracle_price_decimals_factor' (/../data/reentrancy/solidity_contract/2013.sol#199) is not in mixedCase
+Variable 'DutchAuction.art_token_contract' (/../data/reentrancy/solidity_contract/2013.sol#200) is not in mixedCase
+Variable 'DutchAuction.decimal_precission_difference_factor' (/../data/reentrancy/solidity_contract/2013.sol#201) is not in mixedCase
+Enum 'DutchAuction.state' (/../data/reentrancy/solidity_contract/2013.sol#119) is not in CapWords
+Reference: https://github.com/trailofbits/slither/wiki/Detectors-Documentation#conformance-to-solidity-naming-conventions[0m
+INFO:Slither:/../data/reentrancy/solidity_contract/2013.sol analyzed (8 contracts), 118 result(s) found

@@ -1,0 +1,35 @@
+{
+  "contract": "21999",
+  "tool": "osiris",
+  "start": 1609183474.444546,
+  "end": 1609183530.386205,
+  "duration": 55.94165897369385,
+  "analysis": [
+    {
+      "errors": [],
+      "file": "/../data/reentrancy/solidity_contract/21999.sol",
+      "name": "Owned"
+    },
+    {
+      "errors": [
+        {
+          "line": 40,
+          "column": 9,
+          "message": "concurrency_bug"
+        },
+        {
+          "line": 48,
+          "column": 17,
+          "message": "concurrency_bug"
+        },
+        {
+          "line": 48,
+          "column": 17,
+          "message": "reentrancy_bug"
+        }
+      ],
+      "file": "/../data/reentrancy/solidity_contract/21999.sol",
+      "name": "WalletWithEmergencyTransfer"
+    }
+  ]
+}

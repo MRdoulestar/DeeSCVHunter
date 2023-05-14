@@ -1,0 +1,19 @@
+{
+  "contract": "39973",
+  "tool": "osiris",
+  "start": 1609189484.131116,
+  "end": 1609189583.3208508,
+  "duration": 99.1897349357605,
+  "analysis": [
+    {
+      "errors": [],
+      "file": "/../data/reentrancy/solidity_contract/39973.sol",
+      "name": "AssetMin"
+    },
+    {
+      "errors": [],
+      "file": "/../data/reentrancy/solidity_contract/39973.sol",
+      "name": "GMT"
+    }
+  ]
+}

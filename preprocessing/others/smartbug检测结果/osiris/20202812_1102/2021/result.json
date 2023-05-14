@@ -1,0 +1,19 @@
+{
+  "contract": "2021",
+  "tool": "osiris",
+  "start": 1609187184.1628742,
+  "end": 1609187232.376837,
+  "duration": 48.21396279335022,
+  "analysis": [
+    {
+      "errors": [],
+      "file": "/../data/reentrancy/solidity_contract/2021.sol",
+      "name": "AmbiEnabled"
+    },
+    {
+      "errors": [],
+      "file": "/../data/reentrancy/solidity_contract/2021.sol",
+      "name": "RegistryICAP"
+    }
+  ]
+}

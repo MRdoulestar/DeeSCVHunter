@@ -1,0 +1,12 @@
+{
+  "contract": "Victim",
+  "tool": "maian",
+  "start": 1609130174.639873,
+  "end": 1609130219.505117,
+  "duration": 44.865243911743164,
+  "analysis": {
+    "is_lock_vulnerable": false,
+    "is_prodigal_vulnerable": false,
+    "is_suicidal_vulnerable": false
+  }
+}

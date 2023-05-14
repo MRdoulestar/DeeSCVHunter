@@ -1,0 +1,44 @@
+{
+  "contract": "9611",
+  "tool": "honeybadger",
+  "start": 1609186451.203104,
+  "end": 1609186463.103801,
+  "duration": 11.900696992874146,
+  "analysis": [
+    {
+      "errors": [],
+      "file": "/../data/reentrancy/solidity_contract/9611.sol",
+      "name": "CommunityAuctionSimple"
+    },
+    {
+      "errors": [],
+      "file": "/../data/reentrancy/solidity_contract/9611.sol",
+      "name": "hasAdmins"
+    },
+    {
+      "errors": [],
+      "file": "/../data/reentrancy/solidity_contract/9611.sol",
+      "name": "owned"
+    },
+    {
+      "errors": [],
+      "file": "/../data/reentrancy/solidity_contract/9611.sol",
+      "name": "payoutAllC"
+    },
+    {
+      "errors": [],
+      "file": "/../data/reentrancy/solidity_contract/9611.sol",
+      "name": "permissioned"
+    },
+    {
+      "errors": [],
+      "file": "/../data/reentrancy/solidity_contract/9611.sol",
+      "name": "safeSend"
+    },
+    {
+      "errors": [],
+      "file": "/../data/reentrancy/solidity_contract/9611.sol",
+      "name": "upgradePtr"
+    }
+  ]
+}
